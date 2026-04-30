@@ -17,190 +17,91 @@ from core.engine import RAGEngine
 
 load_dotenv()
 
-# Logging setup
-logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    level=logging.INFO
-)
+# Logging
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger("lorin_bot")
-global_logger = logger # Explicitly global
 
 # Initialize Engine
 engine = RAGEngine()
 
-# Flask App
+# Flask App for Health Checks
 app = Flask(__name__)
 
-# Initialize Application with robust timeout settings
+@app.route('/health')
+def health():
+    return "OK", 200
+
+# Initialize Telegram Application
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-if not TOKEN:
-    print("CRITICAL: TELEGRAM_BOT_TOKEN is missing from environment!")
-else:
-    print(f"Token found (ending in ...{TOKEN[-4:]})")
+request_obj = HTTPXRequest(connect_timeout=60.0, read_timeout=60.0, connection_pool_size=10)
 
-# Configure request object
-request_obj = HTTPXRequest(
-    connect_timeout=60.0, 
-    read_timeout=60.0, 
-    connection_pool_size=10
-)
-
-print("Building Telegram Application...")
+print("--- RECONSTRUCTING LORIN BOT ---")
 application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
-print("Telegram Application Built Successfully.")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Simple direct start."""
-    await update.message.reply_text("MSAJCE Institutional Brain Active. Ask me anything about the college.")
+    await update.message.reply_text("MSAJCE Institutional Brain Reconstructed. I am ready.")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Handle queries with perceived streaming response."""
+    if not update.message or not update.message.text: return
+    
     user_query = update.message.text
     user_id = update.effective_user.id
+    print(f"User {user_id}: {user_query}")
     
-    # 1. Manage Persistent Conversation History (Redis)
-    redis_key = f"user_{user_id}_history"
-    history_raw = engine.redis.get(redis_key)
-    history = json.loads(history_raw) if history_raw else []
+    # 1. Thinking message
+    thinking_msg = await update.message.reply_text("🔍 Analyzing institutional database...")
     
-    history_str = "\n".join([f"User: {h['q']}\nBot: {h['a']}" for h in history])
-    
-    # 2. Initial "Thinking" message
-    message = await update.message.reply_text("🔍 Analyzing institutional database...")
-    
-    # 3. Setup Feedback Buttons
-    keyboard = [[
-        InlineKeyboardButton("👍 Accurate", callback_data=f"fb:up:{user_id}"),
-        InlineKeyboardButton("👎 Hallucination", callback_data=f"fb:down:{user_id}")
-    ]]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-
     try:
-        # Get answer from Engine (Synchronous call with history)
-        answer = engine.query(user_query, history=history_str)
+        # 2. Redis History (Async)
+        redis_key = f"user_{user_id}_history"
+        history_raw = await engine.redis.get(redis_key)
+        history = json.loads(history_raw) if history_raw else []
+        history_str = "\n".join([f"User: {h['q']}\nBot: {h['a']}" for h in history])
         
-        # Update History in Redis (Keep last 5 turns, 24h expiry)
+        # 3. Await Engine Query (Async)
+        answer = await engine.query(user_query, history=history_str)
+        
+        # 4. Update History
         history.append({"q": user_query, "a": answer})
-        new_history = history[-5:]
-        engine.redis.set(redis_key, json.dumps(new_history), ex=86400)
+        await engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
         
-        # Simple animation/chunked update for better UX
-        words = answer.split()
-        chunk_size = 15 
-        display_text = ""
-        
-        for i in range(0, len(words), chunk_size):
-            display_text = " ".join(words[:i+chunk_size])
-            if i + chunk_size < len(words):
-                try:
-                    await context.bot.edit_message_text(
-                        chat_id=update.effective_chat.id,
-                        message_id=message.message_id,
-                        text=f"{display_text}..."
-                    )
-                    await asyncio.sleep(0.05) 
-                except: pass
-            
-        # Final Final Update with Buttons
+        # 5. Final Response
+        keyboard = [[
+            InlineKeyboardButton("👍 Accurate", callback_data=f"fb:up:{user_id}"),
+            InlineKeyboardButton("👎 Hallucination", callback_data=f"fb:down:{user_id}")
+        ]]
         await context.bot.edit_message_text(
             chat_id=update.effective_chat.id,
-            message_id=message.message_id,
+            message_id=thinking_msg.message_id,
             text=answer,
-            reply_markup=reply_markup
+            reply_markup=InlineKeyboardMarkup(keyboard)
         )
+        print(f"Responded to {user_id}")
         
     except Exception as e:
-        import traceback
-        error_trace = traceback.format_exc()
-        global_logger.error(f"Error handling message:\n{error_trace}")
+        print(f"Error: {e}")
         await context.bot.edit_message_text(
             chat_id=update.effective_chat.id,
-            message_id=message.message_id,
-            text=f"System Error: {str(e)}"
+            message_id=thinking_msg.message_id,
+            text=f"Oops! I hit a snag: {str(e)}"
         )
 
-async def handle_feedback(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Capture Step 21 Feedback."""
-    query = update.callback_query
-    await query.answer()
-    
-    parts = query.data.split(":")
-    action = parts[1]
-    user_id = parts[2]
-    
-    import time
-    feedback_entry = {
-        "user_id": user_id,
-        "action": action,
-        "timestamp": time.time(),
-        "query": "Feedback on response"
-    }
-    
-    engine.redis.rpush("feedback_logs", json.dumps(feedback_entry))
-    await query.edit_message_text(text=f"{query.message.text}\n\n✅ Thank you for the feedback!")
-
-# Register handlers
-application.add_handler(CommandHandler("start", start))
-application.add_handler(CallbackQueryHandler(handle_feedback))
-application.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), handle_message))
-
-@app.route('/api/webhook', methods=['POST'])
-def webhook():
-    """Handle incoming Telegram updates via Webhook."""
-    if request.method == "POST":
-        try:
-            update = Update.de_json(request.get_json(force=True), application.bot)
-            
-            async def process():
-                await application.initialize()
-                await application.process_update(update)
-            
-            asyncio.run(process())
-            return "OK", 200
-        except Exception as e:
-            global_logger.error(f"Webhook error: {e}")
-            return str(e), 500
-    return "Method Not Allowed", 405
-
-import threading
-import time
-
-# --- Dummy Health Check & Keep-Alive Server ---
+# Health Check Server
 class HealthCheckHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(b"Lorin RAG Bot is Online and Healthy")
+        self.wfile.write(b"OK")
 
 def run_health_server():
-    port = int(os.getenv("PORT", 7860))
-    server = HTTPServer(('0.0.0.0', port), HealthCheckHandler)
-    print(f"Health check server running on port {port}")
+    server = HTTPServer(('0.0.0.0', 7860), HealthCheckHandler)
     server.serve_forever()
 
-def keep_alive_ping():
-    """Pings the health check every 10 mins to prevent sleep."""
-    port = os.getenv("PORT", "7860")
-    url = f"http://localhost:{port}/"
-    while True:
-        try:
-            requests.get(url, timeout=5)
-            # print("Keep-alive ping sent.")
-        except:
-            pass
-        time.sleep(600) # 10 minutes
-
-# Start background tasks
-# threading.Thread(target=run_health_server, daemon=True).start()
-# threading.Thread(target=keep_alive_ping, daemon=True).start()
-# -----------------------------------------------
-
 if __name__ == '__main__':
-    print("Bot is starting in FULL 29-STEP PRODUCTION MODE (Polling)...")
-    # Start Health Check Server in background
-    threading.Thread(target=run_health_server, daemon=True).start()
-    # Start Keep-Alive Ping in background
-    threading.Thread(target=keep_alive_ping, daemon=True).start()
-    # Run Telegram Polling
-    application.run_polling(drop_pending_updates=True)
-
+    from threading import Thread
+    Thread(target=run_health_server, daemon=True).start()
+    
+    print("Bot is starting (Async Polling)...")
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    application.run_polling()
