@@ -31,6 +31,24 @@ app = Flask(__name__)
 def health():
     return "OK", 200
 
+@app.route('/debug')
+def debug():
+    required = [
+        "TELEGRAM_BOT_TOKEN", "PINECONE_API_KEY", "OPENROUTER_API_KEY", 
+        "COHERE_API_KEY", "UPSTASH_REDIS_REST_URL", "UPSTASH_REDIS_REST_TOKEN",
+        "VERCEL_AI_KEY_6", "ADMIN_IDS"
+    ]
+    status = {}
+    for r in required:
+        val = os.getenv(r)
+        if val:
+            # Mask most of the key for safety, show only first 4 and last 4
+            masked = val[:4] + "..." + val[-4:] if len(val) > 8 else "SET"
+            status[r] = f"OK ({masked})"
+        else:
+            status[r] = "MISSING ❌"
+    return json.dumps(status, indent=4), 200, {'Content-Type': 'application/json'}
+
 # Initialize Telegram Application with extreme timeouts for HF
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 request_obj = HTTPXRequest(
