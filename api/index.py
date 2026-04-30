@@ -145,11 +145,20 @@ def webhook():
             return str(e), 500
     return "Method Not Allowed", 405
 
+import threading
+
 @app.route('/')
 def index():
     return "Lorin RAG Bot is Online", 200
 
+def run_flask():
+    port = int(os.getenv("PORT", 3000))
+    app.run(host='0.0.0.0', port=port)
+
 if __name__ == '__main__':
     print("Bot is starting in FULL 29-STEP PRODUCTION MODE (Polling)...")
+    # Start Flask for health checks in background
+    threading.Thread(target=run_flask, daemon=True).start()
+    # Run Telegram Polling
     application.run_polling(drop_pending_updates=True)
 
