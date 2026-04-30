@@ -31,9 +31,15 @@ app = Flask(__name__)
 def health():
     return "OK", 200
 
-# Initialize Telegram Application
+# Initialize Telegram Application with extreme timeouts for HF
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-request_obj = HTTPXRequest(connect_timeout=60.0, read_timeout=60.0, connection_pool_size=10)
+request_obj = HTTPXRequest(
+    connect_timeout=100.0, 
+    read_timeout=100.0, 
+    write_timeout=100.0,
+    pool_timeout=100.0,
+    connection_pool_size=20
+)
 
 print("--- RECONSTRUCTING LORIN BOT ---")
 application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
