@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "title": "msajce_incubation.pdf"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_incubation_chunk_01",
+      "section": "Sathak Innovation and Incubation Foundation (SIIF) — Overview & Incubation Cell",
+      "text": "Describes the founding objects of SIIF and the services offered by the Incubation Cell including infrastructure, funding, mentorship, and events.\n\nSathak Innovation and Incubation Foundation (SIIF) — Main Objects:\n\n1. To promote commerce, science, education and research by helping, establishing and incubating startups, individuals, teams with innovative ideas to make prototypes and convert them into products.\n2. To promote a culture of innovation-driven entrepreneurship in the fields of science, engineering, technology, commerce, agriculture, health care, medicine, pharmacy, education, arts, sports and other various fields.\n3. To establish, help establish and/or manage infrastructure, laboratories, to make and test prototypes/products, pilot plant production facilities, software development facilities, training and human resource development centres, propagate new scientific and technological development and innovation from idea stage to full-scale commercial production or any part of this chain. For the above purposes to assist, co-operate or collaborate with any establishment, laboratory, technology business incubators centre, organisation or institution in India or abroad.\n\nIncubation Cell — Services Offered:\n\n- Physical office space: approx. 5000 sq.ft.\n- Event halls: 100-seater, 400-seater, 700-seater halls for Entrepreneurship events.\n- Funding opportunities: grants, seed funding, and connections to potential investors.\n- Mentorship programs: experienced professionals and industry experts provide guidance.\n- Access to network of investors, venture capitalists, and angel investors.\n- Workshops, training programs, and events for innovation and entrepreneurial skills.\n- Partnerships with academic institutions, industry bodies, and government agencies.",
+      "possible_questions": [
+        "What is SIIF at MSAJCE?",
+        "What is the Sathak Innovation and Incubation Foundation?",
+        "What services does the MSAJCE Incubation Cell provide?",
+        "Who is the Incubation Lead at MSAJCE?",
+        "How do I contact SIIF at MSAJCE?",
+        "Does MSAJCE have startup incubation support?",
+        "What is the office space available at MSAJCE incubation cell?",
+        "Does MSAJCE help with funding for startups?"
+      ],
+      "entities": {
+        "persons": [
+          {
+            "name": "Akshita K",
+            "role": "Incubation Lead",
+            "organisation": "SIIF, MSAJCE — Mohamed Sathak A.J. College of Engineering, Chennai - 603103",
+            "email": "info@siif.ventures",
+            "website": "www.siif.ventures"
+          }
+        ],
+        "locations": [
+          "Chennai"
+        ]
+      },
+      "keywords": []
+    },
+    {
+      "chunk_id": "msajce_incubation_chunk_02",
+      "section": "National Innovation and Startup Policy (NISP) — Vision, Mission & Objectives",
+      "text": "Covers the NISP vision and mission statements and both short-term and long-term objectives for promoting innovation and entrepreneurship at MSAJCE.\n\nVision:\nTo cater the needs of student entrepreneurs with innovative ideas thereby introducing a culture of entrepreneurship inside campus which will strengthen our education system and thereby promoting national economic and social growth.\n\nMission:\nTo develop an ecosystem with required infrastructure that can enable students and faculty to innovate and prototype their potential ideas with industrial standards and support from Government, industry and reputed academic institutions around the world and help them to realize their potentials.\n\nShort Term Objectives:\n1. To help student groups to prototype their ideas.\n2. To improve innovation, creative and design thinking among student community.\n3. Incubation facility for faculty driven start-up and student/alumni start-up.\n4. Organize FDP, seminars and workshops, distinguish talks for students, faculty and alumni and promote entrepreneurial culture.\n5. Strengthen institute-industry interaction cell activity and effectively use the outcomes for achieving the mission.\n\nLong Term Objectives:\n1. Associate with DST, CII, MSME and other academic institutions for transferring world class facility for MSAJCE IEDC activities.\n2. Improve quality of research work among students and to attain patent, which can be commercially used in production.\n3. Provide a platform for students to develop innovative products with global recognition and generate business opportunities.\n4. Generate revenues through consultancy work and student start-ups.\n5. Spread awareness to students and faculty regarding IPR related activities.\n6. Strategic partnership linkage with:\n- a. Entrepreneurship Development Institute of India (EDII), Chennai.\n- b. National Innovation Foundation (NIF) of India to submit ideas and apply for schemes.\n- c. Procure fund from AICTE for Entrepreneurship Development Cell.",
+      "possible_questions": [
+        "What is the NISP policy at MSAJCE?",
+        "What is the vision of MSAJCE for innovation and startups?",
+        "What are the short term objectives of MSAJCE startup policy?",
+        "What are the long term objectives of MSAJCE innovation cell?",
+        "Does MSAJCE have partnership with EDII or NIF?",
+        "Does MSAJCE support faculty-driven startups?",
+        "What is the IPR initiative at MSAJCE?",
+        "Does MSAJCE provide incubation for alumni startups?"
+      ],
+      "entities": {
+        "persons": [],
+        "locations": []
+      },
+      "keywords": [
+        "NISP",
+        "National Innovation Startup Policy",
+        "vision",
+        "mission",
+        "short term objectives",
+        "long term objectives",
+        "IEDC",
+        "AICTE",
+        "DST",
+        "CII",
+        "MSME",
+        "IPR",
+        "patent",
+        "EDII",
+        "NIF",
+        "faculty startup",
+        "student startup",
+        "entrepreneurship"
+      ]
+    },
+    {
+      "chunk_id": "msajce_incubation_chunk_03",
+      "section": "NISP Committee Members & Thrust Areas",
+      "text": "Lists the committee members of the National Innovation and Startup Policy at MSAJCE along with the key thrust areas for the innovation ecosystem.\n\nNISP Committee Members:\n\n1. Dr. K.S. Srinivasan — Principal, Mohamed Sathak A.J. College of Engineering (MSAJCE), Chennai\n2. Mr. Prakadesh Subramanian — Strategic Partner, SIIF, Chennai\n3. Mr. Parvez Aalam — CEO, Crescent Innovation Incubation Council, Chennai\n4. Mr. Thiyagaraja Gupta — Deputy Controller of Patents and Designs\n5. Ahamed Jamel AMT — IT Consultant, 4A Technology\n6. Abdur Rahim",
+      "possible_questions": [],
+      "entities": {
+        "persons": [
+          {
+            "name": "Dr. K.S. Srinivasan",
+            "role": "Principal",
+            "organisation": "MSAJCE, Chennai"
+          },
+          {
+            "name": "Mr. Prakadesh Subramanian",
+            "role": "Strategic Partner",
+            "organisation": "SIIF, Chennai"
+          },
+          {
+            "name": "Mr. Parvez Aalam",
+            "role": "CEO",
+            "organisation": "Crescent Innovation Incubation Council, Chennai"
+          },
+          {
+            "name": "Mr. Thiyagaraja Gupta",
+            "role": "Deputy Controller of Patents and Designs"
+          },
+          {
+            "name": "Ahamed Jamel AMT",
+            "role": "IT Consultant",
+            "organisation": "4A Technology"
+          },
+          {
+            "name": "Abdur Rahim"
+          }
+        ],
+        "locations": [
+          "Chennai"
+        ]
+      },
+      "keywords": []
+    }
+  ]
+}

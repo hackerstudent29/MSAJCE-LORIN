@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "title": "msajce_alumni.pdf"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_alumni_chunk_01",
+      "section": "Alumni Association Overview and Objectives",
+      "text": "Alumni association of Mohamed Sathak AJ College of Engineering welcomes you all to join us. This association is formed to reconnect and foster intellectual and emotional relationship between alumni and parent organisation. Also to bring in goodwill and voluntary commitment to support future engineers of the institution and provide industry-institute relationship and enthusiastically participate in various activities organised by the college.\n\nOur Objectives:\n1. To foster a sense of connectedness back to the institution\n2. To establish and renew student relationship\n3. To involve in various activities of the college\n4. To provide assistance to needful students by way of funds and scholarship\n5. To gather and maintain database of employment and assist in placements\n6. To arrange teaching and training classes to students\n7. To contribute for the overall upgrading of the institution\n\nAlumni Registration Form: https://forms.gle/CBMdXCDEb9uXVEBv6\n\nAssociation Reports and Documents:\n- ALUMNI ASSOCIATION BY-LAWS (Tamil)\n- ALUMNI MEET MINUTES\n- ALUMNI ASSOCIATION BY-LAWS (English)\n- ALUMNI MEET REPORT",
+      "possible_questions": [
+        "What is the MSAJCE Alumni Association?",
+        "What are the objectives of the MSAJCE Alumni Association?",
+        "How does the alumni association help students?",
+        "How can I register as an MSAJCE alumni?",
+        "Where can I find the alumni association by-laws?",
+        "Does MSAJCE alumni association provide scholarships?",
+        "What is the purpose of the MSAJCE alumni association?",
+        "How does the alumni association support placements?"
+      ],
+      "entities": {
+        "persons": [],
+        "locations": []
+      },
+      "keywords": []
+    },
+    {
+      "chunk_id": "msajce_alumni_chunk_02",
+      "section": "Office Bearers 2024 - Till Now",
+      "text": "| S. No. | Name of the Alumni                      | Designation         |\n| ------ | --------------------------------------- | ------------------- |\n| 1      | Dr. K. S. Srinivasan (Principal)        | President           |\n| 2      | Mr. Ahamed Jameel A.M.T (Alumni)        | Secretary           |\n| 3      | Administrative Officer                  | Treasurer           |\n| 4      | Mr. J. Abdul Rahman (Alumni)            | Vice President      |\n| 5      | Mr. Mohamed Yasar (Alumni)              | Executive Member    |\n| 6      | Mr. M.M. Syed Sultan Allaudeen (Alumni) | Joint Secretary     |\n| 7      | Mr. Asim Ali L (Alumni)                 | Joint Secretary     |\n| 8      | Mr. Abdul Majeed Shiblee (Alumni)       | Joint Secretary     |\n| 9      | Mr. Noorul Jaman (Alumni)               | Executive Member    |\n| 10     | Mr. N. Naveen (Alumni)                  | Executive Member    |\n| 11     | Mr. Mikail Ismail (Alumni)              | Program Coordinator |\n| 12     | Mr. Mohammed Umar Farook B (Alumni)     | Executive Member    |\n| 13     | Mr. Mano Raja (Alumni)                  | Executive Member    |\n| 14     | Mr. N. Abdul Hameed (Alumni)            | Executive Member    |\n| 15     | Mr. Narenthiran (Alumni)                | Executive Member    |\n| 16     | Mr. T.H. Mohamed Jiavur Rahman (Alumni) | Executive Member    |\n| 17     | Mr. Syed N Zaheer Abbas (Alumni)        | Executive Member    |\n| 18     | Mr. P. Nadir Khan (Alumni)              | Executive Member    |\n| 19     | Srikanth K (Alumni)                     | Executive Member    |\n| 20     | Ms. Misbah Khairunissa A (Alumni)       | Executive Member    |\n| 21     | Ms. Akila Rajesh (Alumni)               | Executive Member    |\n| 22     | Mr. Seyed Mohamed Mustafa H (Alumni)    | Executive Member    |\n| 23     | Mr. Ram Kumar C (Alumni)                | Executive Member    |\n| 24     | Mr. Themotheyu S (Alumni)               | Executive Member    |\n| 25     | Mr. Mohammed Khaja Nawaz A (Alumni)     | Executive Member    |\n| 26     | Mr. Mohammed Thaqiuddin N (Alumni)      | Executive Member    |\n| 27     | Mr. Harish N (Alumni)                   | Executive Member    |\n| 28     | Mr. Diwakaran k (Alumni)                | Executive Member    |\n| 29     | Mr. Deepak V R (Alumni)                 | Executive Member    |\n| 30     | Mr. Vineeth Baba K B (Alumni)           | Executive Member    |\n| 31     | Mr. Firthouse Mohideen J K (Alumni)     | Executive Member    |",
+      "possible_questions": [],
+      "entities": {
+        "persons": [
+          "Dr. K. S. Srinivasan",
+          "Mr. Ahamed Jameel A.M.T",
+          "Mr. J. Abdul Rahman",
+          "Mr. Mohamed Yasar",
+          "Mr. M.M. Syed Sultan Allaudeen",
+          "Mr. Asim Ali L",
+          "Mr. Abdul Majeed Shiblee",
+          "Mr. Noorul Jaman",
+          "Mr. N. Naveen",
+          "Mr. Mikail Ismail",
+          "Mr. Mohammed Umar Farook B",
+          "Mr. Mano Raja",
+          "Mr. N. Abdul Hameed",
+          "Mr. Narenthiran",
+          "Mr. T.H. Mohamed Jiavur Rahman",
+          "Mr. Syed N Zaheer Abbas",
+          "Mr. P. Nadir Khan",
+          "Srikanth K",
+          "Ms. Misbah Khairunissa A",
+          "Ms. Akila Rajesh",
+          "Mr. Seyed Mohamed Mustafa H",
+          "Mr. Ram Kumar C",
+          "Mr. Themotheyu S",
+          "Mr. Mohammed Khaja Nawaz A",
+          "Mr. Mohammed Thaqiuddin N",
+          "Mr. Harish N",
+          "Mr. Diwakaran k",
+          "Mr. Deepak V R",
+          "Mr. Vineeth Baba K B",
+          "Mr. Firthouse Mohideen J K"
+        ],
+        "locations": []
+      },
+      "keywords": []
+    }
+  ]
+}

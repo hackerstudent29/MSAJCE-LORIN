@@ -1,0 +1,45 @@
+graph TD
+    %% Input Stage
+    U[User Query] --> PP[Pre-Flight Processor]
+    
+    subgraph "1. Query Understanding Layer"
+        PP -->|Detect Intent| C[Factual vs Other]
+        PP -->|Preserve Constraints| R[Query Rewriting]
+        PP -->|Complexity Check| CMP[Simple vs Complex]
+    end
+
+    %% Retrieval Stage
+    R --> HR[Hybrid Retrieval Engine]
+    
+    subgraph "2. Hybrid Memory Layer"
+        HR --> VEC[Vector Search: Pinecone]
+        HR --> LEX[Lexical Search: BM25s]
+        VEC & LEX --> FUSE[Reciprocal Rank Fusion]
+        FUSE --> RNK[Cohere Rerank v3.0]
+    end
+
+    %% Reasoning Stage
+    RNK --> AG[Answerability Gate]
+    RNK --> CD[Conflict Detection Layer]
+
+    subgraph "3. Reasoning & Decision Layer"
+        AG -->|Insufficient| REF[Polite Refusal]
+        AG -->|Sufficient| GEN[Lorin Generator]
+        CD -->|Conflict Found| GEN
+    end
+
+    %% Verification Stage
+    GEN --> DHC{Deterministic Hard-Check}
+    
+    subgraph "4. Multi-Stage Verification"
+        DHC -->|Regex Failure| REJ[Audit Rejection]
+        DHC -->|Regex Pass| ADP{Adaptive Shortcut}
+        ADP -->|Simple Query| OUT[Final Response]
+        ADP -->|Complex Query| SLA[Secondary LLM Audit]
+        SLA -->|Verified| OUT
+        SLA -->|Hallucination| REJ
+    end
+
+    %% Telemetry
+    OUT --> LS[(LangSmith Tracing)]
+    OUT --> RD[(Upstash Redis Logs)]

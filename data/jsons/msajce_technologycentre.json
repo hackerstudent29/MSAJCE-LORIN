@@ -1,0 +1,569 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Technology Centre — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/technologycentre.php",
+    "sections_covered": [
+      "Technology Centre Overview",
+      "MECH & CIVIL Centres Directory",
+      "ECE & EEE Centres Directory",
+      "CSE & IT Centres Directory",
+      "RPA Bot Lab — Automation Anywhere",
+      "CISCO Networking Academy Centre",
+      "Centre for 3D Printing and Additive Manufacturing",
+      "Amazon Web Services (AWS) & Cloud Computing Centre",
+      "Cyber Security Academy — Palo Alto Systems",
+      "Embedded & IoT Centre",
+      "e-Yantra IIT Bombay Remote Centre",
+      "Code Tantra Coding Learning Centre",
+      "Gaming & AR/VR Centre",
+      "Bentley's Building Information Modelling Centre",
+      "Centre for CAE — Altair & CATIA",
+      "Communication Language Learning Centre",
+      "RAISE Centre of Excellence — MIT Square London"
+    ],
+    "scraped_date": "2026-04-28",
+    "total_chunks": 14,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_technologycentre",
+    "version": "1.0"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_technologycentre_chunk_01",
+      "section": "Technology Centre Overview and Purpose",
+      "source_url": "https://www.msajce-edu.in/technologycentre.php",
+      "context": "Overview of MSAJCE Technology Centre, its mission, establishment year, industry partners and the full directory of all centres across three department groups.",
+      "text": "Technology Centre — MSAJCE\n\nIn pursuit of MSAJCE's vision and mission to make students deployable and equip them with upcoming emerging industrial demands, various Technology Centres were established in the year 2019-2020 to educate, train and up-skill students in niche technologies. The courses and training are designed based on the recommendations of AICTE and India Skill Report 2020. The Technology Centers, established with state-of-art facilities, provide an ambient learning environment for research and innovation. Each centre is collaborated with industry/government organizations to provide certifications, onsite/offsite projects and internships.\n\nIndustry Partners include: Automation Anywhere, Godrej Inc, Ford, Palo Alto Systems, Amazon Web Services, National Instruments, CISCO Academy, Altair, Open Wave Computing, Levergent Technologies, Propeller Technologies.\n\nMECH AND CIVIL Centres:\nS.No | Name of Centre | Details URL\n1 | Centre for 3D Printing and Additive Manufacturing | https://www.msajce-edu.in/departments/CFT/013DPrinting.pdf\n2 | Centre for CAE | https://www.msajce-edu.in/departments/CFT/02CAE.pdf\n3 | Centre for Industrial Robotics | https://www.msajce-edu.in/departments/CFT/03Robotics.pdf\n4 | Centre for NDT – Non Destructive Testing | https://www.msajce-edu.in/departments/CFT/04NDT.pdf\n5 | Centre for Building Information Modelling | https://www.msajce-edu.in/departments/CFT/05BuildingInformation.pdf\n\nECE AND EEE Centres:\nS.No | Name of Centre | Details URL\n1 | Centre for Embedded & IoT | https://www.msajce-edu.in/departments/CFT/01Embedded&IOT.pdf\n2 | Centre for UAV/Drone Technology | https://www.msajce-edu.in/departments/CFT/02Drone.pdf\n3 | Godrej Disha Skill Development Centre | https://www.msajce-edu.in/departments/CFT/03GodrejDisha.pdf\n4 | Centre for Bosch Industry Institute Collaboration | https://www.msajce-edu.in/departments/CFT/04Bosch.pdf\n5 | Centre for E-Mobility | https://www.msajce-edu.in/departments/CFT/05EMobility.pdf\n6 | Centre for Renewable Energy | https://www.msajce-edu.in/departments/CFT/06RenewableEnergy.pdf\n7 | APJ Abdul Kalam Innovation Centre | https://www.msajce-edu.in/departments/CFT/07InnovatinCentre.pdf\n\nCSE AND IT Centres:\nS.No | Name of Centre | Details URL\n1 | Centre for Bot Lab & Robotics Process Automation | https://www.msajce-edu.in/departments/CFT/01BotLab.pdf\n2 | Centre for Cisco Networking Academy | https://www.msajce-edu.in/departments/CFT/02CiscoAcademy.pdf\n3 | Centre for Code Tantra – Coding Learning Centre | https://www.msajce-edu.in/departments/CFT/03CodeTantra.pdf\n4 | Centre for Gaming and AR/VR | https://www.msajce-edu.in/departments/CFT/04Gaming.pdf\n5 | Centre for Artificial Intelligence and Machine Learning | https://www.msajce-edu.in/departments/CFT/05ai&mlc.pdf\n6 | Centre for Block Chain Technology | https://www.msajce-edu.in/departments/CFT/06BlockChain.pdf\n7 | Centre for Mobile and Web Application Development | https://www.msajce-edu.in/departments/CFT/07Mobile&WebApp.pdf",
+      "tables": [
+        {
+          "table_title": "MECH & CIVIL Technology Centres",
+          "headers": ["S.No", "Name of Centre", "Details PDF URL"],
+          "rows": [
+            ["1", "Centre for 3D Printing and Additive Manufacturing", "https://www.msajce-edu.in/departments/CFT/013DPrinting.pdf"],
+            ["2", "Centre for CAE", "https://www.msajce-edu.in/departments/CFT/02CAE.pdf"],
+            ["3", "Centre for Industrial Robotics", "https://www.msajce-edu.in/departments/CFT/03Robotics.pdf"],
+            ["4", "Centre for NDT – Non Destructive Testing", "https://www.msajce-edu.in/departments/CFT/04NDT.pdf"],
+            ["5", "Centre for Building Information Modelling", "https://www.msajce-edu.in/departments/CFT/05BuildingInformation.pdf"]
+          ]
+        },
+        {
+          "table_title": "ECE & EEE Technology Centres",
+          "headers": ["S.No", "Name of Centre", "Details PDF URL"],
+          "rows": [
+            ["1", "Centre for Embedded & IoT", "https://www.msajce-edu.in/departments/CFT/01Embedded&IOT.pdf"],
+            ["2", "Centre for UAV/Drone Technology", "https://www.msajce-edu.in/departments/CFT/02Drone.pdf"],
+            ["3", "Godrej Disha Skill Development Centre", "https://www.msajce-edu.in/departments/CFT/03GodrejDisha.pdf"],
+            ["4", "Centre for Bosch Industry Institute Collaboration", "https://www.msajce-edu.in/departments/CFT/04Bosch.pdf"],
+            ["5", "Centre for E-Mobility", "https://www.msajce-edu.in/departments/CFT/05EMobility.pdf"],
+            ["6", "Centre for Renewable Energy", "https://www.msajce-edu.in/departments/CFT/06RenewableEnergy.pdf"],
+            ["7", "APJ Abdul Kalam Innovation Centre", "https://www.msajce-edu.in/departments/CFT/07InnovatinCentre.pdf"]
+          ]
+        },
+        {
+          "table_title": "CSE & IT Technology Centres",
+          "headers": ["S.No", "Name of Centre", "Details PDF URL"],
+          "rows": [
+            ["1", "Centre for Bot Lab & RPA", "https://www.msajce-edu.in/departments/CFT/01BotLab.pdf"],
+            ["2", "Centre for Cisco Networking Academy", "https://www.msajce-edu.in/departments/CFT/02CiscoAcademy.pdf"],
+            ["3", "Centre for Code Tantra – Coding Learning Centre", "https://www.msajce-edu.in/departments/CFT/03CodeTantra.pdf"],
+            ["4", "Centre for Gaming and AR/VR", "https://www.msajce-edu.in/departments/CFT/04Gaming.pdf"],
+            ["5", "Centre for AI and Machine Learning", "https://www.msajce-edu.in/departments/CFT/05ai&mlc.pdf"],
+            ["6", "Centre for Block Chain Technology", "https://www.msajce-edu.in/departments/CFT/06BlockChain.pdf"],
+            ["7", "Centre for Mobile and Web Application Development", "https://www.msajce-edu.in/departments/CFT/07Mobile&WebApp.pdf"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the Technology Centre at MSAJCE?",
+        "When were the technology centres established at MSAJCE?",
+        "Which industry partners does MSAJCE collaborate with for technology centres?",
+        "How many technology centres does MSAJCE have?",
+        "What technology centres are available for CSE students at MSAJCE?",
+        "What centres are available for ECE and EEE students?",
+        "Does MSAJCE have a robotics or drone technology centre?",
+        "What is the vision behind MSAJCE Technology Centres?",
+        "Where can I download the details of MSAJCE technology centre brochures?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+        "numbers": ["2019-2020 — year of establishment", "19 total centres across 3 department groups"]
+      },
+      "keywords": [
+        "technology centre", "skill development", "AICTE", "India Skill Report 2020", "industry collaboration",
+        "certification", "internship", "RPA", "CISCO", "3D Printing", "IoT", "Drone", "Godrej", "Bosch",
+        "Automation Anywhere", "Palo Alto", "AWS", "Altair", "blockchain", "gaming", "AR/VR"
+      ],
+      "overlap_text": "",
+      "token_count": 520
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_02",
+      "section": "RPA Bot Lab — Robotics Process Automation (Automation Anywhere)",
+      "source_url": "https://www.msajce-edu.in/technologycentreroboticsprocess.php",
+      "context": "Full details of the RPA Bot Lab at MSAJCE, partnered with Automation Anywhere — objectives, outcomes, certifications, course content and syllabus.",
+      "text": "Robotics Process Automation (RPA) — Partnered with Automation Anywhere\nURL: https://www.msajce-edu.in/technologycentreroboticsprocess.php\nSyllabus PDF: https://www.msajce-edu.in/uploads/technologycentre/syllabus/RPA-Syllabus.pdf\n\nObjectives — Students will be able to:\n• Explain in detail about the Automation Anywhere Enterprise Platform, Architecture and its Components.\n• Provide in-depth knowledge about the various features and functionalities of AA software, Runtime AA Client, and Web Control Room.\n• Create Bots using different types of Recorders, Editors, and Basic Commands using Automation Anywhere platform.\n• Apply bot creation methodologies for developing bots to solve any real world problems.\n\nOutcomes — Students will be able to:\n• Automate any sort of manual or repetitive human tasks by using the Bot Development tool.\n• Develop and deploy software bots which can perform automation tasks 24/7 without interruption.\n• Create and deploy bots which significantly improves the process and productivity of any industrial, educational, government and private organizations.\n• Build IQ bots with artificial intelligence capable of solving complex real world problems.\n\nAbout the Centre:\nMSAJCE has partnered with Automation Anywhere, the market leaders in Robotic Process Automation (RPA), to establish the AAU powered Bot Lab. The AAU powered Bot Lab provides training in RPA, which is simple and powerful automation software used to create software robots that can automate any business process.\n\nBenefits:\n• Access to the Automation Anywhere Enterprise Platform and hands-on training.\n• Globally-recognized certification, internships and placement assistance across industries.\n• Opportunity to build your own bots and upload it on Automation Anywhere Bot Store, the world's leading marketplace for bots and Digital Workers.\n\nCourse Offered: Robotic Process Automation\n\nCertifications:\n• Automation Anywhere Certified Essential RPA Professional\n• Automation Anywhere Certified Advanced RPA Professional\n• Automation Anywhere Certified Master RPA Professional\n\nSyllabus:\n1. Introduction to RPA & Bot Creation (6 Hours)\n2. Bot Creator (9 Hours): Introduction – Recorders – Smart Recorders – Web Recorders – Screen Recorders – Task Editor – Variables – Command Library – Loop Command – Excel Command – Database Command – String Operation Command – XML Command – Terminal Emulator Command – PDF Integration Command – FTP Command – PGP Command – Object Cloning Command – Error Handling Command – Manage Windows Control Command – Workflow Designer – Report Designer – Best Practices – Summary\n3. Meta Bot and Bot Insight (6 Hours): Introduction – MetaBot Designer – MetaBot With AI Sense – Bot Insight – Transactional Analytics – Operational Analytics\n4. Assessment and Essential Certification (6 Hours)\n5. List of Experiments (12 Hours): Software Installation (AA Control Room, SQL Server, AA Client) – Bot Creation using Smart/Web/Screen Recorders – Loop Command bots – Database automation bots – Excel automation bots – PDF Integration bots – Error handling bots – Object Cloning – FTP and PGP execution – MetaBot with AI Sense.",
+      "tables": [
+        {
+          "table_title": "RPA Certifications Offered",
+          "headers": ["Certification Level"],
+          "rows": [
+            ["Automation Anywhere Certified Essential RPA Professional"],
+            ["Automation Anywhere Certified Advanced RPA Professional"],
+            ["Automation Anywhere Certified Master RPA Professional"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Does MSAJCE have an RPA centre?",
+        "Which company has partnered with MSAJCE for RPA training?",
+        "What certifications can I get from the MSAJCE RPA centre?",
+        "What is taught in the RPA course at MSAJCE?",
+        "How many hours is the RPA Bot Creator module?",
+        "What is the Bot Lab at MSAJCE?",
+        "Can students upload bots to the Automation Anywhere Bot Store through MSAJCE?",
+        "What is the RPA syllabus at MSAJCE?",
+        "Where can I download the RPA syllabus PDF?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+        "numbers": ["6 Hours — Intro to RPA", "9 Hours — Bot Creator", "6 Hours — Meta Bot", "12 Hours — Lab Experiments"]
+      },
+      "keywords": [
+        "RPA", "Robotic Process Automation", "Automation Anywhere", "Bot Lab", "AAU", "bot creation",
+        "smart recorder", "web recorder", "MetaBot", "AI Sense", "Bot Store", "certification",
+        "Essential RPA", "Advanced RPA", "Master RPA", "Control Room", "SQL Server"
+      ],
+      "overlap_text": "",
+      "token_count": 490
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_03",
+      "section": "CISCO Networking Academy Centre — Objectives, Outcomes and Certifications",
+      "source_url": "https://www.msajce-edu.in/technologycentrecisco.php",
+      "context": "Full details of MSAJCE's CISCO Networking Academy (NetAcad) centre — objectives, outcomes, courses, certifications and detailed CCNA syllabus.",
+      "text": "CISCO Network Academy Centre\nURL: https://www.msajce-edu.in/technologycentrecisco.php\nSyllabus PDF: https://www.msajce-edu.in/uploads/technologycentre/syllabus/Cisco.pdf\n\nObjectives — Students will be able to:\n• Understand the architecture, structure, functions, components, and models of the Internet and other computer networks using OSI and TCP layered models.\n• Learn the principles and structure of IP addressing and fundamentals of Ethernet concepts, media, and operations.\n• Use Packet Tracer (PT) to analyze protocol and network operation and build small networks in a simulated environment.\n\nOutcomes — Students will be able to:\n• Build simple LANs, perform basic configurations for routers, switches, and implement IP addressing schemes.\n• Configure and troubleshoot routers, switches and resolve VLAN routing issues in IPv4 and IPv6 networks.\n• Configure WAN technologies and network services required by converged applications in a complex network.\n• Acquire knowledge to use simulation tools to design an enterprise network and evaluate design alternatives.\n• Address IP addresses assignment, internetworking equipment selection and network performance issues.\n\nAbout the Centre:\nMSAJCE has partnered with CISCO, the world leaders in networking, to establish the Networking Academy (NetAcad). Cisco Networking Academy is an IT skills and career building program providing:\n• Unique hands-on learning in networking, security, and cloud technologies using simulation tools.\n• Professional certification recognized by employers worldwide.\n• Career pathways to an estimated 8 million networking jobs worldwide through Netacad.\n\nCourses Offered:\n• Network Essentials | Mobility Fundamentals | CCNA: Introduction to Networks | CCNA: Switching, Routing, and Wireless Essentials | CCNA: Enterprise Networking, Security and Automation | Networking Courses | Security Courses | IoT & Data Analytics Courses | OS and IT Courses | Programming Courses | Entrepreneurship\n\nCertifications:\n• CISCO Certified Network Associate (CCNA)\n• Implementing CISCO Enterprise Network Core Technologies",
+      "tables": [
+        {
+          "table_title": "CISCO Courses and Certifications",
+          "headers": ["Type", "Name"],
+          "rows": [
+            ["Course", "Network Essentials"],
+            ["Course", "Mobility Fundamentals"],
+            ["Course", "CCNA: Introduction to Networks"],
+            ["Course", "CCNA: Switching, Routing, and Wireless Essentials"],
+            ["Course", "CCNA: Enterprise Networking, Security and Automation"],
+            ["Course", "Security Courses | IoT & Data Analytics | OS and IT | Programming | Entrepreneurship"],
+            ["Certification", "CISCO Certified Network Associate (CCNA)"],
+            ["Certification", "Implementing CISCO Enterprise Network Core Technologies"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Does MSAJCE have a CISCO networking centre?",
+        "What CISCO courses are offered at MSAJCE?",
+        "Can I get a CCNA certification from MSAJCE?",
+        "What is the CISCO Networking Academy at MSAJCE?",
+        "What networking skills will I learn at MSAJCE CISCO centre?",
+        "How many networking jobs are available through Netacad?",
+        "Does MSAJCE have CCNA courses?",
+        "Where can I find the CISCO syllabus for MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+        "numbers": ["8 million networking jobs worldwide", "70 total hours for CCNAv7"]
+      },
+      "keywords": [
+        "CISCO", "NetAcad", "Networking Academy", "CCNA", "LAN", "WAN", "IPv4", "IPv6",
+        "Packet Tracer", "router", "switch", "VLAN", "networking certification", "network security",
+        "IoT analytics", "cloud technologies", "OSI model", "TCP"
+      ],
+      "overlap_text": "MSAJCE has partnered with CISCO, the world leaders in networking, to establish the Networking Academy (NetAcad). The Academy provides career pathways to an estimated 8 million networking jobs worldwide.",
+      "token_count": 470
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_04",
+      "section": "CISCO CCNA v7 Detailed Syllabus — Introduction to Networks",
+      "source_url": "https://www.msajce-edu.in/technologycentrecisco.php",
+      "context": "Complete topic-wise CCNAv7 Introduction to Networks syllabus (17 modules, 70 total hours) taught at MSAJCE CISCO centre.",
+      "text": "CCNAv7 — Introduction to Networks (Full Syllabus) — Total Hours: 70\nSource: CISCO Networking Academy\n\n1. Networking Today (3 Hours)\n2. Basic Switch and End Device Configuration (5 Hours): Cisco IOS Access – IOS Navigation – Command Structure – Basic Device Configuration – Save Configurations – Ports and Addresses – Configure IP Addressing – Verify Connectivity\n3. Protocol and Models (3 Hours): The Rules – Protocol Suites – Standards Organizations – Reference Models – Data Encapsulation – Data Access\n4. Physical Layer (3 Hours): Purpose – Physical Layer Characteristics – Copper Cabling – UTP Cabling – Fiber-Optic Cabling – Wireless Media\n5. Number Systems (1 Hour): Binary Number System – Hexadecimal Number System\n6. Data Link Layer (3 Hours): Purpose – Topologies – Data Link Frame\n7. Ethernet Switching (4 Hours): Ethernet Frame – Ethernet MAC Address – The MAC Address Table – Switch Speeds and Forwarding Methods\n8. Network Layer (5 Hours): Network Layer Characteristics – IPv4 and IPv6 Packet – Router Routing Table\n9. Address Resolution (3 Hours): MAC and IP – ARP – Neighbor Discovery\n10. Basic Router Configuration (6 Hours): Configure Initial Router Settings – Configure Interfaces – Configure the Default Gateway\n11. IPv4 Addressing (6 Hours): IPv4 Address Structure – Unicast/Broadcast/Multicast – Types of IPv4 Addresses – Network Segmentation – Subnet an IPv4 Network – VLSM – Structured Design\n12. IPv6 Addressing (4 Hours): IPv6 Addressing – Address Types – GUA and LLA Static Configuration – Dynamic Addressing – IPv6 Multicast – Subnet an IPv6 Network\n13. ICMP (3 Hours): ICMP Messages – Ping and Traceroute Testing\n14. Transport Layer (5 Hours): Transportation of Data – TCP Overview – UDP Overview – Port Numbers – TCP Communication Process – Reliability and Flow Control – UDP Communication\n15. Application Layer (5 Hours): Application, Presentation, and Session – Peer-to-Peer – Web and Email Protocols – IP Addressing Services – File Sharing Services\n16. Network Security Fundamentals (5 Hours): Security Threats and Vulnerabilities – Network Attacks – Attack Mitigation – Device Security\n17. Build a Small Network (6 Hours): Devices – Small Network Applications and Protocols – Scale to Larger Networks – Verify Connectivity – Host and IOS Commands – Troubleshooting Methodologies – Troubleshooting Scenarios\n\nLabs: 24 hands-on and paper-based labs using Packet Tracer Tool, Cisco 4221 routers and 2960 switches.",
+      "tables": [
+        {
+          "table_title": "CCNAv7 Module Hours Summary",
+          "headers": ["Module", "Topic", "Hours"],
+          "rows": [
+            ["1", "Networking Today", "3"],
+            ["2", "Basic Switch and End Device Configuration", "5"],
+            ["3", "Protocol and Models", "3"],
+            ["4", "Physical Layer", "3"],
+            ["5", "Number Systems", "1"],
+            ["6", "Data Link Layer", "3"],
+            ["7", "Ethernet Switching", "4"],
+            ["8", "Network Layer", "5"],
+            ["9", "Address Resolution", "3"],
+            ["10", "Basic Router Configuration", "6"],
+            ["11", "IPv4 Addressing", "6"],
+            ["12", "IPv6 Addressing", "4"],
+            ["13", "ICMP", "3"],
+            ["14", "Transport Layer", "5"],
+            ["15", "Application Layer", "5"],
+            ["16", "Network Security Fundamentals", "5"],
+            ["17", "Build a Small Network", "6"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What topics are covered in the CISCO CCNA course at MSAJCE?",
+        "How many hours is the CCNAv7 course at MSAJCE?",
+        "What labs are included in the CISCO course at MSAJCE?",
+        "What routers and switches are used in CISCO labs at MSAJCE?",
+        "Does the CISCO course cover IPv6?",
+        "What is covered in Network Security module of CCNA at MSAJCE?",
+        "How many modules are in CCNAv7 Introduction to Networks?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": [],
+        "numbers": ["70 total hours", "24 hands-on labs", "17 modules", "Cisco 4221 routers", "2960 switches"]
+      },
+      "keywords": [
+        "CCNAv7", "Introduction to Networks", "IPv4", "IPv6", "TCP", "UDP", "ICMP", "ARP",
+        "Ethernet", "router configuration", "switch configuration", "VLAN", "VLSM", "subnetting",
+        "Packet Tracer", "Cisco 4221", "2960 switch", "network security", "transport layer"
+      ],
+      "overlap_text": "CCNAv7 Introduction to Networks has 17 modules totalling 70 hours, including 24 hands-on labs using Packet Tracer Tool and Cisco 4221 routers and 2960 switches.",
+      "token_count": 505
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_05",
+      "section": "Centre for 3D Printing and Additive Manufacturing",
+      "source_url": "https://www.msajce-edu.in/technologycentre3dprinting.php",
+      "context": "Complete information about MSAJCE's 3D Printing and Additive Manufacturing centre — objectives, outcomes, syllabus modules and recommended textbooks.",
+      "text": "Centre for 3D Printing and Additive Manufacturing\nURL: https://www.msajce-edu.in/technologycentre3dprinting.php\nSyllabus PDF: https://www.msajce-edu.in/uploads/technologycentre/syllabus/3D-Printing.pdf\n\nObjectives — Students will be able to:\n• Gain knowledge and skills related to 3D printing technologies.\n• Learn the selection of material, equipment and development of a product for Industry 4.0 environment.\n• Understand various software tools, processes and techniques for digital manufacturing.\n• Apply these techniques into various applications.\n\nOutcomes — Students will be able to:\n• Develop CAD models for 3D printing.\n• Import and export CAD data and generate .stl files.\n• Select a specific material for a given application.\n• Select a 3D printing process for an application.\n• Produce a product using 3D Printing or Additive Manufacturing (AM).\n\nSyllabus Modules:\n1. 3D Printing (Additive Manufacturing) — 6 Hours: Introduction, Process, Classifications, Advantages, Additive vs Conventional Manufacturing, Applications.\n2. CAD for Additive Manufacturing — 4 Hours: CAD Data formats, Data translation, Data loss, STL format.\n3. Additive Manufacturing Techniques — 10 Hours: Stereo-Lithography, LOM, FDM, SLS, SLM, Binder Jet technology. Process parameters, Process Selection. Application Domains: Aerospace, Electronics, Healthcare, Defence, Automotive, Construction, Food Processing, Machine Tools.\n4. Materials — 4 Hours: Polymers, Metals, Non-Metals, Ceramics. Various forms of raw material (Liquid, Solid, Wire, Powder). Powder Preparation and their desired properties. Support Materials.\n5. Additive Manufacturing Equipment — 4 Hours: Process Equipment Design and parameters, Governing Bonding Mechanism, Common faults and troubleshooting, Process Design.\n6. Post Processing — 1 Hour: Support Removal, Sanding, Acetone treatment, Polishing.\n7. Product Quality — 1 Hour: Inspection and testing, Defects and their causes.\n\nList of Practicals:\n• 3D Modelling of a single component | Assembly of CAD modelled Components | Exercise on CAD Data Exchange | Generation of .stl files | Identification of a product for AM and its process plan | Printing on an available AM machine | Post processing of additively manufactured product | Inspection and defect analysis | Comparison of AM product with conventional manufactured counterpart.\n\nRecommended Textbooks:\n• Lan Gibson, David W. Rosen and Brent Stucker, 'Additive Manufacturing Technologies: Rapid Prototyping to Direct Digital Manufacturing', Springer, 2010.\n• Andreas Gebhardt, 'Understanding Additive Manufacturing', Hanser Publisher, 2011.\n• Khanna Editorial, '3D Printing and Design', Khanna Publishing House, Delhi.\n• CK Chua, Kah Fai Leong, '3D Printing and Rapid Prototyping', World Scientific, 2017.",
+      "tables": [],
+      "possible_questions": [
+        "Does MSAJCE have a 3D printing centre?",
+        "What topics are covered in the 3D printing course at MSAJCE?",
+        "What is taught in the Additive Manufacturing course at MSAJCE?",
+        "What materials are covered in the 3D printing course at MSAJCE?",
+        "What software is used in 3D printing training at MSAJCE?",
+        "How many hours is the 3D printing syllabus at MSAJCE?",
+        "Where can I download the 3D printing syllabus?",
+        "What applications of 3D printing are covered at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": [],
+        "numbers": ["6 Hours — Intro to AM", "10 Hours — AM Techniques", "4 Hours — Materials", "30 total hours"]
+      },
+      "keywords": [
+        "3D printing", "additive manufacturing", "FDM", "SLS", "SLM", "stereolithography", "LOM", "Binder Jet",
+        "STL file", "CAD", "polymer", "metal", "ceramics", "Industry 4.0", "rapid prototyping", "post processing",
+        "3D modelling", "product quality", "aerospace", "healthcare", "defence"
+      ],
+      "overlap_text": "The 3D Printing and Additive Manufacturing centre covers 7 modules totalling approximately 30 hours including practicals. Students learn to generate .stl files and produce products on AM machines.",
+      "token_count": 480
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_06",
+      "section": "Amazon Web Services (AWS) & Cloud Computing Centre",
+      "source_url": "https://www.msajce-edu.in/technologycentreamazonweb.php",
+      "context": "Details of MSAJCE's AWS and Cloud Computing centre — objectives and outcomes for building cloud solutions on Amazon Web Services.",
+      "text": "Amazon Web Services (AWS) & Cloud Computing Centre\nURL: https://www.msajce-edu.in/technologycentreamazonweb.php\n\nObjectives — Students will be able to:\n• Understand the fundamentals of building IT infrastructure on the AWS platform.\n• Acquire knowledge of various cloud services provided by Amazon Web Services (AWS).\n• Learn how to create and configure AWS services and integrate various AWS services together to present a holistic cloud solution.\n• Learn how these services work together to build fault tolerant and highly available applications.\n• Understand best practices and design patterns to architect optimal IT solutions on AWS.\n\nOutcomes — Students will be able to:\n• Create and configure AWS services and integrate various AWS services together to present a holistic cloud solution.\n• Build fault tolerant and highly available applications on cloud.\n• Apply design patterns to architect optimal IT solutions on AWS.\n\nNote: This centre is part of MSAJCE's broader Technology Centre ecosystem established in 2019-2020 under AICTE and India Skill Report 2020 recommendations.\n\nIndustry Partner: Amazon Web Services (AWS)\nURL for more information: https://www.msajce-edu.in/technologycentreamazonweb.php",
+      "tables": [],
+      "possible_questions": [
+        "Does MSAJCE have an AWS cloud computing centre?",
+        "What AWS skills will I learn at MSAJCE?",
+        "Can I learn cloud computing at MSAJCE?",
+        "What is taught in the AWS centre at MSAJCE?",
+        "Does MSAJCE offer Amazon Web Services training?",
+        "How will MSAJCE AWS training help in my career?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+        "numbers": []
+      },
+      "keywords": [
+        "AWS", "Amazon Web Services", "cloud computing", "cloud services", "fault tolerant",
+        "IT infrastructure", "cloud architecture", "holistic cloud solution", "highly available applications"
+      ],
+      "overlap_text": "The 3D Printing and Additive Manufacturing centre covers 7 modules totalling approximately 30 hours. MSAJCE has also established an AWS Cloud Computing Centre as part of the 2019-2020 Technology Centre initiative.",
+      "token_count": 280
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_07",
+      "section": "Cyber Security Academy — Palo Alto Systems",
+      "source_url": "https://www.msajce-edu.in/technologycentrecybersecurityacademy.php",
+      "context": "Complete details of MSAJCE's Cyber Security Academy partnered with Palo Alto Systems — objectives, outcomes, courses and full syllabus.",
+      "text": "Cyber Security Academy — Palo Alto Systems\nURL: https://www.msajce-edu.in/technologycentrecybersecurityacademy.php\nSyllabus PDF: https://www.msajce-edu.in/uploads/technologycentre/syllabus/Cyber.pdf\n\nObjectives — Students will be able to:\n• Essentials I & II: Learn general security concepts for maintaining a secure network, the nature and scope of today's cybersecurity challenges, strategies for network defense and next-generation cybersecurity solutions.\n• Cyber Security Foundation: Learn fundamentals of cybersecurity, identify concepts to recognize and potentially mitigate attacks against enterprise networks and mission critical infrastructure.\n• Gateway I & II: Learn fundamental tenets of networking and concepts for maintaining a secure network computing environment.\n\nOutcomes — Students will be able to:\n• Essentials I: Formulate industry-standard designs to protect infrastructure against cybersecurity threats; apply user, application, and content ID filtering; deploy security methodologies for a secure network environment.\n• Cyber Security Foundation: Apply fundamentals to identify and mitigate attacks against enterprise networks.\n• Gateway I: Demonstrate knowledge of interconnected technology; identify systems needing protection; apply physical, logical, and virtual addressing through subnet mask schemes.\n• Gateway II: Examine cybersecurity landscapes, attack threat vectors, exposure, vulnerabilities, and risk factors; apply knowledge to plan, design, implement, troubleshoot, and maintain network infrastructure.\n• Essentials II: Assess and harden endpoints; use advanced malware research and analysis; examine mobile and cloud-based connection technologies.\n\nDetailed Syllabus:\n1. Fundamentals of Cyber Security (4 Hours): Security trends – Legal, Ethical and Professional Aspects – Need for Security at Multiple levels – Security Policies – Model of network security – OSI security architecture.\n2. Cyber Security Concepts (4 Hours): Classical encryption (substitution, transposition, steganography) – Modern cryptography – CIA, Risks, Breaches, Threats, Attacks, Exploits – Information Gathering (Social Engineering, Foot Printing & Scanning).\n3. Lab Session 1 (3 Hours): Tools like nmap, zenmap, Port Scanners, Network Scanners.\n4. Security Algorithms (4 Hours): Asymmetric key Cryptography – Message Authentication – Digital Signatures – Applications of Cryptography – Firewalls – Types of Firewalls – User Management – VPN Security.\n5. Lab Session 2 (3 Hours): Calculate message digest using SHA-1 algorithm.\n6. Infrastructure Based Security (6 Hours): Network packet sniffing – Network Design Simulation – DOS/DDOS attacks – Asset Management and Audits – Vulnerabilities and Attacks – Intrusion Detection and Prevention – HIPS – Security Information Management – Network Session Analysis – System Integrity Validation.\n7. Lab Session 3 (3 Hours): Implement sniffing using tools.\n8. Lab Session 4 (3 Hours): Demonstrate IDS using Snort.\n9. Lab Session 5 (3 Hours): Automated Attack and Penetration Tools using N-Stalker.\n10. Malware (6 Hours): Explanation of Malware – Types: Virus, Worms, Trojans, Rootkits, Robots, Adware, Spywares, Ransomware, Zombies – OS Hardening – Malware Analysis.\n11. Lab Session 6 (6 Hours): Building Trojans – Defeating Malware – Rootkit Hunter.\n\nSources: Anna University CNS Lab syllabus | AICTE emerging technology syllabus | IGNOU security certificate.",
+      "tables": [],
+      "possible_questions": [
+        "Does MSAJCE have a cyber security centre?",
+        "Which company is partnered with MSAJCE for cyber security training?",
+        "What is the cyber security course syllabus at MSAJCE?",
+        "What are the Palo Alto courses at MSAJCE?",
+        "Does MSAJCE cover ethical hacking or penetration testing?",
+        "What malware topics are covered in the MSAJCE cyber security course?",
+        "How many lab sessions are in the MSAJCE cyber security course?",
+        "Where can I download the cyber security syllabus?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": [],
+        "numbers": ["4 Hours — Cyber Security Fundamentals", "6 Hours — Malware", "6 Lab Sessions"]
+      },
+      "keywords": [
+        "cyber security", "Palo Alto", "CCNA security", "firewall", "VPN", "IDS", "Snort", "nmap",
+        "penetration testing", "SHA-1", "encryption", "malware", "Trojan", "ransomware", "rootkit",
+        "DOS", "DDOS", "OSI security", "network security", "CIA triad"
+      ],
+      "overlap_text": "The Cyber Security Academy is partnered with Palo Alto Systems and covers Essentials I & II, Gateway I & II and Cyber Security Foundation. Detailed syllabus PDF: https://www.msajce-edu.in/uploads/technologycentre/syllabus/Cyber.pdf",
+      "token_count": 510
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_08",
+      "section": "Embedded & IoT Centre",
+      "source_url": "https://www.msajce-edu.in/technologycentreembeddediotcentre.php",
+      "context": "Complete details of MSAJCE Embedded & IoT Centre — objectives, outcomes, full syllabus (4 modules), 15 practicals and recommended textbooks.",
+      "text": "Embedded & IoT Centre\nURL: https://www.msajce-edu.in/technologycentreembeddediotcentre.php\nSyllabus PDF: https://www.msajce-edu.in/uploads/technologycentre/syllabus/iot.pdf\n\nObjectives:\n• Learn Smart Objects and IoT Architectures.\n• Learn various IoT-related protocols.\n• Build simple IoT Systems using Arduino and Raspberry Pi.\n• Learn data analytics and cloud in the context of IoT.\n• Develop IoT infrastructure for popular applications.\n\nOutcomes:\n• Understand the concept of IoT.\n• Analyze various protocols for IoT.\n• Design a PoC of an IoT system using Raspberry Pi/Arduino.\n• Apply data analytics and use cloud offerings related to IoT.\n• Analyze applications of IoT in real time scenarios.\n\nSyllabus:\n1. Introduction to IoT (8 Hours): Architectural Overview – Design principles – IoT Applications – Sensing – Actuation – Basics of Networking – M2M and IoT Technology Fundamentals – Devices and gateways – Data management – Business processes in IoT – Everything as a Service (XaaS) – Role of Cloud in IoT – Security aspects in IoT.\n2. Elements of IoT (9 Hours): Hardware Components (Arduino, Raspberry Pi, Communication, Sensing, Actuation, I/O Interfaces) – Software Components – Programming APIs using Python/Node.js/Arduino – Communication Protocols: MQTT, ZigBee, Bluetooth, CoAP, UDP, TCP.\n3. IoT Application Development (18 Hours): Solution framework for IoT applications – Implementation of Device integration – Data acquisition and integration – Device data storage (unstructured data on cloud/local server) – Authentication and authorization of devices.\n4. IoT Case Studies (10 Hours): Mini projects in Industrial automation, Transportation, Agriculture, Healthcare, Home Automation.\n\nList of Practicals (15 experiments):\n1. Familiarization with Arduino/Raspberry Pi and software installation.\n2. Interface LED/Buzzer with Arduino/Raspberry Pi — turn ON LED for 1 sec every 2 seconds.\n3. Interface Push button/Digital sensor (IR/LDR) — turn ON LED on detection.\n4. Interface DHT11 sensor — print temperature and humidity readings.\n5. Interface motor using relay — turn ON motor on button press.\n6. Interface OLED — print temperature and humidity.\n7. Interface Bluetooth — send sensor data to smartphone.\n8. Interface Bluetooth — turn LED ON/OFF via smartphone.\n9. Upload temperature and humidity data to ThingSpeak cloud.\n10. Retrieve temperature and humidity data from ThingSpeak cloud.\n11. Install MySQL database on Raspberry Pi and perform basic SQL queries.\n12. Publish temperature data to MQTT broker.\n13. Subscribe to MQTT broker for temperature data.\n14. Create TCP server on Arduino/Raspberry Pi — respond with humidity data.\n15. Create UDP server — respond with humidity data to UDP client.\n\nReference Websites: https://nptel.ac.in/courses/106105077 | https://nptel.ac.in/courses/106106126",
+      "tables": [],
+      "possible_questions": [
+        "Does MSAJCE have an IoT centre?",
+        "What is taught in the Embedded and IoT centre at MSAJCE?",
+        "Does MSAJCE use Arduino and Raspberry Pi in IoT training?",
+        "What IoT protocols are covered at MSAJCE?",
+        "How many practicals are in the IoT course at MSAJCE?",
+        "Does MSAJCE IoT course cover ThingSpeak and MQTT?",
+        "What is the IoT syllabus at MSAJCE?",
+        "How many hours is the IoT Application Development module?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": [],
+        "numbers": ["8 Hours — Introduction to IoT", "9 Hours — Elements of IoT", "18 Hours — Application Development", "15 practicals"]
+      },
+      "keywords": [
+        "IoT", "Embedded systems", "Arduino", "Raspberry Pi", "MQTT", "ZigBee", "Bluetooth", "CoAP",
+        "DHT11", "ThingSpeak", "cloud IoT", "OLED", "sensor", "M2M", "XaaS", "Python", "Node.js",
+        "home automation", "industrial automation", "smart agriculture", "MySQL"
+      ],
+      "overlap_text": "The Embedded & IoT Centre covers 4 modules (45 hours of theory) and 15 practicals using Arduino and Raspberry Pi with MQTT, ZigBee, Bluetooth, CoAP protocols. Syllabus PDF: https://www.msajce-edu.in/uploads/technologycentre/syllabus/iot.pdf",
+      "token_count": 500
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_09",
+      "section": "e-Yantra IIT Bombay Remote Centre and Code Tantra Coding Learning Centre",
+      "source_url": "https://www.msajce-edu.in/technologycentreeyantra.php",
+      "context": "Details of MSAJCE's e-Yantra robotics centre (IIT Bombay collaboration) and the Code Tantra Coding Learning Centre — objectives and outcomes.",
+      "text": "e-Yantra — IIT Bombay Remote Centre\nURL: https://www.msajce-edu.in/technologycentreeyantra.php\n\nObjectives — Students will be able to:\n• Learn the function of basic components of robots.\n• Study various types of end effectors and sensors.\n• Impart knowledge in Robot kinematics and Programming.\n• Learn Robot safety issues and economics.\n\nOutcomes — Students will be able to:\n• Understand embedded systems and robotics technology.\n• Design, develop, program and test robots for various applications.\n• Participate in national and international robotics competitions confidently.\n• Use robots to solve real life problems.\n\nNote: e-Yantra is an IIT Bombay initiative. MSAJCE is a Remote Centre for e-Yantra under IIT Bombay.\n\n---\n\nCode Tantra — Coding Learning Centre\nURL: https://www.msajce-edu.in/technologycentrecodinglearningcentre.php\n\nObjectives — Students will be able to:\n• Understand the syntax and semantics of various programming languages (C, C++, Java, Python).\n• Get a new perspective of problem solving by choosing appropriate programming domains for software product development.\n• Make students competent data analyzers or data scientists by learning Big Data and Hadoop.\n• Increase the ability of program testing and debugging using Selenium testing tool.\n• Prepare students for competitive based learning by participating in global level coding contests.\n\nOutcomes — Students will be able to:\n• Design and implement software applications using C, C++ basic constructs.\n• Develop software products for industries in various programming platforms.\n• Understand the key issues in big data management and its associated applications in intelligent business and scientific computing.\n• Test and debug various software products effectively.\n• Develop real-time web and mobile applications.\n\nIndustry Partner: Code Tantra\nURL: https://www.msajce-edu.in/technologycentrecodinglearningcentre.php",
+      "tables": [],
+      "possible_questions": [
+        "Does MSAJCE have an IIT Bombay robotics centre?",
+        "What is e-Yantra at MSAJCE?",
+        "Does MSAJCE have a coding learning centre?",
+        "What programming languages are taught at the MSAJCE coding centre?",
+        "Can I learn Big Data at MSAJCE?",
+        "Does MSAJCE offer coding competitions or global coding contests?",
+        "What is Code Tantra at MSAJCE?",
+        "Does MSAJCE teach Hadoop and Big Data?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": [],
+        "numbers": []
+      },
+      "keywords": [
+        "e-Yantra", "IIT Bombay", "robotics", "robot kinematics", "end effectors", "Code Tantra",
+        "coding", "C", "C++", "Java", "Python", "Big Data", "Hadoop", "Selenium", "coding contests",
+        "competitive programming", "web application", "mobile application", "data science"
+      ],
+      "overlap_text": "MSAJCE is an e-Yantra Remote Centre under IIT Bombay for robotics training. Code Tantra Coding Learning Centre teaches C, C++, Java, Python, Big Data, Hadoop and Selenium.",
+      "token_count": 420
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_10",
+      "section": "Gaming & AR/VR Centre — Objectives, Outcomes and Full Syllabus",
+      "source_url": "https://www.msajce-edu.in/technologycentregamingarvrcentre.php",
+      "context": "Complete details of MSAJCE Gaming & AR/VR Centre — objectives, outcomes and all 6 theory modules plus practicals.",
+      "text": "Gaming & AR/VR Centre\nURL: https://www.msajce-edu.in/technologycentregamingarvrcentre.php\nSyllabus PDF: https://www.msajce-edu.in/uploads/technologycentre/syllabus/Gaming.pdf\n\nObjectives — Students will be able to:\n• Learn technical and design aspects of AR and VR.\n• Create 3D design, Visualization and Animation for various objects and scenes.\n• Apply virtual and augmented reality methods, tools and equipment in industry, education and social life.\n• Provide an overview of the concepts and working of AR-VR techniques.\n\nOutcomes — Students will be able to:\n• Build basic applications considering technical and design aspects of AR and VR.\n• Develop PC/Mobile-based VR applications.\n• Develop 3D Visualization and Visualization projects.\n• Design applications in Gaming, Architecture, Manufacturing, Retail, Healthcare, etc.\n\nSyllabus Modules:\n1. Introduction to Virtual Reality (6 Hours): Fundamental Concept and Components of VR – Primary Features and Present Development – Computer graphics – Real time computer graphics – Flight Simulation – Benefits of VR – Historical development – 3D Computer Graphics: Virtual world space, positioning the virtual observer, perspective projection, human vision, stereo perspective projection, 3D clipping, Colour theory, Simple 3D modelling, Illumination models, Reflection models, Shading algorithms, Radiosity, Hidden Surface Removal, Realism-Stereographic image.\n2. Interactive Techniques in VR (6 Hours): From 2D to 3D – 3D space curves – 3D boundary representation – Geometric Transformations – Frames of reference – Modeling transformations – Instances – Picking – Flying – Scaling the VE – Collision detection – Generic VR system: Virtual environment, Computer environment, VR technology, Model of interaction, VR Systems.\n3. Visual Computation in VR (6 Hours): Animating the Virtual Environment – Dynamics of numbers – Linear and Nonlinear interpolation – Animation of objects – Shape and object inbetweening – Free-form deformation – Particle system – Physical Simulation: Objects in gravitational field, Rotating wheels, Elastic collisions, Projectiles, Simple pendulum, Springs, Flight dynamics.\n4. Augmented and Mixed Reality (6 Hours): Taxonomy, technology and features of AR – Difference between AR and VR – Challenges with AR – AR systems and functionality – AR methods – Visualization techniques – Wireless displays in educational AR – Mobile projection interfaces – Marker-less tracking – Enhancing interactivity in AR – Evaluating AR systems.\n5. Multiple Models of Input and Output Interface in VR (6 Hours): Human factors – VR Hardware: Head-coupled displays, Acoustic hardware, Integrated VR systems – VR Software: Modeling virtual world, Physical simulation, VR toolkits, Introduction to VRML – Input: Tracker, Sensor, Digital Glove, Movement Capture, Video-based Input, 3D Menus, 3D Scanner – Output: Visual/Auditory/Haptic Devices.\n6. Application of VR in Digital Entertainment (6 Hours): VR in Film & TV Production – VR in Physical Exercises and Games – Demonstration of Digital Entertainment by VR.\n\nPracticals (9 Hours): Architecture design using VR – CRO experiments using VR – Qualitative analysis in Chemistry using VR – Engine assembly/disassembly using VR – Human anatomy exploration – Simulation of blood circulation – Simulation of Flight/Vehicle/Space Station – Building Electronic circuits using VR – Developing Virtual Classroom with multiplayer.\n\nResources from: AICTE | IIT Varanasi, India",
+      "tables": [],
+      "possible_questions": [
+        "Does MSAJCE have a gaming and VR centre?",
+        "What is taught in the AR/VR course at MSAJCE?",
+        "What topics are covered in the Gaming and AR/VR syllabus at MSAJCE?",
+        "Can I learn augmented reality at MSAJCE?",
+        "What practicals are in the VR course at MSAJCE?",
+        "Does MSAJCE offer VR application development training?",
+        "How many hours is the Gaming and AR/VR course at MSAJCE?",
+        "What resources are used for the Gaming and AR/VR course at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": [],
+        "numbers": ["6 modules of 6 Hours each", "9 Hours practicals", "45 total hours approximately"]
+      },
+      "keywords": [
+        "gaming", "AR", "VR", "augmented reality", "virtual reality", "mixed reality", "VRML", "3D modelling",
+        "animation", "particle system", "Digital Glove", "haptic devices", "marker-less tracking",
+        "collision detection", "flight simulation", "3D visualization", "IIT Varanasi", "AICTE"
+      ],
+      "overlap_text": "The Gaming & AR/VR Centre covers 6 modules of 6 hours each plus 9 hours of practicals. Syllabus PDF: https://www.msajce-edu.in/uploads/technologycentre/syllabus/Gaming.pdf",
+      "token_count": 495
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_11",
+      "section": "Bentley's BIM Centre and Centre for CAE — Altair & CATIA",
+      "source_url": "https://www.msajce-edu.in/technologycentrebentleys.php",
+      "context": "Details of Bentley's Building Information Modelling Centre and the Centre for CAE supported by Altair and CATIA at MSAJCE.",
+      "text": "Bentley's Building Information Modelling (BIM) Centre\nURL: https://www.msajce-edu.in/technologycentrebentleys.php\n\nObjectives:\n• Gain basic theoretical knowledge and practical skills of BIM techniques.\n• Interpret 2D & 3D drawings and structural analysis.\n• Understand regulations as per National Building Code.\n• Prepare students for actual work situations through practical training.\n\nOutcomes:\n• Prepare a component to meet desired needs within realistic constraints (economic, environmental, social, ethical, sustainability).\n• Create 2D drawings of building, industrial structures and various framed structures using AUTOCAD software.\n• Create and simulate a virtual building model using REVIT ARCHITECTURE software with intelligent building elements.\n• Design and analyse different types of structures (liquid retaining structures, bridge components, retaining wall, industrial and commercial structures) in 3D form using STAAD.Pro software to predict performances before construction.\n\nSoftware Used: AUTOCAD, REVIT ARCHITECTURE, STAAD.Pro\n\n---\n\nCentre for CAE — Supported by Altair & CATIA\nURL: https://www.msajce-edu.in/technologycentrealtair.php\nSyllabus PDF: https://www.msajce-edu.in/uploads/technologycentre/syllabus/ALTAIR.pdf\n\nObjectives:\n• Understand and interpret drawings of machine components.\n• Prepare assembly drawings using standard CAD packages.\n• Gain practical experience in handling 2D drafting and 3D modeling software systems.\n• Comprehend, design, analyze, and suggest novel materials, products and solutions for contemporary manufacturing issues.\n\nOutcomes:\n• Develop CAD models for Hypermesh.\n• Import and export CAD data and generate .hm files.\n• Attain accurate and high quality meshes in 1D, 2D and 3D elements.\n• Carry out Linear Static Analysis.\n• Carry out Dynamic Analysis.\n\nSoftware Used: Altair HyperMesh, CATIA\nIndustry Partner: Altair",
+      "tables": [],
+      "possible_questions": [
+        "Does MSAJCE have a BIM centre?",
+        "What software is used in the BIM centre at MSAJCE?",
+        "Does MSAJCE teach AUTOCAD and REVIT?",
+        "What is STAAD.Pro used for at MSAJCE?",
+        "Does MSAJCE have an Altair CATIA centre?",
+        "What is the CAE centre at MSAJCE?",
+        "What is HyperMesh training at MSAJCE?",
+        "What types of structural analysis are taught at MSAJCE BIM centre?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": [],
+        "numbers": []
+      },
+      "keywords": [
+        "BIM", "Building Information Modelling", "Bentley", "AUTOCAD", "REVIT", "REVIT ARCHITECTURE",
+        "STAAD.Pro", "National Building Code", "CAE", "Altair", "CATIA", "HyperMesh", "FEA",
+        "Linear Static Analysis", "Dynamic Analysis", "1D 2D 3D mesh", "structural analysis"
+      ],
+      "overlap_text": "The Bentley BIM centre covers AUTOCAD, REVIT ARCHITECTURE and STAAD.Pro. The CAE centre uses Altair HyperMesh and CATIA for mesh generation and structural analysis. Syllabus PDF: https://www.msajce-edu.in/uploads/technologycentre/syllabus/ALTAIR.pdf",
+      "token_count": 410
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_12",
+      "section": "Communication Language Learning Centre",
+      "source_url": "https://www.msajce-edu.in/technologycentrecommunicationlanguage.php",
+      "context": "Details of MSAJCE's Communication Language Learning Centre focused on foreign language proficiency and LSRW communication skills.",
+      "text": "Communication Language Learning Centre\nURL: https://www.msajce-edu.in/technologycentrecommunicationlanguage.php\n\nObjective:\n• Acquire knowledge in foreign languages and become proficient in communication skills — Listening, Speaking, Reading and Writing (LSRW) — to achieve employability standard at international level.\n\nOutcomes — Students will be able to:\n• Become expert bilinguals to learn work ethic and business etiquette in career opportunities.\n• Gain deeper knowledge and higher understanding of foreign languages.\n• Boost professional value in Business, Social Science, Humanities, Technology and Science.\n• Get exposure to culture ingrained in the people of various countries.\n• Improve higher thinking skills, new learning strategies, and exposure to advanced technologies.\n• Grow as leaders in many leading sectors to drive for innovation.\n\nFocus: Language Skills (LSRW — Listening, Speaking, Reading, Writing), Foreign Language Proficiency, International Employability, Business Communication.",
+      "tables": [],
+      "possible_questions": [
+        "Does MSAJCE have a language learning centre?",
+        "What languages are taught at MSAJCE Communication Centre?",
+        "Can I improve my communication skills at MSAJCE?",
+        "What is the LSRW programme at MSAJCE?",
+        "Does MSAJCE offer foreign language training?",
+        "How will the Communication Language Centre help in my career?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": [],
+        "numbers": []
+      },
+      "keywords": [
+        "communication", "language learning", "LSRW", "foreign language", "listening", "speaking",
+        "reading", "writing", "business communication", "bilingual", "international employability",
+        "business etiquette", "work ethic"
+      ],
+      "overlap_text": "The Communication Language Learning Centre helps students achieve international-level LSRW skills and foreign language proficiency for better employability.",
+      "token_count": 260
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_13",
+      "section": "RAISE Centre of Excellence — MIT Square London",
+      "source_url": "https://www.msajce-edu.in/technologycentremit.php",
+      "context": "Comprehensive details of MSAJCE's RAISE Centre of Excellence powered by MIT Square London — about MIT Square, the CoE's vision, i-10 Model, specific initiatives and benefits.",
+      "text": "RAISE Centre of Excellence (CoE) — Powered by MIT Square, London\nURL: https://www.msajce-edu.in/technologycentremit.php\nEstablished: June 2022\n\nAbout MIT Square Services Private Limited:\nMIT Square is an ISO Certified Company headquartered in Bangalore (Silicon Valley of India) and registered office in London (Silicon Valley of UK). It is a registered MSME recognised by the Ministry of MSME, Govt. of India and recognised by the Ministry of Corporate Affairs, Govt. of UK. Network offices in USA, Australia and Singapore. MIT stands for 'Management and Innovation for Transformation'. Square represents 'People + Process + Product + Profit' — tagline: 'We transform your life'. Core technical team from IITs and Universities in London.\n\nMIT Square is a globally trusted brand in EduTech, HealthTech, AgroTech and GreenTech supporting: incubation/start-up, business operations, talent enablement (training & learning), talent acquisition, innovations, patent filing, product design & development, manufacturing and supply of technological and non-technological products.\n\nAbout RAISE:\nRAISE = R – Research | A – Arts & Applications | I – Innovation & Intelligence | S – Science & Technology | E – Entrepreneurship\n\nThe CoE for IoT at MSAJCE campus was established in June 2022 through MoU with MIT Square London. Vision: Enable the institution as an innovation hub in emerging technologies.\n\nKey Initiatives — i-10 Model:\n• Innovation & Research\n• Ideas to Prototypes & Products\n• Inductive Programs\n• Internships & Talent Transformation\n• International Publications\n• I-Centric Events\n• IP Rights & Protection\n• Intrapreneurship & Entrepreneurship\n• Institution & Industry Connects\n• Incubation, Investments & Fundings\n\nSpecific Initiatives:\n• Abroad Studies | Abroad Traineeships | Abroad Internships | Abroad Placementships | Abroad Mentorships | Abroad Fellowships | Abroad Inventorships | Startup Founderships | Disruptive Technologies | Product Development | CSR Activities\n\nDetailed Objectives:\n• Create innovative applications and domain capability for Smart City, Smart Health, Smart Manufacturing, Smart Agriculture.\n• Build industry capable talent, startup community and entrepreneurial ecosystem.\n• Provide ecosystem for innovation and entrepreneurship.\n• Energize research mind-set and reduce costs in R&D with neutral, interoperable, multi-technology stack laboratory facilities.\n• Reduce import dependency on technology components and promote indigenization.\n• Position the institution as a provider of end-to-end solutions in education and technology.\n• Provide training and learning (including internships) both online and offline.\n• Provide environment for product creation, testing, validation and incubation.\n• Provide learning in breakthrough technologies: AR/VR, Data Analytics, AI.",
+      "tables": [],
+      "possible_questions": [
+        "What is the RAISE centre at MSAJCE?",
+        "What is MIT Square at MSAJCE?",
+        "When was the RAISE CoE established at MSAJCE?",
+        "Does MSAJCE have opportunities for studying or interning abroad?",
+        "What does RAISE stand for at MSAJCE?",
+        "What is the i-10 model at MSAJCE RAISE centre?",
+        "Does MSAJCE have an innovation and startup centre?",
+        "What is the MoU between MSAJCE and MIT Square London?",
+        "Does MSAJCE offer patent filing support through RAISE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": ["Bangalore — MIT Square HQ", "London — MIT Square registered office", "USA, Australia, Singapore — network offices"],
+        "numbers": ["June 2022 — RAISE CoE establishment", "i-10 Model — 10 key initiatives"]
+      },
+      "keywords": [
+        "RAISE", "MIT Square", "CoE", "Centre of Excellence", "IoT", "innovation hub", "MoU", "London",
+        "i-10 model", "incubation", "startup", "internship abroad", "research", "entrepreneurship",
+        "EduTech", "patent filing", "product development", "Smart City", "Smart Health", "AR/VR", "AI"
+      ],
+      "overlap_text": "The RAISE Centre of Excellence was established in June 2022 through an MoU with MIT Square London. It operates on the i-10 model covering Innovation, Internships, IP Rights, Incubation and more.",
+      "token_count": 500
+    },
+    {
+      "chunk_id": "msajce_technologycentre_chunk_14",
+      "section": "RAISE Centre — Benefits, Nodal Centre Details and Contact Information",
+      "source_url": "https://www.msajce-edu.in/technologycentremit.php",
+      "context": "Benefits of RAISE CoE for students, details of MSAJCE functioning as a RAISE Nodal Centre, and complete MSAJCE contact information.",
+      "text": "RAISE Centre — Benefits for Students and Nodal Centre Details\n\nBenefits of RAISE CoE:\n• A great learning and leadership opportunity.\n• Become a coding guru.\n• Spread Techno-Entrepreneurship Culture within the Campus through events, workshops and hackathons.\n• Internship Opportunities.\n• Opportunity to work in startups or prestigious companies.\n• Opportunity to study abroad.\n• Opportunity to intern or work full-time abroad.\n• Personalised LinkedIn recommendation.\n• Letter of Recommendation after successful Internship/techno programs completion.\n\nMSAJCE as RAISE Nodal Centre — Benefits:\n• A fully Techno-Entrepreneurship Innovation lab with hardware and software tools with licenses for development and research projects.\n• Recognition as one of the top National Academies for the innovation lab.\n• Essential curriculum and resource kits for comprehensive training and industry readiness.\n• Scalable infrastructure to extend training to corporates and professionals from other industries.\n• Up to 10 years assured training support from MIT Square to empower faculty, research scholars and students.\n• Based on NEP 2020, support provided in regional languages as well.\n\nGovernment Initiatives Supported: Digital India | Make in India | Startup India | Standup India | Skill India | Self-reliant India (Atmanirbhar Bharat)\n\nMSAJCE Contact Information:\nInstitution: Mohamed Sathak A.J. College of Engineering (MSAJCE)\nAddress: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103\nPhone: +91 99400 04500\nEmail: msajce.office@gmail.com\nWebsite: www.msajce-edu.in\nOnline Admission: https://enrollonline.co.in/Registration/Apply/MSAJCE\nOnline Fee Payment: https://www.feepayr.com/\nGrievance Email: grievance@msajce-edu.in\nGrievance Page: https://www.msajce-edu.in/grievanceredressalcommittee.php\n\nAffiliation and Approvals:\n• Approved by: AICTE New Delhi\n• Affiliated to: Anna University Chennai\n• Under the aegis of: Mohamed Sathak Trust\n• Government of Tamil Nadu approved",
+      "tables": [],
+      "possible_questions": [
+        "What benefits do students get from the RAISE centre at MSAJCE?",
+        "Does MSAJCE RAISE centre give LinkedIn recommendations?",
+        "Does MSAJCE support study abroad programs?",
+        "What is the RAISE Nodal Centre at MSAJCE?",
+        "How long is the training support from MIT Square at MSAJCE?",
+        "Does MSAJCE support Startup India and Skill India?",
+        "What is the contact number for MSAJCE?",
+        "What is the MSAJCE email address?",
+        "What is the address of MSAJCE?",
+        "Is MSAJCE affiliated to Anna University?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com", "grievance@msajce-edu.in"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+        "numbers": ["10 years — assured training support from MIT Square"]
+      },
+      "keywords": [
+        "RAISE benefits", "Nodal Centre", "hackathon", "internship", "study abroad", "LinkedIn recommendation",
+        "Letter of Recommendation", "NEP 2020", "Digital India", "Startup India", "Skill India",
+        "AICTE", "Anna University", "Mohamed Sathak Trust", "Tamil Nadu", "grievance cell"
+      ],
+      "overlap_text": "RAISE CoE provides internship opportunities, abroad study, hackathons and LinkedIn recommendations. As a Nodal Centre, MSAJCE gets 10 years of assured training support from MIT Square London under NEP 2020.",
+      "token_count": 430
+    }
+  ]
+}

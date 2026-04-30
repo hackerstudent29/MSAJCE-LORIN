@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "institution": "MSAJCE",
+    "page_title": "Transport Schedule"
+  },
+  "chunks": [
+    {
+      "chunk_id": "transport_AR3",
+      "section": "Bus Route AR 3",
+      "text": "ROUTE Bus Route AR 3: Stops: Uthiramerur, G.H. Hospital, Paranur Tollgate, Mahindra City, S.P. Koil, Maraimalai Nagar, Guduvanchery, Ooraapakkam, Vandalur Zoo, Perungalathur, Kandigai, Mambakkam, Puthupakkam, Kelambakkam, Sipcot, M.S.A.J.C.E \u2014 College",
+      "keywords": [
+        "AR3",
+        "Uthiramerur",
+        "G.H. Hospital",
+        "Mahindra City"
+      ]
+    },
+    {
+      "chunk_id": "transport_AR4",
+      "section": "Bus Route AR 4",
+      "text": "ROUTE Bus Route AR 4: Stops: Moolakadai, Perambur Railway Station, Otteri Pattalam, Dowton, Vepery Police Station, Periyamed, Central, Parrys Corner, Marina Beach, Santhome, Adyar, Thiruvanmiyur, Palavakkam, Neelankarai, Akkarai Water Tank, Sholinganallur, Ladies Hostel, M.S.A.J.C.E \u2014 College",
+      "keywords": [
+        "AR4",
+        "Moolakadai",
+        "Perambur Railway Station"
+      ]
+    },
+    {
+      "chunk_id": "transport_AR5",
+      "section": "Bus Route AR 5",
+      "text": "ROUTE Bus Route AR 5: Stops: MMDA School, Anna Nagar, Chinthamani, Skywalk, Choolaimadu, Loyola College, T. Nagar, CIT Nagar, Saidapet, Velachery Check Post, Vijaya Nagar Bus Stop, Baby Nagar, Tharamani, MGR Road, OMR, Ladies Hostel, M.S.A.J.C.E \u2014 College",
+      "keywords": [
+        "AR5",
+        "MMDA School",
+        "Anna Nagar"
+      ]
+    },
+    {
+      "chunk_id": "transport_AR6",
+      "section": "Bus Route AR 6",
+      "text": "ROUTE Bus Route AR 6: Stops: MMDA School, ICF, Ayanavaram, Purasawalkam Tank, Dasaprakash, Egmore, Pudupet, Rathnacap, Triplicane, Ice House, New College, Tenampet, Kotturpuram, Madhyakilash, SRP Tools, Perungudi, Karapakkam, Ladies Hostel, M.S.A.J.C.E \u2014 College",
+      "keywords": [
+        "AR6",
+        "ICF",
+        "Ayanavaram"
+      ]
+    },
+    {
+      "chunk_id": "transport_AR7",
+      "section": "Bus Route AR 7",
+      "text": "ROUTE Bus Route AR 7: Stops: Chunambedu, Kadapakkam, Elliyamman Koil, Koovathur, Kathan Kadai, Kalpakkam, Caturankappattinam, Venkampakkam, Thirukazukundram, Punceri, Paiyanur, Alathur, Thirupporur, Kalavakkam, Cenkanmal, Kelambakkam, Padur, Aananth College, M.S.A.J.C.E \u2014 College",
+      "keywords": [
+        "AR7",
+        "Chunambedu",
+        "Kadapakkam"
+      ]
+    },
+    {
+      "chunk_id": "transport_AR8",
+      "section": "Bus Route AR 8",
+      "text": "ROUTE Bus Route AR 8: Stops: Manjambakkam, Retteri, Senthil Nagar, Padi, Anna Nagar, Thirumangalam, Vijaykanth Mandapam, Chinmaya Nagar, Avachi School, Nesapakkam, KK Nagar, Ashok Pillar, Aadampakkam, Kiveli, Pallikkarani, Perumpakkam, Sholinganallur, Ladies Hostel, M.S.A.J.C.E \u2014 College",
+      "keywords": [
+        "AR8",
+        "Manjambakkam",
+        "Retteri"
+      ]
+    },
+    {
+      "chunk_id": "transport_AR9",
+      "section": "Bus Route AR 9",
+      "text": "ROUTE Bus Route AR 9: Stops: Ennore, Mint, Broadway, Central, Omanthoorar Hospital, Royapettah, Mylapore, Mandaveli, Adyar, Thiruvanmiyur, Palavakkam, Neelankarai, Akkarai Water Tank, Sholinganallur, Ladies Hostel, M.S.A.J.C.E \u2014 College",
+      "keywords": [
+        "AR9",
+        "Ennore",
+        "Broadway"
+      ]
+    },
+    {
+      "chunk_id": "transport_AR10",
+      "section": "Bus Route AR 10",
+      "text": "ROUTE Bus Route AR 10: Stops: Porur, Boy Kadai, Kovoor, Kundrathur, Anagaputhur, Pammal, Pallavaram, Meenambakkam, Chrompet, Tambaram W & E, Camp Road, Saliyur, Medavakkam, Sholinganallur, Ladies Hostel, M.S.A.J.C.E \u2014 College",
+      "keywords": [
+        "AR10",
+        "Porur",
+        "Boy Kadai"
+      ]
+    },
+    {
+      "chunk_id": "transport_R22",
+      "section": "Bus Route R 22",
+      "text": "ROUTE Bus Route R 22: Stops: Nemilichery, Poonnamalle, Kumanan Chavadi, Kattupakkam, Ramachandra Hospital, Porur, Valasaravakkam, Ramapuram, Nanthampakkam, Kathipara Junction, Thillai Ganga Subway, Velachery Bypass, Kaiveli, Madipakkam, Kilkattalai, Kovilampakkam, Medavakkam, Sholinganallur, M.S.A.J.C.E \u2014 College",
+      "keywords": [
+        "R22",
+        "Nemilichery",
+        "Poonnamalle"
+      ]
+    }
+  ]
+}

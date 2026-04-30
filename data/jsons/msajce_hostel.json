@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "title": "msajce_hostel.pdf",
+    "source_url": "https://www.msajce-edu.in/hostel.php",
+    "scraped": "2026-04-27",
+    "chunks": 5,
+    "token_target": 500,
+    "overlap": 100,
+    "model": "text-embedding-3-small"
+  },
+  "chunks": [
+    {
+      "chunk_id": "1",
+      "section": "Hostel Facilities Overview",
+      "text": "MSAJCE — Mohamed Sathak A.J. College of Engineering\n\nHostel Facilities — Complete Data Extract for RAG Model\n\n| Facility                  | Boys Hostel                                                                                | Girls Hostel                                                                                                                  |\n| ------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |\n| Location                  | Inside the Campus                                                                          | Sholinganallur (5 km from campus)                                                                                             |\n| No. of Blocks             | 3                                                                                          | 1                                                                                                                             |\n| No. of Rooms (Non-AC)     | 233                                                                                        | 71                                                                                                                            |\n| No. of Rooms (AC)         | 6                                                                                          | — (Nil)                                                                                                                       |\n| Persons per Room          | 2                                                                                          | 3                                                                                                                             |\n| Total Capacity            | 480 boys                                                                                   | 210 girls                                                                                                                     |\n| Room Furnishings          | Cot, Mattress, Pillows, Bed-spreads, Individual Cupboards, Chair-Table, Lamp, Wall Hangers | Cot, Mattress, Pillows, Bed-spreads, Individual Cupboards, Chair-Table, Lamp, Wall Hangers, Bath & Toilet, Wash Basin, Mirror |\n| Other Facilities          | Fan, Water Heater, WiFi, TV Hall, LCD-TV, Indoor Games, Reading Room, Land-line Phone      | Fan, Water Heater, WiFi, TV Hall, LCD-TV, Indoor Games, Reading Room, Land-line Phone                                         |\n| Library / Computer Access | Open till 7:00 PM                                                                          | Open till 9:00 PM                                                                                                             |",
+      "possible_questions": [
+        "What are the facilities available in the boys hostel?",
+        "What is the capacity of the girls hostel?",
+        "How many rooms are there in the boys hostel?"
+      ],
+      "entities": {
+        "persons": [],
+        "locations": [
+          "Inside the Campus",
+          "Sholinganallur"
+        ]
+      },
+      "keywords": [
+        "Hostel Facilities",
+        "Boys Hostel",
+        "Girls Hostel",
+        "Capacity"
+      ]
+    },
+    {
+      "chunk_id": "2",
+      "section": "Boys Hostel Detailed Description",
+      "text": "A home away from home is provided for boys, accommodating 480 boy students. All rooms are well furnished with modern amenities: cot, mattress with pillows, bed-spreads, individual cupboards, chair-table with lamp and wall hangers. Each room accommodates only 2 persons.\n\nA hygienic canteen is available for dining within the premises. An entertainment hall with LCD-TV, indoor game facilities, reading room with newspapers and popular magazines are available. The Hostel has land-line telephone and Wi-Fi internet access. The College Main Library and the Computer Centre are kept open till 7:00 PM for the benefit of hostellers. Students will feel more at home and concentrate on their studies, facilitated by a serene atmosphere filled with greenery.",
+      "possible_questions": [
+        "What amenities are provided in the boys hostel?",
+        "What are the dining options available for boys hostel residents?"
+      ],
+      "entities": {
+        "persons": [],
+        "locations": [
+          "Boys Hostel"
+        ]
+      },
+      "keywords": [
+        "Boys Hostel",
+        "Amenities",
+        "Dining"
+      ]
+    },
+    {
+      "chunk_id": "3",
+      "section": "Girls Hostel Detailed Description",
+      "text": "The MSAJCE Girls Hostel is situated at Sholinganallur — 5 KM away from the campus. This hostel is located in a main posh area with safety and security. Everything is available at the entrance of the Hostel.\n\nThere are about 71 rooms, accommodating 3 girl students per room. All rooms are well furnished with: cot, mattress with pillows, bed-spreads, individual cupboards, chair-table with lamp, and wall hangers. Each room is provided with bath and toilet facilities, wash basin and mirror.\n\nAn entertainment hall with LCD-TV, indoor game facilities, reading room with newspapers and popular magazines are available. The Hostel is connected with land-line telephone and Wi-Fi internet access. Library and Computer facility are made available till 9:00 PM.",
+      "possible_questions": [
+        "What is the location of the girls hostel?",
+        "How many students can a room accommodate in the girls hostel?"
+      ],
+      "entities": {
+        "persons": [],
+        "locations": [
+          "Sholinganallur"
+        ]
+      },
+      "keywords": [
+        "Girls Hostel",
+        "Location",
+        "Accommodations"
+      ]
+    },
+    {
+      "chunk_id": "4",
+      "section": "Hostel Rules and Dining Hall",
+      "text": "Hostel Rules\n\n1. Students must occupy the rooms allotted to them by the Warden (Principal).\n2. Students should refrain from anti-social and undesirable activities such as consumption of alcohol, tobacco, gambling, ragging etc.\n3. Students are responsible for the cleanliness of their rooms.\n4. No student will be allowed to leave the hostel based on a phone call.\n5. Parents are requested to give a list of authorized visitors / local guardians. Visitors not mentioned in the list will not be permitted.\n6. Students will be permitted to go home only if the college is closed continuously for five days or more.\n7. Any student wishing to attend a function (marriage or other ceremony) will be permitted only if the request is made by the parents to the Principal.\n8. Visitors are allowed on holidays from 11:00 A.M. to 6:00 P.M.\n\nDining Hall\n\nHostel Mess is run by the Management through a private contractor under the guidance of the Principal and Administrative Officer. Both Vegetarian and Non-Vegetarian food is served. Mess charges are collected on an annual basis at the time of admission. Parents and guests are allowed to consume food by paying for them. Separate seating arrangements are made for both boys and girls.\n\nMess Timings\n\n| Meal      | Working Days             | Holidays                 |\n| --------- | ------------------------ | ------------------------ |\n| Breakfast | 07:00 A.M. to 08:00 A.M. | 07:30 A.M. to 09:00 A.M. |\n| Lunch     | 01:00 P.M. to 01:45 P.M. | 12:30 P.M. to 02:00 P.M. |\n| Dinner    | 07:00 P.M. to 08:30 P.M. | 07:00 P.M. to 09:00 P.M. |",
+      "possible_questions": [
+        "What are the rules for hostel students?",
+        "What is the dining arrangement in the hostel?"
+      ],
+      "entities": {
+        "persons": [],
+        "locations": []
+      },
+      "keywords": [
+        "Hostel Rules",
+        "Dining Hall",
+        "Mess Timings"
+      ]
+    },
+    {
+      "chunk_id": "5",
+      "section": "Games and TV Timings, Study Hours and Cafeteria",
+      "text": "Games and TV Timings / Study Hours\n\n| Working Days (Games/TV)  | Holidays (Games/TV)      | Study Hours (Morning)    | Study Hours (Evening)    |\n| ------------------------ | ------------------------ | ------------------------ | ------------------------ |\n| 04:30 P.M. to 06:00 P.M. | 09:00 A.M. to 12:00 P.M. | 05:00 A.M. to 07:00 A.M. | 06:00 P.M. to 07:00 P.M. |\n|                          | 01:00 P.M. to 06:00 P.M. |                          | 09:00 P.M. to 10:30 P.M. |\n\nCafeteria\n\nMSAJCE has a spacious and hygienic cafeteria that caters to the taste of all students. It can conveniently accommodate 100 students at a time. The cafeteria is provided with modern furniture, electrical cooking and storing facilities which provides delicious breakfast, lunch, snacks and beverages for students and staff at reasonable rates.\n\n| Feature         | Details                               |\n| --------------- | ------------------------------------- |\n| Capacity        | 100 students at a time                |\n| Operating Hours | All working days — 8:00 AM to 8:00 PM |\n| Food Served     | Breakfast, Lunch, Snacks, Beverages   |\n| Available For   | Both Students and Staff               |\n| Seating         | Separate space for students and staff |",
+      "possible_questions": [
+        "What are the timings for games and TV?",
+        "What services does the cafeteria offer?"
+      ],
+      "entities": {
+        "persons": [],
+        "locations": []
+      },
+      "keywords": [
+        "Games Timings",
+        "Cafeteria",
+        "Study Hours"
+      ]
+    }
+  ]
+}

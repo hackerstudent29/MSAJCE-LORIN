@@ -1,0 +1,507 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Department of Artificial Intelligence & Machine Learning — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/aiml.php",
+    "sections_covered": [
+      "Department Overview",
+      "Programme Details — B.E. AIML",
+      "Vision & Mission",
+      "Programme Educational Objectives (PEOs)",
+      "Program Specific Outcomes (PSOs)",
+      "Programme Outcomes (POs)",
+      "Job Profiles — AI & ML Employment Forecast 2025-2030",
+      "Key AI & ML Job Roles & Salary Trends",
+      "Industry-Specific AI & ML Trends",
+      "Certifications & Skills to Upskill",
+      "Faculty List",
+      "Laboratories",
+      "Course Materials — 2021 Regulation",
+      "Placement Details & Recruiting Companies"
+    ],
+    "scraped_date": "2026-04-27",
+    "total_chunks": 8,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_aiml",
+    "version": "2.0"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_aiml_chunk_01",
+      "section": "Department Overview & Programme Details — B.E. AI & ML",
+      "source_url": "https://www.msajce-edu.in/aiml.php#tab1",
+      "context": "This chunk covers the MSAJCE AIML department overview, what AI and ML are, the B.E. programme details including seats, eligibility, duration, and career prospects.",
+      "text": "Department of Artificial Intelligence & Machine Learning — Overview: Artificial Intelligence (AI) is a technology that makes machines reproduce human behavior. Machine Learning (ML) is a sub-part of AI by which machines automatically learn from past data without programming. AI and ML together innovate human-like intelligent computer systems to solve complex problems. B.Tech in CSE with Specialization in AIML (CSE-AIML) provides budding engineers with courses dedicated to frontiers in AI and ML with a foundation of Computer Science & Engineering. This course enhances knowledge of computer technologies including programming, coding, database and web development. Engineers with AI expertise will be needed in crucial domains such as Healthcare, Industry 4.0, Finance, Agriculture, Security, Law, and Environment Management. The curriculum covers Computational Mathematics, core Computer Science, and latest advancements in AI and ML. Specialization areas include machine learning, deep learning, natural language processing, computer vision, data mining, Explainable AI, Generative Adversarial Networks, Multimodal AI and Regenerative AI. Tools and technologies: Python, R, TensorFlow, Spark, Hadoop. Career Prospects: Big Data Engineer, Business Intelligence Developer, Data Scientist, Machine Learning Engineer, Research Scientist, AI Data Analyst, AI Engineer, Robotics Scientist. Recruiting companies include Microsoft, Amazon, Goldman Sachs, Oracle GBU, Cisco, Dell Technologies, Accenture. Programme Details — B.E. Artificial Intelligence & Machine Learning: Duration: 4 years (Regular) / 3 years (Lateral Entry). No. of Semesters: 8 (Regular) / 6 (Lateral Entry). Total Seats: 60. Government Quota: 30. Management Quota: 30. Eligibility: 10+2 with pass in Physics, Chemistry and Mathematics. Curriculum: 2021 Regulation — https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf. Scope for Higher Studies: M.E. / M.Tech. / M.B.A.",
+      "tables": [
+        {
+          "table_title": "B.E. AIML — Programme Summary",
+          "headers": ["Detail", "Value"],
+          "rows": [
+            ["Programme Name", "B.E. Artificial Intelligence & Machine Learning (CSE-AIML)"],
+            ["Duration", "4 years (Regular) / 3 years (Lateral Entry)"],
+            ["No. of Semesters", "8 (Regular) / 6 (Lateral Entry)"],
+            ["Total Seats", "60"],
+            ["Government Quota", "30"],
+            ["Management Quota", "30"],
+            ["Eligibility", "10+2 with Physics, Chemistry and Mathematics"],
+            ["Curriculum", "2021 Regulation"],
+            ["Curriculum URL", "https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf"],
+            ["Higher Studies", "M.E. / M.Tech. / M.B.A."]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Does MSAJCE offer AI and ML course?",
+        "What is the seat intake for AIML at MSAJCE?",
+        "What is the eligibility for AIML at MSAJCE?",
+        "How many years is the AIML programme at MSAJCE?",
+        "What tools are taught in AIML at MSAJCE?",
+        "What is the career scope after AIML at MSAJCE?",
+        "Which companies recruit AIML graduates from MSAJCE?",
+        "What is the government quota for AIML at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["60 total seats", "30 government quota", "30 management quota", "4 years", "8 semesters"]
+      },
+      "keywords": [
+        "AIML", "artificial intelligence", "machine learning", "B.E. AIML", "CSE AIML",
+        "60 seats", "deep learning", "NLP", "Python", "TensorFlow", "data scientist",
+        "ML engineer", "AI engineer", "Microsoft", "Amazon", "Goldman Sachs", "Accenture",
+        "2021 regulation", "higher studies", "lateral entry"
+      ],
+      "overlap_text": "",
+      "token_count": 430
+    },
+    {
+      "chunk_id": "msajce_aiml_chunk_02",
+      "section": "Vision, Mission, PEOs, PSOs & Programme Outcomes (POs)",
+      "source_url": "https://www.msajce-edu.in/aiml.php#tab2",
+      "context": "This chunk contains the AIML department Vision, Mission statements, Programme Educational Objectives (PEOs), Program Specific Outcomes (PSOs), and all 12 Programme Outcomes (POs).",
+      "text": "Vision of AIML Department: To be a centre of excellence for transforming students into proficient Artificial Intelligence and Machine Learning Engineers using through sustainable practices. Mission of AIML Department: M1. Impart core fundamental knowledge and necessary skills in Artificial Intelligence and Data Science through innovative teaching and learning methodology. M2. Inculcate critical thinking, ethics, lifelong learning and creativity needed for industry and society. M3. Cultivate the students with all-round competencies, for career, higher education and self-employability. Programme Educational Objectives (PEOs): PEO1. Graduates will be prepared for analysing, designing, developing and testing the software solutions and products with creativity and sustainability. PEO2. Graduates will be skilled in the use of modern tools for critical problem solving and analyzing industrial and societal requirements. PEO3. Graduates will be prepared with managerial and leadership skills for career and starting up own firms. Program Specific Outcomes (PSOs): PSO1. Develop creative solutions by adapting emerging technologies/tools for real time applications of Industry. PSO2. Apply the acquired knowledge to develop software solutions and innovative mobile apps for various automation applications. Programme Outcomes (POs): PO1 Engineering Knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems. PO2 Problem Analysis: Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions. PO3 Design/Development of Solutions: Design solutions for complex engineering problems and design system components or processes that meet specified needs. PO4 Conduct Investigations of Complex Problems: Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data. PO5 Modern Tool Usage: Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools. PO6 The Engineer and Society: Apply reasoning to assess societal, health, safety, legal and cultural issues. PO7 Environment and Sustainability: Understand the impact of engineering solutions in societal and environmental contexts. PO8 Ethics: Apply ethical principles and commit to professional ethics and norms of engineering practice. PO9 Individual and Team Work: Function effectively as an individual, member or leader in diverse teams and multidisciplinary settings. PO10 Communication: Communicate effectively on complex engineering activities, write reports, design documentation, make presentations. PO11 Project Management and Finance: Demonstrate knowledge of engineering and management principles as a member and leader. PO12 Life-long Learning: Recognize the need for, and engage in independent and life-long learning in technological change.",
+      "tables": [
+        {
+          "table_title": "Programme Educational Objectives (PEOs)",
+          "headers": ["PEO", "Description"],
+          "rows": [
+            ["PEO1", "Graduates will be prepared for analysing, designing, developing and testing software solutions and products with creativity and sustainability."],
+            ["PEO2", "Graduates will be skilled in the use of modern tools for critical problem solving and analyzing industrial and societal requirements."],
+            ["PEO3", "Graduates will be prepared with managerial and leadership skills for career and starting up own firms."]
+          ]
+        },
+        {
+          "table_title": "Program Specific Outcomes (PSOs)",
+          "headers": ["PSO", "Description"],
+          "rows": [
+            ["PSO1", "Develop creative solutions by adapting emerging technologies/tools for real time applications of Industry."],
+            ["PSO2", "Apply the acquired knowledge to develop software solutions and innovative mobile apps for various automation applications."]
+          ]
+        },
+        {
+          "table_title": "Programme Outcomes (POs)",
+          "headers": ["PO", "Title", "Description"],
+          "rows": [
+            ["PO1", "Engineering Knowledge", "Apply knowledge of mathematics, science, engineering fundamentals and specialization to solve complex problems."],
+            ["PO2", "Problem Analysis", "Identify, formulate, review literature and analyze complex engineering problems."],
+            ["PO3", "Design/Development of Solutions", "Design solutions for complex problems meeting specified needs."],
+            ["PO4", "Conduct Investigations", "Use research-based knowledge and methods for valid conclusions."],
+            ["PO5", "Modern Tool Usage", "Create, select, apply appropriate techniques and modern engineering IT tools."],
+            ["PO6", "Engineer and Society", "Apply reasoning to assess societal, health, safety, legal and cultural issues."],
+            ["PO7", "Environment and Sustainability", "Understand impact of engineering solutions in societal and environmental contexts."],
+            ["PO8", "Ethics", "Apply ethical principles and commit to professional ethics and norms."],
+            ["PO9", "Individual and Team Work", "Function effectively as individual, member or leader in diverse teams."],
+            ["PO10", "Communication", "Communicate effectively, write reports, design documentation, make presentations."],
+            ["PO11", "Project Management and Finance", "Demonstrate knowledge of engineering and management principles."],
+            ["PO12", "Life-long Learning", "Engage in independent and life-long learning in technological change."]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the vision of the AIML department at MSAJCE?",
+        "What are the missions of the AIML department?",
+        "What are the PEOs for AIML at MSAJCE?",
+        "What are the PSOs for the AIML programme?",
+        "What are the programme outcomes for AIML at MSAJCE?",
+        "Does AIML at MSAJCE teach ethics?",
+        "What are the learning outcomes of the AIML course?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["12 Programme Outcomes", "3 PEOs", "2 PSOs", "3 Missions"]
+      },
+      "keywords": [
+        "AIML vision", "AIML mission", "PEO", "PSO", "programme outcomes", "PO1", "PO12",
+        "engineering knowledge", "ethics", "sustainability", "team work", "life-long learning",
+        "OBE", "outcome based education", "design solutions", "modern tool usage"
+      ],
+      "overlap_text": "AIML Department offers B.E. with 60 total seats (30 Government, 30 Management). Duration 4 years, 8 semesters. Eligibility: 10+2 with Physics, Chemistry and Mathematics. Career roles: Data Scientist, ML Engineer, AI Engineer, Big Data Engineer. Recruiting companies: Microsoft, Amazon, Goldman Sachs, Cisco, Dell, Accenture.",
+      "token_count": 490
+    },
+    {
+      "chunk_id": "msajce_aiml_chunk_03",
+      "section": "AI & ML Job Roles, Salary Trends & Employment Forecast India 2025-2030",
+      "source_url": "https://www.msajce-edu.in/aiml.php#tab3",
+      "context": "This chunk covers the AI and ML employment forecast for India from 2025-2030, key job roles, required skills, salary ranges, and industry-specific trends.",
+      "text": "AI and ML Employment Forecast in India 2025-2030: The AI and ML sectors in India are poised for substantial growth over the next five years. Key Drivers: 1. Increased AI Adoption Across Industries — AI/ML adopted across healthcare, finance, e-commerce, retail, manufacturing, agriculture. Companies leveraging AI/ML for automation, data analytics, predictive analytics, personalization, customer service. Indian companies like Infosys, Wipro, TCS investing heavily in AI/ML. 2. Government Initiatives — Digital India, National AI Strategy, AI for All, AI-enabled Smart Cities, AI-powered education. 3. AI and Automation in Enterprises — Robotic Process Automation (RPA) integrated with AI and NLP creating job opportunities. 4. R&D and Innovation — Google, Microsoft, IBM, Intel have set up R&D centers in India. 5. Increased Investment in Startups — AI startups attracting substantial venture capital investment. 6. Healthcare, Autonomous Vehicles, Smart Cities — Major AI integration areas. Key AI and ML Job Roles (2025-2030): Machine Learning Engineer — Develop and deploy ML models. Skills: Python, TensorFlow, PyTorch, Scikit-learn, neural networks, deep learning. High demand in e-commerce, finance, automotive, manufacturing. Data Scientist — Analyze and interpret complex data. Skills: Python, R, SQL, Matplotlib, Seaborn, ML algorithms, big data tools. In demand in finance, retail, healthcare, telecom. AI Research Scientist — Conduct cutting-edge research in NLP, computer vision, reinforcement learning. Skills: Python, TensorFlow, PyTorch, mathematical modeling. Deep Learning Engineer — Build neural networks for computer vision, NLP, speech recognition. Skills: TensorFlow, Keras, PyTorch. NLP Engineer — Develop AI systems for human language using ML techniques. Skills: SpaCy, NLTK, sentiment analysis, speech recognition. AI Software Engineer — Design and build AI applications. Skills: Python, C++, Java, TensorFlow, cloud computing, Docker, Kubernetes. AI Ethics Specialist — Ensure ethical AI, bias reduction, fairness, transparency. AI/ML Product Manager — Manage AI product development. Skills: Agile, data analysis, market research. Expected Salary Ranges: Entry-level (0-2 years): Rs. 6-12 Lakhs per annum. Mid-level (3-5 years): Rs. 12-20 Lakhs per annum. Senior-level (5+ years): Rs. 20-35 Lakhs per annum. AI Research Scientist: Rs. 25-50 Lakhs per annum. AI/ML Project Managers (Senior): Rs. 30-60 Lakhs per annum. Job Market Growth: CAGR of 30-40% in next 5 years. Total AI jobs could double or triple.",
+      "tables": [
+        {
+          "table_title": "AI & ML Salary Ranges in India (2025-2030)",
+          "headers": ["Experience Level", "Annual Salary (INR)"],
+          "rows": [
+            ["Entry-level (0-2 years)", "Rs. 6 – 12 Lakhs per annum"],
+            ["Mid-level (3-5 years)", "Rs. 12 – 20 Lakhs per annum"],
+            ["Senior-level (5+ years)", "Rs. 20 – 35 Lakhs per annum"],
+            ["AI Research Scientist", "Rs. 25 – 50 Lakhs per annum"],
+            ["AI/ML Project Managers (Senior)", "Rs. 30 – 60 Lakhs per annum"]
+          ]
+        },
+        {
+          "table_title": "Key AI & ML Job Roles and Required Skills",
+          "headers": ["Job Role", "Key Skills", "Demand Sectors"],
+          "rows": [
+            ["Machine Learning Engineer", "Python, TensorFlow, PyTorch, Scikit-learn, neural networks, deep learning", "E-commerce, finance, automotive, manufacturing"],
+            ["Data Scientist", "Python, R, SQL, Matplotlib, Seaborn, ML algorithms, big data tools", "Finance, retail, healthcare, telecom"],
+            ["AI Research Scientist", "Python, TensorFlow, PyTorch, mathematical modeling, algorithms", "Tech companies, universities, R&D labs, startups"],
+            ["Deep Learning Engineer", "TensorFlow, Keras, PyTorch, neural networks, computer vision, NLP", "Healthcare, automotive, gaming, financial services"],
+            ["NLP Engineer", "SpaCy, NLTK, sentiment analysis, speech recognition, deep learning", "Customer service, chatbots, voice assistants"],
+            ["AI Software Engineer", "Python, C++, Java, TensorFlow, Docker, Kubernetes, cloud computing", "Finance, retail, manufacturing, healthcare"],
+            ["AI Ethics Specialist", "AI ethics, legal frameworks, data privacy, algorithmic transparency", "Government, big tech, research institutions"],
+            ["AI/ML Product Manager", "Agile, data analysis, market research, product lifecycle management", "Tech companies, AI startups, enterprise software"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the salary of an AI engineer in India?",
+        "What is the salary of a data scientist in India?",
+        "What is the job growth for AI and ML in India?",
+        "What skills are needed for a machine learning engineer?",
+        "What is the CAGR growth of AI industry in India?",
+        "What are the job roles after studying AIML?",
+        "What salary can I expect after AIML degree?",
+        "Does India have demand for AI engineers?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": ["Bangalore", "Hyderabad", "Pune"],
+        "numbers": ["Rs. 6-12 Lakhs entry level", "Rs. 12-20 Lakhs mid level", "Rs. 20-35 Lakhs senior", "Rs. 25-50 Lakhs AI Research Scientist", "Rs. 30-60 Lakhs AI/ML Project Manager", "30-40% CAGR"]
+      },
+      "keywords": [
+        "AI salary", "ML salary", "data scientist salary", "AI engineer salary",
+        "machine learning engineer", "NLP engineer", "deep learning engineer",
+        "AI research scientist", "job market growth", "CAGR 30-40%", "TensorFlow",
+        "PyTorch", "Python", "Scikit-learn", "Docker", "Kubernetes", "Keras",
+        "AI job roles", "employment forecast", "India AI market"
+      ],
+      "overlap_text": "AIML Vision: To be a centre of excellence for transforming students into proficient AI and ML Engineers using sustainable practices. PEO1: Graduates prepared for designing and testing software solutions with creativity. PSO1: Develop creative solutions using emerging technologies for real-time industry applications.",
+      "token_count": 520
+    },
+    {
+      "chunk_id": "msajce_aiml_chunk_04",
+      "section": "Industry-Specific AI Trends, Certifications & Targeted Job Applications",
+      "source_url": "https://www.msajce-edu.in/aiml.php#tab3",
+      "context": "This chunk covers industry-specific AI and ML job trends across healthcare, finance, automotive, retail sectors, recommended certifications to upskill, and target companies for job applications.",
+      "text": "Industry-Specific AI and ML Job Trends: Healthcare — Medical diagnostics, Personalized treatment, Drug discovery, Robot-assisted surgery, Medical AI, Bioinformatics, and healthcare data analytics. Finance and Banking — Fraud detection, Credit scoring, Personalized banking services, Automated trading, Financial data scientists, Quantitative analysts, AI-enabled risk management. ML applications in Fintech will create opportunities for specialists in Blockchain, smart contracts, and AI in Cryptocurrency. Automotive (Autonomous Vehicles) — Self-driving cars and Smart transportation systems. AI and ML professionals required for computer vision, sensor fusion, and real-time decision-making for autonomous vehicles. Retail and E-commerce — AI transforming customer experience through personalized recommendations, dynamic pricing. Demand for professionals in e-commerce AI, recommendation algorithms, and supply chain optimization. Certifications and Skills to Upskill: 1. Python and R language for data manipulation and model development. 2. TensorFlow, PyTorch, and Keras for deep learning. 3. Data science tools: Pandas, NumPy, SciPy for data wrangling and analysis. 4. NLP frameworks: SpaCy, Hugging Face for text processing and sentiment analysis. 5. Google AI Certification and Deep Learning Specialization by Andrew Ng (Coursera). 6. Google Professional Machine Learning Engineer. 7. AWS Certified Machine Learning – Specialty. 8. Microsoft Certified: Azure AI Engineer Associate. 9. IBM AI Engineering Professional Certificate. 10. Data Science Professional Certificate. 11. Certified Data Scientist (CDS). 12. Deep Learning Specialization by Andrew Ng. 13. Advanced Machine Learning Specialization. 14. Natural Language Processing with Deep Learning. Targeted Job Applications: AI-centric companies — Google, Microsoft, Amazon, NVIDIA, IBM, TCS, and Infosys. Startups — India's growing AI/ML startups in Bangalore, Hyderabad, and Pune offer hands-on work in cutting-edge AI/ML applications. Freelancing — Platforms like Upwork and Freelancer offer freelance opportunities in AI/ML.",
+      "tables": [
+        {
+          "table_title": "AI Certifications to Upskill",
+          "headers": ["S.No.", "Certification / Skill"],
+          "rows": [
+            ["1", "Python and R language for data manipulation"],
+            ["2", "TensorFlow, PyTorch, and Keras for deep learning"],
+            ["3", "Pandas, NumPy, SciPy — data wrangling tools"],
+            ["4", "SpaCy, Hugging Face — NLP frameworks"],
+            ["5", "Google AI Certification & Deep Learning Specialization (Andrew Ng, Coursera)"],
+            ["6", "Google Professional Machine Learning Engineer"],
+            ["7", "AWS Certified Machine Learning — Specialty"],
+            ["8", "Microsoft Certified: Azure AI Engineer Associate"],
+            ["9", "IBM AI Engineering Professional Certificate"],
+            ["10", "Data Science Professional Certificate"],
+            ["11", "Certified Data Scientist (CDS)"],
+            ["12", "Deep Learning Specialization by Andrew Ng"],
+            ["13", "Advanced Machine Learning Specialization"],
+            ["14", "Natural Language Processing with Deep Learning"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What certifications should I get for AI and ML?",
+        "Is AWS ML certification useful after AIML degree?",
+        "What companies should I target for AI jobs?",
+        "Does AIML have scope in healthcare?",
+        "What is the scope of AI in banking and finance?",
+        "What is AI doing in autonomous vehicles?",
+        "How to upskill in AI and ML?",
+        "Can I freelance with an AIML degree?"
+      ],
+      "entities": {
+        "persons": ["Andrew Ng — Coursera Deep Learning Specialization"],
+        "phones": [],
+        "emails": [],
+        "locations": ["Bangalore", "Hyderabad", "Pune"],
+        "numbers": ["14 certifications listed"]
+      },
+      "keywords": [
+        "AI certification", "AWS ML certification", "Azure AI Engineer", "Google ML Engineer",
+        "IBM AI Engineering", "TensorFlow", "Keras", "Pandas", "NumPy", "SciPy",
+        "SpaCy", "Hugging Face", "Andrew Ng", "Coursera", "healthcare AI", "fintech AI",
+        "autonomous vehicles AI", "e-commerce AI", "freelance AI", "Upwork", "NVIDIA"
+      ],
+      "overlap_text": "AI/ML Salary: Entry-level Rs. 6-12 Lakhs, Mid-level Rs. 12-20 Lakhs, Senior Rs. 20-35 Lakhs, AI Research Scientist Rs. 25-50 Lakhs, AI/ML Project Manager Rs. 30-60 Lakhs. Job Market CAGR: 30-40% in next 5 years. Key roles: ML Engineer, Data Scientist, NLP Engineer, Deep Learning Engineer, AI Ethics Specialist.",
+      "token_count": 440
+    },
+    {
+      "chunk_id": "msajce_aiml_chunk_05",
+      "section": "AIML Faculty List & Laboratories",
+      "source_url": "https://www.msajce-edu.in/aiml.php#tab1",
+      "context": "This chunk lists all AIML department faculty members with their qualifications, designations, and areas of specialization, along with the complete laboratory details including courses offered and resource links.",
+      "text": "AIML Department Faculty List: Dr. NAGASUBRAMANIAN R — M.E., Ph.D. — Head (PG) — Computer Science Engineering. Dr. SUBRAMANIAN P — M.E., Ph.D. — Head (UG) — Wireless Sensor Networking and Image Processing. Dr. PREMALATHA G — M.E., Ph.D. — Associate Professor — Image Processing and Machine Learning. Mrs. SARANYA V — M.Tech., (Ph.D) — Assistant Professor — IOT and Cloud Computing. Mrs. SASIKALA L — M.E. — Assistant Professor — Computer Science and Engineering. Mrs. KIRUTHIKA S — M.E. — Assistant Professor — Computer Science and Engineering. Mrs. ASRIN MAHMOOTHA A — M.E. — Assistant Professor — Computer Science Engineering. Mr. PRAVEENKUMAR P — M.E. — Assistant Professor — Computer Science Engineering. Mr. RAJAKUMAR B — M.Tech., (Ph.D) — Assistant Professor — IOT, AI, NLP and Image Processing. Mr. RAJASEKAR R — M.E., (Ph.D) — Assistant Professor — IOT, Network Security. AIML Department Laboratories: 1. C Programming Lab — Course: CS8261 C Programming. Lab Objectives: https://www.msajce-edu.in/images/departments/aids/Obj-c.pdf. Equipment Details: https://www.msajce-edu.in/images/departments/aids/Equipments-C-Programming.pdf. Course PDF: https://www.msajce-edu.in/images/departments/aids/CS8261.pdf. Virtual Lab: https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-C-Programming.pdf. 2. Internet Programming Lab — Course: CS8661 Internet Programming. Lab Objectives: https://www.msajce-edu.in/images/departments/aids/Obj-INTERNET.pdf. Equipment: https://www.msajce-edu.in/images/departments/aids/Equipments-Internet-Programming.pdf. Virtual Lab: https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-Internet-Programming.pdf. 3. Operating Systems Lab — Course: CS8461 Operating Systems. Virtual Lab: https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-OS.pdf. 4. Object Oriented Analysis and Design Lab — Course: CS8461 OOAD. Virtual Lab: https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-ooad.pdf. 5. Web Technology Lab — Course: IT8511 Web Technology. Virtual Lab: https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-Web-Technology.pdf. 6. Networks Lab — Course: CS8581 Networks Lab. Virtual Lab: https://www.msajce-edu.in/images/departments/aids/Networks.pdf.",
+      "tables": [
+        {
+          "table_title": "AIML Faculty List",
+          "headers": ["Name", "Qualification", "Designation", "Area of Specialization"],
+          "rows": [
+            ["Dr. NAGASUBRAMANIAN R", "M.E., Ph.D.", "Head — PG", "Computer Science Engineering"],
+            ["Dr. SUBRAMANIAN P", "M.E., Ph.D.", "Head — UG", "Wireless Sensor Networking and Image Processing"],
+            ["Dr. PREMALATHA G", "M.E., Ph.D.", "Associate Professor", "Image Processing and Machine Learning"],
+            ["Mrs. SARANYA V", "M.Tech., (Ph.D)", "Assistant Professor", "IOT and Cloud Computing"],
+            ["Mrs. SASIKALA L", "M.E.", "Assistant Professor", "Computer Science and Engineering"],
+            ["Mrs. KIRUTHIKA S", "M.E.", "Assistant Professor", "Computer Science and Engineering"],
+            ["Mrs. ASRIN MAHMOOTHA A", "M.E.", "Assistant Professor", "Computer Science Engineering"],
+            ["Mr. PRAVEENKUMAR P", "M.E.", "Assistant Professor", "Computer Science Engineering"],
+            ["Mr. RAJAKUMAR B", "M.Tech., (Ph.D)", "Assistant Professor", "IOT, AI, NLP and Image Processing"],
+            ["Mr. RAJASEKAR R", "M.E., (Ph.D)", "Assistant Professor", "IOT, Network Security"]
+          ]
+        },
+        {
+          "table_title": "AIML Department Laboratories",
+          "headers": ["S.No.", "Lab Name", "Course Code", "Course Name", "Virtual Lab Link"],
+          "rows": [
+            ["1", "C Programming Lab", "CS8261", "C Programming", "https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-C-Programming.pdf"],
+            ["2", "Internet Programming Lab", "CS8661", "Internet Programming", "https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-Internet-Programming.pdf"],
+            ["3", "Operating Systems Lab", "CS8461", "Operating Systems", "https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-OS.pdf"],
+            ["4", "OOAD Lab", "CS8461", "Object Oriented Analysis and Design", "https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-ooad.pdf"],
+            ["5", "Web Technology Lab", "IT8511", "Web Technology", "https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-Web-Technology.pdf"],
+            ["6", "Networks Lab", "CS8581", "Networks Lab", "https://www.msajce-edu.in/images/departments/aids/Networks.pdf"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Who is the HOD of AIML at MSAJCE?",
+        "Who are the faculty in the AIML department at MSAJCE?",
+        "What labs are available in AIML department?",
+        "Does AIML have a networks lab?",
+        "What is the specialization of Dr. Nagasubramanian?",
+        "Who teaches IOT in AIML at MSAJCE?",
+        "Does AIML have a Web Technology lab?",
+        "How many faculty are in AIML department at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. NAGASUBRAMANIAN R — Head PG, M.E. Ph.D., Computer Science Engineering",
+          "Dr. SUBRAMANIAN P — Head UG, M.E. Ph.D., Wireless Sensor Networking and Image Processing",
+          "Dr. PREMALATHA G — Associate Professor, M.E. Ph.D., Image Processing and Machine Learning",
+          "Mrs. SARANYA V — Assistant Professor, M.Tech. (Ph.D), IOT and Cloud Computing",
+          "Mrs. SASIKALA L — Assistant Professor, M.E., Computer Science and Engineering",
+          "Mrs. KIRUTHIKA S — Assistant Professor, M.E., Computer Science and Engineering",
+          "Mrs. ASRIN MAHMOOTHA A — Assistant Professor, M.E., Computer Science Engineering",
+          "Mr. PRAVEENKUMAR P — Assistant Professor, M.E., Computer Science Engineering",
+          "Mr. RAJAKUMAR B — Assistant Professor, M.Tech. (Ph.D), IOT AI NLP Image Processing",
+          "Mr. RAJASEKAR R — Assistant Professor, M.E. (Ph.D), IOT Network Security"
+        ],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["10 faculty members", "6 laboratories"]
+      },
+      "keywords": [
+        "AIML HOD", "Dr Nagasubramanian", "Dr Subramanian", "Dr Premalatha",
+        "AIML faculty", "IOT Cloud Computing", "image processing", "machine learning faculty",
+        "NLP faculty", "network security", "C programming lab", "networks lab",
+        "web technology lab", "OOAD lab", "operating systems lab", "virtual lab"
+      ],
+      "overlap_text": "Industry-specific AI trends: Healthcare (diagnostics, drug discovery), Finance (fraud detection, automated trading), Automotive (self-driving cars, sensor fusion), Retail (recommendation algorithms). Certifications: AWS ML Specialty, Azure AI Engineer, Google Professional ML Engineer, IBM AI Engineering, Deep Learning by Andrew Ng.",
+      "token_count": 480
+    },
+    {
+      "chunk_id": "msajce_aiml_chunk_06",
+      "section": "Course Materials — 2021 Regulation Subject List with Resource Links",
+      "source_url": "https://www.msajce-edu.in/aiml.php#tab1",
+      "context": "This chunk lists all AIML department course materials under the 2021 Regulation including subject codes, subject names, and direct links to lesson plans, question banks, lecture notes, and ICT tools.",
+      "text": "AIML Department — Course Materials (2021 Regulation): Anna University BE 2021 Syllabus available. Subject-wise resources include Lesson Plans, Question Banks, Lecture Notes, and ICT Tools. 1. MA3354 — Discrete Mathematics. Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/MA3354-LP.pdf. Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/MA3354-QB.pdf. Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/MA3354-LN.pdf. ICT Tools: https://www.msajce-edu.in/academics/aids/2021/ICTTools/MA3354-ICT.pdf. 2. CS3351 — Digital Principles and Computer Organization. Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/CS3351-LP.pdf. Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/CS3351-QB.pdf. Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/CS3351-LN.pdf. 3. AD3391 — Database Design and Management. Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AD3391-LP.pdf. Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AD3391-QB.pdf. Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/AD3391-LN.pdf. 4. AD3351 — Design and Analysis of Algorithms. Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AD3351-LP.pdf. Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AD3351-QB.pdf. Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/AD3351-LN.pdf. 5. AD3301 — Data Exploration and Visualization. Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AD3301-LP.pdf. Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AD3301-QB.pdf. Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/AD3301-LN.pdf. 6. AL3391 — Artificial Intelligence. Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AL3391-LP.pdf. Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AL3391-QB.pdf. Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/AL3391-LN.pdf. 7. AD3381 — Database Design and Management Laboratory. Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AD3381-LP.pdf. 8. AD3311 — Artificial Intelligence Laboratory. Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/GE3151-LP.pdf. 9. GE3361 — Professional Development. Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/GE3151-LP.pdf.",
+      "tables": [
+        {
+          "table_title": "AIML Course Materials — 2021 Regulation",
+          "headers": ["S.No.", "Subject Code", "Subject Name", "Lesson Plan", "Question Bank", "Lecture Notes"],
+          "rows": [
+            ["1", "MA3354", "Discrete Mathematics", "https://www.msajce-edu.in/academics/aids/2021/LessonPlan/MA3354-LP.pdf", "https://www.msajce-edu.in/academics/aids/2021/QuestionBank/MA3354-QB.pdf", "https://www.msajce-edu.in/academics/aids/2021/LectureNote/MA3354-LN.pdf"],
+            ["2", "CS3351", "Digital Principles and Computer Organization", "https://www.msajce-edu.in/academics/aids/2021/LessonPlan/CS3351-LP.pdf", "https://www.msajce-edu.in/academics/aids/2021/QuestionBank/CS3351-QB.pdf", "https://www.msajce-edu.in/academics/aids/2021/LectureNote/CS3351-LN.pdf"],
+            ["3", "AD3391", "Database Design and Management", "https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AD3391-LP.pdf", "https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AD3391-QB.pdf", "https://www.msajce-edu.in/academics/aids/2021/LectureNote/AD3391-LN.pdf"],
+            ["4", "AD3351", "Design and Analysis of Algorithms", "https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AD3351-LP.pdf", "https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AD3351-QB.pdf", "https://www.msajce-edu.in/academics/aids/2021/LectureNote/AD3351-LN.pdf"],
+            ["5", "AD3301", "Data Exploration and Visualization", "https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AD3301-LP.pdf", "https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AD3301-QB.pdf", "https://www.msajce-edu.in/academics/aids/2021/LectureNote/AD3301-LN.pdf"],
+            ["6", "AL3391", "Artificial Intelligence", "https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AL3391-LP.pdf", "https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AL3391-QB.pdf", "https://www.msajce-edu.in/academics/aids/2021/LectureNote/AL3391-LN.pdf"],
+            ["7", "AD3381", "Database Design and Management Laboratory", "https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AD3381-LP.pdf", "—", "—"],
+            ["8", "AD3311", "Artificial Intelligence Laboratory", "https://www.msajce-edu.in/academics/aids/2021/LessonPlan/GE3151-LP.pdf", "—", "—"],
+            ["9", "GE3361", "Professional Development", "https://www.msajce-edu.in/academics/aids/2021/LessonPlan/GE3151-LP.pdf", "—", "—"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Where can I get AIML lecture notes at MSAJCE?",
+        "What are the subjects in AIML 2021 regulation at MSAJCE?",
+        "Where is the question bank for Discrete Mathematics AIML?",
+        "Where to download AIML lesson plans?",
+        "What is the subject code for Artificial Intelligence at MSAJCE?",
+        "Does MSAJCE AIML have Data Exploration and Visualization subject?",
+        "Where to get MSAJCE AIML course materials online?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["9 subjects listed", "2021 Regulation"]
+      },
+      "keywords": [
+        "AIML course materials", "2021 regulation", "MA3354 Discrete Mathematics",
+        "CS3351 Digital Principles", "AD3391 Database Design", "AD3351 Algorithms",
+        "AD3301 Data Visualization", "AL3391 Artificial Intelligence",
+        "AD3381 Database Lab", "AD3311 AI Lab", "GE3361 Professional Development",
+        "lesson plan", "question bank", "lecture notes", "ICT tools"
+      ],
+      "overlap_text": "AIML Faculty: Dr. Nagasubramanian R (Head PG), Dr. Subramanian P (Head UG), Dr. Premalatha G (Associate Professor — Image Processing & ML), Mrs. Saranya V (IOT & Cloud Computing), Mr. Rajakumar B (IOT, AI, NLP), Mr. Rajasekar R (IOT, Network Security). Labs: C Programming, Internet Programming, OS Lab, OOAD Lab, Web Tech Lab, Networks Lab.",
+      "token_count": 460
+    },
+    {
+      "chunk_id": "msajce_aiml_chunk_07",
+      "section": "AIML Placement Companies & Off-Campus Recruiters",
+      "source_url": "https://www.msajce-edu.in/aiml.php",
+      "context": "This chunk lists all companies that have recruited AIML and CSE students from MSAJCE through off-campus placements.",
+      "text": "AIML Department — Placement Details: Off Campus Placed Students in Various Companies. The following companies have recruited MSAJCE AIML and CSE students through off-campus placements: Accenture, Arabic (company), AT&T, BYJU'S, Capgemini, Carbonite, Chella Software, CISCO, City West Water, Cognizant Technology Solutions (CTS), Deloitte Consulting, Dell Technologies, EMIS Health, Future Focus Infotech, HCL Technologies, HP (Hewlett Packard), HTC, IBM, Infosys, Infoview Technologies, Intellect Design Arena, L&T Infotech (Larsen & Toubro), Newage Software, Oracle, Saudi Airlines, Solverminds, Sutherland, TCS (Tata Consultancy Services), Tech Mahindra, Wells Fargo, Wipro, Wolters Kluwer ELM. Total companies recruiting from AIML department: 32 companies listed. General Contact — MSAJCE: Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103. Phone: +91 99400 04500. Email: msajce.office@gmail.com. Website: www.msajce-edu.in. Online Application Form: https://enrollonline.co.in/Registration/Apply/MSAJCE. Online Fee Payment: https://www.feepayr.com/.",
+      "tables": [
+        {
+          "table_title": "Companies Recruiting from MSAJCE AIML Department",
+          "headers": ["S.No.", "Company Name"],
+          "rows": [
+            ["1", "Accenture"],
+            ["2", "AT&T"],
+            ["3", "BYJU'S"],
+            ["4", "Capgemini"],
+            ["5", "Carbonite"],
+            ["6", "Chella Software"],
+            ["7", "CISCO"],
+            ["8", "Cognizant Technology Solutions (CTS)"],
+            ["9", "Deloitte Consulting"],
+            ["10", "Dell Technologies"],
+            ["11", "EMIS Health"],
+            ["12", "Future Focus Infotech"],
+            ["13", "HCL Technologies"],
+            ["14", "HP (Hewlett Packard)"],
+            ["15", "HTC"],
+            ["16", "IBM"],
+            ["17", "Infosys"],
+            ["18", "Infoview Technologies"],
+            ["19", "Intellect Design Arena"],
+            ["20", "L&T Infotech"],
+            ["21", "Newage Software"],
+            ["22", "Oracle"],
+            ["23", "Saudi Airlines"],
+            ["24", "Solverminds"],
+            ["25", "Sutherland"],
+            ["26", "TCS (Tata Consultancy Services)"],
+            ["27", "Tech Mahindra"],
+            ["28", "Wells Fargo"],
+            ["29", "Wipro"],
+            ["30", "Wolters Kluwer ELM"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Which companies recruit from MSAJCE AIML department?",
+        "Does TCS recruit from MSAJCE AIML?",
+        "Does Wipro recruit from MSAJCE?",
+        "Has Infosys recruited from MSAJCE AIML?",
+        "Does Capgemini hire from MSAJCE?",
+        "Does Deloitte recruit from MSAJCE AIML?",
+        "Which MNCs hire AIML graduates from MSAJCE?",
+        "Does Accenture hire from MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+        "numbers": ["30+ companies recruiting", "32 companies listed"]
+      },
+      "keywords": [
+        "AIML placement", "TCS", "Wipro", "Infosys", "HCL", "IBM", "Accenture",
+        "Capgemini", "Deloitte", "CISCO", "Oracle", "Wells Fargo", "Tech Mahindra",
+        "Cognizant", "CTS", "L&T Infotech", "Sutherland", "off-campus placement",
+        "recruiting companies", "AIML jobs", "placement companies MSAJCE"
+      ],
+      "overlap_text": "AIML Course Materials 2021 Regulation: MA3354 Discrete Mathematics, CS3351 Digital Principles, AD3391 Database Design, AD3351 Algorithms, AD3301 Data Exploration & Visualization, AL3391 Artificial Intelligence, AD3381 DB Lab, AD3311 AI Lab, GE3361 Professional Development. All resources available at https://www.msajce-edu.in/academics/aids/2021/",
+      "token_count": 360
+    },
+    {
+      "chunk_id": "msajce_aiml_chunk_08",
+      "section": "AIML Department General Contact & Key Resource Links",
+      "source_url": "https://www.msajce-edu.in/aiml.php",
+      "context": "This chunk provides all key links, downloads and general contact information related to the AIML department at MSAJCE.",
+      "text": "AIML Department — Key Resource Links: 2021 Regulation Curriculum: https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf. Autonomous Regulation R24: https://www.msajce-edu.in/uploads/autonomous/AutonomousR24.pdf. AICTE Approval: https://www.msajce-edu.in/uploads/AICTE-APPROVAL.pdf. Anna University Approval: https://www.msajce-edu.in/uploads/AnnaUnivApproval.pdf. Code of Conduct: https://www.msajce-edu.in/uploads/naac/cdeofconduct.pdf. Best Practices: https://www.msajce-edu.in/uploads/naac/bestpractices.pdf. Mandatory Disclosure: http://msajce-edu.in/uploads/MandatoryDisclosure.pdf. Annual Report AY2023-2024: https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf. NAAC: https://www.msajce-edu.in/naac.php. IQAC: https://www.msajce-edu.in/iqac.php. NIRF: https://www.msajce-edu.in/nirf.php. ARIIA Certificate: https://www.msajce-edu.in/uploads/ariia/ARIIA-2021-CERTIFICATE.pdf. ESE Timetable June 2025: https://www.msajce-edu.in/ESETT-June25.php. Exam Results: https://results.msajce-edu.in/. College Management System: https://cims.mastersofterp.in/. Online Admission Form: https://enrollonline.co.in/Registration/Apply/MSAJCE. Online Fee Payment: https://www.feepayr.com/. AICTE Scholarship Schemes: https://www.aicte.gov.in/schemes/students-development-schemes. Graduation Day: https://www.msajce-edu.in/graduationday.php. MSAJCE General Contact: Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103. Phone: +91 99400 04500. Email: msajce.office@gmail.com. Website: www.msajce-edu.in. Grievance: grievance@msajce-edu.in.",
+      "tables": [
+        {
+          "table_title": "AIML Department — Key Resource Links",
+          "headers": ["Resource", "URL"],
+          "rows": [
+            ["2021 Regulation Curriculum", "https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf"],
+            ["Autonomous Regulation R24", "https://www.msajce-edu.in/uploads/autonomous/AutonomousR24.pdf"],
+            ["AICTE Approval", "https://www.msajce-edu.in/uploads/AICTE-APPROVAL.pdf"],
+            ["Anna University Approval", "https://www.msajce-edu.in/uploads/AnnaUnivApproval.pdf"],
+            ["NAAC Page", "https://www.msajce-edu.in/naac.php"],
+            ["IQAC Page", "https://www.msajce-edu.in/iqac.php"],
+            ["NIRF Page", "https://www.msajce-edu.in/nirf.php"],
+            ["ESE Timetable June 2025", "https://www.msajce-edu.in/ESETT-June25.php"],
+            ["Exam Results", "https://results.msajce-edu.in/"],
+            ["Online Admission", "https://enrollonline.co.in/Registration/Apply/MSAJCE"],
+            ["Fee Payment", "https://www.feepayr.com/"],
+            ["AICTE Scholarship", "https://www.aicte.gov.in/schemes/students-development-schemes"],
+            ["Annual Report 2023-24", "https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Where can I find the MSAJCE AIML syllabus?",
+        "How to apply for admission to MSAJCE AIML?",
+        "Where to check MSAJCE exam results?",
+        "What is the MSAJCE AIML exam timetable link?",
+        "How to pay fees online at MSAJCE?",
+        "Where is the MSAJCE AICTE approval document?",
+        "What is the grievance email for MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com", "grievance@msajce-edu.in"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+        "numbers": []
+      },
+      "keywords": [
+        "AIML syllabus", "2021 regulation", "AICTE approval", "Anna University approval",
+        "NAAC", "IQAC", "NIRF", "exam timetable", "exam results", "online admission",
+        "fee payment", "grievance", "annual report", "MSAJCE contact",
+        "99400 04500", "msajce.office@gmail.com"
+      ],
+      "overlap_text": "AIML Placement companies include: TCS, Wipro, Infosys, HCL, IBM, Accenture, Capgemini, Deloitte, CISCO, Oracle, Wells Fargo, Tech Mahindra, Cognizant, L&T Infotech, Sutherland — 30+ companies total recruiting from MSAJCE AIML department.",
+      "token_count": 320
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "title": "msajce_clubssocieties.pdf"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_clubssocieties_chunk_01",
+      "section": "MSAJCE Sports Club",
+      "text": "The MSAJCE Sports Club maintains records of sports and games events attended by students within the college and beyond, submits annual reports on sports/events, conducts sports events, and rewards achievements.",
+      "possible_questions": [
+        "What is the MSAJCE Sports Club?",
+        "What outdoor games are available at MSAJCE?",
+        "What indoor games are available at MSAJCE?",
+        "What is the vision of the MSAJCE Sports Club?",
+        "What is the motto of the MSAJCE Sports Club?",
+        "Does MSAJCE have a cricket team?",
+        "Does MSAJCE have a football team?",
+        "What are the objectives of the MSAJCE Sports Club?",
+        "Does MSAJCE conduct inter-college sports events?"
+      ],
+      "entities": {
+        "persons": [],
+        "locations": [
+          "MSAJCE"
+        ]
+      },
+      "keywords": [
+        "sports club",
+        "cricket",
+        "football",
+        "volleyball",
+        "basketball",
+        "rugby",
+        "badminton",
+        "kho kho",
+        "throughball",
+        "carrom",
+        "table tennis",
+        "chess",
+        "indoor games",
+        "outdoor games",
+        "sportsmanship",
+        "inter-college sports",
+        "MSAJCE sports"
+      ]
+    },
+    {
+      "chunk_id": "msajce_clubssocieties_chunk_02",
+      "section": "MSAJCE Fine Arts Club (ENVISTA CLUB — ARTFUL AESTHETICS)",
+      "text": "The Fine Arts Club aims to encourage student talent, provide skill-based training, and organize events for creative expression in areas like dance, art, singing, and music.",
+      "possible_questions": [
+        "What is the MSAJCE Fine Arts Club?",
+        "What is ENVISTA CLUB at MSAJCE?",
+        "Who is the staff coordinator of the Fine Arts Club?",
+        "Who is the student president of the Fine Arts Club?",
+        "Who is the student vice president of the Fine Arts Club?",
+        "What activities does the Fine Arts Club conduct?",
+        "Does MSAJCE have a dance or music club?",
+        "What is the vision of the MSAJCE Fine Arts Club?",
+        "How many clubs are part of ENVISTA CLUB?"
+      ],
+      "entities": {
+        "persons": [
+          "S. Viswajaa",
+          "Kishore P",
+          "Laksha"
+        ],
+        "locations": [
+          "MSAJCE"
+        ]
+      },
+      "keywords": [
+        "fine arts club",
+        "ENVISTA CLUB",
+        "ARTFUL AESTHETICS",
+        "dance",
+        "singing",
+        "music",
+        "acting",
+        "art club",
+        "S. Viswajaa",
+        "Kishore P",
+        "Laksha",
+        "student president",
+        "staff coordinator",
+        "creative arts",
+        "extracurricular",
+        "MSAJCE arts club",
+        "college fest"
+      ]
+    },
+    {
+      "chunk_id": "msajce_clubssocieties_chunk_03",
+      "section": "MSAJCE Science Club",
+      "text": "The Science Club was established to invite eminent scientists to share their experiences and promote interest in science and technology among students through various activities.",
+      "possible_questions": [
+        "What is the MSAJCE Science Club?",
+        "What activities does the Science Club conduct?",
+        "Who are the prominent figures associated with the Science Club?",
+        "What is the aim of the Science Club?"
+      ],
+      "entities": {
+        "persons": [],
+        "locations": [
+          "MSAJCE"
+        ]
+      },
+      "keywords": [
+        "science club",
+        "scientific knowledge",
+        "experiments",
+        "workshops",
+        "engineering",
+        "mathematics",
+        "science"
+      ]
+    }
+  ]
+}

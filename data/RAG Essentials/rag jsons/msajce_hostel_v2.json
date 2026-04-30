@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Hostel Facilities — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/hostel.php",
+    "sections_covered": [
+      "Hostel Facilities Overview",
+      "Boys Hostel Description",
+      "Girls Hostel Description",
+      "Hostel Rules",
+      "Dining Hall & Mess Timings",
+      "Games & TV Timings",
+      "Study Hours",
+      "Cafeteria",
+      "Canteen Committee"
+    ],
+    "scraped_date": "2026-04-27",
+    "total_chunks": 5,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_hostel",
+    "version": "2.0"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_hostel_chunk_01",
+      "section": "Hostel Facilities Overview — Boys & Girls Comparison",
+      "source_url": "https://www.msajce-edu.in/hostel.php",
+      "context": "This chunk describes the overall hostel facilities at MSAJCE, comparing the Boys Hostel (on-campus) and Girls Hostel (at Sholinganallur) including room counts, capacity, and available amenities.",
+      "text": "MSAJCE provides separate hostel accommodation for boys and girls. The Boys Hostel is located inside the college campus and has 3 blocks with 233 Non-AC rooms and 6 AC rooms, accommodating 2 persons per room with a total capacity of 480 boys. The Girls Hostel is located at Sholinganallur, 5 km from campus, has 1 block with 71 Non-AC rooms, accommodating 3 persons per room with a total capacity of 210 girls. All rooms in both hostels are well furnished with cot, mattress with pillows, bed-spreads, individual cup-boards, chair-table with lamp, fan, water heater, and wall hangers. Additional facilities include WiFi, TV Hall, LCD-TV, indoor games, reading room, and land-line telephone. The Boys Hostel library and computer centre are open till 7:00 PM. The Girls Hostel library and computer facility are open till 9:00 PM.",
+      "tables": [
+        {
+          "table_title": "Boys vs Girls Hostel — Key Facts",
+          "headers": ["Facility", "Boys Hostel", "Girls Hostel"],
+          "rows": [
+            ["Location", "Inside the Campus", "Sholinganallur (5 km from campus)"],
+            ["No. of Blocks", "3", "1"],
+            ["No. of Rooms (Non-AC)", "233", "71"],
+            ["No. of Rooms (AC)", "6", "Nil"],
+            ["Persons per Room", "2", "3"],
+            ["Total Capacity", "480 boys", "210 girls"],
+            ["Room Furnishings", "Cot, Mattress, Pillows, Bed-spreads, Cupboards, Chair-Table, Lamp, Wall Hangers", "Cot, Mattress, Pillows, Bed-spreads, Cupboards, Chair-Table, Lamp, Wall Hangers, Bath & Toilet, Wash Basin, Mirror"],
+            ["Connectivity", "WiFi, Land-line Telephone", "WiFi, Land-line Telephone"],
+            ["Entertainment", "LCD-TV Hall, Indoor Games, Reading Room", "LCD-TV Hall, Indoor Games, Reading Room"],
+            ["Library / Computer Access", "Open till 7:00 PM", "Open till 9:00 PM"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Does MSAJCE have a hostel?",
+        "Where is the MSAJCE girls hostel located?",
+        "How many students can the boys hostel accommodate?",
+        "How many rooms are in the MSAJCE boys hostel?",
+        "Is there AC in the MSAJCE hostel?",
+        "What facilities are available in the MSAJCE hostel?",
+        "How far is the girls hostel from MSAJCE campus?",
+        "Does MSAJCE hostel have WiFi?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": ["Siruseri IT Park", "Sholinganallur"],
+        "numbers": ["480 boys", "210 girls", "233 Non-AC rooms", "6 AC rooms", "71 rooms", "3 blocks", "5 km"]
+      },
+      "keywords": [
+        "hostel", "boys hostel", "girls hostel", "accommodation", "rooms",
+        "blocks", "AC rooms", "Non-AC rooms", "Sholinganallur", "campus hostel",
+        "WiFi", "capacity", "480 boys", "210 girls", "furnished rooms", "LCD TV"
+      ],
+      "overlap_text": "",
+      "token_count": 312
+    },
+    {
+      "chunk_id": "msajce_hostel_chunk_02",
+      "section": "Boys Hostel & Girls Hostel — Detailed Descriptions",
+      "source_url": "https://www.msajce-edu.in/hostel.php",
+      "context": "This chunk provides detailed prose descriptions of both the Boys Hostel and Girls Hostel at MSAJCE, covering amenities, atmosphere, library access timings, and connectivity features.",
+      "text": "Boys Hostel: A home away from home is provided for boys, accommodating 480 boy students. All rooms are well furnished with modern amenities such as cot, mattress with pillows, bed-spreads, individual cup-boards, chair-table with lamp and wall hangers. Each room accommodates only 2 persons. A hygienic canteen is available for dining within the premises. An entertainment hall with LCD-TV, indoor game facilities, reading room with newspapers and popular magazines are available. The Hostel has land-line telephone and Wi-Fi internet access. The College Main Library and the Computer Centre are kept open till 7:00 PM for the benefit of hostellers. Students will feel more at home and concentrate on their studies, facilitated by a serene atmosphere filled with greenery. Girls Hostel: The MSAJCE Girls Hostel is situated at Sholinganallur, 5 KM away from the campus. This hostel is located in a main posh area with safety and security. There are about 71 rooms, accommodating 3 girl students per room. All rooms are furnished with cot, mattress with pillows, bed-spreads, individual cup-boards, chair-table with lamp, and wall hangers. Each room is provided with bath and toilet facilities, wash basin and mirror. Entertainment hall with LCD-TV, indoor games, reading room are available. Library and Computer facility are open till 9:00 PM.",
+      "tables": [],
+      "possible_questions": [
+        "What amenities are in the MSAJCE boys hostel rooms?",
+        "Is there a canteen inside the boys hostel?",
+        "What time does the library close for hostel students?",
+        "Does the girls hostel have attached bathrooms?",
+        "Is the girls hostel safe and secure?",
+        "How many students share a room in the girls hostel?",
+        "Does MSAJCE boys hostel have indoor games?",
+        "Is there a reading room in the MSAJCE hostel?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": ["Sholinganallur", "Siruseri IT Park"],
+        "numbers": ["480 boys", "71 rooms", "3 girls per room", "2 persons per room", "7:00 PM", "9:00 PM", "5 KM"]
+      },
+      "keywords": [
+        "boys hostel amenities", "girls hostel amenities", "LCD TV", "indoor games",
+        "reading room", "WiFi", "library timing", "computer centre", "canteen",
+        "Sholinganallur", "bath toilet", "wash basin", "land-line telephone",
+        "9pm library", "7pm library", "greenery", "serene atmosphere"
+      ],
+      "overlap_text": "MSAJCE provides separate hostel accommodation for boys and girls. The Boys Hostel is located inside the college campus and has 3 blocks with 233 Non-AC rooms and 6 AC rooms, accommodating 2 persons per room with a total capacity of 480 boys. The Girls Hostel is located at Sholinganallur, 5 km from campus.",
+      "token_count": 418
+    },
+    {
+      "chunk_id": "msajce_hostel_chunk_03",
+      "section": "Hostel Rules & Dining Hall — Mess Timings",
+      "source_url": "https://www.msajce-edu.in/hostel.php",
+      "context": "This chunk covers the 8 official hostel rules at MSAJCE, dining hall description, and the complete mess timings table for both working days and holidays.",
+      "text": "Hostel Rules: 1. Students must occupy the rooms allotted to them by the Warden (Principal). 2. Students should refrain from anti-social and undesirable activities such as consumption of alcohol, tobacco, gambling, ragging etc. 3. Students are responsible for the cleanliness of their rooms. 4. No student will be allowed to leave the hostel based on a phone call. 5. Parents are requested to give a list of authorized visitors or local guardians. Visitors not mentioned in the list will not be permitted to visit the students in the hostel. 6. Students will be permitted to go home only if the college is closed continuously for five days or more. 7. Any student wishing to attend a function in the house, marriage or any other ceremony will be permitted to go only if the request is made by the parents to the Principal. 8. Visitors are allowed on holidays from 11:00 A.M. to 6:00 P.M. Dining Hall: Hostel Mess is run by the Management through a private contractor under the guidance of the Principal and Administrative Officer. Both Vegetarian and Non-Vegetarian food is served. Mess charges are collected on an annual basis at the time of admission. Parents and guests are allowed to consume food by paying for them. Separate seating arrangements are made for both boys and girls. Mess Timings — Breakfast (Working Days): 07:00 AM to 08:00 AM; (Holidays): 07:30 AM to 09:00 AM. Lunch (Working Days): 01:00 PM to 01:45 PM; (Holidays): 12:30 PM to 02:00 PM. Dinner (Working Days): 07:00 PM to 08:30 PM; (Holidays): 07:00 PM to 09:00 PM.",
+      "tables": [
+        {
+          "table_title": "Mess Timings — Working Days vs Holidays",
+          "headers": ["Meal", "Working Days", "Holidays"],
+          "rows": [
+            ["Breakfast", "07:00 A.M. to 08:00 A.M.", "07:30 A.M. to 09:00 A.M."],
+            ["Lunch", "01:00 P.M. to 01:45 P.M.", "12:30 P.M. to 02:00 P.M."],
+            ["Dinner", "07:00 P.M. to 08:30 P.M.", "07:00 P.M. to 09:00 P.M."]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What are the hostel rules at MSAJCE?",
+        "What time is breakfast in the MSAJCE hostel?",
+        "What time is lunch served in the hostel?",
+        "What time is dinner in MSAJCE hostel?",
+        "Is non-vegetarian food available in the hostel mess?",
+        "Can parents visit students in the hostel?",
+        "What time are visitors allowed in the hostel?",
+        "When are mess charges collected at MSAJCE?",
+        "Can students leave the hostel on weekends?"
+      ],
+      "entities": {
+        "persons": ["Warden", "Principal", "Administrative Officer"],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["11:00 AM", "6:00 PM", "five days", "07:00 AM", "08:00 AM", "01:00 PM", "07:00 PM", "08:30 PM"]
+      },
+      "keywords": [
+        "hostel rules", "warden", "mess timings", "dining hall", "breakfast timing",
+        "lunch timing", "dinner timing", "working days", "holidays", "vegetarian",
+        "non-vegetarian", "mess charges", "annual basis", "visitors", "anti-ragging",
+        "alcohol prohibited", "authorized visitors", "local guardian"
+      ],
+      "overlap_text": "Boys Hostel: A home away from home is provided for boys, accommodating 480 boy students. All rooms are well furnished with modern amenities. Each room accommodates only 2 persons. A hygienic canteen is available for dining within the premises. The College Main Library and the Computer Centre are kept open till 7:00 PM.",
+      "token_count": 428
+    },
+    {
+      "chunk_id": "msajce_hostel_chunk_04",
+      "section": "Games & TV Timings — Study Hours & Cafeteria Details",
+      "source_url": "https://www.msajce-edu.in/hostel.php",
+      "context": "This chunk covers the scheduled timings for games, TV, and study hours in the MSAJCE hostel, along with complete details about the college cafeteria including capacity, timings, and food served.",
+      "text": "Games and TV Timings: On working days, games and TV are permitted from 04:30 PM to 06:00 PM. On holidays, games and TV are allowed from 09:00 AM to 12:00 PM and again from 01:00 PM to 06:00 PM. Study Hours — Morning: 05:00 AM to 07:00 AM. Study Hours — Evening: 06:00 PM to 07:00 PM and 09:00 PM to 10:30 PM. Cafeteria: MSAJCE has a spacious and hygienic cafeteria that caters to the taste of all students. It can conveniently accommodate 100 students at a time. The cafeteria is provided with modern furniture, electrical cooking and storing facilities which provides delicious breakfast, lunch, snacks and beverages both for students and staff at reasonable rates. Separate space is available for students and staff. It is well maintained with effective service. The cafeteria remains open on all working days from 8:00 AM to 8:00 PM.",
+      "tables": [
+        {
+          "table_title": "Games, TV & Study Hour Schedule",
+          "headers": ["Working Days (Games/TV)", "Holidays (Games/TV)", "Study Hours (Morning)", "Study Hours (Evening)"],
+          "rows": [
+            ["04:30 PM to 06:00 PM", "09:00 AM to 12:00 PM & 01:00 PM to 06:00 PM", "05:00 AM to 07:00 AM", "06:00 PM to 07:00 PM & 09:00 PM to 10:30 PM"]
+          ]
+        },
+        {
+          "table_title": "Cafeteria Key Facts",
+          "headers": ["Feature", "Details"],
+          "rows": [
+            ["Capacity", "100 students at a time"],
+            ["Operating Hours", "All working days — 8:00 AM to 8:00 PM"],
+            ["Food Served", "Breakfast, Lunch, Snacks, Beverages"],
+            ["Available For", "Both Students and Staff"],
+            ["Seating", "Separate space for students and staff"],
+            ["Pricing", "Reasonable rates"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What time can hostel students watch TV?",
+        "What are the study hours in MSAJCE hostel?",
+        "What time does the MSAJCE cafeteria open?",
+        "How many students can the cafeteria accommodate?",
+        "Is the cafeteria open on weekends?",
+        "What food is served in the MSAJCE cafeteria?",
+        "When are games allowed in MSAJCE hostel?",
+        "Is there a separate cafeteria for staff and students?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["100 students", "8:00 AM", "8:00 PM", "04:30 PM", "06:00 PM", "05:00 AM", "07:00 AM", "09:00 PM", "10:30 PM"]
+      },
+      "keywords": [
+        "games timings", "TV timings", "study hours", "cafeteria", "canteen",
+        "100 students", "working days", "8am to 8pm", "breakfast", "snacks",
+        "beverages", "hostel schedule", "morning study", "evening study",
+        "cafeteria capacity", "reasonable rates"
+      ],
+      "overlap_text": "Hostel Rules: Students must occupy the rooms allotted to them by the Warden (Principal). Students should refrain from anti-social and undesirable activities such as consumption of alcohol, tobacco, gambling, ragging etc. Mess Timings — Breakfast (Working Days): 07:00 AM to 08:00 AM. Lunch (Working Days): 01:00 PM to 01:45 PM. Dinner (Working Days): 07:00 PM to 08:30 PM.",
+      "token_count": 375
+    },
+    {
+      "chunk_id": "msajce_hostel_chunk_05",
+      "section": "Canteen Committee — Leadership, Members & Canteen Staff",
+      "source_url": "https://www.msajce-edu.in/hostel.php",
+      "context": "This chunk lists the complete canteen committee at MSAJCE including leadership roles, committee members, and canteen kitchen staff with their designations.",
+      "text": "Canteen Committee: The MSAJCE canteen is overseen by a structured committee. President: Dr. K.S. Srinivasan, Principal. Officer In-charge: Dr. S. Vijayakumar, Chief Organization Officer. Manager: Mr. Arun, Manager. Head of Student Affairs: Dr. K.P. Santhosh Nathan. Committee Members include Dr. S. Vijayakumar, Mr. Arun, and Mr. A. Abdul Gafoor. Canteen Kitchen Staff: Mr. Abdul Rashid (Cook), Mr. Kannan (Assistant Cook), Mr. Shankar (Assistant Cook). The canteen is effectively functioning to satisfy the needs of students and staff with a variety of delicious food items at affordable rates. MSAJCE General Contact: Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103. Phone: +91 99400 04500. Email: msajce.office@gmail.com. Website: www.msajce-edu.in. Grievance Cell: grievance@msajce-edu.in. Online Admission: https://enrollonline.co.in/Registration/Apply/MSAJCE. Online Fee Payment: https://www.feepayr.com/.",
+      "tables": [
+        {
+          "table_title": "Canteen Committee — Leadership",
+          "headers": ["Role", "Name & Designation"],
+          "rows": [
+            ["President", "Dr. K.S. Srinivasan — Principal"],
+            ["Officer In-charge", "Dr. S. Vijayakumar — Chief Organization Officer"],
+            ["Manager", "Mr. Arun — Manager"],
+            ["Head – Student Affairs", "Dr. K.P. Santhosh Nathan"]
+          ]
+        },
+        {
+          "table_title": "Committee Members & Canteen Staff",
+          "headers": ["Committee Members (Staff)", "Canteen Staff"],
+          "rows": [
+            ["Dr. S. Vijayakumar", "Mr. Abdul Rashid — Cook"],
+            ["Mr. Arun", "Mr. Kannan — Assistant Cook"],
+            ["Mr. A. Abdul Gafoor", "Mr. Shankar — Assistant Cook"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Who is the president of the MSAJCE canteen committee?",
+        "Who manages the MSAJCE canteen?",
+        "Who is the officer in-charge of the canteen?",
+        "What is the contact number of MSAJCE?",
+        "What is the email address of MSAJCE?",
+        "Who is the cook at MSAJCE canteen?",
+        "What is the address of MSAJCE?",
+        "How to pay fees online at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. K.S. Srinivasan — Principal",
+          "Dr. S. Vijayakumar — Chief Organization Officer",
+          "Mr. Arun — Manager",
+          "Dr. K.P. Santhosh Nathan — Head Student Affairs",
+          "Mr. A. Abdul Gafoor",
+          "Mr. Abdul Rashid — Cook",
+          "Mr. Kannan — Assistant Cook",
+          "Mr. Shankar — Assistant Cook"
+        ],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com", "grievance@msajce-edu.in"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+        "numbers": []
+      },
+      "keywords": [
+        "canteen committee", "Dr K S Srinivasan", "Dr S Vijayakumar", "Mr Arun",
+        "Dr K P Santhosh Nathan", "Abdul Rashid", "Kannan cook", "Shankar cook",
+        "A Abdul Gafoor", "canteen staff", "hostel contact", "affordable rates",
+        "99400 04500", "msajce.office@gmail.com", "Chennai 603103"
+      ],
+      "overlap_text": "Games and TV on working days: 04:30 PM to 06:00 PM. On holidays: 09:00 AM to 12:00 PM and 01:00 PM to 06:00 PM. Study Hours Morning: 05:00 AM to 07:00 AM. Evening: 06:00 PM to 07:00 PM and 09:00 PM to 10:30 PM. Cafeteria accommodates 100 students, open 8:00 AM to 8:00 PM on all working days.",
+      "token_count": 308
+    }
+  ]
+}

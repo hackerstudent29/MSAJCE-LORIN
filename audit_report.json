@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "What are the hostel rules for boys?",
+    "answer": "1. Students must occupy the rooms allotted to them by the Warden (Principal).  \n2. Students should refrain from anti-social and undesirable activities such as consumption of alcohol, tobacco, gambling, ragging etc.  \n3. Students are responsible for the cleanliness of their rooms.  \n4. No student will be allowed to leave the hostel based on a phone call.  \n5. Parents are requested to give a list of authorized visitors or local guardians. Visitors not mentioned in the list will not be permitted to visit the students in the hostel.  \n6. Students will be permitted to go home only if the college is closed continuously for five days or more.  \n7. Any student wishing to attend a function in the house, marriage or any other ceremony will be permitted to go only if the request is made by the parents to the Principal.  \n8. Visitors are allowed on holidays from 11:00 A.M. to 6:00 P.M. [Source 1]",
+    "latency": 16.34
+  },
+  {
+    "id": 2,
+    "question": "Tell me about the incubation center facilities.",
+    "answer": "The incubation center offers the following facilities:\n\n- Physical office space: approx. 5000 sq.ft.\n- Event halls: 100-seater, 400-seater, 700-seater halls for Entrepreneurship events.\n- Funding opportunities: grants, seed funding, and connections to potential investors.\n- Mentorship programs: guidance from experienced professionals and industry experts.\n- Access to a network of investors, venture capitalists, and angel investors.\n- Workshops, training programs, and events for innovation and entrepreneurial skills.\n- Partnerships with academic institutions, industry bodies, and government agencies. [Source 1]",
+    "latency": 8.45
+  },
+  {
+    "id": 3,
+    "question": "How can I register on the alumni portal?",
+    "answer": "You can register on the alumni portal by filling out the Alumni Registration Form available at: https://forms.gle/CBMdXCDEb9uXVEBv6 [Source 1].",
+    "latency": 9.83
+  },
+  {
+    "id": 4,
+    "question": "What are the transport routes available?",
+    "answer": "System Error: 'choices'",
+    "latency": 4.22
+  },
+  {
+    "id": 5,
+    "question": "Which clubs are active for engineering students?",
+    "answer": "System Error: 'choices'",
+    "latency": 4.19
+  },
+  {
+    "id": 6,
+    "question": "What was the placement record for the last batch?",
+    "answer": "Based on current institutional records, I don't have that specific information.",
+    "latency": 2.76
+  },
+  {
+    "id": 7,
+    "question": "Is there a gym facility in the hostel?",
+    "answer": "Based on current institutional records, I don't have that specific information.",
+    "latency": 2.65
+  },
+  {
+    "id": 8,
+    "question": "How does the incubation center support startups?",
+    "answer": "System Error: 'choices'",
+    "latency": 4.08
+  },
+  {
+    "id": 9,
+    "question": "What are the girls' hostel entry timings?",
+    "answer": "System Error: 'choices'",
+    "latency": 4.11
+  },
+  {
+    "id": 10,
+    "question": "List the bus routes for the Tambaram area.",
+    "answer": "System Error: 'choices'",
+    "latency": 4.68
+  },
+  {
+    "id": 11,
+    "question": "Tell me about the GDSC club.",
+    "answer": "System Error: headers: {'access-control-expose-headers': 'X-Debug-Trace-ID', 'cache-control': 'no-cache, no-store, no-transform, must-revalidate, private, max-age=0', 'content-encoding': 'gzip', 'content-type': 'application/json', 'expires': 'Thu, 01 Jan 1970 00:00:00 GMT', 'pragma': 'no-cache', 'vary': 'Origin,Accept-Encoding', 'x-accel-expires': '0', 'x-debug-trace-id': '972d59134696e02a55fca483034cc5ad', 'date': 'Mon, 27 Apr 2026 15:29:46 GMT', 'x-envoy-upstream-service-time': '2', 'server': 'envoy', 'via': '1.1 google', 'alt-svc': 'h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000', 'transfer-encoding': 'chunked'}, status_code: 429, body: {'id': '7e6fac8f-aaa3-4a3f-bbb2-86d90c6707f4', 'message': \"You are using a Trial key, which is limited to 10 API calls / minute. You can continue to use the Trial key for free or upgrade to a Production key with higher rate limits at 'https://dashboard.cohere.com/api-keys'. Contact us on 'https://discord.gg/XW44jPfYJu' or email us at support@cohere.com with any questions\"}",
+    "latency": 6.84
+  },
+  {
+    "id": 12,
+    "question": "What are the mess timings for breakfast and dinner?",
+    "answer": "Breakfast (Working Days): 07:00 AM to 08:00 AM; (Holidays): 07:30 AM to 09:00 AM. Dinner (Working Days): 07:00 PM to 08:30 PM; (Holidays): 07:00 PM to 09:00 PM. [Source 1]",
+    "latency": 9.28
+  },
+  {
+    "id": 13,
+    "question": "Who are the top recruiters for this year?",
+    "answer": "Top recruiters for 2021-2022 are: Caprisio Securities (10 students), TVS Sundaram Fasteners (10 students), and Veelog Nanoceramic Private Limited (15 students) [Source 1].",
+    "latency": 9.04
+  },
+  {
+    "id": 14,
+    "question": "Can alumni mentor current students?",
+    "answer": "Based on current institutional records, I don't have that specific information.",
+    "latency": 3.62
+  },
+  {
+    "id": 15,
+    "question": "What are the transport fees for this semester?",
+    "answer": "Based on current institutional records, I don't have that specific information.",
+    "latency": 6.99
+  },
+  {
+    "id": 16,
+    "question": "Is there a robotics club in the college?",
+    "answer": "Yes, there is a robotics club in the college. [Source 1]",
+    "latency": 9.21
+  },
+  {
+    "id": 17,
+    "question": "What are the rules for using the common room in the hostel?",
+    "answer": "System Error: 'choices'",
+    "latency": 4.14
+  },
+  {
+    "id": 18,
+    "question": "What is the contact for the placement officer?",
+    "answer": "System Error: 'choices'",
+    "latency": 3.7
+  },
+  {
+    "id": 19,
+    "question": "Are there any coding competitions organized by clubs?",
+    "answer": "System Error: 'choices'",
+    "latency": 3.8
+  },
+  {
+    "id": 20,
+    "question": "How can I apply for transport facilities?",
+    "answer": "Based on current institutional records, I don't have that specific information.",
+    "latency": 2.84
+  }
+]

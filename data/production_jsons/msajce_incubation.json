@@ -1,0 +1,552 @@
+[
+  {
+    "id": "msajce_incubation_000",
+    "text": "Describes the founding objects of SIIF and the services offered by the Incubation Cell including infrastructure, funding, mentorship, and events.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Sathak Innovation and Incubation Foundation (SIIF) - Overview",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_001",
+    "text": "To promote commerce, science, education and research by helping, establishing and incubating startups, individuals, teams with innovative ideas to make prototypes and convert them into products.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Sathak Innovation and Incubation Foundation (SIIF) - Main Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_002",
+    "text": "To promote a culture of innovation-driven entrepreneurship in the fields of science, engineering, technology, commerce, agriculture, health care, medicine, pharmacy, education, arts, sports and other various fields.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Sathak Innovation and Incubation Foundation (SIIF) - Main Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_003",
+    "text": "To establish, help establish and/or manage infrastructure, laboratories, to make and test prototypes/products, pilot plant production facilities, software development facilities, training and human resource development centres, propagate new scientific and technological development and innovation from idea stage to full-scale commercial production or any part of this chain.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Sathak Innovation and Incubation Foundation (SIIF) - Main Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_004",
+    "text": "Physical office space: approx. 5000 sq.ft.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Incubation Cell - Services Offered",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_005",
+    "text": "Event halls: 100-seater, 400-seater, 700-seater halls for Entrepreneurship events.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Incubation Cell - Services Offered",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_006",
+    "text": "Funding opportunities: grants, seed funding, and connections to potential investors.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Incubation Cell - Services Offered",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_007",
+    "text": "Mentorship programs: experienced professionals and industry experts provide guidance.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Incubation Cell - Services Offered",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_008",
+    "text": "Access to network of investors, venture capitalists, and angel investors.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Incubation Cell - Services Offered",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_009",
+    "text": "Workshops, training programs, and events for innovation and entrepreneurial skills.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Incubation Cell - Services Offered",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_010",
+    "text": "Partnerships with academic institutions, industry bodies, and government agencies.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Incubation Cell - Services Offered",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_011",
+    "text": "To cater the needs of student entrepreneurs with innovative ideas thereby introducing a culture of entrepreneurship inside campus which will strengthen our education system and thereby promoting national economic and social growth.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Vision",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_012",
+    "text": "To develop an ecosystem with required infrastructure that can enable students and faculty to innovate and prototype their potential ideas with industrial standards and support from Government, industry and reputed academic institutions around the world and help them to realize their potentials.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Mission",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_013",
+    "text": "To help student groups to prototype their ideas.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Short Term Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_014",
+    "text": "To improve innovation, creative and design thinking among student community.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Short Term Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_015",
+    "text": "Incubation facility for faculty driven start-up and student/alumni start-up.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Short Term Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_016",
+    "text": "Organize FDP, seminars and workshops, distinguish talks for students, faculty and alumni and promote entrepreneurial culture.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Short Term Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_017",
+    "text": "Strengthen institute-industry interaction cell activity and effectively use the outcomes for achieving the mission.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Short Term Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_018",
+    "text": "Associate with DST, CII, MSME and other academic institutions for transferring world class facility for MSAJCE IEDC activities.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Long Term Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_019",
+    "text": "Improve quality of research work among students and to attain patent, which can be commercially used in production.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Long Term Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_020",
+    "text": "Provide a platform for students to develop innovative products with global recognition and generate business opportunities.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Long Term Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_021",
+    "text": "Generate revenues through consultancy work and student start-ups.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Long Term Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_022",
+    "text": "Spread awareness to students and faculty regarding IPR related activities.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Long Term Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_023",
+    "text": "Strategic partnership linkage with various organizations including Entrepreneurship Development Institute of India (EDII) and National Innovation Foundation (NIF).",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "National Innovation and Startup Policy (NISP) - Long Term Objectives",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_024",
+    "text": "Dr. K.S. Srinivasan \u2014 Principal, Mohamed Sathak A.J. College of Engineering (MSAJCE), Chennai - President.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Committee Members",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_025",
+    "text": "Mr. Prakadesh Subramanian \u2014 Strategic Partner, SIIF, Chennai - Incubation Coordinator.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Committee Members",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_026",
+    "text": "Mr. Parvez Aalam \u2014 CEO, Crescent Innovation Incubation Council, Chennai - Incubation Coordinator.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Committee Members",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_027",
+    "text": "Mr. Thiyagaraja Gupta \u2014 Deputy Controller of Patents and Designs - Patent Expert.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Committee Members",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_028",
+    "text": "Ahamed Jamel AMT \u2014 IT Consultant, 4A Technology - Alumni Entrepreneur.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Committee Members",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_029",
+    "text": "Abdur Rahim Salih \u2014 Director & CEO, V5 Innovations Pvt. Ltd - Alumni Entrepreneur.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Committee Members",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_030",
+    "text": "Asim Ali. L \u2014 CMO, Customer Labs - Alumni Entrepreneur.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Committee Members",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_031",
+    "text": "To develop Strategies and governance for Promoting Innovation Entrepreneurship in the institute.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Thrust Areas",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_032",
+    "text": "Creating Innovation Pipeline and Pathways for Entrepreneurs and Startups.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Thrust Areas",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_033",
+    "text": "Building Organizational Capacity, Human Resources and Incentive.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Thrust Areas",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_034",
+    "text": "Collaboration, Co-creation, Business Relationship and Knowledge Exchange.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Thrust Areas",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_035",
+    "text": "Incubation & Pre-Incubation support at SIIF.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Thrust Areas",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_036",
+    "text": "IP Ownership Rights for Technologies Developed at MSAJCE and SIIF.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Thrust Areas",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_037",
+    "text": "Pedagogy & Learning Interventions for Supporting Innovations & Start-ups.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Thrust Areas",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_038",
+    "text": "Entrepreneurial Performance Impact Assessment.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "NISP Thrust Areas",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_039",
+    "text": "Increase in Self-Employment Rate; 5 Established Start-ups per year.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "KPI Monitor & Evaluation - Vision",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_040",
+    "text": "Establish Environment with multiple levels of support for innovation & Entrepreneurship and startups; Students will choose Entrepreneurship as career.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "KPI Monitor & Evaluation - Goal",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_041",
+    "text": "All students & faculty with entrepreneurship orientation; Students & faculty motivated to start entrepreneurial activity; 5 IPR/Innovations developed ideas/year.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "KPI Monitor & Evaluation - Outcomes",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_042",
+    "text": "5 Education/Skill certification programs on Entrepreneurship, IPR, Innovation; 25 workshops, awareness, market outreach events; 12 networking events (Intra and Inter-institutional) organized.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "KPI Monitor & Evaluation - Activities",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_043",
+    "text": "One Day Workshop on Entrepreneurship and Innovation as Career Opportunity - One per Year.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Tentative 5-Year Activity Plan",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_044",
+    "text": "Business Plan Contest - One per Year.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Tentative 5-Year Activity Plan",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_045",
+    "text": "Encourage students to become entrepreneurs by organizing entrepreneurship development programs and making them participate in activities organized by external agencies.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Entrepreneurship Development Cell (EDC) - Roles and Responsibilities",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_046",
+    "text": "Mr. S.V. Vinodh / EEE \u2014 Head EDC & HEC.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Entrepreneurship Development Cell (EDC) - Key Members",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_047",
+    "text": "IIC-MSAJCE has been constituted as per guidelines of the Ministry of Human Resource Development Innovation Cell (MIC).",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Institution Innovation Council (IIC) - About",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_048",
+    "text": "To be a centre of excellence for transforming students into proficient Electrical and Electronics Engineers through sustainable practices.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Institution Innovation Council (IIC) - Vision",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_049",
+    "text": "To create a vibrant local innovation ecosystem.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Institution Innovation Council (IIC) - Major Focus",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_050",
+    "text": "Identify and reward innovations and share success stories.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "Institution Innovation Council (IIC) - Functions",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_051",
+    "text": "Poster Presentation Competition - 30.08.2023; 40 Students, 02 Faculties - EEE Department.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "IIC Events 2022\u20132023",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_052",
+    "text": "Lean Startup & Minimum Viable Product/Business - 23.08.2023; 110 Students, 05 Faculties - CSE Department.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "IIC Events 2022\u20132023",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_053",
+    "text": "Online Sessions on Acceleration \u2014 Early Stage Entrepreneurs - 02.08.2023; Around 150 Students and Faculties - IT Department.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "IIC Events 2022\u20132023",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_incubation_054",
+    "text": "Women's Day Celebration - 10.03.2023; 200 Students, 25 Faculties - WDC Department.",
+    "metadata": {
+      "source": "msajce_incubation.pdf",
+      "topic": "IIC Events 2022\u20132023",
+      "tags": [],
+      "type": "Institutional Fact"
+    }
+  }
+]

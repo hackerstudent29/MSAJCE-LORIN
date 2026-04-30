@@ -1,0 +1,13 @@
+python-telegram-bot
+openai
+python-dotenv
+requests
+flask
+google-generativeai
+pinecone
+langfuse<3.0.0
+langsmith
+bm25s
+PyStemmer
+cohere
+upstash_redis

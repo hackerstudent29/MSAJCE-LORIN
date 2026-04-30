@@ -1,0 +1,475 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Department of Computer Science and Business Systems (CSBS) — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/csbs.php",
+    "sections_covered": [
+      "Department Overview & Key Features",
+      "Programme Details — B.Tech. CSBS",
+      "Vision & Mission",
+      "Programme Educational Objectives (PEOs)",
+      "Program Specific Outcomes (PSOs)",
+      "Programme Outcomes (POs) — All 12",
+      "Employment Growth 2025-2030 — Key Drivers",
+      "Key Job Roles in High Demand",
+      "Sectors with High Employment Potential",
+      "Faculty List",
+      "Laboratories — 6 Labs",
+      "Course Materials — 2021 Regulation (9 Subjects)",
+      "Placement Details & Recruiting Companies"
+    ],
+    "scraped_date": "2026-04-27",
+    "total_chunks": 8,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_csbs",
+    "version": "2.0"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_csbs_chunk_01",
+      "section": "CSBS Department Overview, Key Features & Programme Details",
+      "source_url": "https://www.msajce-edu.in/csbs.php#tab1",
+      "context": "This chunk describes the CSBS department overview including what CSBS is, TCS industry collaboration, key features, programme details with seats and eligibility, and benefits over regular CSE.",
+      "text": "Department of Computer Science and Business Systems (CSBS) — Overview: B.Tech in Computer Science and Business Systems (CSBS) is a specialized undergraduate engineering program designed to blend core computer science education with insights into business systems and management. It is a relatively new course introduced in collaboration with industry leaders like Tata Consultancy Services (TCS) to bridge the gap between traditional computer science education and the dynamic needs of the IT and business world. The programme aims to enhance the relevance of Computer Science to meet future demands of the IT industry in the era of Business 4.0. The curriculum ensures exposure to Analytics, Deep Learning, Machine Learning, Cloud Computing, Business Analytics, Financial Management, Economics, Internet of Things, Design Thinking, along with humanities, value-added science, and interrelated topics. Key Features: 1. Balanced Curriculum — Core CS subjects (Data Structures, Algorithms, OS, DBMS, AI/ML) + Business and Management subjects (Economics, Financial Management, Business Process Management). 2. Industry Collaboration — Designed in partnership with TCS; emphasis on employability and industry readiness. 3. Focus Areas — Problem-solving using computational thinking, Business analytics and decision-making, IT systems for business applications. 4. Soft Skills Training — Communication, Teamwork, Entrepreneurial thinking. Top Recruiters: TCS, Infosys, Wipro, Accenture, CTS. Startups and FinTech companies like FSS. Benefits Over Regular CSE: More interdisciplinary exposure; better suited for roles in tech-enabled business functions; greater alignment with industry expectations in IT services and consulting. Programme Details: Duration: 4 years (Regular) / 3 years (Lateral Entry). Semesters: 8 (Regular) / 6 (Lateral Entry). Total Seats: 30. Government Quota: 15. Management Quota: 15. Eligibility: 10+2 with Physics, Chemistry and Mathematics. Curriculum: 2021 Regulation — https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf. Higher Studies: M.E. / M.Tech. / M.B.A.",
+      "tables": [
+        {
+          "table_title": "B.Tech. CSBS — Programme Summary",
+          "headers": ["Detail", "Value"],
+          "rows": [
+            ["Programme Name", "B.Tech. Computer Science and Business Systems (CSBS)"],
+            ["Industry Collaboration", "Tata Consultancy Services (TCS)"],
+            ["Duration", "4 years (Regular) / 3 years (Lateral Entry)"],
+            ["No. of Semesters", "8 (Regular) / 6 (Lateral Entry)"],
+            ["Total Seats", "30"],
+            ["Government Quota", "15"],
+            ["Management Quota", "15"],
+            ["Eligibility", "10+2 with Physics, Chemistry and Mathematics"],
+            ["Curriculum", "2021 Regulation — https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf"],
+            ["Higher Studies", "M.E. / M.Tech. / M.B.A."],
+            ["Top Recruiters", "TCS, Infosys, Wipro, Accenture, CTS, FSS"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Does MSAJCE offer CSBS course?",
+        "What is CSBS at MSAJCE?",
+        "Is CSBS designed with TCS at MSAJCE?",
+        "What is the seat intake for CSBS at MSAJCE?",
+        "What is the eligibility for CSBS at MSAJCE?",
+        "How is CSBS different from regular CSE?",
+        "What companies recruit from CSBS at MSAJCE?",
+        "What subjects are taught in CSBS at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["30 total seats", "15 government quota", "15 management quota", "4 years", "8 semesters"]
+      },
+      "keywords": [
+        "CSBS", "Computer Science Business Systems", "B.Tech CSBS", "TCS collaboration",
+        "30 seats", "Business Analytics", "Cloud Computing", "Machine Learning",
+        "Financial Management", "Economics", "Design Thinking", "IoT",
+        "industry partnership", "Business 4.0", "interdisciplinary", "lateral entry"
+      ],
+      "overlap_text": "",
+      "token_count": 440
+    },
+    {
+      "chunk_id": "msajce_csbs_chunk_02",
+      "section": "Vision, Mission, PEOs, PSOs & All 12 Programme Outcomes (POs)",
+      "source_url": "https://www.msajce-edu.in/csbs.php#tab2",
+      "context": "This chunk contains the CSBS department Vision, Mission statements, Programme Educational Objectives (PEOs), Program Specific Outcomes (PSOs), and all 12 Programme Outcomes (POs).",
+      "text": "Vision of CSBS Department: To be a centre of excellence for transforming students into proficient IT Professionals with Business Skills through sustainable practices. Mission of CSBS Department: M1. Impart core fundamental knowledge and necessary skills in Information Science and Business through innovative teaching and learning methodology. M2. Inculcate Business thinking, ethics, lifelong learning and creativity needed for industry and society. M3. Cultivate the students with all-round competencies, for career, higher education and self-employability. Programme Educational Objectives (PEOs): PEO1. Graduates will be prepared for analysing, designing, developing and testing software solutions and products with creativity and sustainability. PEO2. Graduates will be skilled in the use of modern tools for critical problem solving and analyzing industrial and societal requirements. PEO3. Graduates will be prepared with managerial and leadership skills for career and starting up own firms. Program Specific Outcomes (PSOs): PSO1. Develop creative solutions by adapting emerging technologies/tools for real time applications of Industry. PSO2. Apply the acquired knowledge to develop software solutions and innovative mobile apps for various automation applications. Programme Outcomes (POs): PO1 Engineering Knowledge: Apply knowledge of mathematics, science, engineering fundamentals and specialization to solve complex engineering problems. PO2 Problem Analysis: Identify, formulate, review research literature and analyze complex engineering problems. PO3 Design/Development of Solutions: Design solutions for complex engineering problems meeting specified needs. PO4 Conduct Investigations: Use research-based knowledge and methods for valid conclusions. PO5 Modern Tool Usage: Create, select and apply appropriate techniques, resources and modern engineering/IT tools. PO6 Engineer and Society: Apply reasoning to assess societal, health, safety, legal and cultural issues. PO7 Environment and Sustainability: Understand impact of engineering solutions in societal and environmental contexts. PO8 Ethics: Apply ethical principles and commit to professional ethics and norms. PO9 Individual and Team Work: Function effectively as individual, member or leader in diverse and multidisciplinary teams. PO10 Communication: Communicate effectively, write reports, design documentation, make presentations. PO11 Project Management and Finance: Demonstrate knowledge of engineering and management principles. PO12 Life-long Learning: Recognize need for and engage in independent and life-long learning in technological change.",
+      "tables": [
+        {
+          "table_title": "PEOs — Programme Educational Objectives",
+          "headers": ["PEO", "Description"],
+          "rows": [
+            ["PEO1", "Graduates prepared for analysing, designing, developing and testing software solutions with creativity and sustainability."],
+            ["PEO2", "Graduates skilled in modern tools for critical problem solving and analysing industrial and societal requirements."],
+            ["PEO3", "Graduates prepared with managerial and leadership skills for career and starting own firms."]
+          ]
+        },
+        {
+          "table_title": "PSOs — Program Specific Outcomes",
+          "headers": ["PSO", "Description"],
+          "rows": [
+            ["PSO1", "Develop creative solutions by adapting emerging technologies/tools for real time industry applications."],
+            ["PSO2", "Apply acquired knowledge to develop software solutions and innovative mobile apps for automation applications."]
+          ]
+        },
+        {
+          "table_title": "Programme Outcomes (POs) — All 12",
+          "headers": ["PO", "Title", "Description"],
+          "rows": [
+            ["PO1", "Engineering Knowledge", "Apply knowledge of mathematics, science, engineering fundamentals and specialization."],
+            ["PO2", "Problem Analysis", "Identify, formulate, review literature and analyze complex engineering problems."],
+            ["PO3", "Design/Development of Solutions", "Design solutions for complex problems with consideration for public health, safety, culture."],
+            ["PO4", "Conduct Investigations", "Use research-based knowledge and methods for valid conclusions."],
+            ["PO5", "Modern Tool Usage", "Create, select and apply appropriate techniques and modern engineering/IT tools."],
+            ["PO6", "Engineer and Society", "Apply reasoning to assess societal, health, safety, legal and cultural issues."],
+            ["PO7", "Environment and Sustainability", "Understand impact of engineering solutions in societal and environmental contexts."],
+            ["PO8", "Ethics", "Apply ethical principles and commit to professional ethics and norms."],
+            ["PO9", "Individual and Team Work", "Function effectively as individual, member or leader in diverse and multidisciplinary teams."],
+            ["PO10", "Communication", "Communicate effectively on complex activities, write reports, design documentation."],
+            ["PO11", "Project Management and Finance", "Demonstrate knowledge of engineering and management principles."],
+            ["PO12", "Life-long Learning", "Recognize need for and engage in independent and life-long learning."]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the vision of the CSBS department at MSAJCE?",
+        "What are the missions of CSBS at MSAJCE?",
+        "What are the PEOs for CSBS at MSAJCE?",
+        "What are the PSOs for CSBS programme?",
+        "What are all 12 programme outcomes for CSBS?",
+        "Does CSBS at MSAJCE teach business thinking?",
+        "What learning outcomes does CSBS provide?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["3 PEOs", "2 PSOs", "12 POs", "3 Missions"]
+      },
+      "keywords": [
+        "CSBS vision", "CSBS mission", "PEO", "PSO", "programme outcomes",
+        "OBE", "business thinking", "engineering knowledge", "ethics",
+        "sustainability", "team work", "life-long learning", "design solutions",
+        "modern tool usage", "project management", "IT professionals with business skills"
+      ],
+      "overlap_text": "CSBS is a B.Tech programme introduced in collaboration with TCS with 30 total seats (15 Government, 15 Management). Duration: 4 years, 8 semesters. Eligibility: 10+2 with Physics, Chemistry and Mathematics. Top recruiters: TCS, Infosys, Wipro, Accenture, CTS, FSS.",
+      "token_count": 480
+    },
+    {
+      "chunk_id": "msajce_csbs_chunk_03",
+      "section": "Employment Growth 2025-2030 — Key Drivers & Digital Transformation",
+      "source_url": "https://www.msajce-edu.in/csbs.php#tab3",
+      "context": "This chunk covers the key employment growth drivers for CSBS professionals in India from 2025-2030 including digital transformation, AI/ML, cloud computing, e-commerce, and FinTech expansion.",
+      "text": "Employment Growth in Computer Science and Business Systems 2025-2030 in India: Significant growth is expected driven by increasing digitalization, rise in e-commerce, adoption of AI, and transformation of business processes. India is positioning itself as a hub for IT services and business innovation. Key Drivers: 1. Digital Transformation of Businesses — Business Process Automation using AI, cloud technologies, and big data. Growth of ERP systems like SAP, Oracle, and Microsoft Dynamics. Shift towards SaaS models requires professionals to implement and integrate solutions. 2. Growth of AI, Machine Learning, and Analytics — Businesses rely on data for decision-making, boosting demand for data analysts, data scientists, and business intelligence professionals. AI and ML used in CRM, predictive analytics, and inventory management. 3. Cloud Computing and Digital Platforms — Cloud migration requires cloud architects, cloud engineers, and business analysts. Multi-cloud strategies using AWS, Azure, and Google Cloud require professionals with both technical and business knowledge. 4. E-Commerce Growth and Customer Experience — India's growing e-commerce market needs professionals for online platforms, AI-powered customer service tools (chatbots, recommendation systems). Supply chain optimization creating demand for data scientists and systems analysts. 5. Enterprise Digitalization — FinTech: Digital payment systems, blockchain, AI-powered financial services. Healthcare: Digital records, telemedicine, AI for diagnostics. Smart Manufacturing: Industry 4.0, IoT, AI in manufacturing bridges gap between technical systems and business operations. 6. Cyber Security and Compliance — Increased cyber threats driving demand for cyber defense, data protection, regulatory compliance roles. Evolving data protection laws (GDPR and India's Personal Data Protection Bill) require risk management and privacy experts.",
+      "tables": [
+        {
+          "table_title": "Key Employment Growth Drivers for CSBS 2025-2030",
+          "headers": ["Driver", "Key Technologies / Areas", "Job Impact"],
+          "rows": [
+            ["Digital Transformation", "SAP, Oracle, Microsoft Dynamics, SaaS, ERP", "ERP Consultants, Business Systems Analysts"],
+            ["AI, ML and Analytics", "Python, Hadoop, Spark, Tableau, Power BI", "Data Scientists, BI Analysts, ML Engineers"],
+            ["Cloud Computing", "AWS, Azure, Google Cloud, Serverless, multi-cloud", "Cloud Architects, Cloud Engineers"],
+            ["E-Commerce Growth", "AI chatbots, recommendation systems, supply chain", "Data Scientists, Systems Analysts"],
+            ["FinTech Expansion", "Blockchain, digital payments, AI financial services", "FinTech Professionals, Blockchain Developers"],
+            ["Healthcare Digitalization", "Digital records, telemedicine, AI diagnostics", "Healthcare IT Professionals"],
+            ["Smart Manufacturing (Industry 4.0)", "IoT, AI, cloud in manufacturing", "IT-Business Bridge Professionals"],
+            ["Cyber Security & Compliance", "Firewalls, encryption, GDPR, Data Protection Bill", "Cyber Security Specialists, Compliance Experts"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What are the job opportunities after CSBS degree?",
+        "Is CSBS in demand in India?",
+        "Does CSBS have scope in FinTech?",
+        "What is the employment growth for CSBS graduates?",
+        "Does CSBS lead to cloud computing jobs?",
+        "What is the scope of CSBS in healthcare?",
+        "Will CSBS graduates get jobs in cybersecurity?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": []
+      },
+      "keywords": [
+        "CSBS employment", "digital transformation", "ERP SAP Oracle", "Business 4.0",
+        "cloud computing", "AWS Azure Google Cloud", "FinTech blockchain",
+        "cybersecurity GDPR", "AI ML analytics", "e-commerce growth India",
+        "smart manufacturing Industry 4.0", "IoT", "SaaS", "multi-cloud",
+        "data protection bill", "business intelligence"
+      ],
+      "overlap_text": "CSBS Vision: To be a centre of excellence for transforming students into proficient IT Professionals with Business Skills. Missions: Impart knowledge in Information Science and Business, Inculcate Business thinking and ethics, Cultivate all-round competencies for career and employability.",
+      "token_count": 460
+    },
+    {
+      "chunk_id": "msajce_csbs_chunk_04",
+      "section": "Key Job Roles in High Demand — CSBS Graduates 2025-2030",
+      "source_url": "https://www.msajce-edu.in/csbs.php#tab3",
+      "context": "This chunk details all key high-demand job roles for CSBS graduates with responsibilities and required skills for each role including Business Systems Analyst, Data Scientist, Cloud Architect, ERP Consultant, AI/ML Engineer, Cyber Security Specialist, BI Analyst, Blockchain Developer, and FinTech Professional.",
+      "text": "Key Roles in High Demand for CSBS Graduates: 1. Business Systems Analyst — Responsibilities: Identify business needs, design systems to meet those needs, ensure technical solutions align with business goals. Skills: Business analysis, Systems design, ERP systems (SAP, Oracle), Agile methodologies, Requirements gathering. 2. Data Scientist / Data Analyst — Responsibilities: Collect, analyze, interpret large datasets to help businesses make informed decisions. Combines business acumen with data analysis and statistical modeling. Skills: Python, R, SQL, Machine Learning, Data Visualization (Tableau, Power BI), Big Data tools (Hadoop, Spark). 3. Cloud Architect / Cloud Engineer — Responsibilities: Design, implement, manage cloud solutions; help businesses transition to or optimize cloud environments. Skills: AWS, Azure, Google Cloud, cloud architecture, Serverless technologies, Cloud security. 4. ERP Consultant / Implementation Specialist — Responsibilities: Implement and customize ERP systems (SAP, Oracle); interact with business stakeholders and technical teams. Skills: ERP software (SAP, Oracle), business process modeling, project management, change management. 5. AI / ML Engineer — Responsibilities: Develop ML algorithms, AI tools and models for demand forecasting, customer service automation, fraud detection. Skills: Python, TensorFlow, Keras, AI algorithms, NLP, data preprocessing. 6. Cyber Security Specialist — Responsibilities: Protect business systems from cyber threats, ensure security of sensitive data. Implement firewalls, intrusion detection systems, encryption. Skills: Network security, ethical hacking, penetration testing, data encryption, GDPR compliance. 7. Business Intelligence Analyst — Responsibilities: Use data analytics to help businesses make strategic decisions, generate reports and dashboards. Skills: SQL, Tableau, Power BI, data mining, business analytics, decision support systems. 8. Blockchain Developer — Responsibilities: Design and develop decentralized applications using blockchain (finance, supply chain, business contracts). Skills: Blockchain platforms (Ethereum, Hyperledger), smart contracts, cryptography, distributed ledgers. 9. FinTech Professional — Responsibilities: Design and optimize financial technologies for payments, lending, insurance, investments. Skills: FinTech platforms, blockchain, digital payments, regulatory compliance, data analytics.",
+      "tables": [
+        {
+          "table_title": "Key CSBS Job Roles — Responsibilities & Skills",
+          "headers": ["Job Role", "Key Skills Required"],
+          "rows": [
+            ["Business Systems Analyst", "Business analysis, ERP (SAP, Oracle), Agile, Requirements gathering"],
+            ["Data Scientist / Data Analyst", "Python, R, SQL, ML, Tableau, Power BI, Hadoop, Spark"],
+            ["Cloud Architect / Cloud Engineer", "AWS, Azure, Google Cloud, cloud architecture, Serverless, cloud security"],
+            ["ERP Consultant / Implementation Specialist", "SAP, Oracle, business process modeling, project management, change management"],
+            ["AI / ML Engineer", "Python, TensorFlow, Keras, AI algorithms, NLP, data preprocessing"],
+            ["Cyber Security Specialist", "Network security, ethical hacking, penetration testing, encryption, GDPR"],
+            ["Business Intelligence Analyst", "SQL, Tableau, Power BI, data mining, business analytics"],
+            ["Blockchain Developer", "Ethereum, Hyperledger, smart contracts, cryptography, distributed ledgers"],
+            ["FinTech Professional", "FinTech platforms, blockchain, digital payments, regulatory compliance"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What jobs can a CSBS graduate get?",
+        "What does a Business Systems Analyst do?",
+        "What skills are needed for an ERP Consultant?",
+        "Can CSBS graduates become data scientists?",
+        "What is the role of a FinTech professional?",
+        "What skills are required for a Blockchain Developer?",
+        "Can CSBS graduates work in cybersecurity?",
+        "What is the role of a Business Intelligence Analyst?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["9 job roles listed"]
+      },
+      "keywords": [
+        "business systems analyst", "data scientist", "cloud architect", "ERP consultant",
+        "SAP Oracle", "AI ML engineer", "cyber security specialist", "BI analyst",
+        "blockchain developer", "FinTech professional", "Tableau Power BI",
+        "Hadoop Spark", "Ethereum Hyperledger", "smart contracts", "NLP",
+        "penetration testing", "GDPR", "TensorFlow Keras"
+      ],
+      "overlap_text": "Key employment drivers for CSBS 2025-2030: Digital Transformation (ERP, SaaS), AI/ML Analytics, Cloud Computing (AWS, Azure, Google Cloud), E-Commerce growth, FinTech expansion (blockchain, digital payments), Healthcare digitalization, Smart Manufacturing (Industry 4.0), Cyber Security (GDPR, Data Protection Bill).",
+      "token_count": 490
+    },
+    {
+      "chunk_id": "msajce_csbs_chunk_05",
+      "section": "Sectors with High Employment Potential & CSBS Faculty List",
+      "source_url": "https://www.msajce-edu.in/csbs.php#tab3",
+      "context": "This chunk covers the sectors with highest employment potential for CSBS graduates and the complete faculty list for the CSBS department with qualifications and specializations.",
+      "text": "Sectors with High Employment Potential for CSBS Graduates: 1. Information Technology (IT Services) — India's IT services sector is a major driver including cloud computing, BPO, and ERP implementation. 2. E-Commerce — Growing e-commerce market demands professionals in data analytics, customer experience design, and supply chain management. 3. Financial Services and FinTech — Rapidly growing sector with opportunities in digital payments, blockchain, insurtech, and investment technology. 4. Healthcare — Healthcare systems adopting digital health, telemedicine, and AI for diagnostics need professionals with expertise in both business systems and IT. 5. Manufacturing and Industry 4.0 — Smart manufacturing revolution driven by IoT, AI, and cloud computing creates roles integrating IT systems with industrial processes. CSBS Department Faculty: Dr. NAGASUBRAMANIAN R — M.E., Ph.D. — Head (PG) — Computer Science Engineering. Dr. SUBRAMANIAN P — M.E., Ph.D. — Head (UG) — Wireless Sensor Networking and Image Processing. Dr. PREMALATHA G — M.E., Ph.D. — Associate Professor — Image Processing and Machine Learning. Mrs. SARANYA V — M.Tech., (Ph.D) — Assistant Professor — IOT and Cloud Computing. Mrs. SASIKALA L — M.E. — Assistant Professor — Computer Science and Engineering. Mrs. KIRUTHIKA S — M.E. — Assistant Professor — Computer Science and Engineering. Mrs. ASRIN MAHMOOTHA A — M.E. — Assistant Professor — Computer Science Engineering. Mr. PRAVEENKUMAR P — M.E. — Assistant Professor — Computer Science Engineering. Mr. RAJAKUMAR B — M.Tech., (Ph.D) — Assistant Professor — IOT, AI, NLP and Image Processing. Mr. RAJASEKAR R — M.E., (Ph.D) — Assistant Professor — IOT, Network Security.",
+      "tables": [
+        {
+          "table_title": "Sectors with High Employment Potential",
+          "headers": ["Sector", "Opportunities"],
+          "rows": [
+            ["Information Technology (IT Services)", "Cloud computing, BPO, ERP implementation"],
+            ["E-Commerce", "Data analytics, customer experience design, supply chain management"],
+            ["Financial Services and FinTech", "Digital payments, blockchain, insurtech, investment technology"],
+            ["Healthcare", "Digital health, telemedicine, AI for diagnostics"],
+            ["Manufacturing and Industry 4.0", "IoT, AI, cloud computing integration with industrial processes"]
+          ]
+        },
+        {
+          "table_title": "CSBS Department Faculty",
+          "headers": ["Name", "Qualification", "Designation", "Area of Specialization"],
+          "rows": [
+            ["Dr. NAGASUBRAMANIAN R", "M.E., Ph.D.", "Head — PG", "Computer Science Engineering"],
+            ["Dr. SUBRAMANIAN P", "M.E., Ph.D.", "Head — UG", "Wireless Sensor Networking and Image Processing"],
+            ["Dr. PREMALATHA G", "M.E., Ph.D.", "Associate Professor", "Image Processing and Machine Learning"],
+            ["Mrs. SARANYA V", "M.Tech., (Ph.D)", "Assistant Professor", "IOT and Cloud Computing"],
+            ["Mrs. SASIKALA L", "M.E.", "Assistant Professor", "Computer Science and Engineering"],
+            ["Mrs. KIRUTHIKA S", "M.E.", "Assistant Professor", "Computer Science and Engineering"],
+            ["Mrs. ASRIN MAHMOOTHA A", "M.E.", "Assistant Professor", "Computer Science Engineering"],
+            ["Mr. PRAVEENKUMAR P", "M.E.", "Assistant Professor", "Computer Science Engineering"],
+            ["Mr. RAJAKUMAR B", "M.Tech., (Ph.D)", "Assistant Professor", "IOT, AI, NLP and Image Processing"],
+            ["Mr. RAJASEKAR R", "M.E., (Ph.D)", "Assistant Professor", "IOT, Network Security"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Who is the HOD of CSBS at MSAJCE?",
+        "Who are the faculty in the CSBS department?",
+        "What sector has the most jobs for CSBS graduates?",
+        "Is FinTech a good sector for CSBS graduates?",
+        "What specialization does Dr. Premalatha have?",
+        "Who teaches IOT in CSBS at MSAJCE?",
+        "How many faculty are there in CSBS department?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. NAGASUBRAMANIAN R — Head PG, M.E. Ph.D., Computer Science Engineering",
+          "Dr. SUBRAMANIAN P — Head UG, M.E. Ph.D., Wireless Sensor Networking and Image Processing",
+          "Dr. PREMALATHA G — Associate Professor, M.E. Ph.D., Image Processing and Machine Learning",
+          "Mrs. SARANYA V — Assistant Professor, M.Tech. (Ph.D), IOT and Cloud Computing",
+          "Mrs. SASIKALA L — Assistant Professor, M.E., Computer Science and Engineering",
+          "Mrs. KIRUTHIKA S — Assistant Professor, M.E., Computer Science and Engineering",
+          "Mrs. ASRIN MAHMOOTHA A — Assistant Professor, M.E., Computer Science Engineering",
+          "Mr. PRAVEENKUMAR P — Assistant Professor, M.E., Computer Science Engineering",
+          "Mr. RAJAKUMAR B — Assistant Professor, M.Tech. (Ph.D), IOT AI NLP Image Processing",
+          "Mr. RAJASEKAR R — Assistant Professor, M.E. (Ph.D), IOT Network Security"
+        ],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["10 faculty members", "5 employment sectors"]
+      },
+      "keywords": [
+        "CSBS HOD", "Dr Nagasubramanian", "Dr Subramanian", "Dr Premalatha",
+        "CSBS faculty", "IOT Cloud Computing", "image processing", "NLP",
+        "network security", "IT services sector", "FinTech sector",
+        "healthcare IT", "Industry 4.0 manufacturing", "e-commerce jobs"
+      ],
+      "overlap_text": "Key CSBS job roles: Business Systems Analyst (SAP, Oracle, Agile), Data Scientist (Python, R, SQL, Tableau), Cloud Architect (AWS, Azure, Google Cloud), ERP Consultant (SAP, Oracle), AI/ML Engineer (TensorFlow, Keras), Cyber Security Specialist (GDPR, penetration testing), Blockchain Developer (Ethereum, Hyperledger), FinTech Professional.",
+      "token_count": 470
+    },
+    {
+      "chunk_id": "msajce_csbs_chunk_06",
+      "section": "CSBS Laboratories — 6 Labs with Resource Links",
+      "source_url": "https://www.msajce-edu.in/csbs.php#tab6",
+      "context": "This chunk lists all 6 laboratories in the CSBS department with course codes, course names, equipment details, virtual lab links, and lab objective PDFs.",
+      "text": "CSBS Department Laboratories — 6 Labs: 1. C Programming Lab — Course: CS8261 C Programming. Lab Objectives: https://www.msajce-edu.in/images/departments/csbs/Obj-c.pdf. Equipment Details: https://www.msajce-edu.in/images/departments/csbs/Equipments-C-Programming.pdf. Course PDF: https://www.msajce-edu.in/images/departments/csbs/CS8261.pdf. Virtual Lab: https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-C-Programming.pdf. 2. Internet Programming Lab — Course: CS8661 Internet Programming. Lab Objectives: https://www.msajce-edu.in/images/departments/csbs/Obj-INTERNET.pdf. Equipment Details: https://www.msajce-edu.in/images/departments/csbs/Equipments-Internet-Programming.pdf. Course PDF: https://www.msajce-edu.in/images/departments/csbs/CS8661.pdf. Virtual Lab: https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-Internet-Programming.pdf. 3. Operating Systems Lab — Course: CS8461 Operating Systems. Lab Objectives: https://www.msajce-edu.in/images/departments/csbs/Obj-os.pdf. Equipment Details: https://www.msajce-edu.in/images/departments/csbs/Equipments-OS.pdf. Virtual Lab: https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-OS.pdf. 4. Object Oriented Analysis and Design Lab — Course: CS8461 OOAD. Lab Objectives: https://www.msajce-edu.in/images/departments/csbs/Obj-ooad.pdf. Equipment Details: https://www.msajce-edu.in/images/departments/csbs/Equipments-OOAD.pdf. Virtual Lab: https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-ooad.pdf. 5. Web Technology Lab — Course: IT8511 Web Technology. Lab Objectives: https://www.msajce-edu.in/images/departments/csbs/Obj-web.pdf. Equipment Details: https://www.msajce-edu.in/images/departments/csbs/Equipments-Web-Technology.pdf. Virtual Lab: https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-Web-Technology.pdf. 6. Networks Lab — Course: CS8581 Networks Lab. Lab Objectives: https://www.msajce-edu.in/images/departments/csbs/Obj-Networks.pdf. Equipment Details: https://www.msajce-edu.in/images/departments/csbs/Equipments-Networks.pdf. Virtual Lab: https://www.msajce-edu.in/images/departments/csbs/Networks.pdf.",
+      "tables": [
+        {
+          "table_title": "CSBS Department — 6 Laboratories",
+          "headers": ["No.", "Lab Name", "Course Code", "Course Name", "Virtual Lab Link"],
+          "rows": [
+            ["1", "C Programming Lab", "CS8261", "C Programming", "https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-C-Programming.pdf"],
+            ["2", "Internet Programming Lab", "CS8661", "Internet Programming", "https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-Internet-Programming.pdf"],
+            ["3", "Operating Systems Lab", "CS8461", "Operating Systems", "https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-OS.pdf"],
+            ["4", "OOAD Lab", "CS8461", "Object Oriented Analysis and Design", "https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-ooad.pdf"],
+            ["5", "Web Technology Lab", "IT8511", "Web Technology", "https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-Web-Technology.pdf"],
+            ["6", "Networks Lab", "CS8581", "Networks Lab", "https://www.msajce-edu.in/images/departments/csbs/Networks.pdf"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What labs are available in CSBS department at MSAJCE?",
+        "Does CSBS have a Networks lab?",
+        "Does CSBS have a Web Technology lab?",
+        "What is the course code for C Programming in CSBS?",
+        "Where can I find CSBS lab virtual resources?",
+        "Does CSBS have an Operating Systems lab?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["6 laboratories"]
+      },
+      "keywords": [
+        "CSBS labs", "C programming lab CS8261", "internet programming lab CS8661",
+        "operating systems lab CS8461", "OOAD lab", "web technology lab IT8511",
+        "networks lab CS8581", "virtual lab CSBS", "lab equipment CSBS"
+      ],
+      "overlap_text": "CSBS Faculty: Dr. Nagasubramanian R (Head PG), Dr. Subramanian P (Head UG), Dr. Premalatha G (Image Processing & ML), Mrs. Saranya V (IOT & Cloud), Mr. Rajakumar B (IOT, AI, NLP), Mr. Rajasekar R (IOT, Network Security). Sectors: IT Services, E-Commerce, FinTech, Healthcare, Industry 4.0.",
+      "token_count": 420
+    },
+    {
+      "chunk_id": "msajce_csbs_chunk_07",
+      "section": "Course Materials — 2021 Regulation (9 Subjects) with All Resource Links",
+      "source_url": "https://www.msajce-edu.in/csbs.php#tab6",
+      "context": "This chunk lists all 9 CSBS subjects under the 2021 Regulation with subject codes, names, and direct download links for lesson plans, question banks, lecture notes, and ICT tools.",
+      "text": "CSBS Department — Course Materials (2021 Regulation): Anna University B.E. 2021 Syllabus. All resources include Lesson Plans (LP), Question Banks (QB), Lecture Notes (LN), and ICT Tools. Base URL: https://www.msajce-edu.in/academics/csbs/2021/. 1. MA3354 — Discrete Mathematics. LP: https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/MA3354-LP.pdf. QB: https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/MA3354-QB.pdf. LN: https://www.msajce-edu.in/academics/csbs/2021/LectureNote/MA3354-LN.pdf. ICT: https://www.msajce-edu.in/academics/csbs/2021/ICTTools/MA3354-ICT.pdf. 2. CS3351 — Digital Principles and Computer Organization. LP: https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/CS3351-LP.pdf. QB: https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/CS3351-QB.pdf. LN: https://www.msajce-edu.in/academics/csbs/2021/LectureNote/CS3351-LN.pdf. ICT: https://www.msajce-edu.in/academics/csbs/2021/ICTTools/CS3351-ICT.pdf. 3. AD3391 — Database Design and Management. LP: https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/AD3391-LP.pdf. QB: https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/AD3391-QB.pdf. LN: https://www.msajce-edu.in/academics/csbs/2021/LectureNote/AD3391-LN.pdf. 4. AD3351 — Design and Analysis of Algorithms. LP: https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/AD3351-LP.pdf. QB: https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/AD3351-QB.pdf. LN: https://www.msajce-edu.in/academics/csbs/2021/LectureNote/AD3351-LN.pdf. 5. AD3301 — Data Exploration and Visualization. LP: https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/AD3301-LP.pdf. QB: https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/AD3301-QB.pdf. LN: https://www.msajce-edu.in/academics/csbs/2021/LectureNote/AD3301-LN.pdf. 6. AL3391 — Artificial Intelligence. LP: https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/AL3391-LP.pdf. QB: https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/AL3391-QB.pdf. LN: https://www.msajce-edu.in/academics/csbs/2021/LectureNote/AL3391-LN.pdf. 7. AD3381 — Database Design and Management Laboratory. LP: https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/AD3381-LP.pdf. QB: https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/AD3381-QB.pdf. LN: https://www.msajce-edu.in/academics/csbs/2021/LectureNote/AD3381-LN.pdf. 8. AD3311 — Artificial Intelligence Laboratory. LP: https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/AD3311-LP.pdf. QB: https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/AD3311-QB.pdf. LN: https://www.msajce-edu.in/academics/csbs/2021/LectureNote/AD3311-LN.pdf. 9. GE3361 — Professional Development. LP: https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/GE3151-LP.pdf. QB: https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/GE3151-QB.pdf. LN: https://www.msajce-edu.in/academics/csbs/2021/LectureNote/GE3151-LN.pdf.",
+      "tables": [
+        {
+          "table_title": "CSBS Course Materials — 2021 Regulation (9 Subjects)",
+          "headers": ["No.", "Code", "Subject Name", "Lesson Plan URL", "Question Bank URL", "Lecture Notes URL"],
+          "rows": [
+            ["1", "MA3354", "Discrete Mathematics", "https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/MA3354-LP.pdf", "https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/MA3354-QB.pdf", "https://www.msajce-edu.in/academics/csbs/2021/LectureNote/MA3354-LN.pdf"],
+            ["2", "CS3351", "Digital Principles and Computer Organization", "https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/CS3351-LP.pdf", "https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/CS3351-QB.pdf", "https://www.msajce-edu.in/academics/csbs/2021/LectureNote/CS3351-LN.pdf"],
+            ["3", "AD3391", "Database Design and Management", "https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/AD3391-LP.pdf", "https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/AD3391-QB.pdf", "https://www.msajce-edu.in/academics/csbs/2021/LectureNote/AD3391-LN.pdf"],
+            ["4", "AD3351", "Design and Analysis of Algorithms", "https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/AD3351-LP.pdf", "https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/AD3351-QB.pdf", "https://www.msajce-edu.in/academics/csbs/2021/LectureNote/AD3351-LN.pdf"],
+            ["5", "AD3301", "Data Exploration and Visualization", "https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/AD3301-LP.pdf", "https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/AD3301-QB.pdf", "https://www.msajce-edu.in/academics/csbs/2021/LectureNote/AD3301-LN.pdf"],
+            ["6", "AL3391", "Artificial Intelligence", "https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/AL3391-LP.pdf", "https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/AL3391-QB.pdf", "https://www.msajce-edu.in/academics/csbs/2021/LectureNote/AL3391-LN.pdf"],
+            ["7", "AD3381", "Database Design and Management Laboratory", "https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/AD3381-LP.pdf", "https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/AD3381-QB.pdf", "https://www.msajce-edu.in/academics/csbs/2021/LectureNote/AD3381-LN.pdf"],
+            ["8", "AD3311", "Artificial Intelligence Laboratory", "https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/AD3311-LP.pdf", "https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/AD3311-QB.pdf", "https://www.msajce-edu.in/academics/csbs/2021/LectureNote/AD3311-LN.pdf"],
+            ["9", "GE3361", "Professional Development", "https://www.msajce-edu.in/academics/csbs/2021/LessonPlan/GE3151-LP.pdf", "https://www.msajce-edu.in/academics/csbs/2021/QuestionBank/GE3151-QB.pdf", "https://www.msajce-edu.in/academics/csbs/2021/LectureNote/GE3151-LN.pdf"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Where can I get CSBS lecture notes at MSAJCE?",
+        "What are the subjects in CSBS 2021 regulation?",
+        "Where is the question bank for CSBS Discrete Mathematics?",
+        "Where to download CSBS lesson plans?",
+        "What is the subject code for Artificial Intelligence in CSBS?",
+        "Does MSAJCE CSBS have Data Exploration and Visualization subject?",
+        "Where to find CSBS course materials online?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["9 subjects", "2021 Regulation"]
+      },
+      "keywords": [
+        "CSBS course materials", "2021 regulation", "MA3354 Discrete Mathematics",
+        "CS3351 Digital Principles", "AD3391 Database Design", "AD3351 Algorithms",
+        "AD3301 Data Visualization", "AL3391 Artificial Intelligence",
+        "AD3381 Database Lab", "AD3311 AI Lab", "GE3361 Professional Development",
+        "lesson plan CSBS", "question bank CSBS", "lecture notes CSBS"
+      ],
+      "overlap_text": "CSBS Labs: C Programming (CS8261), Internet Programming (CS8661), Operating Systems (CS8461), OOAD (CS8461), Web Technology (IT8511), Networks (CS8581). All lab resources at https://www.msajce-edu.in/images/departments/csbs/",
+      "token_count": 455
+    },
+    {
+      "chunk_id": "msajce_csbs_chunk_08",
+      "section": "CSBS Placement Companies, Key Links & General Contact",
+      "source_url": "https://www.msajce-edu.in/csbs.php",
+      "context": "This chunk lists all companies recruiting CSBS graduates from MSAJCE off-campus, key resource download links, and complete general contact information.",
+      "text": "CSBS Placement — Off Campus Placed Students: The following companies have recruited MSAJCE CSBS students through off-campus placements: Accenture, AT&T, BYJU'S, Capgemini, Carbonite, Chella Software, CISCO, City West Water, Cognizant Technology Solutions (CTS), Deloitte Consulting, Dell Technologies, EMIS Health, Future Focus Infotech, HCL Technologies, HP (Hewlett Packard), HTC, IBM, Infosys, Infoview Technologies, Intellect Design Arena, L&T Infotech, Newage Software, Oracle, Saudi Airlines, Solverminds, Sutherland, TCS (Tata Consultancy Services), Tech Mahindra, Wells Fargo, Wipro, Wolters Kluwer ELM. Total: 31 companies. Key Resource Links: 2021 Regulation Curriculum: https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf. Autonomous Regulation R24: https://www.msajce-edu.in/uploads/autonomous/AutonomousR24.pdf. AICTE Approval: https://www.msajce-edu.in/uploads/AICTE-APPROVAL.pdf. Anna University Approval: https://www.msajce-edu.in/uploads/AnnaUnivApproval.pdf. NAAC: https://www.msajce-edu.in/naac.php. IQAC: https://www.msajce-edu.in/iqac.php. NIRF: https://www.msajce-edu.in/nirf.php. ESE Timetable June 2025: https://www.msajce-edu.in/ESETT-June25.php. Exam Results: https://results.msajce-edu.in/. Online Admission: https://enrollonline.co.in/Registration/Apply/MSAJCE. Fee Payment: https://www.feepayr.com/. AICTE Scholarship: https://www.aicte.gov.in/schemes/students-development-schemes. Annual Report 2023-24: https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf. General Contact — MSAJCE: Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103. Phone: +91 99400 04500. Email: msajce.office@gmail.com. Website: www.msajce-edu.in. Grievance: grievance@msajce-edu.in.",
+      "tables": [
+        {
+          "table_title": "Companies Recruiting from MSAJCE CSBS",
+          "headers": ["S.No.", "Company Name"],
+          "rows": [
+            ["1", "Accenture"], ["2", "AT&T"], ["3", "BYJU'S"], ["4", "Capgemini"],
+            ["5", "Carbonite"], ["6", "Chella Software"], ["7", "CISCO"],
+            ["8", "City West Water"], ["9", "Cognizant Technology Solutions (CTS)"],
+            ["10", "Deloitte Consulting"], ["11", "Dell Technologies"], ["12", "EMIS Health"],
+            ["13", "Future Focus Infotech"], ["14", "HCL Technologies"],
+            ["15", "HP (Hewlett Packard)"], ["16", "HTC"], ["17", "IBM"],
+            ["18", "Infosys"], ["19", "Infoview Technologies"],
+            ["20", "Intellect Design Arena"], ["21", "L&T Infotech"],
+            ["22", "Newage Software"], ["23", "Oracle"], ["24", "Saudi Airlines"],
+            ["25", "Solverminds"], ["26", "Sutherland"],
+            ["27", "TCS (Tata Consultancy Services)"], ["28", "Tech Mahindra"],
+            ["29", "Wells Fargo"], ["30", "Wipro"], ["31", "Wolters Kluwer ELM"]
+          ]
+        },
+        {
+          "table_title": "MSAJCE General Contact",
+          "headers": ["Field", "Details"],
+          "rows": [
+            ["Address", "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+            ["Phone", "+91 99400 04500"],
+            ["Email", "msajce.office@gmail.com"],
+            ["Website", "www.msajce-edu.in"],
+            ["Grievance", "grievance@msajce-edu.in"],
+            ["Online Admission", "https://enrollonline.co.in/Registration/Apply/MSAJCE"],
+            ["Fee Payment", "https://www.feepayr.com/"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Which companies recruit from MSAJCE CSBS department?",
+        "Does TCS recruit from MSAJCE CSBS?",
+        "Does Wipro hire CSBS graduates from MSAJCE?",
+        "What is the MSAJCE contact number?",
+        "How to apply for admission to MSAJCE CSBS?",
+        "What is the email address of MSAJCE?",
+        "Where to check MSAJCE exam results?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com", "grievance@msajce-edu.in"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+        "numbers": ["31 companies recruiting"]
+      },
+      "keywords": [
+        "CSBS placement", "TCS", "Wipro", "Infosys", "HCL", "IBM", "Accenture",
+        "Capgemini", "Deloitte", "CISCO", "Oracle", "Wells Fargo", "Tech Mahindra",
+        "CTS Cognizant", "L&T Infotech", "off-campus placement", "MSAJCE contact",
+        "99400 04500", "msajce.office@gmail.com", "online admission", "exam results"
+      ],
+      "overlap_text": "CSBS 2021 Regulation subjects: MA3354 Discrete Mathematics, CS3351 Digital Principles, AD3391 Database Design, AD3351 Algorithms, AD3301 Data Visualization, AL3391 Artificial Intelligence, AD3381 DB Lab, AD3311 AI Lab, GE3361 Professional Development. All at https://www.msajce-edu.in/academics/csbs/2021/",
+      "token_count": 400
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+[
+  {
+    "id": "msajce_admission_000",
+    "text": "Civil Engineering: Total Intake 30, Govt Quota 15, Mgmt Quota 15",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Under Graduate Programmes",
+      "tags": [
+        "Under Graduate",
+        "Civil Engineering"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_001",
+    "text": "Computer Science & Engineering (Permanent Affiliation): Total Intake 60, Govt Quota 30, Mgmt Quota 30",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Under Graduate Programmes",
+      "tags": [
+        "Under Graduate",
+        "Computer Science Engineering"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_002",
+    "text": "Electronics & Communication Engineering: Total Intake 60, Govt Quota 30, Mgmt Quota 30",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Under Graduate Programmes",
+      "tags": [
+        "Under Graduate",
+        "Electronics Communication"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_003",
+    "text": "Electrical & Electronics Engineering: Total Intake 30, Govt Quota 15, Mgmt Quota 15",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Under Graduate Programmes",
+      "tags": [
+        "Under Graduate",
+        "Electrical Electronics"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_004",
+    "text": "Mechanical Engineering (Permanent Affiliation): Total Intake 30, Govt Quota 15, Mgmt Quota 15",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Under Graduate Programmes",
+      "tags": [
+        "Under Graduate",
+        "Mechanical Engineering"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_005",
+    "text": "Information Technology: Total Intake 60, Govt Quota 30, Mgmt Quota 30",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Under Graduate Programmes",
+      "tags": [
+        "Under Graduate",
+        "Information Technology"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_006",
+    "text": "Artificial Intelligence & Data Science: Total Intake 30, Govt Quota 15, Mgmt Quota 15",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Under Graduate Programmes",
+      "tags": [
+        "Under Graduate",
+        "AI Data Science"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_007",
+    "text": "Computer Science & Business Systems: Total Intake 30, Govt Quota 15, Mgmt Quota 15",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Under Graduate Programmes",
+      "tags": [
+        "Under Graduate",
+        "Computer Science Business Systems"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_008",
+    "text": "Computer Science & Engineering (Cyber Security): Total Intake 30, Govt Quota 15, Mgmt Quota 15",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Under Graduate Programmes",
+      "tags": [
+        "Under Graduate",
+        "Cyber Security"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_009",
+    "text": "Artificial Intelligence & Machine Learning: Total Intake 60, Govt Quota 30, Mgmt Quota 30",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Under Graduate Programmes",
+      "tags": [
+        "Under Graduate",
+        "AI Machine Learning"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_010",
+    "text": "Electronics Engineering with VLSI Design & Technology: Total Intake 30, Govt Quota 15, Mgmt Quota 15",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Under Graduate Programmes",
+      "tags": [
+        "Under Graduate",
+        "VLSI Design"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_011",
+    "text": "ECE with Advanced Communication Technology: Total Intake 30, Govt Quota 15, Mgmt Quota 15",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Under Graduate Programmes",
+      "tags": [
+        "Under Graduate",
+        "Advanced Communication"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_012",
+    "text": "M.E. Computer Science & Engineering: Total Intake 9, Govt Quota 3, Mgmt Quota 6",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Post Graduate Programmes",
+      "tags": [
+        "Post Graduate",
+        "M.E. Computer Science"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_013",
+    "text": "M.E. Structural Engineering: Total Intake 18, Govt Quota 6, Mgmt Quota 12",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Post Graduate Programmes",
+      "tags": [
+        "Post Graduate",
+        "M.E. Structural Engineering"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_014",
+    "text": "Ph.D in Mechanical Engineering",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Research Programmes",
+      "tags": [
+        "Research",
+        "Ph.D. Mechanical Engineering"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_015",
+    "text": "TNEA counselling process for B.E/B.Tech for students who completed Plus 2 / Diploma.",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "TNEA Admission",
+      "tags": [
+        "Admission",
+        "TNEA"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_016",
+    "text": "Selection based on qualifying marks (Q) in Mathematics, Physics and Chemistry at Plus Two / Intermediate level. Formula: Q = (Mathematics \u00f7 2) + ((Physics + Chemistry) \u00f7 4)",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Eligibility for Other States",
+      "tags": [
+        "Eligibility",
+        "Other States"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_017",
+    "text": "Minimum average percentage in HSC (Academic) for General: 45.00%, Backward Class: 40.00%, MBC & DNC: 40.00%, SC/SCA/ST: 40.00%",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "HSC Academic Eligibility",
+      "tags": [
+        "Eligibility",
+        "HSC Academic"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_018",
+    "text": "Minimum average percentage in HSC (Vocational) for General: 45.00%, Backward Class: 40.00%, MBC & DNC: 40.00%, SC/SCA/ST: 40.00%",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "HSC Vocational Eligibility",
+      "tags": [
+        "Eligibility",
+        "HSC Vocational"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_019",
+    "text": "Diploma Candidates: Pass in appropriate Diploma branch; B.Sc. Candidates: Recognized B.Sc. degree with core Mathematics.",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Lateral Entry Eligibility",
+      "tags": [
+        "Eligibility",
+        "Lateral Entry"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_020",
+    "text": "M.E. Computer Science & Engineering requires B.E./B.Tech. in relevant branches or M.C.A. or M.Sc. integrated degree.",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Post Graduate Eligibility",
+      "tags": [
+        "Eligibility",
+        "Post Graduate"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_021",
+    "text": "For Ph.D in Mechanical Engineering: M.E. / M.Tech. in relevant Engineering or Technology branch.",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Ph.D Eligibility",
+      "tags": [
+        "Eligibility",
+        "Ph.D."
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_022",
+    "text": "Computer Science & Engineering: Computer Hardware Network Maintenance; Mechanical Engineering: Refrigeration & Air Conditioning Technician.",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Skill Development Courses - Model 1",
+      "tags": [
+        "Skill Development",
+        "Model 1"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_023",
+    "text": "AI \u2014 Machine Learning Developer; Refrigeration & Air Conditioning Technician; Additive Manufacturing Technician.",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Skill Development Courses - Model 2",
+      "tags": [
+        "Skill Development",
+        "Model 2"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_024",
+    "text": "Pragati \u2014 Girl Students: Income < Rs.8 Lakh/yr, Rs. 50,000 funding.",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Scholarships",
+      "tags": [
+        "Scholarship",
+        "Pragati"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_025",
+    "text": "Saksham \u2014 Specially Abled Students: Disability not less than 40%, Income < Rs.8 Lakh/yr, Rs. 50,000 funding.",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Scholarships",
+      "tags": [
+        "Scholarship",
+        "Saksham"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_026",
+    "text": "Merit-cum-Means (Minority Community): 50% marks, Income < Rs.2.5 Lakh/yr, funding is Rs.20,000 + Rs.12,000 for hosteller.",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Scholarships",
+      "tags": [
+        "Scholarship",
+        "Merit-cum-Means"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_027",
+    "text": "Dr. K.S. Srinivasan, Principal: Phone 9150575066, Email principal@msajce-edu.in",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Contact Details",
+      "tags": [
+        "Contact",
+        "Principal"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_028",
+    "text": "Dr. K.P. Santhosh Nathan, Head-Admission: Phone 9840886992, Email ped.santhosh@msajce-edu.in",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Contact Details",
+      "tags": [
+        "Contact",
+        "Head Admission"
+      ],
+      "type": "Institutional Fact"
+    }
+  },
+  {
+    "id": "msajce_admission_029",
+    "text": "Dr. Vamsi Naga Mohan A., Coordinator for Other States: Phone 9043358674/9502687344, Email cse.vamsi@msajce-edu.in",
+    "metadata": {
+      "source": "msajce_admission.pdf",
+      "topic": "Contact Details",
+      "tags": [
+        "Contact",
+        "Other States Coordinator"
+      ],
+      "type": "Institutional Fact"
+    }
+  }
+]
