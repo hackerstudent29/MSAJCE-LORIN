@@ -42,7 +42,18 @@ request_obj = HTTPXRequest(
 )
 
 print("--- RECONSTRUCTING LORIN BOT ---")
-application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
+
+async def post_init(app):
+    admin_ids = os.getenv("ADMIN_IDS", "").split(",")
+    for admin_id in admin_ids:
+        if admin_id.strip():
+            try:
+                await app.bot.send_message(chat_id=admin_id.strip(), text="🚀 Lorin Engine is ONLINE (Hugging Face)")
+                print(f"Startup notification sent to {admin_id}")
+            except Exception as e:
+                print(f"Could not notify admin {admin_id}: {e}")
+
+application = ApplicationBuilder().token(TOKEN).request(request_obj).post_init(post_init).build()
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("MSAJCE Institutional Brain Reconstructed. I am ready.")
