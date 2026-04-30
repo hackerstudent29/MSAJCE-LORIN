@@ -146,15 +146,37 @@ def webhook():
     return "Method Not Allowed", 405
 
 import threading
+import time
 
-@app.route('/')
-def index():
-    return "Lorin RAG Bot is Online", 200
+# --- Dummy Health Check & Keep-Alive Server ---
+class HealthCheckHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Lorin RAG Bot is Online and Healthy")
 
 def run_flask():
-    # Hugging Face uses 7860 by default
     port = int(os.getenv("PORT", 7860))
-    app.run(host='0.0.0.0', port=port)
+    server = HTTPServer(('0.0.0.0', port), HealthCheckHandler)
+    print(f"Health check server running on port {port}")
+    server.serve_forever()
+
+def keep_alive_ping():
+    """Pings the health check every 10 mins to prevent sleep."""
+    port = os.getenv("PORT", "7860")
+    url = f"http://localhost:{port}/"
+    while True:
+        try:
+            requests.get(url, timeout=5)
+            # print("Keep-alive ping sent.")
+        except:
+            pass
+        time.sleep(600) # 10 minutes
+
+# Start background tasks
+threading.Thread(target=run_flask, daemon=True).start()
+threading.Thread(target=keep_alive_ping, daemon=True).start()
+# -----------------------------------------------
 
 if __name__ == '__main__':
     print("Bot is starting in FULL 29-STEP PRODUCTION MODE (Polling)...")
