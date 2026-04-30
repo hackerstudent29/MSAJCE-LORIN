@@ -7,6 +7,8 @@ from flask import Flask, request
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler
 from dotenv import load_dotenv
+from http.server import BaseHTTPRequestHandler, HTTPServer
+import requests
 
 # Ensure engine.py in core can be imported
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -155,7 +157,7 @@ class HealthCheckHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b"Lorin RAG Bot is Online and Healthy")
 
-def run_flask():
+def run_health_server():
     port = int(os.getenv("PORT", 7860))
     server = HTTPServer(('0.0.0.0', port), HealthCheckHandler)
     print(f"Health check server running on port {port}")
@@ -174,14 +176,16 @@ def keep_alive_ping():
         time.sleep(600) # 10 minutes
 
 # Start background tasks
-threading.Thread(target=run_flask, daemon=True).start()
-threading.Thread(target=keep_alive_ping, daemon=True).start()
+# threading.Thread(target=run_health_server, daemon=True).start()
+# threading.Thread(target=keep_alive_ping, daemon=True).start()
 # -----------------------------------------------
 
 if __name__ == '__main__':
     print("Bot is starting in FULL 29-STEP PRODUCTION MODE (Polling)...")
-    # Start Flask for health checks in background
-    threading.Thread(target=run_flask, daemon=True).start()
+    # Start Health Check Server in background
+    threading.Thread(target=run_health_server, daemon=True).start()
+    # Start Keep-Alive Ping in background
+    threading.Thread(target=keep_alive_ping, daemon=True).start()
     # Run Telegram Polling
     application.run_polling(drop_pending_updates=True)
 
