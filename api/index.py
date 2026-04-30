@@ -34,19 +34,20 @@ app = Flask(__name__)
 # Initialize Application with robust timeout settings
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 if not TOKEN:
-    logger.error("CRITICAL: TELEGRAM_BOT_TOKEN is missing from environment!")
-    # We don't exit here to allow the health server to run, but polling will fail.
+    print("CRITICAL: TELEGRAM_BOT_TOKEN is missing from environment!")
+else:
+    print(f"Token found (ending in ...{TOKEN[-4:]})")
 
-# Configure request object with higher timeouts for stability on shared hosting (HF)
+# Configure request object
 request_obj = HTTPXRequest(
     connect_timeout=60.0, 
     read_timeout=60.0, 
-    pool_timeout=60.0,
-    write_timeout=60.0,
     connection_pool_size=10
 )
 
+print("Building Telegram Application...")
 application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
+print("Telegram Application Built Successfully.")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Simple direct start."""
