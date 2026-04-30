@@ -152,7 +152,8 @@ def index():
     return "Lorin RAG Bot is Online", 200
 
 def run_flask():
-    port = int(os.getenv("PORT", 3000))
+    # Hugging Face uses 7860 by default
+    port = int(os.getenv("PORT", 7860))
     app.run(host='0.0.0.0', port=port)
 
 if __name__ == '__main__':
