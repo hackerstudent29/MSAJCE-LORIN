@@ -9,6 +9,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 from dotenv import load_dotenv
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import requests
+from telegram.request import HTTPXRequest
 
 # Ensure engine.py in core can be imported
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -30,9 +31,22 @@ engine = RAGEngine()
 # Flask App
 app = Flask(__name__)
 
-# Initialize Application
+# Initialize Application with robust timeout settings
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-application = ApplicationBuilder().token(TOKEN).build()
+if not TOKEN:
+    logger.error("CRITICAL: TELEGRAM_BOT_TOKEN is missing from environment!")
+    # We don't exit here to allow the health server to run, but polling will fail.
+
+# Configure request object with higher timeouts for stability on shared hosting (HF)
+request_obj = HTTPXRequest(
+    connect_timeout=60.0, 
+    read_timeout=60.0, 
+    pool_timeout=60.0,
+    write_timeout=60.0,
+    connection_pool_size=10
+)
+
+application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Simple direct start."""
