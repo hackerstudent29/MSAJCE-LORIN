@@ -27,6 +27,10 @@ engine = RAGEngine()
 # Flask App for Health Checks
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "<h1>🚀 Lorin Bot is ONLINE</h1><p>The institutional brain is active and connected to Telegram.</p>", 200
+
 @app.route('/health')
 def health():
     return "OK", 200
