@@ -24,7 +24,23 @@ class RAGEngine:
         self.co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
         self.redis = Redis(url=os.getenv("UPSTASH_REDIS_REST_URL"), token=os.getenv("UPSTASH_REDIS_REST_TOKEN"))
         self.stemmer = Stemmer.Stemmer("english")
-        self.bm25 = bm25s.BM25.load(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "bm25_index"), load_corpus=True)
+        
+        # Self-Healing BM25 Index
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        index_dir = os.path.join(base_dir, "data", "bm25_index")
+        chunks_path = os.path.join(base_dir, "data", "unified_chunks.json")
+        
+        if os.path.exists(index_dir) and os.path.exists(os.path.join(index_dir, "params.index.json")):
+            try:
+                self.bm25 = bm25s.BM25.load(index_dir, load_corpus=True)
+                print("Lorin Engine: Loaded existing BM25 index.")
+            except Exception as e:
+                print(f"Lorin Engine: Failed to load index, rebuilding... ({e})")
+                self._rebuild_bm25(chunks_path, index_dir)
+        else:
+            print("Lorin Engine: Index missing, rebuilding from unified_chunks...")
+            self._rebuild_bm25(chunks_path, index_dir)
+
         self.vercel_gateway_url = "https://ai-gateway.vercel.sh/v1"
         self.openrouter_embed_url = "https://openrouter.ai/api/v1/embeddings"
         self.generation_model = "openai/gpt-4o-mini"
@@ -37,8 +53,28 @@ class RAGEngine:
             host=os.getenv("LANGFUSE_BASE_URL")
         )
 
+    def _rebuild_bm25(self, chunks_path, index_dir):
+        """Rebuilds the BM25 index from raw JSON chunks."""
+        with open(chunks_path, 'r', encoding='utf-8') as f:
+            chunks = json.load(f)
+        
+        corpus = [c['text'] for c in chunks]
+        tokens = bm25s.tokenize(corpus, stemmer=self.stemmer)
+        
+        self.bm25 = bm25s.BM25(corpus=chunks)
+        self.bm25.index(tokens)
+        
+        # Create directory if missing
+        os.makedirs(index_dir, exist_ok=True)
+        self.bm25.save(index_dir, corpus=chunks)
+        print(f"Lorin Engine: Successfully rebuilt BM25 index with {len(chunks)} chunks.")
+
     def _safe_vercel_request(self, data, label="Request", span=None):
-        headers = {"Authorization": f"Bearer {os.getenv('VERCEL_AI_KEY_6')}", "Content-Type": "application/json"}
+        gateway_key = os.getenv('VERCEL_AI_KEY_6')
+        if not gateway_key:
+            return "Error: VERCEL_AI_KEY_6 missing from environment."
+            
+        headers = {"Authorization": f"Bearer {gateway_key}", "Content-Type": "application/json"}
         try:
             resp = requests.post(f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=30)
             if resp.status_code == 200:
