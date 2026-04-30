@@ -70,9 +70,22 @@ class RAGEngine:
         print(f"Lorin Engine: Successfully rebuilt BM25 index with {len(chunks)} chunks.")
 
     def _safe_vercel_request(self, data, label="Request", span=None):
-        gateway_key = os.getenv('VERCEL_AI_KEY_6')
+        # Multi-key fallback for resilience on different hosting environments
+        gateway_key = (
+            os.getenv('VERCEL_AI_KEY_6') or 
+            os.getenv('VERCEL_AI_KEY_5') or 
+            os.getenv('AI_GATEWAY_API_KEY')
+        )
+        
+        # Last resort: Scan environment for any Vercel Key
         if not gateway_key:
-            return "Error: VERCEL_AI_KEY_6 missing from environment."
+            for key, value in os.environ.items():
+                if value.startswith("vck_"):
+                    gateway_key = value
+                    break
+
+        if not gateway_key:
+            return "Error: No Vercel AI Key (vck_*) found in environment. Checked: VERCEL_AI_KEY_6, VERCEL_AI_KEY_5, AI_GATEWAY_API_KEY."
             
         headers = {"Authorization": f"Bearer {gateway_key}", "Content-Type": "application/json"}
         try:
