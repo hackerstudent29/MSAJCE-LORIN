@@ -128,16 +128,16 @@ class HealthCheckHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b"OK")
 
-def run_health_server():
-    # Use Flask to serve both health and debug routes
-    app.run(host='0.0.0.0', port=7860, debug=False, use_reloader=False)
-
-if __name__ == '__main__':
-    from threading import Thread
-    # Start Flask in a background thread
-    Thread(target=run_health_server, daemon=True).start()
-    
+def start_bot():
     print("Bot is starting (Async Polling)...")
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    
+    # Start Flask in a background thread
+    from threading import Thread
+    Thread(target=lambda: app.run(host='0.0.0.0', port=7860, use_reloader=False), daemon=True).start()
+    
     application.run_polling()
+
+if __name__ == '__main__':
+    start_bot()
