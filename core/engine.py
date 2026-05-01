@@ -23,7 +23,7 @@ class RAGEngine:
     def __init__(self):
         try:
             pc_key = os.getenv("PINECONE_API_KEY")
-            index_name = os.getenv("PINECONE_INDEX_NAME", "quickstart")
+            index_name = os.getenv("PINECONE_INDEX_NAME", "raglorin")
             if not pc_key: raise ValueError("Missing PINECONE_API_KEY")
             self.pc = Pinecone(api_key=pc_key)
             self.index = self.pc.Index(index_name)
@@ -57,7 +57,7 @@ class RAGEngine:
         
         base_dir = None
         for root in possible_roots:
-            test_path = os.path.join(root, "data", "unified_chunks.json")
+            test_path = os.path.join(root, "data", "unified_master_chunks.json")
             if os.path.exists(test_path):
                 base_dir = root
                 break
@@ -94,13 +94,17 @@ class RAGEngine:
     def _rebuild_bm25(self, chunks_path, index_dir):
         with open(chunks_path, 'r', encoding='utf-8') as f:
             chunks = json.load(f)
+        
+        # New master chunk structure: list of dicts with 'text'
         corpus = [c['text'] for c in chunks]
         tokens = bm25s.tokenize(corpus, stemmer=self.stemmer)
+        
+        # Save corpus with metadata
         self.bm25 = bm25s.BM25(corpus=chunks)
         self.bm25.index(tokens)
         os.makedirs(index_dir, exist_ok=True)
         self.bm25.save(index_dir, corpus=chunks)
-        print(f"Lorin Engine: Successfully rebuilt BM25 index with {len(chunks)} chunks.")
+        print(f"Lorin Engine: Successfully rebuilt BM25 index with {len(chunks)} Diamond Chunks.")
 
     async def _safe_vercel_request(self, data, label="Request", span=None):
         # Scan for any Vercel AI Gateway key (vck_ or vcp_)
@@ -149,7 +153,12 @@ class RAGEngine:
                     query_embedding = e_res.json()["data"][0]["embedding"]
                     
                     p_res = self.index.query(vector=query_embedding, top_k=10, include_metadata=True)
-                    return [{"text": m["metadata"]["text"], "score": m["score"], "chunk_id": m["id"]} for m in p_res["matches"]]
+                    return [{
+                        "text": m["metadata"]["text"], 
+                        "score": m["score"], 
+                        "chunk_id": m["id"],
+                        "entity": m["metadata"].get("entity", "N/A")
+                    } for m in p_res["matches"]]
             except Exception as e:
                 print(f"Lorin Engine: Pinecone Error: {e}")
                 return []
