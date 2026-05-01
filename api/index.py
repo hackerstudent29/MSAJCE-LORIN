@@ -22,7 +22,7 @@ logger = logging.getLogger("lorin_bot")
 # Initialize Flask
 app = Flask(__name__)
 
-# --- Global State for Serverless Persistence ---
+# --- Global State ---
 _engine = None
 _application = None
 
@@ -33,25 +33,6 @@ def get_clean_env(key, default=""):
 
 TOKEN = get_clean_env("TELEGRAM_BOT_TOKEN")
 
-async def get_bot_app():
-    global _application, _engine
-    if _engine is None:
-        _engine = RAGEngine()
-    
-    if _application is None:
-        # High timeouts for initial cold starts
-        request_obj = HTTPXRequest(connect_timeout=30.0, read_timeout=30.0)
-        _application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
-        
-        # Register Handlers
-        _application.add_handler(CommandHandler("start", start))
-        _application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-        
-        await _application.initialize()
-        await _application.start()
-    return _application, _engine
-
-# --- Telegram Bot Handlers ---
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("MSAJCE Institutional Brain Active (Vercel Serverless). I am ready.")
 
@@ -60,7 +41,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_query = update.message.text
     user_id = update.effective_user.id
     
-    # We need the engine here. In serverless, we get it from global state.
     global _engine
     thinking_msg = await update.message.reply_text("🔍 Analyzing institutional database...")
     
@@ -88,74 +68,63 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text=f"Oops! Snag: {str(e)}"
         )
 
+async def get_bot_app():
+    """Serverless-safe application getter."""
+    global _application, _engine
+    
+    if _engine is None:
+        _engine = RAGEngine()
+        
+    if _application is None:
+        request_obj = HTTPXRequest(connect_timeout=30.0, read_timeout=30.0)
+        _application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
+        _application.add_handler(CommandHandler("start", start))
+        _application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+        
+    # Always ensure initialization state if the loop was reset
+    if not _application.initialized:
+        await _application.initialize()
+    
+    return _application
+
 # --- Vercel Routes ---
 @app.route('/')
 def home():
     return "<h1>🚀 Lorin Bot (Vercel Serverless)</h1><p>Bot is active via Webhook.</p>", 200
 
-@app.route('/favicon.ico')
-@app.route('/favicon.png')
-def favicon():
-    return '', 204
-
 @app.route('/debug-vercel')
 def debug_vercel():
-    """Check if environment variables are actually present in Vercel."""
-    vars_to_check = [
-        "TELEGRAM_BOT_TOKEN", "PINECONE_API_KEY", "OPENROUTER_API_KEY", 
-        "COHERE_API_KEY", "UPSTASH_REDIS_REST_URL", "VERCEL_AI_KEY_6"
-    ]
-    status = {}
-    for v in vars_to_check:
-        val = os.getenv(v)
-        if val:
-            status[v] = f"OK ({val[:4]}...{val[-4:]})"
-        else:
-            status[v] = "MISSING ❌"
-    return status, 200
+    vars_to_check = ["TELEGRAM_BOT_TOKEN", "PINECONE_API_KEY", "OPENROUTER_API_KEY"]
+    return {v: "OK" if os.getenv(v) else "MISSING" for v in vars_to_check}, 200
 
 @app.route('/api/webhook', methods=['POST'])
 async def webhook():
-    """Receiver for Telegram updates on Vercel."""
     try:
-        bot_app, _ = await get_bot_app()
+        bot_app = await get_bot_app()
         update = Update.de_json(request.get_json(force=True), bot_app.bot)
         await bot_app.process_update(update)
         return "OK", 200
     except Exception as e:
         logger.error(f"Webhook Error: {e}")
-        return "Error", 500
+        return str(e), 500
 
 @app.route('/set-webhook')
 async def set_webhook():
-    """Utility to set the webhook and check status."""
     host = request.headers.get('Host')
-    if not host: return "Error: Could not determine host.", 400
-    
     webhook_url = f"https://{host}/api/webhook"
     try:
-        bot_app, _ = await get_bot_app()
-        # 1. Set the webhook
-        success = await bot_app.bot.set_webhook(url=webhook_url)
-        
-        # 2. Get Info to verify
+        bot_app = await get_bot_app()
+        # Use a fresh request to set webhook to avoid loop issues
+        await bot_app.bot.set_webhook(url=webhook_url)
         info = await bot_app.bot.get_webhook_info()
-        
         return {
-            "success": success,
-            "url_set_to": webhook_url,
-            "telegram_info": {
-                "url": info.url,
-                "has_custom_certificate": info.has_custom_certificate,
-                "pending_update_count": info.pending_update_count,
-                "last_error_date": info.last_error_date,
-                "last_error_message": info.last_error_message,
-                "max_connections": info.max_connections,
-                "ip_address": info.ip_address
-            }
+            "success": True,
+            "url": info.url,
+            "pending_updates": info.pending_update_count,
+            "last_error": info.last_error_message
         }, 200
     except Exception as e:
-        return f"❌ FAILED: {e}", 500
+        return f"❌ FAILED: {str(e)}", 500
 
-# Required for Vercel
+# Export for Vercel
 app_handler = app
