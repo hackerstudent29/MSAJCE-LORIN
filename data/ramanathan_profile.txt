@@ -35,12 +35,20 @@
 - **Specialization:** Multilingual support with high-fidelity **Tamil** AI responses.
 - **Mission:** Democratizing legal knowledge through intelligent conversational interfaces.
 
-### 4. Formora
+### 4. Zenify
+*High-Performance Music Streaming Ecosystem.*
+- **Architecture:** Modern, edge-ready full-stack system (Frontend, Backend, Mobile).
+- **Core Stack:** Next.js 14 (App Router), Fastify (Node.js), Prisma ORM, PostgreSQL (Supabase).
+- **UX Engineering:** Persistent audio player with queue management, gapless playback, and optimistic UI updates via Zustand and React Query.
+- **Security:** Secure JWT Authentication (Access/Refresh Tokens) with Role-Based Access Control (RBAC).
+- **Mobile:** Detailed Android specification with high-fidelity media integration.
+
+### 5. Formora
 *AI-First SaaS Form Builder.*
 - **Tech:** Turborepo, AI Agents, SaaS Architecture.
 - **Functionality:** Dynamic, intelligent form generation and automated data orchestration.
 
-### 5. Smart Hostel & Institutional Tools
+### 6. Smart Hostel & Institutional Tools
 - **Smart Hostel:** IoT-integrated Hostel Management (Web & Android).
 - **Event Management System:** High-concurrency institutional event booking platform.
 
