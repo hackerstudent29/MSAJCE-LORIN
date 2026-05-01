@@ -181,15 +181,29 @@ class RAGEngine:
         span = trace.span(name="Pre-Processor")
         data = {
             "model": self.generation_model,
-            "messages": [{"role": "system", "content": "Classify intent and rewrite for search. Return JSON: {category, search_query, direct_response}"}, {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}],
-            "max_tokens": 200
+            "messages": [
+                {"role": "system", "content": """Classify intent and rewrite for search. 
+Return JSON: {category, search_query, direct_response}
+
+CATEGORIES: 
+- DEVELOPER: If asking about Ramanathan S, Ram, or the bot's creator/developer.
+- GREETING: Hello, hi, etc.
+- INSTITUTIONAL: Default search.
+
+If category is DEVELOPER, set direct_response to:
+"Ramanathan S (Ram) is the Lead AI Developer and System Architect at MSAJCE. He is a 2nd Year B.Tech IT student (2024-2028 batch) and the visionary creator of the Lorin RAG intelligence system. His expertise includes Artificial Intelligence, RAG, and System Sovereignty. \n\n🔗 [LinkedIn](https://linkedin.com/in/ramanathan-s) | [GitHub](https://github.com/hackerstudent29)"
+"""}, 
+                {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
+            ],
+            "max_tokens": 400
         }
         res = await self._safe_vercel_request(data, label="Pre-Processor", span=span)
         p = self._safe_json_parse(res)
         
-        search_query = p.get("search_query", user_query) if p else user_query
-        if p and p.get("category") == "GREETING" and p.get("direct_response"):
+        if p and p.get("direct_response"):
             return p.get("direct_response")
+            
+        search_query = p.get("search_query", user_query) if p else user_query
 
         # 2. Retrieval
         context_chunks = await self.get_context(search_query, trace)
