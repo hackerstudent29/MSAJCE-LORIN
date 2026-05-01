@@ -12,3 +12,4 @@ bm25s
 PyStemmer
 cohere
 upstash_redis
+fpdf2
