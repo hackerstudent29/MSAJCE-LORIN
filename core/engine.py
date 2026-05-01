@@ -173,7 +173,7 @@ class RAGEngine:
             if not self.bm25: return []
             try:
                 tokens = bm25s.tokenize(query, stemmer=self.stemmer)
-                chunks, _ = self.bm25.retrieve(tokens, k=10)
+                chunks, _ = self.bm25.retrieve(tokens, k=15)
                 return chunks[0].tolist()
             except: return []
 
@@ -249,13 +249,19 @@ Would you like to know more about his major engineering projects like **Zenify**
 
         gen_span = trace.span(name="Generation")
         is_count_only = p.get("is_count_only", False) if p else False
-        system_prompt = f"""You are Lorin, the institutional assistant for MSAJCE.Tone: casual, friendly.
-{"STRICT RULE: The user is asking for a COUNT. PROVIDE SUMMARY ONLY. NO LISTS." if is_count_only else ""}
+        system_prompt = f"""You are Lorin, the institutional assistant for MSAJCE. Tone: casual, friendly.
+
+STRICT RULES FOR LISTS:
+1. If the user asks for a 'list', 'names', or 'all', you MUST search the context for EVERY UNIQUE NAME and list them one by one. 
+2. NEVER summarize a list of people (e.g., don't say 'including X and Y'). List EVERYONE found.
+3. REMOVE DUPLICATES: If you see the same name/batch in different sources, only list it once.
+4. {"STRICT RULE: The user is asking for a COUNT. PROVIDE SUMMARY ONLY. NO LISTS." if is_count_only else ""}
+
 RULES: Bullet points prefix '• ', vertical layout, closing with follow-up.
 CONTEXT: {context_text}
 History: {history if history else "None"}"""
 
-        data_gen = {"model": self.generation_model, "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": f"Query: {user_query}"}], "max_tokens": 800}
+        data_gen = {"model": self.generation_model, "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": f"Query: {user_query}"}], "max_tokens": 1000}
         full_answer = ""
         async for chunk in self._safe_vercel_request(data_gen, label="Generator", span=gen_span, stream=True):
             full_answer += chunk
