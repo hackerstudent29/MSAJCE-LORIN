@@ -25,6 +25,7 @@ app = Flask(__name__)
 # --- Global State ---
 _engine = None
 _application = None
+_app_ready = False
 
 def get_clean_env(key, default=""):
     val = os.getenv(key, default)
@@ -70,7 +71,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def get_bot_app():
     """Serverless-safe application getter."""
-    global _application, _engine
+    global _application, _engine, _app_ready
     
     if _engine is None:
         _engine = RAGEngine()
@@ -82,8 +83,9 @@ async def get_bot_app():
         _application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
         
     # Always ensure initialization state if the loop was reset
-    if not _application.initialized:
+    if not _app_ready:
         await _application.initialize()
+        _app_ready = True
     
     return _application
 
