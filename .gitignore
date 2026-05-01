@@ -9,6 +9,6 @@ scratch/
 brain/
 .DS_Store
 *.log
-data/bm25_index/
+# data/bm25_index/
 backend.env
 DEPLOYMENT_VARS.txt

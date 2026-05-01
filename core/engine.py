@@ -228,7 +228,7 @@ STRICT RULES:
         # IDENTITY FAST-PASS (Master Rule Section 1A)
         # Force-recognize developer AND key student leaders
         lower_q = user_query.lower()
-        if intent == "DEVELOPER" or "yogesh" in lower_q or "saqlin" in lower_q:
+        if self.bm25 and (intent == "DEVELOPER" or "yogesh" in lower_q or "saqlin" in lower_q):
             profile_chunk = next((c for c in self.bm25.corpus if c["chunk_id"] == "PROFILE_RAMANATHAN_S"), None)
             yogesh_chunk = next((c for c in self.bm25.corpus if "msajce_incubation_chunk_06" in c["chunk_id"]), None)
             saqlin_chunk = next((c for c in self.bm25.corpus if "Professional_Societies" in c["metadata"].get("source_file", "")), None)
