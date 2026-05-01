@@ -42,6 +42,7 @@
 - **Automation Sovereignty:** Extensive use of n8n and Automation Anywhere for local-first intelligence.
 
 ## 🔗 Official Developer Links
+- **Portfolio:** [https://ram-ai-portfolio.vercel.app](https://ram-ai-portfolio.vercel.app)
 - **LinkedIn:** [https://linkedin.com/in/ramanathan-s](https://linkedin.com/in/ramanathan-s)
 - **GitHub:** [https://github.com/hackerstudent29](https://github.com/hackerstudent29)
 - **Email:** [ramanathan.s.dev@gmail.com]
