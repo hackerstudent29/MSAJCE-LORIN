@@ -139,6 +139,7 @@ class RAGEngine:
     @traceable(name="Adaptive Retrieval")
     async def get_context(self, query, trace):
         """Parallelized RAG Retrieval (Pinecone + BM25)"""
+        span = trace.span(name="Retrieval", input={"query": query})
         
         async def fetch_pinecone():
             if not self.index: return []
