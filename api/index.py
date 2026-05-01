@@ -94,6 +94,7 @@ def home():
     return "<h1>🚀 Lorin Bot (Vercel Serverless)</h1><p>Bot is active via Webhook.</p>", 200
 
 @app.route('/favicon.ico')
+@app.route('/favicon.png')
 def favicon():
     return '', 204
 
