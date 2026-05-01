@@ -142,7 +142,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         return
 
     await context.bot.send_chat_action(chat_id=update.effective_chat.id, action="typing")
-    thinking_msg = await update.message.reply_text("...")
+    thinking_msg = await update.message.reply_text("🔍 Analyzing...")
     
     try:
         redis_key = f"user_{user_id}_history"
