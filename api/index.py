@@ -53,13 +53,27 @@ def debug():
             status[r] = "MISSING ❌"
     return json.dumps(status, indent=4), 200, {'Content-Type': 'application/json'}
 
+# Pre-flight Connectivity Diagnostic
+def check_network():
+    print("--- NETWORK DIAGNOSTIC START ---")
+    targets = ["https://www.google.com", "https://api.telegram.org"]
+    for url in targets:
+        try:
+            r = requests.get(url, timeout=5)
+            print(f"✅ Reachable: {url} (Status: {r.status_code})")
+        except Exception as e:
+            print(f"❌ Unreachable: {url} (Error: {e})")
+    print("--- NETWORK DIAGNOSTIC END ---")
+
+check_network()
+
 # Initialize Telegram Application with extreme timeouts for HF
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 request_obj = HTTPXRequest(
-    connect_timeout=100.0, 
-    read_timeout=100.0, 
-    write_timeout=100.0,
-    pool_timeout=100.0,
+    connect_timeout=120.0, 
+    read_timeout=120.0, 
+    write_timeout=120.0,
+    pool_timeout=120.0,
     connection_pool_size=20
 )
 
@@ -75,7 +89,15 @@ async def post_init(app):
             except Exception as e:
                 print(f"Could not notify admin {admin_id}: {e}")
 
-application = ApplicationBuilder().token(TOKEN).request(request_obj).post_init(post_init).build()
+application = (
+    ApplicationBuilder()
+    .token(TOKEN)
+    .request(request_obj)
+    .post_init(post_init)
+    .get_updates_read_timeout(100)
+    .get_updates_connect_timeout(100)
+    .build()
+)
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("MSAJCE Institutional Brain Reconstructed. I am ready.")
