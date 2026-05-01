@@ -154,23 +154,23 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         history.append({"q": user_query, "a": answer})
         await _engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
         
-        # Simulated Streaming Effect (Typing word by word)
-        words = answer.split()
-        if len(words) < 15:
+        # Simulated Streaming Effect (Preserving newlines)
+        if len(answer) < 100:
             # Short answers: Just send it
             await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer, parse_mode="Markdown")
         else:
-            # Long answers: Reveal in 5 chunks to simulate typing
+            # Long answers: Reveal in chunks without stripping newlines
             chunk_count = 5
-            chunk_size = len(words) // chunk_count
+            chunk_size = len(answer) // chunk_count
             for i in range(1, chunk_count):
-                partial_text = " ".join(words[:i * chunk_size]) + " ▌"
+                partial_text = answer[:i * chunk_size] + " ▌"
                 try:
+                    # Note: We use plain text for partials to avoid markdown errors on incomplete tags
                     await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=partial_text)
                     await asyncio.sleep(0.4)
                 except: continue
             
-            # Final clean update
+            # Final clean update with full Markdown
             await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer, parse_mode="Markdown")
     except Exception as e:
         logger.error(f"Error: {e}")
