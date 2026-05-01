@@ -173,7 +173,7 @@ class RAGEngine:
             if not self.bm25: return []
             try:
                 tokens = bm25s.tokenize(query, stemmer=self.stemmer)
-                chunks, _ = self.bm25.retrieve(tokens, k=15)
+                chunks, _ = self.bm25.retrieve(tokens, k=10)
                 return chunks[0].tolist()
             except: return []
 
@@ -188,10 +188,10 @@ class RAGEngine:
         if self.co:
             try:
                 loop = asyncio.get_event_loop()
-                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=query, documents=texts, top_n=15))
+                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=query, documents=texts, top_n=10))
                 return [combined[r.index] for r in rerank.results]
             except: pass
-        return combined[:20]
+        return combined[:10]
 
     async def query(self, user_query, history=None):
         full_text = ""
@@ -253,8 +253,9 @@ Would you like to know more about his major engineering projects like **Zenify**
 
 STRICT RULES FOR LISTS:
 1. If the user asks for a 'list', 'names', or 'all', you MUST search the context for EVERY UNIQUE NAME and list them one by one. 
-2. NEVER summarize a list of people (e.g., don't say 'including X and Y'). List EVERYONE found.
-3. REMOVE DUPLICATES: If you see the same name/batch in different sources, only list it once.
+2. You will receive chunks for many DIFFERENT students. NEVER stop after listing one or two. List EVERY person found in the data.
+3. NEVER summarize a list of people (e.g., don't say 'including X and Y'). List EVERYONE found.
+4. REMOVE DUPLICATES: If you see the same name/batch in different sources, only list it once.
 4. {"STRICT RULE: The user is asking for a COUNT. PROVIDE SUMMARY ONLY. NO LISTS." if is_count_only else ""}
 
 RULES: Bullet points prefix '• ', vertical layout, closing with follow-up.
