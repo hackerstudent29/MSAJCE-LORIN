@@ -178,8 +178,21 @@ History: {history if history else "None"}"""
         trace.update(output=full_answer)
 
     async def _safe_vercel_request(self, data, stream=False):
-        gateway_key = os.getenv('AI_GATEWAY_API_KEY')
-        if not gateway_key: yield "Error: No API Key"; return
+        # Master Rule: Robust Key Detection (Restored)
+        gateway_key = (os.getenv('VERCEL_AI_KEY_6') or 
+                       os.getenv('VERCEL_AI_KEY_5') or 
+                       os.getenv('AI_GATEWAY_API_KEY'))
+        
+        if not gateway_key:
+            # Emergency Scan for any vck_/vcp_ keys
+            for key, value in os.environ.items():
+                if value and (value.startswith("vck_") or value.startswith("vcp_")):
+                    gateway_key = value
+                    break
+        
+        if not gateway_key: 
+            yield "Error: No API Key found in environment."; return
+        
         if stream: data["stream"] = True
         headers = {"Authorization": f"Bearer {gateway_key}", "Content-Type": "application/json"}
         async with httpx.AsyncClient() as client:
