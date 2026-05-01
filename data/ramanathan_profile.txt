@@ -15,6 +15,14 @@
 - **Role:** Lead Architect.
 - **Impact:** Transforming raw PDFs and institutional records into a proactive, request-driven intelligence delivery system.
 
+### 🚀 Major Engineering Projects
+- **Zenify:** High-performance music streaming ecosystem (Next.js 14, Fastify, Prisma, Supabase).
+- **Zenpay:** Production-grade Payment Gateway Platform (Monorepo, Vite, React, ESBuild).
+- **Lorin RAG:** Advanced institutional intelligence engine with precision retrieval.
+- **Pocket Lawyer:** AI legal-tech platform (Next.js 16, Google GenAI) with Multilingual/Tamil support.
+- **Formora:** AI-driven SaaS form builder (Turborepo, Next.js, TypeScript).
+- **Smart Hostel & Event Systems:** Enterprise utility platforms with real-time analytics (Supabase, Recharts).
+
 ### 2. Zenpay
 *High-Performance Fintech Infrastructure.*
 - **Architecture:** Enterprise-grade Monorepo.
