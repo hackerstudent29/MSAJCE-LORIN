@@ -43,29 +43,47 @@ async def check_security(user_id, text, engine):
     quota_now = datetime.now() - timedelta(hours=4, minutes=30)
     quota_day_str = quota_now.strftime('%Y-%m-%d')
     
+    # 1. Check if currently blocked
     block_key = f"user_{user_id}_blocked_until"
     blocked_until = await engine.redis.get(block_key)
     if blocked_until and int(blocked_until) > now_ts:
         return False, "BLOCKED", (int(blocked_until) - now_ts) // 60 + 1
 
+    # 2. Daily Quota (30 / day)
     day_key = f"user_{user_id}_daily_count_{quota_day_str}"
     daily_count = await engine.redis.get(day_key)
     if daily_count and int(daily_count) >= 30:
         return False, "DAILY_LIMIT", 30
 
+    # 3. Minute Quota (6 / min)
     min_key = f"user_{user_id}_min_count_{now_ts // 60}"
     min_count = await engine.redis.get(min_key)
     if min_count and int(min_count) >= 6:
         return False, "MINUTE_LIMIT", 6
 
+    # 4. Abuse Check
     is_abusive = any(re.search(rf"\b{word}\b", text, re.I) for word in ABUSIVE_WORDS)
+    
+    # 5. Spam / Duplicate Check (Allow up to 3 identical msgs)
     last_msg_key = f"user_{user_id}_last_msg"
+    dup_count_key = f"user_{user_id}_dup_count"
     last_data = await engine.redis.get(last_msg_key)
+    
     is_spam = False
     if last_data:
         last_data = json.loads(last_data)
-        if now_ts - last_data['time'] < 2 or text == last_data['text']: is_spam = True
+        # Rate limit: Faster than 2s is always spam
+        if now_ts - last_data['time'] < 2: 
+            is_spam = True
+        # Duplicate check: Only spam on the 3rd identical message
+        elif text == last_data['text']:
+            dups = await engine.redis.incr(dup_count_key)
+            if dups >= 3: is_spam = True
+        else:
+            # New text, reset duplicate counter
+            await engine.redis.set(dup_count_key, 0)
 
+    # 6. Handle Strikes
     if is_abusive or is_spam:
         strike_key = f"user_{user_id}_strikes"
         strikes = await engine.redis.incr(strike_key)
@@ -78,13 +96,15 @@ async def check_security(user_id, text, engine):
             return False, "BANNED", duration
         return False, "WARNING", strikes
 
+    # 7. Update States
     await engine.redis.incr(day_key); await engine.redis.expire(day_key, 90000)
     await engine.redis.incr(min_key); await engine.redis.expire(min_key, 60)
     await engine.redis.set(last_msg_key, json.dumps({"time": now_ts, "text": text}), ex=300)
+    
     return True, None, 0
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("👋 MSAJCE Lorin Active. I'm ready for your questions!")
+    await update.message.reply_text("👋 MSAJCE Lorin Active. I'm ready!")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.message or not update.message.text: return
@@ -114,13 +134,11 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer)
     except Exception as e:
         logger.error(f"Error: {e}")
-        await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy. Please try again.")
+        await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy. Try again.")
 
 async def create_app():
-    """Create a FRESH application for every request to avoid 'Closed Loop' errors."""
     global _engine
     if _engine is None: _engine = RAGEngine()
-    
     request_obj = HTTPXRequest(connect_timeout=30.0, read_timeout=30.0)
     application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
     application.add_handler(CommandHandler("start", start))
@@ -134,12 +152,9 @@ def home(): return "<h1>🚀 Lorin Bot Active</h1>", 200
 @app.route('/api/webhook', methods=['POST'])
 async def webhook():
     try:
-        # 1. Create fresh app for this request
         application = await create_app()
-        # 2. Process update
         update = Update.de_json(request.get_json(force=True), application.bot)
         await application.process_update(update)
-        # 3. Shutdown app cleanly (to free the loop)
         await application.shutdown()
         return "OK", 200
     except Exception as e:
