@@ -163,10 +163,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         async for chunk in _engine.query_stream(user_query, history=history_str):
             full_response += chunk
             
-            # High-Speed Character drip-feed logic
+            # Warp Speed Character drip-feed logic
             while len(displayed_text) < len(full_response):
-                # Add 2 characters at a time for high-velocity typing (approx 40 chars/sec)
-                displayed_text = full_response[:len(displayed_text) + 2]
+                # Add 5 characters at a time for 'Warp Speed' (approx 125 chars/sec)
+                displayed_text = full_response[:len(displayed_text) + 5]
                 
                 # Update Telegram every ~0.25s
                 if time.time() - last_update_time > 0.25:
@@ -180,12 +180,12 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     except: 
                         await asyncio.sleep(0.1)
                 
-                # Faster micro-sleep (0.05s) for snappy delivery
-                await asyncio.sleep(0.05)
+                # Rapid micro-sleep (0.04s)
+                await asyncio.sleep(0.04)
 
-        # Final Drain: Quickly flush remaining text
+        # Warp Drain: Instantly flush remaining text
         while len(displayed_text) < len(full_response):
-            displayed_text = full_response[:len(displayed_text) + 3] # Snappier drain
+            displayed_text = full_response[:len(displayed_text) + 10] 
             if time.time() - last_update_time > 0.25:
                 try:
                     await context.bot.edit_message_text(
@@ -195,7 +195,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     )
                     last_update_time = time.time()
                 except: pass
-            await asyncio.sleep(0.03)
+            await asyncio.sleep(0.02)
 
         # Final Update (Perfect Markdown & No Cursor)
         try:

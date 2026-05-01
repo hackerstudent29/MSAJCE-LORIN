@@ -165,7 +165,7 @@ class RAGEngine:
                 async with httpx.AsyncClient() as client:
                     e_res = await client.post(self.openrouter_embed_url, headers={"Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}"}, json={"model": self.embedding_model, "input": query}, timeout=10.0)
                     query_embedding = e_res.json()["data"][0]["embedding"]
-                    p_res = self.index.query(vector=query_embedding, top_k=10, include_metadata=True)
+                    p_res = self.index.query(vector=query_embedding, top_k=20, include_metadata=True)
                     return [{"text": m["metadata"]["text"], "score": m["score"], "chunk_id": m["id"], "entity": m["metadata"].get("entity", "N/A")} for m in p_res["matches"]]
             except: return []
 
@@ -188,10 +188,10 @@ class RAGEngine:
         if self.co:
             try:
                 loop = asyncio.get_event_loop()
-                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=query, documents=texts, top_n=12))
+                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=query, documents=texts, top_n=15))
                 return [combined[r.index] for r in rerank.results]
             except: pass
-        return combined[:10]
+        return combined[:20]
 
     async def query(self, user_query, history=None):
         full_text = ""
