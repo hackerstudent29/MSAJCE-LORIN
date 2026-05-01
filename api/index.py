@@ -15,6 +15,7 @@ from telegram.request import HTTPXRequest
 # Ensure engine.py in core can be imported
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from core.engine import RAGEngine
+from scripts.sunday_intelligence import SundayIntelligence
 
 load_dotenv()
 
@@ -221,5 +222,17 @@ async def set_webhook():
         await application.shutdown()
         return {"success": True, "url": url}, 200
     except Exception as e: return str(e), 500
+
+@app.route('/api/sunday-report')
+async def trigger_sunday_report():
+    """Vercel Cron endpoint for Strategic Intelligence"""
+    try:
+        logger.info("Vercel Cron: Starting Sunday Strategic Audit...")
+        audit = SundayIntelligence()
+        await audit.run()
+        return {"status": "SUCCESS", "message": "Strategic Audit Dispatched"}, 200
+    except Exception as e:
+        logger.error(f"Vercel Cron Error: {e}")
+        return {"status": "ERROR", "message": str(e)}, 500
 
 app_handler = app
