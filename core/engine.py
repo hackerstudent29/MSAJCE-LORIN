@@ -213,37 +213,27 @@ class RAGEngine:
             "model": self.generation_model,
             "messages": [
                 {"role": "system", "content": """Classify intent and rewrite for search. 
-Return JSON: {category, search_query, direct_response}
+Return JSON: {category, search_query, direct_response, is_count_only}
 
 CATEGORIES: 
 - DEVELOPER: ONLY if asking about Ramanathan S, Ram, or the specific bot creator/developer.
 - GREETING: Hello, hi, etc.
-- INSTITUTIONAL: Default for all college, faculty, department, bus, or admission questions. Search for names like 'Weslin' or 'Kannan' as 'Dr. Weslin D' or 'Dr. Kannan S'.
+- INSTITUTIONAL: Default for all college, faculty, department, bus, or admission questions. 
+
+INTENT DETECTION:
+- If user asks 'how many', 'total', 'count', or 'number of', set is_count_only: true.
 
 SEARCH REWRITING:
-1. TYPO-PROOFING: If a name looks misspelled (e.g. 'Wesling' for 'Weslin'), use the CORRECTED version.
-2. ENTITY FOCUS: Always include the full name and department (e.g. 'Dr. Weslin D MSAJCE Associate Professor') in the search_query.
-3. RE-BALANCE: Treat faculty records as high-priority. If a name is mentioned, search for their specific role and patents.
+1. TYPO-PROOFING: Correct names (e.g. 'Wesling' -> 'Dr. Weslin D').
+2. TEMPORAL NEUTRALITY: Do NOT include '2019 to 2022' or specific dates in search_query unless the user specifically asked for them. Focus on the ENTITY (e.g., 'alumni scholarship count').
 
 If category is DEVELOPER, set direct_response to:
 "**Ramanathan S (Ram)** is the Lead AI Developer and System Architect at MSAJCE. He is a visionary 2nd-year B.Tech IT student specializing in high-performance AI systems and Fintech architecture.
 
-*Connect with him here:*
-
 • [LinkedIn](https://linkedin.com/in/ramanathan-s)
 • [Portfolio](https://ram-ai-portfolio.vercel.app)
-• [Source Code (GitHub)](https://github.com/hackerstudent29/MSAJCE-LORIN.git)
-• Email: ramanathanb86@gmail.com
 
-*Major Engineering Projects:*
-
-• **Zenify**: High-performance music streaming (Next.js 14).
-• **Zenpay**: Production-grade Payment Gateway (Monorepo).
-• **Lorin RAG**: Institutional intelligence engine.
-• **Pocket Lawyer**: AI legal-assistant (Next.js 16).
-• **Formora**: AI-driven SaaS form builder.
-
-Is there anything specific you would like to know about Ram's technical expertise or architecture designs?"
+Is there anything specific you would like to know about Ram's technical expertise?"
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ],
@@ -263,20 +253,21 @@ Is there anything specific you would like to know about Ram's technical expertis
 
         # 3. Generation
         gen_span = trace.span(name="Generation")
+        is_count_only = p.get("is_count_only", False) if p else False
+        
         # 4. Generate Final Answer
         system_prompt = f"""You are Lorin, the institutional assistant for MSAJCE (Mohamed Sathak A.J. College of Engineering).
 Your tone is casual, friendly, and helpful (B1 level English). Use proper punctuation and always end with a full stop (.).
 
+{"STRICT RULE: The user is asking for a COUNT or TOTAL. You MUST ONLY provide the numerical summary and a brief explanation. NEVER provide a list of names or items." if is_count_only else ""}
+
 RULES:
-1. SUMMARIZATION: If the data contains a list (like students, faculty, or achievements), you MUST provide a strategic summary first (e.g., 'Total of [X] students from [Y] departments across [Z] years received this...').
-2. BULLET POINTS: Use the '• ' (center dot and a space) as the bullet point prefix.
-3. VERTICAL LAYOUT: Use a single newline (`\n`) between bullet points. Do NOT use double newlines unless starting a new section.
-4. CLOSING: Always end every response with a friendly follow-up question. 
-   - This question MUST be contextually related to the user's last query.
-   - If no specific follow-up topic is clear, use: "Is there anything else I can help you with today?"
-4. NO REDIRECTS: Never tell the user to 'check the website' if the information is available.
-5. IDENTITY: If asked about 'Ramanathan', 'Ram', or 'the developer', speak in the THIRD PERSON (e.g., 'Ramanathan is...').
-6. If you truly don't know the answer, say "I'm sorry, I don't have that specific info in my records yet. Is there anything else I can help you with?"
+1. INTENT PRECISION: If the user asks 'How many', 'Totally', or 'Total count', you MUST provide ONLY the summary/number. NEVER provide a list of names/items unless the user explicitly asks for a 'list', 'names', or 'show them'.
+2. SUMMARIZATION: For broad questions, provide a strategic summary (e.g., 'A total of [X] students...'). Do NOT start every sentence with 'From 2019 to 2022' unless specifically relevant to the query.
+3. BULLET POINTS: Use the '• ' (center dot and a space) as the bullet point prefix.
+4. VERTICAL LAYOUT: Use a single newline (`\n`) between bullet points.
+5. CLOSING: Always end with a context-related follow-up question.
+6. NO UNKNOWN HALLUCINATIONS: If you don't know, just say "I'm sorry, I don't have that specific count in my current records. Is there anything else I can help you with?"
 
 CONTEXT:
 {context_text}
