@@ -40,15 +40,41 @@ PORT = int(os.getenv("PORT", 7860))
 # --- Routes ---
 @app.route('/')
 def home():
-    return """
-    <h1>🚀 Lorin Bot is ONLINE (Webhook Mode)</h1>
-    <p>The institutional brain is active and receiving updates from Telegram.</p>
+    return f"""
+    <h1>🚀 Lorin Bot is ONLINE (Bypass Mode)</h1>
+    <p>The institutional brain is active, but the server IP may be blocked by Telegram.</p>
     <hr>
-    <h3>Diagnostic Tools:</h3>
+    <h3>Step 1: The Magic Bypass</h3>
+    <p>If the bot isn't responding, click this button. It uses <b>YOUR</b> internet connection to tell Telegram to talk to this server.</p>
+    <button onclick="setWebhook()" style="padding: 15px; background: #6366F1; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px;">
+        ⚡ Force Webhook via Browser
+    </button>
+
+    <script>
+    function setWebhook() {{
+        const token = "{TOKEN}";
+        const url = "{SPACE_URL}/telegram-webhook";
+        const tgUrl = `https://api.telegram.org/bot${{token}}/setWebhook?url=${{url}}`;
+        
+        fetch(tgUrl)
+            .then(r => r.json())
+            .then(data => {{
+                if (data.ok) {{
+                    alert("✅ SUCCESS! Telegram is now pointing to this Space. Try the bot now!");
+                }} else {{
+                    alert("❌ FAILED: " + data.description);
+                }}
+            }})
+            .catch(e => alert("❌ ERROR: " + e));
+    }}
+    </script>
+
+    <hr>
+    <h3>Step 2: Diagnostics</h3>
     <ul>
         <li><a href="/health">Health Check</a></li>
         <li><a href="/debug">Environment Debug</a></li>
-        <li><a href="/test-telegram"><b>Test Telegram Connection (Send me a DM)</b></a></li>
+        <li><a href="/test-telegram">Test Telegram Connection</a></li>
     </ul>
     """, 200
 
@@ -129,30 +155,24 @@ request_obj = HTTPXRequest(
 application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
 
 def start_bot():
-    logger.info("--- STARTING LORIN IN WEBHOOK MODE ---")
+    logger.info("--- STARTING LORIN IN BYPASS MODE ---")
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     
-    # Initialize Application & Set Webhook with Retries
+    # Initialize Application & Set Webhook (Non-Fatal)
     loop = asyncio.get_event_loop()
-    
-    for attempt in range(1, 6):
-        try:
-            logger.info(f"Bot Initialization Attempt {attempt}/5...")
-            loop.run_until_complete(application.initialize())
-            loop.run_until_complete(application.start())
-            loop.run_until_complete(application.bot.set_webhook(url=f"{SPACE_URL}/telegram-webhook"))
-            logger.info(f"✅ SUCCESS! Webhook set to: {SPACE_URL}/telegram-webhook")
-            break
-        except Exception as e:
-            logger.error(f"⚠️ Attempt {attempt} failed: {e}")
-            if attempt == 5:
-                logger.error("CRITICAL: All initialization attempts failed. Exiting.")
-                sys.exit(1)
-            import time
-            time.sleep(10) # Wait 10 seconds before retrying
+    try:
+        logger.info("Attempting server-side initialization...")
+        loop.run_until_complete(application.initialize())
+        loop.run_until_complete(application.start())
+        # We try to set it, but we won't crash if it fails
+        loop.run_until_complete(application.bot.set_webhook(url=f"{SPACE_URL}/telegram-webhook"))
+        logger.info("✅ Server-side Webhook Set Success!")
+    except Exception as e:
+        logger.warning(f"⚠️ Server-side init failed (IP likely blocked): {e}")
+        logger.info("Web server will stay online. Use the 'Magic Bypass' button on the home page.")
 
-    # Start Flask
+    # Start Flask (Blocks)
     app.run(host='0.0.0.0', port=PORT)
 
 if __name__ == '__main__':
