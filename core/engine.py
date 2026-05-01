@@ -28,7 +28,8 @@ LIST_SIGNALS = [
 
 PERSON_SIGNALS = [
     "who is", "tell me about", "who heads", "who runs", "principal",
-    "hod", "head of", "professor", "faculty", "staff"
+    "hod", "head of", "professor", "faculty", "staff", "student", 
+    "convenor", "office bearer", "coordinator", "member"
 ]
 
 STAT_SIGNALS = [
@@ -153,6 +154,23 @@ class RAGEngine:
 
         return reranked[:10]
 
+    def _post_process(self, text: str) -> str:
+        """Strict aesthetic hardening (Master Rule Section 3)."""
+        # 1. Ban all headers (#)
+        text = re.sub(r'^#+.*$', '', text, flags=re.MULTILINE)
+        
+        # 2. Convert all bullets (* or -) to center dots (•)
+        # Handle cases like "* Item" or "- Item"
+        text = re.sub(r'^[ \t]*[*+-][ \t]+', '• ', text, flags=re.MULTILINE)
+        
+        # 3. Strip any remaining asterisks (e.g. bolding/italics)
+        text = text.replace('*', '')
+        
+        # 4. Clean up excessive newlines
+        text = re.sub(r'\n{3,}', '\n\n', text).strip()
+        
+        return text
+
     async def query_stream(self, user_query, history=None):
         start_time = time.time()
         trace = self.langfuse.trace(name="Lorin RAG Query", input=user_query)
@@ -191,8 +209,27 @@ STRICT RULES:
 
         # 2. Context Retrieval
         search_query = p.get("search_query", user_query) if p else user_query
+        intent = p.get("category", "INSTITUTIONAL") if p else "INSTITUTIONAL"
+        
         context_chunks = await self.get_context(search_query, trace)
-        context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
+        
+        # IDENTITY FAST-PASS (Master Rule Section 1A)
+        # Force-recognize developer AND key student leaders
+        if intent == "DEVELOPER" or "yogesh" in user_query.lower():
+            profile_chunk = next((c for c in self.bm25.corpus if c["chunk_id"] == "PROFILE_RAMANATHAN_S"), None)
+            yogesh_chunk = next((c for c in self.bm25.corpus if "msajce_incubation_chunk_06" in c["chunk_id"]), None)
+            
+            if intent == "DEVELOPER" and profile_chunk:
+                context_chunks.insert(0, profile_chunk)
+            if "yogesh" in user_query.lower() and yogesh_chunk:
+                context_chunks.insert(0, yogesh_chunk)
+        
+        # Cleanup encoding artifacts and non-printable chars for LLM clarity
+        def clean_text(t):
+            t = re.sub(r'[^\x00-\x7F]+', ' ', t) # Strip non-ascii (like )
+            return t.replace('  ', ' ').strip()
+
+        context_text = "\n\n".join([f"[Source {i+1}]: {clean_text(c['text'])}" for i, c in enumerate(context_chunks[:5])])
 
         # 3. Generation (Restored Rich Prompt & Peak Marketing Advocacy)
         is_count_only = p.get("is_count_only", False) if p else False
@@ -224,11 +261,23 @@ History: {history if history else "None"}"""
         data_gen = {"model": self.generation_model, "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": f"Query: {user_query}"}], "max_tokens": 1000}
         
         full_answer = ""
+        line_buffer = ""
         async for chunk in self._safe_vercel_request(data_gen, stream=True):
             full_answer += chunk
-            yield chunk
+            line_buffer += chunk
             
-        trace.update(output=full_answer)
+            if "\n" in line_buffer:
+                lines = line_buffer.split("\n")
+                # Yield all complete lines after post-processing
+                for i in range(len(lines) - 1):
+                    yield self._post_process(lines[i]) + "\n"
+                line_buffer = lines[-1] # Keep the incomplete part
+        
+        # Final yield for the last bits
+        if line_buffer:
+            yield self._post_process(line_buffer)
+            
+        trace.update(output=self._post_process(full_answer))
 
     async def _safe_vercel_request(self, data, stream=False):
         gateway_key = (os.getenv('VERCEL_AI_KEY_6') or os.getenv('VERCEL_AI_KEY_5') or os.getenv('AI_GATEWAY_API_KEY'))
