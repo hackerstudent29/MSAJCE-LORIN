@@ -115,7 +115,8 @@ class RAGEngine:
             except: return []
 
         p_hits, b_hits = await asyncio.gather(fetch_pinecone(), fetch_bm25())
-        w = {"list": (0.4, 0.6), "person": (0.6, 0.4), "stat": (0.7, 0.3), "fact": (0.7, 0.3)}[q_type]
+        # Person Boost: BM25 (0.7) for high-precision name matching
+        w = {"list": (0.4, 0.6), "person": (0.3, 0.7), "stat": (0.7, 0.3), "fact": (0.7, 0.3)}[q_type]
         
         combined = {}; seen = set()
         for h in p_hits:
@@ -142,7 +143,11 @@ class RAGEngine:
             return (vips + non_vips)[:10]
         
         if q_type == "person":
-            profs = [r for r in reranked if "profile" in r["metadata"].get("source_file", "").lower() or "faculty" in r["metadata"].get("section", "").lower()]
+            # Prioritize Faculty AND Student Leaders/Office Bearers
+            profs = [r for r in reranked if "profile" in r["metadata"].get("source_file", "").lower() or 
+                    "faculty" in r["metadata"].get("section", "").lower() or 
+                    "office bearers" in r["metadata"].get("section", "").lower() or
+                    "convenor" in r["metadata"].get("section", "").lower()]
             others = [r for r in reranked if r not in profs]
             return (profs + others)[:8]
 
