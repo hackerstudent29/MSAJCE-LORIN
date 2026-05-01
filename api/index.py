@@ -41,20 +41,46 @@ def home():
     </ul>
     """, 200
 
+# Environment variable sanitization helper
+def get_clean_env(key, default=""):
+    val = os.getenv(key, default)
+    if val:
+        return val.strip().replace("\n", "").replace("\r", "")
+    return default
+
+# Pre-flight Connectivity Diagnostic
+def check_network():
+    print("--- NETWORK DIAGNOSTIC START ---")
+    targets = ["https://www.google.com", "https://api.telegram.org"]
+    for url in targets:
+        try:
+            r = requests.get(url, timeout=10)
+            print(f"✅ Reachable: {url} (Status: {r.status_code})")
+        except Exception as e:
+            print(f"❌ Unreachable: {url} (Error: {e})")
+    print("--- NETWORK DIAGNOSTIC END ---")
+
+check_network()
+
+# Initialize Telegram Application with sanitized variables
+TOKEN = get_clean_env("TELEGRAM_BOT_TOKEN")
+
 @app.route('/test-telegram')
-async def test_telegram():
-    admin_id = os.getenv("ADMIN_IDS", "").split(",")[0].strip()
+def test_telegram():
+    # Use synchronous logic for simple Flask test route
+    admin_id = get_clean_env("ADMIN_IDS").split(",")[0].strip()
     if not admin_id:
         return "Error: No ADMIN_IDS found in environment.", 400
     
     try:
-        # Create a temporary bot instance to test connection
         from telegram import Bot
+        import asyncio
         test_bot = Bot(token=TOKEN)
-        await test_bot.send_message(chat_id=admin_id, text="🔔 Manual Connection Test: If you see this, Lorin can talk to Telegram!")
-        return f"✅ SUCCESS! A test message has been sent to Admin ID: {admin_id}. Check your Telegram!", 200
+        # Run the async send_message in a controlled way
+        asyncio.run(test_bot.send_message(chat_id=admin_id, text=f"🔔 Manual Connection Test: If you see this, Lorin can talk to Telegram! (Cleaned ID: {admin_id})"))
+        return f"✅ SUCCESS! Test message sent to {admin_id}. Check Telegram!", 200
     except Exception as e:
-        return f"❌ FAILED! Could not reach Telegram. Error: {e}", 500
+        return f"❌ FAILED! Error: {e}", 500
 
 @app.route('/health')
 def health():
@@ -78,25 +104,10 @@ def debug():
             status[r] = "MISSING ❌"
     return json.dumps(status, indent=4), 200, {'Content-Type': 'application/json'}
 
-# Pre-flight Connectivity Diagnostic
-def check_network():
-    print("--- NETWORK DIAGNOSTIC START ---")
-    targets = ["https://www.google.com", "https://api.telegram.org"]
-    for url in targets:
-        try:
-            # Increased timeout for diagnostic to 30s to detect high latency
-            r = requests.get(url, timeout=30)
-            print(f"✅ Reachable: {url} (Status: {r.status_code})")
-        except Exception as e:
-            print(f"❌ Unreachable: {url} (Error: {e})")
-    print("--- NETWORK DIAGNOSTIC END ---")
+# Initialize Telegram Application with extreme timeouts and sanitized variables
+TOKEN = get_clean_env("TELEGRAM_BOT_TOKEN")
 
-check_network()
-
-# Initialize Telegram Application with extreme timeouts for HF
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
-
-# Consolidate ALL timeouts into the Request object to avoid RuntimeError
+# Consolidate ALL timeouts into the Request object
 # Setting to 300s (5 minutes) to wait out IP throttling
 request_obj = HTTPXRequest(
     connect_timeout=300.0, 
@@ -109,7 +120,7 @@ request_obj = HTTPXRequest(
 print("--- RECONSTRUCTING LORIN BOT ---")
 
 async def post_init(app):
-    admin_ids = os.getenv("ADMIN_IDS", "").split(",")
+    admin_ids = get_clean_env("ADMIN_IDS").split(",")
     for admin_id in admin_ids:
         if admin_id.strip():
             try:
