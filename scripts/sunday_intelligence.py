@@ -10,6 +10,37 @@ from datetime import datetime, timedelta
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from core.engine import RAGEngine
 
+import base64
+
+async def send_email(to_email, subject, body, attachments):
+    brevo_key = os.getenv("BREVO_API_KEY")
+    url = "https://api.brevo.com/v3/smtp/email"
+    headers = {
+        "accept": "application/json",
+        "api-key": brevo_key,
+        "content-type": "application/json"
+    }
+    
+    payload = {
+        "sender": {"name": "Lorin Auditor", "email": "a105fc001@smtp-brevo.com"},
+        "to": [{"email": to_email}],
+        "subject": subject,
+        "htmlContent": f"<html><body>{body.replace('\n', '<br>')}</body></html>",
+        "attachment": []
+    }
+    
+    for file_path in attachments:
+        if os.path.exists(file_path):
+            with open(file_path, "rb") as f:
+                content = base64.b64encode(f.read()).decode("utf-8")
+                payload["attachment"].append({
+                    "content": content,
+                    "name": os.path.basename(file_path)
+                })
+                
+    async with httpx.AsyncClient() as client:
+        await client.post(url, headers=headers, json=payload)
+
 async def run_audit():
     engine = RAGEngine()
     logs_raw = await engine.redis.lrange("lorin_forensic_logs", 0, -1)
@@ -54,7 +85,7 @@ async def run_audit():
         writer.writeheader()
         writer.writerows(roi_data)
 
-    # --- TELEGRAM DISPATCH ---
+    # --- DISPATCH ---
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     admin_id = "7770158141"
     
@@ -64,21 +95,32 @@ async def run_audit():
 🛠️ *Optimization*: {len(gaps)} RAG Gaps detected
 🏛️ *Institutional ROI*: {(high_conf/total_queries)*100:.1f}% Human Deflection
 
-Triple-Pillar Audit attached below."""
+Triple-Pillar Audit dispatched via Email and Telegram."""
 
+    # 1. Telegram Dispatch
     async with httpx.AsyncClient() as client:
-        # Send Summary
         await client.post(f"https://api.telegram.org/bot{token}/sendMessage", 
                          json={"chat_id": admin_id, "text": summary, "parse_mode": "Markdown"})
         
-        # Send Files
         for file_path in [forensics_file, optimization_file, roi_file]:
             if os.path.exists(file_path):
                 with open(file_path, "rb") as f:
                     await client.post(f"https://api.telegram.org/bot{token}/sendDocument", 
                                      data={"chat_id": admin_id}, 
                                      files={"document": f})
-                os.remove(file_path)
+
+    # 2. Email Dispatch (Brevo)
+    await send_email(
+        to_email="ramzendrum@gmail.com",
+        subject="📊 Sunday Strategic Intelligence Report: Triple-Pillar Architecture",
+        body=summary,
+        attachments=[forensics_file, optimization_file, roi_file]
+    )
+
+    # Cleanup
+    for file_path in [forensics_file, optimization_file, roi_file]:
+        if os.path.exists(file_path):
+            os.remove(file_path)
 
 if __name__ == "__main__":
     asyncio.run(run_audit())
