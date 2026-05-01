@@ -51,16 +51,34 @@ class RAGEngine:
 
         self.stemmer = Stemmer.Stemmer("english")
         
-        # Self-Healing BM25 Index
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        index_dir = os.path.join(base_dir, "data", "bm25_index")
-        chunks_path = os.path.join(base_dir, "data", "unified_chunks.json")
+        # Robust Path Detection for Vercel/Cloud
+        cwd = os.getcwd()
+        possible_roots = [cwd, os.path.dirname(cwd), os.path.dirname(os.path.abspath(__file__)), os.path.dirname(os.path.dirname(os.path.abspath(__file__)))]
         
-        if os.path.exists(index_dir) and os.path.exists(os.path.join(index_dir, "params.index.json")):
-            try:
-                self.bm25 = bm25s.BM25.load(index_dir, load_corpus=True)
-                print("Lorin Engine: Loaded BM25 index.")
-            except Exception as e:
+        base_dir = None
+        for root in possible_roots:
+            test_path = os.path.join(root, "data", "unified_chunks.json")
+            if os.path.exists(test_path):
+                base_dir = root
+                break
+        
+        if not base_dir:
+            print(f"Lorin Engine: WARNING! Could not find 'data' folder. Searched: {possible_roots}")
+            self.bm25 = None
+        else:
+            index_dir = os.path.join(base_dir, "data", "bm25_index")
+            print(f"Lorin Engine: Knowledge base detected at {base_dir}")
+            
+            if os.path.exists(index_dir) and os.path.exists(os.path.join(index_dir, "params.index.json")):
+                try:
+                    self.bm25 = bm25s.BM25.load(index_dir, load_corpus=True)
+                    print(f"Lorin Engine: Loaded BM25 index from {index_dir}")
+                except Exception as e:
+                    print(f"Lorin Engine: BM25 Load Error: {e}")
+                    self.bm25 = None
+            else:
+                print(f"Lorin Engine: BM25 index folder missing at {index_dir}")
+                self.bm25 = None
                 print(f"Lorin Engine: Load failed: {e}")
                 if os.getenv("VERCEL"):
                     print("Lorin Engine: On Vercel, cannot rebuild. Fallback to vector search only.")
