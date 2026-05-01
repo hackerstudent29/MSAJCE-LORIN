@@ -159,19 +159,29 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             # Short answers: Just send it
             await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer, parse_mode="Markdown")
         else:
-            # Long answers: Reveal in chunks without stripping newlines
-            chunk_count = 5
+            # Long answers: Reveal in 10 chunks to ensure smooth completion
+            chunk_count = 10
             chunk_size = len(answer) // chunk_count
-            for i in range(1, chunk_count):
-                partial_text = answer[:i * chunk_size] + " ▌"
+            for i in range(1, chunk_count + 1):
+                # Always ensure the last chunk is the full answer
+                current_limit = i * chunk_size if i < chunk_count else len(answer)
+                partial_text = answer[:current_limit]
+                
+                # To avoid noise, we only show the typing cursor if it's not the final chunk
+                if i < chunk_count:
+                    partial_text += " ▌"
+                
                 try:
-                    # Note: We use plain text for partials to avoid markdown errors on incomplete tags
-                    await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=partial_text)
-                    await asyncio.sleep(0.4)
+                    # We only use Markdown for the final chunk to avoid partial tag errors
+                    mode = "Markdown" if i == chunk_count else None
+                    await context.bot.edit_message_text(
+                        chat_id=update.effective_chat.id, 
+                        message_id=thinking_msg.message_id, 
+                        text=partial_text,
+                        parse_mode=mode
+                    )
+                    await asyncio.sleep(0.3)
                 except: continue
-            
-            # Final clean update with full Markdown
-            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer, parse_mode="Markdown")
     except Exception as e:
         logger.error(f"Error: {e}")
         await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.", parse_mode="Markdown")
