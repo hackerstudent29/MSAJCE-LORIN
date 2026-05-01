@@ -192,7 +192,8 @@ CATEGORIES:
 - INSTITUTIONAL: Default search.
 
 Return 'search_query' by preserving all technical terms, numbers (e.g. '1301', 'AR-3'), and entity names. NEVER over-simplify.
-If asking for a 'code', 'number', or 'contact', include those words in the search_query.
+If asking for a 'code', 'number', 'contact', or 'accreditation/NAAC', include those words in the search_query.
+STRICT RULE: Never tell the user to 'check the website' or 'refer to the portal' if the information might be in the context. Always provide a direct answer.
 
 If category is DEVELOPER, set direct_response to:
 "Ramanathan S (Ram) is the Lead AI Developer and System Architect at MSAJCE. He is the visionary creator of the Lorin RAG system, Zenpay (Fintech Monorepo), Pocket Lawyer (AI Legal-Tech), and Formora (SaaS Form Builder). \n\nHis expertise spans Artificial Intelligence, Fintech Infrastructure, and Multilingual AI (Tamil). He is currently a 2nd Year B.Tech IT student (2024-2028). \n\n🔗 [Portfolio](https://ram-ai-portfolio.vercel.app) | [LinkedIn](https://linkedin.com/in/ramanathan-s) | [GitHub](https://github.com/hackerstudent29)"
