@@ -7,7 +7,6 @@ from flask import Flask, request
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes, CallbackQueryHandler
 from dotenv import load_dotenv
-from http.server import BaseHTTPRequestHandler, HTTPServer
 import requests
 from telegram.request import HTTPXRequest
 
@@ -24,14 +23,26 @@ logger = logging.getLogger("lorin_bot")
 # Initialize Engine
 engine = RAGEngine()
 
-# Flask App for Health Checks
+# Flask App
 app = Flask(__name__)
 
+# --- Configuration & Sanitization ---
+def get_clean_env(key, default=""):
+    val = os.getenv(key, default)
+    if val:
+        return val.strip().replace("\n", "").replace("\r", "")
+    return default
+
+TOKEN = get_clean_env("TELEGRAM_BOT_TOKEN")
+SPACE_URL = "https://ramzendrum-msajce-lorin.hf.space"
+PORT = int(os.getenv("PORT", 7860))
+
+# --- Routes ---
 @app.route('/')
 def home():
     return """
-    <h1>🚀 Lorin Bot is ONLINE</h1>
-    <p>The institutional brain is active and connected to Telegram.</p>
+    <h1>🚀 Lorin Bot is ONLINE (Webhook Mode)</h1>
+    <p>The institutional brain is active and receiving updates from Telegram.</p>
     <hr>
     <h3>Diagnostic Tools:</h3>
     <ul>
@@ -41,168 +52,90 @@ def home():
     </ul>
     """, 200
 
-# Environment variable sanitization helper
-def get_clean_env(key, default=""):
-    val = os.getenv(key, default)
-    if val:
-        return val.strip().replace("\n", "").replace("\r", "")
-    return default
-
-# Pre-flight Connectivity Diagnostic
-def check_network():
-    print("--- NETWORK DIAGNOSTIC START ---")
-    targets = ["https://www.google.com", "https://api.telegram.org"]
-    for url in targets:
-        try:
-            r = requests.get(url, timeout=10)
-            print(f"✅ Reachable: {url} (Status: {r.status_code})")
-        except Exception as e:
-            print(f"❌ Unreachable: {url} (Error: {e})")
-    print("--- NETWORK DIAGNOSTIC END ---")
-
-check_network()
-
-# Initialize Telegram Application with sanitized variables
-TOKEN = get_clean_env("TELEGRAM_BOT_TOKEN")
-
-@app.route('/test-telegram')
-def test_telegram():
-    # Use synchronous logic for simple Flask test route
-    admin_id = get_clean_env("ADMIN_IDS").split(",")[0].strip()
-    if not admin_id:
-        return "Error: No ADMIN_IDS found in environment.", 400
-    
-    try:
-        from telegram import Bot
-        import asyncio
-        test_bot = Bot(token=TOKEN)
-        # Run the async send_message in a controlled way
-        asyncio.run(test_bot.send_message(chat_id=admin_id, text=f"🔔 Manual Connection Test: If you see this, Lorin can talk to Telegram! (Cleaned ID: {admin_id})"))
-        return f"✅ SUCCESS! Test message sent to {admin_id}. Check Telegram!", 200
-    except Exception as e:
-        return f"❌ FAILED! Error: {e}", 500
-
 @app.route('/health')
 def health():
     return "OK", 200
 
 @app.route('/debug')
 def debug():
-    required = [
-        "TELEGRAM_BOT_TOKEN", "PINECONE_API_KEY", "OPENROUTER_API_KEY", 
-        "COHERE_API_KEY", "UPSTASH_REDIS_REST_URL", "UPSTASH_REDIS_REST_TOKEN",
-        "VERCEL_AI_KEY_6", "ADMIN_IDS"
-    ]
+    required = ["TELEGRAM_BOT_TOKEN", "PINECONE_API_KEY", "OPENROUTER_API_KEY", "COHERE_API_KEY", "ADMIN_IDS"]
     status = {}
     for r in required:
         val = os.getenv(r)
         if val:
-            # Mask most of the key for safety, show only first 4 and last 4
-            masked = val[:4] + "..." + val[-4:] if len(val) > 8 else "SET"
-            status[r] = f"OK ({masked})"
+            status[r] = f"OK ({val[:4]}...{val[-4:]})"
         else:
             status[r] = "MISSING ❌"
     return json.dumps(status, indent=4), 200, {'Content-Type': 'application/json'}
 
-# Initialize Telegram Application with extreme timeouts and sanitized variables
-TOKEN = get_clean_env("TELEGRAM_BOT_TOKEN")
+@app.route('/telegram-webhook', methods=['POST'])
+async def telegram_webhook():
+    """Receiver for Telegram updates."""
+    try:
+        update = Update.de_json(request.get_json(force=True), application.bot)
+        await application.process_update(update)
+        return "OK", 200
+    except Exception as e:
+        logger.error(f"Webhook Error: {e}")
+        return "Error", 500
 
-# Consolidate ALL timeouts into the Request object
-# Setting to 300s (5 minutes) to wait out IP throttling
-request_obj = HTTPXRequest(
-    connect_timeout=300.0, 
-    read_timeout=300.0, 
-    write_timeout=300.0,
-    pool_timeout=300.0,
-    connection_pool_size=20
-)
+@app.route('/test-telegram')
+async def test_telegram():
+    admin_id = get_clean_env("ADMIN_IDS").split(",")[0].strip()
+    try:
+        await application.bot.send_message(chat_id=admin_id, text=f"✅ Webhook Test: Lorin is talking to you from Hugging Face!")
+        return f"✅ SUCCESS! Webhook is active and talking to {admin_id}.", 200
+    except Exception as e:
+        return f"❌ FAILED! Error: {e}", 500
 
-print("--- RECONSTRUCTING LORIN BOT ---")
-
-async def post_init(app):
-    admin_ids = get_clean_env("ADMIN_IDS").split(",")
-    for admin_id in admin_ids:
-        if admin_id.strip():
-            try:
-                await app.bot.send_message(chat_id=admin_id.strip(), text="🚀 Lorin Engine is ONLINE (Hugging Face)")
-                print(f"Startup notification sent to {admin_id}")
-            except Exception as e:
-                print(f"Could not notify admin {admin_id}: {e}")
-
-# IMPORTANT: Do NOT set get_updates_read_timeout here if request_obj is used
-application = (
-    ApplicationBuilder()
-    .token(TOKEN)
-    .request(request_obj)
-    .post_init(post_init)
-    .build()
-)
-
+# --- Telegram Bot Logic ---
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("MSAJCE Institutional Brain Reconstructed. I am ready.")
+    await update.message.reply_text("MSAJCE Institutional Brain Reconstructed. (Webhook Mode Active)")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.message or not update.message.text: return
-    
     user_query = update.message.text
     user_id = update.effective_user.id
-    print(f"User {user_id}: {user_query}")
-    
-    # 1. Thinking message
     thinking_msg = await update.message.reply_text("🔍 Analyzing institutional database...")
-    
     try:
-        # 2. Redis History (Async)
         redis_key = f"user_{user_id}_history"
         history_raw = await engine.redis.get(redis_key)
         history = json.loads(history_raw) if history_raw else []
         history_str = "\n".join([f"User: {h['q']}\nBot: {h['a']}" for h in history])
-        
-        # 3. Await Engine Query (Async)
         answer = await engine.query(user_query, history=history_str)
-        
-        # 4. Update History
         history.append({"q": user_query, "a": answer})
         await engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
-        
-        # 5. Final Response
-        keyboard = [[
-            InlineKeyboardButton("👍 Accurate", callback_data=f"fb:up:{user_id}"),
-            InlineKeyboardButton("👎 Hallucination", callback_data=f"fb:down:{user_id}")
-        ]]
         await context.bot.edit_message_text(
             chat_id=update.effective_chat.id,
             message_id=thinking_msg.message_id,
-            text=answer,
-            reply_markup=InlineKeyboardMarkup(keyboard)
+            text=answer
         )
-        print(f"Responded to {user_id}")
-        
     except Exception as e:
-        print(f"Error: {e}")
+        logger.error(f"Error handling message: {e}")
         await context.bot.edit_message_text(
             chat_id=update.effective_chat.id,
             message_id=thinking_msg.message_id,
             text=f"Oops! I hit a snag: {str(e)}"
         )
 
-# Health Check Server
-class HealthCheckHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.end_headers()
-        self.wfile.write(b"OK")
+# --- App Setup ---
+request_obj = HTTPXRequest(connect_timeout=20.0, read_timeout=20.0)
+application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
 
 def start_bot():
-    print("Bot is starting (Async Polling)...")
+    logger.info("--- STARTING LORIN IN WEBHOOK MODE ---")
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     
-    # Start Flask in a background thread
-    from threading import Thread
-    Thread(target=lambda: app.run(host='0.0.0.0', port=7860, use_reloader=False), daemon=True).start()
-    
-    application.run_polling()
+    # Initialize Application & Set Webhook
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(application.initialize())
+    loop.run_until_complete(application.start())
+    loop.run_until_complete(application.bot.set_webhook(url=f"{SPACE_URL}/telegram-webhook"))
+    logger.info(f"Webhook set to: {SPACE_URL}/telegram-webhook")
+
+    # Start Flask
+    app.run(host='0.0.0.0', port=PORT)
 
 if __name__ == '__main__':
     start_bot()
