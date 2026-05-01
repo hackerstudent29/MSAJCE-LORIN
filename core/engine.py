@@ -80,6 +80,15 @@ class RAGEngine:
         self.embedding_model = "openai/text-embedding-3-small"
         self.langfuse = Langfuse()
 
+    def _safe_json_parse(self, text):
+        try: return json.loads(text.strip())
+        except:
+            match = re.search(r'\{.*\}', text, re.DOTALL)
+            if match:
+                try: return json.loads(match.group())
+                except: pass
+        return None
+
     @traceable(name="Hybrid Retrieval")
     async def get_context(self, query, trace):
         q_type = classify_query(query)
@@ -87,7 +96,6 @@ class RAGEngine:
         async def fetch_pinecone():
             if not self.index: return []
             try:
-                # Master Rule 5D: top_k Safety
                 top_k = 15 if q_type in ["person", "stat"] else 20
                 async with httpx.AsyncClient() as client:
                     e_res = await client.post(self.openrouter_embed_url, headers={"Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}"}, 
@@ -100,7 +108,6 @@ class RAGEngine:
         async def fetch_bm25():
             if not self.bm25: return []
             try:
-                # Master Rule 5A: Boost BM25 depth for lists
                 k = 15 if q_type == "list" else 10
                 tokens = bm25s.tokenize(query, stemmer=self.stemmer)
                 chunks, scores = self.bm25.retrieve(tokens, k=k)
@@ -108,9 +115,6 @@ class RAGEngine:
             except: return []
 
         p_hits, b_hits = await asyncio.gather(fetch_pinecone(), fetch_bm25())
-        
-        # Dynamic Weight Blending (Master Rule Section 5A)
-        # v_weight, b_weight
         w = {"list": (0.4, 0.6), "person": (0.6, 0.4), "stat": (0.7, 0.3), "fact": (0.7, 0.3)}[q_type]
         
         combined = {}; seen = set()
@@ -124,7 +128,6 @@ class RAGEngine:
         results = sorted(combined.values(), key=lambda x: x["f_score"], reverse=True)
         if not results: return []
 
-        # Reranking
         texts = [r["text"] for r in results]
         try:
             loop = asyncio.get_event_loop()
@@ -133,15 +136,12 @@ class RAGEngine:
             reranked = [results[r.index] for r in rerank.results]
         except: reranked = results[:10]
 
-        # Post-Rerank Force-Include (Master Rule Section 5C)
         if q_type == "list":
-            # VIP Pass for group_list chunks
             vips = [r for r in results if r["metadata"].get("chunk_type") == "group_list"]
             non_vips = [r for r in reranked if r["metadata"].get("chunk_type") != "group_list"]
             return (vips + non_vips)[:10]
         
         if q_type == "person":
-            # Prioritize profile/faculty sections
             profs = [r for r in reranked if "profile" in r["metadata"].get("source_file", "").lower() or "faculty" in r["metadata"].get("section", "").lower()]
             others = [r for r in reranked if r not in profs]
             return (profs + others)[:8]
@@ -152,47 +152,79 @@ class RAGEngine:
         start_time = time.time()
         trace = self.langfuse.trace(name="Lorin RAG Query", input=user_query)
         
-        # Step 1: Context Retrieval
-        context_chunks = await self.get_context(user_query, trace)
-        context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
+        # 1. Intent & Refinement (Restored)
+        span = trace.span(name="Pre-Processor")
+        data_pre = {
+            "model": self.generation_model,
+            "messages": [
+                {"role": "system", "content": """Classify intent and rewrite for search. 
+Return JSON: {category, search_query, direct_response, is_count_only}
 
-        # Step 2: Prompt Construction
-        system_prompt = f"""You are Lorin, the institutional assistant for MSAJCE. 
-Tone: casual, friendly. Focus on accuracy. 
+CATEGORIES: 
+- DEVELOPER: ONLY for Ramanathan S or Ram.
+- GREETING: Hello, hi.
+- INSTITUTIONAL: Default for all others.
 
 STRICT RULES:
-1. LISTS: If query is 'list', 'names', or 'all', list EVERY person found in context. Do not summarize.
-2. SOURCE: Base answers ONLY on context. 
-3. RAMANATHAN: If query is about the developer or 'Ram', use the profile chunk data.
+1. IDENTITY: Srinivasan/Principal = INSTITUTIONAL. Never give DEVELOPER bio for them.
+2. DEVELOPER (Ramanathan S): 
+   - Direct intro for 'who is ram'.
+   - Search query for follow-ups.
+3. FOLLOW-UPS: Always prompt for more about Zenify, Zenpay, or Lorin RAG.
+
+BIO: "**Ramanathan S (Ram)** is the Lead AI Developer and System Architect at MSAJCE. 2nd-year B.Tech IT student.
+• [LinkedIn](https://linkedin.com/in/ramanathan-s)
+• [Portfolio](https://ram-ai-portfolio.vercel.app)
+• [GitHub](https://github.com/hackerstudent29)"
+"""}, 
+                {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
+            ]
+        }
+        
+        pre_res = ""
+        async for chunk in self._safe_vercel_request(data_pre):
+            pre_res += chunk
+        p = self._safe_json_parse(pre_res)
+        
+        if p and p.get("direct_response"):
+            yield p.get("direct_response"); return
+
+        # 2. Context Retrieval
+        search_query = p.get("search_query", user_query) if p else user_query
+        context_chunks = await self.get_context(search_query, trace)
+        context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
+
+        # 3. Generation (Restored Rich Prompt)
+        is_count_only = p.get("is_count_only", False) if p else False
+        system_prompt = f"""You are Lorin, the institutional assistant for MSAJCE. 
+Tone: casual, friendly, helpful.
+
+STRICT RULES:
+1. LISTS: List EVERY unique name found. Never summarize.
+2. RAMANATHAN: If query is about the dev, use the profile. ALWAYS ask if they want to know about Zenify or Zenpay.
+3. FOLLOW-UPS: At the end of EVERY answer, ask a short, relevant follow-up question.
+4. {"STRICT RULE: The user is asking for a COUNT. PROVIDE SUMMARY ONLY." if is_count_only else ""}
 
 CONTEXT: {context_text}
 History: {history if history else "None"}"""
 
-        data = {"model": self.generation_model, "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": f"Query: {user_query}"}], "max_tokens": 1000}
+        data_gen = {"model": self.generation_model, "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": f"Query: {user_query}"}], "max_tokens": 1000}
         
         full_answer = ""
-        async for chunk in self._safe_vercel_request(data, stream=True):
+        async for chunk in self._safe_vercel_request(data_gen, stream=True):
             full_answer += chunk
             yield chunk
             
         trace.update(output=full_answer)
 
     async def _safe_vercel_request(self, data, stream=False):
-        # Master Rule: Robust Key Detection (Restored)
-        gateway_key = (os.getenv('VERCEL_AI_KEY_6') or 
-                       os.getenv('VERCEL_AI_KEY_5') or 
-                       os.getenv('AI_GATEWAY_API_KEY'))
-        
+        gateway_key = (os.getenv('VERCEL_AI_KEY_6') or os.getenv('VERCEL_AI_KEY_5') or os.getenv('AI_GATEWAY_API_KEY'))
         if not gateway_key:
-            # Emergency Scan for any vck_/vcp_ keys
             for key, value in os.environ.items():
                 if value and (value.startswith("vck_") or value.startswith("vcp_")):
-                    gateway_key = value
-                    break
+                    gateway_key = value; break
         
-        if not gateway_key: 
-            yield "Error: No API Key found in environment."; return
-        
+        if not gateway_key: yield "Error: No API Key"; return
         if stream: data["stream"] = True
         headers = {"Authorization": f"Bearer {gateway_key}", "Content-Type": "application/json"}
         async with httpx.AsyncClient() as client:
