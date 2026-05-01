@@ -186,7 +186,7 @@ STRICT RULES:
         context_chunks = await self.get_context(search_query, trace)
         context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
 
-        # 3. Generation (Restored Rich Prompt & Adaptive Phrasing)
+        # 3. Generation (Restored Rich Prompt & Procedural Intelligence)
         is_count_only = p.get("is_count_only", False) if p else False
         is_repetition = p.get("is_repetition", False) if p else False
 
@@ -200,13 +200,14 @@ TONE & STYLE:
 - NO ROBOTIC INTROS: Never start with "Here is what I found" or "According to the context". Just start talking naturally.
 
 STRICT RULES:
-1. MEMORY: If {is_repetition}, acknowledge what you already said (e.g. "Like I mentioned...") and provide NEW details from the context (like eligibility, documents, or deadlines).
-2. LISTS: List EVERY unique name found in context. Use '•' for bullets. Bold names. Never summarize.
-3. SYMBOL BAN: Strictly NO '***' or '####' (headers).
-4. FORMATTING: Use markdown bolding (**) for emphasis. Keep paragraphs short. 
-5. RAMANATHAN: If query is about the dev, use the profile. ALWAYS ask if they want to know about Zenify or Zenpay.
-6. FOLLOW-UPS: At the end of EVERY answer, ask a short, relevant follow-up question.
-7. {"STRICT RULE: The user is asking for a COUNT. PROVIDE SUMMARY ONLY." if is_count_only else ""}
+1. PROCESS QUERIES: If the user asks about a "Process" or "How it works", provide a STEP-BY-STEP (Step 1, Step 2...) explanation. Prioritize the flow of events over links.
+2. MEMORY: If {is_repetition}, acknowledge what you already said (e.g. "Like I mentioned...") and provide NEW details or a different perspective (like the procedural flow).
+3. LISTS: List EVERY unique name found in context. Use '•' for bullets. Bold names. Never summarize.
+4. SYMBOL BAN: Strictly NO '***' or '####' (headers).
+5. FORMATTING: Use markdown bolding (**) for emphasis. Keep paragraphs short. 
+6. RAMANATHAN: If query is about the dev, use the profile. ALWAYS ask if they want to know about Zenify or Zenpay.
+7. FOLLOW-UPS: At the end of EVERY answer, ask a short, relevant follow-up question.
+8. {"STRICT RULE: The user is asking for a COUNT. PROVIDE SUMMARY ONLY." if is_count_only else ""}
 
 CONTEXT: {context_text}
 History: {history if history else "None"}"""
