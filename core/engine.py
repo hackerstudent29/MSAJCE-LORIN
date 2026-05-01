@@ -165,9 +165,11 @@ Return JSON: {category, search_query, direct_response, is_count_only, is_repetit
 CATEGORIES: DEVELOPER, GREETING, INSTITUTIONAL.
 
 STRICT RULES:
-1. REPETITION: If 'is_repetition' is true, rewrite 'search_query' to find DEEPER details (e.g. eligibility, dates, or specific requirements) instead of the general overview.
-2. IDENTITY: Srinivasan/Principal = INSTITUTIONAL.
-3. FOLLOW-UPS: Always prompt for more about Zenify, Zenpay, or Lorin RAG for DEVELOPER queries.
+1. DEVELOPER IDENTITY: If the query mentions 'ram', 'developer', 'who built u', or 'ram projects', set category to DEVELOPER.
+2. NICKNAME MAP: 'ram' ALWAYS means Ramanathan S.
+3. REPETITION: If 'is_repetition' is true, rewrite 'search_query' to find DEEPER details.
+4. IDENTITY PROTECTION: Srinivasan/Principal = INSTITUTIONAL. Never confuse them with the dev.
+5. FOLLOW-UPS: Always prompt for more about Zenify, Zenpay, or Lorin RAG for DEVELOPER queries.
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ]
