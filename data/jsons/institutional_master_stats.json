@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "document_title": "Institutional Master Statistics & Strategic Totals",
+    "purpose": "High-priority ground truth for global counts to prevent RAG fragmentation",
+    "version": "1.1",
+    "last_updated": "2026-05-01"
+  },
+  "master_stats": {
+    "alumni_scholarships": {
+      "total_students": 97,
+      "total_amount_sponsored": "Rs. 37,94,972",
+      "date_range": "2019 - 2026",
+      "participating_departments": ["CSE", "IT", "ECE", "EEE", "MECH", "CIVIL", "AIDS", "AIML", "CSBS", "Cyber Security", "VLSI", "ACT"],
+      "strategic_summary": "As of May 2026, the MSAJCE Alumni Association has sponsored a total of 97 students with scholarships worth Rs. 37.94 Lakhs. This support covers all major engineering departments and batches from 2018 to 2029."
+    },
+    "alumni_engagement": {
+      "silver_jubilee_reunion_attendance": "500+ Alumnus (Feb 01, 2025)",
+      "total_entrepreneur_alumni": 56,
+      "distinguished_industry_alumni": 73,
+      "office_bearers": 31
+    },
+    "academic_scope": {
+      "total_departments": 12,
+      "phd_supervisors": 7,
+      "faculty_publications": "13+ books authored by Principal Dr. K.S. Srinivasan"
+    }
+  }
+}

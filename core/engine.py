@@ -106,30 +106,46 @@ class RAGEngine:
         self.bm25.save(index_dir, corpus=chunks)
         print(f"Lorin Engine: Successfully rebuilt BM25 index with {len(chunks)} Diamond Chunks.")
 
-    async def _safe_vercel_request(self, data, label="Request", span=None):
-        # Scan for any Vercel AI Gateway key (vck_ or vcp_)
+    async def _safe_vercel_request(self, data, label="Request", span=None, stream=False):
         gateway_key = os.getenv('VERCEL_AI_KEY_6') or os.getenv('VERCEL_AI_KEY_5') or os.getenv('AI_GATEWAY_API_KEY')
-        
         if not gateway_key:
             for key, value in os.environ.items():
-                # Support both legacy (vck_) and new (vcp_) Vercel keys
                 if value and (value.startswith("vck_") or value.startswith("vcp_")):
                     gateway_key = value
                     break
         
-        if not gateway_key: return f"Error: No AI Gateway Key (vck_/vcp_) found for {label}."
+        if not gateway_key: 
+            yield f"Error: No AI Gateway Key found for {label}."
+            return
+
+        if stream: data["stream"] = True
             
         headers = {"Authorization": f"Bearer {gateway_key}", "Content-Type": "application/json"}
         try:
             async with httpx.AsyncClient() as client:
-                resp = await client.post(f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=60.0)
-                if resp.status_code == 200:
-                    res = resp.json()
-                    content = res["choices"][0]["message"]["content"]
-                    if span: span.event(name=f"LLM {label}", input=data, output=content)
-                    return content
-                return f"Error {resp.status_code}: {resp.text}"
-        except Exception as e: return str(e)
+                if not stream:
+                    resp = await client.post(f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=60.0)
+                    if resp.status_code == 200:
+                        res = resp.json()
+                        content = res["choices"][0]["message"]["content"]
+                        if span: span.event(name=f"LLM {label}", input=data, output=content)
+                        yield content
+                    else: yield f"Error {resp.status_code}: {resp.text}"
+                else:
+                    async with client.stream("POST", f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=60.0) as response:
+                        if response.status_code != 200:
+                            yield f"Error {response.status_code}"
+                            return
+                        async for line in response.aiter_lines():
+                            if not line or not line.startswith("data: "): continue
+                            if line == "data: [DONE]": break
+                            try:
+                                chunk = json.loads(line[6:])
+                                delta = chunk.get("choices", [{}])[0].get("delta", {}).get("content", "")
+                                if delta: yield delta
+                            except: continue
+        except Exception as e:
+            yield str(e)
 
     def _safe_json_parse(self, text):
         try: return json.loads(text.strip())
@@ -142,26 +158,16 @@ class RAGEngine:
 
     @traceable(name="Adaptive Retrieval")
     async def get_context(self, query, trace):
-        """Parallelized RAG Retrieval (Pinecone + BM25)"""
         span = trace.span(name="Retrieval", input={"query": query})
-        
         async def fetch_pinecone():
             if not self.index: return []
             try:
                 async with httpx.AsyncClient() as client:
                     e_res = await client.post(self.openrouter_embed_url, headers={"Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}"}, json={"model": self.embedding_model, "input": query}, timeout=10.0)
                     query_embedding = e_res.json()["data"][0]["embedding"]
-                    
                     p_res = self.index.query(vector=query_embedding, top_k=10, include_metadata=True)
-                    return [{
-                        "text": m["metadata"]["text"], 
-                        "score": m["score"], 
-                        "chunk_id": m["id"],
-                        "entity": m["metadata"].get("entity", "N/A")
-                    } for m in p_res["matches"]]
-            except Exception as e:
-                print(f"Lorin Engine: Pinecone Error: {e}")
-                return []
+                    return [{"text": m["metadata"]["text"], "score": m["score"], "chunk_id": m["id"], "entity": m["metadata"].get("entity", "N/A")} for m in p_res["matches"]]
+            except: return []
 
         async def fetch_bm25():
             if not self.bm25: return []
@@ -169,44 +175,32 @@ class RAGEngine:
                 tokens = bm25s.tokenize(query, stemmer=self.stemmer)
                 chunks, _ = self.bm25.retrieve(tokens, k=10)
                 return chunks[0].tolist()
-            except Exception as e:
-                print(f"Lorin Engine: BM25 Error: {e}")
-                return []
+            except: return []
 
-        # RUN IN PARALLEL
-        pinecone_task = fetch_pinecone()
-        bm25_task = fetch_bm25()
-        p_hits, b_hits = await asyncio.gather(pinecone_task, bm25_task)
-        
+        p_hits, b_hits = await asyncio.gather(fetch_pinecone(), fetch_bm25())
         combined = []; seen = set()
         for c in p_hits + b_hits:
             cid = c.get('chunk_id') or c.get('id')
-            if cid and cid not in seen:
-                combined.append(c); seen.add(cid)
+            if cid and cid not in seen: combined.append(c); seen.add(cid)
         
-        print(f"Lorin Engine: Retrieval Hits -> Pinecone: {len(p_hits)}, BM25: {len(b_hits)}, Combined: {len(combined)}")
-        
-        # 3. Reranking (Optional)
         if not combined: return []
         texts = [c['text'] for c in combined]
         if self.co:
             try:
                 loop = asyncio.get_event_loop()
                 rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=query, documents=texts, top_n=12))
-                results = [combined[r.index] for r in rerank.results]
-                span.end(output={"results": len(results)})
-                return results
-            except Exception as e:
-                print(f"Lorin Engine: Rerank Error: {e}")
-        
-        # Return raw hits if reranker fails (Increased to 10 for better coverage)
-        span.end(output={"results": len(combined[:10])})
+                return [combined[r.index] for r in rerank.results]
+            except: pass
         return combined[:10]
 
     async def query(self, user_query, history=None):
+        full_text = ""
+        async for chunk in self.query_stream(user_query, history): full_text += chunk
+        return full_text
+
+    async def query_stream(self, user_query, history=None):
         start_time = time.time()
         trace = self.langfuse.trace(name="Lorin RAG Query", input=user_query)
-        
         # 1. Intent & Refinement
         span = trace.span(name="Pre-Processor")
         data = {
@@ -216,93 +210,56 @@ class RAGEngine:
 Return JSON: {category, search_query, direct_response, is_count_only}
 
 CATEGORIES: 
-- DEVELOPER: ONLY if asking about Ramanathan S, Ram, or the specific bot creator/developer.
-- GREETING: Hello, hi, etc.
-- INSTITUTIONAL: Default for all college, faculty, department, bus, or admission questions. 
+- DEVELOPER: ONLY for Ramanathan S or Ram.
+- GREETING: Hello, hi.
+- INSTITUTIONAL: Default for all other people (Principal, Faculty, Students), departments, etc.
 
-INTENT DETECTION:
-- If user asks 'how many', 'total', 'count', or 'number of', set is_count_only: true.
+STRICT RULES:
+1. IDENTITY CHECK: If the query is about 'Srinivasan', 'Principal', or any faculty name NOT named Ramanathan, it MUST be CATEGORY: INSTITUTIONAL. Never give the DEVELOPER bio for these names.
+2. FOR DEVELOPER (Ramanathan S):
+   - Only give direct_response for initial intro ('who is ram', 'who made you').
+   - For follow-ups ('tell me more', 'skills'), set direct_response: null and search_query: 'Ramanathan S projects skills'.
+3. INTENT: Set is_count_only: true for 'how many'/'total' queries.
+4. TYPO-PROOFING: Correct names (e.g. 'Srinivasan' -> 'Dr. K.S. Srinivasan Principal').
 
-SEARCH REWRITING:
-1. TYPO-PROOFING: Correct names (e.g. 'Wesling' -> 'Dr. Weslin D').
-2. TEMPORAL NEUTRALITY: Do NOT include '2019 to 2022' or specific dates in search_query unless the user specifically asked for them. Focus on the ENTITY (e.g., 'alumni scholarship count').
-
-If category is DEVELOPER, set direct_response to:
-"**Ramanathan S (Ram)** is the Lead AI Developer and System Architect at MSAJCE. He is a visionary 2nd-year B.Tech IT student specializing in high-performance AI systems and Fintech architecture.
-
+STANDARD DEVELOPER BIO:
+"**Ramanathan S (Ram)** is the Lead AI Developer and System Architect at MSAJCE. He is a 2nd-year B.Tech IT student specializing in AI systems.
 • [LinkedIn](https://linkedin.com/in/ramanathan-s)
-• [Portfolio](https://ram-ai-portfolio.vercel.app)
-
-Is there anything specific you would like to know about Ram's technical expertise?"
+• [Portfolio](https://ram-ai-portfolio.vercel.app)"
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ],
             "max_tokens": 400
         }
-        res = await self._safe_vercel_request(data, label="Pre-Processor", span=span)
-        p = self._safe_json_parse(res)
         
+        # Collect pre-processor response from generator
+        res = ""
+        async for chunk in self._safe_vercel_request(data, label="Pre-Processor", span=span):
+            res += chunk
+            
+        p = self._safe_json_parse(res)
         if p and p.get("direct_response"):
-            return p.get("direct_response")
+            yield p.get("direct_response"); return
             
         search_query = p.get("search_query", user_query) if p else user_query
-
-        # 2. Retrieval
         context_chunks = await self.get_context(search_query, trace)
         context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
 
-        # 3. Generation
         gen_span = trace.span(name="Generation")
         is_count_only = p.get("is_count_only", False) if p else False
-        
-        # 4. Generate Final Answer
-        system_prompt = f"""You are Lorin, the institutional assistant for MSAJCE (Mohamed Sathak A.J. College of Engineering).
-Your tone is casual, friendly, and helpful (B1 level English). Use proper punctuation and always end with a full stop (.).
+        system_prompt = f"""You are Lorin, the institutional assistant for MSAJCE.Tone: casual, friendly.
+{"STRICT RULE: The user is asking for a COUNT. PROVIDE SUMMARY ONLY. NO LISTS." if is_count_only else ""}
+RULES: Bullet points prefix '• ', vertical layout, closing with follow-up.
+CONTEXT: {context_text}
+History: {history if history else "None"}"""
 
-{"STRICT RULE: The user is asking for a COUNT or TOTAL. You MUST ONLY provide the numerical summary and a brief explanation. NEVER provide a list of names or items." if is_count_only else ""}
-
-RULES:
-1. INTENT PRECISION: If the user asks 'How many', 'Totally', or 'Total count', you MUST provide ONLY the summary/number. NEVER provide a list of names/items unless the user explicitly asks for a 'list', 'names', or 'show them'.
-2. SUMMARIZATION: For broad questions, provide a strategic summary (e.g., 'A total of [X] students...'). Do NOT start every sentence with 'From 2019 to 2022' unless specifically relevant to the query.
-3. BULLET POINTS: Use the '• ' (center dot and a space) as the bullet point prefix.
-4. VERTICAL LAYOUT: Use a single newline (`\n`) between bullet points.
-5. CLOSING: Always end with a context-related follow-up question.
-6. NO UNKNOWN HALLUCINATIONS: If you don't know, just say "I'm sorry, I don't have that specific count in my current records. Is there anything else I can help you with?"
-
-CONTEXT:
-{context_text}
-
-Conversation History:
-{history if history else "No previous history."}"""
-        data_gen = {
-            "model": self.generation_model,
-            "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": f"Query: {user_query}"}],
-            "max_tokens": 800
-        }
-        res_gen = await self._safe_vercel_request(data_gen, label="Generator", span=gen_span)
-        
-        final_answer = res_gen
-        trace.update(output=final_answer)
-
-        # --- Sunday Intelligence: Forensic Logging ---
+        data_gen = {"model": self.generation_model, "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": f"Query: {user_query}"}], "max_tokens": 800}
+        full_answer = ""
+        async for chunk in self._safe_vercel_request(data_gen, label="Generator", span=gen_span, stream=True):
+            full_answer += chunk
+            yield chunk
+        trace.update(output=full_answer)
         try:
-            end_time = time.time()
-            latency_ms = int((end_time - start_time) * 1000)
-            log_entry = {
-                "timestamp": datetime.now().isoformat(),
-                "session_id": trace.trace_id if hasattr(trace, 'trace_id') else "sess_" + str(int(time.time())),
-                "query": user_query,
-                "category": p.get("category", "GENERAL") if p else "ERROR",
-                "score": max([float(c.get('score', 0)) for c in context_chunks]) if context_chunks else 0.0,
-                "hits_pinecone": len([c for c in context_chunks if 'score' in c]), # Approximate
-                "hits_bm25": len([c for c in context_chunks if 'score' not in c]),
-                "latency": latency_ms,
-                "tokens": len(final_answer.split()) * 1.3,
-                "status": "SUCCESS" if final_answer else "FAILED"
-            }
+            log_entry = {"timestamp": datetime.now().isoformat(), "query": user_query, "category": p.get("category", "GENERAL") if p else "ERROR", "latency": int((time.time() - start_time) * 1000), "status": "SUCCESS"}
             await self.redis.lpush("lorin_forensic_logs", json.dumps(log_entry))
-            await self.redis.ltrim("lorin_forensic_logs", 0, 10000)
-        except Exception as e:
-            print(f"Forensic Logging Error: {e}")
-
-        return final_answer
+        except: pass

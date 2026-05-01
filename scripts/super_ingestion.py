@@ -51,6 +51,26 @@ class MasterIngestor:
             path = os.path.join(self.json_dir, file)
             with open(path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
+                
+                # Handle Master Stats format
+                if "master_stats" in data:
+                    stats = data["master_stats"]
+                    text = "MASTER INSTITUTIONAL STATISTICS - GROUND TRUTH\n\n"
+                    for key, val in stats.items():
+                        text += f"SECTION: {key.replace('_', ' ').upper()}\n"
+                        if isinstance(val, dict):
+                            for k2, v2 in val.items():
+                                text += f"- {k2.replace('_', ' ').title()}: {v2}\n"
+                        text += "\n"
+                    
+                    self.unified_knowledge.append({
+                        "chunk_id": "AAA_MASTER_STATS_GROUND_TRUTH",
+                        "text": text,
+                        "metadata": {"type": "MASTER_STATS", "priority": "CRITICAL"}
+                    })
+                    continue
+
+                # Handle Standard Chunks format
                 chunks = data.get('chunks', [])
                 for chunk in chunks:
                     text = chunk.get('text', '')

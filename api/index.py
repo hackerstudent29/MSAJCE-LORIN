@@ -151,38 +151,67 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         history = json.loads(hist_raw) if hist_raw else []
         history_str = "\n".join([f"User: {h['q']}\nBot: {h['a']}" for h in history])
         
-        answer = await _engine.query(user_query, history=history_str)
-        history.append({"q": user_query, "a": answer})
-        await _engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
+        # High-Precision Character Typing Effect
+        full_response = ""
+        displayed_text = ""
+        last_update_time = time.time()
         
-        # Simulated Streaming Effect (Preserving newlines)
-        if len(answer) < 100:
-            # Short answers: Just send it
-            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer, parse_mode="Markdown")
-        else:
-            # Long answers: Reveal in 10 chunks to ensure smooth completion
-            chunk_count = 10
-            chunk_size = len(answer) // chunk_count
-            for i in range(1, chunk_count + 1):
-                # Always ensure the last chunk is the full answer
-                current_limit = i * chunk_size if i < chunk_count else len(answer)
-                partial_text = answer[:current_limit]
+        async for chunk in _engine.query_stream(user_query, history=history_str):
+            full_response += chunk
+            
+            # Character-by-character drip-feed logic
+            while len(displayed_text) < len(full_response):
+                # Add 1 character at a time at a high-speed typing rate (approx 16 chars/sec)
+                displayed_text = full_response[:len(displayed_text) + 1]
                 
-                # To avoid noise, we only show the typing cursor if it's not the final chunk
-                if i < chunk_count:
-                    partial_text += " ▌"
+                # Update Telegram every ~0.25s
+                if time.time() - last_update_time > 0.25:
+                    try:
+                        await context.bot.edit_message_text(
+                            chat_id=update.effective_chat.id, 
+                            message_id=thinking_msg.message_id, 
+                            text=displayed_text + " ▌"
+                        )
+                        last_update_time = time.time()
+                    except: 
+                        await asyncio.sleep(0.1)
                 
+                # Wait 0.06s between characters (approx 16-17 chars/sec)
+                await asyncio.sleep(0.06)
+
+        # Final Drain: Ensure the rest of the text types out if the LLM finished faster than the drip
+        while len(displayed_text) < len(full_response):
+            displayed_text = full_response[:len(displayed_text) + 1]
+            if time.time() - last_update_time > 0.25:
                 try:
-                    # We only use Markdown for the final chunk to avoid partial tag errors
-                    mode = "Markdown" if i == chunk_count else None
                     await context.bot.edit_message_text(
                         chat_id=update.effective_chat.id, 
                         message_id=thinking_msg.message_id, 
-                        text=partial_text,
-                        parse_mode=mode
+                        text=displayed_text + " ▌"
                     )
-                    await asyncio.sleep(0.3)
-                except: continue
+                    last_update_time = time.time()
+                except: pass
+            await asyncio.sleep(0.04) # Slightly faster drain at the very end
+
+        # Final Update (Perfect Markdown & No Cursor)
+        try:
+            await context.bot.edit_message_text(
+                chat_id=update.effective_chat.id, 
+                message_id=thinking_msg.message_id, 
+                text=full_response,
+                parse_mode="Markdown"
+            )
+        except:
+            # Fallback if Markdown fails due to partial tags
+            await context.bot.edit_message_text(
+                chat_id=update.effective_chat.id, 
+                message_id=thinking_msg.message_id, 
+                text=full_response
+            )
+        
+        history.append({"q": user_query, "a": full_response})
+        await _engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
+
     except Exception as e:
         logger.error(f"Error: {e}")
         await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.", parse_mode="Markdown")
