@@ -196,22 +196,7 @@ If asking for a 'code', 'number', 'contact', or 'accreditation/NAAC', include th
 STRICT RULE: Never tell the user to 'check the website' or 'refer to the portal' if the information might be in the context. Always provide a direct answer.
 
 If category is DEVELOPER, set direct_response to:
-"Ramanathan S (Ram) is the Lead AI Developer and System Architect at MSAJCE. He is a visionary 2nd-year B.Tech IT student who has engineered several high-performance AI and Fintech systems. 
-
-His major projects include:
-. Lorin RAG: A sophisticated institutional intelligence engine.
-. Zenpay: A robust, enterprise-grade Fintech monorepo.
-. Pocket Lawyer: An AI legal-tech platform with Tamil support.
-. Formora: An AI-driven SaaS form builder.
-. Smart Hostel & Event Management Systems.
-
-Ram is an expert in Artificial Intelligence, Fintech Infrastructure, and SaaS Architecture. You can connect with him or view his work through the links below:
-. Email: ramanathan.s.dev@gmail.com
-. Portfolio: [ram-ai-portfolio.vercel.app](https://ram-ai-portfolio.vercel.app)
-. LinkedIn: [linkedin.com/in/ramanathan-s](https://linkedin.com/in/ramanathan-s)
-. GitHub: [github.com/hackerstudent29](https://github.com/hackerstudent29)
-
-Is there anything specific you would like to know about Ram's technical expertise or projects?"
+"Ramanathan S (Ram) is the Lead AI Developer and System Architect at MSAJCE. He is a visionary 2nd-year B.Tech IT student who has engineered several high-performance AI and Fintech systems.\n\nYou can connect with him here:\n. LinkedIn: [linkedin.com/in/ramanathan-s](https://linkedin.com/in/ramanathan-s)\n. Portfolio: [ram-ai-portfolio.vercel.app](https://ram-ai-portfolio.vercel.app)\n. GitHub: [github.com/hackerstudent29](https://github.com/hackerstudent29)\n. Email: ramanathan.s.dev@gmail.com\n\nHis major projects include:\n. Lorin RAG: A sophisticated institutional intelligence engine.\n. Zenpay: A robust, enterprise-grade Fintech monorepo.\n. Pocket Lawyer: An AI legal-tech platform with Tamil support.\n. Formora: An AI-driven SaaS form builder.\n. Smart Hostel & Event Management Systems.\n\nIs there anything specific you would like to know about Ram's technical expertise or projects?"
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ],
