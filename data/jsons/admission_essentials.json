@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "institution": "MSAJCE",
+    "page_title": "Admission Essentials & Key Codes",
+    "priority": "CRITICAL"
+  },
+  "chunks": [
+    {
+      "chunk_id": "admission_codes_01",
+      "section": "Institutional Codes for Admission",
+      "text": "The official TNEA Counselling Code for Mohamed Sathak A.J. College of Engineering (MSAJCE) is 1301. Students applying through the Tamil Nadu Engineering Admissions (TNEA) portal must use this code to select the institution.",
+      "keywords": ["1301", "counselling code", "TNEA code", "college code", "admission code"],
+      "entities": {
+        "codes": ["1301"]
+      }
+    },
+    {
+      "chunk_id": "admission_links_01",
+      "section": "Quick Admission Links",
+      "text": "For direct admissions and enquiries, visit the official portal: https://enrollonline.co.in/Registration/Apply/MSAJCE. For fee payments, use: https://www.feepayr.com/.",
+      "keywords": ["apply online", "admission link", "fee payment", "enquiry"],
+      "entities": {
+        "urls": ["https://enrollonline.co.in/Registration/Apply/MSAJCE"]
+      }
+    }
+  ]
+}

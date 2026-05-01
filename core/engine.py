@@ -156,6 +156,7 @@ class RAGEngine:
             if c['chunk_id'] not in seen:
                 combined.append(c); seen.add(c['chunk_id'])
         
+        # INCREASE DEPTH: Send more chunks to reranker
         if not combined: return []
         
         # 3. Reranking (Optional)
@@ -163,16 +164,16 @@ class RAGEngine:
         if self.co:
             try:
                 loop = asyncio.get_event_loop()
-                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=query, documents=texts, top_n=8))
+                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=query, documents=texts, top_n=12))
                 results = [combined[r.index] for r in rerank.results]
                 span.end(output={"results": len(results)})
                 return results
             except Exception as e:
                 print(f"Lorin Engine: Rerank Error: {e}")
         
-        # Return raw hits if reranker fails
-        span.end(output={"results": len(combined[:8])})
-        return combined[:8]
+        # Return raw hits if reranker fails (Increased to 10 for better coverage)
+        span.end(output={"results": len(combined[:10])})
+        return combined[:10]
 
     async def query(self, user_query, history=None):
         trace = self.langfuse.trace(name="Lorin RAG Query", input=user_query)
@@ -189,6 +190,9 @@ CATEGORIES:
 - DEVELOPER: If asking about Ramanathan S, Ram, or the bot's creator/developer.
 - GREETING: Hello, hi, etc.
 - INSTITUTIONAL: Default search.
+
+Return 'search_query' by preserving all technical terms, numbers (e.g. '1301', 'AR-3'), and entity names. NEVER over-simplify.
+If asking for a 'code', 'number', or 'contact', include those words in the search_query.
 
 If category is DEVELOPER, set direct_response to:
 "Ramanathan S (Ram) is the Lead AI Developer and System Architect at MSAJCE. He is the visionary creator of the Lorin RAG system, Zenpay (Fintech Monorepo), Pocket Lawyer (AI Legal-Tech), and Formora (SaaS Form Builder). \n\nHis expertise spans Artificial Intelligence, Fintech Infrastructure, and Multilingual AI (Tamil). He is currently a 2nd Year B.Tech IT student (2024-2028). \n\n🔗 [Portfolio](https://ram-ai-portfolio.vercel.app) | [LinkedIn](https://linkedin.com/in/ramanathan-s) | [GitHub](https://github.com/hackerstudent29)"
