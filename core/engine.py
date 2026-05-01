@@ -72,13 +72,17 @@ class RAGEngine:
         print(f"Lorin Engine: Successfully rebuilt BM25 index with {len(chunks)} chunks.")
 
     async def _safe_vercel_request(self, data, label="Request", span=None):
+        # Scan for any Vercel AI Gateway key (vck_ or vcp_)
         gateway_key = os.getenv('VERCEL_AI_KEY_6') or os.getenv('VERCEL_AI_KEY_5') or os.getenv('AI_GATEWAY_API_KEY')
+        
         if not gateway_key:
             for key, value in os.environ.items():
-                if value.startswith("vck_"):
+                # Support both legacy (vck_) and new (vcp_) Vercel keys
+                if value and (value.startswith("vck_") or value.startswith("vcp_")):
                     gateway_key = value
                     break
-        if not gateway_key: return "Error: No AI Key found."
+        
+        if not gateway_key: return f"Error: No AI Gateway Key (vck_/vcp_) found for {label}."
             
         headers = {"Authorization": f"Bearer {gateway_key}", "Content-Type": "application/json"}
         try:
