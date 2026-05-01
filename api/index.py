@@ -119,7 +119,13 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
 # --- App Setup ---
-request_obj = HTTPXRequest(connect_timeout=20.0, read_timeout=20.0)
+# Set to 300s (5 minutes) to wait out cloud-tier IP throttling
+request_obj = HTTPXRequest(
+    connect_timeout=300.0, 
+    read_timeout=300.0, 
+    write_timeout=300.0,
+    pool_timeout=300.0
+)
 application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
 
 def start_bot():
@@ -127,12 +133,24 @@ def start_bot():
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     
-    # Initialize Application & Set Webhook
+    # Initialize Application & Set Webhook with Retries
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(application.initialize())
-    loop.run_until_complete(application.start())
-    loop.run_until_complete(application.bot.set_webhook(url=f"{SPACE_URL}/telegram-webhook"))
-    logger.info(f"Webhook set to: {SPACE_URL}/telegram-webhook")
+    
+    for attempt in range(1, 6):
+        try:
+            logger.info(f"Bot Initialization Attempt {attempt}/5...")
+            loop.run_until_complete(application.initialize())
+            loop.run_until_complete(application.start())
+            loop.run_until_complete(application.bot.set_webhook(url=f"{SPACE_URL}/telegram-webhook"))
+            logger.info(f"✅ SUCCESS! Webhook set to: {SPACE_URL}/telegram-webhook")
+            break
+        except Exception as e:
+            logger.error(f"⚠️ Attempt {attempt} failed: {e}")
+            if attempt == 5:
+                logger.error("CRITICAL: All initialization attempts failed. Exiting.")
+                sys.exit(1)
+            import time
+            time.sleep(10) # Wait 10 seconds before retrying
 
     # Start Flask
     app.run(host='0.0.0.0', port=PORT)
