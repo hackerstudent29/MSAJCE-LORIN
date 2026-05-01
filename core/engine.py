@@ -165,9 +165,10 @@ Return JSON: {category, search_query, direct_response, is_count_only, is_repetit
 CATEGORIES: DEVELOPER, GREETING, INSTITUTIONAL.
 
 STRICT RULES:
-1. MARKETING MODE: If user is critical of MSAJCE, compares it to others, or asks "is it good?", set marketing_mode to true.
-2. DEVELOPER IDENTITY: If the query mentions 'ram', 'developer', or 'who built u', set category to DEVELOPER.
-3. REPETITION: If 'is_repetition' is true, rewrite 'search_query' to find DEEPER details.
+1. MARKETING MODE: If user is critical, compares colleges, or asks "why join?", set marketing_mode to true. 
+   REWRITE search_query to find: "NAAC A+ Grade, NBA accreditation, placement records, ranking, RAISE center, and 1301 code".
+2. DEVELOPER IDENTITY: If 'ram' is mentioned, set category to DEVELOPER.
+3. REPETITION: If 'is_repetition' is true, find DEEPER details.
 4. IDENTITY PROTECTION: Srinivasan/Principal = INSTITUTIONAL.
 5. FOLLOW-UPS: Always prompt for more about Zenify, Zenpay, or Lorin RAG for DEVELOPER queries.
 """}, 
@@ -188,7 +189,7 @@ STRICT RULES:
         context_chunks = await self.get_context(search_query, trace)
         context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
 
-        # 3. Generation (Restored Rich Prompt & Marketing Advocacy)
+        # 3. Generation (Restored Rich Prompt & Peak Marketing Advocacy)
         is_count_only = p.get("is_count_only", False) if p else False
         is_repetition = p.get("is_repetition", False) if p else False
         marketing_mode = p.get("marketing_mode", False) if p else False
@@ -199,14 +200,13 @@ TONE & STYLE:
 - Interactive, friendly, and natural. 
 - DEFAULT: Use casual B2 level English.
 - ADAPTIVE: If the user speaks in C1 or C2 level English, mirror that level exactly.
-- VARIETY: Never repeat the exact same intro or info. 
-- {"MARKETING MODE: Defend MSAJCE at peak level. Use high-level data like the NAAC A+ Grade and the location in the SIPCOT IT Park. Be proud, persuasive, and interactive. Highlight the unique advantages of being in the heart of industry." if marketing_mode else ""}
+- {"MARKETING MODE: You are a PEAK ADVOCATE. Defend MSAJCE with ELITE DATA. You MUST mention: NAAC A+ Grade, NBA Accreditations, the 1301 TNEA Code, and our SIPCOT IT Park location. Explain that we are 'The Heart of Industry'. Be proud, persuasive, and interactive. Use real stats from the context." if marketing_mode else ""}
 
 STRICT RULES:
 1. SYMBOL BAN: NEVER use '*' or '-' for bullets. Strictly use '•' ONLY for all lists.
 2. NO HEADERS: Strictly NO '***' or '####' (headers).
-3. PROCESS QUERIES: If the user asks about a "Process" or "How it works", provide a STEP-BY-STEP (Step 1, Step 2...) explanation. 
-4. MEMORY: If {is_repetition}, acknowledge what you already said and provide NEW details or a different perspective.
+3. PROCESS QUERIES: If the user asks about a "Process", provide a STEP-BY-STEP (Step 1, Step 2...) explanation. 
+4. MEMORY: If {is_repetition}, acknowledge what you already said and provide NEW ELITE details.
 5. LISTS: List EVERY unique name found in context. Use '•' for bullets. Bold names. 
 6. FORMATTING: Use markdown bolding (**) for emphasis. Keep paragraphs short. 
 7. RAMANATHAN: If query is about the dev, use the profile. ALWAYS ask if they want to know about Zenify or Zenpay.
