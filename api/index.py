@@ -138,7 +138,11 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await update.message.reply_text(f"⚠️ Warning {val}/10: Abuse/Spam detected.")
             return
 
-    thinking_msg = await update.message.reply_text("🔍 Analyzing...")
+    # 1. Show "is typing..." animation at the top
+    await context.bot.send_chat_action(chat_id=update.effective_chat.id, action="typing")
+    
+    # 2. Use a subtle waving dots placeholder
+    thinking_msg = await update.message.reply_text("...")
     
     try:
         redis_key = f"user_{user_id}_history"
