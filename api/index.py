@@ -93,6 +93,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def home():
     return "<h1>🚀 Lorin Bot (Vercel Serverless)</h1><p>Bot is active via Webhook.</p>", 200
 
+@app.route('/favicon.ico')
+def favicon():
+    return '', 204
+
 @app.route('/api/webhook', methods=['POST'])
 async def webhook():
     """Receiver for Telegram updates on Vercel."""
