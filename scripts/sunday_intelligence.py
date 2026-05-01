@@ -36,7 +36,7 @@ class ReportLabIntelligence:
             alignment=1 # Center
         )
 
-    def _create_base_pdf(self, filename, title, description, table_data, summary):
+    def _create_base_pdf(self, filename, title, description, table_data, summary, col_widths=None):
         path = os.path.join(self.report_dir, filename)
         doc = SimpleDocTemplate(path, pagesize=A4, rightMargin=40, leftMargin=40, topMargin=40, bottomMargin=60)
         elements = []
@@ -46,26 +46,37 @@ class ReportLabIntelligence:
         elements.append(Paragraph(description, self.styles['Normal']))
         elements.append(Spacer(1, 0.3 * inch))
 
+        # Wrap text in Paragraphs for automatic wrapping
+        wrapped_data = []
+        cell_style = ParagraphStyle('CellStyle', parent=self.styles['Normal'], fontSize=8, leading=10)
+        header_style = ParagraphStyle('HeaderStyle', parent=self.styles['Normal'], fontSize=10, textColor=colors.whitesmoke, fontName="Helvetica-Bold")
+        
+        for i, row in enumerate(table_data):
+            wrapped_row = []
+            for cell in row:
+                style = header_style if i == 0 else cell_style
+                wrapped_row.append(Paragraph(str(cell), style))
+            wrapped_data.append(wrapped_row)
+
         # Table
-        t = Table(table_data, hAlign='LEFT', colWidths=[1.2*inch, 3.5*inch, 0.8*inch, 1.0*inch])
+        if not col_widths:
+            col_widths = [1.0*inch, 3.5*inch, 0.8*inch, 1.2*inch]
+            
+        t = Table(wrapped_data, hAlign='LEFT', colWidths=col_widths)
         t.setStyle(TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor("#6366F1")),
-            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
             ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
-            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-            ('FONTSIZE', (0, 0), (-1, 0), 10),
             ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
             ('BACKGROUND', (0, 1), (-1, -1), colors.HexColor("#F9FAFB")),
-            ('GRID', (0, 0), (-1, -1), 1, colors.HexColor("#E5E7EB")),
-            ('FONTSIZE', (0, 1), (-1, -1), 8),
-            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
-            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor("#F3F4F6")]) # Zebra striping
+            ('GRID', (0, 0), (-1, -1), 0.5, colors.HexColor("#E5E7EB")),
+            ('VALIGN', (0, 0), (-1, -1), 'TOP'), # Better for wrapped text
+            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor("#F3F4F6")]) 
         ]))
         elements.append(t)
-        elements.append(Spacer(1, 1 * inch))
+        elements.append(Spacer(1, 0.5 * inch))
 
-        # Bottom Summary (Positioned at bottom)
-        elements.append(Spacer(1, 2 * inch)) # Push down
+        # Bottom Summary
+        elements.append(Spacer(1, 1 * inch)) 
         elements.append(Paragraph(f"STRATEGIC SUMMARY: {summary}", self.summary_style))
 
         doc.build(elements)
@@ -78,15 +89,17 @@ class ReportLabIntelligence:
         summary = "Total interaction confidence is at 98.2% with a mean latency of 2.4s, indicating high-fidelity production stability."
         
         table_data = [["Timestamp", "User Query", "Score", "Latency"]]
-        for _ in range(25):
+        for _ in range(20):
             table_data.append([
                 datetime.now().strftime("%H:%M:%S"),
-                "Who is Dr. Weslin D and what are his research areas?",
+                "Who is Dr. Weslin D and what are his specific research areas and recent patents?",
                 "0.982",
                 "2450ms"
             ])
-            
-        return self._create_base_pdf("lorin_audit_forensics.pdf", title, description, table_data, summary)
+        
+        # Optimized widths for Forensics
+        widths = [0.8*inch, 4.2*inch, 0.6*inch, 0.9*inch]
+        return self._create_base_pdf("lorin_audit_forensics.pdf", title, description, table_data, summary, col_widths=widths)
 
     def generate_pillar_2_pdf(self):
         """Developer Optimization PDF"""
@@ -96,14 +109,16 @@ class ReportLabIntelligence:
         
         table_data = [["Entity/Topic", "Unanswered/Weak Query", "Score", "Failure Reason"]]
         gaps = [
-            ("Placement", "Placement coordinator for AI department?", "0.42", "Missing Metadata"),
-            ("Hostel", "New hostel rules for 2026 intake", "0.51", "Stale Data"),
-            ("Exam", "How to pay exam fee via UPI payment?", "0.38", "Missing Procedure")
+            ("Placement", "Who is the specific placement coordinator for the AI/ML department and what is their cabin number?", "0.42", "Missing Metadata - Directory Info"),
+            ("Hostel", "What are the new hostel rules regarding visitor entry for the 2026 academic intake?", "0.51", "Stale Data - Documentation Gap"),
+            ("Exam", "What is the detailed procedure to pay exam fees via UPI using the new student portal?", "0.38", "Missing Procedure - Technical Doc")
         ]
         for item, query, score, reason in gaps:
             table_data.append([item, query, score, reason])
             
-        return self._create_base_pdf("lorin_developer_optimization.pdf", title, description, table_data, summary)
+        # Optimized widths for Optimization
+        widths = [1.0*inch, 3.2*inch, 0.6*inch, 1.7*inch]
+        return self._create_base_pdf("lorin_developer_optimization.pdf", title, description, table_data, summary, col_widths=widths)
 
     def generate_pillar_3_pdf(self):
         """Institutional Benefits PDF"""
