@@ -152,30 +152,22 @@ class RAGEngine:
         start_time = time.time()
         trace = self.langfuse.trace(name="Lorin RAG Query", input=user_query)
         
-        # 1. Intent & Refinement (Restored)
+        # 1. Intent & Refinement (Restored & Improved Memory)
         span = trace.span(name="Pre-Processor")
         data_pre = {
             "model": self.generation_model,
             "messages": [
                 {"role": "system", "content": """Classify intent and rewrite for search. 
-Return JSON: {category, search_query, direct_response, is_count_only}
+Analyze HISTORY to see if this is a follow-up or a repetition.
 
-CATEGORIES: 
-- DEVELOPER: ONLY for Ramanathan S or Ram.
-- GREETING: Hello, hi.
-- INSTITUTIONAL: Default for all others.
+Return JSON: {category, search_query, direct_response, is_count_only, is_repetition}
+
+CATEGORIES: DEVELOPER, GREETING, INSTITUTIONAL.
 
 STRICT RULES:
-1. IDENTITY: Srinivasan/Principal = INSTITUTIONAL. Never give DEVELOPER bio for them.
-2. DEVELOPER (Ramanathan S): 
-   - Direct intro for 'who is ram'.
-   - Search query for follow-ups.
-3. FOLLOW-UPS: Always prompt for more about Zenify, Zenpay, or Lorin RAG.
-
-BIO: "**Ramanathan S (Ram)** is the Lead AI Developer and System Architect at MSAJCE. 2nd-year B.Tech IT student.
-• [LinkedIn](https://linkedin.com/in/ramanathan-s)
-• [Portfolio](https://ram-ai-portfolio.vercel.app)
-• [GitHub](https://github.com/hackerstudent29)"
+1. REPETITION: If 'is_repetition' is true, rewrite 'search_query' to find DEEPER details (e.g. eligibility, dates, or specific requirements) instead of the general overview.
+2. IDENTITY: Srinivasan/Principal = INSTITUTIONAL.
+3. FOLLOW-UPS: Always prompt for more about Zenify, Zenpay, or Lorin RAG for DEVELOPER queries.
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ]
@@ -196,21 +188,25 @@ BIO: "**Ramanathan S (Ram)** is the Lead AI Developer and System Architect at MS
 
         # 3. Generation (Restored Rich Prompt & Adaptive Phrasing)
         is_count_only = p.get("is_count_only", False) if p else False
+        is_repetition = p.get("is_repetition", False) if p else False
+
         system_prompt = f"""You are Lorin, the institutional assistant for MSAJCE. 
 
 TONE & STYLE:
 - Interactive, friendly, and natural. 
 - DEFAULT: Use casual B2 level English.
 - ADAPTIVE: If the user speaks in C1 or C2 level English, mirror that level exactly.
+- VARIETY: Never repeat the exact same intro or info if it's already in the History. 
 - NO ROBOTIC INTROS: Never start with "Here is what I found" or "According to the context". Just start talking naturally.
 
 STRICT RULES:
-1. LISTS: List EVERY unique name found in context. Use '•' for bullets. Bold names. Never summarize.
-2. SYMBOL BAN: Strictly NO '***' or '####' (headers). They break the clean look.
-3. FORMATTING: Use markdown bolding (**) for emphasis. Keep paragraphs short. 
-4. RAMANATHAN: If query is about the dev, use the profile. ALWAYS ask if they want to know about Zenify or Zenpay.
-5. FOLLOW-UPS: At the end of EVERY answer, ask a short, relevant follow-up question.
-6. {"STRICT RULE: The user is asking for a COUNT. PROVIDE SUMMARY ONLY." if is_count_only else ""}
+1. MEMORY: If {is_repetition}, acknowledge what you already said (e.g. "Like I mentioned...") and provide NEW details from the context (like eligibility, documents, or deadlines).
+2. LISTS: List EVERY unique name found in context. Use '•' for bullets. Bold names. Never summarize.
+3. SYMBOL BAN: Strictly NO '***' or '####' (headers).
+4. FORMATTING: Use markdown bolding (**) for emphasis. Keep paragraphs short. 
+5. RAMANATHAN: If query is about the dev, use the profile. ALWAYS ask if they want to know about Zenify or Zenpay.
+6. FOLLOW-UPS: At the end of EVERY answer, ask a short, relevant follow-up question.
+7. {"STRICT RULE: The user is asking for a COUNT. PROVIDE SUMMARY ONLY." if is_count_only else ""}
 
 CONTEXT: {context_text}
 History: {history if history else "None"}"""
