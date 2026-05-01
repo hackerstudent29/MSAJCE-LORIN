@@ -23,9 +23,11 @@ class RAGEngine:
     def __init__(self):
         try:
             pc_key = os.getenv("PINECONE_API_KEY")
+            index_name = os.getenv("PINECONE_INDEX_NAME", "quickstart")
             if not pc_key: raise ValueError("Missing PINECONE_API_KEY")
             self.pc = Pinecone(api_key=pc_key)
-            self.index = self.pc.Index("quickstart")
+            self.index = self.pc.Index(index_name)
+            print(f"Lorin Engine: Connected to Pinecone index: {index_name}")
         except Exception as e:
             print(f"Lorin Engine: Pinecone Init Error: {e}")
             self.index = None
