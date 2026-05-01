@@ -3,6 +3,8 @@ import sys
 import logging
 import json
 import asyncio
+import time
+import re
 from flask import Flask, request
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
@@ -34,8 +36,57 @@ def get_clean_env(key, default=""):
 
 TOKEN = get_clean_env("TELEGRAM_BOT_TOKEN")
 
+# --- Security Config ---
+ABUSIVE_WORDS = [
+    "badword1", "badword2" # User: Add more here or use a library
+]
+
+async def check_security(user_id, text, engine):
+    """Checks for abuse, spam, and blocks. Returns (is_allowed, reason, retry_after_hours)"""
+    now = int(time.time())
+    
+    # 1. Check if currently blocked
+    block_key = f"user_{user_id}_blocked_until"
+    blocked_until = await engine.redis.get(block_key)
+    if blocked_until and int(blocked_until) > now:
+        remaining = (int(blocked_until) - now) // 3600
+        return False, "BLOCKED", remaining if remaining > 0 else 1
+
+    # 2. Check for Abuse/Profanity
+    is_abusive = any(re.search(rf"\b{word}\b", text, re.I) for word in ABUSIVE_WORDS)
+    
+    # 3. Check for Spam (Rate Limiting + Duplicate)
+    last_msg_key = f"user_{user_id}_last_msg"
+    last_data = await engine.redis.get(last_msg_key)
+    is_spam = False
+    if last_data:
+        last_data = json.loads(last_data)
+        if now - last_data['time'] < 2: is_spam = True # Too fast
+        if text == last_data['text']: is_spam = True # Duplicate/Copy-paste
+
+    # 4. Handle Strikes if Abusive or Spam
+    if is_abusive or is_spam:
+        strike_key = f"user_{user_id}_strikes"
+        strikes = await engine.redis.incr(strike_key)
+        
+        # Determine Block Duration
+        duration = 0
+        if strikes >= 10: duration = 7 * 24 # 1 Week
+        elif strikes >= 5: duration = 24 # 1 Day
+        elif strikes >= 3: duration = 6 # 6 Hours
+        
+        if duration > 0:
+            await engine.redis.set(block_key, now + (duration * 3600))
+            return False, f"BANNED_{duration}", duration
+        
+        return False, "WARNING", strikes
+
+    # Update last message data
+    await engine.redis.set(last_msg_key, json.dumps({"time": now, "text": text}), ex=300)
+    return True, None, 0
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("MSAJCE Institutional Brain Active (Vercel Serverless). I am ready.")
+    await update.message.reply_text("👋 Hello! I am Lorin, your college assistant. Ask me anything about MSAJCE!")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.message or not update.message.text: return
@@ -43,6 +94,20 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
     
     global _engine
+    
+    # --- SECURITY CHECK ---
+    is_allowed, reason, val = await check_security(user_id, user_query, _engine)
+    
+    if not is_allowed:
+        if reason == "BLOCKED":
+            return # Silent ignore if already blocked
+        if reason.startswith("BANNED"):
+            await update.message.reply_text(f"🛑 Access Denied. Due to repeated violations, you are blocked for {val} hours.")
+            return
+        if reason == "WARNING":
+            await update.message.reply_text(f"⚠️ Warning {val}/10: Abuse or Spam detected. Your ID has been logged. Further violations will result in a block.")
+            return
+
     thinking_msg = await update.message.reply_text("🔍 Analyzing institutional database...")
     
     try:
@@ -66,38 +131,25 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await context.bot.edit_message_text(
             chat_id=update.effective_chat.id,
             message_id=thinking_msg.message_id,
-            text=f"Oops! Snag: {str(e)}"
+            text=f"The system is busy or encountered a brief error. Please try again in a moment."
         )
 
 async def get_bot_app():
-    """Serverless-safe application getter."""
     global _application, _engine, _app_ready
-    
-    if _engine is None:
-        _engine = RAGEngine()
-        
+    if _engine is None: _engine = RAGEngine()
     if _application is None:
         request_obj = HTTPXRequest(connect_timeout=30.0, read_timeout=30.0)
         _application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
         _application.add_handler(CommandHandler("start", start))
         _application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-        
-    # Always ensure initialization state if the loop was reset
     if not _app_ready:
         await _application.initialize()
         _app_ready = True
-    
     return _application
 
-# --- Vercel Routes ---
 @app.route('/')
 def home():
     return "<h1>🚀 Lorin Bot (Vercel Serverless)</h1><p>Bot is active via Webhook.</p>", 200
-
-@app.route('/debug-vercel')
-def debug_vercel():
-    vars_to_check = ["TELEGRAM_BOT_TOKEN", "PINECONE_API_KEY", "OPENROUTER_API_KEY"]
-    return {v: "OK" if os.getenv(v) else "MISSING" for v in vars_to_check}, 200
 
 @app.route('/api/webhook', methods=['POST'])
 async def webhook():
@@ -116,17 +168,9 @@ async def set_webhook():
     webhook_url = f"https://{host}/api/webhook"
     try:
         bot_app = await get_bot_app()
-        # Use a fresh request to set webhook to avoid loop issues
         await bot_app.bot.set_webhook(url=webhook_url)
-        info = await bot_app.bot.get_webhook_info()
-        return {
-            "success": True,
-            "url": info.url,
-            "pending_updates": info.pending_update_count,
-            "last_error": info.last_error_message
-        }, 200
+        return {"success": True, "url": webhook_url}, 200
     except Exception as e:
         return f"❌ FAILED: {str(e)}", 500
 
-# Export for Vercel
 app_handler = app
