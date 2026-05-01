@@ -159,10 +159,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         async for chunk in _engine.query_stream(user_query, history=history_str):
             full_response += chunk
             
-            # Character-by-character drip-feed logic
+            # High-Speed Character drip-feed logic
             while len(displayed_text) < len(full_response):
-                # Add 1 character at a time at a high-speed typing rate (approx 16 chars/sec)
-                displayed_text = full_response[:len(displayed_text) + 1]
+                # Add 2 characters at a time for high-velocity typing (approx 40 chars/sec)
+                displayed_text = full_response[:len(displayed_text) + 2]
                 
                 # Update Telegram every ~0.25s
                 if time.time() - last_update_time > 0.25:
@@ -176,12 +176,12 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     except: 
                         await asyncio.sleep(0.1)
                 
-                # Wait 0.06s between characters (approx 16-17 chars/sec)
-                await asyncio.sleep(0.06)
+                # Faster micro-sleep (0.05s) for snappy delivery
+                await asyncio.sleep(0.05)
 
-        # Final Drain: Ensure the rest of the text types out if the LLM finished faster than the drip
+        # Final Drain: Quickly flush remaining text
         while len(displayed_text) < len(full_response):
-            displayed_text = full_response[:len(displayed_text) + 1]
+            displayed_text = full_response[:len(displayed_text) + 3] # Snappier drain
             if time.time() - last_update_time > 0.25:
                 try:
                     await context.bot.edit_message_text(
@@ -191,7 +191,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     )
                     last_update_time = time.time()
                 except: pass
-            await asyncio.sleep(0.04) # Slightly faster drain at the very end
+            await asyncio.sleep(0.03)
 
         # Final Update (Perfect Markdown & No Cursor)
         try:
