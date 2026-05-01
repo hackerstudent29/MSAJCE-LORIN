@@ -127,7 +127,7 @@ async def check_security(user_id, text, engine):
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
     admin_status = "👑 Admin Access" if user_id in ADMIN_IDS else "🎓 Student Access"
-    await update.message.reply_text(f"👋 Lorin Active.\nMode: {admin_status}")
+    await update.message.reply_text(f"👋 Lorin Active.\nMode: {admin_status}", parse_mode="Markdown")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.message or not update.message.text: return
@@ -158,7 +158,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         words = answer.split()
         if len(words) < 15:
             # Short answers: Just send it
-            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer)
+            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer, parse_mode="Markdown")
         else:
             # Long answers: Reveal in 5 chunks to simulate typing
             chunk_count = 5
@@ -171,10 +171,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 except: continue
             
             # Final clean update
-            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer)
+            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer, parse_mode="Markdown")
     except Exception as e:
         logger.error(f"Error: {e}")
-        await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.")
+        await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.", parse_mode="Markdown")
 
 async def create_app():
     global _engine
