@@ -59,7 +59,8 @@ def check_network():
     targets = ["https://www.google.com", "https://api.telegram.org"]
     for url in targets:
         try:
-            r = requests.get(url, timeout=5)
+            # Increased timeout for diagnostic to 30s to detect high latency
+            r = requests.get(url, timeout=30)
             print(f"✅ Reachable: {url} (Status: {r.status_code})")
         except Exception as e:
             print(f"❌ Unreachable: {url} (Error: {e})")
@@ -69,11 +70,14 @@ check_network()
 
 # Initialize Telegram Application with extreme timeouts for HF
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+
+# Consolidate ALL timeouts into the Request object to avoid RuntimeError
+# Setting to 300s (5 minutes) to wait out IP throttling
 request_obj = HTTPXRequest(
-    connect_timeout=120.0, 
-    read_timeout=120.0, 
-    write_timeout=120.0,
-    pool_timeout=120.0,
+    connect_timeout=300.0, 
+    read_timeout=300.0, 
+    write_timeout=300.0,
+    pool_timeout=300.0,
     connection_pool_size=20
 )
 
@@ -89,13 +93,12 @@ async def post_init(app):
             except Exception as e:
                 print(f"Could not notify admin {admin_id}: {e}")
 
+# IMPORTANT: Do NOT set get_updates_read_timeout here if request_obj is used
 application = (
     ApplicationBuilder()
     .token(TOKEN)
     .request(request_obj)
     .post_init(post_init)
-    .get_updates_read_timeout(100)
-    .get_updates_connect_timeout(100)
     .build()
 )
 
