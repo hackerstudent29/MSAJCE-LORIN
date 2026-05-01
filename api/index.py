@@ -29,7 +29,32 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "<h1>🚀 Lorin Bot is ONLINE</h1><p>The institutional brain is active and connected to Telegram.</p>", 200
+    return """
+    <h1>🚀 Lorin Bot is ONLINE</h1>
+    <p>The institutional brain is active and connected to Telegram.</p>
+    <hr>
+    <h3>Diagnostic Tools:</h3>
+    <ul>
+        <li><a href="/health">Health Check</a></li>
+        <li><a href="/debug">Environment Debug</a></li>
+        <li><a href="/test-telegram"><b>Test Telegram Connection (Send me a DM)</b></a></li>
+    </ul>
+    """, 200
+
+@app.route('/test-telegram')
+async def test_telegram():
+    admin_id = os.getenv("ADMIN_IDS", "").split(",")[0].strip()
+    if not admin_id:
+        return "Error: No ADMIN_IDS found in environment.", 400
+    
+    try:
+        # Create a temporary bot instance to test connection
+        from telegram import Bot
+        test_bot = Bot(token=TOKEN)
+        await test_bot.send_message(chat_id=admin_id, text="🔔 Manual Connection Test: If you see this, Lorin can talk to Telegram!")
+        return f"✅ SUCCESS! A test message has been sent to Admin ID: {admin_id}. Check your Telegram!", 200
+    except Exception as e:
+        return f"❌ FAILED! Could not reach Telegram. Error: {e}", 500
 
 @app.route('/health')
 def health():
