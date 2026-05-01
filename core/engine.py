@@ -39,9 +39,18 @@ STAT_SIGNALS = [
 
 def classify_query(query: str) -> str:
     q = query.lower()
+    # Typo-resistant person detection (wo is, ho is, etc.)
+    if any(s in q for s in ["who is", "who are", "wo is", "ho is", "tell me about"]):
+        return "person"
+        
     if any(s in q for s in LIST_SIGNALS):   return "list"
     if any(s in q for s in PERSON_SIGNALS): return "person"
     if any(s in q for s in STAT_SIGNALS):   return "stat"
+    
+    # Fallback: If it looks like a name (2-3 words capitalized or specific names)
+    if any(name in q for name in ["yogesh", "saqlin", "mustaq", "vimal", "ram", "santhosh"]):
+        return "person"
+        
     return "fact"
 
 class RAGEngine:
@@ -204,7 +213,10 @@ STRICT RULES:
             pre_res += chunk
         p = self._safe_json_parse(pre_res)
         
-        if p and p.get("direct_response"):
+        # 1B. DIRECT-TRAP KILLER (Master Rule Section 1A)
+        # Never allow a 'direct_response' (refusal) for institutional names or personnel.
+        is_greeting = p and p.get("category") == "GREETING"
+        if p and p.get("direct_response") and is_greeting:
             yield p.get("direct_response"); return
 
         # 2. Context Retrieval
@@ -215,18 +227,19 @@ STRICT RULES:
         
         # IDENTITY FAST-PASS (Master Rule Section 1A)
         # Force-recognize developer AND key student leaders
-        if intent == "DEVELOPER" or "yogesh" in user_query.lower():
+        lower_q = user_query.lower()
+        if intent == "DEVELOPER" or "yogesh" in lower_q or "saqlin" in lower_q:
             profile_chunk = next((c for c in self.bm25.corpus if c["chunk_id"] == "PROFILE_RAMANATHAN_S"), None)
             yogesh_chunk = next((c for c in self.bm25.corpus if "msajce_incubation_chunk_06" in c["chunk_id"]), None)
+            saqlin_chunk = next((c for c in self.bm25.corpus if "Professional_Societies" in c["metadata"].get("source_file", "")), None)
             
-            if intent == "DEVELOPER" and profile_chunk:
-                context_chunks.insert(0, profile_chunk)
-            if "yogesh" in user_query.lower() and yogesh_chunk:
-                context_chunks.insert(0, yogesh_chunk)
+            if intent == "DEVELOPER" and profile_chunk: context_chunks.insert(0, profile_chunk)
+            if "yogesh" in lower_q and yogesh_chunk: context_chunks.insert(0, yogesh_chunk)
+            if "saqlin" in lower_q and saqlin_chunk: context_chunks.insert(0, saqlin_chunk)
         
         # Cleanup encoding artifacts and non-printable chars for LLM clarity
         def clean_text(t):
-            t = re.sub(r'[^\x00-\x7F]+', ' ', t) # Strip non-ascii (like )
+            t = re.sub(r'[^\x00-\x7F]+', ' ', t)
             return t.replace('  ', ' ').strip()
 
         context_text = "\n\n".join([f"[Source {i+1}]: {clean_text(c['text'])}" for i, c in enumerate(context_chunks[:5])])

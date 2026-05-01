@@ -112,7 +112,9 @@ class MasterIngestor:
                 token_count = estimate_tokens(text)
 
                 # Skip Threshold (Master Rule Section 2B)
-                min_threshold = LIST_MIN_TOKENS if chunk_type == "group_list" else MIN_TOKENS
+                # DANGER: Personnel data can be short. NEVER skip if it looks like a person record.
+                is_person = "persons" in chunk.get("entities", {}) or "bearer" in chunk.get("section", "").lower()
+                min_threshold = 0 if is_person else (LIST_MIN_TOKENS if chunk_type == "group_list" else MIN_TOKENS)
                 if token_count < min_threshold:
                     continue
 
