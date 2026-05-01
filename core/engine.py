@@ -197,15 +197,28 @@ class RAGEngine:
 
         # 3. Generation
         gen_span = trace.span(name="Generation")
-        sys_prompt = "You are Lorin, MSAJCE college buddy. Answer based ONLY on context. Use bullet lists for multiple items. End with a follow-up question. Return JSON: {answer}"
+        # 4. Generate Final Answer
+        system_prompt = f"""You are Lorin, the institutional assistant for MSAJCE (Mohamed Sathak A.J. College of Engineering).
+Your goal is to provide accurate, polite, and natural language answers based ONLY on the provided context.
+
+RULES:
+1. NEVER output raw JSON or code snippets unless specifically asked for code.
+2. If the data looks like a record (name, qualification, etc.), summarize it into a nice sentence.
+3. If you don't know the answer, say you don't know politely.
+4. Keep answers concise and helpful.
+
+CONTEXT:
+{context_text}
+
+Conversation History:
+{history if history else "No previous history."}"""
         data_gen = {
             "model": self.generation_model,
-            "messages": [{"role": "system", "content": sys_prompt}, {"role": "user", "content": f"Context: {context_text}\nQuery: {user_query}"}],
+            "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": f"Query: {user_query}"}],
             "max_tokens": 800
         }
         res_gen = await self._safe_vercel_request(data_gen, label="Generator", span=gen_span)
-        p_gen = self._safe_json_parse(res_gen)
         
-        final_answer = p_gen.get("answer", res_gen) if p_gen else res_gen
+        final_answer = res_gen
         trace.update(output=final_answer)
         return final_answer
