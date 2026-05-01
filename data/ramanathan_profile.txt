@@ -45,6 +45,6 @@
 - **Portfolio:** [https://ram-ai-portfolio.vercel.app](https://ram-ai-portfolio.vercel.app)
 - **LinkedIn:** [https://linkedin.com/in/ramanathan-s](https://linkedin.com/in/ramanathan-s)
 - **GitHub:** [https://github.com/hackerstudent29](https://github.com/hackerstudent29)
-- **Email:** [ramanathan.s.dev@gmail.com]
+- **Email:** [ramanathanb86@gmail.com]
 
 *Lorin Bot: "Engineered with precision by Ramanathan S. For technical inquiries or system integration, contact the Lead Architect directly."*
