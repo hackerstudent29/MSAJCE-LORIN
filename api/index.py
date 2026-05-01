@@ -154,7 +154,24 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         history.append({"q": user_query, "a": answer})
         await _engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
         
-        await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer)
+        # Simulated Streaming Effect (Typing word by word)
+        words = answer.split()
+        if len(words) < 15:
+            # Short answers: Just send it
+            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer)
+        else:
+            # Long answers: Reveal in 5 chunks to simulate typing
+            chunk_count = 5
+            chunk_size = len(words) // chunk_count
+            for i in range(1, chunk_count):
+                partial_text = " ".join(words[:i * chunk_size]) + " ▌"
+                try:
+                    await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=partial_text)
+                    await asyncio.sleep(0.4)
+                except: continue
+            
+            # Final clean update
+            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer)
     except Exception as e:
         logger.error(f"Error: {e}")
         await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.")
