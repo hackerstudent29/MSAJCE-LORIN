@@ -1,0 +1,369 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Department of Science and Humanities — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/sh.php",
+    "sections_covered": [
+      "Department Overview",
+      "Vision and Mission",
+      "Programme Details (referenced)",
+      "PEOs, PSOs and POs",
+      "Faculty 2024-2025",
+      "Faculty 2023-2024",
+      "Faculty 2022-2023",
+      "Faculty 2021-2022",
+      "Faculty 2020-2021",
+      "Department Facilities — Lab",
+      "Academics — Course Materials",
+      "Academics — Service Department Subjects",
+      "News and Events",
+      "Contact Information"
+    ],
+    "scraped_date": "2026-04-29",
+    "total_chunks": 7,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_sh",
+    "version": "1.0"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_sh_chunk_01",
+      "section": "Department Overview, Vision and Mission",
+      "source_url": "https://www.msajce-edu.in/sh.php#tab1",
+      "context": "Overview of the S&H department established in 2000, its role in engineering foundation, vision, mission and noted activities.",
+      "text": "Department of Science and Humanities (S&H) — MSAJCE\n\nThe department of S&H was started in the year 2000. This department lays the base for furthering into one's engineering career. Well experienced faculty with four doctorates contribute much in developing and moulding the students in enhancing their knowledge to comprehend the basic subjects for better exposure. Students are guided through with innovative teaching methods to make learning enjoyable. The laboratories available are well equipped to put into practice what the students have learnt in theory classes. In addition to Literary and Debating Club activity, students are also exposed to various activities like NSS, YRC, Physical Education and Yoga. The department holds the responsibility in making student-teacher and parent-teacher interaction possible.\n\nVision:\nTo be a centre of excellence for transforming students into proficient engineers through sustainable problems.\n\nMission:\nM1. Impart fundamental knowledge and necessary skills in Science & Humanities through innovative teaching and learning methodology\nM2. Inculcate critical thinking, ethics, lifelong learning and creativity needed for Industry and Society\nM3. Cultivate the students with all-round competencies, for career, higher education and self-employability\n\nKey Links:\n- Online Application: https://enrollonline.co.in/Registration/Apply/MSAJCE\n- 2021 Regulation Syllabus: https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf\n- 2017 Regulation Syllabus: https://www.msajce-edu.in/uploads/academics/2017Regulation.pdf\n- AICTE-ATAL FDP: https://www.msajce-edu.in/images/departments/sh/events/AICTE-6DAYSFDP.pdf",
+      "tables": [],
+      "possible_questions": [
+        "When was the S&H department established at MSAJCE?",
+        "What is the vision of Science and Humanities department at MSAJCE?",
+        "What is the mission of S&H department?",
+        "What activities does S&H department offer students?",
+        "What role does S&H department play in engineering education at MSAJCE?",
+        "Does S&H department have NSS and YRC activities?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": ["MSAJCE, Chennai"],
+        "numbers": ["Established 2000", "4 doctorates in faculty"]
+      },
+      "keywords": ["S&H", "science humanities", "department overview", "vision", "mission", "NSS", "YRC", "yoga", "literary debating club", "2000", "foundation subjects"],
+      "overlap_text": "",
+      "token_count": 370
+    },
+    {
+      "chunk_id": "msajce_sh_chunk_02",
+      "section": "PEOs, PSOs and Programme Outcomes (POs)",
+      "source_url": "https://www.msajce-edu.in/sh.php#tab2",
+      "context": "Programme Educational Objectives, Programme Specific Outcomes and all 12 Programme Outcomes for the S&H department (referenced under B.E. Mechanical Engineering).",
+      "text": "Programme Educational Objectives (PEOs):\nPEO1. Graduates will be prepared for designing mechanical components and systems, with creativity and sustainability\nPEO2. Graduates will be skilled in the use of modern tools for critical problem solving and analyzing industrial and societal requirements\nPEO3. Graduates will be prepared with managerial and leadership skills for career and starting up own firms\n\nProgram Specific Outcomes (PSOs):\nPSO1. Apply the acquired knowledge in mechanical engineering to solve industrial problems using modern tools\nPSO2. Develop cost effective and eco-friendly mechanical components and systems needed for the industry and society\n\nProgramme Outcomes (POs):\nPO1. Engineering knowledge: Apply mathematics, science and engineering fundamentals to complex problems\nPO2. Problem analysis: Identify, formulate and analyse complex engineering problems using first principles\nPO3. Design/development of solutions: Design solutions meeting specified needs with consideration for health, safety and environment\nPO4. Conduct investigation of complex problem: Use research-based knowledge, design of experiments and data analysis\nPO5. Modern tool usage: Apply appropriate techniques, resources and modern engineering/IT tools\nPO6. The engineer and society: Assess societal, health, safety, legal and cultural issues\nPO7. Environment and sustainability: Understand impact of engineering solutions and need for sustainable development\nPO8. Ethics: Apply ethical principles and commit to professional ethics\nPO9. Individual and team work: Function effectively as individual and in diverse multidisciplinary teams\nPO10. Communication: Communicate effectively through reports, documentation and presentations\nPO11. Project Management and Finance: Apply engineering and management principles to manage projects\nPO12. Life-long learning: Engage in independent and life-long learning in the context of technological change",
+      "tables": [
+        {
+          "table_title": "PEOs and PSOs",
+          "headers": ["Code", "Outcome"],
+          "rows": [
+            ["PEO1", "Designing mechanical components and systems with creativity and sustainability"],
+            ["PEO2", "Use modern tools for critical problem solving and industrial/societal analysis"],
+            ["PEO3", "Managerial and leadership skills for career and entrepreneurship"],
+            ["PSO1", "Apply mechanical engineering knowledge to solve industrial problems using modern tools"],
+            ["PSO2", "Develop cost-effective and eco-friendly mechanical components and systems"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What are the PEOs for S&H department at MSAJCE?",
+        "What are the programme outcomes for engineering at MSAJCE?",
+        "What are the PSOs for S&H at MSAJCE?",
+        "How many programme outcomes are there?",
+        "What is PO12 at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["3 PEOs", "2 PSOs", "12 POs"]
+      },
+      "keywords": ["PEO", "PSO", "PO", "programme outcomes", "OBE", "outcomes based education", "sustainability", "ethics", "teamwork", "lifelong learning"],
+      "overlap_text": "S&H department started in 2000. Vision: centre of excellence for transforming students into proficient engineers through sustainable practices. Mission M1: Impart fundamental knowledge through innovative teaching. M2: Inculcate critical thinking, ethics, lifelong learning. M3: Cultivate all-round competencies for career and higher education.",
+      "token_count": 450
+    },
+    {
+      "chunk_id": "msajce_sh_chunk_03",
+      "section": "Faculty 2024-2025 and 2023-2024",
+      "source_url": "https://www.msajce-edu.in/sh.php#tab4",
+      "context": "Complete faculty lists for S&H department for academic years 2024-2025 and 2023-2024 with designations, qualifications and joining dates.",
+      "text": "Faculty — Department of Science and Humanities\n\n2024-2025 (16 Faculty):\nS.No. | Name | Designation | Date of Joining | Qualification | Association\n1 | Dr. AMMU QUDSIYA A | Associate Professor | 22.12.2022 | Ph.D. | Regular\n2 | Mrs. SENTHIL LAKSHMI | Assistant Professor | 24.06.2019 | M.Phil. | Regular\n3 | Dr. KAVITHA J | Assistant Professor | 24.07.2023 | Ph.D. | Regular\n4 | Mrs. SALMA BANU | Assistant Professor | 28.11.2022 | M.Phil. | Regular\n5 | Mrs. RAJESHWARI S | Assistant Professor | 21.07.2023 | M.Phil. | Regular\n6 | Dr. BALAKRISHNAN A | Associate Professor | 15.07.2013 | Ph.D. | Regular\n7 | Mrs. JANANI K | Assistant Professor | 29.08.2022 | M.Phil. | Regular\n8 | Dr. RAMYA B | Assistant Professor | 03.08.2023 | Ph.D. | Regular\n9 | Mrs. SHOBANA V | Assistant Professor | 11.10.2019 | M.Phil. | Regular\n10 | Dr. AMUDHA S | Assistant Professor | 22.05.2023 | Ph.D. | Regular\n11 | Mr. BASKAR B | Assistant Professor | 16.08.2023 | M.Phil. | Regular\n12 | Dr. MUTHUMARI M | Assistant Professor | 23.08.2023 | Ph.D. | Regular\n13 | Mrs. SAIPRIYA K | Assistant Professor | 27.06.2016 | M.Phil. | Regular\n14 | Mrs. USHA S | Assistant Professor | 17.07.2019 | M.Phil. | Regular\n15 | Mrs. BARVEEN FATHIMA M | Assistant Professor | 01.03.2022 | M.Phil. | Regular\n16 | Dr. RAMASUDHA | Assistant Professor | 20.03.2024 | Ph.D. | Regular\n\n2023-2024 (17 Faculty):\n1 | Dr. AMMU QUDSIYA A | Associate Professor | 22.12.2022 | Ph.D. | Regular\n2 | Mrs. SUDHA S | Assistant Professor | 24.06.2019 | M.Phil. | Regular\n3 | Dr. KAVITHA J | Assistant Professor | 24.07.2023 | Ph.D. | Regular\n4 | Mrs. RAJESHWARI S | Assistant Professor | 21.07.2023 | M.Phil. | Regular\n5 | Dr. BALAKRISHNAN A | Associate Professor | 15.07.2013 | Ph.D. | Regular\n6 | Mrs. NITHYA A | Assistant Professor | 03.08.2023 | M.Phil. | Regular\n7 | Dr. SUVITHA A | Professor | 05.08.2020 | Ph.D. | Regular\n8 | Mrs. SHOBANA V | Assistant Professor | 11.10.2019 | M.Phil. | Regular\n9 | Dr. AMUDHA S | Assistant Professor | 22.05.2023 | Ph.D. | Regular\n10 | Mr. STEEPHENRAJ A | Assistant Professor | 28.11.2022 | M.Phil. | Regular\n11 | Mr. BASKAR B | Assistant Professor | 16.08.2023 | M.Phil. | Regular\n12 | Dr. MUTHUMARI M | Assistant Professor | 23.08.2023 | Ph.D. | Regular\n13 | Mrs. SAIPRIYA K | Assistant Professor | 27.06.2016 | M.Phil. | Regular\n14 | Mrs. USHA S | Assistant Professor | 17.07.2019 | M.Phil. | Regular\n15 | Mrs. BARVEEN FATHIMA M | Assistant Professor | 01.03.2022 | M.Phil. | Regular\n16 | Dr. RESHMI K V | Assistant Professor | 29.08.2022 | M.Phil. | Regular\n17 | Dr. NAZEEMA A | Assistant Professor | 20.03.2024 | Ph.D. | Regular",
+      "tables": [
+        {
+          "table_title": "Faculty 2024-2025",
+          "headers": ["S.No.", "Name", "Designation", "Joined", "Qualification"],
+          "rows": [
+            ["1","Dr. AMMU QUDSIYA A","Associate Professor","22.12.2022","Ph.D."],
+            ["2","Mrs. SENTHIL LAKSHMI","Assistant Professor","24.06.2019","M.Phil."],
+            ["3","Dr. KAVITHA J","Assistant Professor","24.07.2023","Ph.D."],
+            ["4","Mrs. SALMA BANU","Assistant Professor","28.11.2022","M.Phil."],
+            ["5","Mrs. RAJESHWARI S","Assistant Professor","21.07.2023","M.Phil."],
+            ["6","Dr. BALAKRISHNAN A","Associate Professor","15.07.2013","Ph.D."],
+            ["7","Mrs. JANANI K","Assistant Professor","29.08.2022","M.Phil."],
+            ["8","Dr. RAMYA B","Assistant Professor","03.08.2023","Ph.D."],
+            ["9","Mrs. SHOBANA V","Assistant Professor","11.10.2019","M.Phil."],
+            ["10","Dr. AMUDHA S","Assistant Professor","22.05.2023","Ph.D."],
+            ["11","Mr. BASKAR B","Assistant Professor","16.08.2023","M.Phil."],
+            ["12","Dr. MUTHUMARI M","Assistant Professor","23.08.2023","Ph.D."],
+            ["13","Mrs. SAIPRIYA K","Assistant Professor","27.06.2016","M.Phil."],
+            ["14","Mrs. USHA S","Assistant Professor","17.07.2019","M.Phil."],
+            ["15","Mrs. BARVEEN FATHIMA M","Assistant Professor","01.03.2022","M.Phil."],
+            ["16","Dr. RAMASUDHA","Assistant Professor","20.03.2024","Ph.D."]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Who are the faculty in S&H department at MSAJCE?",
+        "Who is Dr. Ammu Qudsiya?",
+        "Who is Dr. Balakrishnan A at MSAJCE?",
+        "How many faculty are in S&H department?",
+        "When did Dr. Balakrishnan join MSAJCE?",
+        "Who are the associate professors in S&H department?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. AMMU QUDSIYA A — Associate Professor",
+          "Dr. BALAKRISHNAN A — Associate Professor (joined 15.07.2013)",
+          "Dr. SUVITHA A — Professor",
+          "Dr. KAVITHA J — Assistant Professor",
+          "Dr. RAMYA B — Assistant Professor",
+          "Dr. AMUDHA S — Assistant Professor",
+          "Dr. MUTHUMARI M — Assistant Professor",
+          "Dr. RAMASUDHA — Assistant Professor",
+          "Dr. RESHMI K V — Assistant Professor",
+          "Dr. NAZEEMA A — Assistant Professor",
+          "Mrs. SENTHIL LAKSHMI — Assistant Professor",
+          "Mrs. SHOBANA V — Assistant Professor",
+          "Mrs. SAIPRIYA K — Assistant Professor",
+          "Mrs. USHA S — Assistant Professor",
+          "Mrs. BARVEEN FATHIMA M — Assistant Professor",
+          "Mr. BASKAR B — Assistant Professor",
+          "Mr. STEEPHENRAJ A — Assistant Professor"
+        ],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["16 faculty in 2024-2025","17 faculty in 2023-2024"]
+      },
+      "keywords": ["faculty","S&H staff","Dr Ammu Qudsiya","Dr Balakrishnan","Dr Suvitha","Dr Kavitha","Shobana","Saipriya","Usha","Barveen Fathima","Baskar","Muthumari","Ramasudha"],
+      "overlap_text": "PEO3: Graduates prepared with managerial and leadership skills for career and starting own firms. PSO2: Develop cost effective and eco-friendly mechanical components and systems. PO12: Life-long learning in broadest context of technological change.",
+      "token_count": 530
+    },
+    {
+      "chunk_id": "msajce_sh_chunk_04",
+      "section": "Faculty 2022-2023 and 2021-2022",
+      "source_url": "https://www.msajce-edu.in/sh.php#tab4",
+      "context": "Faculty lists for S&H department for academic years 2022-2023 (21 members) and 2021-2022 (15 members).",
+      "text": "2022-2023 Faculty (21 members):\n1 | Dr. RESHMI K V | Assistant Professor | 29.08.2022 | M.Phil. | Regular\n2 | Mrs. BARVEEN FATHIMA M | Assistant Professor | 01.03.2022 | M.Phil. | Regular\n3 | Mrs. USHA S | Assistant Professor | 17.07.2019 | M.Phil. | Regular\n4 | Mrs. SAIPRIYA K | Assistant Professor | 27.06.2016 | M.Phil. | Regular\n5 | Dr. AMMU QUDSIYA A | Associate Professor | 22.12.2022 | Ph.D. | Regular\n6 | Mrs. SATHYA N | Assistant Professor | 02.11.2022 | M.Phil. | Regular\n7 | Mrs. VIMALA D | Assistant Professor | 06.10.2022 | M.Phil. | Regular\n8 | Dr. SUBRAMANIAN S | Assistant Professor | 28.08.2022 | Ph.D. | Regular\n9 | Dr. RAJAKUMAR S | Professor | 29.05.2021 | Ph.D. | Regular\n10 | Mr. RAMAMOORTHY K | Assistant Professor | 21.11.2020 | M.Phil. | Regular\n11 | Mrs. SUDHA S | Assistant Professor | 24.06.2019 | M.Phil. | Regular\n12 | Mrs. ZULAIHA MARYAM M | Assistant Professor | 13.10.2018 | M.Phil. | Regular\n13 | Mr. SIMON JEYA SUNDER RAY M | Assistant Professor | 02.01.2023 | M.Sc. | Regular\n14 | Mr. STEEPHENRAJ A | Assistant Professor | 28.11.2022 | M.Phil. | Regular\n15 | Dr. VADIVELAN S | Assistant Professor | 01.06.2021 | Ph.D. | Regular\n16 | Mr. MEERA MOHIDEEN | Assistant Professor | 02.09.2021 | M.Phil. | Regular\n17 | Mrs. SHOBANA V | Assistant Professor | 11.10.2019 | M.Phil. | Regular\n18 | Dr. SENTHAMIZHSELVI R | Assistant Professor | 02.11.2022 | Ph.D. | Regular\n19 | Dr. DEVI BALA B | Assistant Professor | 05.08.2020 | Ph.D. | Regular\n20 | Dr. BALAKRISHNAN A | Associate Professor | 15.07.2013 | Ph.D. | Regular\n21 | Dr. AMUDHA S | Assistant Professor | 22.05.2023 | Ph.D. | Regular\n\n2021-2022 Faculty (15 members):\n1 | Mrs. BARVEEN FATHIMA M | Assistant Professor | 01.03.2022 | M.Phil. | Regular\n2 | Mrs. USHA S | Assistant Professor | 17.07.2019 | M.Phil. | Regular\n3 | Mrs. SAIPRIYA K | Assistant Professor | 27.06.2016 | M.Phil. | Regular\n4 | Dr. SIVAKAMI SUNDARI M | Assistant Professor | 28.02.2022 | Ph.D. | Regular\n5 | Dr. RAJAKUMAR S | Professor | 29.05.2021 | Ph.D. | Regular\n6 | Mrs. ZULAIHA MARYAM M | Assistant Professor | 13.10.2018 | M.Phil. | Regular\n7 | Mr. RAMAMOORTHY K | Assistant Professor | 21.11.2020 | M.Phil. | Regular\n8 | Dr. VADIVELAN S | Assistant Professor | 01.06.2021 | Ph.D. | Regular\n9 | Mr. MEERA MOHIDEEN | Assistant Professor | 02.09.2021 | M.Phil. | Regular\n10 | Mrs. SHOBANA V | Assistant Professor | 11.10.2019 | M.Phil. | Regular\n11 | Mr. SARAVANAN R | Assistant Professor | 20.07.2020 | M.Phil. | Regular\n12 | Dr. DEVI BALA B | Assistant Professor | 05.08.2020 | Ph.D. | Regular\n13 | Dr. BALAKRISHNAN A | Associate Professor | 15.07.2013 | Ph.D. | Regular\n14 | Mrs. SUDHA S | Assistant Professor | 24.06.2019 | M.Phil. | Regular\n15 | Mr. PANDIYARAJAN A | Assistant Professor | 10.12.2018 | M.Phil. | Regular",
+      "tables": [
+        {
+          "table_title": "Faculty 2022-2023 (selected)",
+          "headers": ["S.No.", "Name", "Designation", "Joined", "Qualification"],
+          "rows": [
+            ["9","Dr. RAJAKUMAR S","Professor","29.05.2021","Ph.D."],
+            ["8","Dr. SUBRAMANIAN S","Asst. Professor","28.08.2022","Ph.D."],
+            ["15","Dr. VADIVELAN S","Asst. Professor","01.06.2021","Ph.D."],
+            ["18","Dr. SENTHAMIZHSELVI R","Asst. Professor","02.11.2022","Ph.D."],
+            ["19","Dr. DEVI BALA B","Asst. Professor","05.08.2020","Ph.D."],
+            ["20","Dr. BALAKRISHNAN A","Assoc. Professor","15.07.2013","Ph.D."]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Who were the faculty in S&H in 2022-2023?",
+        "Who is Dr. Rajakumar S at MSAJCE?",
+        "Who is Dr. Sivakami Sundari M?",
+        "How many faculty did S&H have in 2022-2023?",
+        "Who is Dr. Devi Bala B in S&H department?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. RAJAKUMAR S — Professor",
+          "Dr. SUBRAMANIAN S — Assistant Professor",
+          "Dr. VADIVELAN S — Assistant Professor",
+          "Dr. SENTHAMIZHSELVI R — Assistant Professor",
+          "Dr. DEVI BALA B — Assistant Professor",
+          "Dr. SIVAKAMI SUNDARI M — Assistant Professor",
+          "Mrs. ZULAIHA MARYAM M — Assistant Professor",
+          "Mr. MEERA MOHIDEEN — Assistant Professor",
+          "Mr. RAMAMOORTHY K — Assistant Professor",
+          "Mr. PANDIYARAJAN A — Assistant Professor",
+          "Mr. SARAVANAN R — Assistant Professor",
+          "Mr. SIMON JEYA SUNDER RAY M — Assistant Professor"
+        ],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["21 faculty in 2022-2023","15 faculty in 2021-2022"]
+      },
+      "keywords": ["faculty","Dr Rajakumar","Dr Subramanian","Dr Vadivelan","Dr Senthamizhselvi","Dr Devi Bala","Dr Sivakami Sundari","Zulaiha Maryam","Ramamoorthy","Pandiyarajan","Saravanan","2022-2023","2021-2022"],
+      "overlap_text": "2024-2025: 16 faculty. Key names: Dr. Ammu Qudsiya A (Assoc. Prof, Ph.D.), Dr. Balakrishnan A (Assoc. Prof, joined 15.07.2013, Ph.D.), Dr. Suvitha A (Prof, Ph.D.), Dr. Kavitha J, Dr. Ramya B, Dr. Amudha S, Dr. Muthumari M, Dr. Ramasudha — all Assistant Professors. All Regular employees.",
+      "token_count": 490
+    },
+    {
+      "chunk_id": "msajce_sh_chunk_05",
+      "section": "Faculty 2020-2021 and Department Lab",
+      "source_url": "https://www.msajce-edu.in/sh.php#tab4",
+      "context": "Faculty list for 2020-2021 (14 members) and the Physics & Chemistry Lab details with courses and document links.",
+      "text": "2020-2021 Faculty (14 members):\n1 | Mrs. USHA S | Assistant Professor | 17.07.2019 | M.Phil. | Regular\n2 | Mrs. SAIPRIYA K | Assistant Professor | 27.06.2016 | M.Phil. | Regular\n3 | Mrs. ZULAIHA MARYAM M | Assistant Professor | 13.10.2018 | M.Phil. | Regular\n4 | Mr. RAMAMOORTHY K | Assistant Professor | 21.11.2020 | M.Phil. | Regular\n5 | Mrs. SHOBANA V | Assistant Professor | 11.10.2019 | M.Phil. | Regular\n6 | Mr. SARAVANAN R | Assistant Professor | 20.07.2020 | M.Phil. | Regular\n7 | Dr. ALOCIOUS GONSAGO C | Professor | 08.08.2001 | Ph.D. | Regular\n8 | Dr. DEVI BALA B | Assistant Professor | 05.08.2020 | Ph.D. | Regular\n9 | Dr. BALAKRISHNAN A | Associate Professor | 15.07.2013 | Ph.D. | Regular\n10 | Mrs. SUBHASHINI | Assistant Professor | 01.08.2014 | M.Phil. | Regular\n11 | Mrs. SUDHA S | Assistant Professor | 24.06.2019 | M.Phil. | Regular\n12 | Mr. PANDIYARAJAN A | Assistant Professor | 10.12.2018 | M.Phil. | Regular\n13 | Dr. BALAJI D | Associate Professor | 23.10.2019 | Ph.D. | Regular\n14 | Mr. SYED RAHMATHULA S | Assistant Professor | 21.08.2019 | M.Phil. | Regular\n\nDepartment Facilities — Laboratory:\nLab Name: Physics & Chemistry Lab\nObjectives PDF: https://www.msajce-edu.in/images/departments/sh/Ph-Ch-Obj.pdf\nEquipment Details: https://www.msajce-edu.in/images/departments/sh/Ph-Ch-eqp.pdf\nCourse Offered: BS8161 — Physics & Chemistry\nCourse PDF: https://www.msajce-edu.in/images/departments/sh/BS8161.pdf",
+      "tables": [
+        {
+          "table_title": "Faculty 2020-2021",
+          "headers": ["S.No.", "Name", "Designation", "Joined", "Qualification"],
+          "rows": [
+            ["7","Dr. ALOCIOUS GONSAGO C","Professor","08.08.2001","Ph.D."],
+            ["13","Dr. BALAJI D","Associate Professor","23.10.2019","Ph.D."],
+            ["9","Dr. BALAKRISHNAN A","Associate Professor","15.07.2013","Ph.D."],
+            ["8","Dr. DEVI BALA B","Assistant Professor","05.08.2020","Ph.D."],
+            ["1","Mrs. USHA S","Assistant Professor","17.07.2019","M.Phil."],
+            ["2","Mrs. SAIPRIYA K","Assistant Professor","27.06.2016","M.Phil."],
+            ["10","Mrs. SUBHASHINI","Assistant Professor","01.08.2014","M.Phil."],
+            ["14","Mr. SYED RAHMATHULA S","Assistant Professor","21.08.2019","M.Phil."]
+          ]
+        },
+        {
+          "table_title": "S&H Department Lab",
+          "headers": ["Lab", "Course", "Course Code"],
+          "rows": [
+            ["Physics & Chemistry Lab","Physics & Chemistry","BS8161"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What lab does S&H department have at MSAJCE?",
+        "What is BS8161 subject?",
+        "Who is Dr. Alocious Gonsago C?",
+        "Who is the longest serving faculty in S&H at MSAJCE?",
+        "Who is Dr. Balaji D in S&H?",
+        "What equipment is in the Physics and Chemistry lab?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. ALOCIOUS GONSAGO C — Professor (joined 08.08.2001)",
+          "Dr. BALAJI D — Associate Professor",
+          "Dr. BALAKRISHNAN A — Associate Professor",
+          "Mrs. SUBHASHINI — Assistant Professor",
+          "Mr. SYED RAHMATHULA S — Assistant Professor",
+          "Mr. SARAVANAN R — Assistant Professor"
+        ],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["14 faculty in 2020-2021","1 lab — Physics & Chemistry Lab"]
+      },
+      "keywords": ["faculty 2020-2021","Dr Alocious Gonsago","Dr Balaji D","Dr Balakrishnan","Physics Chemistry Lab","BS8161","lab facilities","Subhashini","Syed Rahmathula"],
+      "overlap_text": "2022-2023 had 21 faculty. Professors included Dr. Rajakumar S (joined 29.05.2021). 2021-2022 had 15 faculty. Dr. Sivakami Sundari M joined 28.02.2022. Dr. Vadivelan S joined 01.06.2021. Mr. Saravanan R joined 20.07.2020. Mr. Pandiyarajan A joined 10.12.2018. All regular employees.",
+      "token_count": 420
+    },
+    {
+      "chunk_id": "msajce_sh_chunk_06",
+      "section": "Academics — Course Materials (Own and Service Subjects)",
+      "source_url": "https://www.msajce-edu.in/sh.php#tab6",
+      "context": "All subjects taught by S&H department including own subjects and subjects offered to other engineering departments, with lesson plan, question bank, lecture notes and ICT tools links.",
+      "text": "Academics — Course Materials (Base URL: https://www.msajce-edu.in/academics/sh/)\n\nOwn Subjects:\nCode | Subject Name\nHS3151 | Professional English - I\nPH3151 | Engineering Physics\nCY3151 | Engineering Chemistry\nMA3151 | Matrices and Calculus\nGE3151 | Problem Solving and Python Programming\nHS8251 | Technical English\nMA8251 | Engineering Mathematics – II\nPH8253 | Physics for Electronics Engineering\nGE8291 | Environmental Science and Engineering\nPH8252 | Physics for Information Science\nPH8251 | Materials Science\nPH8201 | Physics For Civil Engineering\n\nService Department Subjects:\nDept | Code | Subject\nII/CIVIL, MECH | MA8351 | Transforms and Partial Differential Equations\nII/ECE | MA8352 | Linear Algebra and Partial Differential Equations\nII/CSE, IT | MA3354 | Discrete Mathematics\nII/EEE, CIVIL | MA8491 | Numerical Methods\nII/MECH | MA8452 | Statistics and Numerical Methods\nII/CSE | MA8402 | Probability and Queueing Theory\nII/IT | MA8391 | Probability and Statistics\nIII/CSE, IT | MA8551 | Algebra and Number Theory\nII/IT, ECE | GE8291 | Environmental Science and Engineering\nII/EEE | MA3303 | Probability and Complex Function\n\nAll subjects have: Lesson Plan, Question Bank, Lecture Notes, ICT Tools\nLesson Plans: https://www.msajce-edu.in/academics/sh/LessonPlan/[CODE]-LP.pdf\nQuestion Banks: https://www.msajce-edu.in/academics/sh/QuestionBank/[CODE]-QB.pdf\nLecture Notes: https://www.msajce-edu.in/academics/sh/LectureNote/[CODE]-LN.pdf\nICT Tools: https://www.msajce-edu.in/academics/sh/ICTTools/[CODE]-ICT.pdf",
+      "tables": [
+        {
+          "table_title": "S&H Own Subjects",
+          "headers": ["Code", "Subject Name"],
+          "rows": [
+            ["HS3151","Professional English - I"],
+            ["PH3151","Engineering Physics"],
+            ["CY3151","Engineering Chemistry"],
+            ["MA3151","Matrices and Calculus"],
+            ["GE3151","Problem Solving and Python Programming"],
+            ["HS8251","Technical English"],
+            ["MA8251","Engineering Mathematics – II"],
+            ["PH8253","Physics for Electronics Engineering"],
+            ["GE8291","Environmental Science and Engineering"],
+            ["PH8252","Physics for Information Science"],
+            ["PH8251","Materials Science"],
+            ["PH8201","Physics For Civil Engineering"]
+          ]
+        },
+        {
+          "table_title": "Service Department Subjects",
+          "headers": ["For Dept/Year", "Code", "Subject"],
+          "rows": [
+            ["II/CIVIL, MECH","MA8351","Transforms and Partial Differential Equations"],
+            ["II/ECE","MA8352","Linear Algebra and Partial Differential Equations"],
+            ["II/CSE, IT","MA3354","Discrete Mathematics"],
+            ["II/EEE, CIVIL","MA8491","Numerical Methods"],
+            ["II/MECH","MA8452","Statistics and Numerical Methods"],
+            ["II/CSE","MA8402","Probability and Queueing Theory"],
+            ["II/IT","MA8391","Probability and Statistics"],
+            ["III/CSE, IT","MA8551","Algebra and Number Theory"],
+            ["II/IT, ECE","GE8291","Environmental Science and Engineering"],
+            ["II/EEE","MA3303","Probability and Complex Function"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What subjects does S&H department teach at MSAJCE?",
+        "Where can I find lecture notes for Engineering Physics at MSAJCE?",
+        "What is the subject code for Professional English I?",
+        "Does S&H department teach mathematics to other departments?",
+        "Where can I download question bank for MA8351?",
+        "What is GE3151 subject?",
+        "Which department teaches Discrete Mathematics at MSAJCE?",
+        "Where are S&H department course materials available online?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["12 own subjects","10 service subjects"]
+      },
+      "keywords": ["HS3151","PH3151","CY3151","MA3151","GE3151","HS8251","MA8251","PH8253","GE8291","MA8351","MA8352","MA3354","MA8491","MA8452","MA8402","MA8391","MA8551","MA3303","lesson plan","question bank","lecture notes","ICT tools","service department"],
+      "overlap_text": "S&H Physics & Chemistry Lab (BS8161). Objectives: https://www.msajce-edu.in/images/departments/sh/Ph-Ch-Obj.pdf. Equipment: https://www.msajce-edu.in/images/departments/sh/Ph-Ch-eqp.pdf. Dr. Alocious Gonsago C (Professor, joined 08.08.2001) is the longest serving faculty. Dr. Balaji D (Assoc. Prof, joined 23.10.2019).",
+      "token_count": 460
+    },
+    {
+      "chunk_id": "msajce_sh_chunk_07",
+      "section": "News & Events, Research and Contact Information",
+      "source_url": "https://www.msajce-edu.in/sh.php#tab8",
+      "context": "Key events conducted by S&H department, placement company list, research placement links, and complete MSAJCE contact details.",
+      "text": "News & Events — Department of Science and Humanities:\n- 8 Days National Level FDP: 29 Jan to 06 Feb 2024, 2:00 to 3:00 PM\n  Photo: https://www.msajce-edu.in/images/departments/sh/events/FDP29thJan2024.jpg\n- 5 Days Online FDP: 14 to 18 Aug 2023, 2:00 to 3:00 PM\n  Photo: https://www.msajce-edu.in/images/departments/sh/events/FDP14Aug2023.jpg\n- AICTE-ATAL Sponsored Six Days FDP:\n  https://www.msajce-edu.in/images/departments/sh/events/AICTE-6DAYSFDP.pdf\n\nPlacement Details (Research section — archived):\n- 2018-2019: https://drive.google.com/file/d/1KeYjnJv7SfllkYuFFKZOtrxXA3fF-KVG/view\n- 2017-2018: https://drive.google.com/file/d/1ctXJQ-V8whtqeuakJGkzAb5utZAnOVC9/view\n- 2016-2017: https://drive.google.com/file/d/1Ekdvs4CVru5HUOO92D6i7G5cQthsLNh0/view\n- 2015-2016: https://drive.google.com/file/d/1xfE1etArGRYYfYdKBJ0SjXQpnQ2ZXdKS/view\n\nPlacement Companies (Off Campus):\nAshok Leyland, Bajaj, BHEL, Bosch, Crompton Greaves, DHL, Ford, GAIL, Godrej, Hero, Hyundai, Indo Wind, L&T, Mahindra, NHPC, Nissan, OGPC, Regen, Suzlon, Tata, TVS, Vestas, Yamaha\n\nContact — MSAJCE:\nAddress: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai — 603103\nPhone: +91 99400 04500\nEmail: msajce.office@gmail.com\nGrievance: grievance@msajce-edu.in\nWebsite: www.msajce-edu.in\nOnline Application: https://enrollonline.co.in/Registration/Apply/MSAJCE\nOnline Fee Payment: https://www.feepayr.com/\nCollege Video: https://youtu.be/aNVaQWh1Pp4",
+      "tables": [
+        {
+          "table_title": "S&H Department Events",
+          "headers": ["Event", "Date / Duration"],
+          "rows": [
+            ["8 Days National Level FDP","29 Jan – 06 Feb 2024, 2:00–3:00 PM"],
+            ["5 Days Online FDP","14–18 Aug 2023, 2:00–3:00 PM"],
+            ["AICTE-ATAL Sponsored 6-Day FDP","Details in linked PDF"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What events has S&H department conducted at MSAJCE?",
+        "What is the contact number for MSAJCE?",
+        "What is the email address of MSAJCE?",
+        "Where is MSAJCE located?",
+        "What companies recruit from MSAJCE?",
+        "How do I apply for admission to MSAJCE?",
+        "What is the grievance email of MSAJCE?",
+        "Did S&H department conduct any FDP programmes?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com","grievance@msajce-edu.in"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai — 603103"],
+        "numbers": ["8-day FDP Jan-Feb 2024","5-day FDP Aug 2023","23 placement companies listed"]
+      },
+      "keywords": ["FDP","events","AICTE ATAL","placement","Ashok Leyland","Tata","L&T","BHEL","TVS","Mahindra","contact","phone","email","address","Chennai","603103","online application","grievance"],
+      "overlap_text": "S&H teaches 12 own subjects (HS3151, PH3151, CY3151, MA3151, GE3151 etc.) and 10 service department subjects (MA8351, MA8352, MA3354, MA8491, MA8452, MA8402, MA8391, MA8551, GE8291, MA3303). All materials available at https://www.msajce-edu.in/academics/sh/",
+      "token_count": 420
+    }
+  ]
+}
