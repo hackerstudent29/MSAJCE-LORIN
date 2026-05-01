@@ -83,7 +83,7 @@ class RAGEngine:
         self.vercel_gateway_url = "https://ai-gateway.vercel.sh/v1"
         self.openrouter_embed_url = "https://openrouter.ai/api/v1/embeddings"
         self.generation_model = "google/gemini-2.0-flash-001"
-        self.embedding_model = "text-embedding-3-small"
+        self.embedding_model = "openai/text-embedding-3-small"
         
         self.langfuse = Langfuse(
             public_key=os.getenv("LANGFUSE_PUBLIC_KEY"),
@@ -195,6 +195,7 @@ class RAGEngine:
         return combined[:10]
 
     async def query(self, user_query, history=None):
+        start_time = time.time()
         trace = self.langfuse.trace(name="Lorin RAG Query", input=user_query)
         
         # 1. Intent & Refinement
@@ -208,12 +209,12 @@ Return JSON: {category, search_query, direct_response}
 CATEGORIES: 
 - DEVELOPER: ONLY if asking about Ramanathan S, Ram, or the specific bot creator/developer.
 - GREETING: Hello, hi, etc.
-- INSTITUTIONAL: Default for all college, faculty, department, bus, or admission questions.
+- INSTITUTIONAL: Default for all college, faculty, department, bus, or admission questions. Search for names like 'Weslin' or 'Kannan' as 'Dr. Weslin D' or 'Dr. Kannan S'.
 
 SEARCH REWRITING:
-1. TYPO-PROOFING: If a name looks misspelled (e.g. 'Wesling' for 'Weslin'), use the CORRECTED version in the search_query.
-2. ENTITY FOCUS: Always include the full name and department (if known) in the search_query.
-3. RE-BALANCE: Treat institutional data as the AUTHORITATIVE source. If a question is about faculty or college, search the database first.
+1. TYPO-PROOFING: If a name looks misspelled (e.g. 'Wesling' for 'Weslin'), use the CORRECTED version.
+2. ENTITY FOCUS: Always include the full name and department (e.g. 'Dr. Weslin D MSAJCE Associate Professor') in the search_query.
+3. RE-BALANCE: Treat faculty records as high-priority. If a name is mentioned, search for their specific role and patents.
 
 If category is DEVELOPER, set direct_response to:
 "**Ramanathan S (Ram)** is the Lead AI Developer and System Architect at MSAJCE. He is a visionary 2nd-year B.Tech IT student specializing in high-performance AI systems and Fintech architecture.\n\n*Connect with him here:*\n\n. [LinkedIn](https://linkedin.com/in/ramanathan-s)\n\n. [Portfolio](https://ram-ai-portfolio.vercel.app)\n\n. [Source Code (GitHub)](https://github.com/hackerstudent29/MSAJCE-LORIN.git)\n\n. Email: ramanathanb86@gmail.com\n\n*Major Engineering Projects:*\n\n. **Zenify**: High-performance music streaming (Next.js 14).\n\n. **Zenpay**: Production-grade Payment Gateway (Monorepo).\n\n. **Lorin RAG**: Institutional intelligence engine.\n\n. **Pocket Lawyer**: AI legal-assistant (Next.js 16).\n\n. **Formora**: AI-driven SaaS form builder.\n\n. **Smart Hostel & Event Systems**: Enterprise utility platforms.\n\nIs there anything specific you would like to know about Ram's technical expertise or architecture designs?"
