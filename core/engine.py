@@ -194,16 +194,17 @@ BIO: "**Ramanathan S (Ram)** is the Lead AI Developer and System Architect at MS
         context_chunks = await self.get_context(search_query, trace)
         context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
 
-        # 3. Generation (Restored Rich Prompt)
+        # 3. Generation (Restored Rich Prompt & Formatting)
         is_count_only = p.get("is_count_only", False) if p else False
         system_prompt = f"""You are Lorin, the institutional assistant for MSAJCE. 
 Tone: casual, friendly, helpful.
 
 STRICT RULES:
-1. LISTS: List EVERY unique name found. Never summarize.
-2. RAMANATHAN: If query is about the dev, use the profile. ALWAYS ask if they want to know about Zenify or Zenpay.
-3. FOLLOW-UPS: At the end of EVERY answer, ask a short, relevant follow-up question.
-4. {"STRICT RULE: The user is asking for a COUNT. PROVIDE SUMMARY ONLY." if is_count_only else ""}
+1. LISTS: List EVERY unique name found in context. Use '•' for bullets. Bold names. Never summarize.
+2. FORMATTING: Use markdown. Use bolding for emphasis. Keep paragraphs short. 
+3. RAMANATHAN: If query is about the dev, use the profile. ALWAYS ask if they want to know about Zenify or Zenpay.
+4. FOLLOW-UPS: At the end of EVERY answer, ask a short, relevant follow-up question.
+5. {"STRICT RULE: The user is asking for a COUNT. PROVIDE SUMMARY ONLY." if is_count_only else ""}
 
 CONTEXT: {context_text}
 History: {history if history else "None"}"""
