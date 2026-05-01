@@ -39,28 +39,33 @@ TOKEN = get_clean_env("TELEGRAM_BOT_TOKEN")
 
 # --- Security Config ---
 ABUSIVE_WORDS = [
-    "badword1", "badword2" # Add more abusive words here
+    "badword1", "badword2" # Add more here
 ]
 
 async def check_security(user_id, text, engine):
     """Checks for abuse, spam, and quotas. Returns (is_allowed, reason, val)"""
-    now = int(time.time())
+    now_ts = int(time.time())
+    
+    # Calculate Quota Day (Resets at 4:30 AM)
+    # We subtract 4h 30m from now. If it's 3:00 AM, it becomes 10:30 PM yesterday.
+    quota_now = datetime.now() - timedelta(hours=4, minutes=30)
+    quota_day_str = quota_now.strftime('%Y-%m-%d')
     
     # 1. Check if currently blocked
     block_key = f"user_{user_id}_blocked_until"
     blocked_until = await engine.redis.get(block_key)
-    if blocked_until and int(blocked_until) > now:
-        remaining_sec = int(blocked_until) - now
+    if blocked_until and int(blocked_until) > now_ts:
+        remaining_sec = int(blocked_until) - now_ts
         return False, "BLOCKED", (remaining_sec // 60) + 1
 
-    # 2. Daily Quota (30 reqs / day)
-    day_key = f"user_{user_id}_daily_count_{datetime.now().strftime('%Y-%m-%d')}"
+    # 2. Daily Quota (30 reqs / day, reset at 4:30 AM)
+    day_key = f"user_{user_id}_daily_count_{quota_day_str}"
     daily_count = await engine.redis.get(day_key)
     if daily_count and int(daily_count) >= 30:
         return False, "DAILY_LIMIT", 30
 
     # 3. Minute Quota (6 msgs / min)
-    min_key = f"user_{user_id}_min_count_{now // 60}"
+    min_key = f"user_{user_id}_min_count_{now_ts // 60}"
     min_count = await engine.redis.get(min_key)
     if min_count and int(min_count) >= 6:
         return False, "MINUTE_LIMIT", 6
@@ -74,7 +79,7 @@ async def check_security(user_id, text, engine):
     is_spam = False
     if last_data:
         last_data = json.loads(last_data)
-        if now - last_data['time'] < 2: is_spam = True 
+        if now_ts - last_data['time'] < 2: is_spam = True 
         if text == last_data['text']: is_spam = True
 
     # 6. Handle Strikes for Abuse/Spam
@@ -83,32 +88,29 @@ async def check_security(user_id, text, engine):
         strikes = await engine.redis.incr(strike_key)
         
         duration = 0
-        if strikes >= 10: duration = 7 * 24 # 1 Week
-        elif strikes >= 5: duration = 24 # 1 Day
-        elif strikes >= 3: duration = 6 # 6 Hours
+        if strikes >= 10: duration = 7 * 24
+        elif strikes >= 5: duration = 24
+        elif strikes >= 3: duration = 6
         
         if duration > 0:
-            await engine.redis.set(block_key, now + (duration * 3600))
-            return False, f"BANNED", duration
+            await engine.redis.set(block_key, now_ts + (duration * 3600))
+            return False, "BANNED", duration
         
         return False, "WARNING", strikes
 
-    # 7. Update Counts (If everything is okay)
-    # Increment daily (expires in 24h)
+    # 7. Update Counts
     await engine.redis.incr(day_key)
-    await engine.redis.expire(day_key, 86400)
+    await engine.redis.expire(day_key, 90000) # ~25h to cover the shift
     
-    # Increment minute (expires in 60s)
     await engine.redis.incr(min_key)
     await engine.redis.expire(min_key, 60)
 
-    # Update last message tracker
-    await engine.redis.set(last_msg_key, json.dumps({"time": now, "text": text}), ex=300)
+    await engine.redis.set(last_msg_key, json.dumps({"time": now_ts, "text": text}), ex=300)
     
     return True, None, 0
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("👋 Welcome to MSAJCE Lorin! I am your institutional assistant.\n\n📊 *Your Quota:*\n- 6 messages / minute\n- 30 requests / day")
+    await update.message.reply_text("👋 MSAJCE Lorin Active.\n📊 *Quotas:*\n- 6 msgs/min\n- 30 reqs/day (Resets at 4:30 AM)")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.message or not update.message.text: return
@@ -117,27 +119,26 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     global _engine
     
-    # --- SECURITY & QUOTA CHECK ---
     is_allowed, reason, val = await check_security(user_id, user_query, _engine)
     
     if not is_allowed:
         if reason == "BLOCKED":
-            await update.message.reply_text(f"⏳ You are currently on a time-out. Please try again in {val} minutes.")
+            await update.message.reply_text(f"⏳ Please wait {val} minutes.")
             return
         if reason == "MINUTE_LIMIT":
-            await update.message.reply_text(f"🐢 Slow down! You've reached the limit of 6 messages per minute. Please wait a moment.")
+            await update.message.reply_text("🐢 Limit: 6 messages per minute.")
             return
         if reason == "DAILY_LIMIT":
-            await update.message.reply_text(f"🛑 Daily quota reached! You've used all 30 requests for today. Come back tomorrow! 🌅")
+            await update.message.reply_text("🛑 Daily limit (30) reached. Reset at 4:30 AM. 🌅")
             return
         if reason == "BANNED":
-            await update.message.reply_text(f"🚫 Access Denied. Due to repeated violations, you are blocked for {val} hours.")
+            await update.message.reply_text(f"🚫 Blocked for {val} hours.")
             return
         if reason == "WARNING":
-            await update.message.reply_text(f"⚠️ Warning {val}/10: Abuse or Spam detected. Further violations will result in a ban.")
+            await update.message.reply_text(f"⚠️ Warning {val}/10: Abuse/Spam detected.")
             return
 
-    thinking_msg = await update.message.reply_text("🔍 Searching institutional database...")
+    thinking_msg = await update.message.reply_text("🔍 Analyzing...")
     
     try:
         redis_key = f"user_{user_id}_history"
@@ -150,18 +151,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         history.append({"q": user_query, "a": answer})
         await _engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
         
-        await context.bot.edit_message_text(
-            chat_id=update.effective_chat.id,
-            message_id=thinking_msg.message_id,
-            text=answer
-        )
+        await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer)
     except Exception as e:
         logger.error(f"Error: {e}")
-        await context.bot.edit_message_text(
-            chat_id=update.effective_chat.id,
-            message_id=thinking_msg.message_id,
-            text=f"The system is busy. Please try again shortly."
-        )
+        await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.")
 
 async def get_bot_app():
     global _application, _engine, _app_ready
