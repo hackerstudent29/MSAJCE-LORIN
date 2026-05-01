@@ -143,8 +143,12 @@ class MasterIngestor:
                 # Split Rule (Master Rule Section 2B)
                 if token_count > MAX_TOKENS:
                     part_a, part_b = split_at_sentence(text, MAX_TOKENS)
-                    if part_a: self.unified_knowledge.append(create_final_chunk(chunk_id+"_a", part_a, f"{part_a} {' '.join(pq_list)}"))
-                    if part_b: self.unified_knowledge.append(create_final_chunk(chunk_id+"_b", part_b, f"{part_b} {' '.join(pq_list)}"))
+                    # Both halves MUST inherit full pq_list and kw_list for vector search
+                    embed_a = f"{part_a} {' '.join(pq_list)} {' '.join(kw_list)}".strip()
+                    embed_b = f"{part_b} {' '.join(pq_list)} {' '.join(kw_list)}".strip()
+                    
+                    if part_a: self.unified_knowledge.append(create_final_chunk(chunk_id+"_a", part_a, embed_a))
+                    if part_b: self.unified_knowledge.append(create_final_chunk(chunk_id+"_b", part_b, embed_b))
                 else:
                     self.unified_knowledge.append(create_final_chunk(chunk_id, text, embed_text))
 

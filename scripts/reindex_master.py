@@ -56,7 +56,28 @@ class MasterReindexer:
                 })
             self.index.upsert(vectors=vectors)
             
-        print("MASTER RE-INDEX COMPLETE!")
+        print("MASTER PINECONE INDEX COMPLETE! Now rebuilding BM25...")
+        self._rebuild_bm25(chunks)
+
+    def _rebuild_bm25(self, chunks):
+        import bm25s
+        import Stemmer
+        
+        # 1. Tokenize all chunks
+        stemmer = Stemmer.Stemmer("english")
+        corpus = [{"chunk_id": c["chunk_id"], "text": c["text"], "metadata": c["metadata"]} for c in chunks]
+        texts = [c["text"] for c in corpus]
+        
+        print(f"Tokenizing {len(texts)} chunks for BM25...")
+        tokens = bm25s.tokenize(texts, stemmer=stemmer)
+        
+        # 2. Build and Save Index
+        retriever = bm25s.BM25(corpus=corpus)
+        retriever.index(tokens)
+        
+        bm25_path = os.path.join("data", "bm25_index")
+        retriever.save(bm25_path, corpus=corpus)
+        print(f"BM25 INDEX SAVED TO {bm25_path}")
 
 if __name__ == "__main__":
     reindexer = MasterReindexer()
