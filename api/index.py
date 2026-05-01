@@ -38,33 +38,42 @@ TOKEN = get_clean_env("TELEGRAM_BOT_TOKEN")
 # --- Security Config ---
 ABUSIVE_WORDS = ["badword1", "badword2"]
 
+def is_gibberish(text):
+    """Heuristic check for random keyboard mashing."""
+    if len(text) < 4: return False
+    # Check for long words with extremely low vowel density
+    words = text.split()
+    for w in words:
+        if len(w) > 8:
+            vowels = len(re.findall(r'[aeiouAEIOU]', w))
+            if vowels / len(w) < 0.15: return True # Less than 15% vowels
+        if len(w) > 15: return True # Extremely long single word is usually mashing
+    return False
+
 async def check_security(user_id, text, engine):
     now_ts = int(time.time())
     quota_now = datetime.now() - timedelta(hours=4, minutes=30)
     quota_day_str = quota_now.strftime('%Y-%m-%d')
     
-    # 1. Check if currently blocked
     block_key = f"user_{user_id}_blocked_until"
     blocked_until = await engine.redis.get(block_key)
     if blocked_until and int(blocked_until) > now_ts:
         return False, "BLOCKED", (int(blocked_until) - now_ts) // 60 + 1
 
-    # 2. Daily Quota (30 / day)
     day_key = f"user_{user_id}_daily_count_{quota_day_str}"
     daily_count = await engine.redis.get(day_key)
     if daily_count and int(daily_count) >= 30:
         return False, "DAILY_LIMIT", 30
 
-    # 3. Minute Quota (6 / min)
     min_key = f"user_{user_id}_min_count_{now_ts // 60}"
     min_count = await engine.redis.get(min_key)
     if min_count and int(min_count) >= 6:
         return False, "MINUTE_LIMIT", 6
 
-    # 4. Abuse Check
+    # --- THE GIBBERISH & ABUSE CHECKS ---
     is_abusive = any(re.search(rf"\b{word}\b", text, re.I) for word in ABUSIVE_WORDS)
+    is_gib = is_gibberish(text)
     
-    # 5. Spam / Duplicate Check (Allow up to 3 identical msgs)
     last_msg_key = f"user_{user_id}_last_msg"
     dup_count_key = f"user_{user_id}_dup_count"
     last_data = await engine.redis.get(last_msg_key)
@@ -72,19 +81,14 @@ async def check_security(user_id, text, engine):
     is_spam = False
     if last_data:
         last_data = json.loads(last_data)
-        # Rate limit: Faster than 2s is always spam
-        if now_ts - last_data['time'] < 2: 
-            is_spam = True
-        # Duplicate check: Only spam on the 3rd identical message
+        if now_ts - last_data['time'] < 2: is_spam = True
         elif text == last_data['text']:
             dups = await engine.redis.incr(dup_count_key)
             if dups >= 3: is_spam = True
         else:
-            # New text, reset duplicate counter
             await engine.redis.set(dup_count_key, 0)
 
-    # 6. Handle Strikes
-    if is_abusive or is_spam:
+    if is_abusive or is_spam or is_gib:
         strike_key = f"user_{user_id}_strikes"
         strikes = await engine.redis.incr(strike_key)
         duration = 0
@@ -96,7 +100,6 @@ async def check_security(user_id, text, engine):
             return False, "BANNED", duration
         return False, "WARNING", strikes
 
-    # 7. Update States
     await engine.redis.incr(day_key); await engine.redis.expire(day_key, 90000)
     await engine.redis.incr(min_key); await engine.redis.expire(min_key, 60)
     await engine.redis.set(last_msg_key, json.dumps({"time": now_ts, "text": text}), ex=300)
@@ -104,7 +107,7 @@ async def check_security(user_id, text, engine):
     return True, None, 0
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("👋 MSAJCE Lorin Active. I'm ready!")
+    await update.message.reply_text("👋 MSAJCE Lorin Active. Please ask clear institutional questions!")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.message or not update.message.text: return
@@ -114,7 +117,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     is_allowed, reason, val = await check_security(user_id, user_query, _engine)
     if not is_allowed:
-        msgs = {"BLOCKED": f"⏳ Wait {val} min.", "MINUTE_LIMIT": "🐢 6 msg/min limit.", "DAILY_LIMIT": "🛑 30/day limit reached.", "BANNED": f"🚫 Blocked {val}h.", "WARNING": f"⚠️ Warning {val}/10."}
+        msgs = {"BLOCKED": f"⏳ Wait {val} min.", "MINUTE_LIMIT": "🐢 6 msg/min limit.", "DAILY_LIMIT": "🛑 30/day limit reached.", "BANNED": f"🚫 Blocked {val}h.", "WARNING": f"⚠️ Warning {val}/10: Abuse, Spam, or Gibberish detected."}
         await update.message.reply_text(msgs.get(reason, "Access denied."))
         return
 
