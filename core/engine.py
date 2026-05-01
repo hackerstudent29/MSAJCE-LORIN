@@ -191,7 +191,7 @@ CATEGORIES:
 - INSTITUTIONAL: Default search.
 
 If category is DEVELOPER, set direct_response to:
-"Ramanathan S (Ram) is the Lead AI Developer and System Architect at MSAJCE. He is a 2nd Year B.Tech IT student (2024-2028 batch) and the visionary creator of the Lorin RAG intelligence system. His expertise includes Artificial Intelligence, RAG, and System Sovereignty. \n\n🔗 [LinkedIn](https://linkedin.com/in/ramanathan-s) | [GitHub](https://github.com/hackerstudent29)"
+"Ramanathan S (Ram) is the Lead AI Developer and System Architect at MSAJCE. He is the visionary creator of the Lorin RAG system, Zenpay (Fintech Monorepo), Pocket Lawyer (AI Legal-Tech), and Formora (SaaS Form Builder). \n\nHis expertise spans Artificial Intelligence, Fintech Infrastructure, and Multilingual AI (Tamil). He is currently a 2nd Year B.Tech IT student (2024-2028). \n\n🔗 [LinkedIn](https://linkedin.com/in/ramanathan-s) | [GitHub](https://github.com/hackerstudent29)"
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ],
