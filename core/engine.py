@@ -20,10 +20,32 @@ logger = logging.getLogger(__name__)
 
 class RAGEngine:
     def __init__(self):
-        self.pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-        self.index = self.pc.Index("quickstart")
-        self.co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
-        self.redis = Redis(url=os.getenv("UPSTASH_REDIS_REST_URL"), token=os.getenv("UPSTASH_REDIS_REST_TOKEN"))
+        try:
+            pc_key = os.getenv("PINECONE_API_KEY")
+            if not pc_key: raise ValueError("Missing PINECONE_API_KEY")
+            self.pc = Pinecone(api_key=pc_key)
+            self.index = self.pc.Index("quickstart")
+        except Exception as e:
+            print(f"Lorin Engine: Pinecone Init Error: {e}")
+            self.index = None
+
+        try:
+            co_key = os.getenv("COHERE_API_KEY")
+            if not co_key: raise ValueError("Missing COHERE_API_KEY")
+            self.co = cohere.ClientV2(co_key)
+        except Exception as e:
+            print(f"Lorin Engine: Cohere Init Error: {e}")
+            self.co = None
+
+        try:
+            redis_url = os.getenv("UPSTASH_REDIS_REST_URL")
+            redis_token = os.getenv("UPSTASH_REDIS_REST_TOKEN")
+            if not redis_url or not redis_token: raise ValueError("Missing Upstash Redis credentials")
+            self.redis = Redis(url=redis_url, token=redis_token)
+        except Exception as e:
+            print(f"Lorin Engine: Redis Init Error: {e}")
+            self.redis = None
+
         self.stemmer = Stemmer.Stemmer("english")
         
         # Self-Healing BM25 Index
@@ -108,12 +130,19 @@ class RAGEngine:
     @traceable(name="Adaptive Retrieval")
     async def get_context(self, query, trace):
         span = trace.span(name="Retrieval", input={"query": query})
-        async with httpx.AsyncClient() as client:
-            e_res = await client.post(self.openrouter_embed_url, headers={"Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}"}, json={"model": self.embedding_model, "input": query}, timeout=30.0)
-            query_embedding = e_res.json()["data"][0]["embedding"]
         
-        pinecone_hits = [m['metadata'] for m in self.index.query(vector=query_embedding, top_k=10, include_metadata=True)['matches']]
-        
+        # 1. Pinecone Vector Search
+        pinecone_hits = []
+        if self.index:
+            try:
+                async with httpx.AsyncClient() as client:
+                    e_res = await client.post(self.openrouter_embed_url, headers={"Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}"}, json={"model": self.embedding_model, "input": query}, timeout=30.0)
+                    query_embedding = e_res.json()["data"][0]["embedding"]
+                pinecone_hits = [m['metadata'] for m in self.index.query(vector=query_embedding, top_k=10, include_metadata=True)['matches']]
+            except Exception as e:
+                print(f"Lorin Engine: Pinecone Retrieval Error: {e}")
+
+        # 2. BM25 Lexical Search
         bm25_hits = []
         if self.bm25:
             try:
@@ -129,13 +158,21 @@ class RAGEngine:
         
         if not combined: return []
         
+        # 3. Reranking (Optional)
         texts = [c['text'] for c in combined]
-        loop = asyncio.get_event_loop()
-        rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=query, documents=texts, top_n=8))
+        if self.co:
+            try:
+                loop = asyncio.get_event_loop()
+                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=query, documents=texts, top_n=8))
+                results = [combined[r.index] for r in rerank.results]
+                span.end(output={"results": len(results)})
+                return results
+            except Exception as e:
+                print(f"Lorin Engine: Rerank Error: {e}")
         
-        results = [combined[r.index] for r in rerank.results]
-        span.end(output={"results": len(results)})
-        return results
+        # Return raw hits if reranker fails
+        span.end(output={"results": len(combined[:8])})
+        return combined[:8]
 
     async def query(self, user_query, history=None):
         trace = self.langfuse.trace(name="Lorin RAG Query", input=user_query)
