@@ -1,5 +1,50 @@
 [
   {
+    "chunk_id": "admission_codes_01",
+    "section": "Institutional Codes for Admission",
+    "text": "The official TNEA Counselling Code for Mohamed Sathak A.J. College of Engineering (MSAJCE) is 1301. Students applying through the Tamil Nadu Engineering Admissions (TNEA) portal must use this code to select the institution.",
+    "keywords": [
+      "1301",
+      "counselling code",
+      "TNEA code",
+      "college code",
+      "admission code"
+    ],
+    "entities": {
+      "codes": [
+        "1301"
+      ]
+    },
+    "metadata": {
+      "institution": "MSAJCE",
+      "page_title": "Admission Essentials & Key Codes",
+      "priority": "CRITICAL"
+    },
+    "source_file": "admission_essentials.json"
+  },
+  {
+    "chunk_id": "admission_links_01",
+    "section": "Quick Admission Links",
+    "text": "For direct admissions and enquiries, visit the official portal: https://enrollonline.co.in/Registration/Apply/MSAJCE. For fee payments, use: https://www.feepayr.com/.",
+    "keywords": [
+      "apply online",
+      "admission link",
+      "fee payment",
+      "enquiry"
+    ],
+    "entities": {
+      "urls": [
+        "https://enrollonline.co.in/Registration/Apply/MSAJCE"
+      ]
+    },
+    "metadata": {
+      "institution": "MSAJCE",
+      "page_title": "Admission Essentials & Key Codes",
+      "priority": "CRITICAL"
+    },
+    "source_file": "admission_essentials.json"
+  },
+  {
     "chunk_id": "msajce_about_chunk_01",
     "section": "MSAJCE \u2014 An Overview and Establishment",
     "source_url": "https://www.msajce-edu.in/about.php",
@@ -20640,7 +20685,7 @@
     "section": "Placement Cell Overview \u2014 Mission, Objectives & Placement Committee",
     "source_url": "https://www.msajce-edu.in/placement.php#tab1",
     "context": "This chunk describes the overall mission and objectives of the MSAJCE Placement Cell and lists the full placement committee with names and positions.",
-    "text": "MSAJCE Placement Cell Overview: In a competitive job market, employers expect graduates to have a range of skills and right experience of the workplace. MSAJCE provides at most care, support and ample opportunities to help students develop requisite skills and expertise and make them employable graduates. Placement Cell Objectives: (1) To provide Employment Opportunities for students in reputed companies. (2) To organize On and Off Campus Recruitment Drives for students. (3) To Train students on employability skills such as Aptitude Skills, Communication Skills and Technical Skills. (4) To conduct Value Added Certification courses to gain domain specific knowledge. (5) To conduct Mock Aptitude, Mock Interview, Mock GD to prepare students to face the interview with confidence. (6) To arrange In-plant training, Internship and Industrial visits. (7) To organize workshops on Recent Technologies by industrial experts which benefits students to understand technological innovations. Besides providing support to entrepreneurial ventures, MSAJCE keeps its employability services up to date with the demands of the job market and aims to ensure that graduates are in the strongest position possible when they leave. Placement Committee: S.No. | Name | Position: 1 | Dr. S. Vijay Ananth | Placement Director. 2 | Mr. L. Tharanikumar | Assistant Placement Officer. 3 | Mr. S.V. Vinodh | Member. 4 | Mr. J.H. Hammer Shield | Member. 5 | Mr. M. Dominic Bro | Member. 6 | Mr. P. Nithin Karthik | Member.",
+    "text": "MSAJCE Placement Cell Overview: In a competitive job market, employers expect graduates to have a range of skills and right experience of the workplace. MSAJCE provides at most care, support and ample opportunities to help students develop requisite skills and expertise and make them employable graduates. Placement Cell Objectives: (1) To provide Employment Opportunities for students in reputed companies. (2) To organize On and Off Campus Recruitment Drives for students. (3) To Train students on employability skills such as Aptitude Skills, Communication Skills and Technical Skills. (4) To conduct Value Added Certification courses to gain domain specific knowledge. (5) To conduct Mock Aptitude, Mock Interview, Mock GD to prepare students to face the interview with confidence. (6) To arrange In-plant training, Internship and Industrial visits. (7) To organize workshops on Recent Technologies by industrial experts which benefits students to understand technological innovations. Besides providing support to entrepreneurial ventures, MSAJCE keeps its employability services up to date with the demands of the job market and aims to ensure that graduates are in the strongest position possible when they leave. Placement Committee: S.No. | Name | Position: 1 | Mr. S.V. Vinodh | Placement Officer. 2 | Mr. Ajin Sijo John | Assistant Placement Officer. 3 | Mrs. N. Kavitha | Member. 4 | Mr. V.A. Babu Charies Earnest | Member.",
     "tables": [
       {
         "table_title": "Placement Committee",
@@ -20652,32 +20697,22 @@
         "rows": [
           [
             "1",
-            "Dr. S. Vijay Ananth",
-            "Placement Director"
+            "Mr. S.V. Vinodh",
+            "Placement Officer"
           ],
           [
             "2",
-            "Mr. L. Tharanikumar",
+            "Mr. Ajin Sijo John",
             "Assistant Placement Officer"
           ],
           [
             "3",
-            "Mr. S.V. Vinodh",
+            "Mrs. N. Kavitha",
             "Member"
           ],
           [
             "4",
-            "Mr. J.H. Hammer Shield",
-            "Member"
-          ],
-          [
-            "5",
-            "Mr. M. Dominic Bro",
-            "Member"
-          ],
-          [
-            "6",
-            "Mr. P. Nithin Karthik",
+            "Mr. V.A. Babu Charies Earnest",
             "Member"
           ]
         ]
@@ -20694,12 +20729,10 @@
     ],
     "entities": {
       "persons": [
-        "Dr. S. Vijay Ananth \u2014 Placement Director",
-        "Mr. L. Tharanikumar \u2014 Assistant Placement Officer",
-        "Mr. S.V. Vinodh \u2014 Member",
-        "Mr. J.H. Hammer Shield \u2014 Member",
-        "Mr. M. Dominic Bro \u2014 Member",
-        "Mr. P. Nithin Karthik \u2014 Member"
+        "Mr. S.V. Vinodh \u2014 Placement Officer",
+        "Mr. Ajin Sijo John \u2014 Assistant Placement Officer",
+        "Mrs. N. Kavitha \u2014 Member",
+        "Mr. V.A. Babu Charies Earnest \u2014 Member"
       ],
       "phones": [],
       "emails": [],
@@ -20708,11 +20741,12 @@
     },
     "keywords": [
       "placement cell",
-      "Dr S Vijay Ananth",
-      "placement director",
-      "L Tharanikumar",
+      "Mr S V Vinodh",
+      "placement officer",
+      "Ajin Sijo John",
       "assistant placement officer",
-      "on campus recruitment",
+      "N Kavitha",
+      "Babu Charies Earnest",
       "off campus recruitment",
       "aptitude training",
       "mock interview",
@@ -22974,6 +23008,20 @@
       "version": "1.0"
     },
     "source_file": "msajce_placement.json"
+  },
+  {
+    "chunk_id": "1",
+    "section": "CSI Activities",
+    "text": "Vice President: Saqlin Mustaq M, AI&DS; 2023\u20132027",
+    "entities": {
+      "persons": [
+        "Saqlin Mustaq M"
+      ]
+    },
+    "metadata": {
+      "title": "Professional Societies"
+    },
+    "source_file": "MSAJCE_Professional_Societies.json"
   },
   {
     "chunk_id": "msajce_research_chunk_01",
@@ -26622,7 +26670,6 @@
       "transport committee"
     ],
     "token_estimate": 290,
-    "text": "MSAJCE COLLEGE BUS FACILITY \u2014 OVERVIEW\n\nThe College is easily accessible from Chennai Central Railway Station, Tambaram Railway Station and CMDA Bus Station by the state operated transport service.\n\nIn addition, the College provides its own transportation for students and staff residing in and around the campus.\n\nFLEET SIZE:\n- 22 Buses\n- 1 Tata ACE\n- 1 Ambulance\n\nSERVICE AREA:\nTransport facility is available from various places in Chennai, Chengalpattu, Kanchipuram and Thiruvallur districts to the institute on all working days.\n\nUSES OF BUS FACILITY:\nThe bus facilities are utilized for:\n1. Daily commute for students and staff\n2. Local social service activities\n3. Sports activities\n4. NCC / NSS activities\n5. Placement and Training activities\n6. Industrial visits\n7. Educational trips\n\nOBJECTIVE:\nOur transport facilities ensure that our students and staff are able to reach the college in time with utmost care and ease.\n\nTRANSPORT COMMITTEE:\nA transport committee, headed by a Convener, is formed to take care of the smooth operation of buses. The staff in-charge of the buses (one teaching and one supporting staff) ensure the smooth functioning. The Transport Committee meets once in six months. The Principal and the staff in-charge of the buses attend the meeting.",
     "metadata": {
       "institution": "MSAJCE \u2014 Mohamed Sathak A.J. College of Engineering",
       "page_title": "Transport \u2014 Complete Data Extract for RAG Model",
@@ -26678,7 +26725,6 @@
       "Thiruporur"
     ],
     "token_estimate": 310,
-    "text": "TRANSPORT COMMITTEE MEMBERS:\n\nMembers | Mobile\nDr. K. P. SANTHOSH NATHAN \u2014 Transport Convener | 98408 86992\nMr. A. ABDUL GAFOOR \u2014 Asst. Transport Convener | 99403 19629\n\n---\n\nMTC BUS ROUTES PASSING THROUGH MSAJCE COLLEGE:\n\nS.No | MTC Bus Route No | Starting Point | Ending Point | Via | Frequency\n1 | 19 | T. Nagar | Thiruporur | OMR, Madhiya Kailash, SRP | Daily\n2 | 519 | T. Nagar | Thiruporur | Saidapet, Adyar, SRP | Daily\n3 | 221H | Central | Thiruporur | Anna Salai, Saidapet, SRP | Daily\n4 | 102X | Broadway | Thiruporur | Marina, Adyar, OMR | Daily\n5 | 102S | Broadway | Sipcot | Marina, Adyar, OMR | Daily\n6 | 102 | Broadway | Kelambakkam | Marina, Adyar, OMR | Daily\n7 | B19 | Shollinganallur | Kelambakkam | Sipcot, OMR | Daily\n8 | 570 | CMBT | Kelambakkam | Vadapalani, Velachery, SRP | Daily\n9 | 570S | CMBT | Sipcot | Vadapalani, Velachery, SRP | Daily\n10 | 105 | Tambaram | Siruseri | Thalambur | Daily\n\nAll MTC bus routes operate Daily.",
     "metadata": {
       "institution": "MSAJCE \u2014 Mohamed Sathak A.J. College of Engineering",
       "page_title": "Transport \u2014 Complete Data Extract for RAG Model",
@@ -26736,7 +26782,6 @@
       "departure time"
     ],
     "token_estimate": 320,
-    "text": "MSAJCE COLLEGE OWN BUS ROUTES \u2014 SUMMARY:\n\nAll buses serve: MSAJCE, MSAJAA & Nursing students and staff.\nAll buses arrive at M.S.A.J.C.E College at 8:00 AM.\n\nS.No | Bus Route | Departure Time | Starting Point | PDF Route Sheet\n1 | AR 3 | 5:50 AM | Uthiramerur | https://www.msajce-edu.in/images/transport/AR3.pdf\n2 | AR 4 | 6:10 AM | Moolakadai | https://www.msajce-edu.in/images/transport/AR4.pdf\n3 | AR 5 | 6:15 AM | MMDA School | https://www.msajce-edu.in/images/transport/AR5.pdf\n4 | AR 6 | 6:15 AM | ICF | https://www.msajce-edu.in/images/transport/AR6.pdf\n5 | AR 7 | 5:25 AM | Chunambedu | https://www.msajce-edu.in/images/transport/AR7.pdf\n6 | AR 8 | 5:50 AM | Manjambakkam | https://www.msajce-edu.in/images/transport/AR8.pdf\n7 | AR 9 | 6:15 AM | Ennore | https://www.msajce-edu.in/images/transport/AR9.pdf\n8 | AR 10 | 6:25 AM | Porur | https://www.msajce-edu.in/images/transport/AR10.pdf\n9 | R 22 | 6:00 AM | Nemilichery | https://www.msajce-edu.in/images/transport/R22.pdf\n\nEarliest departure: AR 7 at 5:25 AM (Chunambedu)\nLatest departure: AR 10 at 6:25 AM (Porur)\nAll routes terminate at MSAJCE College at 8:00 AM.",
     "metadata": {
       "institution": "MSAJCE \u2014 Mohamed Sathak A.J. College of Engineering",
       "page_title": "Transport \u2014 Complete Data Extract for RAG Model",
@@ -26787,7 +26832,6 @@
       "8AM"
     ],
     "token_estimate": 290,
-    "text": "BUS ROUTE: AR 3 \u2014 UTHIRAMERUR\nDriver Name: Mr. Sathish. K\nDriver Mobile: +91-9789970304\nDeparture from First Stop: 6:00 AM\nArrival at College: 8:00 AM\nServes: MSAJCE, MSAJAA & Nursing\n\nBOARDING POINTS AND TIMINGS:\n\nS.No | Boarding Point | Time\n1 | Uthiramerur | 6:00 AM\n2 | G.H. Hospital | 6:30 AM\n3 | Paranur Tollgate | 6:40 AM\n4 | Mahindra City | 6:43 AM\n5 | S.P. Koil | 6:45 AM\n6 | Maraimalai Nagar | 6:48 AM\n7 | Guduvanchery | 6:50 AM\n8 | Ooraapakkam | 6:52 AM\n9 | Vandalur Zoo | 6:55 AM\n10 | Perungalathur | 7:00 AM\n11 | Kandigai | 7:15 AM\n12 | Mambakkam | 7:25 AM\n13 | Puthupakkam | 7:30 AM\n14 | Kelambakkam | 7:40 AM\n15 | Sipcot | 7:50 AM\n16 | M.S.A.J.C.E \u2014 College | 8:00 AM\n\nTotal stops: 16\nRoute covers: Uthiramerur \u2192 Paranur \u2192 Vandalur \u2192 Kelambakkam \u2192 Sipcot \u2192 MSAJCE",
     "metadata": {
       "institution": "MSAJCE \u2014 Mohamed Sathak A.J. College of Engineering",
       "page_title": "Transport \u2014 Complete Data Extract for RAG Model",
@@ -26837,7 +26881,6 @@
       "bus stop timings"
     ],
     "token_estimate": 300,
-    "text": "BUS ROUTE: AR 4 \u2014 MOOLAKADAI\nDriver Name: Mr. M. Suresh\nDriver Mobile: +91-9849265637\nDeparture from First Stop: 6:10 AM\nArrival at College: 8:00 AM\nServes: MSAJCE, MSAJAA & Nursing\n\nBOARDING POINTS AND TIMINGS:\n\nS.No | Boarding Point | Time\n1 | Moolakadai | 6:10 AM\n2 | Perambur Railway Station | 6:15 AM\n3 | Otteri Pattalam | 6:18 AM\n4 | Dowton | 6:23 AM\n5 | Vepery Police Station | 6:25 AM\n6 | Periyamed | 6:30 AM\n7 | Central | 6:35 AM\n8 | Parrys Corner | 6:40 AM\n9 | Marina Beach | 6:45 AM\n10 | Santhome | 6:50 AM\n11 | Adyar | 7:00 AM\n12 | Thiruvanmiyur | 7:05 AM\n13 | Palavakkam | 7:10 AM\n14 | Neelankarai | 7:15 AM\n15 | Akkarai Water Tank | 7:20 AM\n16 | Sholinganallur | 7:25 AM\n17 | Ladies Hostel | 7:30 AM\n18 | M.S.A.J.C.E \u2014 College | 8:00 AM\n\nTotal stops: 18\nRoute covers: Moolakadai \u2192 Perambur \u2192 Central \u2192 Marina \u2192 Adyar \u2192 Thiruvanmiyur \u2192 Sholinganallur \u2192 MSAJCE",
     "metadata": {
       "institution": "MSAJCE \u2014 Mohamed Sathak A.J. College of Engineering",
       "page_title": "Transport \u2014 Complete Data Extract for RAG Model",
@@ -26893,7 +26936,6 @@
       "Perungudi"
     ],
     "token_estimate": 590,
-    "text": "BUS ROUTE: AR 5 \u2014 MMDA SCHOOL\nDriver Name: Mr. Velu\nDriver Mobile: +91-9940050685\nDeparture from First Stop: 6:15 AM\nArrival at College: 8:00 AM\nServes: MSAJCE, MSAJAA & Nursing\n\nBOARDING POINTS AND TIMINGS:\n\nS.No | Boarding Point | Time\n1 | MMDA School | 6:15 AM\n2 | Anna Nagar | 6:20 AM\n3 | Chinthamani | 6:25 AM\n4 | Skywalk | 6:30 AM\n5 | Choolaimadu | 6:33 AM\n6 | Loyola College | 6:35 AM\n7 | T. Nagar | 6:40 AM\n8 | CIT Nagar | 6:43 AM\n9 | Saidapet | 6:45 AM\n10 | Velachery Check Post | 6:50 AM\n11 | Vijaya Nagar Bus Stop | 6:53 AM\n12 | Baby Nagar | 6:55 AM\n13 | Tharamani | 7:00 AM\n14 | MGR Road | 7:15 AM\n15 | OMR | 7:20 AM\n16 | Ladies Hostel | 7:35 AM\n17 | M.S.A.J.C.E \u2014 College | 8:00 AM\n\nTotal stops: 17\nRoute covers: MMDA School \u2192 Anna Nagar \u2192 T. Nagar \u2192 Saidapet \u2192 Velachery \u2192 Tharamani \u2192 OMR \u2192 MSAJCE\n\n---\n\nBUS ROUTE: AR 6 \u2014 ICF\nDriver Name: Mr. B. Padmanaban\nDriver Mobile: +91-7358527720\nDeparture from First Stop: 6:15 AM\nArrival at College: 8:00 AM\nServes: MSAJCE, MSAJAA & Nursing\n\nBOARDING POINTS AND TIMINGS:\n\nS.No | Boarding Point | Time\n1 | MMDA School | 6:10 AM\n2 | ICF | 6:15 AM\n3 | Ayanavaram | 6:20 AM\n4 | Purasawalkam Tank | 6:25 AM\n5 | Dasaprakash | 6:27 AM\n6 | Egmore | 6:30 AM\n7 | Pudupet | 6:32 AM\n8 | Rathnacap | 6:35 AM\n9 | Triplicane | 6:37 AM\n10 | Ice House | 6:40 AM\n11 | New College | 6:48 AM\n12 | Tenampet | 6:55 AM\n13 | Kotturpuram | 7:00 AM\n14 | Madhyakilash | 7:10 AM\n15 | SRP Tools | 7:15 AM\n16 | Perungudi | 7:20 AM\n17 | Karapakkam | 7:25 AM\n18 | Ladies Hostel | 7:35 AM\n19 | M.S.A.J.C.E \u2014 College | 8:00 AM\n\nTotal stops: 19\nRoute covers: ICF \u2192 Ayanavaram \u2192 Egmore \u2192 Triplicane \u2192 Kotturpuram \u2192 Madhyakilash \u2192 Perungudi \u2192 MSAJCE",
     "metadata": {
       "institution": "MSAJCE \u2014 Mohamed Sathak A.J. College of Engineering",
       "page_title": "Transport \u2014 Complete Data Extract for RAG Model",
@@ -26944,7 +26986,6 @@
       "Aananth College"
     ],
     "token_estimate": 330,
-    "text": "BUS ROUTE: AR 7 \u2014 CHUNAMBEDU\nDriver Name: Mr. Suresh\nDriver Mobile: +91-9789895025\nDeparture from First Stop: 5:25 AM (Earliest route)\nArrival at College: 8:00 AM\nServes: MSAJCE, MSAJAA & Nursing\n\nBOARDING POINTS AND TIMINGS:\n\nS.No | Boarding Point | Time\n1 | Chunambedu | 5:25 AM\n2 | Kadapakkam | 5:45 AM\n3 | Elliyamman Koil | 6:00 AM\n4 | Koovathur | 6:17 AM\n5 | Kathan Kadai | 6:22 AM\n6 | Kalpakkam | 6:30 AM\n7 | Caturankappattinam | 6:40 AM\n8 | Venkampakkam | 6:50 AM\n9 | Thirukazukundram | 7:00 AM\n10 | Punceri | 7:12 AM\n11 | Paiyanur | 7:15 AM\n12 | Alathur | 7:20 AM\n13 | Thirupporur | 7:30 AM\n14 | Kalavakkam | 7:36 AM\n15 | Cenkanmal | 7:41 AM\n16 | Kelambakkam | 7:45 AM\n17 | Padur | 7:50 AM\n18 | Aananth College | 7:53 AM\n19 | M.S.A.J.C.E \u2014 College | 8:00 AM\n\nTotal stops: 19\nRoute covers: Chunambedu \u2192 Kalpakkam \u2192 Thirukazukundram \u2192 Thirupporur \u2192 Kelambakkam \u2192 Padur \u2192 MSAJCE\nNote: This is the earliest departing route at 5:25 AM, covering the longest distance from Chunambedu/Kalpakkam area.",
     "metadata": {
       "institution": "MSAJCE \u2014 Mohamed Sathak A.J. College of Engineering",
       "page_title": "Transport \u2014 Complete Data Extract for RAG Model",
@@ -26995,7 +27036,6 @@
       "5:50 AM"
     ],
     "token_estimate": 310,
-    "text": "BUS ROUTE: AR 8 \u2014 MANJAMBAKKAM\nDriver Name: Mr. Raju\nDriver Mobile: +91-9790750906\nDeparture from First Stop: 5:50 AM\nArrival at College: 8:00 AM\nServes: MSAJCE, MSAJAA & Nursing\n\nBOARDING POINTS AND TIMINGS:\n\nS.No | Boarding Point | Time\n1 | Manjambakkam | 5:50 AM\n2 | Retteri | 5:55 AM\n3 | Senthil Nagar | 6:00 AM\n4 | Padi | 6:05 AM\n5 | Anna Nagar | 6:10 AM\n6 | Thirumangalam | 6:12 AM\n7 | Vijaykanth Mandapam | 6:15 AM\n8 | Chinmaya Nagar | 6:20 AM\n10 | Avachi School | 6:25 AM\n11 | Nesapakkam | 6:30 AM\n12 | KK Nagar | 6:35 AM\n13 | Ashok Pillar | 6:40 AM\n14 | Aadampakkam | 6:50 AM\n15 | Kiveli | 6:55 AM\n16 | Pallikkarani | 7:10 AM\n17 | Medavakkam | 7:20 AM\n18 | Perumpakkam | 7:25 AM\n19 | Sholinganallur | 7:30 AM\n20 | Ladies Hostel | 7:35 AM\n21 | M.S.A.J.C.E \u2014 College | 8:00 AM\n\nTotal stops: 21 (largest stop count)\nRoute covers: Manjambakkam \u2192 Padi \u2192 Anna Nagar \u2192 KK Nagar \u2192 Pallikkarani \u2192 Medavakkam \u2192 Sholinganallur \u2192 MSAJCE",
     "metadata": {
       "institution": "MSAJCE \u2014 Mohamed Sathak A.J. College of Engineering",
       "page_title": "Transport \u2014 Complete Data Extract for RAG Model",
@@ -27046,7 +27086,6 @@
       "Ladies Hostel"
     ],
     "token_estimate": 275,
-    "text": "BUS ROUTE: AR 9 \u2014 ENNORE\nDriver Name: Mr. Kanagaraj\nDriver Mobile: +91-9710209097\nDeparture from First Stop: 6:15 AM\nArrival at College: 8:00 AM\nServes: MSAJCE, MSAJAA & Nursing\n\nBOARDING POINTS AND TIMINGS:\n\nS.No | Boarding Point | Time\n1 | Ennore | 6:15 AM\n2 | Mint | 6:20 AM\n3 | Broadway | 6:25 AM\n4 | Central | 6:30 AM\n5 | Omanthoorar Hospital | 6:40 AM\n6 | Royapettah | 6:45 AM\n7 | Mylapore | 6:50 AM\n8 | Mandaveli | 7:00 AM\n9 | Adyar | 7:10 AM\n10 | Thiruvanmiyur | 7:15 AM\n11 | Palavakkam | 7:20 AM\n12 | Neelankarai | 7:25 AM\n13 | Akkarai Water Tank | 7:30 AM\n14 | Sholinganallur | 7:35 AM\n15 | Ladies Hostel | 7:40 AM\n16 | M.S.A.J.C.E \u2014 College | 8:00 AM\n\nTotal stops: 16\nRoute covers: Ennore \u2192 Mint \u2192 Broadway \u2192 Central \u2192 Royapettah \u2192 Mylapore \u2192 Adyar \u2192 Thiruvanmiyur \u2192 Sholinganallur \u2192 MSAJCE",
     "metadata": {
       "institution": "MSAJCE \u2014 Mohamed Sathak A.J. College of Engineering",
       "page_title": "Transport \u2014 Complete Data Extract for RAG Model",
@@ -27096,7 +27135,6 @@
       "6:25 AM"
     ],
     "token_estimate": 285,
-    "text": "BUS ROUTE: AR 10 \u2014 PORUR\nDriver Name: Mr. Ravindran\nDriver Mobile: +91-9710939995\nDeparture from First Stop: 6:25 AM\nArrival at College: 8:00 AM\nServes: MSAJCE, MSAJAA & Nursing\n\nBOARDING POINTS AND TIMINGS:\n\nS.No | Boarding Point | Time\n1 | Porur | 6:25 AM\n2 | Boy Kadai | 6:33 AM\n3 | Kovoor | 6:35 AM\n4 | Kundrathur | 6:38 AM\n5 | Anagaputhur | 6:40 AM\n6 | Pammal | 6:43 AM\n7 | Pallavaram | 6:45 AM\n8 | Meenambakkam | 6:48 AM\n9 | Pallavaram | 6:50 AM\n10 | Chrompet | 6:55 AM\n11 | Tambaram W & E | 7:00 AM\n12 | Camp Road | 7:05 AM\n13 | Saliyur | 7:10 AM\n14 | Medavakkam | 7:25 AM\n15 | Sholinganallur | 7:30 AM\n17 | Ladies Hostel | 7:35 AM\n18 | M.S.A.J.C.E \u2014 College | 8:00 AM\n\nTotal stops: 18\nRoute covers: Porur \u2192 Kundrathur \u2192 Pallavaram \u2192 Meenambakkam \u2192 Chrompet \u2192 Tambaram \u2192 Medavakkam \u2192 Sholinganallur \u2192 MSAJCE",
     "metadata": {
       "institution": "MSAJCE \u2014 Mohamed Sathak A.J. College of Engineering",
       "page_title": "Transport \u2014 Complete Data Extract for RAG Model",
@@ -27146,7 +27184,6 @@
       "Sholinganallur"
     ],
     "token_estimate": 310,
-    "text": "BUS ROUTE: R 22 \u2014 NEMILICHERY\nDriver Name: Mr. Jaffar\nDriver Mobile: +91-9566037890\nDeparture from First Stop: 5:50 AM\nArrival at College: 8:00 AM\nServes: MSAJCE, MSAJAA & Nursing\n\nBOARDING POINTS AND TIMINGS:\n\nS.No | Boarding Point | Time\n1 | Nemilichery | 5:50 AM\n2 | Poonnamalle | 6:05 AM\n3 | Kumanan Chavadi | 6:00 AM\n4 | Kattupakkam | 6:05 AM\n5 | Ramachandra Hospital | 6:10 AM\n6 | Porur | 6:15 AM\n7 | Valasaravakkam | 6:20 AM\n8 | Ramapuram | 6:25 AM\n9 | Nanthampakkam | 6:30 AM\n10 | Kathipara Junction | 6:35 AM\n11 | Thillai Ganga Subway | 6:40 AM\n12 | Velachery Bypass | 6:45 AM\n13 | Kaiveli | 7:00 AM\n14 | Madipakkam | 7:05 AM\n15 | Kilkattalai | 7:10 AM\n16 | Kovilampakkam | 7:15 AM\n17 | Medavakkam | 7:20 AM\n18 | Sholinganallur | 7:25 AM\n19 | M.S.A.J.C.E \u2014 College | 8:00 AM\n\nTotal stops: 19\nRoute covers: Nemilichery \u2192 Poonnamalle \u2192 Ramachandra Hospital \u2192 Porur \u2192 Ramapuram \u2192 Kathipara \u2192 Velachery \u2192 Medavakkam \u2192 Sholinganallur \u2192 MSAJCE",
     "metadata": {
       "institution": "MSAJCE \u2014 Mohamed Sathak A.J. College of Engineering",
       "page_title": "Transport \u2014 Complete Data Extract for RAG Model",
@@ -27196,7 +27233,6 @@
       "Abdul Gafoor"
     ],
     "token_estimate": 290,
-    "text": "MSAJCE BUS DRIVERS \u2014 COMPLETE CONTACT REFERENCE:\n\nRoute | Route Name | Driver Name | Mobile Number\nAR 3 | Uthiramerur | Mr. Sathish. K | +91-9789970304\nAR 4 | Moolakadai | Mr. M. Suresh | +91-9849265637\nAR 5 | MMDA School | Mr. Velu | +91-9940050685\nAR 6 | ICF | Mr. B. Padmanaban | +91-7358527720\nAR 7 | Chunambedu | Mr. Suresh | +91-9789895025\nAR 8 | Manjambakkam | Mr. Raju | +91-9790750906\nAR 9 | Ennore | Mr. Kanagaraj | +91-9710209097\nAR 10 | Porur | Mr. Ravindran | +91-9710939995\nR 22 | Nemilichery | Mr. Jaffar | +91-9566037890\n\nTRANSPORT COMMITTEE CONTACTS:\nDr. K. P. Santhosh Nathan \u2014 Transport Convener | Mobile: 98408 86992\nMr. A. Abdul Gafoor \u2014 Asst. Transport Convener | Mobile: 99403 19629\n\nGENERAL COLLEGE CONTACT:\nAddress: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai \u2013 603103\nPhone: +91 99400 04500\nEmail: msajce.office@gmail.com\nWebsite: www.msajce-edu.in",
     "metadata": {
       "institution": "MSAJCE \u2014 Mohamed Sathak A.J. College of Engineering",
       "page_title": "Transport \u2014 Complete Data Extract for RAG Model",

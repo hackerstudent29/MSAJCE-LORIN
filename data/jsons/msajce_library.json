@@ -1,0 +1,517 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Learning Centre (Library) — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/library.php",
+    "sections_covered": [
+      "Library Overview and Physical Details",
+      "Library Stack Collection Statistics",
+      "Library Working Hours",
+      "List of Printed Journals by Department",
+      "Open Access E-Journals",
+      "E-Library Databases",
+      "E-Books Databases",
+      "Free Online Course Materials",
+      "Library Services",
+      "Institution Membership (DELNET and J-Gate)",
+      "Rules and Regulations",
+      "Membership Borrowing Eligibility",
+      "Library Committee Members"
+    ],
+    "scraped_date": "2026-04-29",
+    "total_chunks": 8,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_library",
+    "version": "1.0"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_library_chunk_01",
+      "section": "Library Overview, Physical Details and Stack Collection Statistics",
+      "source_url": "https://www.msajce-edu.in/library.php",
+      "context": "Introduction to the MSAJCE Learning Centre (Library) covering area, technology, collection size, and complete stack collection statistics.",
+      "text": "Welcome to the Learning Centre — MSAJCE\n\nLibrary is the Heart of every academic Institution. Our institution encourages all students and staff members to make the best use of the library that has been carefully built up since the inception of the college as a cardinal support service of the Institute. The prime objective of our library is to provide the right information to the right readers at the right time in the right manner by bibliographic sources and full text sources in the form of print as well as digital in the disciplines of Science, Engineering, Technology, Humanities, Management, General and etc.\n\nThe collections are kept in separate places such as the stack section, reference section, and Periodical Section to support the scholarly and informational needs of the Institute Community. The library is housed in a spacious area of 8978 Sq.ft (Ground Floor and 1st Floor), fully computerized with more than 29853 books and 1885 reference volumes stacked for the benefit of staff and students. The library subscribes around 35 nos specialized Printed journals and 20 nos magazines. We are also a member of DELNET. J-Gate database is subscribed yearly.\n\nTechnology: Bar-coded Technology, open source software called Koha, internet connectivity and WIFI facility are all available.\n\nLibrary Resources — Stack Collection Details:\nVolumes | 29853\nTitle | 5628\nReference Books | 1885\nNational Journals | 35\nMagazines | 20\nE-Books | 3790\nDaily Newspapers | 05\nBack Volumes | 106\nCD-ROM | 356\nProject Reports | 260\nE-Journal DELNET | 1379\nDatabase (Gale) International Journals | 1800",
+      "tables": [
+        {
+          "table_title": "Library Stack Collection Details",
+          "headers": ["Resource Type", "Count"],
+          "rows": [
+            ["Volumes", "29853"],
+            ["Title", "5628"],
+            ["Reference Books", "1885"],
+            ["National Journals", "35"],
+            ["Magazines", "20"],
+            ["E-Books", "3790"],
+            ["Daily Newspapers", "05"],
+            ["Back Volumes", "106"],
+            ["CD-ROM", "356"],
+            ["Project Reports", "260"],
+            ["E-Journal DELNET", "1379"],
+            ["Database (Gale) International Journals", "1800"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "How many books are available in the MSAJCE library?",
+        "What is the area of the MSAJCE library?",
+        "How many e-books does MSAJCE library have?",
+        "Does MSAJCE library have WIFI?",
+        "What software does MSAJCE library use?",
+        "How many journals does MSAJCE library subscribe to?",
+        "Is MSAJCE library a member of DELNET?",
+        "How many reference books are in MSAJCE library?",
+        "What is the total number of volumes in MSAJCE library?",
+        "Does MSAJCE library have project reports?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": ["Ground Floor and 1st Floor, MSAJCE"],
+        "numbers": [
+          "8978 Sq.ft library area",
+          "29853 volumes",
+          "5628 titles",
+          "1885 reference books",
+          "35 national journals",
+          "20 magazines",
+          "3790 e-books",
+          "5 daily newspapers",
+          "106 back volumes",
+          "356 CD-ROMs",
+          "260 project reports",
+          "1379 e-journals DELNET",
+          "1800 Gale international journals"
+        ]
+      },
+      "keywords": [
+        "MSAJCE library", "Learning Centre", "8978 sq ft", "29853 books", "5628 titles", "Koha software", "DELNET", "J-Gate", "bar-coded", "WIFI", "stack collection", "reference books", "e-journals", "Gale database"
+      ],
+      "overlap_text": "",
+      "token_count": 490
+    },
+    {
+      "chunk_id": "msajce_library_chunk_02",
+      "section": "Library Working Hours and Printed Journals by Department",
+      "source_url": "https://www.msajce-edu.in/library.php",
+      "context": "Library opening hours on weekdays and Sundays, and the department-wise distribution of printed journal subscriptions totalling 37 journals.",
+      "text": "Library Working Hours:\nMonday to Saturday — 8.00 A.M. to 7.00 P.M.\nAll Sundays — 10.00 A.M. to 4.00 P.M.\n\nList of Printed Journals — Department-wise:\nS.No. | Name of the Department | No. of Printed Journals\n1 | Mechanical Engineering | 06\n2 | Electronics and Communication Engineering | 06\n3 | Electrical and Electronics Engineering | 06\n4 | Computer Science Engineering / Information Technology | 10\n5 | Civil Engineering | 04\n6 | S&H (Science and Humanities) | 05\n  | TOTAL | 37\n\nNote: The library subscribes 35 printed journals mentioned in the overview; the department-wise total shows 37, reflecting the full subscribed count across all departments. CSE/IT has the highest number of printed journal subscriptions (10), followed by Mechanical, ECE, and EEE (6 each), S&H (5), and Civil Engineering (4).",
+      "tables": [
+        {
+          "table_title": "Department-wise Printed Journal Subscriptions",
+          "headers": ["S.No.", "Department", "No. of Printed Journals"],
+          "rows": [
+            ["1", "Mechanical Engineering", "06"],
+            ["2", "Electronics and Communication Engineering", "06"],
+            ["3", "Electrical and Electronics Engineering", "06"],
+            ["4", "Computer Science Engineering / Information Technology", "10"],
+            ["5", "Civil Engineering", "04"],
+            ["6", "S&H (Science and Humanities)", "05"],
+            ["", "TOTAL", "37"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What are the library timings at MSAJCE?",
+        "Is the MSAJCE library open on Sundays?",
+        "What time does the library open on weekdays?",
+        "What time does the library close on Saturdays?",
+        "How many journals are subscribed for CSE department?",
+        "How many printed journals does EEE department have?",
+        "What is the total number of printed journals in MSAJCE library?",
+        "Does MSAJCE library have journals for Civil Engineering?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "Monday to Saturday 8:00 AM to 7:00 PM",
+          "Sunday 10:00 AM to 4:00 PM",
+          "37 total printed journals",
+          "10 journals for CSE/IT",
+          "6 journals for Mechanical, ECE, EEE each",
+          "5 journals for S&H",
+          "4 journals for Civil Engineering"
+        ]
+      },
+      "keywords": [
+        "library timings", "library hours", "Monday Saturday 8am 7pm", "Sunday 10am 4pm", "printed journals", "CSE journals", "EEE journals", "ECE journals", "Mechanical journals", "Civil journals", "department journals", "37 journals"
+      ],
+      "overlap_text": "The library is housed in a spacious area of 8978 Sq.ft (Ground Floor and 1st Floor), fully computerized with more than 29853 books and 1885 reference volumes. The library subscribes around 35 specialized Printed journals and 20 magazines. We are also a member of DELNET. Bar-coded Technology, open source software called Koha, internet connectivity and WIFI facility are all available.",
+      "token_count": 390
+    },
+    {
+      "chunk_id": "msajce_library_chunk_03",
+      "section": "Open Access E-Journals and E-Library Databases",
+      "source_url": "https://www.msajce-edu.in/library.php",
+      "context": "Complete list of 15 open-access e-journal providers and 8 e-library database resources available to MSAJCE students and staff with access URLs.",
+      "text": "Open Access E-Journals — Providers and URLs:\nS.No. | Name of Provider | Access URL\n1 | Directory of Open Access Journals | http://doaj.org/\n2 | BioMed Central | http://www.biomedcentral.com/journals\n3 | Scientific Research Publishing | http://www.scirp.org/\n4 | Core | https://www.core.ac.uk/\n5 | Trans stellar journal publication and Research Consultancy | http://www.tiprc.org/\n6 | Science Publications | http://thescipub.com\n7 | Research India Publication | http://www.ripublication.com/\n8 | International Association of Engineering and Management | http://www.iaeme.com/\n9 | Seventh Sense Research Group | http://www.internationaljournalssrg.org/\n10 | Google Scholar | https://www.scholar.google.com\n11 | arXiv (Scholar Articles) | https://www.arxiv.org\n12 | Hindawi Publishers | http://www.hindawi.com/\n13 | CSC Open-Access Library | http://www.cscjournals.org/\n14 | OMICS International | http://www.omicsonline.org\n15 | Indian Academy of Science | https://www.ias.ac.in\n\nE-Library Databases:\nS.No. | Name of Provider | Access URL\n1 | Delnet | https://delnet.in/\n2 | J-Gate | https://jgateplus.com/\n3 | National Digital Library | https://ndl.iitkgp.ac.in/\n4 | World Digital Library | https://www.wdl.org/\n5 | Shodhganga | https://shodhganga.inflibnet.ac.in/\n6 | Shodhsindu | https://ess.inflibnet.ac.in/\n7 | NPTEL Videos | http://www.nptelvideos.com/\n8 | NLIST E-Resource | https://nlist.inflibnet.ac.in/veresources.php",
+      "tables": [
+        {
+          "table_title": "Open Access E-Journals",
+          "headers": ["S.No.", "Name of Provider", "Access URL"],
+          "rows": [
+            ["1", "Directory of Open Access Journals", "http://doaj.org/"],
+            ["2", "BioMed Central", "http://www.biomedcentral.com/journals"],
+            ["3", "Scientific Research Publishing", "http://www.scirp.org/"],
+            ["4", "Core", "https://www.core.ac.uk/"],
+            ["5", "Trans stellar journal publication and Research Consultancy", "http://www.tiprc.org/"],
+            ["6", "Science Publications", "http://thescipub.com"],
+            ["7", "Research India Publication", "http://www.ripublication.com/"],
+            ["8", "International Association of Engineering and Management", "http://www.iaeme.com/"],
+            ["9", "Seventh Sense Research Group", "http://www.internationaljournalssrg.org/"],
+            ["10", "Google Scholar", "https://www.scholar.google.com"],
+            ["11", "arXiv (Scholar Articles)", "https://www.arxiv.org"],
+            ["12", "Hindawi Publishers", "http://www.hindawi.com/"],
+            ["13", "CSC Open-Access Library", "http://www.cscjournals.org/"],
+            ["14", "OMICS International", "http://www.omicsonline.org"],
+            ["15", "Indian Academy of Science", "https://www.ias.ac.in"]
+          ]
+        },
+        {
+          "table_title": "E-Library Databases",
+          "headers": ["S.No.", "Name of Provider", "Access URL"],
+          "rows": [
+            ["1", "Delnet", "https://delnet.in/"],
+            ["2", "J-Gate", "https://jgateplus.com/"],
+            ["3", "National Digital Library", "https://ndl.iitkgp.ac.in/"],
+            ["4", "World Digital Library", "https://www.wdl.org/"],
+            ["5", "Shodhganga", "https://shodhganga.inflibnet.ac.in/"],
+            ["6", "Shodhsindu", "https://ess.inflibnet.ac.in/"],
+            ["7", "NPTEL Videos", "http://www.nptelvideos.com/"],
+            ["8", "NLIST E-Resource", "https://nlist.inflibnet.ac.in/veresources.php"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What are the open access journals available through MSAJCE library?",
+        "How can I access arXiv from MSAJCE library?",
+        "Is Google Scholar accessible through the library?",
+        "What is Shodhganga and how do I access it?",
+        "Can students access NPTEL videos through the library?",
+        "What is the URL for the National Digital Library?",
+        "Does MSAJCE library provide access to J-Gate?",
+        "What e-library databases are available for research at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["15 open access e-journal providers", "8 e-library databases"]
+      },
+      "keywords": [
+        "open access journals", "DOAJ", "arXiv", "Google Scholar", "Hindawi", "Shodhganga", "Shodhsindu", "NPTEL", "NLIST", "DELNET", "J-Gate", "National Digital Library", "e-library", "research databases", "OMICS"
+      ],
+      "overlap_text": "Library Working Hours: Monday to Saturday 8.00 AM to 7.00 PM. All Sundays 10.00 AM to 4.00 PM. Total printed journals: 37 across all departments. CSE/IT has 10, Mechanical/ECE/EEE have 6 each, S&H has 5, Civil Engineering has 4.",
+      "token_count": 480
+    },
+    {
+      "chunk_id": "msajce_library_chunk_04",
+      "section": "E-Books Databases — Complete List of 30 Providers",
+      "source_url": "https://www.msajce-edu.in/library.php",
+      "context": "Full list of 30 free and open e-book database providers accessible to MSAJCE students and staff, with direct access URLs for each.",
+      "text": "E-Books Databases — Providers and Access URLs:\nS.No. | Name of e-Books Database | E-Books Database URL\n1 | Directory of Open Access Books | http://www.doabooks.org/\n2 | E-Books Directory | http://www.e-booksdirectory.com/\n3 | AMS Books | http://www.ams.org/\n4 | Intech | http://www.intechopen.com/\n5 | Audio Books for Free | http://www.audiobooksforfree.com/\n6 | New Free Books | https://www.free-ebooks.net/\n7 | ACS e-Books | http://pubs.acs.org/\n8 | Online Book Page | http://onlinebooks.library.upenn.edu/\n9 | UC Press E-Books Collection | https://publishing.cdlib.org/ucpreebooks/\n10 | GPO Access | http://www.gpo.gov/\n11 | Internet Archive | http://archive.org/\n12 | Project Gutenberg | http://www.gutenberg.org/\n13 | Bookboon | http://bookboon.com/\n14 | Free Books Hub | http://www.freebookshub.com/\n15 | World Book | http://www.worldbook.com/\n16 | The Bookstore Sisters (Kirkus Reviews) | https://www.kirkusreviews.com/\n17 | Computer Books | http://freecomputerbooks.com/\n18 | Page by Page Books Online | http://www.pagebypagebooks.com/\n19 | Read Print | http://www.readprint.com/\n20 | World e-Books Library | http://www.worldlibrary.in/\n21 | Biodiversity Heritage Library | http://www.biodiversity.org/\n22 | Free Book Centre | http://www.freebookcentre.net/\n23 | Comic Books | http://www.comicextra.com/\n24 | AR Book Find | https://www.arbookfind.com/\n25 | Black Book Online | http://www.blackbookonline.info/\n26 | Fiction DB | http://www.fictiondb.com/\n27 | Free Tech Books | http://www.freetechbooks.com/\n28 | Open Access e-Books | https://www.intechopen.com/books\n29 | E-Books | http://www.ebooks.com/en-in\n30 | Get Free Books | https://www.getfreebooks.com/",
+      "tables": [
+        {
+          "table_title": "E-Books Database Providers",
+          "headers": ["S.No.", "Name of e-Books Database", "URL"],
+          "rows": [
+            ["1", "Directory of Open Access Books", "http://www.doabooks.org/"],
+            ["2", "E-Books Directory", "http://www.e-booksdirectory.com/"],
+            ["3", "AMS Books", "http://www.ams.org/"],
+            ["4", "Intech", "http://www.intechopen.com/"],
+            ["5", "Audio Books for Free", "http://www.audiobooksforfree.com/"],
+            ["6", "New Free Books", "https://www.free-ebooks.net/"],
+            ["7", "ACS e-Books", "http://pubs.acs.org/"],
+            ["8", "Online Book Page", "http://onlinebooks.library.upenn.edu/"],
+            ["9", "UC Press E-Books Collection", "https://publishing.cdlib.org/ucpreebooks/"],
+            ["10", "GPO Access", "http://www.gpo.gov/"],
+            ["11", "Internet Archive", "http://archive.org/"],
+            ["12", "Project Gutenberg", "http://www.gutenberg.org/"],
+            ["13", "Bookboon", "http://bookboon.com/"],
+            ["14", "Free Books Hub", "http://www.freebookshub.com/"],
+            ["15", "World Book", "http://www.worldbook.com/"],
+            ["16", "The Bookstore Sisters (Kirkus Reviews)", "https://www.kirkusreviews.com/"],
+            ["17", "Computer Books", "http://freecomputerbooks.com/"],
+            ["18", "Page by Page Books Online", "http://www.pagebypagebooks.com/"],
+            ["19", "Read Print", "http://www.readprint.com/"],
+            ["20", "World e-Books Library", "http://www.worldlibrary.in/"],
+            ["21", "Biodiversity Heritage Library", "http://www.biodiversity.org/"],
+            ["22", "Free Book Centre", "http://www.freebookcentre.net/"],
+            ["23", "Comic Books", "http://www.comicextra.com/"],
+            ["24", "AR Book Find", "https://www.arbookfind.com/"],
+            ["25", "Black Book Online", "http://www.blackbookonline.info/"],
+            ["26", "Fiction DB", "http://www.fictiondb.com/"],
+            ["27", "Free Tech Books", "http://www.freetechbooks.com/"],
+            ["28", "Open Access e-Books", "https://www.intechopen.com/books"],
+            ["29", "E-Books", "http://www.ebooks.com/en-in"],
+            ["30", "Get Free Books", "https://www.getfreebooks.com/"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Where can I find free e-books through MSAJCE library?",
+        "Does the library provide access to Project Gutenberg?",
+        "What e-book databases are available at MSAJCE?",
+        "How many e-book providers does MSAJCE library have?",
+        "Where can I get free computer science books online?",
+        "Is Internet Archive accessible through the library?",
+        "Does MSAJCE library have free tech books?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["30 e-book database providers", "3790 e-books in collection"]
+      },
+      "keywords": [
+        "e-books", "free e-books", "Project Gutenberg", "Internet Archive", "Intech", "ACS e-books", "Bookboon", "Free Tech Books", "Open Access Books", "DOAB", "online books", "digital books", "e-book database"
+      ],
+      "overlap_text": "Open Access E-Journals available include DOAJ, BioMed Central, Google Scholar, arXiv, Hindawi, OMICS, Indian Academy of Science — 15 providers total. E-Library databases include DELNET, J-Gate, National Digital Library, Shodhganga, Shodhsindu, NPTEL Videos, NLIST — 8 databases total.",
+      "token_count": 470
+    },
+    {
+      "chunk_id": "msajce_library_chunk_05",
+      "section": "Free Online Course Materials and Library Services",
+      "source_url": "https://www.msajce-edu.in/library.php",
+      "context": "List of 22 free online learning platforms accessible via the library, and all library services offered including OPAC, inter-library loan, and group discussion rooms.",
+      "text": "Free Online Course Materials — Platforms and URLs:\nS.No. | Name of Database | URL\n1 | MIT OpenCourseWare | www.ocw.mit.edu\n2 | NPTEL | www.nptel.iitm.ac.in\n3 | Coursera | https://www.coursera.org/in\n4 | The Khan Academy | https://www.khanacademy.org/\n5 | edX | https://www.edx.org/\n6 | Udacity | https://www.udacity.com/\n7 | Lynda (LinkedIn Learning) | https://www.linkedin.com\n8 | Audible | https://www.audible.in/\n9 | Google Books | https://books.google.co.in/\n10 | WikiHow | https://www.wikihow.com/\n11 | Do It Yourself | https://www.doityourself.com/\n12 | Instructables | https://instuctables.com\n13 | Let's Make Robots (RobotShop) | https://www.robotshop.com/\n14 | Wonder How To | https://www.wonderhowto.com/\n15 | IKEA Hackers | https://ikeahackers.net/\n16 | Make Projects | https://makeprojects.com/\n17 | TED Talks | https://www.ted.com/\n18 | How Stuff Works | https://www.howstuffworks.com/\n19 | YouTube | https://www.youtube.com/\n20 | Udemy | https://www.udemy.com/\n21 | Skillshare | https://www.skillshare.com/\n22 | Teachable | https://teachable.com/\n\nLibrary Services Available:\n- Transaction of Books (Issue and Return)\n- Internet and Intranet\n- Reservation of Books\n- Reference\n- Online Public Access Catalogue (OPAC)\n- Reminder for overdue books\n- Reprographic (Xerox)\n- Group Discussion Room\n- Inter Library Loan\n- Periodical utilization",
+      "tables": [
+        {
+          "table_title": "Free Online Course Material Platforms",
+          "headers": ["S.No.", "Platform", "URL"],
+          "rows": [
+            ["1", "MIT OpenCourseWare", "www.ocw.mit.edu"],
+            ["2", "NPTEL", "www.nptel.iitm.ac.in"],
+            ["3", "Coursera", "https://www.coursera.org/in"],
+            ["4", "The Khan Academy", "https://www.khanacademy.org/"],
+            ["5", "edX", "https://www.edx.org/"],
+            ["6", "Udacity", "https://www.udacity.com/"],
+            ["7", "Lynda (LinkedIn Learning)", "https://www.linkedin.com"],
+            ["8", "Audible", "https://www.audible.in/"],
+            ["9", "Google Books", "https://books.google.co.in/"],
+            ["10", "WikiHow", "https://www.wikihow.com/"],
+            ["11", "Do It Yourself", "https://www.doityourself.com/"],
+            ["12", "Instructables", "https://instuctables.com"],
+            ["13", "Let's Make Robots (RobotShop)", "https://www.robotshop.com/"],
+            ["14", "Wonder How To", "https://www.wonderhowto.com/"],
+            ["15", "IKEA Hackers", "https://ikeahackers.net/"],
+            ["16", "Make Projects", "https://makeprojects.com/"],
+            ["17", "TED Talks", "https://www.ted.com/"],
+            ["18", "How Stuff Works", "https://www.howstuffworks.com/"],
+            ["19", "YouTube", "https://www.youtube.com/"],
+            ["20", "Udemy", "https://www.udemy.com/"],
+            ["21", "Skillshare", "https://www.skillshare.com/"],
+            ["22", "Teachable", "https://teachable.com/"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Can I access Coursera through MSAJCE library?",
+        "Does MSAJCE library provide access to NPTEL?",
+        "What online learning platforms are available through the library?",
+        "Does the library have a group discussion room?",
+        "What is OPAC in the MSAJCE library?",
+        "Can I get a xerox copy from the library?",
+        "Is Inter Library Loan available at MSAJCE library?",
+        "Does the library offer book reservation facility?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["22 online course material platforms", "10 library services"]
+      },
+      "keywords": [
+        "online courses", "NPTEL", "Coursera", "edX", "MIT OpenCourseWare", "Khan Academy", "Udemy", "OPAC", "inter library loan", "group discussion room", "book reservation", "reprographic", "Xerox", "TED Talks", "library services"
+      ],
+      "overlap_text": "E-Books databases: 30 providers including Project Gutenberg, Internet Archive, Intech, ACS e-books, Bookboon, Free Tech Books, Open Access e-Books at intechopen.com/books, and Get Free Books. Total 3790 e-books in the library collection available to students and staff.",
+      "token_count": 460
+    },
+    {
+      "chunk_id": "msajce_library_chunk_06",
+      "section": "Institution Membership and Library Rules and Regulations",
+      "source_url": "https://www.msajce-edu.in/library.php",
+      "context": "MSAJCE library institutional memberships (DELNET and J-Gate), and the complete set of library rules, regulations, and fine structure for overdue books.",
+      "text": "Institution Membership:\n1. Developing Library Network (DELNET) — International Library Network: Avail any book, Xerox or soft copy of any journal article through ILL (Inter Library Loan). URL: https://delnet.in/\n2. J-Gate (Database): More than 50,684 journals are available in the online website. URL: https://jgateplus.com/\n\nLibrary Rules and Regulations:\n- All Staff and Students are the members of our College Library.\n- All students are eligible to borrow 18 Books.\n- All staff are eligible to borrow Books.\n- Reference books and periodicals will NOT be issued.\n- Library ID is not transferable.\n- Member should notify the Librarian any loss of cards and change of address immediately.\n- The User may reserve a book in circulation. He will be notified as soon as the reserved book is returned. The book will be retained at the circulation desk for one day from the date of return.\n- Books will be issued for a short duration of 30 days only.\n\nFine Structure for Overdue Books:\n- After 30 days — First 7 days (days 31–37): Rs. 1.00 per day per book\n- After 30 days — 8 to 14 days (days 38–44): Rs. 2.00 per day per book\n- After 30 days — 15 days onwards (day 45+): Rs. 5.00 per day per book\n\nAdditional Rules:\n- Silence should be observed in the Library.\n- Users should leave personal belongings (bags, briefcase, notebooks, files) at the entrance.\n- Loss of books must be reported immediately to the Librarian. If the borrower is unable to replace the lost book, the cost (double amount) will be recovered from the borrower.\n- All books must be returned to the Library in time for physical stock verification.\n- Students are advised to check whether the book contains all pages intact before borrowing. At the time of returning, if any damage or defect is found, the borrower will be held responsible.",
+      "tables": [
+        {
+          "table_title": "Library Fine Structure for Overdue Books",
+          "headers": ["Overdue Period", "Fine Rate"],
+          "rows": [
+            ["Days 31–37 (First 7 days after 30-day loan period)", "Rs. 1.00 per day per book"],
+            ["Days 38–44 (8 to 14 days after 30-day loan period)", "Rs. 2.00 per day per book"],
+            ["Day 45 onwards (15 days onwards after 30-day loan period)", "Rs. 5.00 per day per book"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the fine for late return of library books at MSAJCE?",
+        "How many books can a student borrow from MSAJCE library?",
+        "What is the loan period for library books at MSAJCE?",
+        "Can I borrow reference books from MSAJCE library?",
+        "What happens if I lose a library book at MSAJCE?",
+        "Is the library card transferable?",
+        "What is DELNET and how does it help students?",
+        "How many journals are available on J-Gate?",
+        "Can I reserve a book that is currently issued to someone else?",
+        "What is the fine for books returned after 45 days?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "18 books borrowing limit for students",
+          "30 days loan period",
+          "Rs. 1.00 per day fine (days 31-37)",
+          "Rs. 2.00 per day fine (days 38-44)",
+          "Rs. 5.00 per day fine (day 45 onwards)",
+          "50,684 journals on J-Gate",
+          "double cost charged for lost books",
+          "1 day retention at desk after reserved book returned"
+        ]
+      },
+      "keywords": [
+        "library rules", "library fine", "overdue fine", "book loan period", "30 days", "18 books", "DELNET membership", "J-Gate 50684 journals", "inter library loan", "reference books not issued", "lost book penalty", "library card", "stock verification"
+      ],
+      "overlap_text": "Free Online Course Materials: 22 platforms including MIT OpenCourseWare, NPTEL, Coursera, edX, Khan Academy, Udemy, TED Talks. Library services include OPAC, Inter Library Loan, Group Discussion Room, Reprographic (Xerox), Book Reservation, and Reminder for overdue books.",
+      "token_count": 510
+    },
+    {
+      "chunk_id": "msajce_library_chunk_07",
+      "section": "Membership Borrowing Eligibility and Library Committee",
+      "source_url": "https://www.msajce-edu.in/library.php",
+      "context": "Borrowing entitlements by membership category (UG, PG, staff), and the complete list of 21 Library Committee members including student representatives from all departments.",
+      "text": "Membership Borrowing Eligibility:\nMembership Category | Borrowing Entitlements | Loan Period\nTeaching Staffs | 10 Books | 30 Days\nUG Students | 18 Books | 30 Days\nPG Students | 18 Books | 30 Days\nSupporting and Administrative Staff | 04 Books | 30 Days\n\nLibrary Committee Members:\nS.No. | Name | Designation/Role | Position in Committee\n1 | Dr. K.S. Srinivasan | Principal | Chairman\n2 | Dr. A. Balakrishnan | Head - Academics | Member\n3 | Dr. B. Janarthanan | Head - Research | Member\n4 | Dr. I. Manju | Head - IQAC | Member\n5 | Dr. Kamalaselvan A | Library I/C | Secretary\n6 | Mrs. Anusuya P | AP / ECE & Library I/C | Member Secretary\n7 | All HoDs | — | Member\n8 | Mr. S. Sudhakar | Chief Librarian | Member\n9 | Mr. John Anish | Librarian | Member\n10 | Mr. Arshad K | III-Yr EEE Student Rep | Member\n11 | Ms. Swetha Maria Saustina S | III-Yr EEE Student Rep | Member\n12 | Mr. Mohamed Nayeem B | III-Yr ECE Student Rep | Member\n13 | Ms. D. Kamali | III-Yr EEE Student Rep | Member\n14 | Mr. Vasanthakumar N | III-Yr MECH Student Rep | Member\n15 | Mr. Salman S | III-Yr MECH Student Rep | Member\n16 | Mr. Musthaq J | III-Yr CIVIL Student Rep | Member\n17 | Mr. Shanmugam S | III-Yr CIVIL Student Rep | Member\n18 | Ms. Revathi U | III-Yr IT Student Rep | Member\n19 | Mr. Imamm Jaffar J | III-Yr IT Student Rep | Member\n20 | Mr. Elango V | III-Yr CSE Student Rep | Member\n21 | Ms. Vasumathi A | III-Yr CSE Student Rep | Member",
+      "tables": [
+        {
+          "table_title": "Membership Borrowing Eligibility",
+          "headers": ["Membership Category", "Borrowing Entitlements", "Loan Period"],
+          "rows": [
+            ["Teaching Staffs", "10 Books", "30 Days"],
+            ["UG Students", "18 Books", "30 Days"],
+            ["PG Students", "18 Books", "30 Days"],
+            ["Supporting and Administrative Staff", "04 Books", "30 Days"]
+          ]
+        },
+        {
+          "table_title": "Library Committee Members",
+          "headers": ["S.No.", "Name", "Designation/Role", "Position"],
+          "rows": [
+            ["1", "Dr. K.S. Srinivasan", "Principal", "Chairman"],
+            ["2", "Dr. A. Balakrishnan", "Head - Academics", "Member"],
+            ["3", "Dr. B. Janarthanan", "Head - Research", "Member"],
+            ["4", "Dr. I. Manju", "Head - IQAC", "Member"],
+            ["5", "Dr. Kamalaselvan A", "Library I/C", "Secretary"],
+            ["6", "Mrs. Anusuya P", "AP / ECE & Library I/C", "Member Secretary"],
+            ["7", "All HoDs", "—", "Member"],
+            ["8", "Mr. S. Sudhakar", "Chief Librarian", "Member"],
+            ["9", "Mr. John Anish", "Librarian", "Member"],
+            ["10", "Mr. Arshad K", "III-Yr EEE Student Rep", "Member"],
+            ["11", "Ms. Swetha Maria Saustina S", "III-Yr EEE Student Rep", "Member"],
+            ["12", "Mr. Mohamed Nayeem B", "III-Yr ECE Student Rep", "Member"],
+            ["13", "Ms. D. Kamali", "III-Yr EEE Student Rep", "Member"],
+            ["14", "Mr. Vasanthakumar N", "III-Yr MECH Student Rep", "Member"],
+            ["15", "Mr. Salman S", "III-Yr MECH Student Rep", "Member"],
+            ["16", "Mr. Musthaq J", "III-Yr CIVIL Student Rep", "Member"],
+            ["17", "Mr. Shanmugam S", "III-Yr CIVIL Student Rep", "Member"],
+            ["18", "Ms. Revathi U", "III-Yr IT Student Rep", "Member"],
+            ["19", "Mr. Imamm Jaffar J", "III-Yr IT Student Rep", "Member"],
+            ["20", "Mr. Elango V", "III-Yr CSE Student Rep", "Member"],
+            ["21", "Ms. Vasumathi A", "III-Yr CSE Student Rep", "Member"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "How many books can a UG student borrow from the library?",
+        "How many books can a teaching staff borrow?",
+        "How many books can administrative staff borrow?",
+        "Who is the Chairman of the Library Committee at MSAJCE?",
+        "Who is the Chief Librarian at MSAJCE?",
+        "Who is the Librarian at MSAJCE?",
+        "Who is in charge of the library at MSAJCE?",
+        "Are there student representatives in the library committee?",
+        "What is the borrowing limit for PG students?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. K.S. Srinivasan — Principal, Library Committee Chairman",
+          "Dr. A. Balakrishnan — Head - Academics, Library Committee Member",
+          "Dr. B. Janarthanan — Head - Research, Library Committee Member",
+          "Dr. I. Manju — Head - IQAC, Library Committee Member",
+          "Dr. Kamalaselvan A — Library I/C, Library Committee Secretary",
+          "Mrs. Anusuya P — AP / ECE & Library I/C, Member Secretary",
+          "Mr. S. Sudhakar — Chief Librarian",
+          "Mr. John Anish — Librarian",
+          "Mr. Arshad K — III-Yr EEE Student Rep",
+          "Ms. Swetha Maria Saustina S — III-Yr EEE Student Rep",
+          "Mr. Mohamed Nayeem B — III-Yr ECE Student Rep",
+          "Ms. D. Kamali — III-Yr EEE Student Rep",
+          "Mr. Vasanthakumar N — III-Yr MECH Student Rep",
+          "Mr. Salman S — III-Yr MECH Student Rep",
+          "Mr. Musthaq J — III-Yr CIVIL Student Rep",
+          "Mr. Shanmugam S — III-Yr CIVIL Student Rep",
+          "Ms. Revathi U — III-Yr IT Student Rep",
+          "Mr. Imamm Jaffar J — III-Yr IT Student Rep",
+          "Mr. Elango V — III-Yr CSE Student Rep",
+          "Ms. Vasumathi A — III-Yr CSE Student Rep"
+        ],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "UG Students 18 books for 30 days",
+          "PG Students 18 books for 30 days",
+          "Teaching Staff 10 books for 30 days",
+          "Administrative Staff 4 books for 30 days",
+          "21 library committee members"
+        ]
+      },
+      "keywords": [
+        "library borrowing limit", "UG students 18 books", "PG students 18 books", "teaching staff 10 books", "library committee", "Dr. K.S. Srinivasan", "Mr. S. Sudhakar Chief Librarian", "Mr. John Anish Librarian", "Dr. Kamalaselvan library", "Mrs. Anusuya P", "student representative library"
+      ],
+      "overlap_text": "DELNET membership: avail any book, Xerox or soft copy of journal article through Inter Library Loan at https://delnet.in/. J-Gate has more than 50,684 journals at https://jgateplus.com/. Fine structure: Rs. 1/day (days 31-37), Rs. 2/day (days 38-44), Rs. 5/day (day 45+). Lost book penalty: double the cost of the book.",
+      "token_count": 500
+    },
+    {
+      "chunk_id": "msajce_library_chunk_08",
+      "section": "Contact Information and Important College Links",
+      "source_url": "https://www.msajce-edu.in/library.php",
+      "context": "MSAJCE institution contact details, and important portal links for students related to admissions, exams, fee payment, and student resources.",
+      "text": "MSAJCE — Mohamed Sathak A.J. College of Engineering\nAddress: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103\nPhone: +91 99400 04500\nEmail: msajce.office@gmail.com\nGrievance Email: grievance@msajce-edu.in\nWebsite: www.msajce-edu.in\n\nLibrary Page URL: https://www.msajce-edu.in/library.php\n\nImportant Student Links:\n- Online Application Form: https://enrollonline.co.in/Registration/Apply/MSAJCE\n- Online Fee Payment: https://www.feepayr.com/\n- Students Corner: https://www.msajce-edu.in/studentscorner.php\n- College Video: https://youtu.be/aNVaQWh1Pp4\n- Anna University Approval: https://www.msajce-edu.in/uploads/AnnaUnivApproval.pdf\n- AICTE Approval: https://www.msajce-edu.in/uploads/AICTE-APPROVAL.pdf\n- Mandatory Disclosure: http://msajce-edu.in/uploads/MandatoryDisclosure.pdf\n- Grievance Cell: https://www.msajce-edu.in/grievanceredressalcommittee.php\n- NAAC: https://www.msajce-edu.in/naac.php\n- IQAC: https://www.msajce-edu.in/iqac.php\n- NIRF: https://www.msajce-edu.in/nirf.php\n- Academic Calendar: https://www.msajce-edu.in/AC.php\n- College Management System: https://cims.mastersofterp.in/\n- Exam Registration I & II Year: https://tinyurl.com/I-AND-II-YEAR-REGISTRATION\n- Exam Registration III & IV Year: https://tinyurl.com/III-AND-IV-YEAR-REGISTRATION\n- ESE Results: https://results.msajce-edu.in/\n- AICTE Scholarship: https://www.aicte.gov.in/schemes/students-development-schemes\n- Annual Report AY2023-2024: https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf\n- Hostel: https://www.msajce-edu.in/hostel.php\n- Transport: https://www.msajce-edu.in/transport.php\n- Placement: https://www.msajce-edu.in/placement.php",
+      "tables": [],
+      "possible_questions": [
+        "What is the phone number of MSAJCE?",
+        "What is the email of MSAJCE library?",
+        "Where is MSAJCE located?",
+        "How do I contact the library at MSAJCE?",
+        "What is the grievance email at MSAJCE?",
+        "How do I apply online for admission to MSAJCE?",
+        "Where can I check my exam results?",
+        "How do I pay fees online at MSAJCE?",
+        "Does MSAJCE have a hostel?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com", "grievance@msajce-edu.in"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+        "numbers": []
+      },
+      "keywords": [
+        "MSAJCE contact", "phone number", "email", "Chennai", "Siruseri", "OMR", "online application", "fee payment", "exam registration", "ESE results", "NAAC", "IQAC", "NIRF", "hostel", "transport", "placement", "grievance cell"
+      ],
+      "overlap_text": "UG Students borrow 18 books for 30 days. PG Students borrow 18 books for 30 days. Teaching Staff borrow 10 books for 30 days. Administrative Staff borrow 4 books for 30 days. Library Committee Chairman: Dr. K.S. Srinivasan (Principal). Chief Librarian: Mr. S. Sudhakar. Librarian: Mr. John Anish.",
+      "token_count": 380
+    }
+  ]
+}

@@ -1,12 +1,43 @@
 {
   "metadata": {
-    "title": "msajce_clubssocieties.pdf"
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Clubs and Societies — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/clubssocieties.php",
+    "sections_covered": [
+      "Sports Club — Introduction, Objectives, Vision, Motto, Games",
+      "Fine Arts Club (ENVISTA CLUB) — Introduction, Objectives, Vision, Motto, Student Leaders",
+      "Science Club — Introduction, Objectives, Activities",
+      "Tamil Mandram — Introduction, Objectives, Events (in Tamil)",
+      "Coding Club — About, Aim, Practice",
+      "Robotic Club — Introduction, Aim, Objectives, Activities",
+      "Energy and Eco Club — Energy Club, Eco Club",
+      "Photography Club — Introduction, Activities"
+    ],
+    "scraped_date": "2026-04-27",
+    "total_chunks": 8,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_clubssocieties",
+    "version": "1.0"
   },
   "chunks": [
     {
       "chunk_id": "msajce_clubssocieties_chunk_01",
-      "section": "MSAJCE Sports Club",
-      "text": "The MSAJCE Sports Club maintains records of sports and games events attended by students within the college and beyond, submits annual reports on sports/events, conducts sports events, and rewards achievements.",
+      "section": "Sports Club — Introduction, Objectives, Vision, Motto and Games",
+      "source_url": "https://www.msajce-edu.in/clubssocieties.php#tab1",
+      "context": "Describes the MSAJCE Sports Club — its purpose, objectives, vision, motto, and the list of indoor and outdoor games played, useful for students wanting to know sports facilities and activities.",
+      "text": "MSAJCE Sports Club\n\nIntroduction:\nThis club maintains records of sports and games events attended by students within the college, within the university and outside at the region/state/national level and their achievements/awards. It submits annual reports on sports/events and budget allocations and spending during the year. It conducts sports events that students need and rewards them with trophies and medals. All kinds of sports events take place in this club.\n\nObjectives:\n1. To build up sportsmanship.\n2. To foster intimate friendships.\n3. To reduce stress and improve health.\n4. To improve skills and enhance employability.\n5. To support in developing positive attitude, self-confidence, courage and patience.\n6. To get opportunities to see the community closely and thus get an experience of human nature in relation to his/her environment.\n7. To avail the opportunity to meet people from different walks of life.\n\nVision:\nTo encourage and motivate students to involve in various sports activities at both inter and intra college level.\n\nMotto: \"Teamwork Makes The Dream Work\"\n\nGames Conducted:\n\nOutdoor Games:\nCricket, Football, Volleyball, Basketball, Rugby, Badminton, Kho Kho, Throughball\n\nIndoor Games:\nCarrom, Table Tennis, Chess",
+      "tables": [
+        {
+          "table_title": "Sports Club — Games Offered",
+          "headers": ["Type", "Games"],
+          "rows": [
+            ["Outdoor", "Cricket, Football, Volleyball, Basketball, Rugby, Badminton, Kho Kho, Throughball"],
+            ["Indoor", "Carrom, Table Tennis, Chess"]
+          ]
+        }
+      ],
       "possible_questions": [
         "What is the MSAJCE Sports Club?",
         "What outdoor games are available at MSAJCE?",
@@ -20,34 +51,26 @@
       ],
       "entities": {
         "persons": [],
-        "locations": [
-          "MSAJCE"
-        ]
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+        "numbers": []
       },
       "keywords": [
-        "sports club",
-        "cricket",
-        "football",
-        "volleyball",
-        "basketball",
-        "rugby",
-        "badminton",
-        "kho kho",
-        "throughball",
-        "carrom",
-        "table tennis",
-        "chess",
-        "indoor games",
-        "outdoor games",
-        "sportsmanship",
-        "inter-college sports",
-        "MSAJCE sports"
-      ]
+        "sports club", "cricket", "football", "volleyball", "basketball", "rugby", "badminton",
+        "kho kho", "throughball", "carrom", "table tennis", "chess", "indoor games", "outdoor games",
+        "sportsmanship", "inter-college sports", "MSAJCE sports"
+      ],
+      "overlap_text": "",
+      "token_count": 380
     },
     {
       "chunk_id": "msajce_clubssocieties_chunk_02",
-      "section": "MSAJCE Fine Arts Club (ENVISTA CLUB — ARTFUL AESTHETICS)",
-      "text": "The Fine Arts Club aims to encourage student talent, provide skill-based training, and organize events for creative expression in areas like dance, art, singing, and music.",
+      "section": "Fine Arts Club (ENVISTA CLUB — ARTFUL AESTHETICS) — Introduction, Objectives, Vision, Motto and Student Leaders",
+      "source_url": "https://www.msajce-edu.in/clubssocieties.php#tab2",
+      "context": "Describes the MSAJCE Fine Arts Club under the ENVISTA CLUB umbrella, including its 8 objectives, vision, motto, staff coordinator, and current student president and vice president.",
+      "text": "MSAJCE Fine Arts Club — ARTFUL AESTHETICS (Part of ENVISTA CLUB)\n\nIntroduction:\nMohamed Sathak AJ College of Engineering has successfully inaugurated the ENVISTA CLUB. In total, 10 clubs are going to take part actively in this umbrella.\n\nObjectives:\n1. The main objective of the fine arts club is to encourage the budding talent of the students.\n2. Impart skill-based training and multi-disciplinary research activities with industry and reputed institute collaborations. Provide opportunities and encouragement to express oneself freely.\n3. Educational objectives of this club are to encourage imagination, creative ability and introduce an artistic environment.\n4. Inspiring students to make maximum contributions as creative artists and citizens.\n5. Organize various competitions, functions, and events in the college.\n6. Make the student confident and competitive in the global environment.\n7. To improve the imagination skill in entertainment.\n8. To give students an artistic outlet and to help each enrich interest for art and personal experience through art.\n\nStaff Coordinator: S. Viswajaa — Assistant Professor, IT Department\n\nMotto:\nThe motto of the Fine Arts Club is to inspire and enable students to actively participate and develop their talent and skills like Dance, Art, Singing, Music, Acting etc. Through this club students can develop their skills and talents as well as feel relaxation and enjoy their college life. The club plans to conduct several events for extra-curricular activities. Students are free to participate in this club and expose their talents. The club also makes students participate in external college fests to showcase their talents.\n\nVision:\nTo encourage students to express their thoughts, feelings and creativity through various visual art forms from two dimensions to three dimensions. To tap the inherent talents and potentials of the student community at all levels.\n\nStudent President: Kishore P — IV Year Mechanical\nStudent Vice President: Laksha — III Year CSE",
+      "tables": [],
       "possible_questions": [
         "What is the MSAJCE Fine Arts Club?",
         "What is ENVISTA CLUB at MSAJCE?",
@@ -61,59 +84,229 @@
       ],
       "entities": {
         "persons": [
-          "S. Viswajaa",
-          "Kishore P",
-          "Laksha"
+          "S. Viswajaa — AP/IT, Staff Coordinator, Fine Arts Club",
+          "Kishore P — Student President, Fine Arts Club (IV Year Mechanical)",
+          "Laksha — Student Vice President, Fine Arts Club (III Year CSE)"
         ],
-        "locations": [
-          "MSAJCE"
-        ]
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["10 clubs under ENVISTA CLUB"]
       },
       "keywords": [
-        "fine arts club",
-        "ENVISTA CLUB",
-        "ARTFUL AESTHETICS",
-        "dance",
-        "singing",
-        "music",
-        "acting",
-        "art club",
-        "S. Viswajaa",
-        "Kishore P",
-        "Laksha",
-        "student president",
-        "staff coordinator",
-        "creative arts",
-        "extracurricular",
-        "MSAJCE arts club",
-        "college fest"
-      ]
+        "fine arts club", "ENVISTA CLUB", "ARTFUL AESTHETICS", "dance", "singing", "music", "acting",
+        "art club", "S. Viswajaa", "Kishore P", "Laksha", "student president", "staff coordinator",
+        "creative arts", "extracurricular", "MSAJCE arts club", "college fest"
+      ],
+      "overlap_text": "MSAJCE Sports Club motto is 'Teamwork Makes The Dream Work'. Outdoor games include Cricket, Football, Volleyball, Basketball, Rugby, Badminton, Kho Kho and Throughball. Indoor games include Carrom, Table Tennis and Chess.",
+      "token_count": 430
     },
     {
       "chunk_id": "msajce_clubssocieties_chunk_03",
-      "section": "MSAJCE Science Club",
-      "text": "The Science Club was established to invite eminent scientists to share their experiences and promote interest in science and technology among students through various activities.",
+      "section": "Science Club — Introduction, Objectives and Activities",
+      "source_url": "https://www.msajce-edu.in/clubssocieties.php#tab3",
+      "context": "Describes the MSAJCE Science Club — its purpose of inviting scientists, three sections (Physics, Chemistry, General), guiding principles, and planned activities including experiments and workshops.",
+      "text": "MSAJCE Science Club\n\nIntroduction:\nThe Science Club was started with an aim to invite eminent scientists who would share their experience with students and motivate them to gain scientific knowledge. Activities are designed primarily to introduce students to undertake interesting and exciting science and technology projects. The Science Club consists of a group of students who want to explore the many branches of engineering, mathematics, and science. The club is open to all students.\n\nThe purpose of the Science Club is to promote interest, understanding, and knowledge of the scientific world amongst college students and the local community. Science Club is one of the largest clubs in the college. The club is divided into three sections: Physics, Chemistry, and General.\n\nThe club aims to arouse engineering students' interest in learning science, promoting academic achievement in Science subjects. It also helps students to learn more about science outside the classroom and teaches how to apply scientific knowledge in daily life through activities. The club also guides students to develop an independent, logical and creative mind.\n\nActivities include experiments in: making electronic components, making invisible ink, electroplating, biodiesels, fire writing, and making venation of leaves. Information about the science club and day-to-day updates are displayed on the notice board.\n\nObjectives of Science Club:\nThe five Guiding Principles govern how activities have been developed. Investigator activity offers students the opportunity to:\n1. Solve a relevant, science-based problem set within a scenario.\n2. Work in pairs or small groups or independently.\n3. Take part in practical, hands-on science activities.\n4. Think and talk about science during the activity and when sharing results.\n5. Share results using a variety of media.\n\nThings to Do in Science Club:\n- Conduct Seminars, Workshops, Exhibitions and Quiz competitions to inculcate knowledge in the field of science.\n- Make students acquire knowledge by giving lectures once a month.\n- Promote the use of IT in learning science.\n- Encourage student participation in activities organized by the Science Club.\n- Help students promote discussion on recent innovations in the field of science once a month.\n- Decorate the walls of the classroom, library and laboratory with scientific pictures and charts prepared by students themselves.",
+      "tables": [],
       "possible_questions": [
         "What is the MSAJCE Science Club?",
-        "What activities does the Science Club conduct?",
-        "Who are the prominent figures associated with the Science Club?",
-        "What is the aim of the Science Club?"
+        "What sections does the Science Club have?",
+        "What experiments does the Science Club conduct?",
+        "Is the Science Club open to all students?",
+        "Does MSAJCE have a science quiz competition?",
+        "What activities are planned in the Science Club?",
+        "Does the Science Club conduct workshops?",
+        "What is the objective of the MSAJCE Science Club?"
       ],
       "entities": {
         "persons": [],
-        "locations": [
-          "MSAJCE"
-        ]
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["3 sections: Physics, Chemistry, General", "lectures once a month", "discussions once a month"]
       },
       "keywords": [
-        "science club",
-        "scientific knowledge",
-        "experiments",
-        "workshops",
-        "engineering",
-        "mathematics",
-        "science"
-      ]
+        "science club", "physics", "chemistry", "electroplating", "biodiesel", "invisible ink",
+        "electronic components", "science workshop", "science quiz", "seminar", "science exhibition",
+        "hands-on activities", "MSAJCE science", "venation of leaves", "fire writing"
+      ],
+      "overlap_text": "MSAJCE Fine Arts Club (ARTFUL AESTHETICS) is part of ENVISTA CLUB with 10 clubs. Staff Coordinator is S. Viswajaa (AP/IT). Student President is Kishore P (IV Year Mech) and Student Vice President is Laksha (III Year CSE).",
+      "token_count": 430
+    },
+    {
+      "chunk_id": "msajce_clubssocieties_chunk_04",
+      "section": "Tamil Mandram — Introduction, Objectives and Events",
+      "source_url": "https://www.msajce-edu.in/clubssocieties.php#tab4",
+      "context": "Describes the MSAJCE Tamil Mandram — a club dedicated to promoting Tamil language, culture and ancient heritage among students, with its objectives and list of cultural events conducted.",
+      "text": "MSAJCE Tamil Mandram (Tamil Language and Culture Club)\n\nIntroduction:\nThe Tamil Mandram was formed to bring about a wonderful transformation in the youth to keep the Tamil language alive and thriving. The motto of the Mandram is:\n\"Thithikkum then tamil mozhi endrum vaazha vendum! Engum vella vendum!\"\n(Translation: \"The sweet honey Tamil language must live forever! Must win everywhere!\")\n\nThe Mandram works to revive and reconstruct the ancient Tamil culture and the identities left behind by ancestors. The vision is for the youth to take pride in their language and move from just speaking Tamil to actively bringing glory to Tamil through action.\n\n\"Vaazha Tamil! Velga Tamil!\"\n(Translation: \"Long live Tamil! Victory to Tamil!\")\n\nObjectives of Tamil Mandram:\n1. To develop Tamil enthusiasm and knowledge among students — this is the primary objective of the Tamil Mandram.\n2. To spread ancient Tamil culture and heritage among today's youth.\n3. To develop technical knowledge in Tamil.\n4. To continuously conduct Tamil events and social activities suited to the times.\n\nEvents Conducted by Tamil Mandram:\n1. Irumugam Oru Agam (Two faces, one heart — elocution/drama)\n2. Pessum Padam (Speaking Picture — storytelling)\n3. Aadu Puli (Tiger and Goat — traditional game)\n4. Kaivanna Kaviyam (Colourful Poetry — art and poetry)\n5. Tent Kottai (Tent Camp — cultural event)\n6. Vidugadhai Vilaiyattu (Riddle Games)\n7. Pirasangatin Thalaiwan (King of Speeches — debate/oratory competition)\n8. Tamilkkorvai (Tamil Chain — literary event)",
+      "tables": [
+        {
+          "table_title": "Tamil Mandram Events",
+          "headers": ["Event Name (Tamil)", "Description"],
+          "rows": [
+            ["Irumugam Oru Agam", "Two faces, one heart — elocution/drama event"],
+            ["Pessum Padam", "Speaking Picture — storytelling event"],
+            ["Aadu Puli", "Tiger and Goat — traditional game"],
+            ["Kaivanna Kaviyam", "Colourful Poetry — art and poetry event"],
+            ["Tent Kottai", "Tent Camp — cultural event"],
+            ["Vidugadhai Vilaiyattu", "Riddle Games"],
+            ["Pirasangatin Thalaiwan", "King of Speeches — debate/oratory competition"],
+            ["Tamilkkorvai", "Tamil Chain — literary event"]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the Tamil Mandram at MSAJCE?",
+        "What events does the Tamil Mandram conduct?",
+        "Does MSAJCE have a Tamil language club?",
+        "What is the objective of the Tamil Mandram?",
+        "What is Pirasangatin Thalaiwan?",
+        "Does MSAJCE conduct Tamil cultural events?",
+        "What is Kaivanna Kaviyam?",
+        "Does MSAJCE have Tamil debate competitions?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["8 events conducted by Tamil Mandram"]
+      },
+      "keywords": [
+        "Tamil Mandram", "Tamil club", "Tamil culture", "Tamil language", "elocution", "debate",
+        "Tamil poetry", "Irumugam Oru Agam", "Pessum Padam", "Aadu Puli", "Kaivanna Kaviyam",
+        "Tent Kottai", "Vidugadhai Vilaiyattu", "Pirasangatin Thalaiwan", "Tamilkkorvai", "oratory"
+      ],
+      "overlap_text": "Science Club is one of the largest clubs in MSAJCE, divided into 3 sections: Physics, Chemistry, and General. Activities include electroplating, biodiesel making, invisible ink, and electronic components. Seminars, workshops, exhibitions and quiz competitions are also conducted.",
+      "token_count": 410
+    },
+    {
+      "chunk_id": "msajce_clubssocieties_chunk_05",
+      "section": "Coding Club — About, Aim and Practice",
+      "source_url": "https://www.msajce-edu.in/clubssocieties.php#tab5",
+      "context": "Describes the MSAJCE Coding Club — its aims to promote coding contests, workshops on web development, ML and IoT, participation in ACM-ICPC and Google events, and weekly club activities.",
+      "text": "MSAJCE Coding Club\n\nAbout:\nProgramming abilities are crucial tools that can be applied to and integrated into a variety of disciplines and domains in today's climate of rapid change.\n\nAim:\n1. More coding contests should be held to reach all students on campus.\n2. Conduct workshops on computer science topics like web development, application development, machine learning, IoT, etc.\n3. Participate in open source initiatives, create websites and applications, and offer technical assistance to clubs and groups on campus.\n4. Represent the college at intercollegiate competitions.\n5. Take part in competitions like ACM-ICPC, Google Code Jam, Google Summer of Code, and other online coding events.\n\nPractice:\n1. The club holds a college-wide coding competition to find new members who are enthusiastic about coding. The competition emphasizes reasoning, analysis, and problem-solving abilities in addition to coding.\n2. The club gets together once a week to talk and work on initiatives. To accomplish a shared goal, all members work together. Workshops and technical discussions on various competitions and computer science topics are conducted through the club.\n3. Lecture sessions are also organized for the benefit of members, where some computer science principles are taught.\n4. The group also hosts seminars and workshops by seniors and former members on how to prepare for internships and job placement.",
+      "tables": [],
+      "possible_questions": [
+        "What is the MSAJCE Coding Club?",
+        "Does MSAJCE participate in ACM-ICPC?",
+        "Does MSAJCE participate in Google Code Jam?",
+        "What workshops does the Coding Club conduct?",
+        "Does MSAJCE have a coding contest for students?",
+        "How often does the Coding Club meet?",
+        "Does the Coding Club help with internship preparation?",
+        "Does the Coding Club conduct machine learning workshops?",
+        "What is the aim of the MSAJCE Coding Club?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": ["weekly meetings", "college-wide coding competition for new members"]
+      },
+      "keywords": [
+        "coding club", "ACM-ICPC", "Google Code Jam", "Google Summer of Code", "web development",
+        "machine learning", "IoT", "application development", "open source", "coding contest",
+        "programming", "intercollegiate competition", "internship preparation", "MSAJCE coding"
+      ],
+      "overlap_text": "Tamil Mandram at MSAJCE promotes Tamil language and culture. It conducts 8 events: Irumugam Oru Agam, Pessum Padam, Aadu Puli, Kaivanna Kaviyam, Tent Kottai, Vidugadhai Vilaiyattu, Pirasangatin Thalaiwan (debate), and Tamilkkorvai.",
+      "token_count": 360
+    },
+    {
+      "chunk_id": "msajce_clubssocieties_chunk_06",
+      "section": "Robotic Club — Introduction, Aim, Objectives and Activities",
+      "source_url": "https://www.msajce-edu.in/clubssocieties.php#tab6",
+      "context": "Describes the MSAJCE Robotic Club — its purpose of bringing together students interested in robotics, its aim to cultivate technological thinking, and its activities including training sessions and workshops.",
+      "text": "MSAJCE Robotic Club\n\nIntroduction:\nStudents that are interested in learning about and using robots can come together to form a robotics club. Teams of students must design and construct a robot that can compete against opponents in a number of distinct challenges in order to win the robotics tournament.\n\nAim:\nThe Robotics Club aims to cultivate the habit of 'thinking technologically' inside each of us.\n\nObjectives:\n1. To encourage young people to become the robotics industry's driving force.\n2. It is an opportunity to creatively use information and observe how systems interact with the environment and one another.\n3. To give students the professional engineering skills that will benefit them in the workplace.\n\nClub Activities Include:\n1. Robotics Education Initiatives\n2. Brief Training Sessions\n3. Robotics Basics Workshop",
+      "tables": [],
+      "possible_questions": [
+        "What is the MSAJCE Robotic Club?",
+        "Does MSAJCE have a robotics club?",
+        "What activities does the Robotics Club conduct?",
+        "Does MSAJCE have a robot design competition?",
+        "What is the aim of the MSAJCE Robotics Club?",
+        "What workshops does the Robotics Club conduct?",
+        "Does MSAJCE teach robotics to students?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": []
+      },
+      "keywords": [
+        "robotic club", "robotics", "robot design", "robotics tournament", "thinking technologically",
+        "robotics workshop", "training sessions", "robotics education", "engineering skills",
+        "MSAJCE robotics", "robot competition"
+      ],
+      "overlap_text": "MSAJCE Coding Club aims to participate in ACM-ICPC, Google Code Jam and Google Summer of Code. It conducts weekly meetings, college-wide coding competitions, workshops on ML, IoT, web development, and internship preparation sessions.",
+      "token_count": 290
+    },
+    {
+      "chunk_id": "msajce_clubssocieties_chunk_07",
+      "section": "Energy and Eco Club — Energy Club and Eco Club",
+      "source_url": "https://www.msajce-edu.in/clubssocieties.php#tab7",
+      "context": "Describes the two components of the MSAJCE Energy and Eco Club — the Energy Club focused on sustainable energy awareness and conservation, and the Eco Club focused on environmental responsibility.",
+      "text": "MSAJCE Energy and Eco Club\n\nEnergy Club:\nThe goal of the Energy Club is to raise and spread knowledge about responsible and sustainable energy use. Given the limited quantity of fossil fuels available, resource management and conservation are urgently needed. Students are introduced to the concept of energy conservation through the Energy Club, as well as the necessity for it and what part they can play in guaranteeing conservation. In order to combat the ongoing energy issue, it helps the students to conserve energy. These actions would support not only the dissemination of information about energy efficiency but also its application in homes and institutions.\n\nEco Club:\nThe Eco Club holds that nature imparts life lessons in its own steady ways and empowers our young students to share their responsibility for upholding environmental health and taking action to prevent environmental degradation both individually and collectively. The club encourages students to take both individual and collective action to protect the environment.",
+      "tables": [],
+      "possible_questions": [
+        "What is the MSAJCE Energy Club?",
+        "What is the MSAJCE Eco Club?",
+        "Does MSAJCE have an environmental club?",
+        "What does the Energy Club do at MSAJCE?",
+        "What is the purpose of the Eco Club at MSAJCE?",
+        "Does MSAJCE promote energy conservation?",
+        "Does MSAJCE have activities related to sustainability?",
+        "What is the Energy and Eco Club at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": []
+      },
+      "keywords": [
+        "energy club", "eco club", "energy conservation", "sustainable energy", "fossil fuels",
+        "environmental health", "environmental degradation", "resource management", "sustainability",
+        "MSAJCE eco", "energy efficiency", "green club", "environment club"
+      ],
+      "overlap_text": "MSAJCE Robotic Club aims to cultivate 'thinking technologically'. Activities include Robotics Education Initiatives, Brief Training Sessions, and Robotics Basics Workshops. Students design and construct robots for tournaments.",
+      "token_count": 300
+    },
+    {
+      "chunk_id": "msajce_clubssocieties_chunk_08",
+      "section": "Photography Club — Introduction and Activities",
+      "source_url": "https://www.msajce-edu.in/clubssocieties.php#tab8",
+      "context": "Describes the MSAJCE Photography Club — its encouragement of photography as a hobby, skills development in composition and creative expression, photo editing using software, and coverage of school events.",
+      "text": "MSAJCE Photography Club\n\nIntroduction:\nThe members of the photography club are encouraged to take images as they grow to appreciate the hobby more. It gives workers and students a venue for exploring and appreciating their surroundings through photography, short filmmaking, and screenwriting.\n\nThere is much more to photography than just using a camera to take photographs. By comprehending and learning about what constitutes a successful photograph — from composition to creative expression — students in this club have the chance to develop their skills. Additionally, club members will learn how to edit and improve photographs using cutting-edge software for both personal use and publication.\n\nWhile taking pictures of sporting events and activities relevant to the school, students are encouraged to hone their talents. Exploring this fascinating aspect of the visual arts is welcomed and encouraged for people of all expertise levels.\n\nKey Skills Developed:\n1. Photography composition and creative expression\n2. Photo editing using advanced software\n3. Short filmmaking and screenwriting\n4. Event photography (sports events, college activities)\n5. Visual arts exploration\n\nThe club is open to all expertise levels — beginners and advanced photographers are both welcome.\n\nMSAJCE College Contact:\nAddress: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103\nPhone: +91 99400 04500\nEmail: msajce.office@gmail.com\nWebsite: www.msajce-edu.in\nGrievance Cell: grievance@msajce-edu.in\nOnline Application: https://enrollonline.co.in/Registration/Apply/MSAJCE",
+      "tables": [],
+      "possible_questions": [
+        "What is the MSAJCE Photography Club?",
+        "Does MSAJCE have a photography club?",
+        "Does the Photography Club teach photo editing?",
+        "Does MSAJCE have a filmmaking club?",
+        "Can beginners join the MSAJCE Photography Club?",
+        "What skills does the Photography Club develop?",
+        "Does MSAJCE Photography Club cover college events?",
+        "What is the contact number for MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": ["+91 99400 04500"],
+        "emails": ["msajce.office@gmail.com", "grievance@msajce-edu.in"],
+        "locations": ["34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"],
+        "numbers": []
+      },
+      "keywords": [
+        "photography club", "photo editing", "short filmmaking", "screenwriting", "composition",
+        "creative expression", "visual arts", "event photography", "sports photography",
+        "MSAJCE photography", "beginners photography", "advanced photography"
+      ],
+      "overlap_text": "MSAJCE Energy Club promotes sustainable energy use and conservation. Eco Club empowers students to protect environmental health individually and collectively. Both clubs are part of the Energy and Eco Club.",
+      "token_count": 360
     }
   ]
 }
