@@ -3,7 +3,7 @@ openai
 python-dotenv
 httpx
 requests
-flask
+flask[async]
 google-generativeai
 pinecone
 langfuse<3.0.0
