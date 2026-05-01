@@ -15,6 +15,10 @@
   "crons": [
     {
       "path": "/api/sunday-report",
+      "schedule": "20 11 * * *"
+    },
+    {
+      "path": "/api/sunday-report",
       "schedule": "30 3 * * 0"
     }
   ]
