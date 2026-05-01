@@ -98,6 +98,22 @@ def home():
 def favicon():
     return '', 204
 
+@app.route('/debug-vercel')
+def debug_vercel():
+    """Check if environment variables are actually present in Vercel."""
+    vars_to_check = [
+        "TELEGRAM_BOT_TOKEN", "PINECONE_API_KEY", "OPENROUTER_API_KEY", 
+        "COHERE_API_KEY", "UPSTASH_REDIS_REST_URL", "VERCEL_AI_KEY_6"
+    ]
+    status = {}
+    for v in vars_to_check:
+        val = os.getenv(v)
+        if val:
+            status[v] = f"OK ({val[:4]}...{val[-4:]})"
+        else:
+            status[v] = "MISSING ❌"
+    return status, 200
+
 @app.route('/api/webhook', methods=['POST'])
 async def webhook():
     """Receiver for Telegram updates on Vercel."""
