@@ -9,6 +9,7 @@ import Stemmer
 import cohere
 import logging
 import asyncio
+from datetime import datetime
 from pinecone import Pinecone
 from upstash_redis.asyncio import Redis
 from dotenv import load_dotenv
@@ -149,13 +150,17 @@ class RAGEngine:
                 tokens = bm25s.tokenize(query, stemmer=self.stemmer)
                 chunks, _ = self.bm25.retrieve(tokens, k=15)
                 bm25_hits = chunks[0].tolist()
-            except: pass
+            except Exception as e:
+                print(f"Lorin Engine: BM25 Retrieval Error: {e}")
         
         combined = []; seen = set()
         for c in pinecone_hits + bm25_hits:
             if c['chunk_id'] not in seen:
                 combined.append(c); seen.add(c['chunk_id'])
         
+        # LOGGING FOR DIAGNOSTICS
+        print(f"Lorin Engine: Retrieval Hits -> Pinecone: {len(pinecone_hits)}, BM25: {len(bm25_hits)}, Combined: {len(combined)}")
+
         # INCREASE DEPTH: Send more chunks to reranker
         if not combined: return []
         
@@ -256,6 +261,8 @@ Conversation History:
                 "query": user_query,
                 "category": p.get("category", "GENERAL") if p else "ERROR",
                 "score": max([float(c.get('score', 0)) for c in context_chunks]) if context_chunks else 0.0,
+                "hits_pinecone": len([c for c in context_chunks if 'score' in c]), # Approximate
+                "hits_bm25": len([c for c in context_chunks if 'score' not in c]),
                 "latency": latency_ms,
                 "tokens": len(final_answer.split()) * 1.3,
                 "status": "SUCCESS" if final_answer else "FAILED"
@@ -263,6 +270,6 @@ Conversation History:
             await self.redis.lpush("lorin_forensic_logs", json.dumps(log_entry))
             await self.redis.ltrim("lorin_forensic_logs", 0, 10000)
         except Exception as e:
-            logger.error(f"Forensic Logging Error: {e}")
+            print(f"Forensic Logging Error: {e}")
 
         return final_answer
