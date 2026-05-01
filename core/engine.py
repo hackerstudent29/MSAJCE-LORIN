@@ -187,16 +187,17 @@ class RAGEngine:
 Return JSON: {category, search_query, direct_response}
 
 CATEGORIES: 
-- DEVELOPER: If asking about Ramanathan S, Ram, or the bot's creator/developer.
+- DEVELOPER: ONLY if asking about Ramanathan S, Ram, or the specific bot creator/developer.
 - GREETING: Hello, hi, etc.
-- INSTITUTIONAL: Default search.
+- INSTITUTIONAL: Default for all college, faculty, department, bus, or admission questions.
 
-Return 'search_query' by preserving all technical terms, numbers (e.g. '1301', 'AR-3'), and entity names. NEVER over-simplify.
-If asking for a 'code', 'number', 'contact', or 'accreditation/NAAC', include those words in the search_query.
-STRICT RULE: Never tell the user to 'check the website' or 'refer to the portal' if the information might be in the context. Always provide a direct answer.
+SEARCH REWRITING:
+1. TYPO-PROOFING: If a name looks misspelled (e.g. 'Wesling' for 'Weslin'), use the CORRECTED version in the search_query.
+2. ENTITY FOCUS: Always include the full name and department (if known) in the search_query.
+3. RE-BALANCE: Treat institutional data as the AUTHORITATIVE source. If a question is about faculty or college, search the database first.
 
 If category is DEVELOPER, set direct_response to:
-"**Ramanathan S (Ram)** is the Lead AI Developer and System Architect at MSAJCE. He is a visionary 2nd-year B.Tech IT student specializing in high-performance AI systems and Fintech architecture.\n\n*Connect with him here:*\n\n. [LinkedIn](https://linkedin.com/in/ramanathan-s)\n\n. [Portfolio](https://ram-ai-portfolio.vercel.app)\n\n. [Source Code (GitHub)](https://github.com/hackerstudent29/MSAJCE-LORIN.git)\n\n. Email: ramanathanb86@gmail.com\n\n*Major Engineering Projects:*\n\n. **Zenify**: A high-performance music streaming ecosystem built with Next.js 14, Fastify, and PostgreSQL (Supabase). Features real-time search and gapless playback.\n\n. **Zenpay**: A production-grade Payment Gateway Platform using a robust Monorepo architecture (Vite, React, ESBuild).\n\n. **Lorin RAG**: This sophisticated institutional intelligence engine, optimized for precision retrieval.\n\n. **Pocket Lawyer**: A cutting-edge AI legal-assistant powered by Next.js 16 and Google GenAI, featuring full multilingual (Tamil) support.\n\n. **Formora**: An AI-driven SaaS form builder architected on a high-end Turborepo monorepo.\n\n. **Smart Hostel & Event Systems**: Enterprise utility platforms built with Vite, Supabase, and Recharts for real-time analytics.\n\nIs there anything specific you would like to know about Ram's technical expertise or architecture designs?"
+"**Ramanathan S (Ram)** is the Lead AI Developer and System Architect at MSAJCE. He is a visionary 2nd-year B.Tech IT student specializing in high-performance AI systems and Fintech architecture.\n\n*Connect with him here:*\n\n. [LinkedIn](https://linkedin.com/in/ramanathan-s)\n\n. [Portfolio](https://ram-ai-portfolio.vercel.app)\n\n. [Source Code (GitHub)](https://github.com/hackerstudent29/MSAJCE-LORIN.git)\n\n. Email: ramanathanb86@gmail.com\n\n*Major Engineering Projects:*\n\n. **Zenify**: High-performance music streaming (Next.js 14).\n\n. **Zenpay**: Production-grade Payment Gateway (Monorepo).\n\n. **Lorin RAG**: Institutional intelligence engine.\n\n. **Pocket Lawyer**: AI legal-assistant (Next.js 16).\n\n. **Formora**: AI-driven SaaS form builder.\n\n. **Smart Hostel & Event Systems**: Enterprise utility platforms.\n\nIs there anything specific you would like to know about Ram's technical expertise or architecture designs?"
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ],
