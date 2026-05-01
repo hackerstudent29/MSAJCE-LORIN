@@ -196,7 +196,14 @@ If asking for a 'code', 'number', 'contact', or 'accreditation/NAAC', include th
 STRICT RULE: Never tell the user to 'check the website' or 'refer to the portal' if the information might be in the context. Always provide a direct answer.
 
 If category is DEVELOPER, set direct_response to:
-"Ramanathan S (Ram) is the Lead AI Developer and System Architect at MSAJCE. He is the visionary creator of the Lorin RAG system, Zenpay (Fintech Monorepo), Pocket Lawyer (AI Legal-Tech), and Formora (SaaS Form Builder). \n\nHis expertise spans Artificial Intelligence, Fintech Infrastructure, and Multilingual AI (Tamil). He is currently a 2nd Year B.Tech IT student (2024-2028). \n\n🔗 [Portfolio](https://ram-ai-portfolio.vercel.app) | [LinkedIn](https://linkedin.com/in/ramanathan-s) | [GitHub](https://github.com/hackerstudent29)"
+"I was created by Ramanathan S (Ram), who is the Lead AI Developer and System Architect here at MSAJCE. He is a 2nd-year B.Tech IT student and has built some really cool things:
+... Lorin RAG System (that's me!).
+... Zenpay (a powerful Fintech system).
+... Pocket Lawyer (AI for legal help).
+... Formora (a smart SaaS form builder).
+
+Ram is an expert in AI and Fintech. You can see all his work on his [Portfolio](https://ram-ai-portfolio.vercel.app).
+Do you want to know more about any of Ram's other projects?"
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ],
