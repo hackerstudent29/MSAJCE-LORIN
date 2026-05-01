@@ -73,29 +73,17 @@ class RAGEngine:
                 try:
                     self.bm25 = bm25s.BM25.load(index_dir, load_corpus=True)
                     print(f"Lorin Engine: Loaded BM25 index from {index_dir}")
-                except Exception as e:
-                    print(f"Lorin Engine: BM25 Load Error: {e}")
+                except Exception as load_err:
+                    print(f"Lorin Engine: BM25 Load Error: {load_err}")
                     self.bm25 = None
             else:
-                print(f"Lorin Engine: BM25 index folder missing at {index_dir}")
+                print(f"Lorin Engine: BM25 index missing or corrupt. Fallback to vector only.")
                 self.bm25 = None
-                print(f"Lorin Engine: Load failed: {e}")
-                if os.getenv("VERCEL"):
-                    print("Lorin Engine: On Vercel, cannot rebuild. Fallback to vector search only.")
-                    self.bm25 = None
-                else:
-                    self._rebuild_bm25(chunks_path, index_dir)
-        elif not os.getenv("VERCEL"):
-            print("Lorin Engine: Index missing, rebuilding...")
-            self._rebuild_bm25(chunks_path, index_dir)
-        else:
-            print("Lorin Engine: Index missing on Vercel. Fallback to vector only.")
-            self.bm25 = None
 
         self.vercel_gateway_url = "https://ai-gateway.vercel.sh/v1"
         self.openrouter_embed_url = "https://openrouter.ai/api/v1/embeddings"
-        self.generation_model = "openai/gpt-4o-mini"
-        self.embedding_model = "openai/text-embedding-3-small"
+        self.generation_model = "google/gemini-2.0-flash-001"
+        self.embedding_model = "text-embedding-3-small"
         
         self.langfuse = Langfuse(
             public_key=os.getenv("LANGFUSE_PUBLIC_KEY"),
