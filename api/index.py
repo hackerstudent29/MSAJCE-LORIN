@@ -34,20 +34,19 @@ def get_clean_env(key, default=""):
     return default
 
 TOKEN = get_clean_env("TELEGRAM_BOT_TOKEN")
+ADMIN_IDS = [int(i.strip()) for i in get_clean_env("ADMIN_IDS", "7770158141").split(",") if i.strip()]
 
 # --- Security Config ---
 ABUSIVE_WORDS = ["badword1", "badword2"]
 
 def is_gibberish(text):
-    """Heuristic check for random keyboard mashing."""
     if len(text) < 4: return False
-    # Check for long words with extremely low vowel density
     words = text.split()
     for w in words:
         if len(w) > 8:
             vowels = len(re.findall(r'[aeiouAEIOU]', w))
-            if vowels / len(w) < 0.15: return True # Less than 15% vowels
-        if len(w) > 15: return True # Extremely long single word is usually mashing
+            if vowels / len(w) < 0.15: return True
+        if len(w) > 15: return True
     return False
 
 async def check_security(user_id, text, engine):
@@ -55,11 +54,33 @@ async def check_security(user_id, text, engine):
     quota_now = datetime.now() - timedelta(hours=4, minutes=30)
     quota_day_str = quota_now.strftime('%Y-%m-%d')
     
+    # 1. Check if currently blocked
     block_key = f"user_{user_id}_blocked_until"
     blocked_until = await engine.redis.get(block_key)
     if blocked_until and int(blocked_until) > now_ts:
         return False, "BLOCKED", (int(blocked_until) - now_ts) // 60 + 1
 
+    # --- CONTENT CHECKS (Applies to EVERYONE including Admins) ---
+    is_abusive = any(re.search(rf"\b{word}\b", text, re.I) for word in ABUSIVE_WORDS)
+    is_gib = is_gibberish(text)
+    
+    if is_abusive or is_gib:
+        strike_key = f"user_{user_id}_strikes"
+        strikes = await engine.redis.incr(strike_key)
+        duration = 0
+        if strikes >= 10: duration = 7*24
+        elif strikes >= 5: duration = 24
+        elif strikes >= 3: duration = 6
+        if duration > 0:
+            await engine.redis.set(block_key, now_ts + (duration * 3600))
+            return False, "BANNED", duration
+        return False, "WARNING", strikes
+
+    # --- ADMIN BYPASS FOR QUOTAS & SPAM ---
+    if user_id in ADMIN_IDS:
+        return True, None, 0
+
+    # --- FREQUENCY CHECKS (Students Only) ---
     day_key = f"user_{user_id}_daily_count_{quota_day_str}"
     daily_count = await engine.redis.get(day_key)
     if daily_count and int(daily_count) >= 30:
@@ -70,10 +91,6 @@ async def check_security(user_id, text, engine):
     if min_count and int(min_count) >= 6:
         return False, "MINUTE_LIMIT", 6
 
-    # --- THE GIBBERISH & ABUSE CHECKS ---
-    is_abusive = any(re.search(rf"\b{word}\b", text, re.I) for word in ABUSIVE_WORDS)
-    is_gib = is_gibberish(text)
-    
     last_msg_key = f"user_{user_id}_last_msg"
     dup_count_key = f"user_{user_id}_dup_count"
     last_data = await engine.redis.get(last_msg_key)
@@ -88,7 +105,7 @@ async def check_security(user_id, text, engine):
         else:
             await engine.redis.set(dup_count_key, 0)
 
-    if is_abusive or is_spam or is_gib:
+    if is_spam:
         strike_key = f"user_{user_id}_strikes"
         strikes = await engine.redis.incr(strike_key)
         duration = 0
@@ -100,6 +117,7 @@ async def check_security(user_id, text, engine):
             return False, "BANNED", duration
         return False, "WARNING", strikes
 
+    # Update states for students
     await engine.redis.incr(day_key); await engine.redis.expire(day_key, 90000)
     await engine.redis.incr(min_key); await engine.redis.expire(min_key, 60)
     await engine.redis.set(last_msg_key, json.dumps({"time": now_ts, "text": text}), ex=300)
@@ -107,7 +125,9 @@ async def check_security(user_id, text, engine):
     return True, None, 0
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("👋 MSAJCE Lorin Active. Please ask clear institutional questions!")
+    user_id = update.effective_user.id
+    admin_status = "👑 Admin Access" if user_id in ADMIN_IDS else "🎓 Student Access"
+    await update.message.reply_text(f"👋 Lorin Active.\nMode: {admin_status}")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.message or not update.message.text: return
@@ -137,7 +157,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=answer)
     except Exception as e:
         logger.error(f"Error: {e}")
-        await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy. Try again.")
+        await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.")
 
 async def create_app():
     global _engine
