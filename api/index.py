@@ -128,17 +128,32 @@ async def webhook():
 
 @app.route('/set-webhook')
 async def set_webhook():
-    """Utility to set the webhook from browser."""
-    # Vercel URLs are usually PROJECT_NAME.vercel.app
-    # But since we don't know the name yet, we ask the user to provide it.
+    """Utility to set the webhook and check status."""
     host = request.headers.get('Host')
     if not host: return "Error: Could not determine host.", 400
     
     webhook_url = f"https://{host}/api/webhook"
     try:
         bot_app, _ = await get_bot_app()
-        await bot_app.bot.set_webhook(url=webhook_url)
-        return f"✅ SUCCESS! Webhook set to: {webhook_url}", 200
+        # 1. Set the webhook
+        success = await bot_app.bot.set_webhook(url=webhook_url)
+        
+        # 2. Get Info to verify
+        info = await bot_app.bot.get_webhook_info()
+        
+        return {
+            "success": success,
+            "url_set_to": webhook_url,
+            "telegram_info": {
+                "url": info.url,
+                "has_custom_certificate": info.has_custom_certificate,
+                "pending_update_count": info.pending_update_count,
+                "last_error_date": info.last_error_date,
+                "last_error_message": info.last_error_message,
+                "max_connections": info.max_connections,
+                "ip_address": info.ip_address
+            }
+        }, 200
     except Exception as e:
         return f"❌ FAILED: {e}", 500
 
