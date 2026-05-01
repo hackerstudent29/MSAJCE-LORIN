@@ -150,41 +150,46 @@ class RAGEngine:
 
     @traceable(name="Adaptive Retrieval")
     async def get_context(self, query, trace):
-        span = trace.span(name="Retrieval", input={"query": query})
+        """Parallelized RAG Retrieval (Pinecone + BM25)"""
         
-        # 1. Pinecone Vector Search
-        pinecone_hits = []
-        if self.index:
+        async def fetch_pinecone():
+            if not self.index: return []
             try:
                 async with httpx.AsyncClient() as client:
-                    e_res = await client.post(self.openrouter_embed_url, headers={"Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}"}, json={"model": self.embedding_model, "input": query}, timeout=30.0)
+                    e_res = await client.post(self.openrouter_embed_url, headers={"Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}"}, json={"model": self.embedding_model, "input": query}, timeout=10.0)
                     query_embedding = e_res.json()["data"][0]["embedding"]
-                pinecone_hits = [m['metadata'] for m in self.index.query(vector=query_embedding, top_k=10, include_metadata=True)['matches']]
+                    
+                    p_res = self.index.query(vector=query_embedding, top_k=10, include_metadata=True)
+                    return [{"text": m["metadata"]["text"], "score": m["score"], "chunk_id": m["id"]} for m in p_res["matches"]]
             except Exception as e:
-                print(f"Lorin Engine: Pinecone Retrieval Error: {e}")
+                print(f"Lorin Engine: Pinecone Error: {e}")
+                return []
 
-        # 2. BM25 Lexical Search
-        bm25_hits = []
-        if self.bm25:
+        async def fetch_bm25():
+            if not self.bm25: return []
             try:
                 tokens = bm25s.tokenize(query, stemmer=self.stemmer)
-                chunks, _ = self.bm25.retrieve(tokens, k=15)
-                bm25_hits = chunks[0].tolist()
+                chunks, _ = self.bm25.retrieve(tokens, k=10)
+                return chunks[0].tolist()
             except Exception as e:
-                print(f"Lorin Engine: BM25 Retrieval Error: {e}")
+                print(f"Lorin Engine: BM25 Error: {e}")
+                return []
+
+        # RUN IN PARALLEL
+        pinecone_task = fetch_pinecone()
+        bm25_task = fetch_bm25()
+        p_hits, b_hits = await asyncio.gather(pinecone_task, bm25_task)
         
         combined = []; seen = set()
-        for c in pinecone_hits + bm25_hits:
-            if c['chunk_id'] not in seen:
-                combined.append(c); seen.add(c['chunk_id'])
+        for c in p_hits + b_hits:
+            cid = c.get('chunk_id') or c.get('id')
+            if cid and cid not in seen:
+                combined.append(c); seen.add(cid)
         
-        # LOGGING FOR DIAGNOSTICS
-        print(f"Lorin Engine: Retrieval Hits -> Pinecone: {len(pinecone_hits)}, BM25: {len(bm25_hits)}, Combined: {len(combined)}")
-
-        # INCREASE DEPTH: Send more chunks to reranker
-        if not combined: return []
+        print(f"Lorin Engine: Retrieval Hits -> Pinecone: {len(p_hits)}, BM25: {len(b_hits)}, Combined: {len(combined)}")
         
         # 3. Reranking (Optional)
+        if not combined: return []
         texts = [c['text'] for c in combined]
         if self.co:
             try:
