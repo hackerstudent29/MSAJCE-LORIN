@@ -246,4 +246,24 @@ Conversation History:
         
         final_answer = res_gen
         trace.update(output=final_answer)
+
+        # --- Sunday Intelligence: Forensic Logging ---
+        try:
+            end_time = time.time()
+            latency_ms = int((end_time - start_time) * 1000)
+            log_entry = {
+                "timestamp": datetime.now().isoformat(),
+                "session_id": trace.trace_id if hasattr(trace, 'trace_id') else "sess_" + str(int(time.time())),
+                "query": user_query,
+                "category": p.get("category", "GENERAL") if p else "ERROR",
+                "score": max([float(c.get('score', 0)) for c in context_chunks]) if context_chunks else 0.0,
+                "latency": latency_ms,
+                "tokens": len(final_answer.split()) * 1.3,
+                "status": "SUCCESS" if final_answer else "FAILED"
+            }
+            await self.redis.lpush("lorin_forensic_logs", json.dumps(log_entry))
+            await self.redis.ltrim("lorin_forensic_logs", 0, 10000)
+        except Exception as e:
+            logger.error(f"Forensic Logging Error: {e}")
+
         return final_answer

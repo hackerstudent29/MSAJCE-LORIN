@@ -1,0 +1,30 @@
+name: Sunday Strategic Intelligence Report
+
+on:
+  schedule:
+    - cron: '0 3 * * 0' # 3:00 AM UTC = 8:30 AM IST (approx) or 9:00 AM IST
+  workflow_dispatch: # Allows manual trigger for testing
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install httpx redis python-dotenv openai
+
+      - name: Run Sunday Intelligence Audit
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+          GENERATOR_URL: ${{ secrets.GENERATOR_URL }}
+        run: python scripts/sunday_intelligence.py
