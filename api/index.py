@@ -44,10 +44,14 @@ def is_gibberish(text):
     if len(text) < 4: return False
     words = text.split()
     for w in words:
+        # Ignore numbers, dates, and batch ranges (e.g., 2024-2028)
+        if re.search(r'\d', w): continue
+        
+        # Only check vowel ratio for long alphabetic words
         if len(w) > 8:
             vowels = len(re.findall(r'[aeiouAEIOU]', w))
             if vowels / len(w) < 0.15: return True
-        if len(w) > 15: return True
+        if len(w) > 20: return True # Increased threshold for technical words
     return False
 
 async def check_security(user_id, text, engine):

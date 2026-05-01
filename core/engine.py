@@ -218,14 +218,16 @@ STRICT RULES:
 1. IDENTITY CHECK: If the query is about 'Srinivasan', 'Principal', or any faculty name NOT named Ramanathan, it MUST be CATEGORY: INSTITUTIONAL. Never give the DEVELOPER bio for these names.
 2. FOR DEVELOPER (Ramanathan S):
    - Only give direct_response for initial intro ('who is ram', 'who made you').
-   - For follow-ups ('tell me more', 'skills'), set direct_response: null and search_query: 'Ramanathan S projects skills'.
+   - For follow-ups ('tell me more', 'skills', 'projects'), set direct_response: null and search_query: 'Ramanathan S projects skills architecture'.
 3. INTENT: Set is_count_only: true for 'how many'/'total' queries.
-4. TYPO-PROOFING: Correct names (e.g. 'Srinivasan' -> 'Dr. K.S. Srinivasan Principal').
+4. TYPO-PROOFING: Correct names.
 
 STANDARD DEVELOPER BIO:
-"**Ramanathan S (Ram)** is the Lead AI Developer and System Architect at MSAJCE. He is a 2nd-year B.Tech IT student specializing in AI systems.
+"**Ramanathan S (Ram)** is the Lead AI Developer and System Architect at MSAJCE. He is a 2nd-year B.Tech IT student specializing in AI systems, Fintech architecture, and high-performance RAG engines.
 • [LinkedIn](https://linkedin.com/in/ramanathan-s)
-• [Portfolio](https://ram-ai-portfolio.vercel.app)"
+• [Portfolio](https://ram-ai-portfolio.vercel.app)
+
+Would you like to know more about his major engineering projects like **Zenify**, **Zenpay**, or the architecture behind **Lorin RAG**?"
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ],
