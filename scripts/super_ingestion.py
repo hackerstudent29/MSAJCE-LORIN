@@ -70,19 +70,49 @@ class MasterIngestor:
                     })
                     continue
 
-                # Handle Standard Chunks format
-                chunks = data.get('chunks', [])
-                for chunk in chunks:
+                # Handle Standard Chunks format with Table Splitting
+                raw_chunks = data.get('chunks', [])
+                for chunk in raw_chunks:
                     text = chunk.get('text', '')
-                    category = chunk.get('section', 'General')
                     
-                    # Store by category
+                    # Atomic Table Splitting: Detect and split tables into rows
+                    if "|" in text and "\n" in text:
+                        lines = text.split("\n")
+                        header_idx = -1
+                        max_pipes = 0
+                        for i, line in enumerate(lines):
+                            p_count = line.count("|")
+                            if p_count > max_pipes:
+                                max_pipes = p_count
+                                header_idx = i
+                        
+                        if header_idx != -1 and max_pipes > 1:
+                            header = lines[header_idx]
+                            for line in lines[header_idx+1:]:
+                                if "|" in line and any(char.isdigit() for char in line[:8]):
+                                    # Create an atomic chunk for this row
+                                    row_text = f"{header}\n{line}"
+                                    category = chunk.get('section', 'General')
+                                    self.categories[category].append(row_text)
+                                    
+                                    # Extract name from the row (usually col 2 or 3)
+                                    parts = [p.strip() for p in line.split("|")]
+                                    if len(parts) > 2:
+                                        name = parts[1] if not parts[0].isdigit() else parts[1]
+                                        self.entities[name].append({
+                                            "source": file,
+                                            "context": chunk.get('context'),
+                                            "text": row_text,
+                                            "role": "Scholarship Beneficiary"
+                                        })
+                            continue # Skip the original mega-chunk
+
+                    # Normal processing for non-table chunks
+                    category = chunk.get('section', 'General')
                     self.categories[category].append(text)
                     
-                    # Extract entities mentioned in chunk metadata
                     persons = chunk.get('entities', {}).get('persons', [])
                     for p in persons:
-                        # Clean name (e.g., "Dr. WESLIN D — Associate Professor" -> "Dr. WESLIN D")
                         name = p.split(' — ')[0].strip()
                         self.entities[name].append({
                             "source": file,
