@@ -86,5 +86,21 @@
       "status": "PASS",
       "reason": "The bot correctly states that the information is not directly available in the provided source text."
     }
+  },
+  {
+    "question": "Are there any bridge courses offered for lateral entry students to cover the syllabus of the first year of the B.E. Computer Science and Engineering program?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many MOOC (Massive Open Online Courses) are required or recommended for B.E. students under the 2021 regulation?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
   }
 ]

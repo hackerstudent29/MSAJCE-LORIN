@@ -126,5 +126,13 @@
       "status": "PASS",
       "reason": "The bot response acknowledges that students pursue M.E. or M.Tech. programs after completing their B.E. CSE, which aligns with the 'Scope for Higher Studies' section in the source text mentioning M.E. / M.Tech. / M.B.A."
     }
+  },
+  {
+    "question": "What specific security frameworks (besides AWS and Azure) are covered in the cloud security portion of the 'Emerging Technologies' curriculum?",
+    "answer": "The 'Emerging Technologies' curriculum covers Google Cloud for cloud security, focusing on Identity and Access Management (IAM), encryption, and data protection best practices.\n\nWant to know about our IoT security specializations?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response is accurate and directly supported by the source text, which mentions that the curriculum covers Google Cloud in addition to AWS and Azure."
+    }
   }
 ]

@@ -903,3 +903,14 @@
 [PASS] Who served as the IQAC Coordinator in the academic year 2019-2020?
 [PASS] What is the composition of the Intellectual Property Rights (IPR) cell within SIIF, including the number of patent attorneys or experts?
 [PASS] What is the success rate of graduates in obtaining M.E. / M.Tech. degrees after completing the B.E. CSE program with Cyber Security specialization?
+[FAIL] Are there any bridge courses offered for lateral entry students to cover the syllabus of the first year of the B.E. Computer Science and Engineering program?
+[PASS] How many faculty members who taught in 2020-2021 are still teaching in 2023-2024?
+[PASS] In academic year 2022-2023, which student representative from CSE was a member of the IQAC?
+[PASS] What specific security frameworks (besides AWS and Azure) are covered in the cloud security portion of the 'Emerging Technologies' curriculum?
+[PASS] What is the monetary value of consulting projects done by students and faculty per year?
+[PASS] What percentage of seats are reserved under the NRI quota, and approximately how many seats does this represent for the B.Tech ECE Advanced Communication Technology program?
+[PASS] How many departments had funded research projects in the academic year 2023-2024, according to data collected for AQAR?
+[PASS] In which academic year(s) was Dr. Mohan E a professor in the IT department?
+[PASS] Which faculty member specializes in Image Processing and Machine Learning and holds the designation of Associate Professor?
+[PASS] What is the policy for equity stake that SIIF takes in startups that it funds?
+[FAIL] How many MOOC (Massive Open Online Courses) are required or recommended for B.E. students under the 2021 regulation?

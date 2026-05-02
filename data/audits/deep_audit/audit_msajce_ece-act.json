@@ -158,5 +158,21 @@
       "status": "PASS",
       "reason": "The bot's response aligns with the salary range provided in the source text for a Software Engineer, which is between Rs. 4 Lakhs to Rs. 12 Lakhs."
     }
+  },
+  {
+    "question": "What percentage of seats are reserved under the NRI quota, and approximately how many seats does this represent for the B.Tech ECE Advanced Communication Technology program?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The document states that 5% of sanctioned seats are reserved under the NRI quota, which equates to approximately 1-2 seats. The bot's response accurately reflects this information."
+    }
+  },
+  {
+    "question": "Which faculty member specializes in Image Processing and Machine Learning and holds the designation of Associate Professor?",
+    "answer": "Dr. PREMALATHA G is an Associate Professor who specializes in Image Processing and Machine Learning.\n\nDo you want to know about any other faculty members?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate and aligns with the information provided in the source text under the 'Faculty' section. It correctly identifies Dr. PREMALATHA G as an Associate Professor specializing in Image Processing and Machine Learning."
+    }
   }
 ]
