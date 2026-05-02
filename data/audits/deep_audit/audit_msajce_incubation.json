@@ -6,5 +6,21 @@
       "status": "PASS",
       "reason": "The bot accurately states that it doesn't have the specific revenue figures but acknowledges the long-term objective related to revenue generation, which aligns with the source text."
     }
+  },
+  {
+    "question": "How many patents were attained by MSAJCE students in 2023 that can be commercially used in production, as outlined in Long Term Objective #2?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the allocated percentage of the total institution's revenue budgeted for start-ups for the current year, as stated under the Activities section?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
   }
 ]

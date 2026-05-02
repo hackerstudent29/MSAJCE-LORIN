@@ -70,5 +70,21 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "Is there a specific quota or reservation policy for students from rural areas or specific social categories for the B.E. Computer Science and Engineering program?",
+    "answer": "For B.E. Computer Science and Engineering, 30 seats are under government quota, while another 30 fall under the management quota. I should also point out that 5% of seats are reserved for NRI candidates, though these can be converted to general seats if not filled.\n\nDo you want to know about the specific documents needed during the admission process?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The response mentions a 5% NRI quota which is not present in the source text, and since the source text specifies the total intake of 60 seats, with 30 under government quota and 30 under management quota, there is no room for an NRI quota."
+    }
+  },
+  {
+    "question": "What is the policy on credit transfer from other universities for students admitted to the B.E. Computer Science and Engineering program via lateral entry?",
+    "answer": "Unfortunately, specific details regarding credit transfer policies for lateral entry students in the B.E. Computer Science and Engineering program are not available.\n\nHave you checked the 2021 regulation curriculum for lateral entry students? It can be found on the college website.\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that the information is not directly available in the provided source text."
+    }
   }
 ]

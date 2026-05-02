@@ -94,5 +94,29 @@
       "status": "PASS",
       "reason": "The bot response is factually accurate as per the source text."
     }
+  },
+  {
+    "question": "Who is the President of the Canteen Committee?",
+    "answer": "Dr. K.S. Srinivasan, our Principal, is the President of the Canteen Committee.\n\nAnything else about the canteen committee you\u2019d like to know?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response accurately reflects the information provided in the source text regarding the President of the Canteen Committee."
+    }
+  },
+  {
+    "question": "What is the email address for the Grievance Cell?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How far is the Girls Hostel located from the college campus in kilometers?",
+    "answer": "The Girls Hostel is located 5 km from the campus.\n\nWant to know more about hostel facilities?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text specifies that the Girls Hostel is located 5 km from the campus."
+    }
   }
 ]

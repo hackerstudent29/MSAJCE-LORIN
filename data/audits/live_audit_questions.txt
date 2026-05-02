@@ -886,3 +886,20 @@
 [FAIL] According to the 2017 regulation for the M.E. program, what is the minimum GPA required for graduation?
 [PASS] What are the opening and closing hours of the cafeteria on working days?
 [FAIL] What is the specific name and version of the SIEM tool used in the labs for threat analysis?
+[PASS] What was the average enrollment percentage for the academic year 2023-2024, as documented in the AQAR?
+[PASS] Who is the President of the Canteen Committee?
+[FAIL] Is there a specific quota or reservation policy for students from rural areas or specific social categories for the B.E. Computer Science and Engineering program?
+[PASS] What specific ethical hacking certifications (besides CEH and OSCP) does the curriculum prepare students for?
+[FAIL] What is the URL for the virtual lab associated with the Operating Systems course?
+[UNKNOWN] How many seats were filled against reserved categories in the academic year 2023-2024, according to the AQAR?
+[UNKNOWN] What is the success rate of startups funded by the SIIF compared to the national average?
+[FAIL] According to the curriculum link provided (https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf), what is the exact credit requirement to complete the B.Tech ECE Advanced Communication Technology program?
+[PASS] What is the policy on credit transfer from other universities for students admitted to the B.E. Computer Science and Engineering program via lateral entry?
+[FAIL] What is the email address for the Grievance Cell?
+[PASS] Are internships with DRDO or CERT-IN guaranteed, and if not, what is the average placement rate with these agencies?
+[PASS] How many alumni entrepreneurs have participated in the mentorship programs facilitated by SIIF in the last 3 years?
+[PASS] What is the average annual salary range for a Software Engineer with a B.Tech ECE-ACT degree?
+[PASS] How far is the Girls Hostel located from the college campus in kilometers?
+[PASS] Who served as the IQAC Coordinator in the academic year 2019-2020?
+[PASS] What is the composition of the Intellectual Property Rights (IPR) cell within SIIF, including the number of patent attorneys or experts?
+[PASS] What is the success rate of graduates in obtaining M.E. / M.Tech. degrees after completing the B.E. CSE program with Cyber Security specialization?

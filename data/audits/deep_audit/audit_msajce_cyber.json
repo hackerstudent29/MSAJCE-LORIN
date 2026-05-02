@@ -102,5 +102,29 @@
       "status": "FAIL",
       "reason": "The bot did not provide the name and version of the SIEM tool used in the labs. It is unable to answer the question based on the source text."
     }
+  },
+  {
+    "question": "What specific ethical hacking certifications (besides CEH and OSCP) does the curriculum prepare students for?",
+    "answer": "The B.E. CSE Cyber Security program emphasizes hands-on learning in penetration testing and threat analysis, but it does not specifically mention preparing students for any ethical hacking certifications beyond CEH and OSCP.\n\nWould you like information on free cyber security resources?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response accurately reflects the information provided in the source text, which only explicitly mentions CEH and OSCP when discussing ethical hacking certifications related to the curriculum."
+    }
+  },
+  {
+    "question": "Are internships with DRDO or CERT-IN guaranteed, and if not, what is the average placement rate with these agencies?",
+    "answer": "While a DRDO or CERT-IN internship isn't guaranteed, these agencies are listed as top recruiters for Cyber Security (CSCS) graduates. The college cannot guarantee placements or internships, but it actively prepares you for opportunities with leading firms through a specialized curriculum, hands-on learning, and industry connections.\n\nWould you like to know more about the curriculum of the Cyber Security program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The BOT accurately reflects that internships with DRDO and CERT-IN are not guaranteed, which aligns with general placement conditions and is implicitly supported by the text listing them as potential recruiters. The response avoids promising guaranteed placements, which is realistic. The source text mentions these as top recruiters and the bot accurately conveys the same."
+    }
+  },
+  {
+    "question": "What is the success rate of graduates in obtaining M.E. / M.Tech. degrees after completing the B.E. CSE program with Cyber Security specialization?",
+    "answer": "Based on available data, here's what I know:\n\n\u2022 The Higher Education Cell can certainly guide you with admissions counselling to optimize your chances of getting into the best universities.\n\u2022 The Higher Education Committee creates awareness and motivates students regarding higher education opportunities in India and abroad.\n\u2022 Looking at past placement records, a number of our CSE graduates pursue M.E. or M.Tech. programs. For example, Shaafia Tasneem from the 2022-2023 batch went on to pursue M.E. in Computer Science at St. Joseph College of Engineering. Also, Safwaan Abdul Razaq from the 2021-2022 batch pursued M.E. in Computer Science at SRM University.\n\nDo you want to know who to contact for higher education guidance?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response acknowledges that students pursue M.E. or M.Tech. programs after completing their B.E. CSE, which aligns with the 'Scope for Higher Studies' section in the source text mentioning M.E. / M.Tech. / M.B.A."
+    }
   }
 ]

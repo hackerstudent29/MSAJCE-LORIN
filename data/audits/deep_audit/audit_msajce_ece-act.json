@@ -134,5 +134,29 @@
       "status": "PASS",
       "reason": "The source text states the intake/number of seats for the B.Tech ECE Advanced Communication Technology program as: Total - 30 (Government - 15, Management - 15). Therefore, there are 15 seats available under the management quota."
     }
+  },
+  {
+    "question": "What is the URL for the virtual lab associated with the Operating Systems course?",
+    "answer": "Okay, there are multiple departments that offer the Operating Systems lab. Here are the URLs for the virtual labs, based on the department:\n\n\u2022  AIDS Department: https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-OS.pdf\n\u2022  CSBS Department: https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-OS.pdf\n\u2022  ECE-ACT Department: https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-OS.pdf\n\u2022  CSE (Cyber Security) Department: https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-OS.pdf\n\u2022  CSE Department: https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-OS.pdf\n\nWould you like the equipment list or objective of the lab as well?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot response provides a list of virtual labs for different departments, including AIDS, CSBS, ECE-ACT, CSE (Cyber Security), and CSE. However, the source text specifies only one URL for the Operating Systems lab: https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-OS.pdf"
+    }
+  },
+  {
+    "question": "According to the curriculum link provided (https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf), what is the exact credit requirement to complete the B.Tech ECE Advanced Communication Technology program?",
+    "answer": "I regret to report I can't furnish the credit requirement from that specific PDF link. Those details would be within the document itself.\n\nDo you have any other questions about the ECE Advanced Communication Technology program?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot refused to answer the question even though the curriculum link was provided in the source text."
+    }
+  },
+  {
+    "question": "What is the average annual salary range for a Software Engineer with a B.Tech ECE-ACT degree?",
+    "answer": "For a Software Engineer with a B.Tech in ECE-ACT, the average annual salary ranges from Rs. 4 Lakhs to Rs. 12 Lakhs, according to the data I have.\n\nWant to know about other job profiles for ECE-ACT graduates?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response aligns with the salary range provided in the source text for a Software Engineer, which is between Rs. 4 Lakhs to Rs. 12 Lakhs."
+    }
   }
 ]
