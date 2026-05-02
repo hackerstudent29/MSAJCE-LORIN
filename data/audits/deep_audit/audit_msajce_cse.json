@@ -38,5 +38,21 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "Under the 2017 B.E. Computer Science and Engineering regulation, what is the specific course code and name for the capstone project/final year project?",
+    "answer": "I couldn't find explicit information on capstone or final year project course codes under the 2017 B.E. Computer Science and Engineering regulation. But the full 2017 regulation syllabus is available here: https://www.msajce-edu.in/uploads/academics/2017Regulation.pdf.\n\nWould you like me to help you find course materials for any of the listed subjects?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it can't find the specific course code and name for the capstone project under the 2017 regulation and provides a link to the syllabus, which aligns with the source text."
+    }
+  },
+  {
+    "question": "What is the exact URL for the 'Students Corner' on the MSAJCE website?",
+    "answer": "The URL for the Students Corner is: https://www.msajce-edu.in/studentscorner.php.\n\nWould you like to know about any other student resources?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate and the information is available in the source text."
+    }
   }
 ]

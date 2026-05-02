@@ -715,3 +715,20 @@
 [FAIL] To whom does Saqlin Mustaq M directly report in their role as VP of AI&DS?
 [PASS] What percentage of students at MSAJCE are actively involved in at least one of the mentioned clubs?
 [PASS] How many students are actively participating in the MSAJCE Robotic Club?
+[UNKNOWN] According to the linked 'Virtual Lab' for 'CS8461 Operating Systems', which operating systems are used for practical experiments?
+[UNKNOWN] What is the tuition fee structure for both Government and Management quota seats for the B.Tech ECE Advanced Communication Technology program?
+[UNKNOWN] What is the current membership count of the Alumni Association in 2026 and how does it compare to the count in 2023?
+[PASS] What specific types of renewable energy sources does the MSAJCE Energy and Eco Club promote within the college?
+[PASS] What percentage of the curriculum is dedicated to soft skills training, specifically in communication, teamwork, and entrepreneurial thinking?
+[PASS] Under the 2017 B.E. Computer Science and Engineering regulation, what is the specific course code and name for the capstone project/final year project?
+[PASS] In the last academic year, how many students represented MSAJCE at the regional/state/national level through the Sports Club?
+[PASS] Which lesson plan covers the topic of 'bias reduction' for ethical AI development?
+[UNKNOWN] How many individuals are directly supervised by Saqlin Mustaq M in the AI&DS department?
+[UNKNOWN] According to the Alumni Association By-Laws (English), what is the quorum required for an Annual General Meeting?
+[PASS] Are there any scholarships or financial aid options specifically designated for students admitted under the management quota in the CSBS program?
+[PASS] What is the exact URL for the 'Students Corner' on the MSAJCE website?
+[PASS] According to the curriculum link, what percentage of the courses are hands-on lab based?
+[PASS] What are the photography composition concepts taught in the Photography club?
+[PASS] What were the measurable goals that Saqlin Mustaq M was tasked to achieve during the period 2023-2024 as VP of AI&DS?
+[UNKNOWN] What are the specific dates and times of the Alumni Meet mentioned in the Alumni Meet Minutes document?
+[UNKNOWN] What is the procedure for students to submit proposals for new sports events to the MSAJCE Sports Club?

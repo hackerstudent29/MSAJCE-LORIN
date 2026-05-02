@@ -70,5 +70,21 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "What percentage of the curriculum is dedicated to soft skills training, specifically in communication, teamwork, and entrepreneurial thinking?",
+    "answer": "While a specific percentage for soft skills isn't available, it is embedded across the curriculum, especially in the Computer Science and Business Systems (CSBS) program. These skills are explicitly taught through dedicated training programs and integrated into core subjects. Could you clarify which department's curriculum you're interested in?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges that a specific percentage isn't available but confirms that soft skills training (communication, teamwork, entrepreneurial thinking) is embedded across the curriculum, especially in the CSBS program, which aligns with the source text's statement about 'Soft Skills Training \u00e2\u20ac\u201d Communication, Teamwork, Entrepreneurial thinking.'"
+    }
+  },
+  {
+    "question": "Are there any scholarships or financial aid options specifically designated for students admitted under the management quota in the CSBS program?",
+    "answer": "As of today, May 02, 2026, while there aren't scholarships exclusively for management quota CSBS students, all female students do get a 10% tuition fee discount. I'd also recommend looking into the AICTE Pragati and Saksham scholarships.\n\nWould you like more information on any of those options?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "While the source text does not contain details about scholarships, the bot's answer does not contradict the text and provides possible avenues for financial aid, making it a reasonable and helpful response."
+    }
   }
 ]

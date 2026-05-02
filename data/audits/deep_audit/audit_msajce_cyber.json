@@ -206,5 +206,29 @@
       "status": "PASS",
       "reason": "The bot's response aligns with the information provided in the source text regarding the certifications offered through the Embedded & IoT Centre and the CISCO Networking Academy."
     }
+  },
+  {
+    "question": "Is there any formal partnership with Palo Alto Networks for training or certification purposes?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Does the curriculum cover specific tools like Splunk or QRadar for SIEM analysis?",
+    "answer": "Yes, the curriculum emphasizes SIEM tools. You'll gain proficiency in Splunk and IBM QRadar for detecting, monitoring, and responding to security threats in real-time. This is crucial for roles like Security Operations Center (SOC) Analyst.\n\nAre you interested in learning more about job roles that utilize SIEM tools?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text mentions SIEM tools such as Splunk and IBM QRadar under 'Skills Required' for the 'Security Operations Center (SOC) Analyst' role, supporting the bot's statement."
+    }
+  },
+  {
+    "question": "Does the program offer any opportunities for students to participate in national or international cybersecurity competitions?",
+    "answer": "MSAJCE supports participation in cybersecurity competitions via the Coding Club and the Cyber Security Academy.\n\n\u2022 Coding Club: The club represents the college at intercollegiate competitions and participates in events like ACM-ICPC, Google Code Jam, Google Summer of Code, and other online coding events.\n\u2022 Cyber Security Academy: Enhances skills through Capture The Flag (CTF) challenges. These challenges help you practice penetration testing, forensics, and cryptography using platforms like Hack The Box, TryHackMe, and Over The Wire.\n\nInterested in learning about our anti-ragging policies?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate because the source text mentions that the Cyber Security Academy enhances skills through Capture The Flag (CTF) challenges. These challenges help you practice penetration testing, forensics, and cryptography using platforms like Hack The Box, TryHackMe, and Over The Wire."
+    }
   }
 ]

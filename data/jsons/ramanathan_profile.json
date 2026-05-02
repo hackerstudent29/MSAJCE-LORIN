@@ -7,6 +7,14 @@
   },
   "chunks": [
     {
+      "chunk_id": "PROFILE_RAMANATHAN_S_LINKS",
+      "text": "Official Portfolio: https://ramanathan-s.vercel.app/ | LinkedIn: linkedin.com/in/ramzendrum",
+      "metadata": {
+        "section": "Contact & Links",
+        "source_file": "ramanathan_profile.json"
+      }
+    },
+    {
       "chunk_id": "ram_projects_summary",
       "section": "Developer Portfolio",
       "context": "Major Engineering Projects by Ramanathan S",

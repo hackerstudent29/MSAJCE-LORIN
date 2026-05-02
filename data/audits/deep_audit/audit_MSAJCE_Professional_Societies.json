@@ -62,5 +62,21 @@
       "status": "FAIL",
       "reason": "The bot response implies that the VP of AI&DS reports to the Student Affairs department because it oversees the Student Council. This is not stated in the source text and is unlikely to be accurate based on general knowledge of organizational structures. The source text only lists the name and role."
     }
+  },
+  {
+    "question": "How many individuals are directly supervised by Saqlin Mustaq M in the AI&DS department?",
+    "answer": "Saqlin Mustaq M is the Vice President from the AI&DS department, batch 2023-2027.\n\nCurrently, I don't have the specific number of individuals he directly supervises. Can I help you with any other information about the AI&DS department or student council?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What were the measurable goals that Saqlin Mustaq M was tasked to achieve during the period 2023-2024 as VP of AI&DS?",
+    "answer": "Saqlin Mustaq M was the Vice President of AI&DS for the 2023-2027 batch. Unfortunately, I do not have information regarding the specific measurable goals that Saqlin Mustaq M was tasked to achieve during the 2023-2024 period.\n\nWould you like to know more about the current responsibilities of the Student Council?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies Saqlin Mustaq M as VP of AI&DS. It also acknowledges it does not know the specific measurable goals, which aligns with the source text's lack of information on that topic."
+    }
   }
 ]

@@ -211,7 +211,7 @@ CATEGORIES: DEVELOPER, GREETING, INSTITUTIONAL.
 STRICT RULES:
 1. MARKETING MODE: If user is critical, compares colleges, or asks "why join?", set marketing_mode to true. 
    REWRITE search_query to find: "NAAC A+ Grade, NBA accreditation, placement records, ranking, RAISE center, and 1301 code".
-2. DEVELOPER IDENTITY: If 'ram' is mentioned, set category to DEVELOPER.
+2. DEVELOPER IDENTITY: If 'ram' or 'ramanathan' is mentioned, set category to DEVELOPER and refer to his official portfolio: https://ramanathan-s.vercel.app/.
 3. REPETITION: If 'is_repetition' is true, find DEEPER details.
 4. IDENTITY PROTECTION: Srinivasan/Principal = INSTITUTIONAL.
 5. FOLLOW-UPS: Always prompt for more about Zenify, Zenpay, or Lorin RAG for DEVELOPER queries.

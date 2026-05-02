@@ -150,5 +150,21 @@
       "status": "PASS",
       "reason": "The bot states it does not have the information, which is correct as the provided document does not contain the average placement rates for the program."
     }
+  },
+  {
+    "question": "What is the tuition fee structure for both Government and Management quota seats for the B.Tech ECE Advanced Communication Technology program?",
+    "answer": "I do not have the exact fee structure for the B.Tech ECE Advanced Communication Technology program. You can explore the college website or contact the admissions office for detailed information on the fee structure for both Government and Management quota seats.\n\nWould you like me to provide you with the contact details for the admissions office?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "According to the curriculum link, what percentage of the courses are hands-on lab based?",
+    "answer": "Finding an exact percentage of hands-on lab-based courses directly from the curriculum PDF isn't possible. That document outlines the syllabus and regulations. However, several departments provide lab facilities that support various courses.\n\nFor instance, the EEE department has 7 labs, including Electrical Machines and Power Electronics Labs [Source 1]. The CSBS and ECE-ACT departments share lab facilities, offering courses like C Programming and Internet Programming [Source 2, 4]. Additionally, the Cyber Security program emphasizes hands-on learning with labs and simulation environments [Source 5].\n\nDo you want me to provide details on the specific lab facilities available for a particular department or program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it cannot find the exact percentage of hands-on lab-based courses directly from the curriculum PDF. It then refers to lab facilities supported by various departments, which is a reasonable approach given the query. The bot does not contradict the source text."
+    }
   }
 ]

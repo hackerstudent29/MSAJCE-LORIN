@@ -14,5 +14,29 @@
       "status": "PASS",
       "reason": "The response accurately lists the 5 patents filed by MSAJCE faculty in 2021 that are listed as 'A' applications on the IP India website, as per the provided source text."
     }
+  },
+  {
+    "question": "What is the exact date of publication for patent number 2020101867, filed by Dr. E. Dhiravidachelvi?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many faculty members, besides Dr. K.S. Srinivasan, have authored books or book chapters with ISBN numbers starting with '978-81-89638'?",
+    "answer": "Okay, let's figure this out. Based on the information I have, Dr. K.S. Srinivasan has several books with ISBNs starting with '978-81-89638'.\n\nBesides Dr. Srinivasan, no other faculty member has authored books or book chapters with the ISBN prefix '978-81-89638'.\n\nWould you like to know about the books authored by any other faculty members?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that besides Dr. K.S. Srinivasan, no other faculty member has authored books or book chapters with the ISBN prefix '978-81-89638', based on the provided source text."
+    }
+  },
+  {
+    "question": "On which date was copyright number L-78730/2018 for \"Engineering Practices Lab\" filed by Dr. R. Senthilkumar and G. Ramesh?",
+    "answer": "Copyright number L-78730/2018 for \"Engineering Practices Lab\" was filed by Dr. R. Senthilkumar and G. Ramesh in 2018.\n\nWould you like details on other copyrights filed by MSAJCE?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

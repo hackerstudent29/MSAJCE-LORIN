@@ -46,5 +46,21 @@
       "status": "PASS",
       "reason": "The response accurately provides the admission website for the B.Tech program, as listed in the source text."
     }
+  },
+  {
+    "question": "What is the projected annual growth rate for AI/ML Hardware-related VLSI design jobs between 2025-2030?",
+    "answer": "The projected annual growth rate for AI/ML Hardware-related VLSI design jobs between 2025 and 2030 is 18-20%.\n\nDo you want to explore the key skills required for VLSI design roles in the AI/ML hardware sector?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What are the precise names of the four listed companies listed for proficiency in design tools?",
+    "answer": "Okay, I can help with that.\n\nThe four companies you're referring to that recruit VLSI graduates skilled in design tools are Synopsys, Cadence, Microchip and Texas Instruments.\n\nWould you like to know more about VLSI job roles?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identifies four companies listed in the source text as being proficient in design tools."
+    }
   }
 ]

@@ -182,5 +182,21 @@
       "status": "PASS",
       "reason": "The bot states it doesn't have the faculty details to calculate the ratio which is correct as the bot is not supposed to do calculations. It accurately states the seat distribution which is present in the source text."
     }
+  },
+  {
+    "question": "According to the linked 'Virtual Lab' for 'CS8461 Operating Systems', which operating systems are used for practical experiments?",
+    "answer": "I am sorry, but I cannot determine the specific operating systems used for practical experiments in the 'CS8461 Operating Systems' lab based on the provided 'Virtual Lab' link.\n\nWould you like me to provide you with the Virtual Lab link and other information about the Operating Systems Lab?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Which lesson plan covers the topic of 'bias reduction' for ethical AI development?",
+    "answer": "Unfortunately, I do not have specific lesson plans about 'bias reduction' for ethical AI development. Would you like me to search for courses that cover ethical AI?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response that it does not have specific lesson plans about 'bias reduction' for ethical AI development is accurate as this specific information is not found in the source text."
+    }
   }
 ]

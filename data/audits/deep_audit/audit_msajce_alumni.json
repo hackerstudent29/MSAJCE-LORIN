@@ -182,5 +182,29 @@
       "status": "PASS",
       "reason": "The bot accurately states that it does not have the specified information. The source text mentions that the Alumni Association arranges teaching and training classes for students (Objective #6), but it doesn't provide specific details about the types of classes arranged in 2023."
     }
+  },
+  {
+    "question": "What is the current membership count of the Alumni Association in 2026 and how does it compare to the count in 2023?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "According to the Alumni Association By-Laws (English), what is the quorum required for an Annual General Meeting?",
+    "answer": "According to the Alumni Association By-Laws (English), the quorum required for an Annual General Meeting is one-third of the total number of members on the roll or 25, whichever is less.\n\nWould you like information on how the alumni association supports current students?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What are the specific dates and times of the Alumni Meet mentioned in the Alumni Meet Minutes document?",
+    "answer": "I cannot find the specific dates and times of Alumni Meets within the provided documents. I do have the links to the Alumni Meet Minutes and other reports if you'd like to review them.\n\n\u2022 ALUMNI MEET MINUTES: https://www.msajce-edu.in/uploads/alumni/543-B-ALUMNIMEETMINUTES.pdf\n\u2022 ALUMNI MEET REPORT: https://www.msajce-edu.in/uploads/alumni/543-C-ALUMNIMEETREPORT.pdf\n\nWould you like me to find any other alumni related information?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]
