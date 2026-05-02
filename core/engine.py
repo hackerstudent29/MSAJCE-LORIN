@@ -47,8 +47,8 @@ def classify_query(query: str) -> str:
     if any(s in q for s in PERSON_SIGNALS): return "person"
     if any(s in q for s in STAT_SIGNALS):   return "stat"
     
-    # Fallback: If it looks like a name (2-3 words capitalized or specific names)
-    if any(name in q for name in ["yogesh", "saqlin", "mustaq", "vimal", "ram", "santhosh"]):
+    # Fallback: If it looks like a name
+    if any(name in q for name in ["yogesh", "saqlin", "mustaq", "vimal", "santhosh"]):
         return "person"
         
     return "fact"
@@ -236,15 +236,12 @@ STRICT RULES:
         
         context_chunks = await self.get_context(search_query, trace)
         
-        # IDENTITY FAST-PASS (Master Rule Section 1A)
-        # Force-recognize developer AND key student leaders
+        # IDENTITY FAST-PASS (Student Leaders Only - Developer Removed to prevent leakage)
         lower_q = user_query.lower()
-        if self.bm25 and (intent == "DEVELOPER" or "yogesh" in lower_q or "saqlin" in lower_q):
-            profile_chunk = next((c for c in self.bm25.corpus if c["chunk_id"] == "PROFILE_RAMANATHAN_S"), None)
+        if self.bm25:
             yogesh_chunk = next((c for c in self.bm25.corpus if "msajce_incubation_chunk_06" in c["chunk_id"]), None)
             saqlin_chunk = next((c for c in self.bm25.corpus if "Professional_Societies" in c["metadata"].get("source_file", "")), None)
             
-            if intent == "DEVELOPER" and profile_chunk: context_chunks.insert(0, profile_chunk)
             if "yogesh" in lower_q and yogesh_chunk: context_chunks.insert(0, yogesh_chunk)
             if "saqlin" in lower_q and saqlin_chunk: context_chunks.insert(0, saqlin_chunk)
         

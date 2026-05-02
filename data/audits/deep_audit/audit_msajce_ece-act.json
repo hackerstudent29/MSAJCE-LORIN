@@ -174,5 +174,37 @@
       "status": "PASS",
       "reason": "The bot response is factually accurate and aligns with the information provided in the source text under the 'Faculty' section. It correctly identifies Dr. PREMALATHA G as an Associate Professor specializing in Image Processing and Machine Learning."
     }
+  },
+  {
+    "question": "What are the specific eligibility criteria regarding minimum grades or marks in Physics, Chemistry, and Mathematics required for admission to the B.Tech program?",
+    "answer": "For admission to the B.Tech program, you need a pass in HSC (Academic) or its equivalent with these minimum average percentages in Mathematics, Physics, and Chemistry combined:\n\n\u2022 General Category: 45.00%\n\u2022 Backward Class (including Backward Class Muslim): 40.00%\n\u2022 MBC & DNC: 40.00%\n\u2022 SC / SCA / ST: 40.00%\n\nDo you have questions about lateral entry eligibility too?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response accurately reflects the eligibility criteria as stated in the source text for B.Tech admissions, including the minimum percentage requirements for different categories."
+    }
+  },
+  {
+    "question": "According to the advanced communication technology employment forecast, what is the projected annual growth rate for the IoT & Embedded Systems sector between 2025-2030?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that the IoT & Embedded Systems sector is projected to have an annual growth rate of 15-18% between 2025-2030, as per the provided text."
+    }
+  },
+  {
+    "question": "Which faculty member holds a M.Tech degree and is currently pursuing a Ph.D. while working as an Assistant Professor?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text lists faculty members with their qualifications. Mrs. Saranya V and Mr. Rajakumar B both have an M.Tech and are pursuing a Ph.D while holding the position of Assistant Professor."
+    }
+  },
+  {
+    "question": "What are the specific objectives outlined in the provided document link (https://www.msajce-edu.in/images/departments/cse/Obj-Networks.pdf) for the Networks Lab course (CS8581)?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot failed to provide the specific objectives for the Networks Lab course (CS8581) as outlined in the document link. It should have extracted the objectives from the linked PDF, but it did not provide any information."
+    }
   }
 ]

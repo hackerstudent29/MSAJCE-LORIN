@@ -38,5 +38,37 @@
       "status": "PASS",
       "reason": "The bot's response is factually accurate. According to the provided source text, specifically the AQAR data for the academic year 2023-2024, no departments had funded research projects. This information is available in the provided text under AQAR AY 2023-2024 \u2014 Criteria 3: Research, Innovations and Extension (120 marks) 3.1.3 \u2014 Departments with funded research projects: https://www.msajce-edu.in/uploads/aqar/2023/3.1.3/3.1.3Nil.xlsx"
     }
+  },
+  {
+    "question": "What percentage of students participated in extension activities in the academic year 2023-2024, according to AQAR criterion 3.4.4?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the current student-full time teacher ratio as provided in the AQAR 2023-2024?",
+    "answer": "The student to full-time teacher ratio for the academic year 2023-2024 is available here: https://www.msajce-edu.in/uploads/aqar/2023/2.2.2/2.2.2Index2023-24.pdf.\n\nDo you want details on the average enrollment percentage as well?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot provided the correct URL for the student to faculty ratio as detailed in the source text."
+    }
+  },
+  {
+    "question": "How many workshops related to Research/IPR/Entrepreneurship were conducted as per the AQAR 2023-2024?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What was the expenditure on infrastructure upgrades as documented in AQAR criterion 4.1.4 for the academic year 2023-2024?",
+    "answer": "To furnish the precise figure, I'd need to directly consult the linked document for criterion 4.1.4 in the AQAR for 2023-24. Would you like me to access and summarize the infrastructure expenditure details from that specific file?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

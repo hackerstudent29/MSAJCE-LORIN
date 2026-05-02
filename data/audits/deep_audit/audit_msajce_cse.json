@@ -102,5 +102,21 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "What is the average placement percentage for B.E. Computer Science and Engineering graduates over the past three years (2021, 2022, and 2023)?",
+    "answer": "Unfortunately, I don't have the precise average placement percentage for B.E. Computer Science and Engineering graduates specifically for the past three years (2021, 2022, and 2023).\n\nHowever, placement details year-wise are available for download from 2016-2023. You can find this information at: https://www.msajce-edu.in/placement.php.\n\nWould you like me to check for the overall placement statistics for those years?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the precise average placement percentage for the specified period and suggests checking the provided placement link, which aligns with the information available in the source text."
+    }
+  },
+  {
+    "question": "According to the 2021 regulation, what is the maximum duration allowed to complete the B.E. Computer Science and Engineering program without losing credits?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
   }
 ]

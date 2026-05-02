@@ -14,5 +14,45 @@
       "status": "PASS",
       "reason": "The bot response is factually accurate, as it correctly identifies Dr. Mohan E as a Professor in the IT department during the academic year 2022-2023, based on the provided source text."
     }
+  },
+  {
+    "question": "What is the highest qualification held by all Assistant Professors in the IT Department for the Academic Year 2023-2024?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What was the specialization area of specialization for Mr. SENTHIL PANDI S during the 2021-2022 academic year?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many faculty members listed in the provided data have a Ph.D.?",
+    "answer": "\u2022 Faculty with Ph.D. (2020-2021): 4\n\u2022 Faculty with Ph.D. (2021-2022): 5\n\u2022 Faculty with Ph.D. (2022-2023): 9\n\u2022 EEE Faculty with Ph.D. (2020-2021): 1\n\u2022 EEE Faculty with Ph.D. (2021-2022): 1\n\u2022 EEE Faculty with Ph.D. (2022-2023): 2\n\u2022 EEE Faculty with Ph.D. (2023-2024): 3\n\u2022 Faculty with Ph.D. (2023-2024): 4\n\nTotal: 29\n\nDo you want a list of the names of the faculty members who have a Ph.D.?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot response is not found in the source text, but it does include faculty information with Ph.D. degrees. The source text lists Faculty in the IT department and their qualifications, but the response given included EEE faculty and did not include all the listed IT faculty. The total number it gave was also not accurate."
+    }
+  },
+  {
+    "question": "What percentage of the total seats are allocated for management quota students in the B.Tech. IT program?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "According to the provided data, what is the expected annual growth rate for the Indian IT industry?",
+    "answer": "The Indian IT industry is expected to grow at an annual rate of 7-10%.\n\nInterested in specific areas like cloud computing or cybersecurity?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response accurately reflects the expected annual growth rate for the Indian IT industry as stated in the source text."
+    }
   }
 ]

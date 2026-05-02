@@ -914,3 +914,26 @@
 [PASS] Which faculty member specializes in Image Processing and Machine Learning and holds the designation of Associate Professor?
 [PASS] What is the policy for equity stake that SIIF takes in startups that it funds?
 [FAIL] How many MOOC (Massive Open Online Courses) are required or recommended for B.E. students under the 2021 regulation?
+[PASS] What is the name of the capstone project that is related to ethical hacking and digital forensics?
+[FAIL] What is the process for reporting intellectual property created as part of activities in IIC?
+[PASS] What are the specific eligibility criteria regarding minimum grades or marks in Physics, Chemistry, and Mathematics required for admission to the B.Tech program?
+[FAIL] What percentage of students participated in extension activities in the academic year 2023-2024, according to AQAR criterion 3.4.4?
+[FAIL] What is the highest qualification held by all Assistant Professors in the IT Department for the Academic Year 2023-2024?
+[FAIL] What is the minimum acceptable score or grade in Physics, Chemistry, and Mathematics in the 10+2 examination for eligibility?
+[PASS] What is the average placement percentage for B.E. Computer Science and Engineering graduates over the past three years (2021, 2022, and 2023)?
+[FAIL] How many startups founded at IIC have achieved commercial success?
+[PASS] According to the advanced communication technology employment forecast, what is the projected annual growth rate for the IoT & Embedded Systems sector between 2025-2030?
+[PASS] What is the current student-full time teacher ratio as provided in the AQAR 2023-2024?
+[FAIL] What was the specialization area of specialization for Mr. SENTHIL PANDI S during the 2021-2022 academic year?
+[FAIL] What specific courses within the curriculum directly address the 'Personal Data Protection Bill' mentioned under government initiatives?
+[FAIL] According to the 2021 regulation, what is the maximum duration allowed to complete the B.E. Computer Science and Engineering program without losing credits?
+[FAIL] How many faculty members listed in the provided data have a Ph.D.?
+[PASS] Which faculty member holds a M.Tech degree and is currently pursuing a Ph.D. while working as an Assistant Professor?
+[PASS] How does the success rate of innovation competitions and hackathons hosted by SIIF compare to the success rate of similar events run by other institutions?
+[FAIL] How many workshops related to Research/IPR/Entrepreneurship were conducted as per the AQAR 2023-2024?
+[PASS] What programming languages, besides Python and Bash, are utilized for 'Security Automation and Scripting' skills?
+[FAIL] What percentage of the total seats are allocated for management quota students in the B.Tech. IT program?
+[FAIL] What are the specific objectives outlined in the provided document link (https://www.msajce-edu.in/images/departments/cse/Obj-Networks.pdf) for the Networks Lab course (CS8581)?
+[FAIL] What specific version of the 2021 Regulation curriculum is currently being followed, including the date of the last update?
+[PASS] According to the provided data, what is the expected annual growth rate for the Indian IT industry?
+[UNKNOWN] What was the expenditure on infrastructure upgrades as documented in AQAR criterion 4.1.4 for the academic year 2023-2024?
