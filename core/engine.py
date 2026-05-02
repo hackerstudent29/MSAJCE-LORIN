@@ -366,6 +366,7 @@ History: {history if history else "None"}"""
                         if stream: data["stream"] = True
                         if stream:
                             async with client.stream("POST", f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=60.0) as response:
+                                if response.status_code != 200: raise Exception(f"Vercel Error {response.status_code}")
                                 async for line in response.aiter_lines():
                                     if line.startswith("data: "):
                                         if line == "data: [DONE]": break
@@ -380,26 +381,21 @@ History: {history if history else "None"}"""
                             res = resp.json()
                             if "choices" in res: yield res["choices"][0]["message"]["content"]; return
                     
-                    elif p == "groq":
+                    elif p == "groq" or p == "openrouter":
+                        url = "https://api.groq.com/openai/v1/chat/completions" if p == "groq" else "https://openrouter.ai/api/v1/chat/completions"
+                        model = "llama-3.3-70b-specdec" if p == "groq" else "google/gemini-2.0-flash-001"
                         headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
-                        data["model"] = "llama-3.3-70b-specdec"
-                        resp = await client.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=data, timeout=30.0)
-                        res = resp.json()
-                        if "choices" in res: yield res["choices"][0]["message"]["content"]; return
-
-                    elif p == "openrouter":
-                        headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
-                        data["model"] = "google/gemini-2.0-flash-001"
-                        resp = await client.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=data, timeout=30.0)
+                        data["model"] = model
+                        resp = await client.post(url, headers=headers, json=data, timeout=30.0)
                         res = resp.json()
                         if "choices" in res: yield res["choices"][0]["message"]["content"]; return
 
             except Exception as e:
-                print(f"    [OVERDRIVE ERR] {p} failed: {e}. Rotating...")
+                logger.error(f"    [FAILOVER] {p} failed: {e}. Rotating...")
             
             await asyncio.sleep(0.1)
         
-        yield "System busy. All providers exhausted."
+        raise Exception("All providers exhausted.")
 
     async def _groq_request(self, data):
         groq_key = os.getenv("GROQ_API_KEY")

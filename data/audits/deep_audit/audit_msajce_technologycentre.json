@@ -1,0 +1,58 @@
+[
+  {
+    "question": "In the Centre for 3D Printing and Additive Manufacturing, which textbook was published by Springer in 2010?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The textbook 'Additive Manufacturing Technologies: Rapid Prototyping to Direct Digital Manufacturing', published by Springer in 2010, is listed under the Recommended Textbooks section for the Centre for 3D Printing and Additive Manufacturing."
+    }
+  },
+  {
+    "question": "What specific version of CCNA syllabus is outlined, and what is the total hour commitment for that version?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "For the Centre for Robotics Process Automation, what specific company has MSAJCE partnered with to establish the AAU powered Bot Lab?",
+    "answer": "MSAJCE has partnered with Automation Anywhere to establish the AAU powered Bot Lab.\n\nInterested in learning more about the courses offered at the Bot Lab?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response accurately states that MSAJCE has partnered with Automation Anywhere to establish the AAU powered Bot Lab, as indicated in the source text."
+    }
+  },
+  {
+    "question": "What are the full names of the three certifications offered by the Robotic Process Automation centre?",
+    "answer": "The Robotic Process Automation centre offers these certifications:\n\n\u2022 Automation Anywhere Certified Essential RPA Professional\n\u2022 Automation Anywhere Certified Advanced RPA Professional\n\u2022 Automation Anywhere Certified Master RPA Professional\n\nAre you interested in the syllabus for any of these certifications?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately lists the three certifications offered by the Robotic Process Automation centre, as stated in the provided source text."
+    }
+  },
+  {
+    "question": "Besides the Automation Anywhere Bot Store, where can the students upload the bots they have built?",
+    "answer": "Actually, the Automation Anywhere Bot Store is mentioned as the leading marketplace for bots. Are you asking if there are other platforms besides this?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges the Automation Anywhere Bot Store as a platform, which aligns with the information provided in the source text."
+    }
+  },
+  {
+    "question": "How many hours are dedicated to Meta Bot and Bot Insight in the Robotics Process Automation course syllabus?",
+    "answer": "The Robotics Process Automation course allocates 6 hours to Meta Bot and Bot Insight, according to the syllabus. What else can I help you with regarding the RPA course?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate as it is present in the source text."
+    }
+  },
+  {
+    "question": "In the CISCO Networking Academy, what estimated number of networking jobs worldwide can be accessed through Netacad?",
+    "answer": "The CISCO Networking Academy offers career pathways to an estimated 8 million networking jobs worldwide through Netacad.\n\nCan I help you with any other details about the CISCO Networking Academy?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The information is stated in the source text: Career pathways to an estimated 8 million networking jobs worldwide through Netacad."
+    }
+  }
+]

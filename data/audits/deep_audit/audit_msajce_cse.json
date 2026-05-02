@@ -118,5 +118,69 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "How many faculty members who taught in the UG program during the 2021-2022 academic year are no longer listed as faculty for the 2023-2024 academic year?",
+    "answer": "I do not have sufficient information to accurately determine which faculty members taught in the UG program specifically during the 2021-2022 academic year and are no longer listed for 2023-2024.\n\nIs there anything else I can help you with?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the information to determine the faculty members who taught in the UG program in 2021-2022 and are no longer listed for 2023-2024. While the source text lists faculty for those years, it doesn't explicitly link them to the UG program for 2021-2022, and requires comparing faculty lists across different years."
+    }
+  },
+  {
+    "question": "What specific AICTE norms are used to determine eligibility for the M.E. - Computer Science and Engineering program?",
+    "answer": "To be eligible for the M.E. Computer Science and Engineering program, you must meet the AICTE norms. Source 1 mentions the eligibility criteria as per the Anna University and AICTE Norms. Do you want to know the admission criteria for Ph.D. programs as well?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that eligibility is as per Anna University and AICTE norms, as indicated in the source text."
+    }
+  },
+  {
+    "question": "According to the 2021 Regulation (https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf), how many credits are required to graduate from the B.E. - Computer Science and Engineering program?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the specific fee structure for the Management quota seats (30 seats) in the B.E. - Computer Science and Engineering program, and where can I find the detailed breakdown?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot did not provide a response."
+    }
+  },
+  {
+    "question": "How many students were admitted to the M.E. - Computer Science and Engineering program in the 2022-2023 academic year, given the intake of 9 seats?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text confirms that the intake for M.E. - Computer Science and Engineering is 9 seats."
+    }
+  },
+  {
+    "question": "What is the passing percentage required in Physics, Chemistry, and Mathematics individually in the 10+2 examination for B.E. - Computer Science and Engineering eligibility?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The eligibility criteria for B.E. - Computer Science and Engineering includes securing a pass in Physics, Chemistry, and Mathematics in the qualifying 10+2 examination, as stated in the provided text."
+    }
+  },
+  {
+    "question": "In the 2017 Regulation for the M.E. - Computer Science and Engineering program (https://drive.google.com/file/d/144gsbsjswJj3f1b4O4rRLR6NcE5nxqxg/view?usp=sharing), what is the name of the course offered in the first semester?",
+    "answer": "I am unable to access external links. Is there any other way I can assist you?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot was unable to access the external link."
+    }
+  },
+  {
+    "question": "What are the specific cut-off marks or ranks in the relevant entrance examination (if any) required for admission to the Government quota seats (30 seats) in the B.E. - Computer Science and Engineering program?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

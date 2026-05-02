@@ -1,22 +1,14 @@
 [
   {
-    "question": "How many faculty members with a Ph.D. in Power Systems were teaching in the EEE department during the 2021-2022 academic year?",
-    "answer": "During the 2021-2022 academic year, there were no faculty members listed in the provided data with a Ph.D. in Power Systems within the EEE department.\n\nWould you like information on faculty specializations from another academic year?\n",
+    "question": "What is the exact cutoff percentage required in Physics, Chemistry, and Mathematics to be eligible for admission to the B.E. Electrical and Electronics Engineering program?",
+    "answer": "To be eligible for the B.E. Electrical and Electronics Engineering program, you need a minimum average percentage in Mathematics, Physics, and Chemistry. For the general category, it's 45.00%. However, for Backward Class (including Backward Class Muslim), MBC & DNC, and SC / SCA / ST categories, the requirement is 40.00%.\n\nDo you belong to the general category or another category?\n",
     "evaluation": {
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
   },
   {
-    "question": "What is the course code for the Power System Simulation lab course, according to the 2021 regulation?",
-    "answer": "The course code for the Power System Simulation lab course, as per the 2021 regulation, is EE8711.\n\nCan I help you with any other course codes?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot's response is factually accurate and the information is available in the source text under the 'EEE Department Laboratories' section, specifically for 'Power System Simulation Lab'."
-    }
-  },
-  {
-    "question": "What is the total intake of the B.E. Electrical and Electronics Engineering program under the management quota?",
+    "question": "How many faculty members with a Ph.D. in Power Electronics were teaching in the EEE department during the academic year 2021-2022?",
     "answer": "",
     "evaluation": {
       "status": "FAIL",
@@ -24,27 +16,35 @@
     }
   },
   {
-    "question": "According to the Employment Forecast, what is the projected CAGR for India's Electric Vehicles market?",
-    "answer": "The projected CAGR for India's Electric Vehicles market is 40%.\n\nAre you interested in learning more about the job roles related to the EV market?\n",
+    "question": "According to the 'Employment Forecast: Electrical and Electronics Engineering \u00e2\u20ac\u201d 2025\u00e2\u20ac\u201c2030 in India', what is the projected CAGR for the electric vehicle market?",
+    "answer": "The electric vehicle (EV) market in India is projected to grow at a 40% CAGR, according to the 'Employment Forecast: Electrical and Electronics Engineering \u2014 2025\u20132030 in India'.\n\nAre you also interested in the job roles in demand within the EV sector?\n",
     "evaluation": {
       "status": "PASS",
-      "reason": "The information is present in the source text and is accurate."
+      "reason": "The bot accurately states that the electric vehicle (EV) market in India is projected to grow at a 40% CAGR, according to the 'Employment Forecast: Electrical and Electronics Engineering \u2014 2025\u20132030 in India'."
     }
   },
   {
-    "question": "Which faculty member joined the EEE department most recently as of August 28, 2024?",
-    "answer": "Vinodh S V, Assistant Professor, joined the EEE department most recently on August 1, 2023.\n\nWould you like to know about any other EEE faculty members?\n",
+    "question": "What specific MATLAB versions are used in the curriculum to support IoT and Power electronics areas?",
+    "answer": "I currently don't have details about specific MATLAB versions used in the curriculum. However, EEE graduates focusing on IoT and Power Electronics should focus on MATLAB, as well as IoT, Power electronics, and Embedded Systems. Is there anything else I can assist you with?\n",
     "evaluation": {
-      "status": "PASS",
-      "reason": "The bot correctly identifies Vinodh S V as the most recent faculty member to join the EEE department as of August 1, 2023, according to the source text. The query asks about the most recent member as of August 28, 2024. Since the listed faculty is for the period of 2023-2024, the bot's answer is accurate."
+      "status": "FAIL",
+      "reason": "The bot states that it does not have details about specific MATLAB versions used in the curriculum, but the document explicitly states that EEE graduates should focus on MATLAB."
     }
   },
   {
-    "question": "What is the projected job growth rate for B.Tech/B.E. graduates in the EEE sector between 2025-2030?",
-    "answer": "For B.Tech/B.E. graduates in the EEE (Electrical and Electronics Engineering) sector, a job growth rate of 7-9% is projected between 2025 and 2030. It would be beneficial to focus on IoT, Power electronics, MATLAB, Embedded Systems, and AI and IoT to improve your job prospects.\n\nAre you interested in learning about specific skills that are in high demand in the EEE sector?\n",
+    "question": "What is the designation held by Mr. Vinodh S V as of August 1, 2023?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "In which semester is the course EE8661 \u00e2\u20ac\u201d Power Electronics offered, as per the 2021 regulation?",
+    "answer": "According to the 2021 regulation, Power Electronics is offered in Semester V.\n\nDo you want to know more about the Power Electronics course?\n",
     "evaluation": {
       "status": "PASS",
-      "reason": "The bot accurately states the projected job growth rate for B.Tech/B.E. graduates in the EEE sector between 2025-2030 as 7-9% and mentions relevant skills to focus on, which is present in the source text under the 'Forecast by Education Level' section."
+      "reason": "The bot correctly identifies that Power Electronics is offered in Semester V according to the 2021 regulation. This information is verifiable in the source text under 'Semester V' within the 'EEE Academics \u00e2\u20ac\u201d 2021 Regulation Course Materials' section. It lists 'EE3591 \u00e2\u20ac\u201d Power Electronics' as one of the courses for that semester."
     }
   }
 ]

@@ -1,38 +1,30 @@
 [
   {
-    "question": "Under the 2021 Regulation, is MA3354 Discrete Mathematics a required course for all CSBS students?",
-    "answer": "Yes, MA3354 Discrete Mathematics is a required course for CSBS students under the 2021 Regulation.\n\nWould you like to know more about the course content?\n",
+    "question": "Under the 2021 Regulation, is the course code 'CS8261' for the C Programming Lab or a lecture course?",
+    "answer": "Actually, CS8261 is the course code for the C Programming Lab.\n\nWhat else can I clarify about the CSBS or CSE departments?\n",
     "evaluation": {
       "status": "PASS",
-      "reason": "The source text lists MA3354 Discrete Mathematics under the 'CSBS Department \u2014 Course Materials (2021 Regulation)' section, implying it is a required course under the 2021 regulation."
+      "reason": "The source text explicitly states '1. C Programming Lab \u2014 Course: CS8261 C Programming.', indicating that CS8261 is indeed the course code for the C Programming Lab."
     }
   },
   {
-    "question": "For the Networks Lab, which specific version of the software/tools mentioned in the equipment details is currently installed?",
-    "answer": "For the Networks Lab, I do not have the specific software versions installed.\n\nIs there anything else I can help you with regarding the Networks Lab, such as the lab objectives or virtual lab link?\n",
+    "question": "How many faculty members in the CSBS department hold a Ph.D. degree?",
+    "answer": "From the CSBS department, these faculty members hold a Ph.D.:\n\n\u2022 Dr. NAGASUBRAMANIAN R\n\u2022 Dr. SUBRAMANIAN P\n\u2022 Dr. PREMALATHA G\n\nSo, there are three faculty members with Ph.Ds.\n\nWould you like to know about their research areas?\n",
     "evaluation": {
       "status": "PASS",
-      "reason": "The bot correctly states that it does not have the specific software versions installed, which is not explicitly mentioned in the provided source text. Therefore, the response is accurate based on the information available."
+      "reason": "The bot response correctly identifies the faculty members in the CSBS department who hold a Ph.D. degree, as listed in the provided source text."
     }
   },
   {
-    "question": "What is the student-faculty ratio specifically within the CSBS department?",
-    "answer": "I do not have student-faculty ratio information specific to the CSBS department.\n\nIs there anything else I can help you with?\n",
+    "question": "For the course 'AD3391 - Database Design and Management', is there ICT Tools material available at the given URL structure, similar to the other courses listed?",
+    "answer": "Yes, ICT Tools material is available for the 'AD3391 - Database Design and Management' course. You can access it through these URLs, depending on the department:\n\n\u2022 AI&ML: https://www.msajce-edu.in/academics/aids/2021/ICTTools/AD3391-ICT.pdf\n\u2022 CSBS: https://www.msajce-edu.in/academics/csbs/2021/ICTTools/AD3391-ICT.pdf\n\nWould you like the ICT Tools link for any other courses?\n",
     "evaluation": {
-      "status": "PASS",
-      "reason": "The bot accurately states that it does not have the student-faculty ratio information for the CSBS department, which is not found in the source text."
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
     }
   },
   {
-    "question": "Besides TCS, Infosys, Wipro, Accenture and CTS, what is the placement percentage for graduates in FinTech companies like FSS?",
-    "answer": "Our top recruiters include TCS, Infosys, Wipro, Accenture, and CTS. I do not have placement percentage specifically for FinTech companies like FSS, but our Computer Science and Business Systems (CSBS) program is designed to prepare graduates for roles in tech-enabled business functions, which could include FinTech. You might want to check the placement details link on the website for more info.\n\nWould you like to know more about the CSBS program?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot correctly identifies TCS, Infosys, Wipro, Accenture, and CTS as top recruiters from the source text. It also acknowledges that it does not have specific placement percentages for FinTech companies like FSS, which aligns with the provided text. The suggestion to check the placement details link on the website is a reasonable and helpful response."
-    }
-  },
-  {
-    "question": "For lateral entry students, what specific courses are waived or replaced from the regular 4-year curriculum?",
+    "question": "How many total seats are available for direct entry (4-year) versus lateral entry (3-year) into the CSBS program?",
     "answer": "",
     "evaluation": {
       "status": "FAIL",
@@ -40,15 +32,7 @@
     }
   },
   {
-    "question": "According to the curriculum, how many credits are allocated to core CS subjects versus business/management subjects?",
-    "answer": "Unfortunately, I do not have the specific credit allocation for core Computer Science versus business/management subjects in the CSBS curriculum. However, I can tell you that the B.Tech CSBS program balances core Computer Science subjects like Data Structures, Algorithms, and AI/ML with business and management topics, including Economics and Financial Management.\n\nWould you like me to find the course list for the CSBS program so you can see the distribution yourself?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot acknowledges that it cannot provide the specific credit allocation, which aligns with the information available in the source text. It also correctly states the balanced nature of the curriculum based on the source text."
-    }
-  },
-  {
-    "question": "What is the minimum score required in 10+2 Physics, Chemistry and Mathematics to be eligible for the CSBS program?",
+    "question": "What specific version of Oracle or SAP is used in the ERP-related coursework or labs?",
     "answer": "",
     "evaluation": {
       "status": "FAIL",
@@ -56,15 +40,15 @@
     }
   },
   {
-    "question": "Which faculty member is responsible for maintaining and updating the equipment in the Operating Systems Lab?",
-    "answer": "I don't have enough information about which faculty member is responsible for maintaining and updating the equipment in the Operating Systems Lab. Perhaps I can help with something else?\n",
+    "question": "According to the curriculum documents, which semesters include courses with the 'IOT' prefix or focus?",
+    "answer": "I do not have access to the curriculum documents to provide a detailed list of semesters that include IOT-related coursework.&#x20;\n\nDo you have any questions regarding admissions?\n",
     "evaluation": {
-      "status": "FAIL",
-      "reason": "The bot states it doesn't have enough information. The source text doesn't contain the answer."
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have access to the curriculum documents to determine which semesters include IOT-related courses."
     }
   },
   {
-    "question": "In the AD3391 Database Design and Management course, what specific database management system (DBMS) is primarily used for practical exercises?",
+    "question": "What is the average annual placement rate for CSBS graduates in the last 3 years based on the listed 'Top Recruiters'?",
     "answer": "",
     "evaluation": {
       "status": "FAIL",
@@ -72,31 +56,7 @@
     }
   },
   {
-    "question": "What percentage of the curriculum is dedicated to soft skills training, specifically in communication, teamwork, and entrepreneurial thinking?",
-    "answer": "While a specific percentage for soft skills isn't available, it is embedded across the curriculum, especially in the Computer Science and Business Systems (CSBS) program. These skills are explicitly taught through dedicated training programs and integrated into core subjects. Could you clarify which department's curriculum you're interested in?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot acknowledges that a specific percentage isn't available but confirms that soft skills training (communication, teamwork, entrepreneurial thinking) is embedded across the curriculum, especially in the CSBS program, which aligns with the source text's statement about 'Soft Skills Training \u00e2\u20ac\u201d Communication, Teamwork, Entrepreneurial thinking.'"
-    }
-  },
-  {
-    "question": "Are there any scholarships or financial aid options specifically designated for students admitted under the management quota in the CSBS program?",
-    "answer": "As of today, May 02, 2026, while there aren't scholarships exclusively for management quota CSBS students, all female students do get a 10% tuition fee discount. I'd also recommend looking into the AICTE Pragati and Saksham scholarships.\n\nWould you like more information on any of those options?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "While the source text does not contain details about scholarships, the bot's answer does not contradict the text and provides possible avenues for financial aid, making it a reasonable and helpful response."
-    }
-  },
-  {
-    "question": "What specific entrepreneurial skills are taught as part of the soft skills training component?",
-    "answer": "Entrepreneurial thinking is part of the soft skills training for the Computer Science and Business Systems (CSBS) program.\n\nHave you considered looking into our entrepreneurship workshops for more hands-on experience?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The source text mentions that soft skills training includes 'Entrepreneurial thinking'."
-    }
-  },
-  {
-    "question": "According to the Anna University B.E. 2021 Syllabus, what is the weightage of internal assessment (tests, assignments, etc.) versus the final examination in the CSBS courses?",
+    "question": "What is the faculty-student ratio in the CSBS department, considering the number of faculty and the total number of seats?",
     "answer": "",
     "evaluation": {
       "status": "FAIL",
@@ -104,19 +64,59 @@
     }
   },
   {
-    "question": "For the course CS3351 - Digital Principles and Computer Organization, what specific ICT tools are used for teaching, as documented in the ICT resource?",
-    "answer": "For CS3351 - Digital Principles and Computer Organization, here are the ICT Tools:\n\n\u2022 For B.E. CSE (2021 Regulation): https://www.msajce-edu.in/academics/cse/ICTTools/CS3351-ICT.pdf\n\u2022 For B.Tech. AI&ML (2021 Regulation): https://www.msajce-edu.in/academics/aids/2021/ICTTools/CS3351-ICT.pdf\n\u2022 For B.E. CSBS (2021 Regulation): https://www.msajce-edu.in/academics/csbs/2021/ICTTools/CS3351-ICT.pdf\n\u2022 For B.Tech. IT (2021 Regulation): https://www.msajce-edu.in/academics/it/2021/ICTTools/CS3351-ICT.pdf\n\nWould you like the ICT tools for any other courses?\n",
+    "question": "Are the listed virtual labs (C Programming, Internet Programming, etc.) accessible to students enrolled in other departments?",
+    "answer": "",
     "evaluation": {
-      "status": "PASS",
-      "reason": "The bot provides links to the ICT tools for CS3351 for various B.E./B.Tech programs, which aligns with the information available in the source text under 'CSBS Department \u00e2\u20ac\u201d Course Materials (2021 Regulation)'."
+      "status": "FAIL",
+      "reason": "No response"
     }
   },
   {
-    "question": "When was the last time the curriculum for the CSBS program was reviewed and updated based on industry feedback?",
-    "answer": "The CSBS curriculum follows the Anna University 2021 Regulation. Moreover, the curriculum was designed in partnership with TCS, emphasizing industry readiness.\n\nWould you like details on the curriculum's key features?\n",
+    "question": "Besides TCS, what other industry partners actively contribute to the curriculum development and delivery, and how is their contribution measured?",
+    "answer": "Besides TCS, other industry partners at MSAJCE include Automation Anywhere, Godrej Inc, Ford, Palo Alto Systems, Amazon Web Services, National Instruments, CISCO Academy, Altair, Open Wave Computing, Levergent Technologies, and Propeller Technologies. They contribute to curriculum development and delivery through technology centers established in 2019-2020, offering certifications, projects, and internships based on AICTE and India Skill Report 2020 recommendations. Their contribution is measured through student skill enhancement and industry readiness.\n\nWhat kind of onsite projects and internships are commonly offered by these industry partners?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot response mentions specific industry partners and their contributions, along with details about technology centers and measurement of contributions, which are not found in the provided source text. The source text only mentions TCS as an industry partner for curriculum design in the CSBS program. Therefore, the bot provides information beyond what is available in the document, and I cannot verify its accuracy."
+    }
+  },
+  {
+    "question": "Which of the listed faculty members have specific experience or publications in blockchain technology?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Does the CSBS department have any MOUs with the 'Top Recruiters' mentioned, and if so, what are the key objectives of those MOUs?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the process for students to access equipment details for each of the CSBS labs listed, specifically outside lab hours for self study or project preparation?",
+    "answer": "For equipment details for the CSBS labs:\n\n\u2022 You can find equipment details through the department's lab documentation pages.\n\u2022 The labs include C Programming, Internet Programming, Operating Systems, Object Oriented Analysis and Design, Web Technology, and Networks.\n\u2022 The AIML Department also maintains these labs.\n\nAs for accessing the labs outside of scheduled hours, you will need to get permission. What kind of projects are you working on?\n",
     "evaluation": {
       "status": "PASS",
-      "reason": "The bot's response accurately reflects information found in the source text, stating that the CSBS curriculum follows the Anna University 2021 Regulation and was designed in partnership with TCS."
+      "reason": "The bot correctly identifies that equipment details can be found on the department's lab documentation pages. It also lists the labs and mentions the AIML department, which while not directly relevant, doesn't contradict the source. The bot also acknowledges that special permission is needed for after hours access which would be standard protocol. All accurate."
+    }
+  },
+  {
+    "question": "Is there a specific course within the CSBS curriculum that focuses on ethical hacking and penetration testing, or is it covered within a broader cybersecurity course?",
+    "answer": "Our B.E. CSE (Cyber Security Specialization) program includes labs and simulation environments specifically for penetration testing and secure coding. You'll also learn about cyber laws and ethics, as well as security in AI, IoT, cloud computing, and blockchain.\n\nInterested in learning more about the curriculum for the Cyber Security specialization?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Is a campus-wide license for Tableau or Power BI provided so students can enhance their Data Visualization Skills?",
+    "answer": "Given the current resources, I don't have specific information about a campus-wide license for Tableau or Power BI.\n\nHave you considered reaching out to the IT department or the AI&DS department to inquire about software availability for data visualization?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it doesn't have specific information regarding campus-wide licenses for Tableau or Power BI, which aligns with the absence of this information in the source text."
     }
   }
 ]

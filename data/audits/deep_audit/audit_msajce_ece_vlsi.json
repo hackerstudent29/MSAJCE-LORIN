@@ -6,5 +6,101 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "By what year is the global semiconductor market expected to reach $1 Trillion, according to the data?",
+    "answer": "The global semiconductor market is expected to reach $1 Trillion by 2030.\n\nDo you know about the various research opportunities at MSAJCE?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the nanometer node size of the single Integrated Design to Manufacturing (IDM) pilot line at Semi-Conductor Laboratory (SCL), Chandigarh?",
+    "answer": "Based on my information, the single Integrated Design to Manufacturing (IDM) pilot line at Semi-Conductor Laboratory (SCL), Chandigarh, is based on 180nm Node.\n\nWhat other facilities related to semiconductor manufacturing are available in India?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate and the information is directly available in the source text."
+    }
+  },
+  {
+    "question": "How many B.Tech, M.Tech, and Ph.D graduates are estimated to be required in the VLSI field over the next five to seven years?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the total financial outlay announced by the Government of India in December 2021 for the Semiconductor scheme?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What year did the 2021 Regulation curriculum & syllabus go into effect for the B.Tech Electronics Engineering with Specialization in VLSI Design & Technology program at MSAJCE?",
+    "answer": "The 2021 Regulation curriculum and syllabus went into effect for the B.Tech Electronics Engineering with Specialization in VLSI Design & Technology program in 2021.\n\nDo you want to know more about the curriculum itself?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text specifies that the 2021 Regulation curriculum and syllabus went into effect for the B.Tech Electronics Engineering with Specialization in VLSI Design & Technology program in 2021. The bot accurately reflects this information."
+    }
+  },
+  {
+    "question": "What is the website URL for the 2021 Regulation curriculum & syllabus at MSAJCE?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the online admission link for the B.Tech Electronics Engineering with Specialization in VLSI Design & Technology program at MSAJCE?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the total number of seats available for the B.Tech Electronics Engineering with Specialization in VLSI Design & Technology program, and how are they divided between Government and Management quotas?",
+    "answer": "For B.Tech Electronics Engineering with Specialization in VLSI Design & Technology, there are a total of 30 seats. The seats are divided equally, with 15 seats for the Government Quota and 15 for the Management Quota.\n\nWould you like to know more about the eligibility criteria for this program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately provides the total number of seats and the division between government and management quotas, as stated in the source text."
+    }
+  },
+  {
+    "question": "What are the three mandatory subjects a student must pass in their 10+2 education to be eligible for the B.Tech Electronics Engineering with Specialization in VLSI Design & Technology program?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "According to the data, what is the average annual salary for beginners in a VLSI company?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "According to the data, what is the lower salary range reported of starting VLSI company salaries?",
+    "answer": "Based on the data, the starting salary in a VLSI company can range from Rs 3 lakhs to Rs 20 lakhs per annum.\n\nWhat VLSI job role interests you the most?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the salary range mentioned in the source text."
+    }
+  },
+  {
+    "question": "What is the projected annual growth rate for the Semiconductor Design sector between 2025 and 2030?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
   }
 ]

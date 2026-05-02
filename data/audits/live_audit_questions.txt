@@ -810,3 +810,15 @@
 [UNKNOWN] How many unique students named Pragatha received the scholarship, and for which years and departments?
 [FAIL] What was the total semiconductor market value in 2021, according to the provided data?
 [PASS] What percentage of graduates from the B.E. CSE-Cyber Security program in the last academic year (year) secured internships with companies listed under 'Top Recruiters'?
+[PASS] What is the process for students to access equipment details for each of the CSBS labs listed, specifically outside lab hours for self study or project preparation?
+[PASS] How many hours are dedicated to Meta Bot and Bot Insight in the Robotics Process Automation course syllabus?
+[FAIL] In the 2017 Regulation for the M.E. - Computer Science and Engineering program (https://drive.google.com/file/d/144gsbsjswJj3f1b4O4rRLR6NcE5nxqxg/view?usp=sharing), what is the name of the course offered in the first semester?
+[FAIL] What is the projected annual growth rate for the Semiconductor Design sector between 2025 and 2030?
+[UNKNOWN] According to the provided data, what percentage of the total seats are allocated for the Government Quota?
+[UNKNOWN] Is there a specific course within the CSBS curriculum that focuses on ethical hacking and penetration testing, or is it covered within a broader cybersecurity course?
+[PASS] In the CISCO Networking Academy, what estimated number of networking jobs worldwide can be accessed through Netacad?
+[FAIL] How many Non-AC rooms are available in the Boys Hostel?
+[PASS] In which semester is the course EE8661 — Power Electronics offered, as per the 2021 regulation?
+[UNKNOWN] What are the specific cut-off marks or ranks in the relevant entrance examination (if any) required for admission to the Government quota seats (30 seats) in the B.E. - Computer Science and Engineering program?
+[PASS] Is the cybersecurity specialist role specifically aligned to PO6 'Engineer and Society', PO7 'Environment and Sustainability' or PO8 'Ethics'?
+[PASS] Is a campus-wide license for Tableau or Power BI provided so students can enhance their Data Visualization Skills?
