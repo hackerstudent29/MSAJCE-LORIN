@@ -118,5 +118,21 @@
       "status": "PASS",
       "reason": "The bot accurately lists and describes the Programme Outcomes (POs) as defined in the source text. "
     }
+  },
+  {
+    "question": "What is the specific course code for the C Programming course offered in the C Programming Lab?",
+    "answer": "The course code for the C Programming course offered in the C Programming Lab is CS8261.\n\nWould you like the virtual lab link for the C Programming course as well?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response is factually accurate and can be found in the provided source text, under the 'Laboratory Facilities' section, where the course code for the C Programming course offered in the C Programming Lab is listed as CS8261."
+    }
+  },
+  {
+    "question": "How many seats are available under the management quota for the B.Tech ECE Advanced Communication Technology program?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text states the intake/number of seats for the B.Tech ECE Advanced Communication Technology program as: Total - 30 (Government - 15, Management - 15). Therefore, there are 15 seats available under the management quota."
+    }
   }
 ]

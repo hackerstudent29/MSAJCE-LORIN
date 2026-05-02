@@ -62,5 +62,45 @@
       "status": "PASS",
       "reason": "The bot correctly states that it does not have the specific data to calculate the internship percentage and accurately lists the top recruiters for Cyber Security as mentioned in the source text."
     }
+  },
+  {
+    "question": "What specific versions of Kali Linux, Metasploit, Wireshark, and nmap will be taught in the hands-on learning labs?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Which specific courses in the 2021 Regulation curriculum, accessible at the provided URL, cover ISO 27001 compliance?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot's response is empty, indicating a failure to provide the requested information. Therefore, it cannot be assessed for factual accuracy against the source text."
+    }
+  },
+  {
+    "question": "For lateral entry students, which specific foundational computer science courses (Data Structures, Algorithms, Operating Systems) are required and how are they integrated into the 3-year program?",
+    "answer": "The B.E. programs including Computer Science and Engineering, Cyber Security, and Computer Science and Business Systems offer lateral entry options.\n\n\u2022 Duration: 3 years (6 semesters).\n\u2022 Foundational Courses: Data Structures, Algorithms, and Operating Systems are integrated into the curriculum.\n\u2022 Curriculum Link: You can find the specific course sequencing and integration details in the 2021 Regulation curriculum: https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf.\n\nWould you like more information about the lateral entry eligibility criteria?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many hours of penetration testing lab time are included in the 'Hands-on Learning' component each semester?",
+    "answer": "I'm sorry, but I do not have information regarding the specific number of hours allocated to penetration testing labs per semester within the 'Hands-on Learning' component.\n\nWould you like me to help you find resources for penetration testing and ethical hacking instead?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that the information is not available in the provided source text."
+    }
+  },
+  {
+    "question": "What is the specific name and version of the SIEM tool used in the labs for threat analysis?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot did not provide the name and version of the SIEM tool used in the labs. It is unable to answer the question based on the source text."
+    }
   }
 ]

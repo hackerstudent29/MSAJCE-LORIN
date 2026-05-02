@@ -86,5 +86,37 @@
       "status": "FAIL",
       "reason": "The bot's response is an empty response. It does not answer the query with any information, which should be a fail."
     }
+  },
+  {
+    "question": "What date was the India Skills Report used to create the technology centers published?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The document mentions that courses and training are designed based on the recommendations of the India Skills Report 2020."
+    }
+  },
+  {
+    "question": "Which specific version of SQL Server is recommended for installation in the Robotics Process Automation course?",
+    "answer": "Given our RPA course uses Automation Anywhere, I recommend you follow the software installation steps as taught in the lab. The SQL Server version will be compatible with the Automation Anywhere Control Room.\n\nCan I help with any other RPA-related questions?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response is reasonable given the context. It suggests following the lab instructions for SQL Server installation, which aligns with the course's focus on Automation Anywhere and compatibility with its Control Room. The source document mentions the use of Automation Anywhere and SQL server in the syllabus."
+    }
+  },
+  {
+    "question": "For the CISCO Networking Academy, what is the model number of the routers and switches used in the hands on lab?",
+    "answer": "The CISCO Networking Academy uses Cisco 4221 routers and 2960 switches in its hands-on labs.\n\nDoes this information align with what you were expecting?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text explicitly mentions that the Cisco Networking Academy uses Cisco 4221 routers and 2960 switches in its hands-on labs."
+    }
+  },
+  {
+    "question": "How many industry partners for the MSAJCE Technology Centre ecosystem are listed?",
+    "answer": "MSAJCE's Technology Centres have several industry partners. They include:\n\n\u2022 Automation Anywhere\n\u2022 Godrej Inc\n\u2022 Ford\n\u2022 Palo Alto Systems\n\u2022 Amazon Web Services\n\u2022 National Instruments\n\u2022 CISCO Academy\n\u2022 Altair\n\u2022 Open Wave Computing\n\u2022 Levergent Technologies\n\u2022 Propeller Technologies\n\u2022 Code Tantra\n\nIn total, there are 12 industry partners listed. Would you like information on any of these partners?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot includes Code Tantra as an industry partner when it is the name of a center. The bot also missed Levergent Technologies."
+    }
   }
 ]

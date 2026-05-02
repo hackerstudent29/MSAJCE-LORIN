@@ -847,3 +847,42 @@
 [FAIL] What is the exact passing criteria (minimum marks or grade) for Physics, Chemistry, and Mathematics in the 10+2 examination to be eligible for B.E. Computer Science and Engineering?
 [UNKNOWN] What was the total amount of seed funding dispersed to startups incubated at SIIF in 2023?
 [UNKNOWN] What are the specific learning outcomes expected from students who complete the GE8261 — Engineering Practices lab?
+[PASS] How many patents have been filed by MSAJCE students as a direct result of the NISP program as of December 31, 2023?
+[PASS] On working days, between what hours are games and TV permitted in the hostels?
+[PASS] What date was the India Skills Report used to create the technology centers published?
+[PASS] For the 2021 Regulation curriculum, does the program offer any courses specifically focused on the Python programming language?
+[FAIL] Are there any scholarships specifically available for students admitted to the B.E. - Computer Science and Engineering program, and what are the eligibility criteria?
+[FAIL] For lateral entry students, what is the total number of credits or course hours required to complete the B.E. Computer Science and Engineering program under the 2021 regulation?
+[UNKNOWN] What percentage of the 250 monthly beneficiaries accessing infrastructure and facilities are students versus faculty?
+[FAIL] What time does the Boys Hostel library and computer centre close?
+[PASS] How many seats are reserved for government quota students in the B.E. Electrical and Electronics Engineering program?
+[PASS] Which specific version of SQL Server is recommended for installation in the Robotics Process Automation course?
+[PASS] What are the specific eligibility criteria for startups to receive grants from SIIF?
+[FAIL] Referring to the 2017 B.E. Computer Science and Engineering Regulation, what are the specific criteria for a student to be eligible for M.E. Computer Science and Engineering admission?
+[UNKNOWN] What specific versions of Kali Linux, Metasploit, Wireshark, and nmap will be taught in the hands-on learning labs?
+[UNKNOWN] What is the student-faculty ratio in the Computer Science and Engineering department based on the current UG intake (60) and the number of UG faculty members listed for 2023-2024?
+[PASS] What is the annual tuition fee for both Government and Management quota seats for the B.E. Computer Science and Engineering program (if published elsewhere)?
+[PASS] For the CISCO Networking Academy, what is the model number of the routers and switches used in the hands on lab?
+[FAIL] What are the course codes and names of all the courses that use the Electrical Machines Lab?
+[UNKNOWN] What time does the Girls Hostel library and computer facility close?
+[UNKNOWN] How many startups have successfully graduated from the SIIF incubation program and are currently operational?
+[FAIL] What is the passing criteria, as stated in the 2021 Regulation, for the B.E. - Computer Science and Engineering program, specifically for core Computer Science courses?
+[FAIL] Which specific courses in the 2021 Regulation curriculum, accessible at the provided URL, cover ISO 27001 compliance?
+[PASS] How many students who graduated in 2022 were hired by TCS from the Computer Science and Engineering Department?
+[FAIL] How many industry partners for the MSAJCE Technology Centre ecosystem are listed?
+[FAIL] Which faculty member had the designation 'Associate Professor' in the EEE department during the academic year 2022-2023?
+[PASS] According to Hostel Rule #6, for how many continuous days must the college be closed for a student to be permitted to go home?
+[UNKNOWN] For lateral entry students, which specific foundational computer science courses (Data Structures, Algorithms, Operating Systems) are required and how are they integrated into the 3-year program?
+[FAIL] What is the procedure for student groups to access prototyping funds outlined in the Short Term Objectives?
+[PASS] What is the specific course code for the C Programming course offered in the C Programming Lab?
+[FAIL] What is the procedure and specific deadline for applying for the B.E. Computer Science and Engineering program through the Management quota?
+[PASS] What are the visiting hours on holidays in the hostels?
+[PASS] How many hours of penetration testing lab time are included in the 'Hands-on Learning' component each semester?
+[FAIL] What is the target GW set by the Government of India for renewable energy by 2030?
+[UNKNOWN] How many students can the cafeteria accommodate at one time?
+[FAIL] According to the Tentative 5-Year Activity Plan, how many 'Field/Exposure Visits to Incubation Unit/Patent Facilitation Centre/Technology Transfer Centre' are planned?
+[PASS] How many seats are available under the management quota for the B.Tech ECE Advanced Communication Technology program?
+[PASS] What specific equipment is used in the Power System Simulation Lab (PSS)?
+[FAIL] According to the 2017 regulation for the M.E. program, what is the minimum GPA required for graduation?
+[PASS] What are the opening and closing hours of the cafeteria on working days?
+[FAIL] What is the specific name and version of the SIEM tool used in the labs for threat analysis?

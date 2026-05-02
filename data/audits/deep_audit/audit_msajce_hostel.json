@@ -38,5 +38,61 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "On working days, between what hours are games and TV permitted in the hostels?",
+    "answer": "Games and TV are permitted from 04:30 PM to 06:00 PM on working days.\n\nDo you want to know the timings for games and TV on holidays as well?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response accurately reflects the information provided in the source text regarding games and TV timings on working days."
+    }
+  },
+  {
+    "question": "What time does the Boys Hostel library and computer centre close?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What time does the Girls Hostel library and computer facility close?",
+    "answer": "The Girls Hostel library and computer facility are open until 9:00 PM.\n\nIs there anything else you'd like to know about the hostel facilities?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "According to Hostel Rule #6, for how many continuous days must the college be closed for a student to be permitted to go home?",
+    "answer": "According to Hostel Rule #6, the college must be closed continuously for five days or more for a student to be permitted to go home. What other hostel rule would you like to know about?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response accurately reflects the information provided in Hostel Rule #6 of the source text."
+    }
+  },
+  {
+    "question": "What are the visiting hours on holidays in the hostels?",
+    "answer": "Visitors are allowed on holidays from 11:00 AM to 6:00 PM in both the boys' and girls' hostels.\n\nWhat are the timings for games and TV on holidays?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response matches the source text."
+    }
+  },
+  {
+    "question": "How many students can the cafeteria accommodate at one time?",
+    "answer": "The cafeteria can accommodate 100 students at a time.\n\nCan I help you with any other details about the cafeteria or other facilities?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What are the opening and closing hours of the cafeteria on working days?",
+    "answer": "On working days, the cafeteria is open from 8:00 AM to 8:00 PM.\n\nAre you also interested in the cafeteria timings on holidays?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate as per the source text."
+    }
   }
 ]

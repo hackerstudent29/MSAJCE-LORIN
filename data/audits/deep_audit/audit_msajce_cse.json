@@ -22,5 +22,53 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "For lateral entry students, what is the total number of credits or course hours required to complete the B.E. Computer Science and Engineering program under the 2021 regulation?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Referring to the 2017 B.E. Computer Science and Engineering Regulation, what are the specific criteria for a student to be eligible for M.E. Computer Science and Engineering admission?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the annual tuition fee for both Government and Management quota seats for the B.E. Computer Science and Engineering program (if published elsewhere)?",
+    "answer": "I do not have the specific annual tuition fees for the B.E. Computer Science and Engineering program under either the Government or Management quota. However, I can share details such as seat availability.\n\nWould you like to know the seat distribution for the CSE program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the specific annual tuition fees, which is not found in the source text."
+    }
+  },
+  {
+    "question": "How many students who graduated in 2022 were hired by TCS from the Computer Science and Engineering Department?",
+    "answer": "I don't have the specific data about the number of 2022 CSE graduates hired by TCS. However, TCS is among the top recruiters at MSAJCE.\n\nDo you want to know about the other top recruiters?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states it doesn't have the specific data but acknowledges TCS as a top recruiter which is verifiable from the source text."
+    }
+  },
+  {
+    "question": "What is the procedure and specific deadline for applying for the B.E. Computer Science and Engineering program through the Management quota?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "According to the 2017 regulation for the M.E. program, what is the minimum GPA required for graduation?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
   }
 ]

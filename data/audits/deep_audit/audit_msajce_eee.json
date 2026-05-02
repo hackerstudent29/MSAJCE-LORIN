@@ -78,5 +78,45 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "How many seats are reserved for government quota students in the B.E. Electrical and Electronics Engineering program?",
+    "answer": "There are 15 seats reserved for government quota students in the B.E. Electrical and Electronics Engineering program.\n\nAre you also curious about the eligibility criteria for this program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate. It correctly identifies that there are 15 seats reserved for government quota students in the B.E. Electrical and Electronics Engineering program as stated in the provided source text."
+    }
+  },
+  {
+    "question": "What are the course codes and names of all the courses that use the Electrical Machines Lab?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Which faculty member had the designation 'Associate Professor' in the EEE department during the academic year 2022-2023?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the target GW set by the Government of India for renewable energy by 2030?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What specific equipment is used in the Power System Simulation Lab (PSS)?",
+    "answer": "The Power System Simulation Lab (PSS) in the EEE Department includes these equipment items. You can find further details through this link: https://www.msajce-edu.in/images/departments/eee/Lab/PSS-Equipments.pdf.\n\nDo you want to know about the virtual lab link for the Power System Simulation Lab as well?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate. The bot response refers to the 'Equipment Details' link within the Power System Simulation Lab (PSS) section of the EEE Department Laboratories, as seen in the source text."
+    }
   }
 ]

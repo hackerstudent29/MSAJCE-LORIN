@@ -118,5 +118,13 @@
       "status": "PASS",
       "reason": "The bot's response is factually accurate and can be found in the source text under the section 'Top Recruiters'."
     }
+  },
+  {
+    "question": "For the 2021 Regulation curriculum, does the program offer any courses specifically focused on the Python programming language?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "While the document doesn't explicitly state a Python course, it lists Data Scientist/Data Analyst roles and AI/ML Engineer roles as high-demand jobs for graduates, both of which require Python. Also Data Exploration and Visualization is a specific course in the curriculum."
+    }
   }
 ]
