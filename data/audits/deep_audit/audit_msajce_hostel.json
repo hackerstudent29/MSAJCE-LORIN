@@ -6,5 +6,21 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "How many AC rooms are available in the Boys Hostel?",
+    "answer": "There are 6 AC rooms in the Boys Hostel.\n\nHow else can I assist you with hostel information?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response accurately reflects the information provided in the source text regarding the number of AC rooms in the Boys Hostel."
+    }
+  },
+  {
+    "question": "What is the total capacity of students that the Girls Hostel can accommodate?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
   }
 ]

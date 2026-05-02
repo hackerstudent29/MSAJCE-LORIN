@@ -54,5 +54,21 @@
       "status": "PASS",
       "reason": "The information is stated in the source text: Career pathways to an estimated 8 million networking jobs worldwide through Netacad."
     }
+  },
+  {
+    "question": "What simulation tool is used for hands-on labs in the CISCO Networking Academy?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text mentions Packet Tracer (PT) as a simulation tool used in the CISCO Networking Academy. "
+    }
+  },
+  {
+    "question": "Besides CCNA, what is the other CISCO certification that can be achieved at the CISCO Network Academy Centre?",
+    "answer": "At the CISCO Network Academy Centre, in addition to the CISCO Certified Network Associate (CCNA), you can pursue the Implementing CISCO Enterprise Network Core Technologies certification.\n\nWant to know more about the courses offered there?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

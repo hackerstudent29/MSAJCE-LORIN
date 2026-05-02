@@ -822,3 +822,15 @@
 [UNKNOWN] What are the specific cut-off marks or ranks in the relevant entrance examination (if any) required for admission to the Government quota seats (30 seats) in the B.E. - Computer Science and Engineering program?
 [PASS] Is the cybersecurity specialist role specifically aligned to PO6 'Engineer and Society', PO7 'Environment and Sustainability' or PO8 'Ethics'?
 [PASS] Is a campus-wide license for Tableau or Power BI provided so students can enhance their Data Visualization Skills?
+[PASS] How many AC rooms are available in the Boys Hostel?
+[PASS] What simulation tool is used for hands-on labs in the CISCO Networking Academy?
+[PASS] What specific skills in design tools are most advantageous in VLSI, and mentioned in the text?
+[UNKNOWN] Where can I find the list of all the experiments covered in the EE8712 — Renewable Energy course?
+[FAIL] Based on the faculty list, what is the average tenure of the current Professors in the Computer Science and Engineering department, calculated from their 'Date of Joining'?
+[PASS] Which of the listed faculty members is currently a Ph.D candidate instead of already holding a Ph.D?
+[UNKNOWN] Besides CCNA, what is the other CISCO certification that can be achieved at the CISCO Network Academy Centre?
+[FAIL] How many faculty members with a Ph.D. joined the UG program in the Department of Computer Science and Engineering between August 2022 and September 2023?
+[PASS] Which faculty member listed in the 2023-2024 faculty list is currently pursuing a Ph.D., and what is the topic of their dissertation?
+[FAIL] What is the total capacity of students that the Girls Hostel can accommodate?
+[UNKNOWN] According to the data, what annual growth rate is projected for Automotive Electronics sector between 2025 and 2030?
+[UNKNOWN] Which laboratory is associated with the EE8261 — Basic Electrical Electronics and Instrumentation Engineering course?

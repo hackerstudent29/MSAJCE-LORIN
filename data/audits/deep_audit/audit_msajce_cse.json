@@ -182,5 +182,21 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "Based on the faculty list, what is the average tenure of the current Professors in the Computer Science and Engineering department, calculated from their 'Date of Joining'?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot did not provide an answer based on the data provided in the source text."
+    }
+  },
+  {
+    "question": "Which faculty member listed in the 2023-2024 faculty list is currently pursuing a Ph.D., and what is the topic of their dissertation?",
+    "answer": "Okay, I can help with that. From the provided documents, these faculty members are listed as pursuing Ph.D. in 2023-2024:\n\n\u2022 Mr. VIMALATHITHAN S, Assistant Professor\n\u2022 Mr. PANDARINATHAN V, Assistant Professor\n\u2022 Mr. MOHIDEEN ABDUL KADHER M, Assistant Professor\n\u2022 Mrs. MUTHU PANDEESWARI R, Assistant Professor\n\nUnfortunately, the specific dissertation topics are not listed.\n\nWould you like to know about any faculty member's other qualifications?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identifies the faculty members listed as pursuing Ph.D.s in the 2023-2024 faculty list and correctly states that the document does not provide the specific dissertation topics. "
+    }
   }
 ]

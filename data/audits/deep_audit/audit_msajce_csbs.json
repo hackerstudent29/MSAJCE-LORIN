@@ -16,107 +16,91 @@
     }
   },
   {
-    "question": "For the course 'AD3391 - Database Design and Management', is there ICT Tools material available at the given URL structure, similar to the other courses listed?",
-    "answer": "Yes, ICT Tools material is available for the 'AD3391 - Database Design and Management' course. You can access it through these URLs, depending on the department:\n\n\u2022 AI&ML: https://www.msajce-edu.in/academics/aids/2021/ICTTools/AD3391-ICT.pdf\n\u2022 CSBS: https://www.msajce-edu.in/academics/csbs/2021/ICTTools/AD3391-ICT.pdf\n\nWould you like the ICT Tools link for any other courses?\n",
+    "question": "Under the 2021 Regulation, is the course AD3301 - Data Exploration and Visualization a core CS subject or a Business/Management Subject?",
+    "answer": "AD3301 - Data Exploration and Visualization, under the 2021 Regulation, is considered a core Computer Science subject. This course is part of the B.Tech Artificial Intelligence and Data Science (AIDS) and B.Tech Computer Science and Business Systems (CSBS) curriculum.\n\nWhat other courses are you curious about?\n",
     "evaluation": {
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
   },
   {
-    "question": "How many total seats are available for direct entry (4-year) versus lateral entry (3-year) into the CSBS program?",
+    "question": "For the Internet Programming Lab (CS8661), what specific software or hardware is listed in the equipment details document?",
     "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "What specific version of Oracle or SAP is used in the ERP-related coursework or labs?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "According to the curriculum documents, which semesters include courses with the 'IOT' prefix or focus?",
-    "answer": "I do not have access to the curriculum documents to provide a detailed list of semesters that include IOT-related coursework.&#x20;\n\nDo you have any questions regarding admissions?\n",
     "evaluation": {
       "status": "PASS",
-      "reason": "The bot correctly states that it does not have access to the curriculum documents to determine which semesters include IOT-related courses."
+      "reason": "The source text confirms the existence of an equipment details document for the Internet Programming Lab (CS8661). While the specific contents of that document are not detailed, the response is correct in that such a document exists."
     }
   },
   {
-    "question": "What is the average annual placement rate for CSBS graduates in the last 3 years based on the listed 'Top Recruiters'?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "What is the faculty-student ratio in the CSBS department, considering the number of faculty and the total number of seats?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "Are the listed virtual labs (C Programming, Internet Programming, etc.) accessible to students enrolled in other departments?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "Besides TCS, what other industry partners actively contribute to the curriculum development and delivery, and how is their contribution measured?",
-    "answer": "Besides TCS, other industry partners at MSAJCE include Automation Anywhere, Godrej Inc, Ford, Palo Alto Systems, Amazon Web Services, National Instruments, CISCO Academy, Altair, Open Wave Computing, Levergent Technologies, and Propeller Technologies. They contribute to curriculum development and delivery through technology centers established in 2019-2020, offering certifications, projects, and internships based on AICTE and India Skill Report 2020 recommendations. Their contribution is measured through student skill enhancement and industry readiness.\n\nWhat kind of onsite projects and internships are commonly offered by these industry partners?\n",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "The bot response mentions specific industry partners and their contributions, along with details about technology centers and measurement of contributions, which are not found in the provided source text. The source text only mentions TCS as an industry partner for curriculum design in the CSBS program. Therefore, the bot provides information beyond what is available in the document, and I cannot verify its accuracy."
-    }
-  },
-  {
-    "question": "Which of the listed faculty members have specific experience or publications in blockchain technology?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "Does the CSBS department have any MOUs with the 'Top Recruiters' mentioned, and if so, what are the key objectives of those MOUs?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "What is the process for students to access equipment details for each of the CSBS labs listed, specifically outside lab hours for self study or project preparation?",
-    "answer": "For equipment details for the CSBS labs:\n\n\u2022 You can find equipment details through the department's lab documentation pages.\n\u2022 The labs include C Programming, Internet Programming, Operating Systems, Object Oriented Analysis and Design, Web Technology, and Networks.\n\u2022 The AIML Department also maintains these labs.\n\nAs for accessing the labs outside of scheduled hours, you will need to get permission. What kind of projects are you working on?\n",
+    "question": "Does the Operating Systems Lab equipment details include the specific operating systems installed on the machines?",
+    "answer": "Well, the equipment details for the Operating Systems Lab are available, but they don't specify which operating systems are installed.\n\n\u2022 For the AIDS Department, you can find the equipment details here: https://www.msajce-edu.in/images/departments/aids/Equipments-OS.pdf\n\u2022 For the CSBS Department: https://www.msajce-edu.in/images/departments/csbs/Equipments-OS.pdf\n\nWould you like information on any other specific lab?\n",
     "evaluation": {
       "status": "PASS",
-      "reason": "The bot correctly identifies that equipment details can be found on the department's lab documentation pages. It also lists the labs and mentions the AIML department, which while not directly relevant, doesn't contradict the source. The bot also acknowledges that special permission is needed for after hours access which would be standard protocol. All accurate."
+      "reason": "The bot correctly states that the equipment details do not specify the operating systems installed."
     }
   },
   {
-    "question": "Is there a specific course within the CSBS curriculum that focuses on ethical hacking and penetration testing, or is it covered within a broader cybersecurity course?",
-    "answer": "Our B.E. CSE (Cyber Security Specialization) program includes labs and simulation environments specifically for penetration testing and secure coding. You'll also learn about cyber laws and ethics, as well as security in AI, IoT, cloud computing, and blockchain.\n\nInterested in learning more about the curriculum for the Cyber Security specialization?\n",
+    "question": "What is the name of the Head of the Undergraduate (UG) program for the CSBS department?",
+    "answer": "",
     "evaluation": {
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
   },
   {
-    "question": "Is a campus-wide license for Tableau or Power BI provided so students can enhance their Data Visualization Skills?",
-    "answer": "Given the current resources, I don't have specific information about a campus-wide license for Tableau or Power BI.\n\nHave you considered reaching out to the IT department or the AI&DS department to inquire about software availability for data visualization?\n",
+    "question": "For lateral entry students, what is the exact number of credits required to complete the B.Tech CSBS program?",
+    "answer": "Lateral entry students in the B.Tech CSBS program complete their degree over 6 semesters. To clarify the exact credit requirements, I recommend checking the 2021 Regulation curriculum document at https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf.\n\nHave you reviewed the curriculum for specific credit details yet?\n",
     "evaluation": {
       "status": "PASS",
-      "reason": "The bot accurately states that it doesn't have specific information regarding campus-wide licenses for Tableau or Power BI, which aligns with the absence of this information in the source text."
+      "reason": "The bot accurately states that lateral entry students complete the degree over 6 semesters and correctly refers to the curriculum document for the credit requirements."
+    }
+  },
+  {
+    "question": "According to the document, what is the exact name of the virtual lab used for the Networks Lab (CS8581)?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identifies the virtual lab name for the Networks Lab (CS8581) as \"Networks.pdf\" according to the source text."
+    }
+  },
+  {
+    "question": "What is the course code for the Discrete Mathematics course under the 2021 Regulation?",
+    "answer": "\u2022 For the 2021 Regulation, the course code for Discrete Mathematics is MA3354. This applies to the CSE, IT, and CSBS departments.\n\nWould you like information on where to find the course materials for this subject?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identifies the course code MA3354 for Discrete Mathematics under the 2021 Regulation, as stated in the source text."
+    }
+  },
+  {
+    "question": "Which faculty member specializes in Wireless Sensor Networking and Image Processing?",
+    "answer": "Dr. Subramanian P, Head of UG, specializes in Wireless Sensor Networking and Image Processing.\n\nWhat else would you like to know about the faculty?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately identifies Dr. Subramanian P as specializing in Wireless Sensor Networking and Image Processing, and confirms their role as Head of UG, as stated in the source text under 'CSBS Department Faculty'."
+    }
+  },
+  {
+    "question": "According to the provided data, what percentage of the total seats are allocated for the Government Quota?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Is the cybersecurity specialist role specifically aligned to PO6 'Engineer and Society', PO7 'Environment and Sustainability' or PO8 'Ethics'?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The cybersecurity specialist role does align with PO6 'Engineer and Society', PO7 'Environment and Sustainability' and PO8 'Ethics'"
+    }
+  },
+  {
+    "question": "Which of the listed faculty members is currently a Ph.D candidate instead of already holding a Ph.D?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot only needs to parse the listed faculty and identify those with (Ph.D) listed next to their M.Tech or M.E degrees."
     }
   }
 ]

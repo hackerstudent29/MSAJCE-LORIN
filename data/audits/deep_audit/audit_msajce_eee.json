@@ -46,5 +46,21 @@
       "status": "PASS",
       "reason": "The bot correctly identifies that Power Electronics is offered in Semester V according to the 2021 regulation. This information is verifiable in the source text under 'Semester V' within the 'EEE Academics \u00e2\u20ac\u201d 2021 Regulation Course Materials' section. It lists 'EE3591 \u00e2\u20ac\u201d Power Electronics' as one of the courses for that semester."
     }
+  },
+  {
+    "question": "Where can I find the list of all the experiments covered in the EE8712 \u00e2\u20ac\u201d Renewable Energy course?",
+    "answer": "The experiments for the EE8712 Renewable Energy course are available here: https://www.msajce-edu.in/images/departments/eee/Lab/RES-EXPERIMENTS.pdf.\n\nWould you like information on the Renewable Energy Lab's equipment?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Which laboratory is associated with the EE8261 \u00e2\u20ac\u201d Basic Electrical Electronics and Instrumentation Engineering course?",
+    "answer": "The Electrical Machines Lab and the Electronics Lab are associated with the EE8261 - Basic Electrical Electronics and Instrumentation Engineering course.\n\nWould you like information about the equipment in those labs?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

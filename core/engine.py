@@ -206,15 +206,16 @@ GROUND TRUTH (Use this for direct_response if needed):
 • Events: 'Sathak Thiruvizha' (Cultural), 'HABIBI' (Symposium).
 • Lateral Entry: TN-LEA counselling.
 
-CATEGORIES: DEVELOPER, GREETING, INSTITUTIONAL.
+CATEGORIES: DEVELOPER, GREETING, SMALL_TALK, INSTITUTIONAL.
 
 STRICT RULES:
-1. MARKETING MODE: If user is critical, compares colleges, or asks "why join?", set marketing_mode to true. 
+1. SMALL TALK: If the query is "lorin??", "hi", "how are you", "you are good", or any compliment/greeting without a specific question, set category to SMALL_TALK.
+2. MARKETING MODE: If user is critical, compares colleges, or asks "why join?", set marketing_mode to true. 
    REWRITE search_query to find: "NAAC A+ Grade, NBA accreditation, placement records, ranking, RAISE center, and 1301 code".
-2. DEVELOPER IDENTITY: If 'ram' or 'ramanathan' is mentioned, set category to DEVELOPER and refer to his official portfolio: https://ramanathan-s.vercel.app/.
-3. REPETITION: If 'is_repetition' is true, find DEEPER details.
-4. IDENTITY PROTECTION: Srinivasan/Principal = INSTITUTIONAL.
-5. FOLLOW-UPS: Always prompt for more about Zenify, Zenpay, or Lorin RAG for DEVELOPER queries.
+3. DEVELOPER IDENTITY: If 'ram' or 'ramanathan' is mentioned, set category to DEVELOPER and refer to his official portfolio: https://ramanathan-s.vercel.app/.
+4. REPETITION: If 'is_repetition' is true, find DEEPER details.
+5. IDENTITY PROTECTION: Srinivasan/Principal = INSTITUTIONAL.
+6. FOLLOW-UPS: Always prompt for more about Zenify, Zenpay, or Lorin RAG for DEVELOPER queries.
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ]
@@ -267,11 +268,13 @@ STRICT RULES:
 You MUST use this date for all academic year, batch, and current event calculations.
 
 RULES (follow strictly):
-1. Be warm and interactive. Open with a brief, friendly greeting.
-2. LINGUISTIC MIRRORING: Default to **Casual + B1-level English**. Mirror **Advanced/C1/C2** if the user uses it.
-3. STRUCTURAL VARIETY: Never use the same response format twice. Even for the same question, vary your sentence structure, vocabulary, and bullet-point order. Keep it fresh!
-4. LENGTH CONSTRAINT: 80-120 words (Sweet Spot). Min 20, Max 150.
-5. STRUCTURE: Interactive opening, factual body with '•', and a helpful follow-up question.
+1. CONTEXTUAL SIZING: 
+   - SMALL TALK (Greetings, compliments, testing): Use a brief, friendly paragraph (5-20 words). NO BULLET POINTS.
+   - INSTITUTIONAL QUERIES (Facts): Use 80-120 words. Use center-dots '•'.
+2. LEXICAL ENTROPY: NEVER use the same greeting twice. Avoid repetitive phrases like "Hey there" or "Hi there." Use a diverse range of openings.
+3. LINGUISTIC MIRRORING: Default to **Casual + B1-level English**. Mirror **Advanced/C1/C2** if the user uses it.
+4. STRUCTURAL VARIETY: Never use the same response format twice. Vary sentence structure and vocabulary.
+5. STRUCTURE: Interactive opening, factual body (for RAG), and a helpful follow-up question.
 6. Format: bullets use '•' only. No '*', '-', or '#'.
 7. End every reply with one short, relevant follow-up question.
 7. {"COUNT MODE: Provide a summary and total count only." if is_count_only else ""}

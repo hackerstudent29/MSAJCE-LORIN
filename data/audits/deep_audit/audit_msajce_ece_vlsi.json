@@ -102,5 +102,21 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "What specific skills in design tools are most advantageous in VLSI, and mentioned in the text?",
+    "answer": "For VLSI design, proficiency in Cadence, Mentor Graphics, Synopsys, and Xilinx Vivado are highly advantageous skills.\n\nHow familiar are you with these design tools?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately lists design tools mentioned in the source text as advantageous in VLSI: Cadence, Mentor Graphics, Synopsys, and Xilinx Vivado."
+    }
+  },
+  {
+    "question": "According to the data, what annual growth rate is projected for Automotive Electronics sector between 2025 and 2030?",
+    "answer": "The automotive electronics sector is projected to grow at a rate of 10-12% per year between 2025 and 2030.\n\nWhat roles are in high demand within that sector?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]
