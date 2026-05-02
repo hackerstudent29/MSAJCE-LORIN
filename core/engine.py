@@ -268,10 +268,6 @@ CONTEXT:
 
 History: {history if history else "None"}"""
 
-History: {history if history else "None"}"""
-
-History: {history if history else "None"}"""
-
         data_gen = {"model": self.generation_model, "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": f"Query: {user_query}"}], "max_tokens": 1000}
         
         full_answer = ""
