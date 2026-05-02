@@ -102,5 +102,21 @@
       "status": "PASS",
       "reason": "The bot only needs to parse the listed faculty and identify those with (Ph.D) listed next to their M.Tech or M.E degrees."
     }
+  },
+  {
+    "question": "What is the full URL for the lesson plan of the Artificial Intelligence course, under the 2021 regulation?",
+    "answer": "For the AI course (AL3391) under the 2021 regulation, the lesson plan URL is:\n\n\u2022 https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AL3391-LP.pdf\n\nDid you need the question bank or lecture notes link as well?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The URL provided by the bot for the AI course (AL3391) lesson plan under the 2021 regulation matches the URL found in the source text."
+    }
+  },
+  {
+    "question": "Besides TCS, Infosys, Wipro, Accenture and CTS, which other listed companies hire CSBS graduates?",
+    "answer": "Based on available information, startups and FinTech companies like FSS also recruit CSBS graduates.\n\nWould you like more details on the CSBS course curriculum?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response is factually accurate and can be found in the source text under the section 'Top Recruiters'."
+    }
   }
 ]

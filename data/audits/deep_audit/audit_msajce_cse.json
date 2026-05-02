@@ -1,202 +1,26 @@
 [
   {
-    "question": "How many faculty members with a Ph.D. joined the UG faculty in the Computer Science and Engineering department in 2023?",
-    "answer": "In 2023, two faculty members with a Ph.D. joined the UG faculty in the Computer Science and Engineering department. They are Dr. Vijayarangan R and Dr. Paramesh J.\n\nWant to know about other faculty qualifications in a specific department?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot accurately identifies two faculty members, Dr. Vijayarangan R and Dr. Paramesh J, who joined the UG faculty in the Computer Science and Engineering department in 2023 with a Ph.D., based on the provided source text."
-    }
-  },
-  {
-    "question": "What is the total number of faculty members listed under the PG/Visiting faculty for the Computer Science and Engineering department as of 2023-2024?",
-    "answer": "There are two faculty members listed as PG/Visiting faculty for 2023-2024.\n\n\u2022 Dr. NAGASUBRAMANIAN R, Professor\n\u2022 Mrs. PANDEESWARI M, Assistant Professor\n\nDo you want information about the faculty in any other department?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot accurately identified and listed the two faculty members under the PG/Visiting faculty for the Computer Science and Engineering department as of 2023-2024, as per the provided source text."
-    }
-  },
-  {
-    "question": "According to the 2021 B.E. Computer Science and Engineering curriculum (2021 Regulation PDF), how many credits are required to graduate?",
-    "answer": "I do not have the information on the total credits needed to graduate from the 2021 B.E. Computer Science and Engineering curriculum. You can find the 2021 Regulation curriculum here: https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf.\n\nWould you like to know about the eligibility criteria for this program?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "For the M.E. Computer Science and Engineering program, what specific AICTE norms apply to the eligibility criteria?",
-    "answer": "For the M.E. Computer Science and Engineering program, eligibility follows AICTE norms. As per these norms and Anna University guidelines, candidates with a B.E./B.Tech. in EEE, ECE, CSE, IT, I&C, E&I, or related fields, or an MCA, or an M.Sc. in relevant areas are eligible.\n\nDo you need details on the admission process through TANCET?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "What is the full name of the professor who joined the Computer Science and Engineering department on August 26, 2022?",
-    "answer": "There seems to be some confusion. I do not have information about the professor who joined the Computer Science and Engineering department on August 26, 2022. However, Dr. Kannan S, Professor, joined the Information Technology department on August 31, 2022.\n\nDo you want to know more about Dr. Kannan S?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "Under the 2017 B.E. Computer Science and Engineering regulation, what is the specific course code and name for the capstone project/final year project?",
-    "answer": "I couldn't find explicit information on capstone or final year project course codes under the 2017 B.E. Computer Science and Engineering regulation. But the full 2017 regulation syllabus is available here: https://www.msajce-edu.in/uploads/academics/2017Regulation.pdf.\n\nWould you like me to help you find course materials for any of the listed subjects?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot accurately states that it can't find the specific course code and name for the capstone project under the 2017 regulation and provides a link to the syllabus, which aligns with the source text."
-    }
-  },
-  {
-    "question": "What is the exact URL for the 'Students Corner' on the MSAJCE website?",
-    "answer": "The URL for the Students Corner is: https://www.msajce-edu.in/studentscorner.php.\n\nWould you like to know about any other student resources?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot response is factually accurate and the information is available in the source text."
-    }
-  },
-  {
-    "question": "What is the name of the specific faculty member whose area of specialization is in Network Security and Data Science during the 2020-2021 academic year?",
-    "answer": "Dr. Nagasubramanian R was a Professor whose areas of specialization included Network Security and Data Science during the 2020-2021 academic year.\n\nDo you want to know about any other faculty members from that year?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "According to the data, what is the most recent year in which an Assistant Professor with an M.Tech. degree was hired?",
-    "answer": "Based on the provided data, the most recent year an Assistant Professor with an M.Tech. degree was hired is 2023.\n\nWant to know more about our faculty qualifications?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The 2023-2024 UG Faculty list shows that multiple Assistant Professors with M.E. degrees were hired in 2023, which implies that 2023 is the most recent year that someone with a masters was hired as an Assistant Professor."
-    }
-  },
-  {
-    "question": "What is the minimum passing grade required in Physics, Chemistry, and Mathematics for B.E. Computer Science and Engineering admission?",
-    "answer": "To be eligible for B.E. Computer Science and Engineering, you need a pass in Physics, Chemistry, and Mathematics in your 10+2 examination.\n\nWhat are your plans after completing your B.E.?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "How many credits are assigned to CS8261 - C Programming course?",
-    "answer": "I do not have the credit information for the CS8261 - C Programming course. However, I can confirm that the C Programming Lab, which offers the course CS8261, has a virtual lab available at https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-C-Programming.pdf.\n\nCan I help you with any other lab details?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "What is the name of the faculty who joined on 19.06.2023 in Computer Science and Engineering department?",
-    "answer": "Based on the provided information, Dr. VIJAYARANGAN R, Professor, joined the Computer Science and Engineering department on June 19, 2023.\n\nDo you want to know about any other faculty members in the department?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "How many Assistant Professors specialize in Artificial Intelligence, Web Technology in 2021-2022 faculty list?",
-    "answer": "Okay, I can help with that.\n\nHere's the breakdown of Assistant Professors specializing in Artificial Intelligence and Web Technology during the academic year 2021-2022:\n\n\u2022 Sasikala L\n\u2022 Uma Maheshwari R\n\u2022 Premitha A\n\u2022 Praveen Kumar G\n\nTotal count: 4\n\nAre you interested in faculty specializations from other years as well?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "According to provided information, in which of the listed sectors can a CSE graduate find jobs?",
-    "answer": "A CSE graduate can find job opportunities in these sectors:\n\u2022 IT (private and public)\n\u2022 Public Sector: Railways, Airport, ONGC, Remote Sensing, Banking.\n\u2022 Private Sector: TCS, Infosys, CTS, Wipro, HCL Technology, Tech Mahindra, Zoho, Intel, Accenture, IBM, FSS.\n\nAre you curious about the specific skills needed for these CSE jobs?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot response accurately lists the sectors where a CSE graduate can find job opportunities, as mentioned in the provided source text."
-    }
-  },
-  {
-    "question": "What are the course outcomes of CS8661 - Internet Programming course?",
-    "answer": "The course outcomes for the Internet Programming course (CS8661) can be found in the lab objectives document here: https://www.msajce-edu.in/images/departments/csbs/Obj-INTERNET.pdf.\n\nCan I help you with anything else related to the Internet Programming course?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "How many faculty members who taught in the UG program during the 2021-2022 academic year are no longer listed as faculty for the 2023-2024 academic year?",
-    "answer": "I do not have sufficient information to accurately determine which faculty members taught in the UG program specifically during the 2021-2022 academic year and are no longer listed for 2023-2024.\n\nIs there anything else I can help you with?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot correctly states that it does not have the information to determine the faculty members who taught in the UG program in 2021-2022 and are no longer listed for 2023-2024. While the source text lists faculty for those years, it doesn't explicitly link them to the UG program for 2021-2022, and requires comparing faculty lists across different years."
-    }
-  },
-  {
-    "question": "What specific AICTE norms are used to determine eligibility for the M.E. - Computer Science and Engineering program?",
-    "answer": "To be eligible for the M.E. Computer Science and Engineering program, you must meet the AICTE norms. Source 1 mentions the eligibility criteria as per the Anna University and AICTE Norms. Do you want to know the admission criteria for Ph.D. programs as well?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot accurately states that eligibility is as per Anna University and AICTE norms, as indicated in the source text."
-    }
-  },
-  {
-    "question": "According to the 2021 Regulation (https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf), how many credits are required to graduate from the B.E. - Computer Science and Engineering program?",
-    "answer": "",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "What is the specific fee structure for the Management quota seats (30 seats) in the B.E. - Computer Science and Engineering program, and where can I find the detailed breakdown?",
+    "question": "How many faculty members with a Ph.D. joined the UG program in the Department of Computer Science and Engineering between August 2022 and September 2023?",
     "answer": "",
     "evaluation": {
       "status": "FAIL",
-      "reason": "The bot did not provide a response."
+      "reason": "No response"
     }
   },
   {
-    "question": "How many students were admitted to the M.E. - Computer Science and Engineering program in the 2022-2023 academic year, given the intake of 9 seats?",
-    "answer": "",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The source text confirms that the intake for M.E. - Computer Science and Engineering is 9 seats."
-    }
-  },
-  {
-    "question": "What is the passing percentage required in Physics, Chemistry, and Mathematics individually in the 10+2 examination for B.E. - Computer Science and Engineering eligibility?",
-    "answer": "",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The eligibility criteria for B.E. - Computer Science and Engineering includes securing a pass in Physics, Chemistry, and Mathematics in the qualifying 10+2 examination, as stated in the provided text."
-    }
-  },
-  {
-    "question": "In the 2017 Regulation for the M.E. - Computer Science and Engineering program (https://drive.google.com/file/d/144gsbsjswJj3f1b4O4rRLR6NcE5nxqxg/view?usp=sharing), what is the name of the course offered in the first semester?",
-    "answer": "I am unable to access external links. Is there any other way I can assist you?\n",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "The bot was unable to access the external link."
-    }
-  },
-  {
-    "question": "What are the specific cut-off marks or ranks in the relevant entrance examination (if any) required for admission to the Government quota seats (30 seats) in the B.E. - Computer Science and Engineering program?",
-    "answer": "",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "Based on the faculty list, what is the average tenure of the current Professors in the Computer Science and Engineering department, calculated from their 'Date of Joining'?",
+    "question": "According to the provided faculty lists, how many faculty members specialized in 'Artificial Intelligence' in the 2021-2022 academic year?",
     "answer": "",
     "evaluation": {
       "status": "FAIL",
-      "reason": "The bot did not provide an answer based on the data provided in the source text."
+      "reason": "No response"
     }
   },
   {
-    "question": "Which faculty member listed in the 2023-2024 faculty list is currently pursuing a Ph.D., and what is the topic of their dissertation?",
-    "answer": "Okay, I can help with that. From the provided documents, these faculty members are listed as pursuing Ph.D. in 2023-2024:\n\n\u2022 Mr. VIMALATHITHAN S, Assistant Professor\n\u2022 Mr. PANDARINATHAN V, Assistant Professor\n\u2022 Mr. MOHIDEEN ABDUL KADHER M, Assistant Professor\n\u2022 Mrs. MUTHU PANDEESWARI R, Assistant Professor\n\nUnfortunately, the specific dissertation topics are not listed.\n\nWould you like to know about any faculty member's other qualifications?\n",
+    "question": "What is the exact passing criteria (minimum marks or grade) for Physics, Chemistry, and Mathematics in the 10+2 examination to be eligible for B.E. Computer Science and Engineering?",
+    "answer": "",
     "evaluation": {
-      "status": "PASS",
-      "reason": "The bot accurately identifies the faculty members listed as pursuing Ph.D.s in the 2023-2024 faculty list and correctly states that the document does not provide the specific dissertation topics. "
+      "status": "FAIL",
+      "reason": "No response"
     }
   }
 ]

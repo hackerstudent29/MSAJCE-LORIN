@@ -265,16 +265,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     except Exception as e:
         logger.error(f"Critical UI Error: {e}")
-        # Only show busy if the generation itself failed completely
+        # Only show busy if the generation itself failed
         if not full_response:
-            try:
-                await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.", parse_mode="Markdown")
-            except: pass
-        else:
-            # If we have partial text, keep it and just append a note
-            try:
-                await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=f"{full_response}\n\n[Connection interrupted. Please try again for a full answer.]")
-            except: pass
+            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.", parse_mode="Markdown")
 
 async def create_app():
     global _engine

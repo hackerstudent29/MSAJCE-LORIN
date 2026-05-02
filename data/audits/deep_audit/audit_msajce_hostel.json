@@ -22,5 +22,21 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "What time does breakfast begin on working days in the hostel dining hall?",
+    "answer": "Breakfast on working days starts at 7:00 AM in the hostel dining hall. What about holidays?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What time does dinner end on holidays in the hostel dining hall?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
   }
 ]

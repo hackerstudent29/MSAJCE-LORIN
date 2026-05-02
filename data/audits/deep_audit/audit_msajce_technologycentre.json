@@ -70,5 +70,21 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "In the Centre for 3D Printing and Additive Manufacturing, how many hours of training are there on materials?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text states that there are 4 hours of training on materials in the Centre for 3D Printing and Additive Manufacturing."
+    }
+  },
+  {
+    "question": "What CAD data format other than .STL is covered in the 3D Printing and Additive Manufacturing course?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot's response is an empty response. It does not answer the query with any information, which should be a fail."
+    }
   }
 ]

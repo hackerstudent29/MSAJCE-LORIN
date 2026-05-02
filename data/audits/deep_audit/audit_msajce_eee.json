@@ -62,5 +62,21 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "Is there a virtual link available for the course EC8311 \u00e2\u20ac\u201d Electronics, and if so, what is the URL?",
+    "answer": "Yes, there is indeed a virtual link for the course EC8311 - Electronics. It's available through the EEE department's Electronics Lab:\n\n\u2022 Virtual Link: https://www.msajce-edu.in/images/departments/eee/Lab/EC8311-Virtual.pdf\n\nWould you like information on the lab objectives or equipment details for this course?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What are the specific learning outcomes expected from students who complete the GE8261 \u00e2\u20ac\u201d Engineering Practices lab?",
+    "answer": "Regarding GE8261 Engineering Practices Lab, here's what students will learn:\n\u2022\tThey'll gain practical knowledge across various engineering fields.\n\u2022\tStudents will develop skills in areas like fabrication, basic machining, and electrical wiring.\n\u2022\tIt also covers fundamental aspects of civil and mechanical engineering practices.\n\nWant to know about other lab facilities available at MSAJCE?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

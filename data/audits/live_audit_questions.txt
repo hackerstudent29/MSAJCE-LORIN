@@ -834,3 +834,16 @@
 [FAIL] What is the total capacity of students that the Girls Hostel can accommodate?
 [UNKNOWN] According to the data, what annual growth rate is projected for Automotive Electronics sector between 2025 and 2030?
 [UNKNOWN] Which laboratory is associated with the EE8261 — Basic Electrical Electronics and Instrumentation Engineering course?
+[PASS] What is the full URL for the lesson plan of the Artificial Intelligence course, under the 2021 regulation?
+[PASS] In the Centre for 3D Printing and Additive Manufacturing, how many hours of training are there on materials?
+[FAIL] According to the provided faculty lists, how many faculty members specialized in 'Artificial Intelligence' in the 2021-2022 academic year?
+[UNKNOWN] What time does breakfast begin on working days in the hostel dining hall?
+[FAIL] What is the procedure for lateral entry admission into the B.E. - Computer Science and Engineering program, referencing the relevant document or rule?
+[UNKNOWN] Is there a virtual link available for the course EC8311 — Electronics, and if so, what is the URL?
+[PASS] Besides TCS, Infosys, Wipro, Accenture and CTS, which other listed companies hire CSBS graduates?
+[FAIL] What CAD data format other than .STL is covered in the 3D Printing and Additive Manufacturing course?
+[PASS] What percentage of the B.E. - Computer Science and Engineering curriculum, based on the 2021 Regulation, is dedicated to software engineering courses?
+[FAIL] What time does dinner end on holidays in the hostel dining hall?
+[FAIL] What is the exact passing criteria (minimum marks or grade) for Physics, Chemistry, and Mathematics in the 10+2 examination to be eligible for B.E. Computer Science and Engineering?
+[UNKNOWN] What was the total amount of seed funding dispersed to startups incubated at SIIF in 2023?
+[UNKNOWN] What are the specific learning outcomes expected from students who complete the GE8261 — Engineering Practices lab?
