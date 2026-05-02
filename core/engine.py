@@ -245,6 +245,7 @@ STRICT RULES:
         context_text = "\n\n".join([f"[Source {i+1}]: {clean_text(c['text'])}" for i, c in enumerate(context_chunks[:5])])
 
         # 3. Generation (High-Confidence Institutional Advocacy)
+        start_gen_time = time.time()
         is_count_only = p.get("is_count_only", False) if p else False
         is_repetition = p.get("is_repetition", False) if p else False
         marketing_mode = p.get("marketing_mode", False) if p else False
@@ -276,14 +277,22 @@ History: {history if history else "None"}"""
             
             if "\n" in line_buffer:
                 lines = line_buffer.split("\n")
-                # Yield all complete lines after post-processing
                 for i in range(len(lines) - 1):
                     yield self._post_process(lines[i]) + "\n"
-                line_buffer = lines[-1] # Keep the incomplete part
+                line_buffer = lines[-1]
         
-        # Final yield for the last bits
         if line_buffer:
             yield self._post_process(line_buffer)
+
+        # FINAL TELEMETRY PAYLOAD (Master Rule Section 5C)
+        end_time = time.time()
+        yield {
+            "type": "telemetry",
+            "intent": intent,
+            "sources": list(set([c.get("metadata", {}).get("source_file", "Unknown") for c in context_chunks])),
+            "latency_ms": int((end_time - start_time) * 1000),
+            "tokens": len(full_answer.split()) + len(context_text.split()) + 200 # Conservative estimate
+        }
             
         trace.update(output=self._post_process(full_answer))
 

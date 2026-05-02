@@ -37,13 +37,21 @@ async def get_db_pool():
         _db_pool = await asyncpg.create_pool(os.getenv("DATABASE_URL"))
     return _db_pool
 
-async def log_to_supabase(user_id, query, response, metadata=None):
+async def log_to_supabase(user_id, user_name, query, response, tel):
     try:
         pool = await get_db_pool()
+        intent = tel.get("intent", "FACT")
+        sources = tel.get("sources", [])
+        latency = tel.get("latency_ms", 0)
+        tokens = tel.get("tokens", 0)
+        cost = (tokens / 1000) * 0.0001 # Estimated cost for Flash 2.0
+        
         async with pool.acquire() as conn:
             await conn.execute(
-                "INSERT INTO interactions (user_id, query, response, metadata) VALUES ($1, $2, $3, $4)",
-                user_id, query, response, json.dumps(metadata or {})
+                """INSERT INTO interactions 
+                   (user_id, user_name, query, intent, response, sources, latency_ms, tokens_used, cost_usd) 
+                   VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)""",
+                user_id, user_name, query, intent, response, sources, latency, tokens, cost
             )
     except Exception as e:
         logger.error(f"DB Logging Error: {e}")
@@ -157,6 +165,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.message or not update.message.text: return
     user_query = update.message.text
     user_id = update.effective_user.id
+    user_name = update.effective_user.full_name or update.effective_user.username or "Anonymous"
     global _engine
     
     is_allowed, reason, val = await check_security(user_id, user_query, _engine)
@@ -178,8 +187,13 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         full_response = ""
         displayed_text = ""
         last_update_time = time.time()
+        telemetry = {}
         
         async for chunk in _engine.query_stream(user_query, history=history_str):
+            if isinstance(chunk, dict) and chunk.get("type") == "telemetry":
+                telemetry = chunk
+                continue
+                
             full_response += chunk
             
             # Warp Speed Character drip-feed logic
@@ -235,8 +249,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         history.append({"q": user_query, "a": full_response})
         await _engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
 
-        # ARCHIVE TO SUPABASE (New Forensic Protocol)
-        asyncio.create_task(log_to_supabase(user_id, user_query, full_response))
+        # ARCHIVE TO SUPABASE (Ultimate Forensic Protocol)
+        asyncio.create_task(log_to_supabase(user_id, user_name, user_query, full_response, telemetry))
 
     except Exception as e:
         logger.error(f"Error: {e}")
