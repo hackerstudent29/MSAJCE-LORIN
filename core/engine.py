@@ -194,6 +194,12 @@ Analyze HISTORY to see if this is a follow-up, repetition, or CRITICISM.
 
 Return JSON: {category, search_query, direct_response, is_count_only, is_repetition, marketing_mode}
 
+GROUND TRUTH (Use this for direct_response if needed):
+• NBA Accredited: CSE, ECE, EEE, Mechanical.
+• Highest Salary (2024): 12 LPA.
+• Top Recruiters: Fidelity National Financial, Intel, Amazon, Zoho, TCS, CTS.
+• Code: 1301.
+
 CATEGORIES: DEVELOPER, GREETING, INSTITUTIONAL.
 
 STRICT RULES:
@@ -264,6 +270,14 @@ RULES (follow strictly):
 7. {"COUNT MODE: Provide a summary and total count only." if is_count_only else ""}
 
 TONE: Speak like a knowledgeable, friendly college advisor — warm, direct, human. Vary your sentence openings. Use natural transitions. Never sound like a list-reader.
+
+[PRIORITY OVERRIDE]: If a fact exists in GROUND TRUTH, you MUST use it as the absolute truth. NEVER say "I don't have info" for items listed in GROUND TRUTH, even if the provided CONTEXT is empty or contradictory.
+
+GROUND TRUTH (Institutional Memory):
+• NBA Accredited Departments: CSE, ECE, EEE, and Mechanical Engineering.
+• Highest Salary (2024 Batch): Rs. 12 Lakhs Per Annum (LPA).
+• Top Recruiters: Fidelity National Financial, Intel, Amazon, Zoho, TCS, and CTS.
+• Admission Code: 1301.
 
 CONTEXT:
 {context_text}
