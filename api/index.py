@@ -28,6 +28,25 @@ app = Flask(__name__)
 
 # --- Global State ---
 _engine = None
+_db_pool = None
+
+async def get_db_pool():
+    global _db_pool
+    if _db_pool is None:
+        import asyncpg
+        _db_pool = await asyncpg.create_pool(os.getenv("DATABASE_URL"))
+    return _db_pool
+
+async def log_to_supabase(user_id, query, response, metadata=None):
+    try:
+        pool = await get_db_pool()
+        async with pool.acquire() as conn:
+            await conn.execute(
+                "INSERT INTO interactions (user_id, query, response, metadata) VALUES ($1, $2, $3, $4)",
+                user_id, query, response, json.dumps(metadata or {})
+            )
+    except Exception as e:
+        logger.error(f"DB Logging Error: {e}")
 
 def get_clean_env(key, default=""):
     val = os.getenv(key, default)
@@ -215,6 +234,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         
         history.append({"q": user_query, "a": full_response})
         await _engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
+
+        # ARCHIVE TO SUPABASE (New Forensic Protocol)
+        asyncio.create_task(log_to_supabase(user_id, user_query, full_response))
 
     except Exception as e:
         logger.error(f"Error: {e}")
