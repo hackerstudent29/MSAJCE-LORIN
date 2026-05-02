@@ -110,5 +110,13 @@
       "status": "PASS",
       "reason": "The bot accurately identifies the five sectors driving VLSI design industry growth based on the source text."
     }
+  },
+  {
+    "question": "What are the names of the seven government PSUs (Public Sector Undertakings) that recruit VLSI engineers?",
+    "answer": "Based on available information, only these Government PSUs recruit VLSI engineers:\n\u2022 SCL\n\u2022 ISRO\n\u2022 DRDO\n\u2022 HAL\n\u2022 BEL\n\nCan I help with any other information about VLSI or career opportunities?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately lists the Government PSUs recruiting VLSI engineers, as mentioned in the provided source text."
+    }
   }
 ]

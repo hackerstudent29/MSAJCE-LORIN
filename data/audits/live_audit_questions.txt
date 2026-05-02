@@ -774,3 +774,14 @@
 [PASS] How many students from the IT department received the scholarship in the 2023-2027 batch?
 [PASS] What is the deadline to submit online applications via the provided link (https://enrollonline.co.in/Registration/Apply/MSAJCE)?
 [PASS] When was the last time the curriculum for the CSBS program was reviewed and updated based on industry feedback?
+[UNKNOWN] How many copyrights were filed by faculty in the Department of Mechanical Engineering between 2020-2022?
+[UNKNOWN] How many Assistant Professors specialize in Artificial Intelligence, Web Technology in 2021-2022 faculty list?
+[PASS] How many students are currently active members of the Robotics Club, and what is the process for joining?
+[PASS] According to provided information, in which of the listed sectors can a CSE graduate find jobs?
+[UNKNOWN] How many students from the CSE department received the scholarship in the 2022-2026 batch?
+[UNKNOWN] In which department is S. Viswajaa, the staff coordinator for the Fine Arts Club, employed?
+[UNKNOWN] What was the total funding amount received from AICTE for sponsored projects in the 2021-2022 academic year?
+[UNKNOWN] On what date did Dr. Ammu Qudsiya A join the S&H department?
+[UNKNOWN] For students entering the program via lateral entry, what are the specific course codes and titles of the two foundational computer science courses they must complete within their 3-year program?
+[PASS] What is the estimated reduction in energy consumption achieved by the MSAJCE campus in the last year, based on the Energy and Eco Club's initiatives?
+[PASS] How many students from the ECE department received the scholarship in the 2022-2026 batch?

@@ -72,43 +72,35 @@
     }
   },
   {
-    "question": "According to the listofsupervisors.php, which department employs Dr. A. Suvitha, Anna University Ref. No 2070720?",
-    "answer": "Dr. A. Suvitha, with Anna University Ref. No. 2070720, works in the Inorganic Chemistry department.\n\nInterested in learning more about our research facilities?\n",
+    "question": "How many student project funding applications were submitted to TNSCST in 2023?",
+    "answer": "I don't have any specific figures for the number of student project funding applications submitted to TNSCST in 2023. However, the Research and Development Cell encourages students and faculty to apply for funding under the student project scheme to funding agencies like TNSCST, MSME, and IEI (I).\n\nWhat other types of research opportunities are available for students?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it doesn't have the specific number of project funding applications. It then correctly refers to the encouragement of students and faculty to apply for funding under the student project scheme to funding agencies like TNSCST, MSME, and IEI (I)."
+    }
+  },
+  {
+    "question": "What specific infrastructure improvements have been made since 2020 to support research in the Humanities?",
+    "answer": "Actually, my information focuses on technical and engineering resources. I don't have details about Humanities-specific research infrastructure upgrades since 2020.\n\nCan I help with information on engineering or technology-related infrastructure instead?\n",
     "evaluation": {
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
   },
   {
-    "question": "In which year was Dr. K.S. Srinivasan's book 'Electric Circuit Theory' published, based on the ISBN 978-81-938894-2-8?",
-    "answer": "Dr. K.S. Srinivasan's \"Electric Circuit Theory\" with ISBN 978-81-938894-2-8 was published before today's date.\n\nWould you like details on other books authored by Dr. K.S. Srinivasan?\n",
+    "question": "How many copyrights were filed by faculty in the Department of Mechanical Engineering between 2020-2022?",
+    "answer": "Between 2020 and 2022, Mechanical Engineering faculty filed the following copyrights:\n\n\u2022 2021:\n\u2022 Dr. K.S. Srinivasan, Dr. I. Manju, Ms. K. Gayathri: Revit Architecture Lab Manual (Copyright Number: 22218/2021-CO)\n\u2022 Dr. K. S. Srinivasan, Dr. I. Manju, Mr. K. Vairaperumal: Bot Lab Manual (Copyright Number: 22219/2021-CO)\n\u2022 2022:\n\u2022 Dr. R. Senthil Kumar, Mr. P. Saravanan, Mr. D. Sakthivel: Computer Aided Design - Course Manual (Copyright Number: 11415/2022-CO)\n\u2022 Dr. G. Ramesh, Mr. S.R. Mohan, Mr. V. Vigneswara: Computer Aided Design And Manufacturing - Laboratory Manual (Copyright Number: 11417/2022-CO)\n\u2022 Dr. S. Prasath, Mr. A. Muhammed Ifran, Mr. J. Rajesh: Meterology And Measurements - Laboratory Manual (Copyright Number: 11418/2022-CO)\n\u2022 Dr. R. Senthil Kumar, Dr. S. Prasath, Mr. J. Rajesh: Manufacturing Technology - Laboratory Manual (Copyright Number: 11420/2022-CO)\n\u2022 Dr. B. Janarthanan, Mr. P. Saravanan, Mr. S.R. Mohan: Computer Aided Simulation And Analysis - Laboratory Manual (Copyright Number: 11412/2022-CO)\n\u2022 Dr. R. Senthil Kumar, Mr. P. Saravanan, Mr. D. Sakthivel: Computer Aided Machine Drawing - Laboratory Manual (Copyright Number: 11409/2022-CO)\n\nInterested in exploring the department's patents as well?\n",
     "evaluation": {
-      "status": "PASS",
-      "reason": "The bot response correctly identifies Dr. K.S. Srinivasan as the author of \"Electric Circuit Theory\" with ISBN 978-81-938894-2-8, and this book is listed in the source text. The phrase 'before today's date' is also valid."
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
     }
   },
   {
-    "question": "What is the exact number of publications listed in the 2019-2020 PDF report accessible via the link on the research page?",
-    "answer": "",
+    "question": "What was the total funding amount received from AICTE for sponsored projects in the 2021-2022 academic year?",
+    "answer": "The provided information does not specify the exact funding received from AICTE for sponsored projects during the 2021-2022 academic year. However, the R&D Cell supports applying for funding from agencies like AICTE. Also, AICTE provides Pragati and Saksham scholarships.\n\nWould you like to explore the research and development initiatives at MSAJCE?\n",
     "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "Is Dr. B. Sheela Rani, Dean Research at Sathyabama University still on the Research Advisory Committee, or has Dr. Somashekhar S Hiremath replaced her?",
-    "answer": "Dr. B. Sheela Rani, Dean Research, Sathyabama University, is listed as an Advisor on the Research Advisory Committee in an alternate listing; however, the primary listing names Dr. Somashekhar S Hiremath, Associate Professor, IIT Madras, as the Advisor.\n\nWould you like the contact information for either of them?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot accurately reflects the information provided in the source text, specifically mentioning Dr. B. Sheela Rani's alternate listing and Dr. Somashekhar S Hiremath's primary listing on the Research Advisory Committee."
-    }
-  },
-  {
-    "question": "What is the official registration number, if any, for the Entrepreneurship Development Institute of India (EDII) Chennai, listed as a Strategic partnership linkage?",
-    "answer": "EDII Chennai's registration number is not listed in my documents. Do you need the contact information for EDII Chennai instead?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot correctly states that the EDII Chennai's registration number is not listed in the provided documents and offers an alternative."
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
     }
   }
 ]

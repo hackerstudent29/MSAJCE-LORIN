@@ -62,5 +62,21 @@
       "status": "PASS",
       "reason": "The bot correctly states it does not have the specific rubrics, which is true as the source text does not contain this information."
     }
+  },
+  {
+    "question": "What is the student-to-faculty ratio in the B.Tech ECE-ACT program?",
+    "answer": "I don't have the precise student-to-faculty ratio for the B.Tech ECE-ACT program currently. Is there anything else I can assist you with regarding the ECE-ACT program, like faculty specializations or course materials?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it does not have the student-to-faculty ratio for the program, which is not found in the source text."
+    }
+  },
+  {
+    "question": "What are the details of the collaborations that MSAJCE has with companies like Cisco, Havells, and 3M India, specifically for the B.Tech ECE-ACT program?",
+    "answer": "Okay, here's what I know about industry collaborations relevant to the B.Tech ECE-ACT program.\n\n\u2022 Industry Partners: While Havells and 3M India are listed as potential employers for ECE-ACT graduates, direct collaborations are specified for Automation Anywhere, Godrej Inc, Ford, Palo Alto Systems, Amazon Web Services, National Instruments, CISCO Academy, Altair, Open Wave Computing, Levergent Technologies, and Propeller Technologies.\n\u2022 Cisco Networking Academy: MSAJCE has a dedicated \"Centre for Cisco Networking Academy.\" You can find more information here: https://www.msajce-edu.in/departments/CFT/02CiscoAcademy.pdf\n\nWould you like more details on the Cisco Networking Academy at MSAJCE?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response correctly identifies Cisco as a partner with a dedicated center and lists several other industry partners mentioned in the document. It also accurately states that Havells and 3M India are listed as potential employers, aligning with the provided text."
+    }
   }
 ]

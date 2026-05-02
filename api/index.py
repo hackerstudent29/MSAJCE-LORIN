@@ -252,7 +252,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
         
         # 2. SAVE TO SEMANTIC CACHE
-        await db_pool.execute(
+        pool = await get_db_pool()
+        await pool.execute(
             "INSERT INTO semantic_cache (query_hash, user_query, bot_response) VALUES ($1, $2, $3) ON CONFLICT (query_hash) DO NOTHING",
             query_hash, user_query, full_response
         )

@@ -48,35 +48,51 @@
     }
   },
   {
-    "question": "How much funding was allocated to the MSAJCE Sports Club in the last annual budget report?",
-    "answer": "I cannot give you the exact funding allocated to the MSAJCE Sports Club. However, the Sports Club does submit annual reports on sports, events, budget allocations, and spending during the year. You can consult the Annual Report AY2023-2024 here: https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf.\n\nDo you have any other questions about the MSAJCE Sports Club?\n",
+    "question": "What specific software is used by the Photography Club for photo editing, and is training provided to members?",
+    "answer": "The Photography Club utilizes cutting-edge software for photo editing to help members develop their skills. Further, the club provides training on how to use this software for both personal use and publication.\n\nDoes the Robotics Club offer similar hands-on training for its members?\n",
     "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
+      "status": "FAIL",
+      "reason": "The provided answer makes a claim about the Robotics club offering hands-on training, but there is no information about the Robotics Club in the provided text. The text only contains a description of the Robotics Club's activities, and no indication that training provided."
     }
   },
   {
-    "question": "On what date was the ENVISTA CLUB, including the Fine Arts Club, officially inaugurated at MSAJCE?",
-    "answer": "The provided information confirms that Mohamed Sathak AJ College of Engineering has successfully inaugurated the ENVISTA CLUB. However, the exact date of the inauguration isn't specified.\n\nInterested in joining a club?\n",
+    "question": "Can I see a detailed breakdown of the expenses incurred by the Fine Arts Club during the most recent ENVISTA CLUB event?",
+    "answer": "The Fine Arts Club, ARTFUL AESTHETICS, is part of ENVISTA CLUB. However, specific expense breakdowns for ENVISTA CLUB events aren't available to me. The club focuses on encouraging student talent, skill-based training, and artistic expression through various events.\n\nAlternatively, would you like to know more about the club's objectives or planned activities?\n",
     "evaluation": {
       "status": "PASS",
-      "reason": "The bot response correctly states that the exact date of the inauguration isn't specified in the provided text."
+      "reason": "The bot acknowledges the Fine Arts Club's connection to ENVISTA CLUB as stated in the source text. While it doesn't provide the specific expense breakdown (which isn't in the source), it accurately states its inability to access that information and offers alternative information about the club's objectives."
     }
   },
   {
-    "question": "What specific software will members of the Photography Club be trained on for photo editing?",
-    "answer": "Photography Club members will learn to edit and enhance photos using cutting-edge software.\n\nWould you like to know about other skills developed in the photography club?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "What is the deadline to submit online applications via the provided link (https://enrollonline.co.in/Registration/Apply/MSAJCE)?",
-    "answer": "I cannot give you a definite deadline, as it is not specified. However, you can start your application through the online form.\n\nWould you like information about the courses offered?\n",
+    "question": "What specific measures are in place to ensure inclusivity and participation from students of all backgrounds in the Tamil Mandram activities?",
+    "answer": "The Tamil Mandram aims to ensure inclusivity through various objectives and activities.\n\n\u2022 It strives to develop Tamil enthusiasm and knowledge among all students.\n\u2022 It spreads awareness of ancient Tamil culture and heritage among today's youth.\n\u2022 Further, the Mandram develops technical knowledge in Tamil.\n\u2022 It continuously conducts Tamil events and social activities.\n\nFor example, events like 'Irumugam Oru Agam' (elocution/drama) and 'Pessum Padam' (storytelling) encourage diverse participation.\n\nWhat else can I help you with regarding the Tamil Mandram?\n",
     "evaluation": {
       "status": "PASS",
-      "reason": "The bot acknowledges that the deadline is not specified in the provided text, which is accurate. It does not hallucinate information or contradict the source material."
+      "reason": "The bot response accurately reflects the objectives and activities of the Tamil Mandram as described in the source text."
+    }
+  },
+  {
+    "question": "What were the specific criteria used to select Kishore P as Student President of the Fine Arts Club?",
+    "answer": "Well, the Fine Arts Club aims to tap into the inherent talents of students at all levels. The club likely chose Kishore P, IV Year Mechanical, for his leadership skills, artistic talent, and commitment to the club's objectives. Through this role, Kishore is expected to encourage students to actively participate and develop their skills in areas like dance, art, singing, music, and acting.\n\nAre you curious about the selection process for other club positions as well?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response provides a reasonable, accurate account of why Kishore P was selected as Student President of the Fine Arts Club, and it is consistent with the objectives outlined for the Fine Arts Club in the source text."
+    }
+  },
+  {
+    "question": "How many students are currently active members of the Robotics Club, and what is the process for joining?",
+    "answer": "I do not have the current number of Robotics Club members.\n\nHowever, to join the Robotics Club, keep in mind its aim is to cultivate the habit of 'thinking technologically'. The club's objectives are to encourage young people to become the robotics industry's driving force, creatively use information, observe how systems interact, and gain professional engineering skills. Club activities include robotics education initiatives, training sessions, and robotics basics workshops.\n\nWould you like information on any other clubs at MSAJCE?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the current number of Robotics Club members, which is not found in the source text. The rest of the response references the objectives of the Robotics Club, which is described in the source text."
+    }
+  },
+  {
+    "question": "What is the estimated reduction in energy consumption achieved by the MSAJCE campus in the last year, based on the Energy and Eco Club's initiatives?",
+    "answer": "I cannot give you the estimated reduction in energy consumption on campus achieved by the Energy and Eco Club; I do not have access to those statistics. I can say that the goal of the Energy Club is to promote responsible and sustainable energy use through resource management and conservation awareness.\n\nWould you like to know more about the Energy and Eco Club's initiatives?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges that it doesn't have access to specific statistics about energy consumption reduction. It accurately states the goal of the Energy Club based on the source text."
     }
   }
 ]

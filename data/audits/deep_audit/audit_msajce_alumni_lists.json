@@ -158,5 +158,21 @@
       "status": "PASS",
       "reason": "The bot accurately extracts and lists the names of the IT department students who received the scholarship in the 2023-2027 batch and counts them correctly. The listed names and the final count are consistent with the source text."
     }
+  },
+  {
+    "question": "How many students from the CSE department received the scholarship in the 2022-2026 batch?",
+    "answer": "From the CSE department, the following students from the 2022-2026 batch received the Alumni Scholarship:\n\u2022 Nazmi A\n\u2022 Md Ashraf\n\u2022 M.S. Shajaneshwar\n\u2022 M. Mohamed Ashraf\n\nSo, 4 students in total from CSE Batch 2022-2026 received the alumni scholarship. Did you know we also offer merit scholarships based on cut-off scores?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many students from the ECE department received the scholarship in the 2022-2026 batch?",
+    "answer": "From the ECE department, the following students from the 2022-2026 batch received the Alumni Scholarship: Zakir Hussain, Mohamed Ashraf, Md Sajith, and Nilofer Nisha. That's four students.\n\nDo you want a list of scholarship recipients from other departments as well?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies the four students from the ECE department (2022-2026 batch) who received the Alumni Scholarship according to the provided source text."
+    }
   }
 ]

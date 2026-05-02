@@ -46,5 +46,29 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "What is the specific JWT authentication standard used across Ramanathan S's projects, and what measures are in place to prevent token compromise?",
+    "answer": "Ramanathan S utilizes secure JWT Authentication (Access/Refresh Tokens) with Role-Based Access Control (RBAC) in his projects.\n\nGiven that Ram focuses on enterprise-grade monorepos and low-latency RAG pipelines, it's also likely that he uses industry-standard security practices to prevent token compromise, like token rotation and secure storage of secrets. You can check his GitHub at [https://github.com/hackerstudent29](https://github.com/hackerstudent29) to see specific implementations.\n\nDo you have more questions about the projects of other students or faculty members?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the information in the source text regarding Ramanathan S's use of secure JWT authentication with RBAC. It also makes a reasonable inference about his likely use of industry-standard security practices, which aligns with his specialization and project focus."
+    }
+  },
+  {
+    "question": "What benchmarking data supports the claim of 'low-latency' for the RAG pipelines Ramanathan S designs?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What are the specific RBAC (Role-Based Access Control) roles and permissions defined in Zenpay, and how are they enforced?",
+    "answer": "I see that Zenpay is a production-grade Payment Gateway Platform and one of the major engineering projects by Ramanathan S. According to my information, it utilizes secure JWT Authentication with Role-Based Access Control (RBAC).\n\nHowever, the specific RBAC roles and permissions defined in Zenpay, and how they are enforced are not detailed. Would you like to contact Ramanathan S directly for technical information on Zenpay's RBAC implementation?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response is factually accurate based on the source text. It correctly identifies Zenpay and that it uses RBAC. It acknowledges that the specific details of the RBAC implementation are not provided and suggests contacting Ramanathan S directly, which is a reasonable suggestion given the context."
+    }
   }
 ]

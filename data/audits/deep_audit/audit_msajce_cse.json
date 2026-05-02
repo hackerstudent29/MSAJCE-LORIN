@@ -94,5 +94,21 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "How many Assistant Professors specialize in Artificial Intelligence, Web Technology in 2021-2022 faculty list?",
+    "answer": "Okay, I can help with that.\n\nHere's the breakdown of Assistant Professors specializing in Artificial Intelligence and Web Technology during the academic year 2021-2022:\n\n\u2022 Sasikala L\n\u2022 Uma Maheshwari R\n\u2022 Premitha A\n\u2022 Praveen Kumar G\n\nTotal count: 4\n\nAre you interested in faculty specializations from other years as well?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "According to provided information, in which of the listed sectors can a CSE graduate find jobs?",
+    "answer": "A CSE graduate can find job opportunities in these sectors:\n\u2022 IT (private and public)\n\u2022 Public Sector: Railways, Airport, ONGC, Remote Sensing, Banking.\n\u2022 Private Sector: TCS, Infosys, CTS, Wipro, HCL Technology, Tech Mahindra, Zoho, Intel, Accenture, IBM, FSS.\n\nAre you curious about the specific skills needed for these CSE jobs?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately lists the sectors where a CSE graduate can find job opportunities, as mentioned in the provided source text."
+    }
   }
 ]
