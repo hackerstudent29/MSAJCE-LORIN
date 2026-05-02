@@ -118,5 +118,29 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "What was the exact outlay in Rupees for the Government of India's Semiconductor scheme announced in December 2021?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The document explicitly states: \"Government of India announced Semiconductor scheme with an outlay of Rs 76,000 Crore in December 2021\""
+    }
+  },
+  {
+    "question": "How many seats are available in total for the B.Tech program in Electronics Engineering with Specialization in VLSI Design & Technology at MSAJCE?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The information about the number of seats (30) is available in the source text and is correct."
+    }
+  },
+  {
+    "question": "What is the specific URL link for the 2021 Regulation Curriculum & Syllabus for the B.Tech program?",
+    "answer": "For the B.Tech programs, the 2021 Regulation Curriculum & Syllabus can be found at: https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf.\n\nNeed any other curriculum links?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

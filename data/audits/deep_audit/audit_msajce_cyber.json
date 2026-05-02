@@ -6,5 +6,53 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "What is the exact name of the degree awarded upon completion of the 4-year program: B.E. Computer Science and Engineering with Specialization in Cyber Security (CSCS), or is there another wording?",
+    "answer": "The degree awarded is \"B.E. Computer Science and Engineering with Specialization in Cyber Security (CSCS)\".\n\nAre you also curious about the curriculum for this program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response accurately reflects the information provided in the source text regarding the degree awarded for the 4-year program."
+    }
+  },
+  {
+    "question": "What are the specific criteria used to determine allocation of seats under the 'Government' quota of 15 seats?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "If I enter via Lateral Entry, are the courses covered in the first two semesters of the regular program available to me?",
+    "answer": "Yes, lateral entry students will cover the equivalent material from the first two semesters in a condensed format. You'll complete the program in 6 semesters instead of 8.\n\nWhat specific department are you interested in for lateral entry?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text states that Lateral Entry students complete the program in 6 semesters instead of 8, suggesting the material is condensed. "
+    }
+  },
+  {
+    "question": "Besides TCS, Infosys, Accenture, Palo Alto Networks and IBM Security, what are the names of 3 other IT and Cyber Security firms that recruited from the CSCS program in the past 2 years?",
+    "answer": "Okay! Since today is May 03, 2026, I'll check which firms recruited from the Cyber Security (CSCS) program in the past two years (2024 and 2025).\n\nBased on available information, other IT and Cyber Security firms that recruited from the CSCS program include:\n\u2022 Cognizant (CTS)\n\u2022 HCL\n\u2022 Capgemini\n\nWant to know about other companies that recruit from our other programs?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Are there minimum grade requirements for the Physics, Chemistry, and Mathematics courses in the 10+2 system of Education to be eligible for the CSCS program?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Can you provide the names of three faculty members who teach courses specifically related to 'ethical hacking'?",
+    "answer": "Unfortunately, I cannot provide a direct list of faculty teaching 'ethical hacking' courses. The provided documents do not specify which faculty members teach which specific courses.\n\nWould you like information on the faculty in a specific department or perhaps the faculty list in general?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it cannot provide a list of faculty members teaching ethical hacking based on the provided documents."
+    }
   }
 ]

@@ -34,8 +34,13 @@ _db_pool = None
 async def get_db_pool():
     global _db_pool
     if _db_pool is None:
+        db_url = os.getenv("DATABASE_URL")
+        # Strict Cloud Check: Prevent localhost attempts
+        if not db_url or "127.0.0.1" in db_url or "localhost" in db_url:
+            logger.warning("Supabase DATABASE_URL missing or local. Skipping cloud logging.")
+            return None
         import asyncpg
-        _db_pool = await asyncpg.create_pool(os.getenv("DATABASE_URL"))
+        _db_pool = await asyncpg.create_pool(db_url)
     return _db_pool
 
 async def log_to_supabase(user_id, user_name, query, response, tel):
@@ -253,13 +258,15 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # 2. SILENT BACKGROUND PERSISTENCE (Doesn't crash the UI)
         try:
             pool = await get_db_pool()
-            await pool.execute(
-                "INSERT INTO semantic_cache (query_hash, user_query, bot_response) VALUES ($1, $2, $3) ON CONFLICT (query_hash) DO NOTHING",
-                query_hash, user_query, full_response
-            )
+            if pool:
+                await pool.execute(
+                    "INSERT INTO semantic_cache (query_hash, user_query, bot_response) VALUES ($1, $2, $3) ON CONFLICT (query_hash) DO NOTHING",
+                    query_hash, user_query, full_response
+                )
+                asyncio.create_task(log_to_supabase(user_id, user_name, user_query, full_response, telemetry))
+            
             history.append({"q": user_query, "a": full_response})
             await _engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
-            asyncio.create_task(log_to_supabase(user_id, user_name, user_query, full_response, telemetry))
         except Exception as log_err:
             logger.error(f"Background Logging Error: {log_err}")
 

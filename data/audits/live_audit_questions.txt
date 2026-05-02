@@ -937,3 +937,33 @@
 [FAIL] What specific version of the 2021 Regulation curriculum is currently being followed, including the date of the last update?
 [PASS] According to the provided data, what is the expected annual growth rate for the Indian IT industry?
 [UNKNOWN] What was the expenditure on infrastructure upgrades as documented in AQAR criterion 4.1.4 for the academic year 2023-2024?
+[FAIL] What measures are put into place to keep lab equipment current with the most recent technology and versions?
+[PASS] What is the process for a student to request an Inter Library Loan (ILL) through DELNET, and how long does it typically take to receive the requested material?
+[PASS] What is the exact name of the degree awarded upon completion of the 4-year program: B.E. Computer Science and Engineering with Specialization in Cyber Security (CSCS), or is there another wording?
+[PASS] According to the job profile descriptions, what are the primary responsibilities of an ASIC Engineer?
+[FAIL] What is the minimum and maximum expected salary for a Data Engineer in India between 2025 and 2030, according to the IT Employment Forecast?
+[PASS] What is the faculty vs sanctioned posts count for academic year 2023-24 as documented in AQAR Section 3.2?
+[UNKNOWN] What are the prerequisites for ethical hacking and digital forensics courses? Must students take a foundations course, or are there any prior skill assessments?
+[FAIL] How many e-books are accessible through the library's subscribed e-book databases, excluding the 3790 e-books listed under 'Stack Collection Details'?
+[FAIL] What are the specific criteria used to determine allocation of seats under the 'Government' quota of 15 seats?
+[PASS] What is the primary aim of the National Digital Communications Policy (NDCP 2018), as stated in the provided information?
+[FAIL] According to the AQAR 2023-2024 data, what is the average teaching experience of the full-time teachers?
+[PASS] Under which regulation (2017 or 2021) are the current students admitted to the B.Tech IT program following?
+[UNKNOWN] What is the current annual subscription cost for the J-Gate database?
+[PASS] What was the exact outlay in Rupees for the Government of India's Semiconductor scheme announced in December 2021?
+[PASS] If I enter via Lateral Entry, are the courses covered in the first two semesters of the regular program available to me?
+[PASS] What specific skills are required for a Research Engineer working on 6G/Quantum Communications?
+[PASS] Which faculty member joined the IT department most recently as of the provided data (2023-2024 academic year)?
+[UNKNOWN] Besides TCS, Infosys, Accenture, Palo Alto Networks and IBM Security, what are the names of 3 other IT and Cyber Security firms that recruited from the CSCS program in the past 2 years?
+[UNKNOWN] What specific e-resources subscriptions were active during the academic year 2023-2024, as reported in the AQAR?
+[FAIL] What is the process for a student to suggest a new journal or magazine subscription for the library?
+[FAIL] What are the specific file sizes of the Equipment Details document for C Programming Lab and the Virtual Lab document for Internet Programming Lab, based on information available from msajce-edu.in?
+[PASS] How many seats are available in total for the B.Tech program in Electronics Engineering with Specialization in VLSI Design & Technology at MSAJCE?
+[PASS] Where can the public find the list of Memorandums of Understanding related to experiential learning and internships, as indicated in the AQAR for 2023-2024?
+[FAIL] According to the document, what is the specific role of Ethical Hacker also known as?
+[FAIL] Are there minimum grade requirements for the Physics, Chemistry, and Mathematics courses in the 10+2 system of Education to be eligible for the CSCS program?
+[FAIL] How many full time faculty hold Ph.D.'s in academic year 2023-2024?
+[FAIL] According to library records, what was the average daily attendance in the library during the AY2023-2024?
+[PASS] How many faculty members in the EEE department held a Ph.D. in the academic year 2020-2021?
+[PASS] Can you provide the names of three faculty members who teach courses specifically related to 'ethical hacking'?
+[UNKNOWN] What is the specific URL link for the 2021 Regulation Curriculum & Syllabus for the B.Tech program?

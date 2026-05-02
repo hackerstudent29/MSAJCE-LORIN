@@ -62,5 +62,45 @@
       "status": "PASS",
       "reason": "The bot accurately states that the text indicates a plan to procure funds but does not confirm successful procurement in the last financial year."
     }
+  },
+  {
+    "question": "How many FDPs, seminars, and workshops were organized in the last year for students, faculty, and alumni to promote entrepreneurial culture, as per Short Term Objective #4?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the total number of Mentorship program participants who are industry experts, offered by the incubation cell?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Which regional/national/international linkages were established in the last year for start-up and innovation, as per the KPI of '2 Regional/National/International linkages established for start-up & innovation'?",
+    "answer": "I can check that for you! According to the KPI report, the college aims to establish 2 regional, national, or international linkages for start-up and innovation per year. I can look into the specific linkages that were established in the last year.\n\nWould you like to know about the specific linkages for the current academic year?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the KPI mentioned in the source text regarding establishing 2 regional/national/international linkages for start-up & innovation per year. It also offers to provide more specific details, aligning with the source document's intent to track and report on these activities."
+    }
+  },
+  {
+    "question": "What is the email address for the Head EDC & HEC, Mr. S.V. Vinodh / EEE?",
+    "answer": "Okay, so Mr. S.V. Vinodh from EEE is the Head of EDC & HEC. Unfortunately, his email isn't listed.\n\nWould you like the general college email address?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many student and faculty members participated in the 'Online Sessions on Acceleration \u00e2\u20ac\u201d Early Stage Entrepreneurs' event on August 2, 2023, organized by the IT department?",
+    "answer": "Around 150 students and faculty members participated in the 'Online Sessions on Acceleration \u2014 Early Stage Entrepreneurs' event organized by the IT department on August 2, 2023.\n\nWould you like information on any other IIC events?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the information provided in the source text regarding the number of participants in the 'Online Sessions on Acceleration \u2014 Early Stage Entrepreneurs' event."
+    }
   }
 ]

@@ -1,14 +1,30 @@
 [
   {
-    "question": "How many total physical books (Volumes + Reference Books) are available in the library?",
-    "answer": "The library has a total of 31,738 physical books, which includes 29,853 volumes and 1,885 reference books.\n\nWould you like to know about the e-book resources too?\n",
+    "question": "What is the process for a student to request an Inter Library Loan (ILL) through DELNET, and how long does it typically take to receive the requested material?",
+    "answer": "To request an Inter Library Loan (ILL) through DELNET:\n\n\u2022 You can access books, Xerox copies, or soft copies of journal articles via ILL.\n\u2022 As a member of the college library, you're eligible to use this service.\n\nWhile the process details aren't specified, you should contact the librarian. Also, note that the library offers services, including Inter Library Loans.\n\nI lack the typical delivery time of materials through ILL.\n\nWould you like more information about library services?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that the library offers Inter Library Loan services through DELNET, and that students are eligible to use the service as members of the college library. It also correctly acknowledges that it lacks the information about typical delivery times. The response aligns with the information provided in the source text."
+    }
+  },
+  {
+    "question": "How many e-books are accessible through the library's subscribed e-book databases, excluding the 3790 e-books listed under 'Stack Collection Details'?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the current annual subscription cost for the J-Gate database?",
+    "answer": "I don't have the specific annual subscription cost for J-Gate. However, MSAJCE subscribes to the J-Gate database yearly, providing access to over 50,684 journals.\n\nWould you like information on other library resources?\n",
     "evaluation": {
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
   },
   {
-    "question": "What is the total square footage of the library, combining both Ground Floor and 1st Floor?",
+    "question": "What is the process for a student to suggest a new journal or magazine subscription for the library?",
     "answer": "",
     "evaluation": {
       "status": "FAIL",
@@ -16,227 +32,11 @@
     }
   },
   {
-    "question": "How many E-Journals are accessible through the DELNET subscription?",
-    "answer": "The library subscribes to 1379 E-Journals via DELNET.\n\nCan I help you find any of these journals?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The response is factually accurate and the information is available in the source text."
-    }
-  },
-  {
-    "question": "What is the exact URL for accessing the J-Gate database?",
-    "answer": "The URL for accessing the J-Gate database is https://jgateplus.com/. You can access more than 50,684 journals on this online website.\n\nAre you interested in exploring other e-library databases as well?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "What is the latest time on Saturdays that the library remains open?",
+    "question": "According to library records, what was the average daily attendance in the library during the AY2023-2024?",
     "answer": "",
     "evaluation": {
       "status": "FAIL",
       "reason": "No response"
-    }
-  },
-  {
-    "question": "Which department has the highest number of printed journal subscriptions?",
-    "answer": "The Computer Science Engineering/Information Technology department has the highest number of printed journal subscriptions, with 10 journals.\n\nWould you like to know the library's working hours?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "How many printed journals are specifically subscribed to by the Civil Engineering department?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "What is the URL for the Directory of Open Access Journals?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "Besides DELNET and J-Gate, what other E-Library database offers access to online resources?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "What is the URL for the National Digital Library?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "How many E-Books are available through the library's resources?",
-    "answer": "The library offers access to 3790 E-Books.\n\nWould you like a list of the E-Book databases and URLs the library subscribes to?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The source text states that there are 3790 E-Books available."
-    }
-  },
-  {
-    "question": "What is the URL to access AMS books E-Books?",
-    "answer": "You can access AMS Books E-Books through this URL: http://www.ams.org/.\n\nWould you like a list of other e-book resources available?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The URL provided by the bot is accurate and is listed as the URL for AMS Books in the provided text."
-    }
-  },
-  {
-    "question": "What is the official URL for MIT OpenCourseWare listed for free online course materials?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "According to the library rules, how many books are UG students allowed to borrow at a time?",
-    "answer": "Undergraduate students can borrow up to 18 books at a time from the library. What other library services are you interested in?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "What is the loan period, in days, for books borrowed by teaching staff?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "What is the fine per day per book for the first 7 days of overdue books after the initial 30-day borrowing period?",
-    "answer": "If you keep a book past the 30-day borrowing period, the fine for the first 7 days (days 31-37) is Rs. 1.00 per day per book.\n\nIs there anything else I can help you with regarding library policies?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot accurately states the fine for the first 7 days of overdue books as Rs. 1.00 per day per book, as outlined in the 'Fine Structure for Overdue Books' section of the source text."
-    }
-  },
-  {
-    "question": "What is the URL for the Developing Library Network (DELNET) \u00e2\u20ac\u201d International Library Network?",
-    "answer": "The URL for the Developing Library Network (DELNET) is https://delnet.in/. We are members of DELNET, so you can access books, Xerox copies, or soft copies of journal articles through Inter Library Loan (ILL).\n\nDo you have any questions about library membership?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot provided the correct URL for DELNET, as found in the source text. It accurately stated that the institution is a member of DELNET and explained Inter Library Loan (ILL)."
-    }
-  },
-  {
-    "question": "Is there a limit to the amount of books teaching staffs can borrow?",
-    "answer": "Yes, teaching staff can borrow up to 10 books from the library. Additionally, the loan period is 30 days.\n\nIs there anything else you'd like to know about library resources?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "How many members from EEE Department are in the Library Committee?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "What is the email address listed for general inquiries about MSAJCE?",
-    "answer": "For general inquiries, the email address is msajce.office@gmail.com.\n\nDo you have any other questions about contacting the college?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The email address listed for general inquiries about MSAJCE is msajce.office@gmail.com, which is in the source text."
-    }
-  },
-  {
-    "question": "What is the official website URL for MSAJCE?",
-    "answer": "The official website for MSAJCE is www.msajce-edu.in.\n\nNeed to know more about the college?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The provided website URL is present and accurate in the source text."
-    }
-  },
-  {
-    "question": "What is the URL for MSAJCE's College Video on YouTube?",
-    "answer": "The URL for the MSAJCE college video on YouTube is https://youtu.be/aNVaQWh1Pp4.\n\nWould you like to know more about other video resources from the college?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "What is the URL for MSAJCE's NAAC information?",
-    "answer": "Find NAAC details at https://www.msajce-edu.in/naac.php.\n\nHave you seen our college video yet? It's available on the website.\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The URL provided for NAAC information is accurate and present in the source text."
-    }
-  },
-  {
-    "question": "What is the URL for MSAJCE's Academic Calendar?",
-    "answer": "You can find the academic calendar at https://www.msajce-edu.in/AC.php.\n\nAre you also interested in viewing the college's list of holidays?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The URL provided by the bot is present in the source text and is correct."
-    }
-  },
-  {
-    "question": "What is the URL for the Annual Report AY2023-2024?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "How many CD-ROMs are there in the library?",
-    "answer": "The library has 356 CD-ROMs.\n\nAre you interested in exploring other resources available in the library?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The source text states 'CD-ROM | 356', so the bot response is factually accurate."
-    }
-  },
-  {
-    "question": "How many Project Reports are there in the library?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "Does the library subscribe to international journals directly through Gale?",
-    "answer": "Yes, the library provides access to 1800 international journals through the Gale database.\n\nNeed to know more about any specific library resources?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "Are daily newspapers available for reading in the library?",
-    "answer": "",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "No response"
-    }
-  },
-  {
-    "question": "What is the URL of the Open Access e-Books provider, Intech?",
-    "answer": "Intech's Open Access e-Books URL is http://www.intechopen.com/.\n\nWould you like to know about other e-book providers too?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The URL provided in the bot response matches the URL listed for Intech in the source text under 'E-Books Databases \u2014 Providers and Access URLs'."
     }
   }
 ]

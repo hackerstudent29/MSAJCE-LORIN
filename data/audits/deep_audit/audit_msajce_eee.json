@@ -118,5 +118,13 @@
       "status": "PASS",
       "reason": "The bot response is factually accurate. The bot response refers to the 'Equipment Details' link within the Power System Simulation Lab (PSS) section of the EEE Department Laboratories, as seen in the source text."
     }
+  },
+  {
+    "question": "How many faculty members in the EEE department held a Ph.D. in the academic year 2020-2021?",
+    "answer": "In 2020-2021, Mr. Chintala Venkatesh and Mrs. Nisha P from the EEE department held a Ph.D. That makes a total of 2 faculty members.\n\nCan I help you with any information about other departments?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identified that in the 2020-2021 academic year, Mr. Chintala Venkatesh (listed as nearing completion) and Mrs. Nisha P held a Ph.D. in the EEE department, totaling 2 faculty members, as stated in the source text."
+    }
   }
 ]

@@ -206,5 +206,37 @@
       "status": "FAIL",
       "reason": "The bot failed to provide the specific objectives for the Networks Lab course (CS8581) as outlined in the document link. It should have extracted the objectives from the linked PDF, but it did not provide any information."
     }
+  },
+  {
+    "question": "According to the job profile descriptions, what are the primary responsibilities of an ASIC Engineer?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response accurately reflects the information provided in the source text regarding the job description of an ASIC Engineer."
+    }
+  },
+  {
+    "question": "What is the primary aim of the National Digital Communications Policy (NDCP 2018), as stated in the provided information?",
+    "answer": "The National Digital Communications Policy (NDCP 2018) primarily aims to position India as a global leader in communication technologies and attract investment in 5G and beyond.\n\nDoes that answer your question?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate and is directly stated in the provided source text."
+    }
+  },
+  {
+    "question": "What specific skills are required for a Research Engineer working on 6G/Quantum Communications?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The skills required for a Research Engineer working on 6G/Quantum Communications are mentioned in the source text."
+    }
+  },
+  {
+    "question": "What are the specific file sizes of the Equipment Details document for C Programming Lab and the Virtual Lab document for Internet Programming Lab, based on information available from msajce-edu.in?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot did not provide the file sizes, instead opting to provide a canned response. "
+    }
   }
 ]

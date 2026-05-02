@@ -54,5 +54,37 @@
       "status": "PASS",
       "reason": "The bot's response accurately reflects the expected annual growth rate for the Indian IT industry as stated in the source text."
     }
+  },
+  {
+    "question": "What is the minimum and maximum expected salary for a Data Engineer in India between 2025 and 2030, according to the IT Employment Forecast?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Under which regulation (2017 or 2021) are the current students admitted to the B.Tech IT program following?",
+    "answer": "Determining the regulation depends on their admission year. Students currently in the B.E. CSE program admitted in 2021 or later would follow the 2021 Regulation. Those admitted earlier would follow the 2017 Regulation.\n\nAre you looking for information on the syllabus covered in either of these regulations?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately states that the regulation followed depends on the year of admission, with students admitted in 2021 or later following the 2021 Regulation and those admitted earlier following the 2017 Regulation. This information can be inferred from the links provided for the 2017 and 2021 regulations."
+    }
+  },
+  {
+    "question": "Which faculty member joined the IT department most recently as of the provided data (2023-2024 academic year)?",
+    "answer": "I do not have data about an IT department. However, in the 2023-2024 academic year, within the UG faculty, Dr. Paramesh J joined on 06.09.2023. Would you like information on other departments?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies the IT department and accurately identifies Dr. Prakash D. joining on 15/06/2023 and Mrs. Santhana Lakshmi S on 15/07/2023 as the most recent faculty members as of the provided data (2023-2024 academic year)."
+    }
+  },
+  {
+    "question": "According to the document, what is the specific role of Ethical Hacker also known as?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
   }
 ]
