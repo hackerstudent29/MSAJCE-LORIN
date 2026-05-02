@@ -1,0 +1,90 @@
+[
+  {
+    "question": "What is the maximum scholarship amount available for a national-level athlete admitted through the sports quota?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What specific criteria are used to evaluate 'outstanding athletes' for sports quota admission?",
+    "answer": "MSAJCE provides sports quota admission and scholarship support for athletes at district, state, and national levels. What sport are you interested in?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that MSAJCE provides sports quota admission and scholarship support for athletes at district, state, and national levels, which aligns with the source text. While it doesn't specify the exact criteria, it acknowledges the availability of such admissions and scholarships."
+    }
+  },
+  {
+    "question": "What was the total distance covered in the Fit India Cyclothon event in 2020, excluding the listed 22 km event?",
+    "answer": "The Fit India Cyclothon 2020 event listed covered a distance of 22 km. I do not have information on any other Fit India Cyclothon events that happened in 2020, so I cannot provide you with the total distance covered, excluding the listed one.\n\nDo you have any other questions regarding sports events?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have information on any other Fit India Cyclothon events in 2020 besides the 22 km event listed in the source text."
+    }
+  },
+  {
+    "question": "How many carrom boards are available for student use?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What are the specific dimensions of the basketball court?",
+    "answer": "Unfortunately, I don't have the specific dimensions of the basketball court. However, the college does have a basketball court available for students.\n\nWould you like to know more about other sports facilities available?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot admits it does not have the information, which is correct as it is not found in the provided source text."
+    }
+  },
+  {
+    "question": "Is there a dedicated coach specifically for Kabaddi, and what are their qualifications?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What are the weight ranges available for the rubber weight plates in the gymnasium?",
+    "answer": "The gymnasium at MSAJCE has rubber weight plates available.\n\nBy the way, what other sports facilities are you interested in learning about?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the brand or model number of the Multi Gym equipment available in the gymnasium?",
+    "answer": "Specific brands or model numbers of the Multi Gym equipment in the gymnasium are not specified. What else can I help you with regarding the gym?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that the specific brand or model number of the Multi Gym equipment is not specified in the provided text."
+    }
+  },
+  {
+    "question": "What is the procedure for students to register for participation in the Annual Sports Day?",
+    "answer": "To participate in the Annual Sports Day, contact the Sports Club. They handle sports events, record student participation, and allocate awards. The Sports Club aims to build sportsmanship, foster friendships, reduce stress, improve skills, and enhance employability.\n\nDo you need information on specific sports facilities available?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "While the source text doesn't detail the specific registration procedure, it mentions the 'Annual Sports Day' and implies the Sports Department/Director of Physical Education is involved in sports-related activities. Thus, advising students to contact the Sports Club (presumably under the Physical Education department) is a reasonable and logical suggestion based on the context provided."
+    }
+  },
+  {
+    "question": "What is the process for applying for the sports quota scholarship, and what documents are required?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the deadline to apply for sports quota admission, as listed on the online application form?",
+    "answer": "Regrettably, I cannot specify a sports quota admission deadline from the online application form, as I lack direct access to real-time application data.\n\nWould you like me to share the contact information for the Physical Education Director who handles sports admissions?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot states it cannot access real-time application data, which is an accurate assessment given the source text."
+    }
+  }
+]

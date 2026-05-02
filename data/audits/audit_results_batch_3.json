@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "query": "Do we have any alumni currently working at Microsoft or Google?",
+    "response": "Yes, Ahmad Abdullateef from the 2005-2009 batch is a Principal Software Architect at Microsoft.\n\nWould you like to know about other alumni working in top tech companies?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 2,
+    "query": "Which MSAJCE graduate holds the record for the highest international placement?",
+    "response": "As of today, May 02, 2026, the highest salary offered to an MSAJCE graduate is Rs. 12 Lakhs Per Annum (LPA).\n\nDo you want to know which companies typically recruit our graduates?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 3,
+    "query": "Are there any alumni mentors who visit the campus for tech talks?",
+    "response": "Indeed, alumni frequently return to MSAJCE to share their expertise through tech talks. For instance, just last year, Sivanathan (2006-2010 Batch), Manager at ADF Data Science Pvt Ltd, delivered a seminar on SOLID principles. Also, Arun Natrajan, Principal Consultant at Emirates National Bank of Dubai, gave a seminar on DevOps, Kubernetes, and containers. FHM Afzal Bijli, Founder of Webxo360, conducted a session on AWS, covering hosting static and dynamic websites.\n\nWould you like details on other recent alumni activities?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 4,
+    "query": "Can you name a successful startup founded by an MSAJCE alumnus?",
+    "response": "Absolutely!\n\n\u2022 Sabarish S R from the 2010-2014 batch is the Founder and CEO of Sportasy.\n\u2022 Naveen Zahir is Founder and CEO of Drop Truck.\n\u2022 Akther Ilyas from the 2018-2022 batch is the Founder of Skit Media.\n\nWould you like to know about other alumni entrepreneurs?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 5,
+    "query": "Which batch has the highest number of entrepreneurs?",
+    "response": "From the data, the 2001-2005 batch has the highest number of entrepreneurs listed. There are 10 entrepreneurs from that batch in the provided list.\n\nWould you like to know more about alumni from that batch?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 6,
+    "query": "Does the college maintain an active alumni portal for networking?",
+    "response": "Yes, the college fosters connections through the Alumni Association, which aims to renew student relationships and involve alumni in college activities. To join, you can register through this form: https://forms.gle/CBMdXCDEb9uXVEBv6.\n\nBesides this, are you also interested in the objectives of the Alumni Association?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 7,
+    "query": "Are there any alumni in the civil services (IAS/IPS)?",
+    "response": "I do not have enough information to answer that. Is there anything else I can help you with?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 8,
+    "query": "Which core engineering companies frequently hire our mechanical alumni?",
+    "response": "Mechanical Engineering graduates often find opportunities at:\n\n\u2022 TVS Sundaram Fasteners\n\u2022 Gabriel & Co\n\u2022 Preethi Engineering\n\u2022 Sri KVS Industries\n\u2022 Diamond Engineering\n\nWant to know more about specific roles our alumni have secured in these companies?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 9,
+    "query": "Do alumni provide internships to current juniors through their companies?",
+    "response": "Yes, alumni do provide internships. For example, in 2023, Sabarish (Sportasy Founder) provided internships to 3 IT department students, and Ahamed Jameel (Technical Consultant, HCL) helped place 3 CSE students at Platform 3 Solutions. Moreover, Mohamed Yasar (Edvoy Technologies Chennai) facilitated internships at Edvoy Technologies in 2022.\n\nAre you interested in the internship report format?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 10,
+    "query": "When is the next grand alumni meet scheduled?",
+    "response": "Well, 'grand' is subjective, but here's what I can share about upcoming alumni events:\n\n\u2022 The Silver Jubilee Event occurred recently on April 17, 2026, where alumni like Anbazhagan, Saranraj Saravanan, and Mohammed Ateeq were Guests of Honour.\n\nDo you want details on alumni meets, or would you like to explore other alumni-related activities?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 11,
+    "query": "Which faculty member has the highest number of patents in the EEE department?",
+    "response": "I do not have the data regarding which faculty member has the highest number of patents in the EEE department.\n\nDo you have any other queries regarding the EEE department?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 12,
+    "query": "What are the major research areas currently active in the IT department?",
+    "response": "I see you're curious about the IT department's research focus. Let me share a few details.\n\nBased on the research publications from 2019 to 2022, several areas are actively being explored. Access those publications via these links:\n\u2022 2021-2022: https://www.msajce-edu.in/images/departments/it/ITpublication2021-2022.pdf\n\u2022 2020-2021: https://www.msajce-edu.in/images/departments/it/ITpublication2020-2021.pdf\n\u2022 2019-2020: https://www.msajce-edu.in/images/departments/it/ITpublication2019-2020.pdf\n\nWould you like information on the faculty development programs (FDP) attended by the IT department?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 13,
+    "query": "Does the college provide funding for student-led research projects?",
+    "response": "Yes, the Research and Development Cell supports students in seeking funding for their projects from agencies like TNSCST, MSME, and IEI(I).\n\nWant to know more about the R&D cell's objectives?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 14,
+    "query": "How many IEEE journal papers were published by MSAJCE last year?",
+    "response": "To clarify, which year are you asking about?\n",
+    "status": "FAIL/WEAK"
+  },
+  {
+    "id": 15,
+    "query": "Who is the coordinator for the R&D cell?",
+    "response": "The Research and Development Cell's Convener is Dr. B. Janarthanan, who is also the Head-Research at MSAJCE.\n\nWhat research opportunities are available for students?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 16,
+    "query": "Can students co-author research papers with professors?",
+    "response": "Yes, students at MSAJCE are encouraged to co-author research papers with professors, promoting research and innovation. The Research and Development Cell encourages students and faculty to publish findings in conferences and journals.\n\nWant to know more about the R&D cell's objectives?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 17,
+    "query": "What kind of research is happening in the UAV/Drone technology centre?",
+    "response": "The Centre for UAV/Drone Technology engages in research and development activities related to drone technology.\n\nWant to know about the facilities available in that center?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 18,
+    "query": "Is there a dedicated fund for attending international conferences?",
+    "response": "Yes, there is financial support available for faculty to attend conferences.\n\nWhat kind of conferences are you interested in?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 19,
+    "query": "Which department has the most industry-sponsored projects?",
+    "response": "Currently, I don't have the exact figures for industry-sponsored projects by each specific department. However, I can share that MSAJCE has an active Industry Institution Interaction (III) Cell that facilitates collaborations between various departments and industries.\n\n\u2022 The III Cell aims to bridge the gap between industry and academia by signing MoUs, organizing workshops, and arranging industrial visits and internships. As of now, MSAJCE has signed 43 MoUs with various industries.\n\u2022 Several departments actively engage in research and development, supported by funding agencies like TNSCST, MSME, AICTE, and others.\n\nWould you like a list of the MoUs signed with different industries?\n",
+    "status": "FAIL/WEAK"
+  },
+  {
+    "id": 20,
+    "query": "Can I use the research labs during the summer break?",
+    "response": "Access to research labs during the summer break requires permission from your HOD and the Warden. Would you like information on how to contact them?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 21,
+    "query": "What are the three phases of the placement training program?",
+    "response": "Our placement facilities include career counseling that helps students choose the best stream. Mentors are available to guide students and help them stay focused.\n\nYou can find year-wise placement details available for download on the college website:\n\u2022 2022-2023: [https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2022-2023.pdf](https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2022-2023.pdf)\n\u2022 2021-2022: [https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2021-2022.pdf](https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2021-2022.pdf)\n\u2022 2020-2021: [https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2020-2021.pdf](https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2020-2021.pdf)\n\u2022 2019-2020: [https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2019-2020.pdf](https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2019-2020.pdf)\n\u2022 2018-2019: [https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2018-2019.pdf](https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2018-2019.pdf)\n\u2022 2017-2018: [https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2017-2018.pdf](https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2017-2018.pdf)\n\u2022 2016-2017: [https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2016-2017.pdf](https://www.msajce-edu.in/uploads/placement/placementdetails/placementdetails-2016-2017.pdf)\n\nWould you like information on companies that recruit from our campus?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 22,
+    "query": "Do we get specific training for Product-Based company interviews?",
+    "response": "Yes, there are opportunities to enhance your skills for product-based company interviews!\n\n\u2022 The RAISE Centre of Excellence provides industry-readiness training.\n\u2022 Also, alumni often conduct sessions offering career guidance and sharing experiences. Rahul Murali (Product Manager at Thoughtworks) held a session on \"Opportunities in IT world\" on September 15, 2023.\n\u2022 Furthermore, the RAISE Nodal Centre helps you to become a coding expert, which is a useful skill.\n\nAre you part of any coding clubs or student chapters that offer specific interview prep?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 23,
+    "query": "Who conducts the 'Soft Skills' training sessions for 3rd years?",
+    "response": "Rubicon Technology conducted a one-week soft skill training program for third-year students from May 2 to May 6, 2023.\n\nAre you curious about other training programs offered to third-year students?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 24,
+    "query": "Is there a mock interview session with industry experts?",
+    "response": "Yes, MSAJCE conducts mock interview sessions with industry experts.\n\n\u2022 Mr. Mohammed Hussain TR, Senior Devops Engineer at Intel Corporation, conducted an online mock interview session on HR and Technical Interview on November 5, 2022.\n\u2022 Mr. Jameel Ahamed, Senior Manager at Wipro Technology, conducted an online mock interview Technical Round on October 5, 2021.\n\u2022 Mr. Karthickvel Rajasekar, HR at Valeo, conducted an online mock HR Interview on October 5, 2021.\n\u2022 Mr. Syed Haja Shereef S, Recruitment Specialist at Scelene Works People Solution Ltd, conducted an online mock HR Interview on September 12, 2020.\n\u2022 Mr. Mohammed Hussain TR, Senior Devops Engineer at Intel Corporation, conducted an online mock interview Technical Round on September 10, 2020.\n\nWould you like details on how to participate in the upcoming mock interviews?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 25,
+    "query": "When does the 'Aptitude' training phase begin for CSE students?",
+    "response": "Based on the placement training programs, the 'Placement Training on Aptitude Skills' for 65 students was conducted from August 1, 2023, to August 6, 2023.\n\nWould you like information on other training programs as well?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 26,
+    "query": "Do you provide training for the 'AMCAT' or 'CoCubes' assessments?",
+    "response": "Unfortunately, I don't have information on specific AMCAT or CoCubes training programs. However, I can share that the RAISE Centre of Excellence at MSAJCE, established in June 2022, does offer comprehensive training and industry readiness programs. Perhaps they can help you prepare for those assessments too.\n\nWant to know more about the RAISE center and its offerings?\n",
+    "status": "FAIL/WEAK"
+  },
+  {
+    "id": 27,
+    "query": "What is the average placement rate for the AIDS department?",
+    "response": "I cannot provide specific placement rates for the AIDS department since there is no such department at MSAJCE. Perhaps you meant AI&ML or another department?\n\nWould you like information on a specific department's placement statistics?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 28,
+    "query": "Which companies come specifically for 'On-Campus' drive in September?",
+    "response": "I don't have the specific list of companies visiting in September for on-campus drives. However, top recruiters include Fidelity National Financial, Intel, Amazon, Zoho, TCS, and CTS.\n\nWould you like information about career guidance or placement preparation resources?\n",
+    "status": "FAIL/WEAK"
+  },
+  {
+    "id": 29,
+    "query": "Does the college provide 'Japanese' language training for Japanese placements?",
+    "response": "Yes, MSAJCE provides Communication Language Learning facility in English, German, and Japanese, as stated on the college website.\n\nDo you want to know about other language courses offered?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 30,
+    "query": "Is there a dedicated 'Placement Cell' office I can visit?",
+    "response": "Yes, there is a Placement Cell at MSAJCE. Here's what they aim to do:\n\u2022 Help students get jobs in well-known companies.\n\u2022 Organize recruitment events on and off campus.\n\u2022 Train students in the skills companies look for, like aptitude, communication, and technical abilities.\n\u2022 Offer certification courses to give specialized knowledge.\n\u2022 Conduct mock interviews and group discussions to build student confidence.\n\u2022 Arrange internships and industrial visits.\n\u2022 Organize workshops on the latest technologies with experts from industry.\n\nWould you like the contact details for the Placement Cell?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 31,
+    "query": "Does the library provide access to IEEE Xplore digital library?",
+    "response": "Currently, the library provides access to e-journals through DELNET and Gale international journals databases. IEEE Xplore is not mentioned among the explicitly listed resources. Do you want to explore these e-journal options?\n",
+    "status": "FAIL/WEAK"
+  },
+  {
+    "id": 32,
+    "query": "How many NPTEL local chapter videos are available in the library?",
+    "response": "There are NPTEL videos available via this URL: http://www.nptelvideos.com/. Would you like more information about library resources?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 33,
+    "query": "Can I borrow more than 3 books if I am a top ranker?",
+    "response": "No, all UG and PG students can borrow a maximum of 18 books for 30 days, irrespective of their academic ranking.\n\nDo you have any other questions about library resources?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 34,
+    "query": "Is there a separate reading room for competitive exam preparation?",
+    "response": "Yes, there is a reading room available in the hostel.\n\nIs there anything else you'd like to know about the hostel?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 35,
+    "query": "What are the specifications of the systems in the High-Performance Computing lab?",
+    "response": "I do not have the specific system specifications for the High-Performance Computing lab.\n\nHowever, do you want to know more about the other lab facilities on campus?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 36,
+    "query": "Does the college have a 3D printing facility for student projects?",
+    "error": "'choices'",
+    "status": "ERROR"
+  },
+  {
+    "id": 37,
+    "query": "Is the entire campus covered by high-speed Wi-Fi?",
+    "response": "Yes, the entire MSAJCE campus has high-speed Wi-Fi connectivity.\n\nAre you curious about the library's resources?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 38,
+    "query": "What are the working hours of the Digital Library?",
+    "response": "",
+    "status": "FAIL/WEAK"
+  },
+  {
+    "id": 39,
+    "query": "Are there any smart classrooms in the Mechanical department?",
+    "error": "'choices'",
+    "status": "ERROR"
+  },
+  {
+    "id": 40,
+    "query": "Does the college have an indoor auditorium for tech fests?",
+    "error": "'choices'",
+    "status": "ERROR"
+  },
+  {
+    "id": 41,
+    "query": "What is the daily mess menu for the Girls Hostel?",
+    "error": "'choices'",
+    "status": "ERROR"
+  },
+  {
+    "id": 42,
+    "query": "Does the hostel have a dedicated laundry service or washing machines?",
+    "response": "I am sorry, but I do not have information about laundry services at the hostel.\n\nWhat else can I help you with?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 43,
+    "query": "What gym equipment is available in the boys' hostel gym?",
+    "response": "",
+    "status": "FAIL/WEAK"
+  },
+  {
+    "id": 44,
+    "query": "Can I play football or cricket on the grounds after 6 PM?",
+    "error": "'choices'",
+    "status": "ERROR"
+  },
+  {
+    "id": 45,
+    "query": "Is there a doctor on call for hostel emergencies at night?",
+    "error": "'choices'",
+    "status": "ERROR"
+  },
+  {
+    "id": 46,
+    "query": "What are the timings for the hostel mess on Sundays?",
+    "response": "Okay, here are the hostel mess timings for Sundays:\n\n\u2022 Breakfast: 07:30 AM to 09:00 AM\n\u2022 Lunch: 12:30 PM to 02:00 PM\n\u2022 Dinner: 07:00 PM to 09:00 PM\n\nCan I help you with any other hostel-related information?\n",
+    "status": "PASS"
+  },
+  {
+    "id": 47,
+    "query": "Do we have a dedicated basketball court with floodlights?",
+    "error": "'choices'",
+    "status": "ERROR"
+  },
+  {
+    "id": 48,
+    "query": "Are there any indoor games like Table Tennis available in the common room?",
+    "error": "'choices'",
+    "status": "ERROR"
+  },
+  {
+    "id": 49,
+    "query": "What is the procedure for a hosteller to use the lab after 9 PM?",
+    "error": "'choices'",
+    "status": "ERROR"
+  },
+  {
+    "id": 50,
+    "query": "Is there a shop inside the campus for basic stationery and snacks?",
+    "response": "I cannot provide information about a shop for basic stationery and snacks inside the campus. However, the cafeteria remains open on all working days from 8:00 AM to 8:00 PM and offers snacks.\n\nDoes that information help you?\n",
+    "status": "PASS"
+  }
+]

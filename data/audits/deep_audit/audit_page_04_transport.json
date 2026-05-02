@@ -1,0 +1,242 @@
+[
+  {
+    "question": "What was the average SAT score of incoming freshmen for the Fall 2022 semester?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many students were enrolled in the Computer Science department during the Spring 2023 semester?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What percentage of the student body received need-based financial aid during the 2021-2022 academic year?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the published tuition rate for out-of-state undergraduate students for the 2023-2024 academic year?",
+    "answer": "I do not have the specific tuition rate for out-of-state undergraduate students for the 2023-2024 academic year.\n\nCan I help you with any other details about MSAJCE?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What was the acceptance rate for undergraduate applications for the Fall 2021 semester?",
+    "answer": "I do not have any information about the acceptance rate for undergraduate applications. Is there anything else you need help with?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot says it does not know, and the information is not in the source text."
+    }
+  },
+  {
+    "question": "What is the student-to-faculty ratio as reported for the 2022 academic year?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many students graduated with a degree in Biology in May 2023?",
+    "answer": "We do not have a Biology degree program. Perhaps you're thinking of Computer Science and Business Systems (CSBS)?\n\nDo you want to know about other programs instead?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text does not mention Biology as a degree program, therefore the BOT is correct in stating that they do not have that program."
+    }
+  },
+  {
+    "question": "What is the average debt load for students graduating with a Bachelor's degree in 2022?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What percentage of graduates are employed within six months of graduation, as tracked by the university in 2022?",
+    "answer": "Unfortunately, I do not have the specific data for the percentage of graduates employed within six months of graduation for the 2022 batch.\n\nWould you like to know about the top companies that recruit from our campus?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the data within the provided source text."
+    }
+  },
+  {
+    "question": "What is the total amount of endowment funds managed by the university as of December 31, 2022?",
+    "answer": "As of December 31, 2022, I do not have access to the total amount of endowment funds managed by MSAJCE.\n\nDo you have any other questions about MSAJCE that I can help with?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges that it does not have the requested information."
+    }
+  },
+  {
+    "question": "What is the breakdown of student demographics by ethnicity for the Fall 2022 semester?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How much money was allocated to athletic scholarships during the 2021-2022 academic year?",
+    "answer": "Unfortunately, I do not have the specific data for athletic scholarship allocations during the 2021-2022 academic year.\n\nPerhaps you'd be interested in learning about the total alumni scholarship amount given from 2019-2026?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot states that it does not have the specific data in question. This aligns with the source text, as the requested information is not present."
+    }
+  },
+  {
+    "question": "What is the annual budget for the library system?",
+    "answer": "I do not have specific details on the annual budget allocated to the library system.\n\nWould you like to know more about the library's resources or services?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it does not have information about the library system's annual budget, which aligns with the absence of this information in the provided source text."
+    }
+  },
+  {
+    "question": "What percentage of undergraduate students live on campus?",
+    "answer": "I am sorry, I cannot provide the percentage of undergraduate students that live on campus. However, I can share that written permission from the HOD and Warden is mandatory for all outings, and outstation travel requires written warden approval.\n\nCan I help with any other details about on-campus life or perhaps student support services?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the average class size for introductory courses?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many residence halls are currently available for student housing?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the total number of faculty members employed by the university?",
+    "answer": "I can help you with information about the faculty. Could you please specify the department or role you're interested in?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the retention rate for first-year students after one year?",
+    "answer": "I don't have specific data on first-year student retention rates. However, MSAJCE aims to boost self-employment and startups, which is monitored through NIRF and ARIIA rankings.\n\nWould you like to know more about our placement statistics or higher education opportunities?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the graduation rate for students completing their degree within four years?",
+    "answer": "I do not have details on the specific four-year graduation rate. However, I can tell you about MSAJCE's focus on student success through innovation, entrepreneurship, and comprehensive support systems.\n\nWhat else would you like to know about our academic programs or student support?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the university's current bond rating?",
+    "answer": "I am sorry, but I do not have access to bond ratings. Is there anything else I can help with?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response indicates it does not have access to bond ratings, which is not contained within the provided source text."
+    }
+  },
+  {
+    "question": "How much money was spent on research grants during the 2022 fiscal year?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What are the names of the members of the university's board of trustees?",
+    "answer": "I don't have information on the members of the board of trustees. However, I can provide details about the IQAC members for the academic years 2019-2020 and 2020-2021, if you're interested. Would you like to know more about the IQAC?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot says it doesn't know, which constitutes a failure."
+    }
+  },
+  {
+    "question": "What is the current salary of the university president?",
+    "answer": "I am sorry, but I do not have access to that specific information.\n\nWould you like to know more about the roles and responsibilities of the President?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the name of the university's primary accrediting body?",
+    "answer": "MSAJCE follows the National Action Plan of the National Assessment and Accreditation Council (NAAC). Find more information on MSAJCE's IQAC on the website.\n\nWould you like more information on IQAC's role in quality assurance?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot's response mentions MSAJCE and NAAC, but does not state the university's accrediting body, thus not answering the question. The text refers to a college, not a university."
+    }
+  },
+  {
+    "question": "What are the specific requirements for maintaining a merit-based scholarship?",
+    "answer": "For merit-based scholarships here at MSAJCE, you'll need to maintain a cut-off of 180+; for other scholarships, please note that AICTE offers Pragati and Saksham schemes.\n\nIs there anything else about scholarships I can help you with?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the information provided in the source text regarding the cut-off for maintaining merit-based scholarships at MSAJCE."
+    }
+  },
+  {
+    "question": "What percentage of the operating budget is allocated to student services?",
+    "answer": "I don't have specific details on the exact percentage of the operating budget allocated to student services.\n\nHowever, I can share some information about the different avenues available to MSAJCE students. Would you like to learn about available scholarships or sports and extracurricular activities?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot admits that it doesn't know, which is accurate, since the source text does not contain the answer."
+    }
+  },
+  {
+    "question": "How many international students are currently enrolled at the university?",
+    "answer": "I do not have sufficient information regarding the exact number of international students currently enrolled at MSAJCE.&#x20;\n\nWould you like to know about the Communication Language Learning Centre that helps students gain international employability?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "Bot states it does not have sufficient information."
+    }
+  },
+  {
+    "question": "What is the total value of deferred maintenance on university buildings as of 2023?",
+    "answer": "I do not have information on the total value of deferred maintenance on university buildings. Is there anything else I can help you with?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the total amount of money raised in the last capital campaign?",
+    "answer": "I do not have any information about capital campaigns. Perhaps you'd be interested in our Alumni Scholarships, where we've sponsored 97 students with Rs. 37.94 Lakhs between 2019 and 2026?\n\nWould you like a list of students who received this scholarship?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot says it doesn't know, which constitutes a fail."
+    }
+  },
+  {
+    "question": "What is the policy regarding tuition refunds for students who withdraw from courses?",
+    "answer": "I do not have specific information on tuition refund policies upon course withdrawal.\n\nHave you checked the student handbook for details on refunds?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response indicates it does not have the information, which aligns with the absence of that specific policy in the provided source text."
+    }
+  }
+]

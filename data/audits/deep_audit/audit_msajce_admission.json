@@ -1,0 +1,202 @@
+[
+  {
+    "question": "What is the exact cut-off percentage for the MBC & DNC category for direct second year B.E./B.Tech admissions?",
+    "answer": "For MBC & DNC candidates seeking direct second-year B.E./B.Tech admission, a minimum average mark of 45.00% is required.\n\nDoes this clarify the cut-off requirements for you?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text specifies that for direct second year B.E./B.Tech admissions (lateral entry), the minimum average mark for MBC & DNC candidates is 45.00%."
+    }
+  },
+  {
+    "question": "What is the exact percentage of seats allocated for the NRI category in the undergraduate programmes?",
+    "answer": "For undergraduate programs, 5% of the sanctioned seats are allocated for the NRI category. What else would you like to know about admissions?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate; it correctly states that 5% of the sanctioned seats are allocated for the NRI category for undergraduate programs, as mentioned in the source text."
+    }
+  },
+  {
+    "question": "For the Pragati Scholarship Scheme for Girl Students, what is the last date to apply?",
+    "answer": "Unfortunately, I don't have specific deadline information for the Pragati Scholarship.\n\nHowever, you can find details and application links on the AICTE website or the college's online application portal.\n\n\u2022 Would you like me to help you navigate to those resources?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the deadline information, which is not mentioned in the provided source text."
+    }
+  },
+  {
+    "question": "What is the minimum percentage required for Backward Class including Backward Class Muslim to apply for B.E/B.Tech courses?",
+    "answer": "For Backward Class (including Backward Class Muslim) candidates applying for B.E./B.Tech courses, here's what you need to know:\n\n\u2022 HSC (Academic): A minimum average of 40.00% in Mathematics, Physics, and Chemistry combined.\n\u2022 HSC (Vocational): A minimum average of 40.00% in related subjects, Vocational Theory & Practicals combined.\n\u2022 Lateral Entry (Diploma & B.Sc.): A minimum average of 50.00%.\n\nDo you have any questions about the specific subjects required in HSC?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the minimum percentage requirements for Backward Class, including Backward Class Muslim, for B.E./B.Tech courses as stated in the provided source text."
+    }
+  },
+  {
+    "question": "What is the total sanctioned intake for the Computer Science & Engineering program with permanent affiliation?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states the total sanctioned intake for the Computer Science & Engineering program with permanent affiliation based on the provided source text."
+    }
+  },
+  {
+    "question": "How many seats are available under the government quota for the Structural Engineering postgraduate program?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states the number of seats available under the government quota for the Structural Engineering postgraduate program based on the provided source text."
+    }
+  },
+  {
+    "question": "If a student from Kerala scores 90% in Mathematics, 85% in Physics, and 80% in Chemistry, what would be their qualifying marks (Q) for admission?",
+    "answer": "Okay, for a student from Kerala with those scores, here's how the qualifying marks (Q) are calculated:\n\nQ = (Mathematics / 2) + ((Physics + Chemistry) / 4)\n\nSo, Q = (90 / 2) + ((85 + 80) / 4)\nQ = 45 + (165 / 4)\nQ = 45 + 41.25\nQ = 86.25\n\nTherefore, the qualifying marks (Q) for admission would be 86.25.\n\nDo you have questions about the minimum qualifying marks needed for specific categories?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately calculates the qualifying marks (Q) based on the formula provided in the source text for students from other states."
+    }
+  },
+  {
+    "question": "For lateral entry admissions, what minimum marks do SC/SCA/ST candidates need to secure to be eligible for B.E/B.Tech?",
+    "answer": "For lateral entry B.E/B.Tech admissions, SC/SCA/ST candidates need a mere pass in the qualifying examination (Diploma / B.Sc. Degree / Equivalent) to be eligible.\n\nDo you have any questions about the required marks for other communities?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "According to the autonomous regulations R24, what is the minimum CGPA required for a student to pass a course?",
+    "answer": "Unfortunately, I don't have the specifics about the minimum CGPA requirement for passing a course as per the R24 autonomous regulations. You can find the R24 autonomous regulations here: https://www.msajce-edu.in/uploads/autonomous/AutonomousR24.pdf.\n\nWould you like assistance finding other specific details within the R24 regulations?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What are the accepted equivalent qualifications for the Master's Degree required for Ph.D in Mechanical Engineering as recognized by Anna University?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text mentions that a Master's Degree or any other qualification recognized as equivalent thereto in the fields of study notified from time to time by Anna University is required for Ph.D in Mechanical Engineering."
+    }
+  },
+  {
+    "question": "What is the total sanctioned intake for all undergraduate Computer Science and Engineering programs combined?",
+    "answer": "Alright, let's figure that out.\n\n\u2022 CSE: 60 seats\n\u2022 Cyber Security (CSCS): 30 seats\n\u2022 CSBS: 30 seats\n\u2022 AI&ML: 60 seats\n\u2022 AI&DS: 30 seats\n\nSo, the total sanctioned intake for all undergraduate Computer Science and Engineering programs is 210 seats.\n\nGot it? Want to know about the postgraduate programs?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many Management Quota seats are available in the Structural Engineering postgraduate program?",
+    "answer": "There are 12 Management Quota seats available for the Structural Engineering postgraduate program.\n\nNeed to know more about the faculty in that department?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the minimum average percentage required in Mathematics, Physics, and Chemistry for a General Category student applying for B.E./B.Tech with HSC (Academic)?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the minimum average percentage required in Mathematics, Physics, and Chemistry for a General Category student applying for B.E./B.Tech with HSC (Academic), as stated in the provided source text."
+    }
+  },
+  {
+    "question": "What is the NSQF level for the 'Refrigeration And Air Conditioning Technician' skill development course under the Mechanical Engineering sector in Model 2?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies the NSQF level as 5 for the specified course in Model 2, as stated in the source text."
+    }
+  },
+  {
+    "question": "What is the total scholarship amount offered under the 'Central Sector Scheme' for eligible students?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "According to the B.E. / B.Tech. scholarship information, what is the maximum annual income permissible for a student to be eligible for the 'Pragati Scholarship Scheme for Girl Students'?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot can accurately identify the maximum annual income permissible for a student to be eligible for the 'Pragati Scholarship Scheme for Girl Students' from the source text."
+    }
+  },
+  {
+    "question": "Which Assistant Professor can be contacted for assistance regarding admissions for students from other states, and what is their email address?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot can retrieve the correct info from the source text, which states that Dr. Vamsi Naga Mohan A. is the contact person for students from other states, along with their email address: cse.vamsi@msajce-edu.in."
+    }
+  },
+  {
+    "question": "What is the phone number for the Administrative Officer, Mr. A. Abdul Gafoor, at MSAJCE?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot can extract the requested information from the source text."
+    }
+  },
+  {
+    "question": "Where can I download the Internship Report Format for 2025?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot failed to provide the location of the Internship Report Format for 2025, which is available in the source text."
+    }
+  },
+  {
+    "question": "What version of Autonomous Regulations is currently in effect at MSAJCE?",
+    "answer": "The Autonomous Regulation R24 is currently in effect.\n\nCan I help you find any other specific document?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the email address to submit a grievance?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The email address for submitting grievances is grievance@msajce-edu.in, which is found in the source text."
+    }
+  },
+  {
+    "question": "How many government quota seats are available in the Artificial Intelligence & Data Science undergraduate programme?",
+    "answer": "There are 15 government quota seats available in the Artificial Intelligence & Data Science undergraduate programme.\n\nNeed to know about scholarships or fee waivers for this program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate and is stated in the source text."
+    }
+  },
+  {
+    "question": "What is the total number of seats available under the NRI category for the postgraduate Computer Science & Engineering Programme?",
+    "answer": "For the postgraduate Computer Science & Engineering program, 5% of the sanctioned seats are reserved under the NRI quota. With a total intake of 9 seats, this translates to approximately 1 seat under the NRI category.\n\nDo you want to know about the eligibility criteria for the ME Computer Science and Engineering program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response accurately identifies that 5% of the seats are reserved for NRI candidates and correctly calculates that this translates to approximately 1 seat for the postgraduate Computer Science & Engineering program, based on a total intake of 9 seats."
+    }
+  },
+  {
+    "question": "What is the minimum percentage required to pass for SC/SCA/ST candidates for lateral entry into B.E/B.Tech?",
+    "answer": "For SC/SCA/ST candidates seeking lateral entry into B.E./B.Tech programs, a mere pass in the qualifying examination (Diploma / B.Sc. Degree / Equivalent) is sufficient.\n\nWant to know more about lateral entry programs?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the information provided in the source text regarding the minimum percentage required for SC/SCA/ST candidates for lateral entry into B.E/B.Tech programs."
+    }
+  },
+  {
+    "question": "For a B.Sc candidate seeking lateral entry, which degree subjects are considered eligible?",
+    "answer": "For lateral entry into a B.E. or B.Tech. program, a B.Sc. candidate needs a degree of minimum 3 years duration (10+2+3 pattern) and must have studied core Mathematics as one of the subjects at the degree level.\n\nDo you have any questions about the minimum required marks?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the eligibility criteria for B.Sc. candidates seeking lateral entry into B.E. or B.Tech programs, as stated in the SOURCE TEXT. The bot's response aligns with the requirement of a 3-year B.Sc. degree with core Mathematics as a subject at the degree level, which is consistent with the information provided in the SOURCE TEXT."
+    }
+  }
+]

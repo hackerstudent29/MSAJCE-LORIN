@@ -1,0 +1,122 @@
+[
+  {
+    "question": "How many students secured placements through On and Off Campus Recruitment Drives in the year 2022-2023? (See PDF)",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "In the years where Internship Details are available (2016-2021), what was the maximum number of internships provided in a single year, and in which year did this occur? (See PDFs)",
+    "answer": "From 2016 to 2021, the year with the highest number of internships was 2020-2021. Thermodynedutech recruited 31 interns that year.\n\nWould you like to know which companies offered internships to EEE students?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What specific Aptitude Skills are covered in the Placement Training conducted by Nexon Technology from 01.08.2023 to 06.08.2023?",
+    "answer": "The training held by Nexon Technology between August 1st and August 6th, 2023, focused on aptitude skills. However, the specifics of the aptitude skills covered are not detailed.\n\nWould you like information about other placement training programs offered at MSAJCE?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is accurate because the source text mentions the training program but does not provide specific details on the aptitude skills covered. Therefore, the bot correctly states that the specifics are not detailed."
+    }
+  },
+  {
+    "question": "What was the total duration (in days) of Soft Skill Training Programs conducted by Rubicon Technology during the 2022-2023 academic year?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "In the JAVA Full Stack Development Training program held from 06.03.2023 to 31.03.2023, what percentage of the 40 participants successfully completed the training as per the ICT Academy and Inspirysys Software Solution records?",
+    "answer": "I cannot tell you the percentage of students who successfully completed the JAVA Full Stack Development Training; I do not have those records. Want to know about other training programs instead?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What specific Interpersonal Skills were taught during the 'Intro to Interpersonal Skills' session held on 03.12.2022 by Alumni Association MSAJCE?",
+    "answer": "Unfortunately, I don't have the specifics of what interpersonal skills were covered in that session.\n\nWant to know about other alumni events?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it does not have the specific interpersonal skills covered in the 'Intro to Interpersonal Skills' session on 03.12.2022. This information is not explicitly detailed in the provided source text."
+    }
+  },
+  {
+    "question": "What version of Autodesk Fusion 360 was used in the Virtual Workshop on Future of making things with Autodesk Fusion 360 Leading with held on 22.03.2022 \u00e2\u20ac\u201c 23.03.2022?",
+    "answer": "I cannot tell you the exact version of Autodesk Fusion 360 used during that workshop. All I have is that USAM Technology, Techdata & Autodesk led a virtual workshop on the Future of making things with Autodesk Fusion 360 on March 22-23, 2022; 43 people attended.\n\nIs there anything else I can help you with regarding workshops or seminars?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What were the specific topics covered during the Workshop on Problem Solving & Ideation by Dr. Deepthi Bendi on 15.09.2021?",
+    "answer": "On September 15, 2021, Dr. Deepthi Bendi conducted a Workshop on Problem Solving & Ideation.\n\nSpecific topics covered in that workshop are not detailed in the provided documents.\n\nWant to know about any other workshops or events at MSAJCE?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that the specific topics covered in the workshop are not detailed in the provided documents."
+    }
+  },
+  {
+    "question": "What specific communication skills were covered in the session on 'Effective Communication Skills for Successful Career' by Mrs. C. Ammachiyar on 11.06.2021?",
+    "answer": "Unfortunately, specific details on the communication skills covered in that session aren't available. Mrs. C. Ammachiyar conducted the session 'Effective Communication Skills for Successful Career' on June 11, 2021.\n\nWould you like information on other workshops or training programs?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges the session and the presenter as per the source text, and correctly states that specific details aren't available."
+    }
+  },
+  {
+    "question": "How many Hiremee AI Proctored Online Assessment Tests were conducted in the academic year 2022-2023 and 2021-2022?",
+    "answer": "\u2022 In 2022-2023, MSAJCE conducted one Hiremee AI Proctored Online Assessment Test.\n\u2022 During the 2021-2022 academic year, one Hiremee Online Assessment Test was conducted.\n\nNeed details on any other placement support sessions?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What specific roles or departments within Lenovo did the 75 students who interned there in 2022-2023 support?",
+    "answer": "I lack the breakdown of specific roles or departments supported by the 75 students interning at Lenovo during 2022-2023.\n\nWould you like to know about the other top internship recruiters that year?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the specific breakdown of roles or departments supported by the interns at Lenovo during the specified period, which is not found in the source text."
+    }
+  },
+  {
+    "question": "What was the average internship duration (in days) for students interning at Zoho Tech's in 2022-2023?",
+    "answer": "I lack specific details on the internship duration at Zoho Tech's during 2022-2023. However, I can share that 51 students secured internships there that year.\n\nWould you like information on the top companies that offered internships?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What specific projects or tasks were assigned to students interning at Green Valleys Shelters Pvt. Ltd. in 2022-2023?",
+    "answer": "I don't have details on the exact projects or tasks assigned to MSAJCE students interning at Green Valleys Shelters Pvt. Ltd. during 2022-2023. However, 45 students interned there, according to internship data.\n\nWould you like to know more about the Industry Institution Interaction (III) Cell's objectives and activities?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the latest date for which the MSAJCE III Cell has documentation regarding a professional faculty consultancy project?",
+    "answer": "The III Cell lists consultancy by faculty as an objective. However, I don't have the specific dates of the consultancy projects themselves. Is there anything else I can help you with regarding the III Cell?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges that the III Cell's objective is to encourage consultancy by faculty but admits that it doesn't have the specific dates of consultancy projects, which aligns with the provided source text. Therefore, the response is factually accurate given the limitations of the text."
+    }
+  },
+  {
+    "question": "Which department had the highest number of students attending industrial visits in 2023?",
+    "answer": "Unfortunately, I don't have the specific data about which department had the most students attending industrial visits in 2023. I can share general information about industrial visits for specific departments, like CSE and EEE.\n\nWould you like information about industrial visits for a particular department?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the specific data requested, which aligns with the information available in the source text."
+    }
+  }
+]

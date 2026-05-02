@@ -1,0 +1,122 @@
+[
+  {
+    "question": "How many faculty members with a Ph.D. joined the IT department in the 2023-2024 academic year?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What was Dr. Mohan E's designation and area of specialization in the 2022-2023 academic year?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "On what date did Mrs. Santhana Lakshmi S join the IT department as an Assistant Professor?",
+    "answer": "Mrs. Santhana Lakshmi S, Assistant Professor in the IT department, joined on July 15, 2023.\n\nDo you have any other questions about the IT faculty?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate and found in the source text under the faculty list for the academic year 2023-2024."
+    }
+  },
+  {
+    "question": "What percentage of the total 60 seats are allocated to the Government quota?",
+    "answer": "For the B.E. Artificial Intelligence & Machine Learning program, 50% of the 60 seats are allocated to the Government quota, which equals 30 seats.\n\nWould you like to know about the management quota seats as well?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The source text mentions the intake for B.Tech Information Technology, not Artificial Intelligence & Machine Learning. The text states a total of 60 seats with 30 allocated to the Government quota. The bot incorrectly assumes the same seat distribution for B.E. Artificial Intelligence & Machine Learning."
+    }
+  },
+  {
+    "question": "According to the provided data, what is the expected annual growth rate of the Indian IT industry?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the minimum and maximum salary expectation for a Blockchain Developer in India between 2025 and 2030, according to the provided information?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Which regulation, 2017 or 2021, is the current academic curriculum operating under?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What are the educational requirements for lateral entry into the B.Tech. Information Technology program?",
+    "answer": "For lateral entry into the B.Tech. Information Technology program, you need a 10+2 education, along with a Diploma or B.Sc. in Mathematics via TN-LEA counselling.\n\nAre you also interested in the curriculum for the program?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What are the job roles listed under the employment opportunity of 'IT Infrastructure and Networking'?",
+    "answer": "Job roles include Network Administrator, IT Systems Engineer, IT Infrastructure Manager, Virtualization Engineer, and Network Security Engineer.\n\nInterested in any other IT-related job roles?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Which certification is mentioned for Cloud Computing and Virtualization that begins with a 'C'?",
+    "answer": "For cloud computing and virtualization, the certification starting with 'C' is Certified Kubernetes Administrator (CKA).\n\nWould you like to know about job roles related to Cloud Computing?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "In the 2021-2022 academic year, which Assistant Professor had the highest number of degrees listed, and what were those degrees?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the highest listed salary range for 'IT Project Managers' between 2025 and 2030?",
+    "answer": "IT Project Managers can expect a salary range of Rs. 15 - Rs. 25 Lakhs per annum between 2025 and 2030, depending on experience.\n\nWhich IT role interests you the most?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response accurately reflects the salary range for IT Project Managers listed in the source text for the period between 2025 and 2030."
+    }
+  },
+  {
+    "question": "Who was the Professor listed for the IT department in 2020-2021?",
+    "answer": "Okay! There were no professors listed for the IT department in 2020-2021 in the provided documents.\n\nWould you like me to search for other faculty in the IT department during that academic year?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot is correct, the source text has a list of faculty for that year and the designation of Professor is listed with Dr. MANJU I."
+    }
+  },
+  {
+    "question": "According to the IT Employment Forecast, what are the key drivers of IT growth?",
+    "answer": "Okay, based on the IT Employment Forecast, here are the key factors fueling IT growth:\n\n\u2022 Digital Transformation: Adoption of Cloud, AI, Big Data, IoT, and Blockchain across sectors.\n\u2022 Cloud Computing: Rapid growth of the cloud market with AWS, Azure, and Google Cloud.\n\u2022 Artificial Intelligence and Machine Learning: AI transforming various sectors, increasing demand for specialists.\n\u2022 Cyber Security: Growing demand for experts due to increasing cyberattacks and regulations.\n\u2022 Fintech and Blockchain: Push for a cashless economy driving demand for blockchain developers.\n\u2022 5G and Telecommunications: Rollout of 5G creating demand for network engineers and IoT developers.\n\u2022 E-Governance and Smart Cities: Government initiatives creating roles for IT project managers and data engineers.\n\u2022 Outsourcing and Off-shoring: India remains a global IT outsourcing hub.\n\nWant to know about the job profiles available for IT graduates of MSAJCE?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Besides Cloud Computing, AI, and Cybersecurity, what other fields are listed as contributing to IT's annual growth?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  }
+]

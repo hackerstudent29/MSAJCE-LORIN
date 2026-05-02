@@ -1,0 +1,74 @@
+[
+  {
+    "question": "Under the 2021 Regulation, is MA3354 Discrete Mathematics a required course for all CSBS students?",
+    "answer": "Yes, MA3354 Discrete Mathematics is a required course for CSBS students under the 2021 Regulation.\n\nWould you like to know more about the course content?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text lists MA3354 Discrete Mathematics under the 'CSBS Department \u2014 Course Materials (2021 Regulation)' section, implying it is a required course under the 2021 regulation."
+    }
+  },
+  {
+    "question": "For the Networks Lab, which specific version of the software/tools mentioned in the equipment details is currently installed?",
+    "answer": "For the Networks Lab, I do not have the specific software versions installed.\n\nIs there anything else I can help you with regarding the Networks Lab, such as the lab objectives or virtual lab link?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the specific software versions installed, which is not explicitly mentioned in the provided source text. Therefore, the response is accurate based on the information available."
+    }
+  },
+  {
+    "question": "What is the student-faculty ratio specifically within the CSBS department?",
+    "answer": "I do not have student-faculty ratio information specific to the CSBS department.\n\nIs there anything else I can help you with?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it does not have the student-faculty ratio information for the CSBS department, which is not found in the source text."
+    }
+  },
+  {
+    "question": "Besides TCS, Infosys, Wipro, Accenture and CTS, what is the placement percentage for graduates in FinTech companies like FSS?",
+    "answer": "Our top recruiters include TCS, Infosys, Wipro, Accenture, and CTS. I do not have placement percentage specifically for FinTech companies like FSS, but our Computer Science and Business Systems (CSBS) program is designed to prepare graduates for roles in tech-enabled business functions, which could include FinTech. You might want to check the placement details link on the website for more info.\n\nWould you like to know more about the CSBS program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies TCS, Infosys, Wipro, Accenture, and CTS as top recruiters from the source text. It also acknowledges that it does not have specific placement percentages for FinTech companies like FSS, which aligns with the provided text. The suggestion to check the placement details link on the website is a reasonable and helpful response."
+    }
+  },
+  {
+    "question": "For lateral entry students, what specific courses are waived or replaced from the regular 4-year curriculum?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "According to the curriculum, how many credits are allocated to core CS subjects versus business/management subjects?",
+    "answer": "Unfortunately, I do not have the specific credit allocation for core Computer Science versus business/management subjects in the CSBS curriculum. However, I can tell you that the B.Tech CSBS program balances core Computer Science subjects like Data Structures, Algorithms, and AI/ML with business and management topics, including Economics and Financial Management.\n\nWould you like me to find the course list for the CSBS program so you can see the distribution yourself?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges that it cannot provide the specific credit allocation, which aligns with the information available in the source text. It also correctly states the balanced nature of the curriculum based on the source text."
+    }
+  },
+  {
+    "question": "What is the minimum score required in 10+2 Physics, Chemistry and Mathematics to be eligible for the CSBS program?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Which faculty member is responsible for maintaining and updating the equipment in the Operating Systems Lab?",
+    "answer": "I don't have enough information about which faculty member is responsible for maintaining and updating the equipment in the Operating Systems Lab. Perhaps I can help with something else?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot states it doesn't have enough information. The source text doesn't contain the answer."
+    }
+  },
+  {
+    "question": "In the AD3391 Database Design and Management course, what specific database management system (DBMS) is primarily used for practical exercises?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  }
+]

@@ -3,7 +3,27 @@
     "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
     "page_title": "Institutional Forensic Facts — Hostel, Scholarships, and Discipline",
     "source_url": "Institutional Handbooks and Internal Policy",
-    "scraped_date": "2026-05-02"
+    "scraped_date": "2026-05-02",
+    "accreditation": {
+      "naac_grade": "A+",
+      "valid_until": "January 30, 2028",
+      "nba_departments": ["CSE", "ECE", "EEE", "Mechanical Engineering"]
+    }
+  },
+  "fee_structure": {
+    "tuition": {
+      "tnea_counselling": 75000,
+      "management_quota": 120000
+    },
+    "hostel": {
+      "range": "70,000 - 1,00,000",
+      "notes": "Varies by room/sharing; same for boys and girls"
+    },
+    "transport": {
+      "range": "7,000 - 49,000",
+      "per_km_approx": "1,200 - 1,700",
+      "authority": "Transport Committee"
+    }
   },
   "chunks": [
     {

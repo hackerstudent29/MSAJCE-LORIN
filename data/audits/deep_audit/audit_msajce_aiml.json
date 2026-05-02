@@ -1,0 +1,186 @@
+[
+  {
+    "question": "What is the specific student-faculty ratio within the AIML department?",
+    "answer": "Unfortunately, I do not have the student-faculty ratio for the AIML department specifically.\n\nWould you like to know about the faculty in the AIML department?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What percentage of AIML graduates from the 2021 regulation curriculum have secured placements through off-campus opportunities?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many faculty members within the AIML department hold a Ph.D. specifically in Machine Learning?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the passing percentage for the MA3354 Discrete Mathematics course based on the 2021 regulation curriculum?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the average salary offered to AIML graduates placed in Microsoft over the past three years?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What are the specific criteria used to evaluate candidates for the Management Quota seats in the AIML program?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the annual budget allocated to the AIML department for research and development projects?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the success rate of students undertaking Higher Education after graduating from the AIML department?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many students enrolled in the AIML department have participated in internships with AI-centric companies like Google or Microsoft?",
+    "answer": "Currently, I don't have the specific figures for AIML students interning at companies like Google or Microsoft. However, the IT department lists internship details on its portal, and the AIML department mentions several companies that recruit our students, including Microsoft, Amazon, and IBM.\n\nWould you like me to check the IT department portal for internship specifics?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot states that it does not have the specific figures for AIML students interning at companies like Google or Microsoft, which is true based on the source text. The bot also mentions that the IT department lists internship details on its portal, and the AIML department mentions several companies that recruit their students, including Microsoft, Amazon, and IBM, which is factually correct and supported by the source text."
+    }
+  },
+  {
+    "question": "What is the minimum CGPA required to be eligible for ME/M.Tech programs after graduating from the AIML department?",
+    "answer": "To be eligible for M.E./M.Tech. programs, you need a minimum of 55% marks or a CGPA of 5.5 on a 10-point scale in your qualifying examination. This applies to graduates from any department, including AIML. For SC/ST/Differently-Abled candidates, the requirement is 50% marks or a CGPA of 5.0 on a 10-point scale.\n\nDo you know what specializations within M.E./M.Tech. might interest you?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Which specific Industry 4.0 companies provide internship opportunities to AIML students?",
+    "answer": "Several companies in the Industry 4.0 sector offer internships to AI&ML students.\n\n\u2022 You'll find opportunities with companies like Microsoft, Amazon, Dell Technologies, and Accenture.\n\u2022 Also, keep an eye out for openings through the RAISE Centre of Excellence, as they facilitate internships with startups and other prestigious companies.\n\nWould you like information on how the Placement Cell helps with securing these internships?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response aligns with the source text, which lists Microsoft, Amazon, and Dell Technologies as recruiting companies. It also mentions Accenture elsewhere in the document."
+    }
+  },
+  {
+    "question": "What percentage of the total seats are allocated to students who have completed Diploma and are seeking lateral entry into the AIML program?",
+    "answer": "Here's the breakdown for lateral entry into the AIML program:\n\n\u2022 Duration: 3 years (Lateral Entry).\n\u2022 Total Seats: 60.\n\nSince I don't have the exact number of lateral entry seats, I can't calculate the percentage.\n\nDo you want to know the eligibility criteria for lateral entry?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it doesn't have the exact number of lateral entry seats to calculate the percentage, which aligns with the source text. The source text does not specify a fixed number of seats allocated specifically for lateral entry students."
+    }
+  },
+  {
+    "question": "How many students who enrolled in the 2021 Regulation curriculum have secured off-campus placements?",
+    "answer": "While a list of companies that recruited MSAJCE AIML and CSE students through off-campus placements is available, I don't have the exact number of students from the 2021 Regulation curriculum who secured such placements.\n\nWould you like a list of the companies that recruit our AIML and CSE students off-campus?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response indicates that it does not have the requested information. This aligns with the content of the source document, as the exact number of students from the 2021 Regulation curriculum who secured off-campus placements is not explicitly mentioned."
+    }
+  },
+  {
+    "question": "Of the 60 total seats, how many students joined through lateral entry in the last academic year?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The response does not contain the requested information. The query is unanswerable using only the source text provided."
+    }
+  },
+  {
+    "question": "According to the AI and ML Employment Forecast, what is the expected Compound Annual Growth Rate (CAGR) for AI job market in India between 2025-2030?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many hours of lab time are dedicated to the C Programming Lab (Course: CS8261) per semester, based on the 2021 Regulation?",
+    "answer": "I do not have the exact number of lab hours for the C Programming Lab (CS8261) under the 2021 Regulation. However, I can confirm that the lab is part of the CSBS, ECE-ACT, and AIML departments, all of which share lab facilities.\n\nWould you like information about the lab objectives or equipment details for CS8261?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges that it does not have the information, which aligns with the source text lacking the specific number of lab hours."
+    }
+  },
+  {
+    "question": "Which faculty member with a Ph.D. specializes in both IOT and Network Security?",
+    "answer": "Mr. Rajasekar R, Assistant Professor, holds a Ph.D. and specializes in IOT and Network Security.\n\nWould you like to know about any other faculty specializations?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response is factually accurate and matches the information provided in the source text under the 'AIML Department Faculty List'."
+    }
+  },
+  {
+    "question": "Is the 'Google AI Certification' mentioned offered directly by the college or is it an external certification?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text does mention the 'Google AI Certification' as a certification that is offered external to the college."
+    }
+  },
+  {
+    "question": "For the course 'AD3391 \u00e2\u20ac\u201d Database Design and Management', how many assignments are specified in the linked lesson plan?",
+    "answer": "I cannot access external websites or specific PDFs, including the linked lesson plan for 'AD3391 - Database Design and Management'. Therefore, I do not know the number of assignments specified in that lesson plan.\n\nWould you like me to find the lesson plan link again for you?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it cannot access the external website or PDF to determine the number of assignments. This aligns with its limitations."
+    }
+  },
+  {
+    "question": "What specific versions of Python and R are recommended for use in the 'Python and R language for data manipulation and model development' upskilling module?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot response is empty, it provides no response. The source text only mentions that 'Python and R language for data manipulation and model development' is one of the certifications and skills to upskill. Specific versions are not mentioned."
+    }
+  },
+  {
+    "question": "How does the curriculum address the 'Ethics' Programme Outcome (PO8) specifically in the course materials provided?",
+    "answer": "Well, PO8, which focuses on 'Ethics,' is addressed through various means. For instance, the AI&DS program incorporates ethical considerations by ensuring students apply ethical principles and commit to professional ethics and responsibilities within the engineering practice.\n\nAdditionally, for the CSBS department, PO8 emphasizes applying ethical principles and committing to professional ethics and norms.\n\nDoes that clarify how ethics is integrated into the curriculum?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the information present in the source text regarding the AI&DS program's focus on ethical principles and professional ethics in engineering practice (PO8)."
+    }
+  },
+  {
+    "question": "What percentage of students graduating from the AIML department get placed off-campus in any of the mentioned recruiting companies within one year of graduation?",
+    "answer": "I am not able to calculate the percentage of students placed off-campus from the AIML department. However, many AIML students get placed in companies like Accenture, AT&T, Byju's, Capgemini, CISCO, CTS, Deloitte, HCL, HP, IBM, Infosys, Oracle, TCS and Wipro.\n\nWould you like to know more about the recruiters that visit our campus for on-campus placements?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the student-faculty ratio in the AIML department, considering all listed faculty members and the total number of seats?",
+    "answer": "I don't have the faculty details needed to calculate the student-faculty ratio for the AIML department. I can tell you that the AIML department has 30 seats available, with 15 allocated for management and 15 for government quota admissions.\n\nWhat else can I help you with regarding the AIML department?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot states it doesn't have the faculty details to calculate the ratio which is correct as the bot is not supposed to do calculations. It accurately states the seat distribution which is present in the source text."
+    }
+  }
+]

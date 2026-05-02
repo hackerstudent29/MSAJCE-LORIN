@@ -1,0 +1,66 @@
+[
+  {
+    "question": "When does Saqlin Mustaq M's term as Vice President of AI&DS officially end, according to institutional records?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Is Saqlin Mustaq M also currently serving in any other administrative role in addition to VP of AI&DS?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Was Saqlin Mustaq M's appointment to VP of AI&DS effective immediately upon the listed start date of 2023, or was there a gap between the announcement and commencement of duties?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The source text only lists Saqlin Mustaq M as VP of AI&DS from 2023-2027. It doesn't specify if the appointment was effective immediately or if there was a gap."
+    }
+  },
+  {
+    "question": "Can I review the specific criteria that Saqlin Mustaq M met to be appointed as VP of AI&DS?",
+    "answer": "Saqlin Mustaq M is the Vice President of AI&DS, from the 2023-2027 batch. I do not currently have access to the specific criteria used for student council appointments.\n\nWould you like information on the general responsibilities of the Student Council?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies the VP of AI&DS and their batch. It also accurately states that it does not have access to the specific criteria for student council appointments."
+    }
+  },
+  {
+    "question": "Who was the VP of AI&DS immediately before Saqlin Mustaq M assumed the position?",
+    "answer": "Saqlin Mustaq M from the 2023-2027 batch is the current VP of AI&DS. I don't have information about who held the position before him.\n\nCan I help you with any other information about the AI&DS department?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Is the VP of AI&DS a fixed term appointment, or is it possible to renew or extend the term beyond 2027?",
+    "answer": "Saqlin Mustaq M is the Vice President of AI&DS, from the 2023-2027 batch. Whether the term is fixed or extendable isn't specified. You could check with the Student Affairs office for details on the Student Council's term policies.\n\nWho oversees the Student Council?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the information available in the source text regarding the Vice President of AI&DS and acknowledges that it doesn't have information on term extensions, suggesting a relevant department for further inquiry."
+    }
+  },
+  {
+    "question": "What are the specific budgetary oversight responsibilities of Saqlin Mustaq M as VP of AI&DS?",
+    "answer": "Saqlin Mustaq M is the Vice President of AI&DS, batch 2023-2027. I do not have information on the specific budgetary oversight responsibilities for the VP of AI&DS.\n\nIs there anything else I can help you with regarding the AI&DS department?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "To whom does Saqlin Mustaq M directly report in their role as VP of AI&DS?",
+    "answer": "Saqlin Mustaq M is the VP of AI&DS, from the 2023-2027 batch. The Student Affairs department oversees the Student Council, which includes the VP.\n\nDo you want to know more about the Student Council structure?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot response implies that the VP of AI&DS reports to the Student Affairs department because it oversees the Student Council. This is not stated in the source text and is unlikely to be accurate based on general knowledge of organizational structures. The source text only lists the name and role."
+    }
+  }
+]

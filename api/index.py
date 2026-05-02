@@ -178,6 +178,22 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     thinking_msg = await update.message.reply_text("🔍 Analyzing...")
     
     try:
+        # 1. SEMANTIC CACHE CHECK (Cost-Saver)
+        query_hash = hashlib.sha256(user_query.lower().strip().encode()).hexdigest()
+        cached_res = await db_pool.fetchval("SELECT bot_response FROM semantic_cache WHERE query_hash = $1", query_hash)
+        
+        if cached_res:
+            # INSTANT CACHE HIT
+            await context.bot.edit_message_text(
+                chat_id=update.effective_chat.id, 
+                message_id=thinking_msg.message_id, 
+                text=cached_res,
+                parse_mode="Markdown"
+            )
+            # Log hit to telemetry (optional)
+            await log_to_supabase(user_id, user_name, user_query, "CACHE_HIT", cached_res, 0.0, 0, 0, 0.0)
+            return
+
         redis_key = f"user_{user_id}_history"
         hist_raw = await _engine.redis.get(redis_key)
         history = json.loads(hist_raw) if hist_raw else []
@@ -246,6 +262,12 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 text=full_response
             )
         
+        # 2. SAVE TO SEMANTIC CACHE
+        await db_pool.execute(
+            "INSERT INTO semantic_cache (query_hash, user_query, bot_response) VALUES ($1, $2, $3) ON CONFLICT (query_hash) DO NOTHING",
+            query_hash, user_query, full_response
+        )
+
         history.append({"q": user_query, "a": full_response})
         await _engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
 
@@ -291,6 +313,49 @@ async def set_webhook():
         await application.shutdown()
         return {"success": True, "url": url}, 200
     except Exception as e: return str(e), 500
+
+@app.after_request
+def add_security_headers(response):
+    # Origin Lockdown: Only allow your frontend (or localhost for dev)
+    # Change 'https://your-frontend-domain.com' to your actual domain
+    response.headers['Access-Control-Allow-Origin'] = '*' # For initial launch, then lock to specific domain
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization'
+    response.headers['Access-Control-Allow-Methods'] = 'POST,OPTIONS'
+    return response
+
+@app.route('/api/chat', methods=['POST', 'OPTIONS'])
+async def secure_chat():
+    if request.method == 'OPTIONS': return "OK", 200
+    
+    global _engine
+    if _engine is None: _engine = RAGEngine()
+    
+    data = request.get_json(force=True)
+    query = data.get("query", "")
+    user_id = data.get("user_id", "WEB_USER")
+    history = data.get("history", "")
+    
+    # 1. Security & Abuse Check
+    is_allowed, reason, val = await check_security(user_id, query, _engine)
+    if not is_allowed:
+        return {"error": True, "reason": reason, "wait": val}, 403
+
+    # 2. Secure Execution (No keys exposed to frontend)
+    full_res = ""
+    async def generate():
+        nonlocal full_res
+        async for chunk in _engine.query_stream(query, history=history):
+            if isinstance(chunk, str):
+                full_res += chunk
+                yield chunk
+    
+    # For now, return a full response for simplicity in frontend integration
+    # (Streaming can be added later if the frontend supports it)
+    full_text = ""
+    async for chunk in generate():
+        if isinstance(chunk, str): full_text += chunk
+        
+    return {"response": full_text, "status": "SUCCESS"}, 200
 
 @app.route('/api/sunday-report')
 async def trigger_sunday_report():

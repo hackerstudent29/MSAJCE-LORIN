@@ -1,0 +1,146 @@
+[
+  {
+    "question": "What is the latest permissible return time for hostellers who have obtained permission to leave campus?",
+    "answer": "Hostel outing rules mandate written permission from both the HOD and Warden for any outing. However, the latest permissible return time isn't specified. I would suggest contacting the Warden directly for clarification on specific timings.\n\nHave you already obtained permission for your outing?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that the document specifies the need for written permission but does not provide a specific return time. It advises contacting the warden, which is a reasonable suggestion."
+    }
+  },
+  {
+    "question": "What is the specific deadline to submit written permission for outstation travel to the warden?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The source text does not specify a specific deadline for submitting written permission for outstation travel."
+    }
+  },
+  {
+    "question": "What is the exact distance, in kilometers, from the Girls Hostel in Sholinganallur to the main campus?",
+    "answer": "The Girls Hostel is located 5 KM away from the campus. Are you also curious about the facilities available in the Girls Hostel?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text states the Girls Hostel in Sholinganallur is 5 km from the campus. The bot accurately reflects this information. Converting 5km to kilometers is unnecessary as it is already in kilometers."
+    }
+  },
+  {
+    "question": "What is the latest permissible return time to the Girls Hostel, as strictly enforced?",
+    "answer": "I do not have the specific latest return time to the Girls Hostel. However, I can tell you that students are not allowed to leave the hostel based on a phone call, and outstation travel requires written warden approval.\n\nDo you have any other questions about the Girls Hostel regulations?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the specific latest return time to the Girls Hostel, which is not mentioned in the source text. "
+    }
+  },
+  {
+    "question": "How far is the Girls Hostel located from the main academic campus in kilometers?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text says the Girls Hostel is located in Sholinganallur which is 5km from campus."
+    }
+  },
+  {
+    "question": "What specific written information is required from parents to authorize visitors or local guardians for Girls Hostel residents?",
+    "answer": "Parents need to provide a list of authorized visitors or local guardians in writing. Visitors not on this list will not be permitted to visit students in the Girls Hostel.\n\nAre you also curious about the procedures for hostel outings or sign-out permissions?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the source text's requirement for parents to provide a written list of authorized visitors or local guardians for Girls Hostel residents."
+    }
+  },
+  {
+    "question": "What is the deadline for submitting a request to the HOD and hostel warden for permission to leave campus for non-holiday purposes?",
+    "answer": "You need written permission from both the HOD and Warden for any outing. For outstation travel, only the Warden's approval is necessary.\n\nDo you know who your HOD and Warden are?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Which academic year's AICTE Pragati scholarship is currently being offered to eligible female students?",
+    "answer": "Based on today's date, May 02, 2026, the AICTE Pragati scholarship is currently being offered for the academic year 2026-2027.\n\nDo you want to know more about the eligibility criteria for the Pragati scholarship?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the precise cut-off mark out of 200 required for male students to be eligible for MSAJCE merit-based tuition waivers?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot did not answer the query, although the source text contains the answer."
+    }
+  },
+  {
+    "question": "What percentage of tuition fees is waived for students achieving a cut-off of 180+?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot did not provide an answer to the query, even though the information is contained in the source text."
+    }
+  },
+  {
+    "question": "What are the names and contact details of the current members of the Anti-Ragging squad?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot's response is missing. The source text mentions the Anti-Ragging squad is headed by the principal but does not provide names or contact details of the members."
+    }
+  },
+  {
+    "question": "Can you provide a specific date for the next 'Sathak Thiruvizha' festival?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot did not answer the question as the source text does not provide a specific date for the next 'Sathak Thiruvizha' festival. The bot should have responded with 'I don't know' or stated that the date is not mentioned in the provided text."
+    }
+  },
+  {
+    "question": "Which specific bus stop within SIPCOT do OMR routes 102, 570, and 221 utilize?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text states that OMR routes 102, 570, and 221 stop at SIPCOT, but it doesn't specify a particular bus stop within SIPCOT. Therefore, it's reasonable for the bot not to provide a more specific answer based on the provided text."
+    }
+  },
+  {
+    "question": "What are the names and contact details for the current Student Council President and Secretary?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly refers the user to the Head of Student Affairs office, as per the source text."
+    }
+  },
+  {
+    "question": "What are the specific districts, in addition to Chengalpattu, Kanchipuram, and Thiruvallur, covered by the college private transport fleet?",
+    "answer": "Currently, I don't have the details on other specific districts covered by the college transport fleet beyond Chengalpattu, Kanchipuram and Thiruvallur.\n\nIs there anything else I can help you with regarding transport or other college facilities?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states it doesn't have information beyond what's provided in the source text regarding districts covered by the transport fleet."
+    }
+  },
+  {
+    "question": "What specific type of B.Sc. degree, in addition to Mathematics, is acceptable for Lateral Entry admissions?",
+    "answer": "For Lateral Entry, a B.Sc. degree must be a recognized Bachelor's Degree in Science of minimum 3 years duration with a 10+2+3 years pattern, where you've studied core Mathematics as one of the subjects at the degree level.\n\nDo you meet the minimum eligibility marks based on your community?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response accurately reflects the information provided in the source text regarding the B.Sc. degree requirement for Lateral Entry admissions, specifically mentioning that it should be with Mathematics."
+    }
+  },
+  {
+    "question": "What date in the last academic year was the last FIR filed for a ragging incident?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What specific documentation is required to prove eligibility for the Merit-cum-Means Minority Community scholarship?",
+    "answer": "To be eligible for the Merit-cum-Means Minority Community scholarship, you need to show you've scored at least 50% in your final examination and that your family income is less than Rs. 2.5 Lakh per annum. Also, this scholarship is only for students belonging to a minority community.\n\nWould you like to know more about other scholarship options?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot provides information about eligibility criteria (marks and income) for the Merit-cum-Means Minority Community scholarship, which is mentioned in the source text, but it doesn't specify the required *documentation*. The query specifically asks about documentation."
+    }
+  }
+]

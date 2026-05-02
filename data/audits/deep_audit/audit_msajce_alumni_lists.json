@@ -1,0 +1,122 @@
+[
+  {
+    "question": "How much scholarship amount did Parveen Begum M from the CSE department (2018-2022 batch) receive?",
+    "answer": "I don't have the exact scholarship amount awarded to Parveen Begum M (2018-2022 batch, CSE). However, she is listed as a recipient of the MSAJCE Alumni Scholarship.\n\nWould you like a list of all the alumni scholarship recipients from 2018-2022?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies that it does not have the scholarship amount but confirms that Parveen Begum M received the MSAJCE Alumni Scholarship and offers to provide a list of all recipients."
+    }
+  },
+  {
+    "question": "What was the average scholarship amount given per student between 2019 and 2026?",
+    "answer": "The average scholarship amount per student from 2019 to 2026 is approximately Rs. 39,123. This is based on a total of 97 students receiving Rs. 37,94,972 in scholarships.\n\nWould you like a list of all the scholarship recipients and their departments?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "For the 2023-2027 batch, what was the total scholarship amount allocated to the IT department?",
+    "answer": "I do not have information on the exact scholarship amounts, but I can tell you which students from the IT department in the 2023-2027 batch received the MSAJCE Alumni Scholarship. They are Afrin Fathima B, Abdullah N, Afrin Fathima, M. Mohamed Rasim, B. Dhanalakshmi, and Parvez Nabi Z, Md Rasin and Abdullah N.\n\nWould you like a list of scholarship recipients from other departments as well?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies the recipients of the MSAJCE Alumni Scholarship from the IT department for the 2023-2027 batch, as listed in the source text."
+    }
+  },
+  {
+    "question": "How many students with the name 'Abdullah' received the scholarship between 2019 and 2026, and in which departments and batches were they?",
+    "answer": "Alright, here's what I've found regarding scholarships awarded to students named Abdullah from 2019 to 2026, based on the provided data:\n\n\u2022 Abdullah S (IT Department, 2020-2024 Batch)\n\u2022 N. Abdullah (IT Department, 2022-2026 Batch)\n\u2022 Abdullah N (IT Department, 2023-2027 Batch)\n\u2022 Abdullah N (IT Department, 2023-2027 Batch)\n\nSo, four students named Abdullah received the scholarship during that period, all from the IT Department, and belonging to the 2020-2024, 2022-2026 and 2023-2027 batches.\n\nCan I help you with anything else?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identifies and lists all students named Abdullah who received the scholarship between 2019 and 2026, along with their respective departments and batches, as per the provided source text."
+    }
+  },
+  {
+    "question": "What is the breakdown of scholarship amounts disbursed across each department (CSE, ECE, IT, etc.) between 2019-2026?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Did 'Pragatha' receive multiple scholarships within the 2023-2027 batch as indicated by their multiple listings?",
+    "answer": "Yes, Pragatha from the CSE department, 2023-2027 batch, received the Alumni Scholarship multiple times.\n\nWould you like to know about other scholarship recipients?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text explicitly states that Pragatha from the CSE department, 2023-2027 batch received the Alumni Scholarship multiple times."
+    }
+  },
+  {
+    "question": "What was the scholarship amount allocated specifically to the VLSI department recipient, Afreen Fathim S (2024-2028 batch)?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the exact criteria used for selecting beneficiaries of the MSAJCE Alumni Scholarship?",
+    "answer": "The Alumni Association assists needy students through funds and scholarships. In total, 97 students have been sponsored with scholarships worth Rs. 37.94 Lakhs between 2019 and 2026. The scholarships cover all major engineering departments from the 2018 to 2029 batches.\n\nWould you like to know which departments are covered under this scholarship?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot provides information about the number of students sponsored and the total amount of scholarships, which is factually accurate based on the source text. However, it fails to provide the exact criteria used for selecting beneficiaries as specifically requested in the query, thus not fully addressing the question. Also the time period (2019 to 2026) of students sponsored is a data hallucination by the bot. The batches range from (2018-2029) as per the document."
+    }
+  },
+  {
+    "question": "What percentage of the total scholarship amount (Rs. 37,94,972) was awarded to ECE students across all batches?",
+    "answer": "I am unable to determine the exact percentage of the total alumni scholarship amount that went specifically to ECE students. The data lists individual student beneficiaries, their departments, and batches, but not the specific monetary value of their scholarships.\n\nDo you want a list of all ECE students who received the alumni scholarship?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies that it cannot calculate the exact percentage based on the provided data, as it only lists individual student beneficiaries and not the monetary value of their scholarships."
+    }
+  },
+  {
+    "question": "How many students from the 2022-2026 batch received the MSAJCE Alumni Scholarship?",
+    "answer": "From the provided data, here is a count of students from the 2022-2026 batch who received the MSAJCE Alumni Scholarship, broken down by department:\n\n\u2022 IT Department: 5\n\u2022 CSE Department: 4\n\u2022 ECE Department: 4\n\u2022 CSBS Department: 2\n\u2022 MECH Department: 1\n\nIn total, 16 students from the 2022-2026 batch received the MSAJCE Alumni Scholarship.\n\nCan I help you with any other details about scholarships?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot inaccurately calculates the number of students from the 2022-2026 batch who received the scholarship. The correct number is 17, according to the text."
+    }
+  },
+  {
+    "question": "Which department had the highest number of scholarship recipients between 2019 and 2026?",
+    "answer": "ECE had the highest number of scholarship recipients between 2019 and 2026 based on the available data.\n\nWould you like to know the names of ECE scholarship recipients?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Is the amount awarded per student the same across all departments?",
+    "answer": "I do not have the specific amount awarded per student, but I do know that 97 students have received a total of Rs. 37,94,972 from the Alumni Scholarship between 2019 and 2026.\n\nWould you like to know which departments have received the most scholarship funding?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately extracts the total number of students and the total amount awarded from the source text."
+    }
+  },
+  {
+    "question": "For the 2021-2025 batch, what was the scholarship amount allocated to each of the CSE students?",
+    "answer": "I cannot provide the exact scholarship amount for each CSE student from the 2021-2025 batch. However, I can confirm these students received the MSAJCE Alumni Scholarship:\n\n\u2022 Farhan Basha T\n\u2022 Ahamed Sheik\n\u2022 Syeda Zuha Tasneem\n\nWould you like to know the total number of students who received the alumni scholarship between 2019 and 2026?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies the CSE students from the 2021-2025 batch who received the MSAJCE Alumni Scholarship, as per the provided source text."
+    }
+  },
+  {
+    "question": "How many students with overlapping names (e.g., Afrin Fathima, Md Suhail) have received the scholarship and is there any policy on this?",
+    "answer": "I don't have specific data on students with overlapping names who received scholarships or a specific policy addressing this situation. I can share more broadly that we support AICTE's Pragati and Saksham scholarships.\n\nCould you share the specific scholarship you're interested in? Then I can check the policy details for you.\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot states that it doesn't know about student overlap or relevant policies; however, upon review of the text there are a number of instances where there are overlapping names, and the bot could have provided specific instances."
+    }
+  },
+  {
+    "question": "What amount, if any, was granted to Rahim Basha W, who appears to be listed for both the AIML and CSE AIML departments? Was there a funding overlap? ",
+    "answer": "I can confirm Rahim Basha W of the 2023-2027 batch received an alumni scholarship while in the AIML department. Additionally, Rahim Basha W of the 2024-2028 batch also received a scholarship while in the CSE AIML department.\n\nTo determine the exact amount granted and verify if there was any funding overlap, you may want to contact the alumni relations or scholarship office.\n\nDo you want to know the contact information for those departments?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identifies that Rahim Basha W received scholarships in both the AIML and CSE AIML departments, citing the correct batches based on the source text."
+    }
+  }
+]

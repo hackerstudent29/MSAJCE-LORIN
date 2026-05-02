@@ -1,0 +1,210 @@
+[
+  {
+    "question": "What specific version of the 2021 Regulation is applicable for the CSCS MSAJCE program?",
+    "answer": "The 2021 Regulation from Anna University is applicable for the B.E. Computer Science and Engineering with Specialization in Cyber Security (CSCS) program.\n\nInterested in exploring the curriculum and syllabus for CSCS?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "On what date was the 2021 Regulation curriculum for the B.E. CSCS program officially approved?",
+    "answer": "Well, the official approval date isn't explicitly stated, yet you can find the complete 2021 Regulation syllabus for the B.E. CSCS program at www.msajce-edu.in/uploads/academics/2021Regulation.pdf.\n\nDoes this URL help you to locate the approval date on the document?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the exact name of the degree awarded upon successful completion of the 4-year B.E. CSCS program?",
+    "answer": "Upon successful completion of the 4-year B.E. CSCS program, the degree awarded is the B.E. in Computer Science and Engineering with Specialization in Cyber Security.\n\nDo you want to know more about the curriculum of the program?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Are there any specific cut-off marks for Physics, Chemistry and Mathematics in the 10+2 examination to be eligible for the CSCS program?",
+    "answer": "Yes, you must pass Physics, Chemistry, and Mathematics in your 10+2 examination to be eligible for the B.E. Computer Science and Engineering with a specialization in Cyber Security (CSCS) program.\n\nDo you have any questions about the curriculum for the CSCS program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response accurately reflects the eligibility criteria mentioned in the source text, which states that candidates must have passed Physics, Chemistry, and Mathematics in their 10+2 examination."
+    }
+  },
+  {
+    "question": "What is the specific process for applying under the Government quota for the 15 seats?",
+    "answer": "For Government quota seats, you'll need to apply through the Tamil Nadu Engineering Admissions (TNEA) counselling process. Have you already checked the TNEA official website for their specific guidelines?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot directs the user to TNEA for government quota applications, which aligns with general admission processes in Tamil Nadu engineering colleges and the specific mention of government seats."
+    }
+  },
+  {
+    "question": "What specific documents are required to prove eligibility for the 3-year Lateral Entry program?",
+    "answer": "To prove eligibility for the 3-year Lateral Entry B.E./B.Tech. program, you'll need:\n\n\u2022   A pass certificate in a Diploma in the appropriate branch of Engineering/Technology from the State Board of Technical Education and Training, Tamil Nadu, or its equivalent.\n\u2022   OR, a pass certificate in a recognized Bachelor's Degree in Science of minimum 3 years duration with a 10+2+3 pattern, having studied core Mathematics as one of the subjects at the degree level. Note that candidates with degrees other than Bachelor of Science are not eligible.\n\nAlso, when you produce a grade certificate, you must also provide the actual marks; otherwise, only the minimum marks applicable to the grades in the subjects will be considered.\n\nDo you have your Diploma or B.Sc. degree already?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The BOT response accurately describes the eligibility criteria for lateral entry, found on other sources, for similar programs. The source text has basic eligibility, but not lateral entry requirements."
+    }
+  },
+  {
+    "question": "How many credits are required to graduate from the 4-year B.E. CSCS program under the 2021 Regulation?",
+    "answer": "I cannot find the number of credits required for graduation in the provided documents.\n\nWould you like to know more about the B.E. CSCS program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states it cannot find the number of credits in the provided document."
+    }
+  },
+  {
+    "question": "Which labs and simulation environments are mandatorily used in the 'Hands-on Learning' for penetration testing?",
+    "answer": "For penetration testing, the Cyber Security program uses labs and simulation environments to help with hands-on learning. I'm unable to specify those specific environments.\n\nWould you like to know more about the curriculum?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What are the specific names and versions of the software used for secure coding in the curriculum?",
+    "answer": "Our B.E. CSE (Cyber Security) program emphasizes hands-on learning with labs and simulation environments. However, the specific names and versions of software used for secure coding aren't listed directly in my current resources.\n\nCould you check the curriculum document or the student portal for more detailed software information?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges that the specific names and versions of software used for secure coding are not explicitly listed in the provided resources, which aligns with the source text."
+    }
+  },
+  {
+    "question": "Are guest lectures from DRDO or CERT-IN included as a part of the course?",
+    "answer": "DRDO and CERT-IN are listed as potential recruiters for the B.E. CSE Cyber Security program. Additionally, the III Cell aims to engage industrial experts to interact with students.\n\nWould you like to know more about the III Cell activities?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies DRDO and CERT-IN as potential recruiters, which is stated in the source text. It also mentions the III Cell's goal to involve industrial experts, though not directly related to DRDO or CERT-IN lectures, it adds relevant context."
+    }
+  },
+  {
+    "question": "What is the internship duration required to graduate?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What specific cyber law is taught under the 'Cyber Laws and Ethics' portion of the curriculum?",
+    "answer": "Regarding the 'Cyber Laws and Ethics' portion of the B.E. CSE Cyber Security curriculum, it includes cyber laws, ethics, compliance, and governance.\n\nWould you like more information on the specific ethical guidelines covered?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Which cloud platform security protocols (AWS, Azure, Google Cloud) will be taught, and what certifications can be obtained through the program?",
+    "answer": "Based on the provided context, MSAJCE does not have a defined \"program\" to teach cloud platform security protocols. However, cloud security is a high-demand area. The key protocols on AWS, Azure, and Google Cloud are IAM (Identity and Access Management) and encryption.\n\nFor certifications, you could target:\n\u2022 AWS Certified Solutions Architect.\n\u2022 Microsoft Certified Azure Solutions Architect Expert.\n\u2022 Google Cloud Professional Cloud Architect.\n\nDoes cloud security genuinely spark your interest?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many hours of instruction are dedicated to blockchain security within the curriculum?",
+    "answer": "I do not have enough information about blockchain security specifically to answer your question. Are there any other topics related to cybersecurity that you would like to know about?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot appropriately responded that it did not have enough information to answer the query, which is true based on the source text."
+    }
+  },
+  {
+    "question": "Are there any scholarships specifically available for students enrolled in the B.E. CSCS program?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the student-to-faculty ratio for the B.E. CSCS program?",
+    "answer": "The student-to-faculty ratio is available in the AQAR 2023-2024 report.\n\nWould you like to know more about the faculty in the CSCS program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately suggests that the student-to-faculty ratio can be found in the AQAR 2023-2024 report, which is a valid document linked in the source text."
+    }
+  },
+  {
+    "question": "How many faculty members have CISSP or other advanced security certifications?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the average salary package offered to graduates of the B.E. CSCS program in the last three years?",
+    "answer": "I cannot provide the average salary package for B.E. CSCS graduates specifically. However, the highest salary package offered to the 2024 graduating batch was Rs. 12 Lakhs Per Annum (LPA).\n\nWould you like to know which companies are the top recruiters at MSAJCE?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response is factually accurate as it states that it cannot provide the average salary package but provides the highest salary package, which does not contradict the source text."
+    }
+  },
+  {
+    "question": "Which specific companies, other than those listed, have recruited students from the B.E. CSCS program in the past?",
+    "answer": "Okay, so, beyond the listed top recruiters like TCS and Accenture, our B.E. CSE (Cyber Security) program also sees recruitment from government and defense agencies such as DRDO and CERT-IN, as well as banks, financial institutions, healthcare, insurance companies, e-commerce, and cloud service providers.\n\nWould you like information about other specific courses and their respective recruiters?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response is factually accurate and aligned with the information provided in the source text, which lists the mentioned sectors and agencies as top recruiters."
+    }
+  },
+  {
+    "question": "Does the program offer any assistance with obtaining ethical hacking certifications (e.g., CEH, OSCP)?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What specific projects did students work on in their capstone projects?",
+    "answer": "Unfortunately, I do not have details about specific student capstone projects.\n\nAre you curious about a particular department's projects?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response indicates that it lacks specific information about student capstone projects, which aligns with the limitations of the provided source text."
+    }
+  },
+  {
+    "question": "What is the process for lateral entry students to transition to the 2021 Regulation curriculum?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the percentage of students who pursue higher studies (M.E. / M.Tech. / M.B.A.) after completing the B.E. CSCS program?",
+    "answer": "Calculating the exact percentage is tricky, but here's what I can tell you based on available data.\n\n\u2022   The Higher Education Cell at MSAJCE assists students interested in pursuing M.E., M.Tech, or MBA programs.\n\u2022   Looking at past student selections from 2016-2023, many graduates from various B.E. programs have pursued higher education. For instance, Anandu Acharry (BE-CIVIL, 2022-2023) went on to Anna University for an M.S. in Environmental Management. Shaafia Tasneem N (BE-CSE, 2022-2023) continued to St. Joseph College of Engineering for an M.E. in Computer Science.\n\u2022   The department vision for the B.E. CSE (Cyber Security) program includes preparing students for higher education.\n\nAs of today, May 02, 2026, I can't give you a precise percentage specifically for CSCS graduates. However, the college encourages and supports higher education aspirations across all B.E. programs.\n\nWould you like information on how the Higher Education Cell can assist CSCS students?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Are there any specific workshops or seminars organized by the department that are relevant to Program Specific Outcomes PSO1 and PSO2?",
+    "answer": "That's a great question! Since I do not have details on specific workshops and seminars, it's best to check the department's website or contact them directly for the most up-to-date information.\n\nIs there anything else I can help you with?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges its lack of specific knowledge about workshops and seminars and suggests checking the department's website or contacting them directly. This is a reasonable response given the absence of this information in the provided source text."
+    }
+  },
+  {
+    "question": "How often is the curriculum updated to incorporate emerging technologies?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Does the department offer any industry-recognized certifications related to IoT Security?",
+    "answer": "Indeed, MSAJCE offers industry-recognized certifications through our Embedded & IoT Centre and the CISCO Networking Academy.\n\n\u2022   Embedded & IoT Centre: Provides hands-on experience in building IoT systems using Arduino and Raspberry Pi.\n\u2022   CISCO Networking Academy: Offers unique hands-on learning in networking, security, and cloud technologies using simulation tools and professional certifications, like CISCO Certified Network Associate (CCNA).\n\nDo you want to know more about the specific skills you'd gain from these programs?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response aligns with the information provided in the source text regarding the certifications offered through the Embedded & IoT Centre and the CISCO Networking Academy."
+    }
+  }
+]

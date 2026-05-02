@@ -195,6 +195,7 @@ Analyze HISTORY to see if this is a follow-up, repetition, or CRITICISM.
 Return JSON: {category, search_query, direct_response, is_count_only, is_repetition, marketing_mode}
 
 GROUND TRUTH (Use this for direct_response if needed):
+• NAAC: A+ Grade, valid until Jan 30, 2028.
 • NBA Accredited: CSE, ECE, EEE, Mechanical.
 • Highest Salary (2024): 12 LPA.
 • Top Recruiters: Fidelity, Intel, Amazon, Zoho, TCS, CTS.
@@ -266,20 +267,25 @@ STRICT RULES:
 You MUST use this date for all academic year, batch, and current event calculations.
 
 RULES (follow strictly):
-1. Answer immediately. Never open with "Greetings!" or repeat marketing phrases.
-2. Mention NAAC A+/NBA only when query is about rankings, admissions, or quality comparison.
-3. People queries: state role + batch directly, no fluff.
-4. Format: bullets use '•' only. No '*', '-', or '#'.
-5. Never apologize or say "I don't have info" if context exists.
+1. Be warm and interactive. Open with a brief, friendly greeting.
+2. LINGUISTIC MIRRORING: Default to **Casual + B1-level English** (simple, clear, friendly). However, if the user uses **Advanced/C1/C2 level** vocabulary, you MUST mirror that level of sophistication in your response.
+3. LENGTH CONSTRAINT: 80-120 words (Sweet Spot). Min 20, Max 150.
+4. STRUCTURE: Interactive opening, factual body with '•', and a helpful follow-up question.
+5. Format: bullets use '•' only. No '*', '-', or '#'.
 6. End every reply with one short, relevant follow-up question.
 7. {"COUNT MODE: Provide a summary and total count only." if is_count_only else ""}
 
-TONE: Speak like a knowledgeable, friendly college advisor — warm, direct, human. Vary your sentence openings. Use natural transitions. Never sound like a list-reader.
+TONE: Friendly and adaptive. Use accessible English for most, but match the intellectual depth of advanced users when prompted by their vocabulary.
 
 [PRIORITY OVERRIDE]: If a fact exists in GROUND TRUTH, you MUST use it as the absolute truth. NEVER say "I don't have info" for items listed in GROUND TRUTH, even if the provided CONTEXT is empty or contradictory.
 
 GROUND TRUTH (Institutional Memory):
+• NAAC Accreditation: A+ Grade, Valid up to January 30, 2028.
 • NBA Accredited Departments: CSE, ECE, EEE, and Mechanical Engineering.
+• Tuition Fees: Rs. 75,000 for TNEA Counselling; Rs. 1,20,000 for Management Quota.
+• Hostel Fees: Rs. 70,000 to Rs. 1,00,000 (Varies by room/sharing; same for boys and girls).
+• Transport Fees: Starting from Rs. 7,000 up to Rs. 49,000 max (Based on distance).
+• Bus Rate Details: Approx. Rs. 1,200 to Rs. 1,700 per km. (Note: These are estimates; contact the Transport Committee for exact accuracy).
 • Highest Salary (2024 Batch): Rs. 12 Lakhs Per Annum (LPA).
 • Top Recruiters: Fidelity National Financial, Intel, Amazon, Zoho, TCS, and CTS.
 • Admission Code: 1301. AI&ML Seats: 30 (15 Management, 15 Government).
@@ -326,26 +332,84 @@ History: {history if history else "None"}"""
         trace.update(output=self._post_process(full_answer))
 
     async def _safe_vercel_request(self, data, stream=False):
-        gateway_key = (os.getenv('VERCEL_AI_KEY_6') or os.getenv('VERCEL_AI_KEY_5') or os.getenv('AI_GATEWAY_API_KEY'))
-        if not gateway_key:
-            for key, value in os.environ.items():
-                if value and (value.startswith("vck_") or value.startswith("vcp_")):
-                    gateway_key = value; break
+        # MASTER OVERDRIVE POOL
+        keys = {
+            "vercel": [os.getenv("VERCEL_API_KEY_3"), os.getenv("VERCEL_AI_KEY_5"), os.getenv("AI_GATEWAY_API_KEY")],
+            "groq": [os.getenv("GROQ_API_KEY")],
+            "openrouter": [os.getenv("OPENROUTER_API_KEY")]
+        }
         
-        if not gateway_key: yield "Error: No API Key"; return
-        if stream: data["stream"] = True
-        headers = {"Authorization": f"Bearer {gateway_key}", "Content-Type": "application/json"}
-        async with httpx.AsyncClient() as client:
-            if not stream:
-                resp = await client.post(f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=60.0)
-                yield resp.json()["choices"][0]["message"]["content"]
-            else:
-                async with client.stream("POST", f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=60.0) as response:
-                    async for line in response.aiter_lines():
-                        if line.startswith("data: "):
-                            if line == "data: [DONE]": break
-                            try:
-                                chunk = json.loads(line[6:])
-                                delta = chunk["choices"][0]["delta"].get("content", "")
-                                if delta: yield delta
-                            except: continue
+        # Consolidate active keys
+        pool = []
+        for p, k_list in keys.items():
+            for k in k_list:
+                if k: pool.append({"provider": p, "key": k})
+        
+        if not pool: yield "Error: No API Keys"; return
+        if not hasattr(self, "_pool_idx"): self._pool_idx = 0
+        
+        for attempt in range(len(pool) * 2):
+            node = pool[self._pool_idx % len(pool)]
+            self._pool_idx += 1
+            
+            p, k = node["provider"], node["key"]
+            try:
+                async with httpx.AsyncClient() as client:
+                    if p == "vercel":
+                        headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
+                        if stream: data["stream"] = True
+                        if stream:
+                            async with client.stream("POST", f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=60.0) as response:
+                                async for line in response.aiter_lines():
+                                    if line.startswith("data: "):
+                                        if line == "data: [DONE]": break
+                                        try:
+                                            chunk = json.loads(line[6:])
+                                            delta = chunk["choices"][0]["delta"].get("content", "")
+                                            if delta: yield delta
+                                        except: continue
+                                return
+                        else:
+                            resp = await client.post(f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=60.0)
+                            res = resp.json()
+                            if "choices" in res: yield res["choices"][0]["message"]["content"]; return
+                    
+                    elif p == "groq":
+                        headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
+                        data["model"] = "llama-3.3-70b-specdec"
+                        resp = await client.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=data, timeout=30.0)
+                        res = resp.json()
+                        if "choices" in res: yield res["choices"][0]["message"]["content"]; return
+
+                    elif p == "openrouter":
+                        headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
+                        data["model"] = "google/gemini-2.0-flash-001"
+                        resp = await client.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=data, timeout=30.0)
+                        res = resp.json()
+                        if "choices" in res: yield res["choices"][0]["message"]["content"]; return
+
+            except Exception as e:
+                print(f"    [OVERDRIVE ERR] {p} failed: {e}. Rotating...")
+            
+            await asyncio.sleep(0.1)
+        
+        yield "System busy. All providers exhausted."
+
+    async def _groq_request(self, data):
+        groq_key = os.getenv("GROQ_API_KEY")
+        if not groq_key: yield "Error: No Groq Key"; return
+        
+        headers = {"Authorization": f"Bearer {groq_key}", "Content-Type": "application/json"}
+        # Map to Groq models
+        data["model"] = "llama-3.3-70b-specdec" 
+        
+        try:
+            async with httpx.AsyncClient() as client:
+                resp = await client.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=data, timeout=30.0)
+                res_json = resp.json()
+                if "choices" in res_json:
+                    yield res_json["choices"][0]["message"]["content"]
+                else:
+                    print(f"    [GROQ ERR] {res_json}")
+        except Exception as e:
+            print(f"    [GROQ EXCEPTION] {e}")

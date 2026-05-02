@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What specific amount of funding was received from TNSCST for student projects in the last academic year?",
+    "answer": "I don't have the specific funding amount received from TNSCST for student projects in the last academic year. However, the R&D Cell can assist students in applying for funding from agencies like TNSCST for student projects.\n\nWould you like information on how to apply for TNSCST funding?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many patents filed in 2021 by MSAJCE faculty are listed as 'A' applications on the IP India website?",
+    "answer": "From the provided data, 5 patents filed by MSAJCE faculty in 2021 are listed as 'A' applications on the IP India website:\n\n\u2022 Mr. K. Vairaperumal, \"Battery Swapping Smart Station for Future E-Vehicle Transportation\" (202141021897 A)\n\u2022 Mr. Chintala Venkatesh, \"A Vehicle Tire Control System at curved roads using intelligent interfaces and support vector machines\" (202141025111 A)\n\u2022 Mrs. D. Hema Sumitha, \"Real time based IOT Enabled Smart Metering System\" (202141026200 A)\n\u2022 Mrs. G. Premalatha, Dr. E. Dhiravidachelvi, \"Fundamentals of Electrical Measuring Instruments\" (202141014294 A)\n\u2022 Mr. M. Kamarajan, \"Deep learning based automatic eye cataract detection algorithm using MATLAB\" (202141061583A)\n\nWant to know about any of our faculty's published patents?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response accurately lists the 5 patents filed by MSAJCE faculty in 2021 that are listed as 'A' applications on the IP India website, as per the provided source text."
+    }
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "question": "What specific date was the 2021 Regulation Curriculum & Syllabus for B.Tech AIDS implemented?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many faculty members in the AIDS department hold a Ph.D. degree?",
+    "answer": "Currently, in the AIDS (Artificial Intelligence and Data Science) Department, we have:\n\n\u2022 Dr. Nagasubramanian R (Head - PG)\n\u2022 Dr. Subramanian P (Head - UG)\n\u2022 Dr. Premalatha G (Associate Professor)\n\u2022 Mr. Rajakumar B (Assistant Professor)\n\u2022 Mr. Rajasekar R (Assistant Professor)\n\nSo, that makes it five faculty members holding a Ph.D. in the AIDS department.\n\nWould you like to know more about their specializations?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot lists the faculty and incorrectly states that there are 5 PhD holders, when the source text lists 3 PhD holders and 3 faculty who are currently working towards their PhD."
+    }
+  },
+  {
+    "question": "What is the full name of the faculty member whose area of specialization is Wireless Sensor Networking and Image Processing?",
+    "answer": "Dr. Subramanian P is the Head of UG and his area of specialization is Wireless Sensor Networking and Image Processing.\nDo you want to know about their publications too?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate based on the source text provided."
+    }
+  },
+  {
+    "question": "What is the course code and name for the Internet Programming Lab?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "For lateral entry students, how many semesters are in the B.Tech AIDS program?",
+    "answer": "For B.Tech Artificial Intelligence and Data Science (AIDS) lateral entry students, the program consists of 6 semesters.\n\nWhat are the key subjects covered in the B.Tech AIDS program?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many seats are available for government-allocated students in the B.Tech AIDS program?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Is SAS a part of the curriculum for Data Analyst Roles?",
+    "answer": "Yes, SAS is a valuable skill for Data Analyst roles.\n\nDo you want to know about any other tools used in data analysis?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The text states that 'SAS' is a skill for a Data Analyst role."
+    }
+  },
+  {
+    "question": "What is the expected CAGR of the AI and Data Science job market in India until 2030?",
+    "answer": "The AI and Data Science job market is expected to grow at a CAGR of 30-40% until 2030.\n\nWhat skills do AI/ML engineers need to stay competitive?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The provided response is accurate based on the information within the source text, citing a CAGR of 30-40% for the AI and Data Science job market in India until 2030."
+    }
+  },
+  {
+    "question": "What is Mrs. Sasikala L's highest earned degree?",
+    "answer": "Mrs. Sasikala L is an Assistant Professor and holds an M.E. degree.\n\nDo you want to know her specialization?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text confirms that Mrs. Sasikala L is an Assistant Professor and holds an M.E. degree."
+    }
+  },
+  {
+    "question": "For an AI Research Scientist with 7 years of experience, what is the expected annual salary range?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What specific algorithm optimization techniques are covered in the curriculum beyond the listed Python libraries?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot response is empty and does not provide an answer."
+    }
+  },
+  {
+    "question": "Based on the 2021 Regulation curriculum, what percentage of course credits are dedicated to ethical issues in Data Science and AI?",
+    "answer": "I do not have the exact percentage breakdown of course credits dedicated to ethical issues in Data Science and AI within the 2021 Regulation curriculum. However, the curriculum for B.Tech Artificial Intelligence and Data Science (AIDS) deals with core principles and ethical issues in Data Science and AI.\n\nCan I help you with any other questions regarding the AI and Data Science program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges that it doesn't have the precise percentage requested, which is accurate as the source text doesn't provide a specific percentage. It also correctly mentions that the curriculum deals with ethical issues."
+    }
+  },
+  {
+    "question": "Are the 15 government seats for the B.Tech AIDS program reserved, and if so, what are the reservation categories?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot did not provide an answer to the question."
+    }
+  },
+  {
+    "question": "Which faculty member specializes in Deep Learning, and what specific Deep Learning frameworks are they proficient in?",
+    "answer": "Based on the provided information, Mr. Rajakumar B, Assistant Professor in both ECE and VLSI Design & Technology, specializes in AI, NLP, and Image Processing. For deep learning frameworks, refer to the list of recommended certifications in Source 4; this is where TensorFlow, PyTorch, and Keras are mentioned for deep learning.\n\nWhat are the opportunities for students interested in pursuing AI/ML startups after graduation?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response accurately identifies potential career paths for AI/ML startups after graduation, drawing upon the key drivers and expected growth sections to make inferences about opportunities."
+    }
+  },
+  {
+    "question": "What is the specific pass mark percentage required in Physics, Chemistry, and Mathematics in the qualifying examination for B.Tech AIDS admission?",
+    "answer": "To be eligible for B.Tech admission, you need to pass in Physics, Chemistry, and Mathematics in your 10+2 examination. What else would you like to know about our B.Tech programs?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the specific application process for the lateral entry B.Tech AIDS program, and what are the required documents?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot response is empty, indicating a failure to provide any information about the specific application process or required documents for the lateral entry B.Tech AIDS program, which is not acceptable given that the query specifically asks about it."
+    }
+  },
+  {
+    "question": "Besides Alexa/Siri, Erica/Sophia, and Tesla's driverless car, can you provide three more examples of applications covered under Big Data, Neural Networks, and Deep Learning in the curriculum?",
+    "answer": "Big Data, Neural Networks, and Deep Learning applications extend to various fields. Consider these three:\n\n\u2022 AI-powered Robots can handle life-endangering jobs like firefighting, deep-sea oil drilling, and mining.\n\u2022 Chatbots are becoming increasingly common in customer service and various other applications.\n\u2022 AI finds applications across healthcare, business, e-commerce, social networking, climatology, biotechnology, and genetics.\n\nWant to explore the career opportunities for AI and Data Science graduates?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's examples are mentioned in the source text. AI-powered Robots can handle life-endangering jobs is explicitly stated. The text mentions chatbots, healthcare, business, e-commerce, social networking, climatology, biotechnology, and genetics as areas where AI finds application. The bot is factually accurate according to the source text."
+    }
+  },
+  {
+    "question": "What is the name of the lab where students can gain practical experience with big data tools?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot did not provide an answer to the question; it refused to respond."
+    }
+  },
+  {
+    "question": "What specific types of Neural Networks are covered in the B.Tech AIDS curriculum?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot response did not answer the question. It should have stated that it cannot answer the question based on the context provided."
+    }
+  },
+  {
+    "question": "Does the department offer any scholarships or financial aid specifically for the B.Tech AIDS program?",
+    "answer": "Yes, there are a few scholarship avenues for B.Tech AIDS students:\n\n\u2022 Merit waivers are available for students with a cut-off of 180+.\n\u2022 There is a 10% tuition fee discount for all female students.\n\u2022 You can also explore AICTE Pragati and Saksham scholarships.\n\u2022 In the 2024-2028 batch, Jafeer Mohamed J and Pirivindhan A from the AIDS department, along with Harini R, Afasr Ali N and Rahim Basha W from CSE AIML department, received the MSAJCE Alumni Scholarship.\n\nAre you interested in the specific eligibility criteria for any of these scholarships?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot response contains information about scholarships and discounts that is not found in the provided source text. Specifically, it mentions merit waivers for students with a 180+ cut-off, a 10% tuition fee discount for female students, AICTE Pragati and Saksham scholarships, and specific students who received the MSAJCE Alumni Scholarship. None of this information is present in the source text."
+    }
+  },
+  {
+    "question": "What specific agile methodologies are taught in the AI Product Manager roles for students taking this course?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text states: 6. AI Product Manager Roles: Oversee the development and deployment of AI-powered products; manage cross-functional teams of engineers and data scientists. Skills: Product lifecycle management, Agile methodology, Machine learning, Project management, Business strategy. Therefore it is factually accurate."
+    }
+  },
+  {
+    "question": "What assessment methods are employed, apart from written examinations, to evaluate students' understanding of the Programme Outcomes?",
+    "answer": "Besides written exams, students' understanding of Programme Outcomes (POs) is assessed through:\n\n\u2022 Design projects\n\u2022 Presentations\n\u2022 Viva voce\n\u2022 Group activities\n\u2022 Case study analysis\n\u2022 Assignments\n\nDo you want to know about any specific PO assessment method in detail?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The information is not present in the source text, and assessment methods can vary. There is no mention of assessment methods in the source text. "
+    }
+  },
+  {
+    "question": "What is the minimum experience requirement for the senior-level roles which offer the salary between Rs 25 \u2013 Rs 50 Lakhs per annum?",
+    "answer": "Senior-level roles offering salaries between Rs. 25 and Rs. 50 Lakhs per annum typically require a minimum of 5 years of experience.\n\nCan I help you with salary expectations for a specific IT role?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response accurately reflects the information provided in the source text under the \"Salary Trends\" section, which states that senior-level roles with salaries between Rs. 25 and Rs. 50 Lakhs per annum typically require 5+ years of experience."
+    }
+  },
+  {
+    "question": "What specific types of edge computing techniques are taught?",
+    "answer": "Given the rapid growth in IoT and embedded systems, MSAJCE students learn about edge computing techniques. You see, the focus is on IoT communication protocols, sensor networks, and also edge computing itself.\n\nCan I tell you about job growth forecasts in communication technology?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The source text does not mention any edge computing techniques are taught."
+    }
+  },
+  {
+    "question": "What career opportunities are offered in public sector undertaking, specifically?",
+    "answer": "Career opportunities in the public sector for CSE, IT, and AI/DS graduates include roles in Railways, Airports, ONGC, Remote Sensing, and the Banking Sector.\n\nWhat kind of role are you hoping to get in the public sector?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  }
+]

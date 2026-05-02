@@ -1,0 +1,186 @@
+[
+  {
+    "question": "What specific criteria were used to select Anbazhagan, Saranraj Saravanan, and Mohammed Ateeq as Alumni Guest of Honour for the Silver Jubilee Event on 17.04.2026?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What specific departments did the 6 students placed in internships at StayIndiaDigital on 10.07.2025 come from?",
+    "answer": "The 6 students placed in internships at StayIndiaDigital on July 10, 2025, were from the AIDS and CSBS departments.\n\nDo you want details on other alumni activities?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the information provided in the source text regarding the departments of the 6 students placed in internships at StayIndiaDigital on July 10, 2025."
+    }
+  },
+  {
+    "question": "What were the specific criteria for the Women Achiever Awards given to Ms. Vani Parachuri and Ms. P.Rosiah on 8.03.2025?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What was the total monetary value donated by the 2001-2005 batch and the Alumni Association towards the MSAJCE Alumni Sports Pavilion on 01.02.2025?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What were the specific dates of the 2023-2026 Alumni Association AAC Meeting attended by Alumni Deepak (2011-2015 Batch)?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the start date for the current term of office bearers listed under 'Office Bearers (2024 - Till Now)'?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Which specific alumnus held the role of Program Coordinator before Mr. Mikail Ismail?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Between 2020-2021 and 2023-2024, how did the number of Joint Secretaries change, and who specifically held those positions?",
+    "answer": "There's no listing of \"Joint Secretaries\" at MSAJCE. Student Council positions include President, Secretary, and Coordinators.\n\nInstead, could I tell you about how the Student Council is organized?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text lists Joint Secretaries for the alumni association in 2023-2024. It does not list it for the student council. So the information is not available in the provided documents."
+    }
+  },
+  {
+    "question": "What department does Dr. R. Senthilkumar (Secretary 2020-2021) head?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What specific reasons were given for replacing Ms. J. Stella Marry on the 2021-2022 Executive Member committee?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the role of the Administrative Officer who serves as Treasurer in the 2024-present and 2023-2024 periods?",
+    "answer": "The Administrative Officer, Dr. S. Vijayakumar, serves as Treasurer for the Alumni Association in both the 2023-2024 and 2024-present periods.\n\nAre you curious about the President of the Alumni Association?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that Dr. S. Vijayakumar served as the Treasurer in the 2023-2024 period and that the Administrative Officer (position title) serves as Treasurer in the 2024-present period."
+    }
+  },
+  {
+    "question": "What is the name of the 'E Learning Platform' run by Md Ilyas, who conducted the session on VLSI on 23.08.2023?",
+    "answer": "Md Ilyas, CEO, conducted a session on VLSI on 23.08.2023. The name of his 'E Learning Platform' is not explicitly mentioned.\n\nWould you like information on the alumni-led session on CAD Automation by Mohamed Ateeq?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that the source text doesn't explicitly mention the name of Md Ilyas's 'E Learning Platform'."
+    }
+  },
+  {
+    "question": "Which departments did the 3 students placed at Platform 3 Solutions via Alumni Ahamed Jameel on 12.07.2023 come from?",
+    "answer": "Those 3 students placed at Platform 3 Solutions on July 12, 2023, thanks to alumnus Ahamed Jameel, were from the CSE department.\n\nWhat other placement opportunities are available for CSE students?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The information about the 3 students placed at Platform 3 Solutions on July 12, 2023, thanks to alumnus Ahamed Jameel, being from the CSE department is in the source text."
+    }
+  },
+  {
+    "question": "What specific criteria were used to select Anbazhagan, Saranraj Saravanan, and Mohammed Ateeq as Alumni Guests of Honour for the Silver Jubilee Event on 17.04.2026?",
+    "answer": "I don't have the exact criteria used to select Anbazhagan, Saranraj Saravanan, and Mohammed Ateeq as Alumni Guests of Honour for the Silver Jubilee Event.\n\nWould you like me to find information about alumni events?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges that it does not have the specific criteria for selecting the Alumni Guests of Honour. This aligns with the provided source text, which does not explicitly list the selection criteria."
+    }
+  },
+  {
+    "question": "What specific department and year of graduation is Alumni Abdur Rahim Saleh, CEO of V5 Innovations, representing for the Engineers Edge 3.0 event on 08.04.2026?",
+    "answer": "Alumni Abdur Rahim Saleh, CEO of V5 Innovations, participated in the Engineers Edge 3.0 event on 08.04.2026. Unfortunately, the provided information does not specify his department and year of graduation.\n\nCan I help you with information about other alumni or events?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges the alumni's participation in the event, but accurately states that it lacks the requested specifics about department and graduation year, which aligns with the provided source text. The source text confirms Abdur Rahim Saleh's involvement in the Engineers Edge 3.0 event on 08.04.2026 but doesn't specify his department or graduation year."
+    }
+  },
+  {
+    "question": "For the AAC Meeting attended by Alumni Deepak on 13.02.2026, what specific issues related to the college were addressed?",
+    "answer": "Alumni Deepak from the 2011-2015 batch attended the AAC Meeting on 13.02.2026.\n\nUnfortunately, I don't have access to the detailed minutes or specific issues discussed during that particular AAC meeting.\n\nWould you like to know more about Alumni Deepak's general contributions to MSAJCE?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identifies that Alumni Deepak from the 2011-2015 batch attended the AAC Meeting on 13.02.2026 as stated in the source text under the MSAJCE Alumni Contribution Activities (2023\u20132026) section. It also correctly states that it does not have access to the detailed minutes or specifics discussed during the meeting, which is true based on the given source text."
+    }
+  },
+  {
+    "question": "What were the specific criteria or achievements that led to Ms. Vani Parachuri (2003-2007 Batch) and Ms. P.Rosiah (2006-2010 Batch) receiving the Honoured Women Achiever Award on 8.03.2025?",
+    "answer": "I don't have the specific criteria or achievements that led to Ms. Vani Parachuri (2003-2007 Batch) and Ms. P.Rosiah (2006-2010 Batch) receiving the Honoured Women Achiever Award.\n\nWould you like to know more about other alumni achievements?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What was the total monetary value of the donation made by the Alumni of the 2001-2005 Batch & the Alumni Association for the MSAJCE Alumni Sports Pavilion donated on 01.02.2025?",
+    "answer": "I am sorry, but I am unable to provide the monetary value for the MSAJCE Alumni Sports Pavilion donation made by the Alumni of the 2001-2005 Batch & Alumni Association on 01.02.2025. However, I can tell you that the Silver Jubilee Reunion Meet 2025 saw participation from more than 500 alumni.\n\nDo you have any other questions regarding the Alumni Association?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Which department did the student placed in 'The BIM Engineers' company on 08.09.2025 belong to and what was the exact job title?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text confirms that on 08.09.2025, a student from the EEE (Electrical and Electronics Engineering) department was placed in 'The BIM Engineers' company, according to the MSAJCE Alumni Contribution Activities (2023\u20132026) section. The exact job title, however, is not specified in the text."
+    }
+  },
+  {
+    "question": "How many funds and scholarships were provided to students in 2023 based on assistance from the Alumni Association?",
+    "answer": "In 2023, the Alumni Association supported scholarships and funds for the following students:\n\n\u2022 Farhan Basha T (2021-2025/CSE)\n\u2022 Ahamed Sheik (2021-2025/CSE)\n\u2022 Abdullah S (2020-2024/IT)\n\u2022 Syeda Zuha Tasneem (2021-2025/CSE)\n\u2022 Md Khaja Nawaz A (2020-2024/CSE)\n\u2022 Parvez Nabi Z (2023-2027/IT)\n\u2022 Amirudeen F (2022-2026/IT)\n\u2022 Fahd Ahmed Khan K (2023-2027/ECE)\n\u2022 Pragatha M (2023-2027/CSE)\n\u2022 Abdullah N (2023-2027/IT)\n\u2022 Ijas Ahamed R (2023-2027/MECH)\n\u2022 Md Sajith S (2022-2026/ECE)\n\nWere you aware that the Alumni Association also sponsored sports jerseys, a smart board, and symposium events?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response lists students who received funds and scholarships in 2023, and this information is present and accurate within the provided source text under the 'MSAJCE Alumni Scholarship Beneficiaries (2019\u20132022) \u2014 Continued' and 'Student Beneficiaries (2022\u20132026)' sections."
+    }
+  },
+  {
+    "question": "Besides placement assistance, in what other specific ways did Alumni Ahamed Jameel contribute to objectives of the Alumni Association?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "Ahamed Jameel is the secretary of the Alumni association and also acted as reference Alumni who assisted student placement"
+    }
+  },
+  {
+    "question": "What is the exact process for alumni to update their employment information in the Alumni Association database?",
+    "answer": "Alumni can update their employment information by:\n\n\u2022 Filling out the Alumni Registration Form: [https://forms.gle/CBMdXCDEb9uXVEBv6](https://forms.gle/CBMdXCDEb9uXVEBv6).\n\u2022 Participating in alumni meets to share updates.\n\u2022 Engaging with the Alumni Association to assist in placements, which helps maintain employment data.\n\nAdditionally, the Alumni Association aims to gather and maintain a database of employment to assist in placements.\n\nDo you have any questions about how the Alumni Association supports current students?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What specific types of teaching or training classes were arranged for students by the Alumni Association in 2023?",
+    "answer": "I do not have specific details on the types of teaching or training classes arranged by the Alumni Association in 2023.\n\nDo you want to know about the scholarship details for any specific department?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it does not have the specified information. The source text mentions that the Alumni Association arranges teaching and training classes for students (Objective #6), but it doesn't provide specific details about the types of classes arranged in 2023."
+    }
+  }
+]

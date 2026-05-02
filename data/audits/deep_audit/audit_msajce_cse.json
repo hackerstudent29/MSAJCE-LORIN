@@ -1,0 +1,42 @@
+[
+  {
+    "question": "How many faculty members with a Ph.D. joined the UG faculty in the Computer Science and Engineering department in 2023?",
+    "answer": "In 2023, two faculty members with a Ph.D. joined the UG faculty in the Computer Science and Engineering department. They are Dr. Vijayarangan R and Dr. Paramesh J.\n\nWant to know about other faculty qualifications in a specific department?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identifies two faculty members, Dr. Vijayarangan R and Dr. Paramesh J, who joined the UG faculty in the Computer Science and Engineering department in 2023 with a Ph.D., based on the provided source text."
+    }
+  },
+  {
+    "question": "What is the total number of faculty members listed under the PG/Visiting faculty for the Computer Science and Engineering department as of 2023-2024?",
+    "answer": "There are two faculty members listed as PG/Visiting faculty for 2023-2024.\n\n\u2022 Dr. NAGASUBRAMANIAN R, Professor\n\u2022 Mrs. PANDEESWARI M, Assistant Professor\n\nDo you want information about the faculty in any other department?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identified and listed the two faculty members under the PG/Visiting faculty for the Computer Science and Engineering department as of 2023-2024, as per the provided source text."
+    }
+  },
+  {
+    "question": "According to the 2021 B.E. Computer Science and Engineering curriculum (2021 Regulation PDF), how many credits are required to graduate?",
+    "answer": "I do not have the information on the total credits needed to graduate from the 2021 B.E. Computer Science and Engineering curriculum. You can find the 2021 Regulation curriculum here: https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf.\n\nWould you like to know about the eligibility criteria for this program?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "For the M.E. Computer Science and Engineering program, what specific AICTE norms apply to the eligibility criteria?",
+    "answer": "For the M.E. Computer Science and Engineering program, eligibility follows AICTE norms. As per these norms and Anna University guidelines, candidates with a B.E./B.Tech. in EEE, ECE, CSE, IT, I&C, E&I, or related fields, or an MCA, or an M.Sc. in relevant areas are eligible.\n\nDo you need details on the admission process through TANCET?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the full name of the professor who joined the Computer Science and Engineering department on August 26, 2022?",
+    "answer": "There seems to be some confusion. I do not have information about the professor who joined the Computer Science and Engineering department on August 26, 2022. However, Dr. Kannan S, Professor, joined the Information Technology department on August 31, 2022.\n\nDo you want to know more about Dr. Kannan S?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  }
+]

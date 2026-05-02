@@ -1,0 +1,90 @@
+[
+  {
+    "question": "What was the total budget allocated to the MSAJCE Sports Club for the last fiscal year?",
+    "answer": "The MSAJCE Sports Club submits annual reports on budget allocations and spending during the year. Unfortunately, I don't have the specific budget amount allocated for the last fiscal year.\n\nWould you like me to provide information on the types of sports events conducted by the club?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges the existence of annual reports on budget allocations but states it doesn't have the specific amount, which aligns with the source text's general information."
+    }
+  },
+  {
+    "question": "What percentage of the Sports Club budget was spent on trophies and medals in the last annual report?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "In the MSAJCE Fine Arts Club, how many external college fests did students participate in during the last academic year?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "For the MSAJCE Science Club, how often are lectures given each month on Science topics?",
+    "answer": "The Science Club gives lectures once a month.\n\nWhat other activities does the Science Club conduct?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The provided answer aligns with the information presented in the source text, which states that the Science Club gives lectures once a month and conducts seminars, workshops, exhibitions, and quiz competitions."
+    }
+  },
+  {
+    "question": "Does the Science Club's notice board display information for the Physics, Chemistry, and General sections separately or collectively?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "In the MSAJCE Tamil Mandram, which events were conducted in the last academic year besides the listed eight?",
+    "answer": "The Tamil Mandram conducts events like \"Irumugam Oru Agam\", \"Pessum Padam\", and \"Kaivanna Kaviyam\", among others. I do not have information on any additional events beyond the eight listed in the document.\n\nDoes the Tamil Mandram's mission to revive Tamil culture resonate with your interests?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate as it acknowledges the existence of listed events and states that it does not have information on additional events beyond the eight listed in the document."
+    }
+  },
+  {
+    "question": "What specific criteria are used to evaluate participants in the 'Pirasangatin Thalaiwan' (King of Speeches) competition in Tamil Mandram?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many students were selected into the MSAJCE Coding Club based on the college-wide coding competition last year?",
+    "answer": "The Coding Club uses the college-wide coding competition to find new members who are enthusiastic about coding. However, I don't have the exact number of students selected last year.\n\nWould you like to know more about the Coding Club's activities?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Does the MSAJCE Coding Club provide technical assistance to all campus groups or only specific ones, and if so, which ones?",
+    "answer": "The Coding Club offers technical assistance to all clubs and groups on campus.\n\nWant to know more about what the Coding Club offers?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "In the MSAJCE Robotics Club, what are the dimensions constraints for the robots built for the annual tournament?",
+    "answer": "I do not have information about specific robot dimension constraints for the annual tournament in the Robotics Club.\n\nWould you like to know about the club's objectives or activities instead?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many students are actively participating in the MSAJCE Robotic Club?",
+    "answer": "Unfortunately, I don't have specific participation numbers for the Robotics Club. However, I can tell you more about what the club does. It aims to cultivate technological thinking and involves designing and constructing robots for competitions. They also offer robotics education, training sessions, and workshops on robotics basics.\n\nWould you like more information on the Robotics Club's activities?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot states that it does not have the requested information."
+    }
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "question": "As a 2nd-year B.Tech IT student at MSAJCE, what is Ram's expected graduation year?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Who specifically at MSAJCE oversees or approves Ram's work as the Lead Architect for AI initiatives?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the budget allocated to Ram's AI initiatives at MSAJCE for the current academic year?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What are the specific Key Performance Indicators (KPIs) used to measure the success of Lorin RAG at MSAJCE?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What version of Pinecone is currently being used within the Lorin RAG ecosystem at MSAJCE?",
+    "answer": "The Lorin RAG ecosystem uses Pinecone for vector storage. However, the exact version number is not specified.\n\nWould you like to know more about the technologies used in Lorin RAG?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the average query response time for Lorin RAG, as measured by Langfuse, during peak usage hours?",
+    "answer": "I do not have access to real-time metrics like the average query response time for Lorin RAG during peak usage hours. This type of data would be dynamically generated and tracked within the Langfuse system itself.\n\nHow else can I help you with Lorin RAG?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have access to real-time metrics, which is not contained within the source text provided."
+    }
+  },
+  {
+    "question": "Is access to Lorin RAG restricted to certain MSAJCE personnel or is it available institution-wide?",
+    "answer": "Lorin RAG is the institutional intelligence engine for MSAJCE. It transforms PDFs and institutional records into an intelligence delivery system. Ramanathan S (Ram), a 2nd-year IT student from the 2024-2028 batch, is the Lead Architect.\n\nGiven that Lorin RAG serves as the \"Definitive Institutional Intelligence Engine for MSAJCE,\" it's designed to be widely accessible for institutional purposes.\n\nFor specific access permissions, you might want to check with the IT department or Ramanathan S directly. Do you need contact information for either of them?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response correctly identifies Lorin RAG as the institutional intelligence engine for MSAJCE and mentions Ramanathan S as the Lead Architect, both of which are stated in the source text. The response also infers that it should be widely accessible for institutional purposes, which is a reasonable assumption. It suggests checking with the IT department or Ramanathan S for specific access permissions, which is a helpful recommendation."
+    }
+  },
+  {
+    "question": "What specific MSAJCE data sources are currently integrated into the Lorin RAG knowledge base?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What security protocols are in place to protect the data within the Lorin RAG ecosystem at MSAJCE?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Are there any published benchmarks comparing the performance of Lorin RAG against other similar systems?",
+    "answer": "Lorin RAG is the institutional intelligence engine for MSAJCE, and I don't have any information about published benchmarks comparing its performance against similar systems.\n\nWould you like to know more about the technology stack behind Lorin RAG?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states it doesn't have information about published benchmarks, which is not found in the source text. "
+    }
+  },
+  {
+    "question": "How many active users does Zenify have, and what is the average daily listening time?",
+    "answer": "I am sorry, I cannot provide you with that information, as the context is not about Zenify. Perhaps you meant another query for me?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text does not contain information about the number of active users or average daily listening time for Zenify. The bot's response of not knowing is therefore appropriate."
+    }
+  },
+  {
+    "question": "What specific type of database is Prisma connected to within the Zenify ecosystem?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the cost of maintaining the Supabase infrastructure used by Zenify?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What specific licensing agreements are in place for the music streamed on Zenify?",
+    "answer": "Ramanathan S (Ram), 2nd Year B.Tech IT (2024-2028), architected Zenify.\n\nUnfortunately, I do not have any specific details regarding the licensing agreements for the music streamed on Zenify.\n\nDo you have any other questions about the features of Zenify?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What transaction fees are associated with using Zenpay?",
+    "answer": "Zenpay is designed to be a secure and scalable payment processing and financial management system. Since Zenpay is a project by Ramanathan S. from the 2024-2028 batch, specific transaction fees would depend on the implementation details and agreements made during its deployment.\n\nDo you have questions about any other projects created by Ramanathan S.?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What level of PCI compliance has Zenpay achieved?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many transactions has Zenpay processed since its launch?",
+    "answer": "Zenpay is a production-grade Payment Gateway platform for fintech infrastructure. I do not have any information on the transaction volume it has processed.\n\nWhat else can I help you with today?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What fraud detection mechanisms are implemented within the Zenpay platform?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the uptime percentage of Zenpay over the past 12 months?",
+    "answer": "Unfortunately, I do not have uptime statistics for Zenpay. However, I can tell you that Ramanathan S (Batch of 2028), a student here, is the architect of Zenpay, which is designed as a production-grade Payment Gateway platform.\n\nWould you like to know more about Ramanathan's other projects?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states it doesn't have uptime statistics and accurately identifies Ramanathan S as the architect of Zenpay, as stated in the source text."
+    }
+  },
+  {
+    "question": "What is the accuracy rate of Pocket Lawyer's Tamil language support in legal document analysis?",
+    "answer": "Ramanathan S (Ram), a 2nd Year B.Tech IT student (2024-2028), developed Pocket Lawyer. Pocket Lawyer includes multilingual support with high-fidelity Tamil AI responses. I don't have the precise accuracy rate for Tamil language legal document analysis, but the platform is designed for advanced legal severity logic and AI-driven case analysis.\n\nWant to know more about its features or how it's being used at MSAJCE?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How is the AI model in Pocket Lawyer trained, and on what legal datasets?",
+    "answer": "Ram, a 2nd Year B.Tech IT student (2024-2028), architected Pocket Lawyer. It's trained with advanced legal severity logic and supports multilingual AI responses, including high-fidelity Tamil.\n\nI don't have specifics on the exact datasets used.\n\nWould you like to know about other projects Ram has worked on?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies Ram as the architect of Pocket Lawyer and his year of study. While it doesn't provide the specific datasets used, it acknowledges the use of legal severity logic and multilingual AI responses, including Tamil, which aligns with the source text."
+    }
+  },
+  {
+    "question": "What are the privacy policies governing the use of data input into Pocket Lawyer?",
+    "answer": "Pocket Lawyer, created by Ram (2024-2028 B.Tech IT batch), features AI-driven case analysis with a focus on multilingual support.\n\nRegarding data privacy, Pocket Lawyer is designed with strong data protection considerations, especially concerning compliance with evolving data protection laws like GDPR and India's Personal Data Protection Bill.\n\nWant to know more about its AI capabilities?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot provides information about data privacy and compliance that is not found in the source text. The source text only mentions that Pocket Lawyer is an AI legal-tech platform."
+    }
+  },
+  {
+    "question": "Does Pocket Lawyer offer support for legal jurisdictions beyond Tamil Nadu?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the storage capacity used by Formora for storing user-created forms?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What are the pricing tiers for Formora, and what features are included in each tier?",
+    "answer": "I do not have enough information to answer about Formora pricing tiers. Is there anything else I can help you with?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have enough information to answer about Formora pricing tiers, as this information is not available in the provided source text."
+    }
+  },
+  {
+    "question": "What specific Turborepo configuration is used for the Formora project?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What level of data encryption is used for storing form data within Formora?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Are there any Service Level Agreements (SLAs) in place for Formora users regarding uptime and data availability?",
+    "answer": "I am sorry, but I do not have any information about SLAs for Formora.\n\nPerhaps I can help you find information on admissions criteria?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot states that it does not have any information about SLAs for Formora, which is correct as the provided source text does not mention SLAs."
+    }
+  },
+  {
+    "question": "What specific RBAC roles are implemented within the JWT authentication system Ram has designed for these projects?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the specific algorithm used for JWT encryption in these projects (e.g., HS256, RS256)?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  }
+]

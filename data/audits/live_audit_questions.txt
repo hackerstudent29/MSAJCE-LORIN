@@ -1,0 +1,717 @@
+# MSAJCE LORIN — LIVE FORENSIC AUDIT LEDGER
+# Updated in real-time during the 450-question institutional lockdown.
+
+--- QUESTIONS COMPLETED ---
+[FAIL] What is the exact validity period of the NAAC 'A+' Grade accreditation currently held by Mohamed Sathak A.J. College of Engineering (MSAJCE)?
+[PASS] Can you provide the specific criteria used by TNEA to assign the counselling code '1301' to Mohamed Sathak A.J. College of Engineering (MSAJCE)?
+[PASS] Does Mohamed Sathak A.J. College of Engineering (MSAJCE) offer any payment options besides those available through the 'feepayr.com' portal?
+[PASS] Are there specific cut-off marks associated with TNEA counselling code '1301' for various engineering branches offered at Mohamed Sathak A.J. College of Engineering (MSAJCE)?
+[PASS] What is the official name and designation of the individual responsible for managing the 'enrollonline.co.in' portal for Mohamed Sathak A.J. College of Engineering (MSAJCE)?
+[PASS] What specific data security measures are in place to protect student financial information processed through the 'feepayr.com' portal for Mohamed Sathak A.J. College of Engineering (MSAJCE)?
+[PASS] Is there a deadline date listed on the 'enrollonline.co.in' portal for direct admissions applications to Mohamed Sathak A.J. College of Engineering (MSAJCE)?
+[FAIL] What is the official registration number of Mohamed Sathak A.J. College of Engineering (MSAJCE) as recognized by TNEA?
+[PASS] Does the 'enrollonline.co.in' portal provide access to past years' admission statistics for Mohamed Sathak A.J. College of Engineering (MSAJCE)?
+[FAIL] What is the official channel through which students can lodge a complaint regarding fee payment issues encountered on 'feepayr.com' for Mohamed Sathak A.J. College of Engineering (MSAJCE)?
+[PASS] What specific quality metrics were evaluated by NAAC to award Mohamed Sathak A.J. College of Engineering (MSAJCE) an 'A+' grade?
+[FAIL] Are there any disclaimers or terms of service documents available on the 'enrollonline.co.in' portal regarding the application process to Mohamed Sathak A.J. College of Engineering (MSAJCE)?
+[FAIL] Is there a publicly available audit report on the fee collection process carried out through 'feepayr.com' for Mohamed Sathak A.J. College of Engineering (MSAJCE)?
+[FAIL] What is the name of the specific department or committee at Mohamed Sathak A.J. College of Engineering (MSAJCE) that oversees the NAAC accreditation process?
+[PASS] Does Mohamed Sathak A.J. College of Engineering (MSAJCE) publish a list of faculty members' qualifications along with their respective departments on either of the two provided portals?
+[FAIL] What is the latest permissible return time for hostelers returning from an outing with prior written permission?
+[PASS] Can you provide the exact dates of the most recent 'Sathak Thiruvizha'?
+[PASS] What specific documents are required to obtain written permission from the warden for outstation travel?
+[PASS] What is the official procedure for adding a local guardian to the authorized visitors list?
+[FAIL] What is the exact name and contact details of the Head of Student Affairs, responsible for providing the names of current Student Council members?
+[PASS] How many buses are there in the college's private fleet that cover Chengalpattu, Kanchipuram, and Thiruvallur districts?
+[PASS] What is the specific frequency of bus route 105 between Tambaram West and Siruseri IT Park during peak hours?
+[PASS] What is the deadline to apply for the MSAJCE Merit Scholarship for the upcoming academic year?
+[PASS] If a female student scores exactly 180 out of 200, what percentage of tuition fees will be waived?
+[PASS] Besides AICTE Pragati and Saksham, what is the name of the specific government agency administrating the Merit-cum-means Minority Community scholarship?
+[PASS] Who are the named members of the dedicated anti-ragging squads?
+[FAIL] How many cases of hostel expulsion have occurred in the last 3 years related to anti-ragging incidents?
+[PASS] What is the specific TN-LEA counseling code for MSAJCE?
+[FAIL] What is the minimum percentage of marks required in Diploma in Engineering/Technology or B.Sc. with Mathematics to be eligible for Lateral Entry?
+[PASS] Where can I find the specific contact information for the Principal who heads the Anti-Ragging committee?
+[PASS] What was the exact dollar amount spent on athletic scholarships in the 2022-2023 academic year?
+[PASS] How many full-time faculty members left the university between January 1, 2023 and December 31, 2023, and what were their departments?
+[FAIL] What was the average SAT score for incoming freshman for the Fall 2023 semester?
+[FAIL] What specific percentage of the operating budget was allocated to the library system in fiscal year 2023?
+[FAIL] What is the exact policy outlining the refund schedule for tuition fees if a student withdraws before the semester's midpoint?
+[PASS] What was the total amount of endowment funds invested in sustainable energy initiatives as of December 31, 2023?
+[FAIL] How many students were officially sanctioned for violating the academic integrity policy in Spring 2023?
+[FAIL] What are the names and titles of the members of the university's investment committee?
+[FAIL] What was the total revenue generated from parking permits in the 2022-2023 academic year?
+[PASS] What is the maximum dollar amount a student can receive in need-based grants per academic year?
+[PASS] What are the exact dates of the university's official audits conducted by external firms over the past three years?
+[FAIL] What percentage of the student body is considered 'out-of-state' for tuition purposes for the Fall 2023 semester?
+[PASS] What are the names of the three highest paid administrators at the university, and what were their respective salaries for the 2023 calendar year?
+[PASS] What are the specific criteria for qualifying for the 'Presidential Scholars' merit-based scholarship?
+[PASS] What are the published graduation rates (4-year, 6-year) for students who entered in Fall 2019?
+[PASS] When was the Mohamed Sathak Trust established?
+[PASS] In what year did the Mohamed Sathak Trust establish its first self-financing engineering college?
+[PASS] How many educational institutions are currently run by the Mohamed Sathak Trust?
+[PASS] On what date was MSAJCE established?
+[PASS] What is the specific AICTE approval ID or reference number for MSAJCE?
+[PASS] Can you provide the expiration date of the current Anna University affiliation for MSAJCE?
+[PASS] What is the exact square footage of the auditorium?
+[FAIL] What is the maximum student capacity of the hostel?
+[PASS] What is the bandwidth capacity of the internet connectivity provided on campus?
+[FAIL] What is the full name and designation of the chairperson of the Governing Council?
+[PASS] Who is the coordinator of the IQAC (Internal Quality Assurance Cell)?
+[PASS] What was MSAJCE's NIRF ranking (if any) for the year 2023?
+[PASS] What is the registration number of the Mohamed Sathak Trust as a charitable organization?
+[PASS] How many faculty members hold a PhD?
+[PASS] What is the student-faculty ratio at MSAJCE, as of the most recent academic year?
+[PASS] What is the last date to apply for B.E. programs through TNEA counselling?
+[PASS] For the Pragati Scholarship Scheme, what specific documents are required to prove a family income of less than 8 Lakh per annum?
+[PASS] In which year was the Autonomous Regulations (R24) document published (as seen in the file name)?
+[PASS] How many seats are available in total (Government and Management Quota combined) for Computer Science & Engineering (Permanent Affiliation)?
+[PASS] What is the exact percentage of disability required to be eligible for the Saksham Scholarship Scheme?
+[FAIL] Under the 2021 Regulation, what is the specific course code for the C Programming course?
+[FAIL] What is the full URL for the Virtual Lab link for the Operating Systems Lab?
+[PASS] How many faculty members in the Artificial Intelligence and Data Science Department hold a Ph.D.?
+[PASS] How many of the 30 seats available for the B.Tech AIDS program are allocated to the Management quota?
+[FAIL] What specific 'Regulation' year dictates the current Curriculum & Syllabus for the B.Tech AIDS program?
+[PASS] What is Dr. Subramanian P's specific area of specialization?
+[PASS] What is the minimum educational qualification required to enroll as a Lateral Entry student in the B.Tech AIDS program?
+[PASS] According to the provided data, what year did B.Tech Artificial Intelligence and Data Science (AIDS) emerge as a high-growth career?
+[FAIL] Who is the Head of the Postgraduate programs within the Department of Artificial Intelligence and Data Science?
+[PASS] Which specific Big Data tools are mentioned as relevant skills for Data Engineers?
+[PASS] What are the names of the specific specializations mentioned for AI Research Scientists in India between 2025-2030?
+[PASS] Besides the degree, what three specific subjects must a student have passed in their 10+2 education to be eligible for the program?
+[PASS] For entry-level roles in AI and Data Science in India (0-2 years of experience), what is the lower end of the typical salary range mentioned?
+[PASS] Which Assistant Professors are listed as having a (Ph.D.) beside their M.Tech/M.E qualification?
+[PASS] Which of the recommended certifications is offered by Google?
+[PASS] What is the course code and title for the Networks Lab in the AIML department?
+[PASS] What is the name of the faculty member who is the Head of the PG program, and what is their highest degree?
+[PASS] Which virtual lab is available for the Object Oriented Analysis and Design Lab?
+[PASS] How many seats are available under the Management Quota for the B.E. Artificial Intelligence & Machine Learning program?
+[FAIL] What is the minimum educational qualification required for admission to the B.E. Artificial Intelligence & Machine Learning program?
+[PASS] According to the forecast, what is the expected CAGR for the AI job market in India over the next 5 years?
+[PASS] What specific criteria were used to select Anbazhagan, Saranraj Saravanan, and Mohammed Ateeq as Alumni Guests of Honour for the Silver Jubilee Event on 17.04.2026?
+[FAIL] What is the procedure for an alumnus/alumna to nominate a student for the 'needful students by way of funds and scholarship' program as mentioned in the Objectives?
+[PASS] What was the average scholarship amount awarded per student between 2019 and 2026?
+[FAIL] How much scholarship money in total was awarded to students in the IT department across all batches?
+[PASS] How many students from the CSE department received the scholarship more than once between 2019-2026?
+[PASS] Which academic year had the fewest number of scholarship recipients?
+[FAIL] What percentage of the total scholarship amount was awarded to ECE students from 2019-2026?
+[PASS] How many students with the name 'Abdullah' received the scholarship between 2019 and 2026?
+[FAIL] What is the difference in the number of scholarship recipients between the ECE and CSE departments from 2019-2026?
+[FAIL] What percentage of the total students that received the scholarship from 2019-2026, are in the 2023-2027 batch?
+[FAIL] How many distinct students from the 2022-2026 batch received the scholarship?
+[FAIL] What is the ratio of scholarship recipients in the IT department to the CSE department between 2019-2026?
+[PASS] How many students in the ECE department received the scholarship in the year range of 2022-2026?
+[PASS] How many students with the last name 'Basha' received the scholarship between 2019 and 2026?
+[FAIL] What is the total number of female students listed, who received the scholarship?
+[PASS] What is the scholarship distribution across departments (AIDS, AIML, and CSBS) for the 2024-2028 batch?
+[PASS] What is the percentage increase in scholarship recipients from the 2020-2024 batch to the 2021-2025 batch?
+[PASS] How much was the budget allocation for the MSAJCE Sports Club in the most recent annual report?
+[PASS] What percentage of the total college budget is allocated to the MSAJCE Sports Club?
+[FAIL] What specific criteria are used to determine award recipients for sports events conducted by the MSAJCE Sports Club?
+[PASS] How many students participated in outdoor games organized by the MSAJCE Sports Club in the last academic year?
+[PASS] Does the MSAJCE Sports Club offer specific training programs for students participating in regional, state, or national level competitions?
+[PASS] Which industry collaborations is the MSAJCE Fine Arts Club engaging with for skill-based training?
+[FAIL] What is the process for students to submit their artistic work for consideration in the MSAJCE Fine Arts Club's events?
+[PASS] How often does the MSAJCE Science Club conduct seminars with eminent scientists?
+[PASS] What specific types of electronic components are students taught to make in the MSAJCE Science Club activities?
+[PASS] Where exactly is the MSAJCE Science Club's notice board located, and how frequently is it updated?
+[PASS] What are the judging criteria for the 'Pirasangatin Thalaiwan' (King of Speeches) competition organized by the MSAJCE Tamil Mandram?
+[PASS] Does the MSAJCE Tamil Mandram offer any language classes or workshops to improve students' Tamil speaking and writing skills?
+[PASS] Under the 2021 Regulation, which semester covers the course AD3391 - Database Design and Management?
+[FAIL] For the course MA3354 - Discrete Mathematics, what ICT tools are recommended in the provided ICT Tools document?
+[FAIL] Which faculty member is currently listed as the Head of the Undergraduate CSBS program?
+[UNKNOWN] What is the URL to access the equipment details for the Web Technology Lab (IT8511)?
+[UNKNOWN] How many seats are available under the Government Quota for the B.Tech CSBS program?
+[FAIL] What are the specific objectives of the C Programming Lab (CS8261) as detailed in the provided document?
+[FAIL] What is the duration of the B.Tech CSBS program for students entering through lateral entry?
+[FAIL] Which companies, besides TCS, Infosys, Wipro, Accenture and CTS, are listed as top recruiters for CSBS graduates?
+[PASS] Which lab uses the course CS8461?
+[FAIL] Who is responsible for teaching IOT and Cloud Computing?
+[FAIL] What is the name of the Head of the Postgraduate CSBS program?
+[FAIL] Is there a virtual lab available for CS8581 Networks Lab?
+[FAIL] Which of the faculty members listed has a PhD in Wireless Sensor Networking and Image Processing?
+[FAIL] What is the link to the Objectives for CS8461 OOAD?
+[FAIL] Which of the faculty members listed has experience in NLP?
+[FAIL] How many students were admitted via lateral entry into the B.E. Computer Science and Engineering program in 2023?
+[PASS] According to the 2021 Regulation curriculum, what is the specific course code for the first Computer Science course required for B.E. students?
+[FAIL] What specific version of Docker is currently taught in the DevOps Engineer skillset, according to the most recent available course syllabus?
+[FAIL] When did Dr. Mohan E join the faculty, and what was his designated rank?
+[FAIL] What is the AICTE norm referenced as the eligibility criteria for the M.E. Computer Science and Engineering program?
+[FAIL] How many faculty members specializing in 'Network Security' were employed in the department during the 2022-2023 academic year?
+[FAIL] How many faculty members are PG level compared to UG level?
+[FAIL] Are scholarships available for management quota B.E. students, and if so, are they mentioned on the provided online fee payment portal?
+[FAIL] What is the pass mark for the Physics component required for B.E. eligibility, as per the 10+2 system mentioned?
+[FAIL] How many faculty members listed from 2020-2021 are no longer listed in the 2023-2024 faculty list?
+[UNKNOWN] Does the 'Virtual Lab Link' for 'C Programming Lab' require any special software or plugins to be accessed?
+[UNKNOWN] According to the provided data, what is the specific full title of the AICTE Norms that M.E. applicants must adhere to?
+[PASS] What is the exact title of the degree awarded upon completion of the 4-year program?
+[FAIL] What is the official name of the institution offering the MSAJCE degree?
+[FAIL] According to the 2021 Regulation (link provided), what is the course code for the Data Structures course?
+[UNKNOWN] According to the 2021 Regulation, how many credits are assigned to the 'Cyber Laws and Ethics' course?
+[FAIL] For lateral entry students, which specific courses, if any, from the regular program are waived or considered as prerequisites?
+[FAIL] What is the specific CGPA or percentage required in 10+2 to be eligible for admission?
+[FAIL] What specific version of Kali Linux is typically taught in the ethical hacking labs?
+[FAIL] Besides TCS, Infosys, Accenture, Palo Alto Networks, and IBM Security, can you name two more IT and Cyber Security firms that recruit from this program?
+[FAIL] What specific government initiative, besides Digital India and Smart Cities, impacts the curriculum?
+[FAIL] What is the exact name of the first lab mentioned under 'Hands-on Learning'?
+[FAIL] What is the official name of the course described as including compliance and governance?
+[FAIL] What is the precise number of hours dedicated to labs and simulation environments?
+[UNKNOWN] What is the minimum score that needs to be secured in Physics, Chemistry and Mathematics in the qualifying examination?
+[PASS] Is there a placement cell in MSAJCE, and if so, what's their placement rate of students who specialize in Cyber Security?
+[FAIL] What is the exact year the Department of Computer Science & Engineering â€” Cyber Security (CSCS) â€” MSAJCE was established?
+[PASS] What was the semiconductor market size in 2021, according to the data?
+[PASS] How many faculty members with a Ph.D. in Power Systems were employed in 2021-2022?
+[PASS] What is the course code for the Power System Simulation Lab?
+[FAIL] In which lab would I perform experiments for course EC8311?
+[FAIL] What is the projected job growth percentage per year in the Renewable Energy sector between 2025-2030?
+[PASS] According to the 2021 Regulation, what course covers Probability and Complex Functions in Semester III?
+[PASS] What is the maximum intake of students for the B.E. Electrical and Electronics Engineering program?
+[UNKNOWN] How many seats are available under the management quota for the B.E. EEE program?
+[UNKNOWN] What is the course code for Basic Electrical Electronics and Instrumentation Engineering?
+[PASS] What is the date of joining for Dr. Devikala S as a Professor?
+[FAIL] Which lab has the equipment details document named 'EE8712.pdf'?
+[FAIL] What is the designation of Mr. Chintala Venkatesh as of 2023-2024?
+[PASS] What is the CAGR projected for India's EV market?
+[FAIL] Which faculty member had specialization in Power Management in 2020-2021?
+[FAIL] What are the titles of all four courses related to Electrical Machines lab?
+[PASS] As of 2023-2024, how many assistant professors have completed their M.E. but not Ph.D?
+[FAIL] How many faculty members joined in August of 2022?
+[FAIL] What is the document name for EE8511 virtual lab link?
+[PASS] Which virtual lab link document is called EE8261-VIRTUAL1.pdf?
+[FAIL] What is the recommended focus areas in B.Tech/B.E. for design, systems, and product development with job growth rate of 7-9%?
+[FAIL] What is the course code for the Engineering Practices Lab?
+[FAIL] What are the five key growth drivers forecast for EEE jobs between 2025 and 2030?
+[FAIL] Which faculty member who specialized in High Voltage Engineering in 2021-2022 is not in the faculty list for 2023-2024?
+[PASS] What is the official target for renewable energy (solar, wind) by 2030 in India in GW?
+[FAIL] What percentage of government jobs in India are from the electrical engineering sector?
+[FAIL] What percentage of all available engineering jobs do electrical engineering jobs represent?
+[FAIL] What is the job growth rate forecast for VLSI, PCB design, ASIC/FPGA engineers?
+[FAIL] What is the expected job growth rate for engineers focusing on IoT, Power electronics, MATLAB, Embedded Systems, AI and IoT?
+[FAIL] What percentage of the SIIF's total funding comes from government agencies?
+[FAIL] How many startups have successfully converted prototypes into commercially viable products with SIIF's assistance since its inception?
+[FAIL] What specific criteria are used to select startups for incubation at SIIF?
+[FAIL] What is the average seed funding amount provided to startups incubated at SIIF?
+[FAIL] What is the success rate (percentage of startups that achieve profitability within 3 years) of startups incubated at SIIF?
+[UNKNOWN] What is the process for students to submit ideas to the National Innovation Foundation (NIF) of India through MSAJCE?
+[UNKNOWN] What is the total budget allocated by MSAJCE for SIIF activities for the current financial year?
+[PASS] What specific types of intellectual property protection (e.g., patents, trademarks) have been successfully obtained by startups incubated at SIIF?
+[UNKNOWN] How many patents resulting from SIIF-supported projects have been commercially licensed or sold?
+[PASS] Which Lesson Plan file path is the correct URL to access for the Artificial Intelligence Lab?
+[PASS] Can the 'Internship Report Format 2025' be downloaded from the college website directly, or must it be viewed online first?
+[PASS] For which companies does the document suggest Deep Learning Engineers are in high demand?
+[FAIL] What is the specific name of the 'Job Roll' for the skill development course in Computer Science and Engineering under Model 1?
+[PASS] What is the latest permissible return time for hostellers who have obtained permission to leave campus?
+[FAIL] According to the Alumni Association By-Laws (English), what are the term limits for the office bearers listed for the 2024-Present term?
+[FAIL] What was the average student-to-faculty ratio for undergraduate courses in the Fall 2022 semester?
+[PASS] For students from Andhra Pradesh applying to B.E. programs, is the qualifying marks (Q) calculation applicable for HSC or Intermediate level?
+[PASS] How much scholarship money, in Rupees, was awarded to students graduating in 2023? 
+[FAIL] What is the exact validity period of the 'A+' NAAC accreditation granted to Mohamed Sathak A.J. College of Engineering?
+[FAIL] What is the file path for the Question Bank for the Discrete Mathematics course (MA3354)?
+[FAIL] What was the average SAT score of incoming freshmen admitted to the College of Engineering in Fall 2022?
+[PASS] What is the process by which the Administrative Officer is selected for the role of Treasurer of the Alumni Association?
+[PASS] What is the exact validity period of the NAAC 'A+' accreditation granted to Mohamed Sathak A.J. College of Engineering (MSAJCE)?
+[PASS] What specific percentage of the institution's operating budget was allocated to student financial aid in the fiscal year 2023?
+[PASS] How many students received merit-based scholarships exceeding $10,000 in the 2022-2023 academic year?
+[FAIL] What is the specific deadline to submit written permission for outstation travel to the warden?
+[PASS] What specific documentation is required to demonstrate eligibility for the AICTE Saksham scholarship?
+[PASS] What specific departments do the 6 students who received internships at StayIndiaDigital on 10.07.2025 come from, as mentioned?
+[FAIL] What is the average scholarship amount, in Rupees, awarded per student across all 97 beneficiaries from 2019-2026?
+[UNKNOWN] What specific dates encompass the 'Sathak Thiruvizha' festival for the current academic year?
+[UNKNOWN] What is the cut off HSC average percentage for MBC & DNC students to apply to Bachelor of Engineering Courses?
+[FAIL] What is the specific validity period of the 'A+' NAAC accreditation currently held by Mohamed Sathak A.J. College of Engineering?
+[FAIL] Which faculty member specializes in Wireless Sensor Networking and Image Processing?
+[FAIL] According to the TNEA counselling code 1301, what was the cut-off mark for the most recent round of counselling for the Computer Science Engineering program at MSAJCE?
+[UNKNOWN] Which document contains the college's AICTE approval?
+[UNKNOWN] What is the deadline for submitting the list of authorized visitors or local guardians to the hostel warden?
+[FAIL] According to TNEA counselling code 1301, what were the minimum and maximum cutoff marks for admission to the Computer Science Engineering program at MSAJCE in the previous academic year?
+[PASS] What is the exact distance, in kilometers, from the Girls Hostel in Sholinganallur to the main campus?
+[FAIL] Does Mohamed Sathak A.J. College of Engineering offer any courses that are NOT subject to the TNEA counselling process using code 1301?
+[PASS] How many individual students with the first name 'Afrin' received the scholarship from 2019-2026?
+[PASS] What is the exact date of the next scheduled tuition increase hearing for undergraduate students?
+[FAIL] What is the exact cut-off score required for a male student to qualify for the MSAJCE merit-based tuition waiver?
+[UNKNOWN] What is the duration (in hours) of the skill development course 'Refrigeration and Air Conditioning Technician' under Model 2?
+[UNKNOWN] Besides direct admissions, are there other admission pathways into Mohamed Sathak A.J. College of Engineering?
+[FAIL] What was the average room and board cost for students living in on-campus housing during the 2021-2022 academic year?
+[PASS] What is the latest permissible return time to the Girls Hostel, as strictly enforced?
+[PASS] Does MSAJCE offer any scholarships or fee waivers specifically for students admitted through TNEA counselling code 1301?
+[PASS] According to the Girls Hostel Outing Rules, what is the latest permissible return time to the hostel on weekends?
+[PASS] What was the total monetary amount donated to the MSAJCE Alumni Sports Pavilion by the alumni of the 2001-2005 batch and the Alumni Association during the Silver Jubilee Reunion Meet 2025?
+[FAIL] Can you provide the names of the three external auditing firms that submitted proposals for the 2024 audit?
+[PASS] What is the specific validity period of the NAAC 'A+' Grade accreditation currently held by Mohamed Sathak A.J. College of Engineering (MSAJCE)?
+[PASS] How many seats are reserved for the NRI category in M.E. Computer Science & Engineering program?
+[FAIL] How many students from the IT department received the scholarship for the 2023-2027 batch?
+[FAIL] What are the AI integration areas mentioned within Healthcare, Autonomous Vehicles, and Smart Cities?
+[FAIL] Besides the official portal (https://enrollonline.co.in/Registration/Apply/MSAJCE), are there any other recognized methods for direct admission into MSAJCE?
+[PASS] Which specific dates is the 'HABIBI' technical symposium scheduled for?
+[FAIL] What specific security measures are in place to protect student financial data processed through the feepayr.com payment portal?
+[FAIL] On the official fee payment portal (https://www.feepayr.com/), what are the accepted methods of payment and are there any associated transaction fees?
+[PASS] On what date did the most recent 'Sathak Thiruvizha' occur?
+[PASS] How far is the Girls Hostel located from the main academic campus in kilometers?
+[FAIL] How does a hosteller obtain the 'prior written permission' from their Head of Department (HOD) and hostel warden to leave campus on a non-holiday?
+[FAIL] What percentage of the student body identified as first-generation college students in Fall 2023?
+[FAIL] What is the exact name of the MHRD Scholarship Scheme for B.E./B.Tech. Students?
+[FAIL] Who specifically from the Alumni Association decided to donate to the Silver Jubilee Reunion Meet MSAJCE Alumni Sports Pavilion?
+[PASS] According to the TNEA counselling process using code 1301, what was the cut-off mark for the general category in Computer Science Engineering (CSE) at Mohamed Sathak A.J. College of Engineering (MSAJCE) in the most recent academic year?
+[PASS] Does Mohamed Sathak A.J. College of Engineering publish detailed reports on how fees collected through feepayr.com are allocated and utilized?
+[FAIL] What was the total dollar amount spent on faculty professional development across all departments in the fiscal year 2022?
+[FAIL] What is the count of students with the last name 'Abdullah' who received the scholarship between 2019 and 2026?
+[UNKNOWN] What is the process for obtaining prior written permission from the HOD and hostel warden for a day outing within Sholinganallur?
+[PASS] What specific written information is required from parents to authorize visitors or local guardians for Girls Hostel residents?
+[FAIL] For Lateral Entry admissions, is there a specific Government Order (G.O) number related to eligibility for Bachelor of Science (B.Sc.) candidates?
+[FAIL] Does MSAJCE offer any fee payment plans or installment options in addition to the methods listed on https://www.feepayr.com/?
+[UNKNOWN] Is there a documented audit trail for transactions processed through enrollonline.co.in and feepayr.com?
+[PASS] What version of the curriculum is the 2021 Regulation, Anna University BE?
+[FAIL] How much did tuition increase, in percentage terms, from the 2020-2021 academic year to the 2021-2022 academic year?
+[FAIL] Which specific public bus stop on OMR is closest to the SIPCOT bus stop for routes 102, 570, and 221?
+[FAIL] How many full-time equivalent (FTE) employees were classified as administrative staff in the Human Resources department as of December 31, 2023?
+[FAIL] Who is the current Head of Student Affairs and where is their office located?
+[FAIL] Can you specify which bus stop along OMR routes 102, 570, and 221 is closest to the college entrance?
+[UNKNOWN] Can I view a detailed breakdown of the fee structure for each program offered at MSAJCE, including tuition fees, exam fees, and other charges, through the official enrollment portal (https://enrollonline.co.in/Registration/Apply/MSAJCE)?
+[FAIL] How many students from the ECE department received the scholarship in the 2022-2026 batch?
+[FAIL] What is the specific process for an alumnus to be considered for the Honoured Women Achiever Award, exemplified by Ms. Vani Parachuri and Ms. P.Rosiah on 8.03.2025?
+[FAIL] Does Mohamed Sathak A.J. College of Engineering (MSAJCE) offer any scholarships specifically tied to admission through TNEA counselling code 1301?
+[PASS] What are the names and contact details of the current Student Council President and Secretary?
+[PASS] Is Dr. Vamsi Naga Mohan A.'s email address listed for contacting about the admission process is cse.vamsi@msajce-edu.in?
+[UNKNOWN] What is the deadline for submitting a request to the HOD and hostel warden for permission to leave campus for non-holiday purposes?
+[PASS] Is there an option for lateral entry into the B.E. Artificial Intelligence & Machine Learning program, and if so, what is the program duration?
+[PASS] What specific criteria were used by NAAC to award the 'A+' grade to MSAJCE, and where can I find a detailed report of the assessment?
+[FAIL] What is the official grievance redressal mechanism for disputes related to fees paid through feepayr.com?
+[UNKNOWN] What is the specific file name of the admission flyer for the academic year 2024-2025?
+[PASS] What specific year was Mohamed Sathak A.J. College of Engineering officially established?
+[FAIL] What was the acceptance rate for transfer students applying to the business school in Spring 2023?
+[FAIL] How often is the enrollonline.co.in portal audited for data security and compliance?
+[PASS] What are the names of the current President and Secretary of the Student Council?
+[PASS] What is the procedure for a parent to update or change the list of authorized visitors for their daughter residing in the girls' hostel?
+[FAIL] If I apply for direct admission through enrollonline.co.in, what is the typical processing time for application review and decision at MSAJCE?
+[PASS] Does the college private fleet provide transportation specifically to Poonamallee within the Thiruvallur district?
+[FAIL] What is the specific policy number or title outlining the process for appealing a denied financial aid application?
+[UNKNOWN] Which academic year's AICTE Pragati scholarship is currently being offered to eligible female students?
+[FAIL] What specific criteria are used to differentiate between the Government and Management quota seats for the B.Tech AIDS program?
+[PASS] What specific types of payment methods are accepted through the feepayr.com portal for fee payments to MSAJCE, beyond general categories like credit/debit cards or net banking?
+[FAIL] What is the job title of the faculty member who is listed as specializing in IOT, Network Security?
+[FAIL] What criteria was used to select Ms. Vani Parachuri and Ms. P.Rosiah for the Honoured Women Achiever Award at the International Women's Day Celebration?
+[UNKNOWN] What is the exact cut-off mark required for a student belonging to the BC community to get MSAJCE Merit Scholarship?
+[FAIL] Which department had exactly 8 scholarship recipients listed for the 2025-2029 batch?
+[PASS] What is the procedure to verify the authenticity of documents uploaded during the online application process via https://enrollonline.co.in/Registration/Apply/MSAJCE?
+[FAIL] What is the exact criteria used by MSAJCE to qualify students for direct admission?
+[FAIL] What is the current student-to-faculty ratio within the Biology department?
+[PASS] Does the college conduct independent verification of the accuracy of information presented on the enrollonline.co.in portal?
+[FAIL] Regarding the 2021 Regulation Curriculum & Syllabus, what are the required courses in the first semester?
+[FAIL] What was the precise percentage change in the endowment fund's value between January 1, 2023, and December 31, 2023?
+[FAIL] What is the exact percentage of tuition waiver offered to students with a cut-off score of 190 out of 200 under the MSAJCE Merit Scholarship?
+[FAIL] What is the precise cut-off mark out of 200 required for male students to be eligible for MSAJCE merit-based tuition waivers?
+[PASS] How many students graduated from the B.Tech AIDS program in 2022 and 2023, respectively?
+[FAIL] What are the specific dates for the next 'Sathak Thiruvizha' annual cultural festival?
+[PASS] Are there any late payment fees associated with using feepayr.com after a specified deadline, and if so, what are the amounts?
+[FAIL] How many students from the 2023 batch were considered when Alumni Shanmugasarathy hired 1 student from Lightenz Technovations Pvt Ltd on 05.01.2024?
+[PASS] What is the refund policy for tuition fees paid through https://www.feepayr.com/ if a student withdraws before the commencement of classes?
+[PASS] What were the exact net revenues generated by the campus bookstore for the spring semester of 2023, accounting for all sales and returns?
+[FAIL] What is the current maximum tuition fee waiver amount available under the MSAJCE merit scholarship?
+[FAIL] What is the average GPA of students admitted to the B.Tech AIDS program through lateral entry?
+[UNKNOWN] How many times is 'Pragatha' listed as a recipient in the CSE department?
+[PASS] What is the policy regarding refunds of fees paid through feepayr.com in case of withdrawal from the program after TNEA counselling?
+[FAIL] Which companies are listed as having R&D centers in India?
+[FAIL] Under TNEA counselling code 1301, what percentage of seats are reserved for students from specific categories (e.g., OBC, SC, ST) at MSAJCE?
+[FAIL] What percentage of tuition fees is waived for students achieving a cut-off of 180+?
+[PASS] What is the annual endowment payout rate for the university's general scholarship fund?
+[FAIL] Is the 10% tuition fee discount for female students applied *after* the merit-based tuition waiver?
+[FAIL] Using TNEA code 1301, what was the last rank admitted for the ECE (Electronics and Communication Engineering) program at MSAJCE in the previous year's counselling?
+[FAIL] Does MSAJCE offer any scholarships or financial aid specifically for students enrolled in the B.Tech AIDS program?
+[FAIL] How many students officially requested and received hardship withdrawals in the fall 2023 semester?
+[PASS] What is the frequency of the Alumni Association Meets, as observed from the dates listed between 2023 and 2024?
+[PASS] Are lateral entry students from B.Sc. programs with Mathematics eligible for AICTE Saksham or Pragati scholarships?
+[FAIL] How many departments within Mohamed Sathak A.J. College of Engineering were evaluated during the NAAC 'A+' Grade accreditation process?
+[FAIL] Can students opt for alternative payment methods besides feepayr.com for tuition fees?
+[FAIL] Which districts, in addition to Chengalpattu, Kanchipuram, and Thiruvallur, are served by the college's private transport fleet?
+[FAIL] How many students were awarded the scholarship in the year 2019? Please count only individual students.
+[PASS] What was the budget allocation for the MSAJCE Sports Club in the last annual report submitted?
+[FAIL] What is the maximum financial assistance amount available under the AICTE Pragati scholarship for female students?
+[FAIL] What are the names and contact details of the current members of the Anti-Ragging squad?
+[UNKNOWN] What were the total salary and benefits paid to the institution's president in the fiscal year 2023?
+[PASS] What percentage of graduates in May 2022 secured full-time employment within six months of graduation?
+[PASS] What is the process for reporting a suspected instance of ragging and to whom should the report be directed if not the Principal?
+[PASS] Who is the designated data protection officer (DPO) responsible for overseeing data privacy on enrollonline.co.in and feepayr.com?
+[PASS] What percentage of AIDS graduates found employment within 6 months of graduation, according to the most recent data available?
+[PASS] What is the refund policy for fees paid through feepayr.com if a student withdraws their admission from MSAJCE after a certain date?
+[FAIL] What is the refund policy for fees paid through https://www.feepayr.com/ if a student withdraws their admission after acceptance but before the start of classes?
+[FAIL] Can I view a copy of the official Anti-Ragging policy and list of squad members?
+[FAIL] Can you provide a specific date for the next 'Sathak Thiruvizha' festival?
+[PASS] What specific criteria are used to select the 25 alumni who are honoured during the Engineers Day celebrations (e.g., Engineers Day 2025)?
+[UNKNOWN] Are there any specific scholarships exclusively available to students admitted through TNEA counselling code 1301 at MSAJCE?
+[FAIL] What is the official student-faculty ratio at Mohamed Sathak A.J. College of Engineering (MSAJCE) according to the latest accreditation report?
+[FAIL] Where can I find the names of the current Student Council office bearers beyond just the President and Secretary (e.g., Department Coordinators)?
+[FAIL] What are the documented procedures to ensure compliance with TNEA counselling guidelines for admissions processed under code 1301?
+[FAIL] What specific sports events were held at the regional/state/national level by the MSAJCE Sports Club during the last academic year?
+[FAIL] How many students were enrolled in online-only degree programs during the Spring 2023 semester?
+[FAIL] What is the student-to-faculty ratio in the Artificial Intelligence and Data Science Department (AIDS) at MSAJCE?
+[FAIL] How many unique students from the MECH department received the scholarship between 2019 and 2027?
+[FAIL] What specific documentation is required to apply for the AICTE Saksham scholarship?
+[FAIL] What is the date of the next scheduled meeting for the University's Finance Committee, and is it open to the public?
+[FAIL] What specific documents are required to be submitted during the TN-LEA counseling for lateral entry admissions?
+[PASS] What were the total expenditures on athletic scholarships during the 2022-2023 academic year?
+[PASS] Which specific bus stop within SIPCOT do OMR routes 102, 570, and 221 utilize?
+[FAIL] Who is Ms. J. Stella Marry who was an Executive Member during the 2022-2023 term and replaced by an unlisted individual in 2021-2022?
+[UNKNOWN] Does MSAJCE provide hostel facilities for students admitted through TNEA code 1301, and what is the annual cost?
+[FAIL] What is the average GRE score of graduates from the B.Tech AIDS program who pursue M.E./M.Tech. degrees?
+[FAIL] What are the specific contact details (phone number and email address) for the Head of Student Affairs office?
+[FAIL] Besides NAAC accreditation, does MSAJCE possess any other specific accreditations for individual departments (e.g., NBA for specific engineering programs)?
+[FAIL] What are the technical requirements for using the portal https://enrollonline.co.in/Registration/Apply/MSAJCE for registration?
+[PASS] What percentage of students, admitted through TNEA code 1301, are typically offered financial aid or scholarships?
+[FAIL] How many trophies and medals were awarded by the MSAJCE Sports Club in the most recent sports event conducted by the club?
+[FAIL] What are the operational hours of the Transport helpline number (+91 94430 10256)?
+[PASS] How many industry-sponsored projects were completed by B.Tech AIDS students in the academic year 2022-2023?
+[PASS] What is the maximum amount of federal student loan debt a student can accrue attending this institution?
+[FAIL] How many students with the last name starting with 'M' were scholarship beneficiaries from 2019-2026?
+[PASS] Who are the current members of the Anti-Ragging squads?
+[PASS] What were the expenditures paid to external consultants for Title IX compliance training and audits in fiscal year 2023?
+[UNKNOWN] What is the student-faculty ratio at MSAJCE, as assessed during the NAAC accreditation process?
+[PASS] What are the names and contact details for the current Student Council President and Secretary?
+[PASS] Where can I find the meeting minutes from the AAC meeting with Alumni Deepak on 13.02.2026?
+[FAIL] What is the official address and contact number listed for Mohamed Sathak A.J. College of Engineering (MSAJCE) within the TNEA counselling guide under code 1301?
+[PASS] What is the application deadline for the AICTE Pragati scholarship for female students?
+[PASS] What is the procedure for resolving discrepancies in fee payments made through https://www.feepayr.com/?
+[FAIL] Are there any specific entrance exams or cut-off scores required for admission into the B.Tech AIDS program?
+[UNKNOWN] Are there specific IT security certifications held by the college related to the operation of enrollonline.co.in and feepayr.com?
+[PASS] What specific diploma programs in Engineering/Technology are accepted for lateral entry admissions through TN-LEA counselling?
+[UNKNOWN] What were the total amount of funds that were disbursed to students via Pell Grants in the Spring 2023 semester?
+[PASS] What percentage of the B.Tech AIDS curriculum is dedicated to hands-on lab work and practical application?
+[PASS] What are the specific districts, in addition to Chengalpattu, Kanchipuram, and Thiruvallur, covered by the college private transport fleet?
+[PASS] What is the percentage of tuition fee waived for a female student with a cut-off between 170-179 (out of 200)?
+[FAIL] Can MSAJCE provide historical data on the percentage of students admitted via TNEA counselling code 1301 vs. direct admissions over the past 3 years?
+[FAIL] What specific year did MSAJCE last undergo a NAAC accreditation assessment prior to receiving the 'A+' grade?
+[UNKNOWN] What is the exact procedure for filing an FIR against someone found engaging in ragging as stated in the zero tolerance policy?
+[PASS] What is the policy regarding credit transfer for students with prior coursework in a related field?
+[FAIL] What was the average undergraduate tuition fee for in-state students for the 2022-2023 academic year?
+[PASS] What specific type of B.Sc. degree, in addition to Mathematics, is acceptable for Lateral Entry admissions?
+[PASS] When was the Mohamed Sathak Trust, which established MSAJCE, originally founded?
+[FAIL] Who is the official contact person or department to clarify doubts regarding the direct admission process through https://enrollonline.co.in/Registration/Apply/MSAJCE?
+[FAIL] What is the documented procedure for a faculty member to appeal a decision related to tenure or promotion, including specific deadlines, policy numbers, and where the appeal would be filed?
+[FAIL] Does the 'A+' NAAC Grade accreditation influence the college's eligibility for specific government grants or funding opportunities, and if so, which ones?
+[PASS] How many educational institutions, in total, does the Mohamed Sathak Trust currently operate?
+[PASS] Does the college offer any AI or Data Science related internships through the AIDS Department?
+[FAIL] What is the exact criteria and documentation to get the special 10% tuition fee discount for female students? Do I need to apply separately for this?
+[PASS] What is the specific date of the 'Admission 2026-2027 Flyer' available on the website?
+[UNKNOWN] Does the college provide receipts for fee payments completed through https://www.feepayr.com/?
+[UNKNOWN] What date in the last academic year was the last FIR filed for a ragging incident?
+[FAIL] What percentage of the endowment was allocated to student scholarships in fiscal year 2023?
+[PASS] When was the Mohamed Sathak Trust established?
+[PASS] What is the exact cut-off percentage for the MBC & DNC category for direct second year B.E./B.Tech admissions?
+[PASS] What is the email address specifically designated for submitting grievances?
+[FAIL] What specific documentation is required to prove eligibility for the Merit-cum-Means Minority Community scholarship?
+[PASS] Which companies recruited graduates from the B.Tech AIDS program in the most recent placement drive?
+[PASS] What are the specific security measures implemented by feepayr.com to protect student financial data during fee payments to MSAJCE?
+[PASS] What is the typical class size for core B.Tech AIDS courses, and does it vary between the government and management quota seats?
+[FAIL] What is the date of expiry for the link provided for fee payment (https://www.feepayr.com/)? Is it program/batch specific?
+[FAIL] How many full-time faculty members were employed in the School of Engineering as of Fall 2023?
+[UNKNOWN] How many seats are available under the NRI category for the Computer Science & Engineering (Cyber Security) program?
+[UNKNOWN] What is the file name for the Annual Report for AY2023-2024?
+[FAIL] On what date was MSAJCE established?
+[FAIL] What is the procedure for reporting a discrepancy or error related to fee payments made through feepayr.com to MSAJCE, and what is the expected resolution timeframe?
+[PASS] What is the exact percentage of seats allocated for the NRI category in the undergraduate programmes?
+[PASS] What is the specific number of off-campus placements for AIML students in the last academic year?
+[PASS] What is the specific intake for the Government Quota in the Structural Engineering postgraduate program?
+[FAIL] What was the acceptance rate for undergraduate applications for the Fall 2023 semester?
+[PASS] For the Pragati Scholarship Scheme for Girl Students, what is the last date to apply?
+[FAIL] What specific date was the 2021 Regulation Curriculum & Syllabus for B.Tech AIDS implemented?
+[PASS] What is the full website address to pay online fees?
+[FAIL] When were the Alumni Association By-Laws (Tamil) last updated, according to the document hosted on the website?
+[FAIL] Which specific AI and ML startups in Bangalore, Hyderabad, or Pune have hired graduates from this program in the last three years?
+[FAIL] What is the full address of MSAJCE, including the postal code?
+[FAIL] What is the reported graduation rate for students completing their degree within 6 years?
+[PASS] What is the average GPA of students who successfully secured placements at Microsoft from the AIML program?
+[PASS] According to Autonomous Regulations (R24), what are the specific requirements for course credits?
+[UNKNOWN] According to the address listed, what is the PIN code for MSAJCE?
+[PASS] What is the minimum percentage required for Backward Class including Backward Class Muslim to apply for B.E/B.Tech courses?
+[FAIL] According to the list of office bearers for 2024, what specific role does the Administrative Officer hold?
+[PASS] What percentage of the 2021 regulation curriculum is dedicated to 'Explainable AI' and 'Generative Adversarial Networks'?
+[FAIL] What is the specific phone number listed to contact MSAJCE?
+[PASS] What is the specific YouTube URL for the MSAJCE college video?
+[FAIL] What were the total research expenditures for the university in fiscal year 2023?
+[PASS] How many students who entered via lateral entry in the past 5 years have successfully completed the B.E. Artificial Intelligence & Machine Learning degree?
+[PASS] What is the official email address for general inquiries at MSAJCE?
+[FAIL] For the Pragati Scholarship Scheme for Girl Students, what specific documents are required to verify the family income of less than 8 Lakh per annum?
+[FAIL] How many faculty members in the AIDS department hold a Ph.D. degree?
+[PASS] What is the total sanctioned intake for the Computer Science & Engineering program with permanent affiliation?
+[PASS] Which departments did the 6 students placed for internship at StayIndiaDigital on 10.07.2025 belong to?
+[PASS] What is the AICTE website link on the page for Student Development Schemes?
+[PASS] What is the exact duration, in years, of the M.E. (Computer Science and Engineering) program?
+[PASS] For the course MA3354 (Discrete Mathematics), what specific ICT tools are utilized as listed in the MA3354-ICT.pdf document?
+[PASS] What is the full name of the faculty member whose area of specialization is Wireless Sensor Networking and Image Processing?
+[UNKNOWN] What is the direct URL for the online application form?
+[UNKNOWN] Which software does MSAJCE use for its College Management System?
+[FAIL] How much total revenue did the university's sports teams generate during the 2022-2023 academic year?
+[PASS] What is the student-faculty ratio specifically within the AIML department?
+[FAIL] According to the AICTE Approval document, what is the AICTE student intake limit for the college for the academic year 2024-2025?
+[PASS] In the 2021-2022 list of office bearers, which member was listed as having been replaced?
+[PASS] How many seats are available under the government quota for the Structural Engineering postgraduate program?
+[PASS] According to the equipment details document, what specific hardware and software configurations are available in the C Programming Lab?
+[FAIL] What is the course code and name for the Internet Programming Lab?
+[FAIL] What is the direct URL for online fee payment?
+[PASS] Does the Computer Hardware Network Maintenance skill development course, at NSQF Level 4, require any prior qualifications for admission?
+[PASS] What is the direct website link to access the academic calendar?
+[PASS] If a student from Kerala scores 90% in Mathematics, 85% in Physics, and 80% in Chemistry, what would be their qualifying marks (Q) for admission?
+[UNKNOWN] What batch year did Alumni Aniruddhan Narayanan belong to, when he was the Guest of Honor at Project X Hackathon on 10.04.2025?
+[UNKNOWN] How much of the university budget is allocated to facility maintenance and repairs each year?
+[UNKNOWN] For lateral entry students, how many semesters are in the B.Tech AIDS program?
+[PASS] What is the specific percentage weightage given to internal assessments versus final examinations in the 2021 Regulation curriculum for the AD3391 course?
+[PASS] What donation did the Alumni make to Silver Jubilee Reunion Meet 2025?
+[UNKNOWN] For lateral entry admissions, what minimum marks do SC/SCA/ST candidates need to secure to be eligible for B.E/B.Tech?
+[FAIL] In what year was the first self-financing engineering college established by the Mohamed Sathak Trust?
+[UNKNOWN] What is the URL for the 'Institutional Distinctiveness' document on the website?
+[UNKNOWN] For students from Kerala applying to B.E./B.Tech programs, is there a specific document required as proof of qualifying marks besides the mark sheet?
+[PASS] Does the curriculum include any mandatory internships, and if so, what is the duration of each mandatory internship?
+[PASS] How many educational institutions does the Mohamed Sathak Trust currently manage?
+[FAIL] What percentage of students receive some form of financial aid (grants, loans, work study)?
+[UNKNOWN] According to the autonomous regulations R24, what is the minimum CGPA required for a student to pass a course?
+[FAIL] How many seats are available for government-allocated students in the B.Tech AIDS program?
+[UNKNOWN] For Lateral Entry admissions, can a candidate with a B.Sc. in Mathematics apply to any B.E./B.Tech program, or are there specific program restrictions?
+[PASS] On what date in 2024 did the Alumni Association hold a meeting with approximately 17 alumni in attendance?
+[PASS] What is the URL for the 'ARIIA Certificate' document on the website?
+[PASS] What is the student-to-faculty ratio across all departments?
+[FAIL] What are the specific criteria used to allocate seats under the Management Quota, and what is the typical fee structure for those seats?
+[UNKNOWN] What are the specific courses available under the 'Sector/Course Basket' for Architecture Engineering?
+[PASS] What is the process to access the Virtual Labs listed and are they accessible outside of the college's network?
+[PASS] Is SAS a part of the curriculum for Data Analyst Roles?
+[FAIL] What is the average SAT score of admitted students in the Fall 2023 cohort?
+[PASS] What are the accepted equivalent qualifications for the Master's Degree required for Ph.D in Mechanical Engineering as recognized by Anna University?
+[FAIL] What is the email address for the Grievance and Redressal Committee?
+[PASS] What is the website address for the Anna University Approval document?
+[PASS] Who hired the 1 student placed at Lightenz Technovations Pvt Ltd on 05.01.2024, and from which graduating class?
+[PASS] According to the provided data, what is the URL for the 2023-2024 Annual Report?
+[PASS] What is the official TNEA code for MSAJCE for the purpose of counselling?
+[FAIL] Of the courses listed, which courses are taught in collaboration with industry partners, if any?
+[FAIL] How many students are enrolled in online-only degree programs?
+[PASS] When was the "GoldenGuru Award in Producing Youngminds" received and who was conceptualized by alumni team?
+[FAIL] What is the last date to submit the online application form for the skill development course 'AI - Machine Learning Developer'?
+[FAIL] What is the exact percentage of seats reserved for SC/SCA/ST candidates in the Management Quota for undergraduate programs?
+[PASS] What is the expected CAGR of the AI and Data Science job market in India until 2030?
+[UNKNOWN] What is the total sanctioned intake for all undergraduate Computer Science and Engineering programs combined?
+[UNKNOWN] What is the value of the university's physical assets (buildings, land, equipment)?
+[UNKNOWN] Which Alumni was recognised on 25.11.2023 for hosting the "Awareness Session on 'You are important'"?
+[PASS] What is Mrs. Sasikala L's highest earned degree?
+[FAIL] What is the passing percentage of students in the AL3391 (Artificial Intelligence) course based on the latest available data?
+[FAIL] Are there any specific restrictions on the branch of diploma required for Lateral Entry to specific B.E./B.Tech programs?
+[FAIL] What is the duration, in years, of the autonomous regulations?
+[PASS] How many Alumnus participated in the NBA Inspection held on 30.09.2023?
+[UNKNOWN] How many Management Quota seats are available in the Structural Engineering postgraduate program?
+[FAIL] What is the URL for the College Management System (CIMS)?
+[PASS] What specific support is provided to students interested in pursuing higher education (M.E./M.Tech./M.B.A.) after completing the B.E. in AIML?
+[FAIL] For an AI Research Scientist with 7 years of experience, what is the expected annual salary range?
+[UNKNOWN] For students from other states, can Dr. Vamsi Naga Mohan A. communicate in Kannada?
+[FAIL] How much money was raised through alumni donations in the 2022-2023 academic year?
+[PASS] According to the 'MSAJCE Policies' link, what year was the 'ARIIA Certificate' earned?
+[FAIL] According to the Anna University Approval document, what is the approved faculty-student ratio for the college?
+[PASS] What is the total approved intake for the skill development courses under Model 1?
+[FAIL] Which company did Alumni Ahamed Jameel work for at the time he was providing placements in Placement Recruitment at Platform 3 Solutions?
+[PASS] What is the minimum average percentage required in Mathematics, Physics, and Chemistry for a General Category student applying for B.E./B.Tech with HSC (Academic)?
+[UNKNOWN] What is the specific student-faculty ratio within the AIML department?
+[PASS] What are the current interest rates being charged on university-sponsored student loans?
+[PASS] What specific criteria were used to select Anbazhagan, Saranraj Saravanan and Mohammed Ateeq as Alumni Guest of Honour for the Silver Jubilee Event on 17.04.2026?
+[PASS] What is the NSQF level for the skill development course 'Architectural Drafting and Basic 3D Design with Autodesk Revit (MES)'?
+[PASS] Which Alumni member representing TCS hosted the session on Robotics on 10.05.2023?
+[FAIL] What percentage of AIML graduates from the 2021 regulation curriculum have secured placements through off-campus opportunities?
+[FAIL] Which faculty member specializes in IOT, AI, NLP, and Image Processing?
+[FAIL] According to the website, what is the URL for the 'Mandatory Disclosure' document?
+[UNKNOWN] What specific topics were covered in the AAC Meeting attended by Alumni Deepak (2011-2015 Batch) on 13.02.2026?
+[PASS] What is the NSQF level for the 'Refrigeration And Air Conditioning Technician' skill development course under the Mechanical Engineering sector in Model 2?
+[FAIL] What specific algorithm optimization techniques are covered in the curriculum beyond the listed Python libraries?
+[FAIL] How many faculty members within the AIML department hold a Ph.D. specifically in Machine Learning?
+[PASS] What is the Internship Report Format called for the year 2025, under placements?
+[PASS] Which batch of Alumni participated in the Alumni Meet held on 11.02.2023?
+[PASS] What is the URL to view the list of the college's Functional Committees?
+[FAIL] How many students were in Alumni Ahamed Jameel's 2001-2005 graduating class?
+[FAIL] What is the URL for the Operating Systems virtual lab?
+[PASS] Based on the 2021 Regulation curriculum, what percentage of course credits are dedicated to ethical issues in Data Science and AI?
+[UNKNOWN] What is the total scholarship amount offered under the 'Central Sector Scheme' for eligible students?
+[FAIL] What is the passing percentage for the MA3354 Discrete Mathematics course based on the 2021 regulation curriculum?
+[PASS] According to PEO3, what skills will the graduates be prepared with?
+[PASS] Which Alumni members of Zeemrah Energy participated in the Entrepreneurship Skill - National Youth Day on 12.01.2023?
+[UNKNOWN] How much money was donated by the 2001-2005 alumni batch & Alumni Association for the MSAJCE Alumni Sports Pavilion on 01.02.2025?
+[PASS] According to the B.E. / B.Tech. scholarship information, what is the maximum annual income permissible for a student to be eligible for the 'Pragati Scholarship Scheme for Girl Students'?
+[FAIL] What specific criteria were used to select Anbazhagan, Saranraj Saravanan, and Mohammed Ateeq as Alumni Guest of Honour for the Silver Jubilee Event on 17.04.2026?
+[FAIL] What specific percentage of the Sports Club's budget was allocated to trophies and medals in the most recent annual report?
+[FAIL] Are the 15 government seats for the B.Tech AIDS program reserved, and if so, what are the reservation categories?
+[PASS] What is the specific role that Alumni Naveen Zahir's company, Drop Truck, plays in the 'Startup Eco System' mentioned in the session on 04.12.2024?
+[PASS] Which faculty member specializes in Deep Learning, and what specific Deep Learning frameworks are they proficient in?
+[PASS] What specific departments did the 6 students placed in internships at StayIndiaDigital on 10.07.2025 come from?
+[PASS] What is the full name of 'KDM Enterprises', where Alumni Diwakaran is Managing Director, as mentioned in the session on 03.12.2024?
+[FAIL] What is the average salary offered to AIML graduates placed in Microsoft over the past three years?
+[FAIL] What is the minimum educational qualification required for enrolling into the B.Tech AIDS program?
+[FAIL] What were the dates of the last three inter-college cricket matches the Sports Club participated in and what were the final scores?
+[PASS] How many seats are available under the Management quota for the B.E. CSCS program?
+[PASS] Which Assistant Professor can be contacted for assistance regarding admissions for students from other states, and what is their email address?
+[FAIL] What were the specific criteria for the Women Achiever Awards given to Ms. Vani Parachuri and Ms. P.Rosiah on 8.03.2025?
+[PASS] In what specific areas does Alumni Juveriya Khan specialize as Senior Quality Assurance Manager at DMCG in Dubai, as mentioned in the session on 14.11.2024?
+[PASS] How many students actively participated in the annual Kho Kho tournament conducted by the Sports Club in the last academic year?
+[UNKNOWN] What is the specific pass mark percentage required in Physics, Chemistry, and Mathematics in the qualifying examination for B.Tech AIDS admission?
+[FAIL] What are the specific criteria used to evaluate candidates for the Management Quota seats in the AIML program?
+[FAIL] When did B.Tech Artificial Intelligence and Data Science (AIDS) emerge as one of the most high-growth careers?
+[PASS] What is the phone number for the Administrative Officer, Mr. A. Abdul Gafoor, at MSAJCE?
+[PASS] What are the specific technical skills that Alumni Titus Vimalraj uses as a Front End Engineer at Amazon, as mentioned in the session on 14.09.2024?
+[FAIL] What was the total monetary value donated by the 2001-2005 batch and the Alumni Association towards the MSAJCE Alumni Sports Pavilion on 01.02.2025?
+[UNKNOWN] What is the full name and department of the faculty member responsible for approving budget requests for the Fine Arts Club?
+[PASS] What is the specific version or year of the "2021 Regulation" that defines the curriculum and syllabus?
+[FAIL] What is the specific application process for the lateral entry B.Tech AIDS program, and what are the required documents?
+[PASS] What specific counseling services did Alumni Ms. Misbah Khairunissa A provide to college students on 06.01.2024?
+[FAIL] What is the annual budget allocated to the AIML department for research and development projects?
+[PASS] Besides Alexa/Siri, Erica/Sophia, and Tesla's driverless car, can you provide three more examples of applications covered under Big Data, Neural Networks, and Deep Learning in the curriculum?
+[FAIL] How much scholarship amount did each individual student receive between 2019 and 2026, given the total amount of Rs. 37,94,972 was distributed among 97 students?
+[FAIL] What were the specific dates of the 2023-2026 Alumni Association AAC Meeting attended by Alumni Deepak (2011-2015 Batch)?
+[PASS] What is the minimum passing grade required in Physics, Chemistry, and Mathematics to be eligible for the B.E. CSCS program?
+[FAIL] What specific external college fests did the Fine Arts Club send students to participate in during the last academic year, and how many students participated in each?
+[FAIL] Where can I download the Internship Report Format for 2025?
+[PASS] How many applications did Lightenz Technovations Pvt Ltd receive for the role that Alumni Shanmugasarathy filled on 05.01.2024?
+[FAIL] What is the success rate of students undertaking Higher Education after graduating from the AIML department?
+[FAIL] What is the start date for the current term of office bearers listed under 'Office Bearers (2024 - Till Now)'?
+[UNKNOWN] What version of Autonomous Regulations is currently in effect at MSAJCE?
+[PASS] What are the names and departments of the students who won first place in the singing and dancing competitions organized by the Fine Arts Club in the last two years?
+[PASS] What were the specific areas of OMR (Old Mahabalipuram Road) in which MSAJCE was recognized as 'best college' due to the conceptualization by Alumni Ashwin C and team on 01.12.2023?
+[FAIL] How many students received the MSAJCE Alumni Scholarship in the year 2022?
+[FAIL] What is the name of the lab where students can gain practical experience with big data tools?
+[PASS] What specific ethical hacking certifications, besides CEH and OSCP, are considered valuable for Penetration Tester roles, according to the institution or its recruiting partners?
+[UNKNOWN] What departments were the 23 alumni who participated in the NBA Inspection from on 30.09.2023?
+[PASS] How many students enrolled in the AIML department have participated in internships with AI-centric companies like Google or Microsoft?
+[FAIL] Which specific alumnus held the role of Program Coordinator before Mr. Mikail Ismail?
+[FAIL] What specific dates were the 'making electronic components' and 'electroplating' experiments conducted by the Science Club in the most recent semester?
+[PASS] What is the email address to submit a grievance?
+[PASS] How did the NAAC Inspection impact the college accreditation on 23.01.2023?
+[FAIL] What specific types of Neural Networks are covered in the B.Tech AIDS curriculum?
+[PASS] Which specific compliance frameworks, besides ISO 27001, GDPR, HIPAA, and PCI DSS, are explicitly covered in the curriculum for banking, fintech, and healthcare?
+[PASS] What is the exact job title that Mr. M. Prabakaran held at Caterpillar on 29.05.2019 when presenting FDP on Embedded & IoT Boot Camp?
+[PASS] Between 2020-2021 and 2023-2024, how did the number of Joint Secretaries change, and who specifically held those positions?
+[PASS] For the 2023-2027 batch, how many IT department students received the MSAJCE Alumni Scholarship?
+[PASS] How many times does the name 'Pragatha' appear on the list for the CSE department?
+[PASS] How many students participated in the Science Club's quiz competition last year, and what was the topic of the quiz?
+[PASS] How many government quota seats are available in the Artificial Intelligence & Data Science undergraduate programme?
+[PASS] What specific awards or recognitions has Alumni Aniruddhan Narayanan of Pfizer Healthcare India received prior to August 7th, 2025?
+[FAIL] Does the department offer any scholarships or financial aid specifically for the B.Tech AIDS program?
+[UNKNOWN] What is the minimum CGPA required to be eligible for ME/M.Tech programs after graduating from the AIML department?
+[FAIL] What department does Dr. R. Senthilkumar (Secretary 2020-2021) head?
+[UNKNOWN] What is the average starting salary range for B.E. CSCS graduates who are hired by Government & Defense Agencies, based on the most recent placement data?
+[PASS] How much scholarship amount did Parveen Begum M from the CSE department (2018-2022 batch) receive?
+[PASS] Are students 'F. Md Suhail' and 'Md Suhail F' the same person? If not, what scholarship amount did they each receive?
+[FAIL] What specific IT tools or software are being promoted for use in learning science within the Science Club?
+[PASS] When was the last 'Irumugam Oru Agam' event conducted by the Tamil Mandram, and what was the theme?
+[PASS] How much scholarship amount was specifically allocated to the ECE department between 2019 and 2026?
+[PASS] What is the total number of seats available under the NRI category for the postgraduate Computer Science & Engineering Programme?
+[PASS] What specific agile methodologies are taught in the AI Product Manager roles for students taking this course?
+[PASS] Which specific Industry 4.0 companies provide internship opportunities to AIML students?
+[FAIL] What specific reasons were given for replacing Ms. J. Stella Marry on the 2021-2022 Executive Member committee?
+[UNKNOWN] What was the average scholarship amount given per student between 2019 and 2026?
+[UNKNOWN] Does the 'Specialized Curriculum' include any specific courses dedicated to blockchain security, beyond a general mention of blockchain in 'Emerging Technologies'?
+[PASS] What is the minimum percentage required to pass for SC/SCA/ST candidates for lateral entry into B.E/B.Tech?
+[FAIL] What assessment methods are employed, apart from written examinations, to evaluate students' understanding of the Programme Outcomes?
+[PASS] How many students participated in the 'Tent Kottai' cultural event organized by the Tamil Mandram in the past two years?
+[PASS] How many students from the 2021-2025 batch received the MSAJCE Alumni Scholarship?
+[PASS] What percentage of the total seats are allocated to students who have completed Diploma and are seeking lateral entry into the AIML program?
+[PASS] For the 2023-2027 batch, what was the total scholarship amount allocated to the IT department?
+[UNKNOWN] Are there any specific simulation environments used in the 'Hands-on Learning' section for IoT security testing, and if so, what are their names or versions?
+[PASS] What specific traditional Tamil games, besides 'Aadu Puli', are planned for future Tamil Mandram events?
+[PASS] What percentage of the B.E. CSCS curriculum is dedicated to 'Cyber laws and ethics, compliance, and governance'?
+[FAIL] What specific coding languages are taught in the Coding Club's workshops?
+[PASS] What is the role of the Administrative Officer who serves as Treasurer in the 2024-present and 2023-2024 periods?
+[PASS] What specific data structures and algorithms are covered in the 'Data Structures' and 'Algorithms' foundational courses mentioned in the 'Specialized Curriculum'?
+[PASS] For a B.Sc candidate seeking lateral entry, which degree subjects are considered eligible?
+[PASS] What is the minimum experience requirement for the senior-level roles which offer the salary between Rs 25 – Rs 50 Lakhs per annum?
+[UNKNOWN] How many students from the Mechanical department received the scholarship from 2019-2026?
+[UNKNOWN] How many students from the college represented it at the ACM-ICPC competition in the last three years?
+[PASS] What are the specific criteria for evaluating student performance in the Artificial Intelligence Laboratory (AD3311) course?
+[PASS] What is the name of the 'E Learning Platform' run by Md Ilyas, who conducted the session on VLSI on 23.08.2023?
+[PASS] How many students who enrolled in the 2021 Regulation curriculum have secured off-campus placements?
+[PASS] How many students with the name 'Abdullah' received the scholarship between 2019 and 2026, and in which departments and batches were they?
+[UNKNOWN] What is the composition of the selection committee for students applying to the Government Quota seats in the AIML program?
+[FAIL] What specific types of edge computing techniques are taught?
+[PASS] How many hours of lab time are allocated per semester for 'penetration testing, secure coding, and threat analysis' in the 'Hands-on Learning' component?
+[FAIL] Which robotics tournament is the Robotics Club preparing students for, and what are the specific rules of that tournament?
+[PASS] Which departments did the 3 students placed at Platform 3 Solutions via Alumni Ahamed Jameel on 12.07.2023 come from?
+[FAIL] Who was the MSAJCE Alumni Scholarship beneficiary in the CSE department with the shortest name?
+[UNKNOWN] What career opportunities are offered in public sector undertaking, specifically?
+[FAIL] What specific AI ethics frameworks or certifications are incorporated into the AIML curriculum, and which faculty members are certified in them?
+[FAIL] What is the breakdown of scholarship amounts disbursed across each department (CSE, ECE, IT, etc.) between 2019-2026?
+[PASS] What does 'NBA' stand for in the context of the Alumni participation in the 'NBA Visit' on 30.09.2023?
+[FAIL] Of the 60 total seats, how many students joined through lateral entry in the last academic year?
+[PASS] Which specific SIEM tools, besides Splunk and IBM QRadar, are taught or used in the labs for SOC analyst training?
+[PASS] What specific criteria were used to select Anbazhagan, Saranraj Saravanan, and Mohammed Ateeq as Alumni Guests of Honour for the Silver Jubilee Event on 17.04.2026?
+[UNKNOWN] How many credits are required to graduate from the 4-year B.Tech ECE Advanced Communication Technology program?
+[FAIL] What is the specific amount allocated to IT students 'Afrin Fathima' and 'Afrin Fathima B' for the 2023-2027 batch?
+[PASS] What was the total budget allocated to the MSAJCE Sports Club for the last fiscal year?
+[PASS] Did 'Pragatha' receive multiple scholarships within the 2023-2027 batch as indicated by their multiple listings?
+[PASS] Does the curriculum incorporate any specific training or certifications related to cloud security for AWS, Azure, or Google Cloud platforms?
+[PASS] What specific department and year of graduation is Alumni Abdur Rahim Saleh, CEO of V5 Innovations, representing for the Engineers Edge 3.0 event on 08.04.2026?
+[FAIL] What specific awards were presented at the Silver Jubilee Reunion Meet 2025 other than the five listed on 01.02.2025?
+[UNKNOWN] According to the AI and ML Employment Forecast, what is the expected Compound Annual Growth Rate (CAGR) for AI job market in India between 2025-2030?
+[PASS] Referring to the 2021 regulation curriculum (https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf), what specific course covers Millimeter Wave (mm-Wave) technologies?
+[PASS] What percentage of B.E. CSCS graduates, on average, pursue higher studies (M.E. / M.Tech. / M.B.A.) within one year of graduation?
+[PASS] For the AAC Meeting attended by Alumni Deepak on 13.02.2026, what specific issues related to the college were addressed?
+[PASS] Under the 2021 Regulation, is MA3354 Discrete Mathematics a required course for all CSBS students?
+[FAIL] What was the scholarship amount allocated specifically to the VLSI department recipient, Afreen Fathim S (2024-2028 batch)?
+[FAIL] What percentage of the Sports Club budget was spent on trophies and medals in the last annual report?
+[FAIL] Between 2019-2026, what percentage of the scholarship recipients were from the ECE department?
+[PASS] Which student is listed under both AIML department and CSE AIML department?
+[PASS] How many hours of lab time are dedicated to the C Programming Lab (Course: CS8261) per semester, based on the 2021 Regulation?
+[FAIL] What is the exact criteria used for selecting beneficiaries of the MSAJCE Alumni Scholarship?
+[PASS] For the Networks Lab, which specific version of the software/tools mentioned in the equipment details is currently installed?
+[PASS] What specific government initiatives or programs, beyond those listed, offer scholarships or financial aid specifically for students pursuing a B.E. in CSE with Cyber Security specialization?
+[UNKNOWN] What is the minimum passing percentage required in Physics, Chemistry, and Mathematics in the 10+2 system to be eligible for the B.Tech ECE Advanced Communication Technology program?
+[UNKNOWN] What were the specific criteria or achievements that led to Ms. Vani Parachuri (2003-2007 Batch) and Ms. P.Rosiah (2006-2010 Batch) receiving the Honoured Women Achiever Award on 8.03.2025?
+[FAIL] In the MSAJCE Fine Arts Club, how many external college fests did students participate in during the last academic year?
+[PASS] Which faculty member with a Ph.D. specializes in both IOT and Network Security?
+[PASS] What percentage of the total scholarship amount (Rs. 37,94,972) was awarded to ECE students across all batches?
+[PASS] Is 'Md Abdul Kalam N' and 'Md Abdul Kalam' the same person and if so why is this record being duplicated?
+[PASS] What is the student-faculty ratio specifically within the CSBS department?
+[UNKNOWN] What was the total monetary value of the donation made by the Alumni of the 2001-2005 Batch & the Alumni Association for the MSAJCE Alumni Sports Pavilion donated on 01.02.2025?
+[FAIL] What specific courses from the 2021 regulation curriculum (https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf) relate directly to 5G communication systems?
+[PASS] How many students shared the last name 'Abdullah' between 2020 and 2027?
+[PASS] Is the 'Google AI Certification' mentioned offered directly by the college or is it an external certification?
+[PASS] For the MSAJCE Science Club, how often are lectures given each month on Science topics?
+[FAIL] How many students from the 2022-2026 batch received the MSAJCE Alumni Scholarship?
+[PASS] According to the faculty list, which faculty member specializes in Quantum Communication?
+[UNKNOWN] Is Saqlin Mustaq M also currently serving in any other administrative role in addition to VP of AI&DS?
+[PASS] Was Parveen Begum M, batch 2018-2022, included in the initial count of 97 students, and if not, what would the revised count be?
+[PASS] Which department did the student placed in 'The BIM Engineers' company on 08.09.2025 belong to and what was the exact job title?
+[PASS] Besides TCS, Infosys, Wipro, Accenture and CTS, what is the placement percentage for graduates in FinTech companies like FSS?
+[PASS] For the course 'AD3391 â€” Database Design and Management', how many assignments are specified in the linked lesson plan?
+[PASS] What is the policy regarding lateral entry students and how many credits can they transfer?
+[FAIL] Does the Science Club's notice board display information for the Physics, Chemistry, and General sections separately or collectively?
+[UNKNOWN] Which department had the highest number of scholarship recipients between 2019 and 2026?
+[FAIL] Was Saqlin Mustaq M's appointment to VP of AI&DS effective immediately upon the listed start date of 2023, or was there a gap between the announcement and commencement of duties?
+[PASS] Is the amount awarded per student the same across all departments?
+[PASS] In the MSAJCE Tamil Mandram, which events were conducted in the last academic year besides the listed eight?
+[PASS] How many faculty members with a Ph.D. joined the UG faculty in the Computer Science and Engineering department in 2023?
+[PASS] How many funds and scholarships were provided to students in 2023 based on assistance from the Alumni Association?
+[FAIL] For lateral entry students, what specific courses are waived or replaced from the regular 4-year curriculum?
+[UNKNOWN] Does the college offer preparatory courses or bridge programs for students who may lack a strong foundation in certain core subjects?
+[FAIL] What specific versions of Python and R are recommended for use in the 'Python and R language for data manipulation and model development' upskilling module?
+[PASS] For the 2021-2025 batch, what was the scholarship amount allocated to each of the CSE students?
+[PASS] What is the total number of faculty members listed under the PG/Visiting faculty for the Computer Science and Engineering department as of 2023-2024?
+[PASS] Can I review the specific criteria that Saqlin Mustaq M met to be appointed as VP of AI&DS?
+[PASS] According to the curriculum, how many credits are allocated to core CS subjects versus business/management subjects?
+[PASS] What is the maximum age limit for admission to the B.Tech ECE Advanced Communication Technology program?
+[FAIL] What specific criteria are used to evaluate participants in the 'Pirasangatin Thalaiwan' (King of Speeches) competition in Tamil Mandram?
+[PASS] Besides placement assistance, in what other specific ways did Alumni Ahamed Jameel contribute to objectives of the Alumni Association?
+[PASS] How does the curriculum address the 'Ethics' Programme Outcome (PO8) specifically in the course materials provided?
+[FAIL] How many students with overlapping names (e.g., Afrin Fathima, Md Suhail) have received the scholarship and is there any policy on this?
+[PASS] What are the details of the process for applying under the NRI quota, including the required documents and fees?
+[UNKNOWN] Who was the VP of AI&DS immediately before Saqlin Mustaq M assumed the position?
+[UNKNOWN] How many students were selected into the MSAJCE Coding Club based on the college-wide coding competition last year?
+[UNKNOWN] According to the 2021 B.E. Computer Science and Engineering curriculum (2021 Regulation PDF), how many credits are required to graduate?
+[FAIL] What is the minimum score required in 10+2 Physics, Chemistry and Mathematics to be eligible for the CSBS program?
+[PASS] What amount, if any, was granted to Rahim Basha W, who appears to be listed for both the AIML and CSE AIML departments? Was there a funding overlap? 
+[PASS] Is the VP of AI&DS a fixed term appointment, or is it possible to renew or extend the term beyond 2027?
+[FAIL] Which faculty member is responsible for maintaining and updating the equipment in the Operating Systems Lab?
+[UNKNOWN] What percentage of students graduating from the AIML department get placed off-campus in any of the mentioned recruiting companies within one year of graduation?
+[UNKNOWN] What is the exact process for alumni to update their employment information in the Alumni Association database?
+[UNKNOWN] For the M.E. Computer Science and Engineering program, what specific AICTE norms apply to the eligibility criteria?
+[UNKNOWN] Does the MSAJCE Coding Club provide technical assistance to all campus groups or only specific ones, and if so, which ones?
+[UNKNOWN] What specific industry certifications (e.g., Cisco, IEEE, 3GPP) are formally incorporated into the curriculum or offered as electives?
+[PASS] What is the student-faculty ratio in the AIML department, considering all listed faculty members and the total number of seats?
+[PASS] What was the total budget allocated to the MSAJCE Sports Club for the most recent completed fiscal year?
+[PASS] What specific types of teaching or training classes were arranged for students by the Alumni Association in 2023?
+[PASS] What are the average placement rates for the B.Tech ECE Advanced Communication Technology program over the last three years?
+[UNKNOWN] What are the specific budgetary oversight responsibilities of Saqlin Mustaq M as VP of AI&DS?
+[UNKNOWN] What is the full name of the professor who joined the Computer Science and Engineering department on August 26, 2022?
+[UNKNOWN] In the MSAJCE Robotics Club, what are the dimensions constraints for the robots built for the annual tournament?
+[FAIL] In the AD3391 Database Design and Management course, what specific database management system (DBMS) is primarily used for practical exercises?
+[FAIL] To whom does Saqlin Mustaq M directly report in their role as VP of AI&DS?
+[PASS] What percentage of students at MSAJCE are actively involved in at least one of the mentioned clubs?
+[PASS] How many students are actively participating in the MSAJCE Robotic Club?

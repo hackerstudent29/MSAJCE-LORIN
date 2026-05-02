@@ -1,0 +1,122 @@
+[
+  {
+    "question": "How many faculty members with a Ph.D. specializing in Power Electronics were employed in the EEE department in 2021-2022?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "According to the 2025-2030 Employment Forecast, what is the projected CAGR for the Electric Vehicles (EVs) market in India?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the intake number of government seats available for the B.E. Electrical and Electronics Engineering program?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Which regulation (2017 or 2021) curriculum is currently in effect for students admitted through lateral entry?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "For the B.E. Electrical and Electronics Engineering program, what specific subjects are required for eligibility based on the 10+2 system?",
+    "answer": "For the B.E. Electrical and Electronics Engineering program, you must have secured a pass in Physics, Chemistry, and Mathematics in the 10+2 system.\n\nDo you want to know about the career opportunities available after completing this program?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response aligns with the information provided in the source text, specifically under the 'Eligibility' section for the B.E. Electrical and Electronics Engineering program."
+    }
+  },
+  {
+    "question": "In the Power Electronics Lab, what is the name of the course associated with the lab?",
+    "answer": "The course associated with the Power Electronics Lab in the EEE Department is EE8661 Power Electronics.\n\nWhat other labs are part of the EEE Department?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Which lab has experiments related to the course code EE8261?",
+    "answer": "EE8261, titled \"Basic Electrical Electronics and Instrumentation Engineering\" or \"Electric Circuits,\" has experiments in these labs:\n\n\u2022 Electrical Machines Lab (Virtual Link: https://www.msajce-edu.in/images/departments/eee/Lab/EE8261-Virtual.pdf).\n\u2022 Electronics Lab (Virtual Link: https://www.msajce-edu.in/images/departments/eee/Lab/EE8261-VIRTUAL1.pdf).\n\nWould you like to know the equipment details for either of these labs?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies the Electrical Machines Lab and Electronics Lab as having experiments related to the course code EE8261, and provides the correct virtual links, as per the source text."
+    }
+  },
+  {
+    "question": "According to the Employment Forecast, what is the projected annual job growth percentage for the Renewable Energy sector between 2025 and 2030?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the virtual link provided for the electrical machines lab and which subject is it for?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "As of 2023-2024, who holds the position of Professor in the EEE department and since when?",
+    "answer": "In the EEE department, for the academic year 2023-2024, we have these Professors:\n\n\u2022 Dr. JEHA J, Professor since August 17, 2022.\n\u2022 Dr. DEVIKALA S, Professor since March 13, 2023.\n\nDo you want to know about Assistant Professors in the EEE department as well?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies the Professors in the EEE department for the 2023-2024 academic year along with their joining dates, as listed in the source text."
+    }
+  },
+  {
+    "question": "What is the course code for the course associated with the control and instrumentation lab?",
+    "answer": "The course code for the course associated with the Control and Instrumentation Lab is EE8511.\n\nDo you want to know more about the equipment in that lab?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many total faculty members were employed by the EEE department in 2020-2021?",
+    "answer": "In 2020-2021, the EEE department had 14 faculty members.\n\nCan I help you with any other faculty details?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the name of the professor whose area of specialization is High Voltage Engineering in 2022-2023?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the full course name and number that has a lesson plan in the 2021 regulation curriculum starting with \"MA3303\"?",
+    "answer": "MA3303 is Probability and Complex Functions. You can find its lesson plan at https://www.msajce-edu.in/academics/eee/2021/LessonPlan/MA3303-LP.pdf.\n\nWould you like the question bank or lecture notes for this course as well?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the designation of Mr. Suresh N in 2023-2024, and on what date did he start?",
+    "answer": "Mr. Suresh N is an Assistant Professor in the EEE department. He joined on August 1, 2022.\n\nWhat other details about the EEE department are you interested in?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The information provided by the bot is accurate and can be found in the source text under 'EEE Faculty 2023-2024'."
+    }
+  }
+]

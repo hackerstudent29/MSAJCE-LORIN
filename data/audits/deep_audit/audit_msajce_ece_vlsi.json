@@ -1,0 +1,50 @@
+[
+  {
+    "question": "What was the exact outlay in Rupees allocated to the Semiconductor scheme announced in December 2021?",
+    "answer": "The Semiconductor scheme announced in December 2021 had an outlay of Rs 76,000 Crore.\n\nDo you want to know more about the VLSI Design program?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the nanometer (nm) node size of the Integrated Design to Manufacturing (IDM) pilot line at the Semi-Conductor Laboratory (SCL) in Chandigarh?",
+    "answer": "The Integrated Design to Manufacturing (IDM) pilot line at the Semi-Conductor Laboratory (SCL) in Chandigarh is based on the 180nm Node.\n\nInterested in learning more about VLSI design and its growing demand?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The information about the 180nm node size is directly stated in the source text."
+    }
+  },
+  {
+    "question": "According to the provided curriculum, what is the specific regulation year (e.g., 2021) for the B.Tech Electronics Engineering with Specialization in VLSI Design & Technology program?",
+    "answer": "The B.Tech Electronics Engineering with Specialization in VLSI Design & Technology program follows the 2021 Regulation.\n\nDo you want to know more about the curriculum?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate because the source text indicates that the B.Tech Electronics Engineering with Specialization in VLSI Design & Technology program follows the 2021 Regulation."
+    }
+  },
+  {
+    "question": "What is the specific URL for accessing the 2021 Regulation curriculum and syllabus?",
+    "answer": "You can find the 2021 Regulation curriculum and syllabus at https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf.\n\nWould you like information on the 2017 Regulation syllabus as well?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the exact intake number for the B.Tech program, specifically detailing the number of Government and Management seats available?",
+    "answer": "Okay, here are the B.Tech program intakes, broken down by Government and Management quotas:\n\n\u2022 Civil Engineering: Total 30 (Government 15, Management 15)\n\u2022 Computer Science & Engineering: Total 60 (Government 30, Management 30)\n\u2022 Electronics & Communication Engineering: Total 60 (Government 30, Management 30)\n\u2022 Electrical & Electronics Engineering: Total 30 (Government 15, Management 15)\n\u2022 Mechanical Engineering: Total 30 (Government 15, Management 15)\n\u2022 Information Technology: Total 60 (Government 30, Management 30)\n\u2022 Artificial Intelligence & Data Science: Total 30 (Government 15, Management 15)\n\u2022 Computer Science & Business Systems: Total 30 (Government 15, Management 15)\n\u2022 Computer Science & Engineering (Cyber Security): Total 30 (Government 15, Management 15)\n\u2022 Artificial Intelligence & Machine Learning: Total 60 (Government 30, Management 30)\n\u2022 Electronics Engg w/s in VLSI Design & Technology: Total 30 (Government 15, Management 15)\n\u2022 ECE w/s in Advanced Communication Technology: Total 30 (Government 15, Management 15)\n\nDo you want to know about the eligibility criteria for any of these B.Tech programs?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot provides B.Tech program intakes for courses not listed in the provided source text, it makes up data for programs that are not included in the document."
+    }
+  },
+  {
+    "question": "What specific admission website is listed for the B.Tech. program?",
+    "answer": "To apply for the B.Tech program, visit https://enrollonline.co.in/Registration/Apply/MSAJCE.\n\nWould you like to explore any other programs or specific details about the B.Tech application process?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response accurately provides the admission website for the B.Tech program, as listed in the source text."
+    }
+  }
+]

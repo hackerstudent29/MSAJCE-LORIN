@@ -1,0 +1,122 @@
+[
+  {
+    "question": "When was the Mohamed Sathak Trust established?",
+    "answer": "The Mohamed Sathak Trust was established on October 26, 1973. Do you know the Trust's guiding philosophy?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The information is present and correct in the source text."
+    }
+  },
+  {
+    "question": "On what date was MSAJCE established?",
+    "answer": "MSAJCE was established in 1984 by the Mohamed Sathak Trust.\n\nWould you like to know more about the Mohamed Sathak Trust?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The source text says MSAJCE was established in 2001, but the Mohamed Sathak Trust was established in 1973 and established the first self-financing engineering college in 1984. The bot conflates the founding dates of the Trust with the college, giving an incorrect date for the college (MSAJCE)."
+    }
+  },
+  {
+    "question": "What is the full address of MSAJCE, including the postal code?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the specific phone number listed to contact MSAJCE?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the official email address for general inquiries at MSAJCE?",
+    "answer": "The email for general inquiries is msajce.office@gmail.com.\n\nNeed more contact details, like the phone number or address?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The email address provided in the bot response is accurate and present in the source text."
+    }
+  },
+  {
+    "question": "What is the direct URL for the online application form?",
+    "answer": "The direct URL for the online application form is https://enrollonline.co.in/Registration/Apply/MSAJCE.\n\nCan I help you with any other admission-related information?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the direct URL for online fee payment?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "In what year was the first self-financing engineering college established by the Mohamed Sathak Trust?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many educational institutions does the Mohamed Sathak Trust currently manage?",
+    "answer": "The Mohamed Sathak Trust manages 18 educational institutions. Want to know where they are located?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text states that the Mohamed Sathak Trust manages 18 educational institutions."
+    }
+  },
+  {
+    "question": "What is the email address for the Grievance and Redressal Committee?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "According to the provided data, what is the URL for the 2023-2024 Annual Report?",
+    "answer": "The URL for the Annual Report for 2023-2024 is https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf.\n\nWould you like information about any other reports or documents?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The URL provided by the bot is accurate and can be found within the source text."
+    }
+  },
+  {
+    "question": "What is the URL for the College Management System (CIMS)?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "According to the 'MSAJCE Policies' link, what year was the 'ARIIA Certificate' earned?",
+    "answer": "Actually, the ARIIA Certificate was earned in 2021.\n\nDo you want to know more about our ARIIA rankings?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The provided text includes a link to the 'ARIIA Certificate' which contains 'ARIIA-2021-CERTIFICATE.pdf'. Therefore, the bot's response that the ARIIA Certificate was earned in 2021 is accurate and can be inferred from the provided text, even though it's not explicitly stated in the overview."
+    }
+  },
+  {
+    "question": "According to the website, what is the URL for the 'Mandatory Disclosure' document?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the URL to view the list of the college's Functional Committees?",
+    "answer": "Here you go: the list of Functional Committees can be found at https://www.msajce-edu.in/FunctionalCommittees.php.\n\nWould you like information on any other committees?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The URL provided by the bot is listed in the source text."
+    }
+  }
+]
