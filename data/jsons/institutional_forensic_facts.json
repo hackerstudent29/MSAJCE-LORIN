@@ -9,8 +9,20 @@
     {
       "chunk_id": "forensic_hostel_01",
       "section": "Girls Hostel Outing and Security Rules",
-      "text": "Girls Hostel Outing Rules: Hostellers are generally not permitted to leave the campus except on holidays and require prior written permission from their Head of Department (HOD) and the hostel warden. For outstation travel or going home, written permission from the warden or superintendent is mandatory. Parents must provide a list of authorized visitors or local guardians; outsiders and friends are strictly prohibited from entering rooms. Return times are strictly enforced.",
+      "text": "Girls Hostel Outing Rules: Hostellers are generally not permitted to leave the campus except on holidays and require prior written permission from their Head of Department (HOD) and the hostel warden. For outstation travel or going home, written permission from the warden or superintendent is mandatory. Parents must provide a list of authorized visitors or local guardians; outsiders and friends are strictly prohibited from entering rooms. Return times are strictly enforced. Location: Sholinganallur (5 km from campus).",
       "keywords": ["hostel", "outing", "rules", "permission", "warden", "HOD", "visitors"]
+    },
+    {
+      "chunk_id": "forensic_campus_life_01",
+      "section": "Events, Symposiums and Student Leadership",
+      "text": "Major Events: 'Sathak Thiruvizha' is the annual flagship cultural festival. Technical Symposiums include 'HABIBI', 'Ciphera' (Capture the Flag), and 'SATHAK-A-THON'. Student Council: Comprises President, Secretary, and Department Coordinators. For current office bearer names, students should contact the Head of Student Affairs office.",
+      "keywords": ["Sathak Thiruvizha", "HABIBI", "Ciphera", "SATHAK-A-THON", "student council", "symposium"]
+    },
+    {
+      "chunk_id": "forensic_transport_01",
+      "section": "College and Public Transport Routes",
+      "text": "Transport: Public bus route 105 connects Tambaram West to Siruseri IT Park. OMR routes 102, 570, and 221 stop at SIPCOT. The college private fleet covers Chengalpattu, Kanchipuram, and Thiruvallur districts. Transport helpline: +91 94430 10256.",
+      "keywords": ["bus", "transport", "Tambaram", "105", "570", "102", "route"]
     },
     {
       "chunk_id": "forensic_scholarship_01",

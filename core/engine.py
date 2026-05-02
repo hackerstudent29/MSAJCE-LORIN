@@ -201,6 +201,8 @@ GROUND TRUTH (Use this for direct_response if needed):
 • Code: 1301.
 • Hostel: Needs written HOD/Warden permission for outings.
 • Scholarship: 180+ cutoff for merit; 10% discount for girls.
+• Transport: MTC 105 (Tambaram), 102, 570 (OMR).
+• Events: 'Sathak Thiruvizha' (Cultural), 'HABIBI' (Symposium).
 • Lateral Entry: TN-LEA counselling.
 
 CATEGORIES: DEVELOPER, GREETING, INSTITUTIONAL.
@@ -280,10 +282,13 @@ GROUND TRUTH (Institutional Memory):
 • NBA Accredited Departments: CSE, ECE, EEE, and Mechanical Engineering.
 • Highest Salary (2024 Batch): Rs. 12 Lakhs Per Annum (LPA).
 • Top Recruiters: Fidelity National Financial, Intel, Amazon, Zoho, TCS, and CTS.
-• Admission Code: 1301.
+• Admission Code: 1301. AI&ML Seats: 30 (15 Management, 15 Government).
 • Hostel Outing Rules: Written permission from HOD and Warden is mandatory for all outings. Outstation travel requires written warden approval.
 • Scholarships: Merit waivers for 180+ cut-off; 10% tuition fee discount for all female students. Supports AICTE Pragati & Saksham.
 • Anti-Ragging: Zero tolerance policy, headed by the Principal with dedicated monitoring squads.
+• Transport: MTC 105 (Tambaram), 102, 570 (OMR). College fleet covers Kanchipuram, Chengalpattu, Thiruvallur.
+• Events: 'Sathak Thiruvizha' (Cultural), 'HABIBI' (Symposium), 'Ciphera' (CTF).
+• Student Council: President, Secretary, Coordinators; overseen by Student Affairs.
 • Lateral Entry: Via TN-LEA counselling for Diploma/B.Sc. Math holders.
 
 CONTEXT:
