@@ -230,5 +230,13 @@
       "status": "PASS",
       "reason": "The bot response is factually accurate because the source text mentions that the Cyber Security Academy enhances skills through Capture The Flag (CTF) challenges. These challenges help you practice penetration testing, forensics, and cryptography using platforms like Hack The Box, TryHackMe, and Over The Wire."
     }
+  },
+  {
+    "question": "How many courses in the curriculum specifically focus on the application of AI in Cyber Security?",
+    "answer": "While the curriculum emphasizes security in AI, IoT, Cloud computing, and Blockchain, the exact number of courses dedicated to AI in cybersecurity is not specified.\n\nWant to explore the detailed syllabus to identify relevant courses?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response is factually accurate as the source text doesn't specify the exact number of courses dedicated to AI in cybersecurity. The source text only mentions that security in AI is included in the curriculum."
+    }
   }
 ]

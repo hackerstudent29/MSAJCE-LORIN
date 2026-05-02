@@ -206,5 +206,21 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "What are the exact budget allocations for each objective outlined in the Alumni Association for the academic year 2023-2024?",
+    "answer": "I do not have access to the Alumni Association's budget allocations for specific objectives for the academic year 2023-2024.\n\nIs there anything else I can help you with regarding alumni activities or scholarships?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Which Alumni Executive Members served on specific committees (e.g. Scholarship committee, Placement committee, etc.) in the year 2024 and what were the results of the placement, for example, what percentage increased?",
+    "answer": "I can tell you about the Alumni Executive Members for 2024, and placement information.\n\n\u2022 The Alumni Executive Members for 2024 are: Mr. Mohamed Yasar, Mr. Noorul Jaman, Mr. N. Naveen, Mr. Mohammed Umar Farook B, Mr. Mano Raja, Mr. N. Abdul Hameed, Mr. Narenthiran, Mr. T.H. Mohamed Jiavur Rahman, Mr. Syed N Zaheer Abbas, Mr. P. Nadir Khan, Srikanth K, Ms. Misbah Khairunissa A, Ms. Akila Rajesh, Mr. Seyed Mohamed Mustafa H, Mr. Ram Kumar C ,Mr. Themotheyu S ,Mr. Mohammed Khaja Nawaz A, Mr. Mohammed Thaqiuddin N, Mr. Harish N, Mr. Diwakaran k, Mr. Deepak V R, Mr. Vineeth Baba K B, Mr. Firthouse Mohideen J K\n\n\u2022 I do not have specific information on which alumni served on specific committees like the Scholarship or Placement committees.\n\n\u2022 The highest salary offered to the 2024 graduating batch was Rs. 12 Lakhs Per Annum (LPA). Top Recruiters included Fidelity National Financial, Intel, Amazon, Zoho, TCS, and CTS.\n\n\u2022 I do not have the specific percentage increase in placement rates.\n\nWould you like information on how the Placement Cell helps students get employed?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response accurately reflects the information available in the source text. It correctly lists the Alumni Executive Members for 2024, acknowledges the lack of specific data on committee assignments, and provides placement information found in the document."
+    }
   }
 ]

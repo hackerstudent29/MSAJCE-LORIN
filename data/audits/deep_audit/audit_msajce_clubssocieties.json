@@ -30,5 +30,29 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "Who is the current faculty advisor or staff coordinator for the MSAJCE Science Club?",
+    "answer": "I do not have information on the current Science Club faculty advisor. However, I do have information about the Science Club itself. It aims to invite eminent scientists, motivate scientific knowledge, and explore engineering, math, and science.\n\nWould you like to know more about the Science Club's activities?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it does not have information on the current Science Club faculty advisor, which is not explicitly mentioned in the source text."
+    }
+  },
+  {
+    "question": "How many workshops on web development were conducted by the Coding Club in the previous academic year?",
+    "answer": "Unfortunately, the exact number of web development workshops held last academic year isn't specified. The Coding Club aims to conduct workshops on computer science topics like web development, application development, machine learning, and IoT.\n\nWant to know more about upcoming workshops?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately states that the source text does not specify the exact number of web development workshops held by the Coding Club in the previous academic year."
+    }
+  },
+  {
+    "question": "What specific software is used by the Photography Club for photo editing, and is training provided to members?",
+    "answer": "The Photography Club utilizes cutting-edge software for photo editing to help members develop their skills. Further, the club provides training on how to use this software for both personal use and publication.\n\nDoes the Robotics Club offer similar hands-on training for its members?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The provided answer makes a claim about the Robotics club offering hands-on training, but there is no information about the Robotics Club in the provided text. The text only contains a description of the Robotics Club's activities, and no indication that training provided."
+    }
   }
 ]

@@ -268,11 +268,12 @@ You MUST use this date for all academic year, batch, and current event calculati
 
 RULES (follow strictly):
 1. Be warm and interactive. Open with a brief, friendly greeting.
-2. LINGUISTIC MIRRORING: Default to **Casual + B1-level English** (simple, clear, friendly). However, if the user uses **Advanced/C1/C2 level** vocabulary, you MUST mirror that level of sophistication in your response.
-3. LENGTH CONSTRAINT: 80-120 words (Sweet Spot). Min 20, Max 150.
-4. STRUCTURE: Interactive opening, factual body with '•', and a helpful follow-up question.
-5. Format: bullets use '•' only. No '*', '-', or '#'.
-6. End every reply with one short, relevant follow-up question.
+2. LINGUISTIC MIRRORING: Default to **Casual + B1-level English**. Mirror **Advanced/C1/C2** if the user uses it.
+3. STRUCTURAL VARIETY: Never use the same response format twice. Even for the same question, vary your sentence structure, vocabulary, and bullet-point order. Keep it fresh!
+4. LENGTH CONSTRAINT: 80-120 words (Sweet Spot). Min 20, Max 150.
+5. STRUCTURE: Interactive opening, factual body with '•', and a helpful follow-up question.
+6. Format: bullets use '•' only. No '*', '-', or '#'.
+7. End every reply with one short, relevant follow-up question.
 7. {"COUNT MODE: Provide a summary and total count only." if is_count_only else ""}
 
 TONE: Friendly and adaptive. Use accessible English for most, but match the intellectual depth of advanced users when prompted by their vocabulary.
@@ -302,7 +303,12 @@ CONTEXT:
 
 History: {history if history else "None"}"""
 
-        data_gen = {"model": self.generation_model, "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": f"Query: {user_query}"}], "max_tokens": 1000}
+        data_gen = {
+            "model": self.generation_model, 
+            "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": f"Query: {user_query}"}], 
+            "max_tokens": 1000,
+            "temperature": 0.7 # HYPER-VARIETY: Ensures unique phrasing every time
+        }
         
         full_answer = ""
         line_buffer = ""

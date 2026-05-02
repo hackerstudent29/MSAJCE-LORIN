@@ -102,5 +102,21 @@
       "status": "PASS",
       "reason": "The bot correctly states that it does not have the specific dates for the most recent academic year."
     }
+  },
+  {
+    "question": "What years did MSAJCE win the MNM Jain Cricket Tournament?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What percentage of the student body participates in at least one sports activity offered by the Physical Education Department annually?",
+    "answer": "Unfortunately, I do not have the exact percentage of students participating in sports annually.\n\nHowever, I can share that the Physical Education Department provides many opportunities for students to participate in sports to improve physical fitness, talent identification, competitiveness, and brotherhood. They also encourage participation in intercollegiate, university, and inter-university-level sports.\n\nWould you like to know more about the sports facilities available?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the information requested, which is not present in the source text."
+    }
   }
 ]

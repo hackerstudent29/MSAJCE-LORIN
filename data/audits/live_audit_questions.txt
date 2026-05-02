@@ -732,3 +732,23 @@
 [PASS] What were the measurable goals that Saqlin Mustaq M was tasked to achieve during the period 2023-2024 as VP of AI&DS?
 [UNKNOWN] What are the specific dates and times of the Alumni Meet mentioned in the Alumni Meet Minutes document?
 [UNKNOWN] What is the procedure for students to submit proposals for new sports events to the MSAJCE Sports Club?
+[UNKNOWN] How many hours per week are dedicated to 'AL3391 - Artificial Intelligence', according to its lesson plan?
+[PASS] Who is the current faculty advisor or staff coordinator for the MSAJCE Science Club?
+[PASS] What specific hardware or software listed in the equipment details for C Programming Lab (CS8261) is used to facilitate the virtual lab experience?
+[PASS] What specific entrepreneurial skills are taught as part of the soft skills training component?
+[UNKNOWN] What are the exact budget allocations for each objective outlined in the Alumni Association for the academic year 2023-2024?
+[UNKNOWN] Are there specific projects or collaborations with any of the listed 'Industry Sectors / Employers' that students can participate in during the B.Tech ECE Advanced Communication Technology program?
+[UNKNOWN] Are the photo editing softwares which are taught in the photography club free to use? If not, what are their licensing and/or purchase costs to students?
+[UNKNOWN] What is the name of the specific faculty member whose area of specialization is in Network Security and Data Science during the 2020-2021 academic year?
+[UNKNOWN] Are there any public records available detailing the key performance indicators (KPIs) used to evaluate Saqlin Mustaq M's performance as VP of AI&DS?
+[PASS] Which Alumni Executive Members served on specific committees (e.g. Scholarship committee, Placement committee, etc.) in the year 2024 and what were the results of the placement, for example, what percentage increased?
+[PASS] Are there provisions for student exchange programs or international collaborations within the B.Tech ECE Advanced Communication Technology program?
+[PASS] How many workshops on web development were conducted by the Coding Club in the previous academic year?
+[PASS] According to the data, what is the most recent year in which an Assistant Professor with an M.Tech. degree was hired?
+[UNKNOWN] Was there an open application process for the VP of AI&DS position that Saqlin Mustaq M was appointed to?
+[UNKNOWN] How much scholarship amount did Parveen Begum M receive for the 2018-2022 batch?
+[UNKNOWN] What specific screenwriting techniques are taught in the MSAJCE Photography Club?
+[FAIL] According to the Anna University B.E. 2021 Syllabus, what is the weightage of internal assessment (tests, assignments, etc.) versus the final examination in the CSBS courses?
+[PASS] Does the institutional database contain a list of qualifications that are required to hold the position of Vice President of AI&DS?
+[PASS] What was the average scholarship amount awarded to each of the 97 students from 2019-2026?
+[FAIL] What specific software is used by the Photography Club for photo editing, and is training provided to members?

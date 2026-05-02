@@ -198,5 +198,21 @@
       "status": "PASS",
       "reason": "The bot's response that it does not have specific lesson plans about 'bias reduction' for ethical AI development is accurate as this specific information is not found in the source text."
     }
+  },
+  {
+    "question": "How many hours per week are dedicated to 'AL3391 - Artificial Intelligence', according to its lesson plan?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What specific hardware or software listed in the equipment details for C Programming Lab (CS8261) is used to facilitate the virtual lab experience?",
+    "answer": "Virtual labs don't rely on specific hardware. They utilize software and network infrastructure to simulate a lab environment, accessible remotely. I can provide links to the virtual lab and equipment details pages for the C Programming Lab. Would you like those links?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that virtual labs use software and network infrastructure, which aligns with general knowledge about virtual labs."
+    }
   }
 ]

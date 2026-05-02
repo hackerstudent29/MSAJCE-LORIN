@@ -178,21 +178,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     thinking_msg = await update.message.reply_text("🔍 Analyzing...")
     
     try:
-        # 1. SEMANTIC CACHE CHECK (Cost-Saver)
+        # 1. SEMANTIC CACHE (DISABLED for final string to allow for Structural Variety)
+        # We now rely on the RAGEngine's internal caching and 0.7 temperature for variety.
         query_hash = hashlib.sha256(user_query.lower().strip().encode()).hexdigest()
-        cached_res = await db_pool.fetchval("SELECT bot_response FROM semantic_cache WHERE query_hash = $1", query_hash)
-        
-        if cached_res:
-            # INSTANT CACHE HIT
-            await context.bot.edit_message_text(
-                chat_id=update.effective_chat.id, 
-                message_id=thinking_msg.message_id, 
-                text=cached_res,
-                parse_mode="Markdown"
-            )
-            # Log hit to telemetry (optional)
-            await log_to_supabase(user_id, user_name, user_query, "CACHE_HIT", cached_res, 0.0, 0, 0, 0.0)
-            return
 
         redis_key = f"user_{user_id}_history"
         hist_raw = await _engine.redis.get(redis_key)

@@ -1,170 +1,26 @@
 [
   {
-    "question": "What is the exact title of the degree awarded to students who complete the 3-year Lateral Entry program?",
-    "answer": "Students who complete the 3-year Lateral Entry program are awarded a B.E. or B.Tech degree.\n\nWhat are the eligibility criteria for Lateral Entry programs?\n",
+    "question": "What is the exact fee structure for the B.Tech ECE-ACT program under both Government and Management quotas, detailed by semester?",
+    "answer": "I am sorry, I do not have the exact fee structure for the B.Tech ECE-ACT program, detailed by semester. However, I can confirm that the B.Tech ECE w/s in Advanced Communication Technology program has a total of 30 seats, with 15 under Government quota and 15 under Management quota.\n\nWould you like me to provide you with contact information to get the fee structure?\n",
     "evaluation": {
       "status": "PASS",
-      "reason": "The eligibility criteria for the 3-year Lateral Entry program is described in the source text."
+      "reason": "The bot correctly states it does not have the fee structure and the seat distribution is accurate based on the source text."
     }
   },
   {
-    "question": "According to the 2021 Regulation, what is the course code for the C Programming Lab?",
-    "answer": "As per the 2021 Regulation, the course code for the C Programming Lab is CS8261.\n\nDo you need any other course codes from the 2021 Regulation?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The information is directly available in the source text under the Laboratory Facilities section, specifically mentioning the C Programming Lab and its course code CS8261 according to the 2021 Regulation."
-    }
-  },
-  {
-    "question": "What is the specific percentage of seats reserved under the NRI quota, as per standard Anna University/TNEA norms?",
-    "answer": "As per standard Anna University/TNEA norms, 5% of sanctioned seats are reserved under the NRI quota.\n\nDo you have any other questions about quotas or seat availability?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot response is factually accurate. The source text explicitly states that 'NRI Quota applies \u00e2\u20ac\u201d 5% of sanctioned seats (approximately 1\u00e2\u20ac\u201c2 seats) are reserved under NRI quota as per standard Anna University / TNEA norms.'"
-    }
-  },
-  {
-    "question": "What are the names of the faculty members whose areas of specialization are IoT?",
-    "answer": "Based on the information available, here are the faculty members whose areas of specialization include IoT:\n\n\u2022 Mrs. Saranya V: Assistant Professor. Specializes in IoT and Cloud Computing.\n\u2022 Mr. Rajakumar B: Assistant Professor. Specializes in IoT, AI, NLP, and Image Processing.\n\u2022 Mr. Rajasekar R: Assistant Professor. Specializes in IoT and Network Security.\n\nInterested in other faculty specializations?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot response accurately identifies the faculty members specializing in IoT based on the provided source text."
-    }
-  },
-  {
-    "question": "What is the exact URL for the Equipment Details document for the C Programming Lab?",
-    "answer": "The URL for the Equipment Details document for the C Programming Lab is: https://www.msajce-edu.in/images/departments/aids/Equipments-C-Programming.pdf.\n\nIs there anything else I can help you with regarding lab equipment?\n",
-    "evaluation": {
-      "status": "FAIL",
-      "reason": "The bot provided a URL, but it is from the CSE department instead of AIDS as in the bot response. The correct URL is: https://www.msajce-edu.in/images/departments/cse/Equipments-C-Programming.pdf"
-    }
-  },
-  {
-    "question": "What is the official website where the MSAJCE program adheres to NEP (National Education Policy) guidelines?",
-    "answer": "MSAJCE adheres to NEP guidelines; for example, the B.Tech ECE program with Specialization in Advanced Communication Technology has been framed based on NEP guidelines. You can view the curriculum at https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf for more information.\n\nDo you have any other questions about the B.Tech ECE program?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot response accurately identifies that the B.Tech ECE program with Specialization in Advanced Communication Technology adheres to NEP guidelines, as stated in the source text. It also provides the correct curriculum link for more information."
-    }
-  },
-  {
-    "question": "Which document outlines the Programme Educational Objectives (PEOs) specifically for the B.Tech ECE-ACT program at MSAJCE?",
-    "answer": "The Programme Educational Objectives (PEOs) for the B.Tech ECE-ACT program at MSAJCE are detailed in the document titled \"Programme Educational Objectives (PEOs) B.Tech ECE-ACT, MSAJCE.\"\n\nWould you like to know more about what these objectives are?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot accurately states that the Programme Educational Objectives (PEOs) for the B.Tech ECE-ACT program at MSAJCE are detailed in the document titled \"Programme Educational Objectives (PEOs) B.Tech ECE-ACT, MSAJCE\". This information is directly available in the source text."
-    }
-  },
-  {
-    "question": "According to the provided forecast, what is the projected growth rate per year for the Telecom (5G/6G) sector between 2025 and 2030?",
-    "answer": "The Telecom (5G/6G) sector is projected to grow at a rate of 10-12% per year between 2025 and 2030.\n\nWhat skills are most in-demand for VLSI design according to the forecast?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot accurately extracts the projected growth rate for the Telecom (5G/6G) sector from the provided text."
-    }
-  },
-  {
-    "question": "How many credits are required to graduate from the 4-year B.Tech ECE Advanced Communication Technology program?",
-    "answer": "",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "Referring to the 2021 regulation curriculum (https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf), what specific course covers Millimeter Wave (mm-Wave) technologies?",
-    "answer": "",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The document mentions that Millimeter Wave (mm-Wave) technologies are covered under the B.Tech ECE with Specialization in Advanced Communication Technology curriculum. It is a known accurate institutional fact. "
-    }
-  },
-  {
-    "question": "What is the minimum passing percentage required in Physics, Chemistry, and Mathematics in the 10+2 system to be eligible for the B.Tech ECE Advanced Communication Technology program?",
-    "answer": "To be eligible for the B.Tech ECE Advanced Communication Technology program, you need to secure a pass in Physics, Chemistry, and Mathematics in your 10+2 system of education. This is per the eligibility criteria.\n\nInterested to know more about the ECE department's vision and mission?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "What specific courses from the 2021 regulation curriculum (https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf) relate directly to 5G communication systems?",
+    "question": "What are the specific cut-off marks in Physics, Chemistry, and Mathematics required in the 10+2 examination for eligibility to the B.Tech ECE-ACT program?",
     "answer": "",
     "evaluation": {
       "status": "FAIL",
-      "reason": "The bot did not provide any courses. It should have stated that it cannot answer the question."
+      "reason": "No response"
     }
   },
   {
-    "question": "According to the faculty list, which faculty member specializes in Quantum Communication?",
-    "answer": "Okay, I do not have any faculty members listed that specialize specifically in quantum communication. Is there anything else I can help you with?\n",
+    "question": "What are the specific Anna University/TNEA norms governing the 5% NRI quota seats in the B.Tech ECE-ACT program?",
+    "answer": "The B.Tech ECE-ACT program reserves 5% of its sanctioned seats for the NRI quota as per standard Anna University/TNEA norms.\n\nWant to know the eligibility criteria for NRI admissions?\n",
     "evaluation": {
       "status": "PASS",
-      "reason": "The bot correctly states that it does not have any faculty members listed that specialize specifically in quantum communication, which aligns with the provided source text. Although the source text mentions quantum communication, none of the faculty specialization areas listed include it."
-    }
-  },
-  {
-    "question": "What is the policy regarding lateral entry students and how many credits can they transfer?",
-    "answer": "Lateral entry is available at MSAJCE via TN-LEA counselling for Diploma/B.Sc. Math holders.\n\nTo be eligible for lateral entry:\n\n\u2022 You need a Diploma in an appropriate Engineering/Technology field from the State Board of Technical Education and Training, Tamil Nadu, or an equivalent qualification.\n\u2022 Alternatively, a recognized Bachelor's Degree in Science with a minimum of 3 years duration (10+2+3 pattern) and core Mathematics as one of the subjects is also accepted. Note that degrees other than Bachelor of Science are not eligible.\n\nRegarding minimum eligibility marks for lateral entry:\n\n\u2022 General Category: 55.00%\n\u2022 Backward Class (including Backward Class Muslim): 50.00%\n\u2022 MBC & DNC: 45.00%\n\u2022 SC / SCA / ST: Mere pass in the qualifying examination for Diploma / B.Sc. Degree / Equivalent\n\nThe B.E./B.Tech. program for lateral entry students is 3 years long, consisting of 6 semesters.\n\nI don't have information about the exact number of credits transferable.\n\nInterested in knowing about the various B.E./B.Tech programs available at our college?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot's response accurately reflects the information provided in the source text regarding lateral entry eligibility, duration of the program, and the fact that it doesn't have the exact number of transferable credits."
-    }
-  },
-  {
-    "question": "Does the college offer preparatory courses or bridge programs for students who may lack a strong foundation in certain core subjects?",
-    "answer": "Value Added Courses and Technology Training are available to bridge the gap between Institute and Industry.\n\nWhat subject areas are you most concerned about?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "What is the maximum age limit for admission to the B.Tech ECE Advanced Communication Technology program?",
-    "answer": "There is no mention of an age limit for admission to the B.Tech ECE Advanced Communication Technology program.\n\nHow else can I assist you with information about the B.Tech ECE Advanced Communication Technology program?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot response is factually accurate as the source text does not mention any age limit for admission."
-    }
-  },
-  {
-    "question": "What are the details of the process for applying under the NRI quota, including the required documents and fees?",
-    "answer": "Unfortunately, I don't have specific details on the required documents and fees for the NRI quota application.\n\nHowever, it's worth noting that 5% of seats are reserved under the NRI quota, according to Anna University/TNEA norms.\n\nTo get complete information, you can:\n\u2022 Check the college's official website.\n\u2022 Contact the admission office (contact details in [Source 5]).\n\nWould you like me to find the contact details for the admission office?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot correctly states that it doesn't have specific details on the required documents and fees for the NRI quota application. It also accurately mentions the 5% reservation and suggests checking the college website or contacting the admission office."
-    }
-  },
-  {
-    "question": "What specific industry certifications (e.g., Cisco, IEEE, 3GPP) are formally incorporated into the curriculum or offered as electives?",
-    "answer": "",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "What are the average placement rates for the B.Tech ECE Advanced Communication Technology program over the last three years?",
-    "answer": "Unfortunately, I don't have specific placement rates for the B.Tech ECE Advanced Communication Technology program. However, keep in mind that the highest salary offered to the 2024 graduating batch was Rs. 12 Lakhs Per Annum (LPA). Also, top recruiters include companies like Fidelity National Financial, Intel, Amazon, Zoho, TCS, and CTS.\n\nWould you like information on the curriculum of the ECE Advanced Communication Technology program?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot states it does not have the information, which is correct as the provided document does not contain the average placement rates for the program."
-    }
-  },
-  {
-    "question": "What is the tuition fee structure for both Government and Management quota seats for the B.Tech ECE Advanced Communication Technology program?",
-    "answer": "I do not have the exact fee structure for the B.Tech ECE Advanced Communication Technology program. You can explore the college website or contact the admissions office for detailed information on the fee structure for both Government and Management quota seats.\n\nWould you like me to provide you with the contact details for the admissions office?\n",
-    "evaluation": {
-      "status": "UNKNOWN",
-      "reason": "Evaluation failed"
-    }
-  },
-  {
-    "question": "According to the curriculum link, what percentage of the courses are hands-on lab based?",
-    "answer": "Finding an exact percentage of hands-on lab-based courses directly from the curriculum PDF isn't possible. That document outlines the syllabus and regulations. However, several departments provide lab facilities that support various courses.\n\nFor instance, the EEE department has 7 labs, including Electrical Machines and Power Electronics Labs [Source 1]. The CSBS and ECE-ACT departments share lab facilities, offering courses like C Programming and Internet Programming [Source 2, 4]. Additionally, the Cyber Security program emphasizes hands-on learning with labs and simulation environments [Source 5].\n\nDo you want me to provide details on the specific lab facilities available for a particular department or program?\n",
-    "evaluation": {
-      "status": "PASS",
-      "reason": "The bot accurately states that it cannot find the exact percentage of hands-on lab-based courses directly from the curriculum PDF. It then refers to lab facilities supported by various departments, which is a reasonable approach given the query. The bot does not contradict the source text."
+      "reason": "The source text confirms that 5% of seats are reserved under the NRI quota as per Anna University/TNEA norms."
     }
   }
 ]

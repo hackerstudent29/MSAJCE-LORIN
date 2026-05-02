@@ -54,5 +54,21 @@
       "status": "PASS",
       "reason": "The bot response is factually accurate and the information is available in the source text."
     }
+  },
+  {
+    "question": "What is the name of the specific faculty member whose area of specialization is in Network Security and Data Science during the 2020-2021 academic year?",
+    "answer": "Dr. Nagasubramanian R was a Professor whose areas of specialization included Network Security and Data Science during the 2020-2021 academic year.\n\nDo you want to know about any other faculty members from that year?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "According to the data, what is the most recent year in which an Assistant Professor with an M.Tech. degree was hired?",
+    "answer": "Based on the provided data, the most recent year an Assistant Professor with an M.Tech. degree was hired is 2023.\n\nWant to know more about our faculty qualifications?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The 2023-2024 UG Faculty list shows that multiple Assistant Professors with M.E. degrees were hired in 2023, which implies that 2023 is the most recent year that someone with a masters was hired as an Assistant Professor."
+    }
   }
 ]

@@ -86,5 +86,21 @@
       "status": "PASS",
       "reason": "While the source text does not contain details about scholarships, the bot's answer does not contradict the text and provides possible avenues for financial aid, making it a reasonable and helpful response."
     }
+  },
+  {
+    "question": "What specific entrepreneurial skills are taught as part of the soft skills training component?",
+    "answer": "Entrepreneurial thinking is part of the soft skills training for the Computer Science and Business Systems (CSBS) program.\n\nHave you considered looking into our entrepreneurship workshops for more hands-on experience?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text mentions that soft skills training includes 'Entrepreneurial thinking'."
+    }
+  },
+  {
+    "question": "According to the Anna University B.E. 2021 Syllabus, what is the weightage of internal assessment (tests, assignments, etc.) versus the final examination in the CSBS courses?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
   }
 ]

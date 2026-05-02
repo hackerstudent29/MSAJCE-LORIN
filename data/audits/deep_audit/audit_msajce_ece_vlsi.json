@@ -62,5 +62,29 @@
       "status": "PASS",
       "reason": "The bot accurately identifies four companies listed in the source text as being proficient in design tools."
     }
+  },
+  {
+    "question": "Which specific design languages, starting with V, are listed as key skills in demand for VLSI design?",
+    "answer": "The design languages starting with V that are listed as key skills in demand for VLSI design are Verilog and VHDL. SystemVerilog is also listed.\n\nAre you also curious about the importance of design tools like Cadence or Synopsys?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate and present in the source text."
+    }
+  },
+  {
+    "question": "What percentage of annual growth is forecast for Semiconductor Design jobs between 2025-2030?",
+    "answer": "The semiconductor design sector is projected to grow at 15-18% per year from 2025 to 2030.\n\nAre you also interested in growth forecasts for the telecommunications sector?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately extracts the forecast growth rate for the Semiconductor Design sector (15-18% per year from 2025 to 2030) from the provided text."
+    }
+  },
+  {
+    "question": "Which specific role, starting with 'Automotive,' is expected to have moderate to high job growth between 2025-2030?",
+    "answer": "Automotive VLSI Design Engineer (ADAS/EV) is expected to have moderate to high job growth between 2025-2030.\n\nWhat other skills are valuable for VLSI roles in the automotive sector?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate based on the provided source text."
+    }
   }
 ]

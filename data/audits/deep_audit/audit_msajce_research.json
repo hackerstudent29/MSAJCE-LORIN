@@ -38,5 +38,45 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "Besides Dr. B. Janarthanan, how many faculty members are listed as both an advisor on the Research Advisory Committee AND an Anna University Approved PhD Supervisor?",
+    "answer": "Based on the provided information:\n\n\u2022 There are no other faculty members that are listed as both an advisor on the Research Advisory Committee AND an Anna University Approved PhD Supervisor besides Dr. B. Janarthanan.\n\nWant to know more about the Research and Development cell?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects that only Dr. B. Janarthanan is listed as both an advisor on the Research Advisory Committee and an Anna University Approved PhD Supervisor based on the provided text."
+    }
+  },
+  {
+    "question": "What specific services does SIIF offer at MSAJCE as part of the Incubation & Pre-Incubation support outlined in the NISP?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many FDPs, seminars, or workshops were organized by the Research and Development Cell in the past academic year to promote entrepreneurial culture?",
+    "answer": "The Entrepreneurship Development Cell (EDC) organizes Faculty Development Programs (FDPs), seminars, and workshops to promote entrepreneurial culture. Source 3 and 4 mention this as a short-term objective of the National Innovation and Start-up Policy (NISP) at MSAJCE.\n\nIn the last academic year, the IIC organized events like \"FDP on Kinematics of Machinery\" and \"FDP on Teaching Engineering Graphics using ICT Tools.\" It's worth noting that the EDC encourages students to participate in activities organized by external agencies as well.\n\nWould you like more information on how the EDC coordinates with the Sathak Innovation Incubation Cell (SIIF)?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response is factually accurate based on the source text provided. The BOT correctly identifies EDC and IIC events. It does not specify the number of events but identifies the organizations. "
+    }
+  },
+  {
+    "question": "How many established startups per year is MSAJCE targeting to achieve to meet the goal of increasing self-employment as defined in the KPI Monitor & Evaluation?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "According to the listofsupervisors.php, which department employs Dr. A. Suvitha, Anna University Ref. No 2070720?",
+    "answer": "Dr. A. Suvitha, with Anna University Ref. No. 2070720, works in the Inorganic Chemistry department.\n\nInterested in learning more about our research facilities?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

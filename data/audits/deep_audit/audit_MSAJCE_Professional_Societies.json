@@ -78,5 +78,29 @@
       "status": "PASS",
       "reason": "The bot correctly identifies Saqlin Mustaq M as VP of AI&DS. It also acknowledges it does not know the specific measurable goals, which aligns with the source text's lack of information on that topic."
     }
+  },
+  {
+    "question": "Are there any public records available detailing the key performance indicators (KPIs) used to evaluate Saqlin Mustaq M's performance as VP of AI&DS?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Was there an open application process for the VP of AI&DS position that Saqlin Mustaq M was appointed to?",
+    "answer": "Saqlin Mustaq M is the Vice President of AI&DS, batch 2023-2027. Unfortunately, I lack specific details regarding the application process for that role.\n\nPerhaps you could check with the Student Affairs office for more information?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Does the institutional database contain a list of qualifications that are required to hold the position of Vice President of AI&DS?",
+    "answer": "Saqlin Mustaq M is the current Vice President of AI&DS, from the 2023-2027 batch. Unfortunately, the specific qualifications for the Vice President of AI&DS are not detailed in my current database.\n\nWould you like to know more about the general qualifications for student council positions?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identifies the VP of AI&DS and states that the specific qualifications are not in the database, which aligns with the provided source text. "
+    }
   }
 ]

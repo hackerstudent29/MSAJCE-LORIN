@@ -118,5 +118,21 @@
       "status": "PASS",
       "reason": "The bot accurately identifies that Rahim Basha W received scholarships in both the AIML and CSE AIML departments, citing the correct batches based on the source text."
     }
+  },
+  {
+    "question": "How much scholarship amount did Parveen Begum M receive for the 2018-2022 batch?",
+    "answer": "Parveen Begum M from the 2018-2022 batch received an alumni scholarship. A total of Rs. 37,94,972 has been disbursed to 97 students between 2019 and 2026.\n\nInterested to know about other alumni contributions?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What was the average scholarship amount awarded to each of the 97 students from 2019-2026?",
+    "answer": "I don't have the average scholarship amount awarded. However, the total scholarship amount awarded to 97 students from 2019-2026 is Rs. 37,94,972.\n\nWould you like to know the names of scholarship recipients?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot cannot calculate the average, but it provides the total amount awarded and acknowledges that it doesn't have the average amount."
+    }
   }
 ]
