@@ -1,0 +1,10 @@
+[
+  {
+    "question": "How many faculty members with a Ph.D. joined the S&H department in the 2023-2024 academic year?",
+    "answer": "In the Science and Humanities Department during the 2023-2024 academic year, 5 faculty members with a Ph.D. joined. They are Dr. Kavitha J, Dr. Amudha S, Dr. Muthumari M, Dr. Nithya A, and Dr. Rajeshwari S.\n\nDo you want to know the names of faculty who joined in other academic years?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot states that 5 faculty members with a Ph.D. joined the S&H department in the 2023-2024 academic year and lists names that include faculty who do not have a Ph.D. according to the source text. The source text indicates the following faculty with Ph.D. joined in 2023-2024: Dr. Kavitha J, Dr. Amudha S, Dr. Muthumari M, Dr. Nazeema A (joined in 2024 so is questionable for 2023-2024). Nithya A and Rajeshwari S. do not have Ph.Ds"
+    }
+  }
+]

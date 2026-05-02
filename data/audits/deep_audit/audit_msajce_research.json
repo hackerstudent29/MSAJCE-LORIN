@@ -78,5 +78,37 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "In which year was Dr. K.S. Srinivasan's book 'Electric Circuit Theory' published, based on the ISBN 978-81-938894-2-8?",
+    "answer": "Dr. K.S. Srinivasan's \"Electric Circuit Theory\" with ISBN 978-81-938894-2-8 was published before today's date.\n\nWould you like details on other books authored by Dr. K.S. Srinivasan?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response correctly identifies Dr. K.S. Srinivasan as the author of \"Electric Circuit Theory\" with ISBN 978-81-938894-2-8, and this book is listed in the source text. The phrase 'before today's date' is also valid."
+    }
+  },
+  {
+    "question": "What is the exact number of publications listed in the 2019-2020 PDF report accessible via the link on the research page?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Is Dr. B. Sheela Rani, Dean Research at Sathyabama University still on the Research Advisory Committee, or has Dr. Somashekhar S Hiremath replaced her?",
+    "answer": "Dr. B. Sheela Rani, Dean Research, Sathyabama University, is listed as an Advisor on the Research Advisory Committee in an alternate listing; however, the primary listing names Dr. Somashekhar S Hiremath, Associate Professor, IIT Madras, as the Advisor.\n\nWould you like the contact information for either of them?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately reflects the information provided in the source text, specifically mentioning Dr. B. Sheela Rani's alternate listing and Dr. Somashekhar S Hiremath's primary listing on the Research Advisory Committee."
+    }
+  },
+  {
+    "question": "What is the official registration number, if any, for the Entrepreneurship Development Institute of India (EDII) Chennai, listed as a Strategic partnership linkage?",
+    "answer": "EDII Chennai's registration number is not listed in my documents. Do you need the contact information for EDII Chennai instead?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that the EDII Chennai's registration number is not listed in the provided documents and offers an alternative."
+    }
   }
 ]

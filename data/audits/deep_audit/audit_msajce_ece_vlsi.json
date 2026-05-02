@@ -86,5 +86,29 @@
       "status": "PASS",
       "reason": "The bot response is factually accurate based on the provided source text."
     }
+  },
+  {
+    "question": "What specific type of scheme, starting with 'PLI,' is aimed at increasing domestic manufacturing and assembly of electronics?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Which specific government mission aims to boost semiconductor manufacturing and design in India?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What are the names of the five specific sectors driving the VLSI design industry growth?",
+    "answer": "The five sectors driving VLSI design industry growth are:\n\n\u2022 Semiconductor Industry\n\u2022 5G and 6G Technologies\n\u2022 Automotive Electronics (ADAS and EVs)\n\u2022 IoT and Consumer Electronics\n\u2022 AI and Machine Learning Hardware\n\nInterested in learning about VLSI design at MSAJCE?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identifies the five sectors driving VLSI design industry growth based on the source text."
+    }
   }
 ]

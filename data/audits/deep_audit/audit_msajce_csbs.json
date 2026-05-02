@@ -102,5 +102,21 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "For the course CS3351 - Digital Principles and Computer Organization, what specific ICT tools are used for teaching, as documented in the ICT resource?",
+    "answer": "For CS3351 - Digital Principles and Computer Organization, here are the ICT Tools:\n\n\u2022 For B.E. CSE (2021 Regulation): https://www.msajce-edu.in/academics/cse/ICTTools/CS3351-ICT.pdf\n\u2022 For B.Tech. AI&ML (2021 Regulation): https://www.msajce-edu.in/academics/aids/2021/ICTTools/CS3351-ICT.pdf\n\u2022 For B.E. CSBS (2021 Regulation): https://www.msajce-edu.in/academics/csbs/2021/ICTTools/CS3351-ICT.pdf\n\u2022 For B.Tech. IT (2021 Regulation): https://www.msajce-edu.in/academics/it/2021/ICTTools/CS3351-ICT.pdf\n\nWould you like the ICT tools for any other courses?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot provides links to the ICT tools for CS3351 for various B.E./B.Tech programs, which aligns with the information available in the source text under 'CSBS Department \u00e2\u20ac\u201d Course Materials (2021 Regulation)'."
+    }
+  },
+  {
+    "question": "When was the last time the curriculum for the CSBS program was reviewed and updated based on industry feedback?",
+    "answer": "The CSBS curriculum follows the Anna University 2021 Regulation. Moreover, the curriculum was designed in partnership with TCS, emphasizing industry readiness.\n\nWould you like details on the curriculum's key features?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response accurately reflects information found in the source text, stating that the CSBS curriculum follows the Anna University 2021 Regulation and was designed in partnership with TCS."
+    }
   }
 ]

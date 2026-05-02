@@ -102,5 +102,21 @@
       "status": "PASS",
       "reason": "The bot accurately identifies the VP of AI&DS and states that the specific qualifications are not in the database, which aligns with the provided source text. "
     }
+  },
+  {
+    "question": "Are there any publicly accessible documents outlining Saqlin Mustaq M's strategic plan or vision for the AI&DS department during their tenure?",
+    "answer": "Saqlin Mustaq M is the Vice President from the AI&DS Department, batch 2023-2027. I do not have information on Saqlin Mustaq M's strategic vision, but the NISP (National Innovation and Startup Policy) committee does have plans to develop strategies for promoting innovation and entrepreneurship. They also focus on creating innovation pipelines and pathways for entrepreneurs and startups.\n\nWould you like to learn more about the NISP's specific initiatives?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the defined reporting structure for the AI&DS department as of 2024, considering that Saqlin Mustaq M is the VP?",
+    "answer": "Saqlin Mustaq M is the Vice President, AI&DS, from the 2023-2027 batch. However, the reporting structure for the AI&DS department isn't specified.&#x20;\n\nWould you like to know about the Student Council structure instead?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response correctly identifies Saqlin Mustaq M as the VP of AI&DS. It also accurately states that the reporting structure is not specified in the provided text."
+    }
   }
 ]

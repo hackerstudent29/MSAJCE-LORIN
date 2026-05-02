@@ -48,11 +48,35 @@
     }
   },
   {
-    "question": "What specific software is used by the Photography Club for photo editing, and is training provided to members?",
-    "answer": "The Photography Club utilizes cutting-edge software for photo editing to help members develop their skills. Further, the club provides training on how to use this software for both personal use and publication.\n\nDoes the Robotics Club offer similar hands-on training for its members?\n",
+    "question": "How much funding was allocated to the MSAJCE Sports Club in the last annual budget report?",
+    "answer": "I cannot give you the exact funding allocated to the MSAJCE Sports Club. However, the Sports Club does submit annual reports on sports, events, budget allocations, and spending during the year. You can consult the Annual Report AY2023-2024 here: https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf.\n\nDo you have any other questions about the MSAJCE Sports Club?\n",
     "evaluation": {
-      "status": "FAIL",
-      "reason": "The provided answer makes a claim about the Robotics club offering hands-on training, but there is no information about the Robotics Club in the provided text. The text only contains a description of the Robotics Club's activities, and no indication that training provided."
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "On what date was the ENVISTA CLUB, including the Fine Arts Club, officially inaugurated at MSAJCE?",
+    "answer": "The provided information confirms that Mohamed Sathak AJ College of Engineering has successfully inaugurated the ENVISTA CLUB. However, the exact date of the inauguration isn't specified.\n\nInterested in joining a club?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response correctly states that the exact date of the inauguration isn't specified in the provided text."
+    }
+  },
+  {
+    "question": "What specific software will members of the Photography Club be trained on for photo editing?",
+    "answer": "Photography Club members will learn to edit and enhance photos using cutting-edge software.\n\nWould you like to know about other skills developed in the photography club?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the deadline to submit online applications via the provided link (https://enrollonline.co.in/Registration/Apply/MSAJCE)?",
+    "answer": "I cannot give you a definite deadline, as it is not specified. However, you can start your application through the online form.\n\nWould you like information about the courses offered?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges that the deadline is not specified in the provided text, which is accurate. It does not hallucinate information or contradict the source material."
     }
   }
 ]

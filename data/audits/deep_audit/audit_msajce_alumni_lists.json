@@ -134,5 +134,29 @@
       "status": "PASS",
       "reason": "The bot cannot calculate the average, but it provides the total amount awarded and acknowledges that it doesn't have the average amount."
     }
+  },
+  {
+    "question": "What is the exact amount of scholarship that Rahim Basha W received for the AIML department for 2023-2027?",
+    "answer": "I do not have the exact scholarship amount received by Rahim Basha W (2023-2027 batch, AIML department). However, the total amount sponsored by the alumni is Rs. 37,94,972.\n\nWould you like to know the names of other students from the AIML department who received the alumni scholarship?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the exact amount of scholarship that Rahim Basha W received for the CSE AIML department for 2024-2028?",
+    "answer": "I am sorry, but I do not have the exact scholarship amount that Rahim Basha W received.\n\nHowever, I can tell you that Rahim Basha W from the 2024-2028 batch in the CSE AIML department is a recipient of the MSAJCE Alumni Scholarship.\n\nWould you like to know the total number of students who have benefited from the alumni scholarship?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it does not have the specific scholarship amount for Rahim Basha W and correctly identifies him as a recipient of the MSAJCE Alumni Scholarship from the 2024-2028 batch in the CSE AIML department, based on the provided source text."
+    }
+  },
+  {
+    "question": "How many students from the IT department received the scholarship in the 2023-2027 batch?",
+    "answer": "From the IT department, the following students from the 2023-2027 batch received the Alumni Scholarship:\n\n\u2022 Afrin Fathima B\n\u2022 Abdullah N\n\u2022 Afrin Fathima\n\u2022 M. Mohamed Rasim\n\u2022 B. Dhanalakshmi\n\u2022 Parvez Nabi Z\n\u2022 Abdullah N\n\u2022 Md Rasin\n\nThat makes a total of 8 students. Want to know the scholarship recipients from any other department or batch?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately extracts and lists the names of the IT department students who received the scholarship in the 2023-2027 batch and counts them correctly. The listed names and the final count are consistent with the source text."
+    }
   }
 ]

@@ -752,3 +752,25 @@
 [PASS] Does the institutional database contain a list of qualifications that are required to hold the position of Vice President of AI&DS?
 [PASS] What was the average scholarship amount awarded to each of the 97 students from 2019-2026?
 [FAIL] What specific software is used by the Photography Club for photo editing, and is training provided to members?
+[UNKNOWN] How much funding was allocated to the MSAJCE Sports Club in the last annual budget report?
+[UNKNOWN] What is the minimum passing grade required in Physics, Chemistry, and Mathematics for B.E. Computer Science and Engineering admission?
+[PASS] On what date was the ENVISTA CLUB, including the Fine Arts Club, officially inaugurated at MSAJCE?
+[PASS] For the course CS3351 - Digital Principles and Computer Organization, what specific ICT tools are used for teaching, as documented in the ICT resource?
+[PASS] Can I see a detailed breakdown of the expenses incurred by the Fine Arts Club during the most recent ENVISTA CLUB event?
+[PASS] How many student project funding applications were submitted to TNSCST in 2023?
+[UNKNOWN] What is the exact amount of scholarship that Rahim Basha W received for the AIML department for 2023-2027?
+[UNKNOWN] Are there any publicly accessible documents outlining Saqlin Mustaq M's strategic plan or vision for the AI&DS department during their tenure?
+[UNKNOWN] How many credits are assigned to CS8261 - C Programming course?
+[UNKNOWN] What specific percentage of the curriculum, as defined by the 2021 Regulation (link provided), is dedicated to hands-on learning activities, such as labs and simulations?
+[PASS] What is the exact amount of scholarship that Rahim Basha W received for the CSE AIML department for 2024-2028?
+[PASS] What is the defined reporting structure for the AI&DS department as of 2024, considering that Saqlin Mustaq M is the VP?
+[PASS] What specific measures are in place to ensure inclusivity and participation from students of all backgrounds in the Tamil Mandram activities?
+[UNKNOWN] What specific software will members of the Photography Club be trained on for photo editing?
+[UNKNOWN] What specific infrastructure improvements have been made since 2020 to support research in the Humanities?
+[UNKNOWN] What is the name of the faculty who joined on 19.06.2023 in Computer Science and Engineering department?
+[UNKNOWN] According to the 2021 Regulation, what is the specific course code and title for the foundational course on Data Structures required for CSCS students?
+[FAIL] How many faculty members with a Ph.D. joined the S&H department in the 2023-2024 academic year?
+[PASS] What were the specific criteria used to select Kishore P as Student President of the Fine Arts Club?
+[PASS] How many students from the IT department received the scholarship in the 2023-2027 batch?
+[PASS] What is the deadline to submit online applications via the provided link (https://enrollonline.co.in/Registration/Apply/MSAJCE)?
+[PASS] When was the last time the curriculum for the CSBS program was reviewed and updated based on industry feedback?

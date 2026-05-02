@@ -14,5 +14,37 @@
       "status": "PASS",
       "reason": "The bot correctly identifies Ram as the Lead Architect and that the Lorin RAG system uses Pinecone. It also correctly states it does not have access to specific configuration details, which is expected. All information aligns with the source text."
     }
+  },
+  {
+    "question": "Can you provide data regarding the student pass rate or GPA improvement directly attributable to the use of the Lorin RAG system at MSAJCE?",
+    "answer": "I do not have direct data on pass rates or GPA improvements specifically attributed to Lorin RAG. However, I can share that Ramanathan S (Ram), a 2nd Year B.Tech IT student (2024-2028), architected Lorin RAG as the institutional intelligence engine for MSAJCE. It transforms raw PDFs and records into a request-driven intelligence system.\n\nWould you like to know more about the features of Lorin RAG?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the information provided in the source text. It acknowledges the lack of specific data on pass rates or GPA improvements related to Lorin RAG but confirms Ramanathan S's role in its creation and provides his background."
+    }
+  },
+  {
+    "question": "What specific security protocols (e.g., encryption methods, penetration testing results) are implemented in Zenpay to ensure payment gateway security?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What transaction volume (e.g., number of transactions, total value processed) has Zenpay handled to date?",
+    "answer": "Unfortunately, I don't have access to Zenpay's specific transaction volumes. I can tell you that Ramanathan S (Ram), a 2nd-year B.Tech IT student from the 2024-2028 batch, architected it. Zenpay is a production-grade payment gateway platform designed for secure and scalable payment processing.\n\nPerhaps you'd be interested in learning about another of Ram's projects?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it does not have access to Zenpay's specific transaction volumes, which is not contained in the source text. The rest of the information is sourced from the text and correct."
+    }
+  },
+  {
+    "question": "What percentage of MSAJCE's IT budget is allocated to AI initiatives led by Ramanathan S?",
+    "answer": "I do not have access to the college's specific IT budget allocation. But I can tell you that Ramanathan S (Batch 2024-2028) is the Lead Architect of Lorin RAG, a flagship AI initiative at MSAJCE.\n\nWould you like to know more about the capabilities of Lorin RAG?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

@@ -70,5 +70,29 @@
       "status": "PASS",
       "reason": "The 2023-2024 UG Faculty list shows that multiple Assistant Professors with M.E. degrees were hired in 2023, which implies that 2023 is the most recent year that someone with a masters was hired as an Assistant Professor."
     }
+  },
+  {
+    "question": "What is the minimum passing grade required in Physics, Chemistry, and Mathematics for B.E. Computer Science and Engineering admission?",
+    "answer": "To be eligible for B.E. Computer Science and Engineering, you need a pass in Physics, Chemistry, and Mathematics in your 10+2 examination.\n\nWhat are your plans after completing your B.E.?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many credits are assigned to CS8261 - C Programming course?",
+    "answer": "I do not have the credit information for the CS8261 - C Programming course. However, I can confirm that the C Programming Lab, which offers the course CS8261, has a virtual lab available at https://www.msajce-edu.in/images/departments/csbs/Virtual-Lab-C-Programming.pdf.\n\nCan I help you with any other lab details?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the name of the faculty who joined on 19.06.2023 in Computer Science and Engineering department?",
+    "answer": "Based on the provided information, Dr. VIJAYARANGAN R, Professor, joined the Computer Science and Engineering department on June 19, 2023.\n\nDo you want to know about any other faculty members in the department?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

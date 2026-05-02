@@ -22,5 +22,45 @@
       "status": "PASS",
       "reason": "The source text confirms that 5% of seats are reserved under the NRI quota as per Anna University/TNEA norms."
     }
+  },
+  {
+    "question": "What percentage of the curriculum is devoted to hands-on practical training and lab work in the B.Tech ECE-ACT program?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Can I see a detailed breakdown of the curriculum for each semester of the B.Tech ECE-ACT program, including the number of credits for each course?",
+    "answer": "Unfortunately, I lack the ability to provide the exact credit breakdown for each course in the B.Tech ECE-ACT program, semester by semester.\n\nHowever, the curriculum and syllabus for the 2021 Regulation, which is currently followed, is available here: https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf.\n\nWould you like details on the faculty of the ECE department instead?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states it cannot provide the exact credit breakdown for each course, which is not explicitly available in the source text. It then provides a relevant link to the curriculum and syllabus, which aligns with the source text. The refusal is appropriate given the query's specificity and the available information."
+    }
+  },
+  {
+    "question": "What are the specific software and hardware used in the RF & Microwave Communication lab of the B.Tech ECE-ACT program?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What specific industry certifications are offered or supported by the B.Tech ECE-ACT program?",
+    "answer": "B.Tech ECE-ACT doesn't explicitly list industry certifications. However, the program strongly emphasizes hands-on skills and in-depth knowledge for today's industries. Since the curriculum focuses on cutting-edge communication technologies (like 5G/6G, IoT, and network security), it would be wise to check for external certifications related to those fields.\n\nHave you considered exploring certifications in areas like network security or wireless communications to complement your degree?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is accurate. It correctly states that the source text doesn't explicitly list industry certifications, but suggests relevant areas to explore based on the curriculum's focus. The text mentions skills and certification demand in the industry."
+    }
+  },
+  {
+    "question": "What are the specific criteria used to evaluate student projects and assignments in the B.Tech ECE-ACT program?",
+    "answer": "Currently, I don't have specific rubrics or defined criteria for evaluating student projects and assignments in the B.Tech ECE-ACT program.\n\nHowever, I can tell you that the college uses a well-defined internal assessment mechanism, and program/course outcomes are defined and attained. You can also find details on student-centric learning methods and ICT-enabled teaching tools. All of this is documented in the AQAR report for 2023-2024.\n\n\u2022 Internal assessment mechanism: https://www.msajce-edu.in/uploads/aqar/2023/2.5.1/2.5.1Index2023-24.pdf\n\u2022 Programme and course outcomes: https://www.msajce-edu.in/uploads/aqar/2023/2.6.1/2.6.1Index2023-24.pdf\n\u2022 Student-centric learning methods: https://www.msajce-edu.in/uploads/aqar/2023/2.3.1/2.3.1Index2023-24.pdf\n\u2022 ICT enabled teaching tools: https://www.msajce-edu.in/uploads/aqar/2023/2.3.2/2.3.2Index2023-24.pdf\n\nWould you like more information about the ECE-ACT course curriculum?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states it does not have the specific rubrics, which is true as the source text does not contain this information."
+    }
   }
 ]
