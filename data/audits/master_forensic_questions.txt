@@ -1,0 +1,58 @@
+MSAJCE LORIN MASTER FORENSIC QUESTION LEDGER (50 Qs)
+=====================================================
+
+SET 1: PARENT PERSONA (Institutional Grounds)
+---------------------------------------------
+1. My son wants a top-tier college; what does the NAAC A+ Grade actually mean for his degree?
+2. Is the NBA Accreditation valid for all departments, or just a few?
+3. How does MSAJCE rank compared to other colleges on the OMR IT corridor?
+4. What was the highest salary package offered to a student in the 2024 batch?
+5. Does the college provide internships at Siruseri IT Park since it's right next door?
+6. If my daughter studies Cyber Security, which companies will recruit her?
+7. Do you provide training for TCS, Infosys, and Cognizant interview?
+8. What happens if my child doesn't get placed in the first round of campus interviews?
+9. Are there any scholarships available for students with high marks?
+10. Can we pay the semester fees online through the college portal?
+11. What is the Management Quota seat count for the AI & Machine Learning department?
+12. Is there a lateral entry option for diploma students into the third year?
+13. How is the hostel security for girls, and what are the outing rules?
+14. Does the college provide bus transport to areas like Tambaram or North Chennai?
+15. What kind of food is served in the mess, and is it hygienic?
+16. What are the lab facilities like for the new AIDS and CSBS departments?
+17. Is the campus strictly Anti-Ragging, and who is the person in charge of safety?
+18. Does the college support students who want to study or intern abroad?
+19. If my child is struggling with a subject, do you have extra coaching or remedial classes?
+20. What are the working hours of the library for students staying in the hostel?
+
+SET 2: STUDENT PERSONA (Campus Pulse)
+--------------------------------------
+21. What are the most active technical clubs at MSAJCE right now?
+22. I'm into coding—does the college have a competitive programming or hackathon culture?
+23. Can you tell me more about the RAISE Center and how students can get involved in projects there?
+24. What are the details of the 'Google Cloud' and 'AWS' technology centres on campus?
+25. I heard there's a drone technology lab—where is it and who can access it?
+26. Does the college host a national-level cultural fest or symposium?
+27. What is the 'Zenify' and 'Zenpay' project I keep hearing about in the tech team?
+28. Who are the top student developers I should connect with for help on full-stack projects?
+29. How do I join the IEEE or CSI student chapters?
+30. Are there any internship opportunities within the campus through the Incubation Centre?
+31. Which IT companies allow students to do 'Work From Campus' internships?
+32. What are the rules for using the sports facilities after college hours?
+33. Is the Wi-Fi available 24/7 in the hostel, and what's the speed like?
+34. What's the best spot on campus for a group study session?
+35. Are there any student-run startups currently incubated at MSAJCE?
+36. What are the specific perks for students who participate in the Industry-Backed Technology Centres?
+37. How can I apply for the Pragati scholarship for girls?
+38. What kind of skill development courses are offered for CSE students in the evening?
+39. Does the canteen serve biryani on special days, and how is the food quality?
+40. Is there a gym facility for students staying in the hostel?
+41. What are the library hours for exam periods—does it stay open late?
+42. Can I work on my own projects in the lab after the scheduled classes?
+43. Who is the Physical Education Director I should talk to for joining the cricket team?
+44. Are there any student exchange programs with foreign universities?
+45. How does the college support students who want to clear GATE or UPSC exams?
+46. I want to learn Japanese or German—does the college still offer those language classes?
+47. What was the theme of the last 'Hack MSAJCE' event?
+48. Who are the office bearers for the student council this year?
+49. Is there a specific lab for VLSI and Embedded Systems design?
+50. What are the 'Must-Visit' places or events for a first-year student?

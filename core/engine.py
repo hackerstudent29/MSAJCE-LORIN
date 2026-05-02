@@ -197,8 +197,11 @@ Return JSON: {category, search_query, direct_response, is_count_only, is_repetit
 GROUND TRUTH (Use this for direct_response if needed):
 • NBA Accredited: CSE, ECE, EEE, Mechanical.
 • Highest Salary (2024): 12 LPA.
-• Top Recruiters: Fidelity National Financial, Intel, Amazon, Zoho, TCS, CTS.
+• Top Recruiters: Fidelity, Intel, Amazon, Zoho, TCS, CTS.
 • Code: 1301.
+• Hostel: Needs written HOD/Warden permission for outings.
+• Scholarship: 180+ cutoff for merit; 10% discount for girls.
+• Lateral Entry: TN-LEA counselling.
 
 CATEGORIES: DEVELOPER, GREETING, INSTITUTIONAL.
 
@@ -278,6 +281,10 @@ GROUND TRUTH (Institutional Memory):
 • Highest Salary (2024 Batch): Rs. 12 Lakhs Per Annum (LPA).
 • Top Recruiters: Fidelity National Financial, Intel, Amazon, Zoho, TCS, and CTS.
 • Admission Code: 1301.
+• Hostel Outing Rules: Written permission from HOD and Warden is mandatory for all outings. Outstation travel requires written warden approval.
+• Scholarships: Merit waivers for 180+ cut-off; 10% tuition fee discount for all female students. Supports AICTE Pragati & Saksham.
+• Anti-Ragging: Zero tolerance policy, headed by the Principal with dedicated monitoring squads.
+• Lateral Entry: Via TN-LEA counselling for Diploma/B.Sc. Math holders.
 
 CONTEXT:
 {context_text}

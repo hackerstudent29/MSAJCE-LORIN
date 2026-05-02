@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Institutional Forensic Facts — Hostel, Scholarships, and Discipline",
+    "source_url": "Institutional Handbooks and Internal Policy",
+    "scraped_date": "2026-05-02"
+  },
+  "chunks": [
+    {
+      "chunk_id": "forensic_hostel_01",
+      "section": "Girls Hostel Outing and Security Rules",
+      "text": "Girls Hostel Outing Rules: Hostellers are generally not permitted to leave the campus except on holidays and require prior written permission from their Head of Department (HOD) and the hostel warden. For outstation travel or going home, written permission from the warden or superintendent is mandatory. Parents must provide a list of authorized visitors or local guardians; outsiders and friends are strictly prohibited from entering rooms. Return times are strictly enforced.",
+      "keywords": ["hostel", "outing", "rules", "permission", "warden", "HOD", "visitors"]
+    },
+    {
+      "chunk_id": "forensic_scholarship_01",
+      "section": "Scholarship and Financial Aid Details",
+      "text": "MSAJCE Merit Scholarships: Students with a cut-off of 180+ out of 200 are eligible for merit-based tuition waivers. Female students receive a special 10% discount on tuition fees. Government schemes supported include: AICTE Pragati (for girls), AICTE Saksham (for specially-abled), and Merit-cum-means Minority Community scholarships.",
+      "keywords": ["scholarship", "merit", "female discount", "Pragati", "Saksham", "cutoff"]
+    },
+    {
+      "chunk_id": "forensic_discipline_01",
+      "section": "Anti-Ragging and Lateral Entry",
+      "text": "Anti-Ragging: Headed by the Principal with dedicated squads. Zero tolerance policy—punishments include FIR filing, hostel expulsion, and admission cancellation. Lateral Entry: Admissions conducted via TN-LEA counselling. Candidates must hold a Diploma in Engineering/Technology or a B.Sc. with Mathematics.",
+      "keywords": ["anti-ragging", "principal", "lateral entry", "TN-LEA", "diploma"]
+    }
+  ]
+}
