@@ -102,5 +102,29 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "How many patents filed by MSAJCE faculty between 2020 and 2023 involve IoT technologies?",
+    "answer": "Okay, let's figure out how many patents filed by MSAJCE faculty from 2020 to 2023 relate to IoT.\n\nBased on the provided data, here's a breakdown:\n\n\u2022\t2020: 1 patent\n\u2022\t2021: 2 patents\n\nIn total, 3 patents filed between 2020 and 2023 by MSAJCE faculty involve IoT technologies.\n\nCan I help you with anything else related to patents or publications?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot extracts numbers from the provided text, but fails to understand which numbers it should be extracting, thus the answer is fabricated. There are Patents filed by MSAJCE faculty listed, some of which are IoT related, but the response gives incorrect numbers for how many were filed from 2020-2023."
+    }
+  },
+  {
+    "question": "According to publication records, what is the average number of publications per faculty member for the Department of Electrical and Electronics Engineering in the past three years?",
+    "answer": "I am unable to provide the precise average number of publications per faculty in the EEE department for the last three years directly. I can give you access to the publication records of the EEE department from 2016 to 2023 and allow you to review the information.\n\n\u2022 2022-2023: [https://www.msajce-edu.in/images/departments/eee/Publications2022-2023.pdf](https://www.msajce-edu.in/images/departments/eee/Publications2022-2023.pdf)\n\u2022 2021-2022: [https://www.msajce-edu.in/images/departments/eee/Publications2021-2022.pdf](https://www.msajce-edu.in/images/departments/eee/Publications2021-2022.pdf)\n\u2022 2019-2020: [https://www.msajce-edu.in/images/departments/eee/Publications2019-2020.pdf](https://www.msajce-edu.in/images/departments/eee/Publications2019-2020.pdf)\n\u2022 2016-2018: [https://www.msajce-edu.in/images/departments/eee/Publications2016-2018.pdf](https://www.msajce-edu.in/images/departments/eee/Publications2016-2018.pdf)\n\nAlternatively, would you like a list of books and book chapters authored by faculty members from all departments?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What specific workshops or seminars related to patent applications have been organized by the Research and Development Cell since 2022, and what were the dates of these events?",
+    "answer": "The Research and Development Cell focuses on encouraging both students and faculty to apply for copyrights and patents, and it achieves this by organizing workshops, seminars, and training sessions. However, I do not have the dates of specific workshops or seminars related to patent applications organized since 2022.\n\nWould you like information on the objectives of the Research and Development Cell?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that it does not have the dates of specific workshops or seminars related to patent applications organized since 2022, which aligns with the information provided in the source text. While the source text mentions workshops and seminars related to the promotion of research and IPR, it doesn't list specific events or dates."
+    }
   }
 ]

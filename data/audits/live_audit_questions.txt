@@ -785,3 +785,28 @@
 [UNKNOWN] For students entering the program via lateral entry, what are the specific course codes and titles of the two foundational computer science courses they must complete within their 3-year program?
 [PASS] What is the estimated reduction in energy consumption achieved by the MSAJCE campus in the last year, based on the Energy and Eco Club's initiatives?
 [PASS] How many students from the ECE department received the scholarship in the 2022-2026 batch?
+[UNKNOWN] How many outdoor badminton courts are available for use by the Sports Club?
+[UNKNOWN] In the 2021 Regulation, what specific clause details the policy for students who fail to secure a pass in Physics, Chemistry, and Mathematics in the qualifying examination, despite meeting all other eligibility criteria?
+[UNKNOWN] What is the specific course code and title associated with the Advanced Digital Signal Processing course mentioned under Advanced Communication Technologies?
+[PASS] Which faculty member with a Ph.D. designation joined the S&H department most recently, and on what date did they join?
+[PASS] What is the annual membership fee for the Science Club?
+[PASS] Which student received the scholarship in the VLSI department, and what was their scholarship amount?
+[FAIL] How many patents filed by MSAJCE faculty between 2020 and 2023 involve IoT technologies?
+[PASS] How many hours of dedicated instruction are provided on the subject of 'Cyber Laws and Ethics, Compliance, and Governance' as outlined in the 2021 Regulation?
+[UNKNOWN] What is the submission deadline for images to be considered for publication by the Photography Club for the college website or newsletter?
+[UNKNOWN] According to the 2021 Regulation curriculum, what specific course covers Massive MIMO technology?
+[UNKNOWN] What are the course outcomes of CS8661 - Internet Programming course?
+[PASS] Based on the 2021 Regulation curriculum, what specific software or platform is utilized for the 'penetration testing' labs and simulation environments?
+[FAIL] According to the faculty lists, which faculty member left the S&H department between the 2022-2023 and 2023-2024 academic years?
+[UNKNOWN] What is the process for submitting a grievance to the Grievance Cell?
+[UNKNOWN] According to publication records, what is the average number of publications per faculty member for the Department of Electrical and Electronics Engineering in the past three years?
+[UNKNOWN] What is the breakdown of the total Rs. 37,94,972 scholarship amount across all departments from 2019-2026?
+[PASS] What is the exact percentage of marks required in Physics, Chemistry, and Mathematics individually in the 10+2 system to be eligible for admission?
+[PASS] Is the 'BS8161 - Physics & Chemistry' course offered as a theory course only or does it also have a lab component?
+[PASS] Does the MSAJCE Sports Club have a published policy regarding eligibility criteria for receiving trophies and medals at sports events?
+[PASS] What is the average salary range for a graduate of the B.E. CSE-Cyber Security specialization in the first year after graduation, according to the most recent placement data available to the Department (year)?
+[PASS] What specific workshops or seminars related to patent applications have been organized by the Research and Development Cell since 2022, and what were the dates of these events?
+[UNKNOWN] What specific coding languages are prioritized in the Coding Club workshops?
+[UNKNOWN] How many unique students named Pragatha received the scholarship, and for which years and departments?
+[FAIL] What was the total semiconductor market value in 2021, according to the provided data?
+[PASS] What percentage of graduates from the B.E. CSE-Cyber Security program in the last academic year (year) secured internships with companies listed under 'Top Recruiters'?

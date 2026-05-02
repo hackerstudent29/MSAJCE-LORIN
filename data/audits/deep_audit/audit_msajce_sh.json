@@ -14,5 +14,53 @@
       "status": "PASS",
       "reason": "The bot response is factually accurate and the information is available in the source text."
     }
+  },
+  {
+    "question": "On what date did Dr. Alocious Gonsago C join the Department of Science and Humanities?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Which faculty member held the designation of 'Professor' in the Department of Science and Humanities during the 2023-2024 academic year?",
+    "answer": "During the 2023-2024 academic year, Dr. Suvitha A held the designation of Professor in the Department of Science and Humanities.\n\nWould you like information on any other faculty members from that department and year?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate based on the provided source text. The source text lists Dr. Suvitha A as holding the designation of 'Professor' in the Department of Science and Humanities during the 2023-2024 academic year."
+    }
+  },
+  {
+    "question": "What is the filename for the 2021 regulation syllabus for the Department of Science and Humanities?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What is the URL for the lesson plan for the subject HS3151?",
+    "answer": "For HS3151 (Professional English - I), the lesson plan URL is: https://www.msajce-edu.in/academics/sh/LessonPlan/HS3151-LP.pdf.\n\nDo you need the question bank or lecture notes URL as well?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate based on the information provided in the source text. The constructed URL https://www.msajce-edu.in/academics/sh/LessonPlan/HS3151-LP.pdf matches the pattern provided for Lesson Plans."
+    }
+  },
+  {
+    "question": "What are the start and end dates of the National Level FDP held in January-February 2024?",
+    "answer": "The National Level FDP was held from January 29 to February 6, 2024. Now, what else can I help you with today?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot's response accurately reflects the start and end dates of the National Level FDP held in January-February 2024, as stated in the source text."
+    }
+  },
+  {
+    "question": "What is the file name and link for the Placement details from 2015-2016?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
   }
 ]

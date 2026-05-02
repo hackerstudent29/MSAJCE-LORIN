@@ -244,29 +244,30 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 parse_mode="Markdown"
             )
         except:
-            # Fallback if Markdown fails due to partial tags
             await context.bot.edit_message_text(
                 chat_id=update.effective_chat.id, 
                 message_id=thinking_msg.message_id, 
                 text=full_response
             )
         
-        # 2. SAVE TO SEMANTIC CACHE
-        pool = await get_db_pool()
-        await pool.execute(
-            "INSERT INTO semantic_cache (query_hash, user_query, bot_response) VALUES ($1, $2, $3) ON CONFLICT (query_hash) DO NOTHING",
-            query_hash, user_query, full_response
-        )
-
-        history.append({"q": user_query, "a": full_response})
-        await _engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
-
-        # ARCHIVE TO SUPABASE (Ultimate Forensic Protocol)
-        asyncio.create_task(log_to_supabase(user_id, user_name, user_query, full_response, telemetry))
+        # 2. SILENT BACKGROUND PERSISTENCE (Doesn't crash the UI)
+        try:
+            pool = await get_db_pool()
+            await pool.execute(
+                "INSERT INTO semantic_cache (query_hash, user_query, bot_response) VALUES ($1, $2, $3) ON CONFLICT (query_hash) DO NOTHING",
+                query_hash, user_query, full_response
+            )
+            history.append({"q": user_query, "a": full_response})
+            await _engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
+            asyncio.create_task(log_to_supabase(user_id, user_name, user_query, full_response, telemetry))
+        except Exception as log_err:
+            logger.error(f"Background Logging Error: {log_err}")
 
     except Exception as e:
-        logger.error(f"Error: {e}")
-        await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.", parse_mode="Markdown")
+        logger.error(f"Critical UI Error: {e}")
+        # Only show busy if the generation itself failed
+        if not full_response:
+            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.", parse_mode="Markdown")
 
 async def create_app():
     global _engine

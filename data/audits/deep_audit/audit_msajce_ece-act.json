@@ -78,5 +78,45 @@
       "status": "PASS",
       "reason": "The bot response correctly identifies Cisco as a partner with a dedicated center and lists several other industry partners mentioned in the document. It also accurately states that Havells and 3M India are listed as potential employers, aligning with the provided text."
     }
+  },
+  {
+    "question": "How many students from the B.Tech ECE-ACT program have secured internships in the last 3 years?",
+    "answer": "I cannot furnish the specific number of B.Tech ECE-ACT students who secured internships in the last three years. I suggest checking the placement page on the college website or contacting the placement office directly for this information.\n\nWould you like me to provide you with the contact details for the placement office?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it cannot provide the specific number of internships and suggests checking the placement page or contacting the placement office. This aligns with the information available in the source text, which does not include the specific number but mentions a placement page and contact information. "
+    }
+  },
+  {
+    "question": "What are the specific criteria for Lateral Entry admission to the B.Tech ECE-ACT program?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "Are there any scholarships available for students admitted to the B.Tech ECE-ACT program, and what are the eligibility criteria?",
+    "answer": "Yes, a few scholarships are available for B.Tech ECE-ACT students.\n\n\u2022 Merit Waivers: Students with a cut-off above 180 are eligible for merit-based waivers.\n\u2022 Female Student Discount: All female students receive a 10% tuition fee discount.\n\u2022 AICTE Pragati Scholarship Scheme for Girl Students: This provides Rs. 50,000 per year for a maximum of two girl children per family with an annual income less than Rs. 8 Lakh. There are 800 scholarships available in Tamil Nadu.\n\u2022 AICTE Saksham Scholarship Scheme for Specially Abled Students: Differently abled students with a disability of 40% or more and a family income less than Rs. 8 Lakh are eligible for Rs. 50,000 per year. This scholarship is available to all eligible candidates.\n\u2022 Merit cum Means Based Scholarship (Minority Community only): Students from minority communities with 50% marks in their final examination and a family income less than 2.5 Lakh per annum can receive Rs. 20,000 per year, with additional amounts for hostellers and day scholars.\n\nDo you want information on how to apply for these scholarships?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The bot response provides scholarship information that is not present in the source text. "
+    }
+  },
+  {
+    "question": "What is the process for students to access the virtual labs mentioned in the laboratory facilities section?",
+    "answer": "To access the virtual labs at MSAJCE, here's what you need to know:\n\n\u2022 Virtual lab links are available for various courses such as C Programming, Internet Programming, Operating Systems, Object Oriented Analysis and Design, Web Technology, and Networks Lab.\n\u2022 You can find the specific virtual lab links for each course in the lab facilities details. For example, the virtual lab link for C Programming is [https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-C-Programming.pdf](https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-C-Programming.pdf).\n\u2022 Soft copy lab records are available for download for all labs.\n\u2022 Equipment details can be found on the department's lab documentation pages.\n\u2022 Course syllabi are available through the student portal.\n\nDo you need the link to the student portal?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately summarizes information from the source text regarding virtual labs, available courses, and access to lab records and syllabi."
+    }
+  },
+  {
+    "question": "What are the specific learning outcomes for each of the Programme Outcomes (POs) listed for the B.Tech ECE-ACT program?",
+    "answer": "The B.Tech ECE-ACT program aims for graduates to achieve these specific learning outcomes related to their Programme Outcomes (POs):\n\n\u2022 PO1 (Engineering Knowledge): Apply math, science, and engineering fundamentals to solve complex problems.\n\u2022 PO2 (Problem Analysis): Identify, formulate, review literature, and analyze complex problems using first principles.\n\u2022 PO3 (Design/Development of Solutions): Design solutions for complex problems, considering public health, safety, cultural, societal, and environmental factors.\n\u2022 PO4 (Conduct Investigations of Complex Problems): Use research-based knowledge, design experiments, and analyze data to provide valid conclusions.\n\u2022 PO5 (Modern Tool Usage): Create, select, and apply appropriate techniques, resources, and IT tools for complex engineering activities.\n\u2022 PO6 (The Engineer and Society): Apply reasoning to assess societal, health, safety, legal, and cultural issues in engineering practice.\n\u2022 PO7 (Environment and Sustainability): Understand the impact of engineering solutions and the importance of sustainable development.\n\u2022 PO8 (Ethics): Apply ethical principles and commit to professional responsibilities.\n\u2022 PO9 (Individual and Team Work): Function effectively as an individual, team member, or leader in diverse settings.\n\u2022 PO10 (Communication): Communicate effectively through reports, documentation, and presentations.\n\u2022 PO11 (Project Management and Finance): Demonstrate knowledge of engineering and management principles in projects.\n\u2022 PO12 (Life-long Learning): Recognize the need for and engage in continuous learning in a changing technological landscape.\n\nDoes understanding these outcomes help you align with the program's goals?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately lists and describes the Programme Outcomes (POs) as defined in the source text. "
+    }
   }
 ]

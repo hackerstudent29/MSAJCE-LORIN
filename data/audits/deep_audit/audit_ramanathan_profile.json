@@ -70,5 +70,45 @@
       "status": "PASS",
       "reason": "The bot's response is factually accurate based on the source text. It correctly identifies Zenpay and that it uses RBAC. It acknowledges that the specific details of the RBAC implementation are not provided and suggests contacting Ramanathan S directly, which is a reasonable suggestion given the context."
     }
+  },
+  {
+    "question": "What version of Next.js 14 is currently deployed in the Zenify project, and what are the plans for future upgrades?",
+    "answer": "Zenify is currently running on Next.js 14. For detailed specifics on deployment and future upgrade roadmaps, it's best to contact Ramanathan S (Ram), the project architect, directly. He's a 2nd Year B.Tech IT student from the 2024-2028 batch.\n\nWould you like to know more about Ram's other projects?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response correctly states that Zenify is running on Next.js 14, as per the source text. It also accurately identifies Ramanathan S (Ram) as the project architect and his student status. "
+    }
+  },
+  {
+    "question": "What specific legal jurisdictions and data privacy regulations are Pocket Lawyer designed to comply with, especially regarding Tamil language data?",
+    "answer": "Pocket Lawyer is designed with multilingual support, including high-fidelity Tamil AI responses. However, specific legal jurisdictions and data privacy regulations compliance details are not explicitly detailed in the provided documents.\n\nWould you like information about Ramanathan S, the lead architect, so you can contact him about Pocket Lawyer compliance?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that specific legal jurisdictions and data privacy regulations compliance details are not explicitly detailed in the provided document. The rest of the response is helpful, even though it is not the answer to the question."
+    }
+  },
+  {
+    "question": "What is the estimated cost savings to MSAJCE resulting from the implementation of Lorin RAG, compared to alternative solutions or previous research methods?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "What are the Service Level Agreements (SLAs) for uptime and performance associated with the Zenify music streaming platform?",
+    "answer": "Zenify is built for high performance, incorporating technologies like Next.js 14, Fastify, Prisma, and Supabase. I don't have formal Service Level Agreements (SLAs) defined for uptime and performance metrics.\n\nWhat else can I help you with regarding the Zenify platform?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately states that it does not have formal Service Level Agreements (SLAs) defined for uptime and performance metrics, which is consistent with the source text not providing such information. The bot also correctly identifies Zenify as a high-performance music streaming ecosystem."
+    }
+  },
+  {
+    "question": "How many distinct forms have been built and deployed through Formora to date, and what is the average completion rate for these forms?",
+    "answer": "Ramanathan S (Ram), Batch Unknown, architected Formora. I do not have access to real-time usage statistics for Formora, including the number of forms built and deployed or the average completion rate.\n\nWant to know about another project Ram worked on?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies Ram as the architect of Formora, information present in the source text. It also accurately states that it lacks access to real-time usage statistics, which is expected as the provided document wouldn't contain this specific data."
+    }
   }
 ]

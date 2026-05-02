@@ -174,5 +174,29 @@
       "status": "PASS",
       "reason": "The bot correctly identifies the four students from the ECE department (2022-2026 batch) who received the Alumni Scholarship according to the provided source text."
     }
+  },
+  {
+    "question": "Which student received the scholarship in the VLSI department, and what was their scholarship amount?",
+    "answer": "Okay! Afreen Fathim S from the 2024-2028 batch received the Alumni Scholarship in the VLSI department. Note that the scholarship amount varies.\n\nWould you like to explore other scholarship options available at MSAJCE?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identifies Afreen Fathim S as the recipient of the Alumni Scholarship in the VLSI department from the provided source text. The source text does not specify the exact scholarship amount, which aligns with the bot's statement that the amount varies."
+    }
+  },
+  {
+    "question": "What is the breakdown of the total Rs. 37,94,972 scholarship amount across all departments from 2019-2026?",
+    "answer": "From 2019 to 2026, the MSAJCE Alumni Association has sponsored scholarships worth Rs. 37,94,972 for 97 students. These scholarships cover the following departments:\n\n\u2022 CSE\n\u2022 IT\n\u2022 ECE\n\u2022 EEE\n\u2022 MECH\n\u2022 CIVIL\n\u2022 AIDS\n\u2022 AIML\n\u2022 CSBS\n\u2022 Cyber Security\n\u2022 VLSI\n\u2022 ACT\n\nWould you like a list of the students who have received scholarships?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many unique students named Pragatha received the scholarship, and for which years and departments?",
+    "answer": "Pragatha from the 2023-2027 batch has received the alumni scholarship multiple times in CSE. Pragatha M, also from the 2023-2027 batch, has additionally received the scholarship in CSE.\n\nAre you interested in the contact details for the CSE department?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

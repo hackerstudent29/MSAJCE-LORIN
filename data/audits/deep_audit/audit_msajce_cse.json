@@ -110,5 +110,13 @@
       "status": "PASS",
       "reason": "The bot response accurately lists the sectors where a CSE graduate can find job opportunities, as mentioned in the provided source text."
     }
+  },
+  {
+    "question": "What are the course outcomes of CS8661 - Internet Programming course?",
+    "answer": "The course outcomes for the Internet Programming course (CS8661) can be found in the lab objectives document here: https://www.msajce-edu.in/images/departments/csbs/Obj-INTERNET.pdf.\n\nCan I help you with anything else related to the Internet Programming course?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

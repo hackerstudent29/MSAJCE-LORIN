@@ -22,5 +22,45 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "In the 2021 Regulation, what specific clause details the policy for students who fail to secure a pass in Physics, Chemistry, and Mathematics in the qualifying examination, despite meeting all other eligibility criteria?",
+    "answer": "I am sorry, but I do not have an answer to your question. Do you have any other questions about MSAJCE?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "How many hours of dedicated instruction are provided on the subject of 'Cyber Laws and Ethics, Compliance, and Governance' as outlined in the 2021 Regulation?",
+    "answer": "Based on the provided material, I do not have the specific number of hours dedicated to 'Cyber Laws and Ethics, Compliance, and Governance' within the 2021 Regulation curriculum.\n\nPerhaps you could consult the 2021 Regulation document directly for that level of detail?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it cannot find the specific number of hours dedicated to the topic in the provided material."
+    }
+  },
+  {
+    "question": "Based on the 2021 Regulation curriculum, what specific software or platform is utilized for the 'penetration testing' labs and simulation environments?",
+    "answer": "According to the 2021 Regulation curriculum, these tools are utilized for penetration testing:\n\n\u2022 nmap, zenmap, Port Scanners, Network Scanners\n\u2022 Snort (for IDS)\n\u2022 N-Stalker (Automated Attack and Penetration Tools)\n\nCan I tell you more about the Cyber Security course offerings?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The tools listed in the bot response are commonly used for penetration testing and are mentioned in the context of skills for Penetration Testers in the source document."
+    }
+  },
+  {
+    "question": "What is the average salary range for a graduate of the B.E. CSE-Cyber Security specialization in the first year after graduation, according to the most recent placement data available to the Department (year)?",
+    "answer": "Unfortunately, I do not have the specific first-year average salary for B.E. CSE-Cyber Security graduates. However, note that the highest salary for the 2024 batch was Rs. 12 Lakhs Per Annum (LPA).\n\nWould you like information on key recruiters for this specialization?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the specific salary information requested, which is not present in the source text. The bot then provides a relevant piece of information (highest salary for the 2024 batch) as a helpful alternative."
+    }
+  },
+  {
+    "question": "What percentage of graduates from the B.E. CSE-Cyber Security program in the last academic year (year) secured internships with companies listed under 'Top Recruiters'?",
+    "answer": "I cannot calculate the internship percentage of B.E. CSE-Cyber Security graduates because I do not have the total number of graduates or specific internship placement numbers from the last academic year (2025-2026). I can tell you that the top recruiters for Cyber Security include Government & Defense Agencies, IT and Cyber Security Firms, Banks and Financial Institutions, Healthcare and Insurance Companies, and E-commerce and Cloud Service Providers [Source 1].\n\nDo you want to know about the internship opportunities available to students at MSAJCE?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly states that it does not have the specific data to calculate the internship percentage and accurately lists the top recruiters for Cyber Security as mentioned in the source text."
+    }
   }
 ]

@@ -14,5 +14,37 @@
       "status": "PASS",
       "reason": "The bot's response is factually accurate and the information is available in the source text under the 'EEE Department Laboratories' section, specifically for 'Power System Simulation Lab'."
     }
+  },
+  {
+    "question": "What is the total intake of the B.E. Electrical and Electronics Engineering program under the management quota?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "According to the Employment Forecast, what is the projected CAGR for India's Electric Vehicles market?",
+    "answer": "The projected CAGR for India's Electric Vehicles market is 40%.\n\nAre you interested in learning more about the job roles related to the EV market?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The information is present in the source text and is accurate."
+    }
+  },
+  {
+    "question": "Which faculty member joined the EEE department most recently as of August 28, 2024?",
+    "answer": "Vinodh S V, Assistant Professor, joined the EEE department most recently on August 1, 2023.\n\nWould you like to know about any other EEE faculty members?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot correctly identifies Vinodh S V as the most recent faculty member to join the EEE department as of August 1, 2023, according to the source text. The query asks about the most recent member as of August 28, 2024. Since the listed faculty is for the period of 2023-2024, the bot's answer is accurate."
+    }
+  },
+  {
+    "question": "What is the projected job growth rate for B.Tech/B.E. graduates in the EEE sector between 2025-2030?",
+    "answer": "For B.Tech/B.E. graduates in the EEE (Electrical and Electronics Engineering) sector, a job growth rate of 7-9% is projected between 2025 and 2030. It would be beneficial to focus on IoT, Power electronics, MATLAB, Embedded Systems, and AI and IoT to improve your job prospects.\n\nAre you interested in learning about specific skills that are in high demand in the EEE sector?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states the projected job growth rate for B.Tech/B.E. graduates in the EEE sector between 2025-2030 as 7-9% and mentions relevant skills to focus on, which is present in the source text under the 'Forecast by Education Level' section."
+    }
   }
 ]
