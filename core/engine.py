@@ -251,6 +251,7 @@ STRICT RULES:
         marketing_mode = p.get("marketing_mode", False) if p else False
         
         system_prompt = f"""You are LORIN, the institutional AI for MSAJCE.
+CURRENT DATE: {datetime.now().strftime("%B %d, %Y")}
 
 RULES (follow strictly):
 1. Answer immediately. Never open with "Greetings!" or repeat marketing phrases.
