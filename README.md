@@ -1,60 +1,36 @@
----
-title: Lorin - MSAJCE Institutional AI Assistant
-emoji: 🤖
-colorFrom: indigo
-colorTo: blue
-sdk: docker
-pinned: false
----
+# 🏛️ Lorin AI: Institutional RAG Intelligence System
 
-# 🤖 Lorin: MSAJCE Institutional AI Assistant
+Lorin is a high-performance, narrative-driven AI Intelligence Officer designed for **MSAJCE**. It utilizes a sophisticated Retrieval-Augmented Generation (RAG) pipeline to deliver precise institutional information with human-centric storytelling.
 
-**Lorin** is a high-performance Retrieval-Augmented Generation (RAG) assistant designed specifically for the **Mohamed Sathak A.J. College of Engineering (MSAJCE)**. It serves as a conversational "institutional brain," providing instant, accurate, and grounded information to students and faculty.
+## 🛡️ Strategic Architecture
 
----
+The system is built on a **Triple-Pillar Master Architecture** to ensure stability, accuracy, and executive oversight:
 
-## 🎯 Purpose
-Institutional information (Admission procedures, faculty details, placement records, scholarship eligibility) is often buried in complex PDFs and website pages. **Lorin** solves this by:
-*   Providing instant 24/7 answers via Telegram.
-*   Ensuring 100% factual accuracy using institutional grounding.
-*   Simplifying complex administrative data into friendly, readable lists.
+1.  **Core Intelligence**: A hybrid retrieval engine combining Pinecone vector search and BM25 keyword indexing.
+2.  **Narrative Flow**: A hardened "Friendly Explainer" persona that banishes robotic templates in favor of accessible storytelling.
+3.  **Forensic Telemetry**: A 12-field real-time logging suite in Supabase for auditability and ROI tracking.
 
-## 👥 Built For
-*   **Students:** Quick lookup for scholarships, event details, and transport routes.
-*   **Faculty:** Fast access to institutional protocols and committee information.
-*   **Aspirants:** Instant answers regarding admission criteria and department highlights.
+## 📁 Repository Structure
 
----
+- `api/`: Production serverless endpoints (Vercel/Flask).
+- `core/`: The RAG engine, system prompts, and persona logic.
+- `scripts/`: Automated workflows (Sunday Intelligence, Cron-jobs).
+- `data/`: The Institutional Knowledge Base (Grounding documents).
+- `diagnostics/`: Forensic tools and maintenance utilities.
+- `docs/`: Technical specifications and walkthroughs.
 
-## 🛠️ Technology Stack
-The architecture is built for speed, precision, and low latency:
+## 📊 Sunday Strategic Intelligence
 
-*   **Logic:** Python 3.11 + `python-telegram-bot` (Polling Engine)
-*   **Intelligence:** GPT-4o-mini (LLM) & Cohere V3 (Reranking)
-*   **Knowledge Base:** Pinecone (Vector Store) & BM25s (Lexical Search)
-*   **Memory:** Upstash Redis (Contextual Conversation History)
-*   **Observability:** Langfuse & LangSmith (Telemetry & Evaluation)
-*   **Deployment:** Hugging Face Spaces (Docker-based 24/7 Service)
+Every Sunday at **09:00 AM IST**, the system automatically generates a **Triple-Pillar Forensic Audit**:
+- **Pillar 1**: Full Forensic Interaction Audit (Raw Telemetry).
+- **Pillar 2**: Strategic Knowledge Gap Detection (Retrieval Analysis).
+- **Pillar 3**: Institutional ROI & Scale Analysis (Management Overview).
+
+## 🚀 Deployment & Operations
+
+- **Platform**: Vercel (Production) / Supabase (Telemetry).
+- **Engine**: Gemini 2.0 Flash (Contextual Reasoning).
+- **Protocol**: 100% greeting-free, high-precision institutional grounding.
 
 ---
-
-## ✨ Key Features
-*   **Grounding (No Hallucinations):** Lorin only answers using the provided institutional documents.
-*   **Multi-Turn Intelligence:** Remembers previous questions (e.g., "Tell me more about him").
-*   **Interactive Design:** Mandates interactive closing questions to keep users engaged.
-*   **Optimized Retrieval:** Uses a Hybrid Search strategy (Vector + Keyword) for 99% accuracy on names and codes.
-
----
-
-## 🏗️ Architecture
-For a detailed look at the internal RAG pipeline, please refer to:
-*   [Documentation Overview](docs/PIPELINE.md)
-*   [Architecture Diagram](docs/PIPELINE.mermaid)
-
----
-
-## ⚠️ Disclaimer
-This assistant is an AI-powered tool using publicly available institutional data. It is intended for informational purposes and should be verified with official college documentation for high-stakes administrative decisions.
-
----
-*Developed with ❤️ for the MSAJCE Community.*
+*Developed for MSAJCE Institutional Oversight.* 🏛️🧪🛡️🚀
