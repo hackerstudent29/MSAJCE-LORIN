@@ -9,7 +9,7 @@
   "crons": [
     {
       "path": "/api/sunday-report",
-      "schedule": "20 4 * * *" 
+      "schedule": "20 4 * * 0" 
     }
   ]
 }

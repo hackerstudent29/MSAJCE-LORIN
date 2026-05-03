@@ -251,13 +251,20 @@ async def webhook():
 @app.route('/api/sunday-report')
 async def trigger_sunday_report():
     auth_header = request.headers.get("Authorization")
+    vercel_cron = request.headers.get("x-vercel-cron")
     cron_secret = os.getenv("CRON_SECRET")
-    if not auth_header or auth_header != f"Bearer {cron_secret}": return {"error": "Unauthorized"}, 401
+    
+    # Allow if either the Bearer token matches OR it's a verified Vercel Cron internal request
+    if not ((auth_header == f"Bearer {cron_secret}") or (vercel_cron == "1")):
+        return {"error": "Unauthorized"}, 401
+        
     try:
         from scripts.sunday_intelligence import SundayIntelligence
         audit = SundayIntelligence()
         asyncio.create_task(audit.run())
-        return {"status": "SUCCESS"}, 200
-    except Exception as e: return {"status": "ERROR", "message": str(e)}, 500
+        return {"status": "SUCCESS", "message": "Sunday Intelligence Audit Dispatched"}, 200
+    except Exception as e:
+        logger.error(f"Cron Error: {e}")
+        return {"status": "ERROR", "message": str(e)}, 500
 
 app_handler = app
