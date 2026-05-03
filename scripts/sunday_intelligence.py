@@ -86,15 +86,12 @@ class SundayIntelligence:
         db_url = os.getenv("DATABASE_URL")
         if not db_url: return []
         import asyncpg
-        conn = await asyncpg.connect(db_url)
+        # Supabase/PgBouncer requires statement_cache_size=0
+        conn = await asyncpg.connect(db_url, statement_cache_size=0)
         rows = await conn.fetch("""
-            SELECT created_at, user_id, session_id, user_query, intent, 
-                   metadata->>'source' as source, metadata->>'status' as status,
-                   latency_ms, (metadata->>'tokens')::int as tokens,
-                   (metadata->>'score')::float as score
-            FROM interactions 
-            WHERE created_at > NOW() - INTERVAL '7 days'
-            ORDER BY created_at DESC
+            SELECT * FROM interactions 
+            ORDER BY timestamp DESC
+            LIMIT 100
         """)
         await conn.close()
         return rows

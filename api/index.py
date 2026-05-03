@@ -53,17 +53,18 @@ async def log_to_supabase(user_id, user_name, query, response, tel):
         pool = await get_db_pool()
         if not pool: return
         intent = tel.get("intent", "FACT")
-        sources = tel.get("sources", [])
+        sources = json.dumps(tel.get("sources", []))
         latency = tel.get("latency_ms", 0)
         tokens = tel.get("tokens", 0)
         cost = (tokens / 1000) * 0.0001
         
         async with pool.acquire() as conn:
+            # We explicitly set timestamp to ensure the DB records it
             await conn.execute(
                 """INSERT INTO interactions 
-                   (user_id, user_name, query, intent, response, sources, latency_ms, tokens_used, cost_usd) 
-                   VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)""",
-                user_id, user_name, query, intent, response, sources, latency, tokens, cost
+                   (timestamp, user_id, user_name, query, intent, response, sources, latency_ms, tokens_used, cost_usd) 
+                   VALUES (NOW(), $1, $2, $3, $4, $5, $6, $7, $8, $9)""",
+                str(user_id), user_name, query, intent, response, sources, latency, tokens, cost
             )
     except Exception as e:
         logger.error(f"DB Logging Error: {e}")
