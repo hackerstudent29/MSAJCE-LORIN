@@ -67,8 +67,11 @@ def get_clean_env(key, default=""):
     if val: return val.strip().replace("\n", "").replace("\r", "")
     return default
 
-TOKEN = get_clean_env("TELEGRAM_BOT_TOKEN")
-ADMIN_IDS = [int(i.strip()) for i in get_clean_env("ADMIN_IDS", "7770158141").split(",") if i.strip()]
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+ADMIN_IDS = [int(i.strip()) for i in os.getenv("ADMIN_IDS", "7770158141").split(",") if i.strip()]
+
+# GLOBAL PRODUCTION ENGINE
+_engine = RAGEngine()
 
 # --- Security Config ---
 ABUSIVE_WORDS = ["badword1", "badword2"]
@@ -277,8 +280,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.", parse_mode="Markdown")
 
 async def create_app():
-    global _engine
-    if _engine is None: _engine = RAGEngine()
     request_obj = HTTPXRequest(connect_timeout=30.0, read_timeout=30.0)
     application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
     application.add_handler(CommandHandler("start", start))
