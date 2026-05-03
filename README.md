@@ -1,36 +1,54 @@
-# 🏛️ Lorin AI: Institutional RAG Intelligence System
+# 🏛️ Lorin AI: Advanced Institutional RAG Intelligence
 
-Lorin is a high-performance, narrative-driven AI Intelligence Officer designed for **MSAJCE**. It utilizes a sophisticated Retrieval-Augmented Generation (RAG) pipeline to deliver precise institutional information with human-centric storytelling.
-
-## 🛡️ Strategic Architecture
-
-The system is built on a **Triple-Pillar Master Architecture** to ensure stability, accuracy, and executive oversight:
-
-1.  **Core Intelligence**: A hybrid retrieval engine combining Pinecone vector search and BM25 keyword indexing.
-2.  **Narrative Flow**: A hardened "Friendly Explainer" persona that banishes robotic templates in favor of accessible storytelling.
-3.  **Forensic Telemetry**: A 12-field real-time logging suite in Supabase for auditability and ROI tracking.
-
-## 📁 Repository Structure
-
-- `api/`: Production serverless endpoints (Vercel/Flask).
-- `core/`: The RAG engine, system prompts, and persona logic.
-- `scripts/`: Automated workflows (Sunday Intelligence, Cron-jobs).
-- `data/`: The Institutional Knowledge Base (Grounding documents).
-- `diagnostics/`: Forensic tools and maintenance utilities.
-- `docs/`: Technical specifications and walkthroughs.
-
-## 📊 Sunday Strategic Intelligence
-
-Every Sunday at **09:00 AM IST**, the system automatically generates a **Triple-Pillar Forensic Audit**:
-- **Pillar 1**: Full Forensic Interaction Audit (Raw Telemetry).
-- **Pillar 2**: Strategic Knowledge Gap Detection (Retrieval Analysis).
-- **Pillar 3**: Institutional ROI & Scale Analysis (Management Overview).
-
-## 🚀 Deployment & Operations
-
-- **Platform**: Vercel (Production) / Supabase (Telemetry).
-- **Engine**: Gemini 2.0 Flash (Contextual Reasoning).
-- **Protocol**: 100% greeting-free, high-precision institutional grounding.
+**Lorin AI** is a state-of-the-art, narrative-driven Artificial Intelligence system developed for **MSAJCE**. It transforms complex institutional documentation into clear, helpful, and high-precision conversational intelligence.
 
 ---
-*Developed for MSAJCE Institutional Oversight.* 🏛️🧪🛡️🚀
+
+## 🌟 The Vision
+
+In a world of fragmented information, Lorin serves as the **Single Source of Truth**. By combining advanced Retrieval-Augmented Generation (RAG) with a refined human-centric persona, Lorin provides instant, verified, and accessible answers to students, faculty, and administrators.
+
+## 🚀 Core Technological Pillars
+
+### 1. Hybrid Intelligence Engine
+Lorin utilizes a **Dual-Retrieval Pipeline** to ensure 100% accuracy:
+- **Pinecone Vector Search**: For deep conceptual understanding and semantic matching.
+- **BM25 Keyword Indexing**: For precise retrieval of specific institutional codes, names, and department seats.
+- **Gemini 2.0 Flash**: The core reasoning engine that synthesizes retrieved data into narrative explanations.
+
+### 2. The "Friendly Explainer" Persona
+Lorin is architected to be more than a bot; it is an **Advisor**. 
+- **Storytelling Logic**: Banishes robotic templates and dry bullet points in favor of fluid, logical paragraphs.
+- **Accessible English**: Calibrated for high readability across all levels of institutional interaction.
+- **Greeting-Free Efficiency**: Focuses immediately on providing value without repetitive formalities.
+
+### 3. Forensic Governance & ROI
+Every interaction is tracked with **12-Field Telemetry** in Supabase:
+- Real-time monitoring of Latency, Token Expenditure, and Retrieval Precision.
+- Automated **Sunday Strategic Reports** delivered every Sunday at **09:00 AM IST**.
+
+## 📁 Professional Repository Layout
+
+- **`api/`**: Enterprise-grade serverless endpoints deployed on Vercel.
+- **`core/`**: The proprietary RAG engine, persona logic, and system architecture.
+- **`data/`**: The Institutional Knowledge Base (Structured grounding data).
+- **`scripts/`**: Automation suites for intelligence auditing and dispatch.
+- **`diagnostics/`**: Professional forensic tools for performance audit and maintenance.
+
+## 📊 Automated Intelligence Dispatch
+
+Lorin automatically compiles and dispatches a **Triple-Pillar Audit** every Sunday:
+- **🛡️ Pillar 1: Full Forensic Audit** (Raw Interaction Telemetry).
+- **🛠️ Pillar 2: Strategic Gap Analysis** (Identifying retrieval misses).
+- **🏛️ Pillar 3: Institutional ROI** (Efficiency and scale metrics).
+
+## 🛠️ Technology Stack
+
+- **Reasoning**: Google Gemini 2.0 Flash
+- **Vector DB**: Pinecone (Serverless)
+- **Database**: Supabase (PostgreSQL with PGVector)
+- **Infrastructure**: Vercel (Edge Functions)
+- **Orchestration**: Python 3.11 / Flask / Asyncio
+
+---
+*Architected and Hardened for Institutional Excellence.* 🏛️🧪🛡️🚀
