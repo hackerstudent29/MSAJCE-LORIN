@@ -38,7 +38,8 @@ async def get_db_pool():
         if not db_url or "127.0.0.1" in db_url or "localhost" in db_url:
             return None
         import asyncpg
-        _db_pool = await asyncpg.create_pool(db_url)
+        # Supabase/PgBouncer requires statement_cache_size=0
+        _db_pool = await asyncpg.create_pool(db_url, statement_cache_size=0)
     return _db_pool
 
 async def get_engine():
