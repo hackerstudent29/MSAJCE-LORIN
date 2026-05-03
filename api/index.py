@@ -300,6 +300,12 @@ async def webhook():
         return "OK", 200
     except Exception as e:
         logger.error(f"Webhook Error: {e}")
+        # DIAGNOSTIC: Notify Admin of Crash
+        try:
+            application = await create_app()
+            await application.bot.send_message(chat_id=ADMIN_IDS[0], text=f"⚠️ *Lorin Webhook Crash*\nError: `{str(e)}`", parse_mode="Markdown")
+            await application.shutdown()
+        except: pass
         return str(e), 500
 
 @app.route('/set-webhook')
