@@ -193,6 +193,14 @@ class SundayIntelligence:
         async with httpx.AsyncClient() as client:
             resp = await client.post(url, headers=headers, json=payload, timeout=30.0)
             print(f"Full Field PDF Report Dispatched: {resp.status_code}")
+            
+            # DIAGNOSTIC: Notify Telegram Admin of Dispatch Status
+            if resp.status_code != 201:
+                token = os.getenv("TELEGRAM_BOT_TOKEN")
+                admin_id = os.getenv("ADMIN_IDS", "7770158141").split(",")[0].strip()
+                error_msg = f"⚠️ *Intelligence Audit Failed*\nBrevo Status: `{resp.status_code}`\nResponse: `{resp.text[:200]}`"
+                async with httpx.AsyncClient() as t_client:
+                    await t_client.post(f"https://api.telegram.org/bot{token}/sendMessage", json={"chat_id": admin_id, "text": error_msg, "parse_mode": "Markdown"})
 
     async def run(self):
         print("Fetching REAL-WORLD Forensic Data from Supabase...")
