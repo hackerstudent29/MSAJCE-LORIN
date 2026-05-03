@@ -24,6 +24,11 @@ load_dotenv()
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger("lorin_bot")
 
+# --- Global Config ---
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+ADMIN_IDS = [int(i.strip()) for i in os.getenv("ADMIN_IDS", "7770158141").split(",") if i.strip()]
+CRON_SECRET = os.getenv("CRON_SECRET")
+
 # Initialize Flask
 app = Flask(__name__)
 
@@ -71,18 +76,13 @@ async def log_to_supabase(user_id, user_name, query, response, tel):
         logger.error(f"DB Logging Error: {e}")
         # DIAGNOSTIC: Notify Telegram Admin of Logging Failure
         try:
-            token = os.getenv("TELEGRAM_BOT_TOKEN")
             admin_id = str(ADMIN_IDS[0])
             error_msg = f"⚠️ *DB Logging Failed*\nError: `{str(e)}`"
-            # Use synchronous httpx for emergency diagnostic notification
             import httpx
             with httpx.Client() as t_client:
-                t_client.post(f"https://api.telegram.org/bot{token}/sendMessage", json={"chat_id": admin_id, "text": error_msg, "parse_mode": "Markdown"})
+                t_client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", json={"chat_id": admin_id, "text": error_msg, "parse_mode": "Markdown"})
         except:
             pass
-
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-ADMIN_IDS = [int(i.strip()) for i in os.getenv("ADMIN_IDS", "7770158141").split(",") if i.strip()]
 
 # --- Security Config ---
 ABUSIVE_WORDS = ["badword1", "badword2"]
