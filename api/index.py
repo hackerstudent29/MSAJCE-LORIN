@@ -13,8 +13,11 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 from dotenv import load_dotenv
 from telegram.request import HTTPXRequest
 
-# Ensure engine.py in core can be imported
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Ensure core and scripts can be imported correctly
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if BASE_DIR not in sys.path:
+    sys.path.append(BASE_DIR)
+
 from core.engine import RAGEngine
 from scripts.sunday_intelligence import SundayIntelligence
 
