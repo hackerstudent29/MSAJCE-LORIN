@@ -72,16 +72,13 @@ class RAGEngine:
 
         self.stemmer = Stemmer.Stemmer("english")
         
-        # Path detection
-        cwd = os.getcwd()
-        base_dir = next((root for root in [cwd, os.path.dirname(cwd), os.path.dirname(os.path.abspath(__file__))] 
-                        if os.path.exists(os.path.join(root, "data", "unified_master_chunks.json"))), None)
+        # Robust Vercel Path Detection
+        core_dir = os.path.dirname(os.path.abspath(__file__))
+        base_dir = os.path.dirname(core_dir) # Go up to the root
         
-        if base_dir:
-            index_dir = os.path.join(base_dir, "data", "bm25_index")
-            if os.path.exists(os.path.join(index_dir, "params.index.json")):
-                self.bm25 = bm25s.BM25.load(index_dir, load_corpus=True)
-            else: self.bm25 = None
+        index_dir = os.path.join(base_dir, "data", "bm25_index")
+        if os.path.exists(os.path.join(index_dir, "params.index.json")):
+            self.bm25 = bm25s.BM25.load(index_dir, load_corpus=True)
         else: self.bm25 = None
 
         self.vercel_gateway_url = "https://ai-gateway.vercel.sh/v1"

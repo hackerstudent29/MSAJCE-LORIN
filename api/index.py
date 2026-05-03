@@ -73,8 +73,12 @@ def get_clean_env(key, default=""):
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 ADMIN_IDS = [int(i.strip()) for i in os.getenv("ADMIN_IDS", "7770158141").split(",") if i.strip()]
 
-# GLOBAL PRODUCTION ENGINE
-_engine = RAGEngine()
+# GLOBAL PRODUCTION ENGINE (Wrapped for Production Stability)
+try:
+    _engine = RAGEngine()
+except Exception as e:
+    logger.error(f"FATAL: Global Engine Initialization Failed: {e}")
+    _engine = None
 
 # --- Security Config ---
 ABUSIVE_WORDS = ["badword1", "badword2"]
