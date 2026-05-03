@@ -225,14 +225,26 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         except:
             await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=full_response)
         
+        # Database Operations (Synchronous wait to ensure Vercel records it)
         try:
             pool = await get_db_pool()
             if pool:
                 await pool.execute("INSERT INTO semantic_cache (query_hash, user_query, bot_response) VALUES ($1, $2, $3) ON CONFLICT (query_hash) DO NOTHING", query_hash, user_query, full_response)
-                asyncio.create_task(log_to_supabase(user_id, user_name, user_query, full_response, telemetry))
+            
+            await log_to_supabase(user_id, user_name, user_query, full_response, telemetry)
+            
             history.append({"q": user_query, "a": full_response})
             await engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
-        except: pass
+        except Exception as e:
+            logger.error(f"Post-processing Error: {e}")
+            # If logging fails, notify admin for diagnostics
+            try:
+                token = os.getenv("TELEGRAM_BOT_TOKEN")
+                admin_id = str(ADMIN_IDS[0])
+                import httpx
+                with httpx.Client() as t_client:
+                    t_client.post(f"https://api.telegram.org/bot{token}/sendMessage", json={"chat_id": admin_id, "text": f"⚠️ *Post-processing Error*\n`{str(e)}`", "parse_mode": "Markdown"})
+            except: pass
     except Exception as e:
         logger.error(f"Critical UI Error: {e}")
         if not full_response:
