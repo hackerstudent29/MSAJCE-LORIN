@@ -86,7 +86,7 @@ class SundayIntelligence:
         if not db_url: return []
         import asyncpg
         conn = await asyncpg.connect(db_url)
-        rows = await conn.fetch(\"""
+        rows = await conn.fetch("""
             SELECT created_at, user_id, session_id, user_query, intent, 
                    metadata->>'source' as source, metadata->>'status' as status,
                    latency_ms, (metadata->>'tokens')::int as tokens,
@@ -94,7 +94,7 @@ class SundayIntelligence:
             FROM interactions 
             WHERE created_at > NOW() - INTERVAL '7 days'
             ORDER BY created_at DESC
-        \""")
+        """)
         await conn.close()
         return rows
 
