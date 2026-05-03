@@ -255,7 +255,7 @@ STRICT RULES:
         is_repetition = p.get("is_repetition", False) if p else False
         marketing_mode = p.get("marketing_mode", False) if p else False
         
-system_prompt = f"""You are LORIN, the institutional AI for MSAJCE.
+        system_prompt = f"""You are LORIN, the institutional AI for MSAJCE.
 [STRICT MANDATE] TODAY'S DATE IS: {datetime.now().strftime("%B %d, %Y")}. 
 
 RULES (follow strictly):
