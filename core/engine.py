@@ -418,3 +418,22 @@ History: {history if history else "None"}"""
                     print(f"    [GROQ ERR] {res_json}")
         except Exception as e:
             print(f"    [GROQ EXCEPTION] {e}")
+    def _rebuild_bm25(self, chunks_path, index_dir):
+        import bm25s
+        import Stemmer
+        with open(chunks_path, 'r', encoding='utf-8') as f:
+            corpus = json.load(f)
+        
+        # Stemmer & Tokenization
+        stemmer = Stemmer.Stemmer("english")
+        texts = [c["text"] for c in corpus]
+        tokens = bm25s.tokenize(texts, stemmer=stemmer)
+        
+        # Create and Save Index
+        retriever = bm25s.BM25(corpus=corpus)
+        retriever.index(tokens)
+        
+        if not os.path.exists(index_dir): os.makedirs(index_dir)
+        retriever.save(index_dir, corpus=corpus)
+        self.bm25 = retriever
+        print(f"BM25 Index successfully rebuilt with {len(corpus)} chunks.")

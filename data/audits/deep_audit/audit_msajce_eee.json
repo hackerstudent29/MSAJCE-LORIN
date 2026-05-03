@@ -126,5 +126,21 @@
       "status": "PASS",
       "reason": "The bot accurately identified that in the 2020-2021 academic year, Mr. Chintala Venkatesh (listed as nearing completion) and Mrs. Nisha P held a Ph.D. in the EEE department, totaling 2 faculty members, as stated in the source text."
     }
+  },
+  {
+    "question": "What was the specialization of Mrs. Nisha P in the EEE faculty list for 2020-2021?",
+    "answer": "Mrs. Nisha P, Assistant Professor, specialized in Power Electronics in the EEE faculty for the academic year 2020-2021.\n\nWant to know about her qualifications?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "Which faculty member joined the EEE department most recently (as of the 2023-2024 list)?",
+    "answer": "",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
   }
 ]

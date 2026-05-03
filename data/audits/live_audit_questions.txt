@@ -967,3 +967,16 @@
 [PASS] How many faculty members in the EEE department held a Ph.D. in the academic year 2020-2021?
 [PASS] Can you provide the names of three faculty members who teach courses specifically related to 'ethical hacking'?
 [UNKNOWN] What is the specific URL link for the 2021 Regulation Curriculum & Syllabus for the B.Tech program?
+[PASS] How long has Dr. Kannan S been with the institution as of 2024?
+[PASS] What is the estimated total manpower requirement in the VLSI Technology and Semiconductor Manufacturing fields over the next five to seven years?
+[UNKNOWN] What was the specialization of Mrs. Nisha P in the EEE faculty list for 2020-2021?
+[UNKNOWN] What is the maximum number of days a faculty member can borrow a book that is not a reference book or periodical?
+[PASS] What is the specific software used in the 'simulation environments' for penetration testing mentioned under 'Hands-on Learning'?
+[FAIL] What is the procedure for a student to access the 'Online Public Access Catalogue (OPAC)' from off-campus?
+[PASS] What was the average library usage per day in academic year 2023-2024?
+[FAIL] Which faculty member was designated as Assistant Professor in 2021-2022, holding a B.Tech as their qualification?
+[PASS] What nanometer (nm) node is the Semi-Conductor Laboratory (SCL), Chandigarh pilot line based on?
+[PASS] Does the library maintain a waiting list for reserved books, and how is priority determined?
+[UNKNOWN] Which faculty member joined the EEE department most recently (as of the 2023-2024 list)?
+[FAIL] What was MSAJCE's NIRF Engineering rank in 2023 as per the linked document?
+[PASS] How many assistant professors who were employed in 2020-2021, specialized in Information Technology?

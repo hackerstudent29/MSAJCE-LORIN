@@ -102,5 +102,21 @@
       "status": "PASS",
       "reason": "The bot response accurately reflects the information provided in the source text regarding the number of participants in the 'Online Sessions on Acceleration \u2014 Early Stage Entrepreneurs' event."
     }
+  },
+  {
+    "question": "What specific incentives, policies, or toolkits were implemented to incentivize entrepreneurship as described in the Activities section 'Incentivizing Entrepreneurship with policies, toolkits, Start-up Manual'?",
+    "answer": "Based on the information I have, incentivizing entrepreneurship includes policies, toolkits, and a Start-up Manual. A small percentage of the institution's total budget (1% per year) is allocated towards start-up activities.\n\nWould you like details on the Entrepreneurship Development Cell's roles?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The response accurately reflects the information provided in the source text regarding policies, toolkits, a Start-up Manual, and the allocation of 1% of the institution's total budget per year towards start-up activities."
+    }
+  },
+  {
+    "question": "What specific MOOCs are used for entrepreneurship education, mentioned under the Outcomes section 'Students covered through entrepreneurship Education via MOOC, Classroom, Experiential Learning'?",
+    "answer": "Unfortunately, I don't have the specific MOOC titles used for entrepreneurship education here at MSAJCE. However, the college does aim to provide entrepreneurship education via MOOCs, classroom learning, and experiential learning.&#x20;\n\nWould you like more information about our entrepreneurship-related workshops and events?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot acknowledges that it does not have the specific MOOC titles used for entrepreneurship education, which aligns with the provided source text. "
+    }
   }
 ]

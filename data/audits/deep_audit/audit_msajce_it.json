@@ -86,5 +86,29 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "How long has Dr. Kannan S been with the institution as of 2024?",
+    "answer": "Dr. Kannan S, Professor in the Department of Information Technology, has been with MSAJCE since August 31, 2022. Therefore, by the end of 2024, he would have been with the institution for over 2 years.\nDo you want information on any other faculty members?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that Dr. Kannan S has been with MSAJCE since August 31, 2022. This information is available in the SOURCE TEXT under the 'Faculty' section. Based on this information, the calculation of his time with the institution as of 2024 is also correct."
+    }
+  },
+  {
+    "question": "Which faculty member was designated as Assistant Professor in 2021-2022, holding a B.Tech as their qualification?",
+    "answer": "",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "No response"
+    }
+  },
+  {
+    "question": "How many assistant professors who were employed in 2020-2021, specialized in Information Technology?",
+    "answer": "Based on the faculty list from 2020-2021, the following Assistant Professors specialized in Information Technology:\n\n\u2022 Mrs. Abinaya T\n\u2022 Ms. Annie A\n\u2022 Mr. Senthil Pandi S\n\nSo, there were three Assistant Professors specializing in Information Technology in 2020-2021.\n\nWould you like to know about the faculty in any other department for that year?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately identifies the three assistant professors specializing in Information Technology during the 2020-2021 academic year, based on the provided source text."
+    }
   }
 ]

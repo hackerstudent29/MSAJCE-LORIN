@@ -142,5 +142,21 @@
       "status": "UNKNOWN",
       "reason": "Evaluation failed"
     }
+  },
+  {
+    "question": "What is the estimated total manpower requirement in the VLSI Technology and Semiconductor Manufacturing fields over the next five to seven years?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response is factually accurate and is found in the source text."
+    }
+  },
+  {
+    "question": "What nanometer (nm) node is the Semi-Conductor Laboratory (SCL), Chandigarh pilot line based on?",
+    "answer": "",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The source text mentions \"India has only a single Integrated Design to Manufacturing (IDM) pilot line at Semi-Conductor Laboratory (SCL), Chandigarh, based on 180nm Node.\" Although the bot does not give an answer. Based on my understanding it should return the nanometer node. "
+    }
   }
 ]

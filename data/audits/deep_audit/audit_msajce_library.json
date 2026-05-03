@@ -38,5 +38,29 @@
       "status": "FAIL",
       "reason": "No response"
     }
+  },
+  {
+    "question": "What is the maximum number of days a faculty member can borrow a book that is not a reference book or periodical?",
+    "answer": "Teaching staff can borrow books for a maximum of 30 days. What other library services might you be interested in?\n",
+    "evaluation": {
+      "status": "UNKNOWN",
+      "reason": "Evaluation failed"
+    }
+  },
+  {
+    "question": "What is the procedure for a student to access the 'Online Public Access Catalogue (OPAC)' from off-campus?",
+    "answer": "The Online Public Access Catalogue (OPAC) is accessible through the college's intranet. You can also utilize other e-resources like Delnet, J-Gate, and the National Digital Library off-campus.\n\nNeed links to those resources?\n",
+    "evaluation": {
+      "status": "FAIL",
+      "reason": "The response states the OPAC is accessible through the college's intranet, but the source text does not detail the procedure to access it off-campus. Additionally, while the source text mentions Delnet, J-Gate, and the National Digital Library, it doesn't specify that they are accessible off-campus or imply they replace OPAC access from off-campus."
+    }
+  },
+  {
+    "question": "Does the library maintain a waiting list for reserved books, and how is priority determined?",
+    "answer": "Yes, the library does allow you to reserve books that are currently checked out. Once the reserved book is returned, you'll be notified, and the book will be held at the circulation desk for one day.\n\nDo you want to know about any other library services?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot accurately states that the library allows reserving books and the holding period after notification, based on the source text."
+    }
   }
 ]

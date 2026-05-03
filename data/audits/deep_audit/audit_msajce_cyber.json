@@ -54,5 +54,13 @@
       "status": "PASS",
       "reason": "The bot correctly states that it cannot provide a list of faculty members teaching ethical hacking based on the provided documents."
     }
+  },
+  {
+    "question": "What is the specific software used in the 'simulation environments' for penetration testing mentioned under 'Hands-on Learning'?",
+    "answer": "The Cyber Security (CSCS) program uses labs and simulation environments for penetration testing, secure coding, and threat analysis to provide hands-on learning.\n\nWould you like more details on the specific tools covered in ethical hacking?\n",
+    "evaluation": {
+      "status": "PASS",
+      "reason": "The bot response accurately reflects the source text regarding the use of labs and simulation environments for penetration testing in the Cyber Security (CSCS) program."
+    }
   }
 ]
