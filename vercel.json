@@ -1,7 +1,14 @@
 {
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    }
+  ],
   "crons": [
     {
-      "path": "/api/cron/sunday-report",
+      "path": "/api/sunday-report",
       "schedule": "20 4 * * *" 
     }
   ]
