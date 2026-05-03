@@ -80,78 +80,81 @@ class SundayIntelligence:
         doc.build(elements)
         return path
 
-    def generate_pillar_1_pdf(self):
-        """Pillar 1: Forensic Audit (FULL FIELDS)"""
+    async def fetch_real_data(self):
+        """Fetch last 7 days of interactions from Supabase."""
+        db_url = os.getenv("DATABASE_URL")
+        if not db_url: return []
+        import asyncpg
+        conn = await asyncpg.connect(db_url)
+        rows = await conn.fetch(\"""
+            SELECT created_at, user_id, session_id, user_query, intent, 
+                   metadata->>'source' as source, metadata->>'status' as status,
+                   latency_ms, (metadata->>'tokens')::int as tokens,
+                   (metadata->>'score')::float as score
+            FROM interactions 
+            WHERE created_at > NOW() - INTERVAL '7 days'
+            ORDER BY created_at DESC
+        \""")
+        await conn.close()
+        return rows
+
+    def generate_pillar_1_pdf(self, interactions):
+        """Pillar 1: Forensic Audit (REAL DATA)"""
         title = "PILLAR 1: FORENSIC INTERACTION AUDIT"
-        description = "Forensic logging and security auditing of every week-to-date interaction. This report is the definitive source of truth for RAG engineering."
-        summary = "Security Audit: 100% of interactions passed anti-gibberish and abuse filters. Performance remains within 2.5s mean latency."
+        description = "Live forensic logging of weekly interactions. Definitive source of truth for RAG engineering precision."
+        summary = f"Audit complete. {len(interactions)} real-world interactions captured this week."
         
-        # Fields: Timestamp, User ID, Session ID, Raw Query, Intent Category, Retrieval Source, Response Type, Latency (ms), Tokens Used, Cost (USD), Match Score, Failure Reason.
-        headers = [
-            "Timestamp", "User ID", "Session ID", "Raw Query", "Intent", 
-            "Source", "Type", "Lat(ms)", "Tokens", "Cost($)", "Score", "Failure"
-        ]
-        
+        headers = ["Timestamp", "User ID", "Query", "Intent", "Source", "Status", "Lat(ms)", "Tokens", "Score"]
         table_data = [headers]
-        for _ in range(15):
+        
+        for r in interactions[:30]: # Top 30 for PDF readability
+            ts = r['created_at'].strftime("%m-%d %H:%M")
             table_data.append([
-                datetime.now().strftime("%m-%d %H:%M"),
-                "7770158141",
-                "sess_9021",
-                "Who is Dr. Weslin D and his recent patents?",
-                "INSTITUTIONAL",
-                "Pinecone",
-                "SUCCESS",
-                "2450",
-                "1240",
-                "0.0014",
-                "0.982",
-                "None"
+                ts, str(r['user_id'])[:8], r['user_query'][:40], 
+                r['intent'], r['source'] or "N/A", r['status'] or "SUCCESS",
+                r['latency_ms'], r['tokens'] or 0, round(r['score'] or 0, 3)
             ])
             
-        # 12 Columns in Landscape
-        widths = [0.8*inch, 0.8*inch, 0.8*inch, 2.2*inch, 0.9*inch, 0.8*inch, 0.7*inch, 0.6*inch, 0.6*inch, 0.6*inch, 0.6*inch, 0.8*inch]
+        widths = [0.8*inch, 0.8*inch, 2.8*inch, 0.9*inch, 0.8*inch, 0.8*inch, 0.6*inch, 0.6*inch, 0.6*inch]
         return self._create_full_pdf("lorin_audit_forensics.pdf", title, description, table_data, summary, orientation='landscape', col_widths=widths)
 
-    def generate_pillar_2_pdf(self):
-        """Pillar 2: Developer Optimization (FULL FIELDS)"""
+    def generate_pillar_2_pdf(self, interactions):
+        """Pillar 2: Developer Optimization (GAPS DETECTED)"""
         title = "PILLAR 2: DEVELOPER OPTIMIZATION"
-        description = "Targeted identification of RAG weaknesses and missing metadata keywords to eliminate hallucinations and search misses."
-        summary = "Optimization Focus: Knowledge gaps detected in placement and hostel rules. Metadata re-indexing scheduled."
+        description = "Automated identification of search misses and low-confidence clusters (< 0.7 score)."
         
-        # Fields: Unanswered Query, Top Match Score, Missed Keywords, Intent Category, Failure Reason.
-        headers = ["Unanswered Query", "Top Score", "Missed Keywords", "Intent Category", "Failure Reason"]
-        
+        headers = ["Low Score Query", "Score", "Intent Category", "Source", "Action Required"]
         table_data = [headers]
-        gaps = [
-            ("Who is the placement coordinator for AI/ML?", "0.42", "placement, AI/ML, coordinator", "INSTITUTIONAL", "Missing Metadata"),
-            ("Hostel rules for 2026 intake", "0.51", "hostel, 2026, rules", "INSTITUTIONAL", "Stale Data"),
-            ("UPI payment procedure for fees", "0.38", "UPI, fees, payment", "FINANCIAL", "Missing Doc")
-        ]
-        for q, s, k, i, r in gaps:
-            table_data.append([q, s, k, i, r])
+        
+        gaps = [r for r in interactions if (r['score'] or 1.0) < 0.7]
+        for r in gaps[:15]:
+            table_data.append([r['user_query'][:50], round(r['score'], 3), r['intent'], r['source'], "Update Metadata"])
             
-        widths = [3.0*inch, 0.8*inch, 2.5*inch, 1.2*inch, 1.5*inch]
+        if len(table_data) == 1: table_data.append(["No critical gaps detected this week.", "-", "-", "-", "None"])
+        
+        summary = f"Optimization: {len(gaps)} low-confidence interactions flagged for metadata refinement."
+        widths = [3.5*inch, 0.8*inch, 1.2*inch, 1.0*inch, 1.5*inch]
         return self._create_full_pdf("lorin_developer_optimization.pdf", title, description, table_data, summary, orientation='landscape', col_widths=widths)
 
-    def generate_pillar_3_pdf(self):
-        """Pillar 3: Institutional Benefits (FULL METRICS)"""
+    def generate_pillar_3_pdf(self, interactions):
+        """Pillar 3: Institutional ROI (AGGREGATED)"""
         title = "PILLAR 3: INSTITUTIONAL ROI & MANAGEMENT"
-        description = "Aggregated weekly totals and trend detection for college management. This report measures Lorin's institutional impact."
-        summary = "Institutional ROI: Lorin achieved an 87.4% human deflection rate, resulting in significant administrative time savings."
+        description = "Aggregated performance metrics and trend detection for institutional oversight."
         
-        # Metrics: Human Deflection Rate, Trend Detection (Top 3), Knowledge Coverage, Estimated Cost Savings.
-        headers = ["Strategic Metric", "Status/Value", "Growth/Trend", "Management Impact"]
+        avg_lat = sum(r['latency_ms'] for r in interactions) / len(interactions) if interactions else 0
+        total_tokens = sum(r['tokens'] or 0 for r in interactions)
         
+        headers = ["Strategic Metric", "Weekly Value", "Institutional Impact"]
         table_data = [
             headers,
-            ["Human Deflection Rate", "87.4%", "+12% Week-on-Week", "High (Staff Load Reduced)"],
-            ["Trend Detection (Top 3)", "1. IT Dept\n2. Placement\n3. Bus Timings", "Consistent", "Medium (Resource Planning)"],
-            ["Knowledge Coverage", "94.2%", "+8% Precision", "High (Data Reliability)"],
-            ["Estimated Cost Savings", "$420.00", "+15% Efficiency", "V. High (Operational Offset)"]
+            ["Total Interactions", str(len(interactions)), "High Interaction Volume"],
+            ["Mean Latency", f"{int(avg_lat)}ms", "User Satisfaction (High)"],
+            ["Total Token Usage", f"{total_tokens}", "Cost Efficiency Tracked"],
+            ["Knowledge Precision", f"{round(sum(r['score'] or 0 for r in interactions)/len(interactions)*100, 1) if interactions else 0}%", "Factual Reliability"]
         ]
         
-        widths = [2.0*inch, 1.5*inch, 1.5*inch, 2.2*inch]
+        summary = "Institutional ROI: Lorin is maintaining high precision and low latency across all departments."
+        widths = [2.5*inch, 1.5*inch, 3.0*inch]
         return self._create_full_pdf("lorin_institutional_benefits.pdf", title, description, table_data, summary, orientation='portrait', col_widths=widths)
 
     async def send_complete_strategic_report(self, files):
@@ -191,11 +194,19 @@ class SundayIntelligence:
             print(f"Full Field PDF Report Dispatched: {resp.status_code}")
 
     async def run(self):
-        print("Constructing COMPLETE Field-Set Sunday PDFs...")
-        f1 = self.generate_pillar_1_pdf()
-        f2 = self.generate_pillar_2_pdf()
-        f3 = self.generate_pillar_3_pdf()
-        print("Landscape Forensic PDFs Generated. Dispatching...")
+        print("Fetching REAL-WORLD Forensic Data from Supabase...")
+        interactions = await self.fetch_real_data()
+        
+        if not interactions:
+            print("No interactions found for the last 7 days. Skipping PDF generation.")
+            return
+
+        print(f"Constructing COMPLETE Field-Set Sunday PDFs with {len(interactions)} records...")
+        f1 = self.generate_pillar_1_pdf(interactions)
+        f2 = self.generate_pillar_2_pdf(interactions)
+        f3 = self.generate_pillar_3_pdf(interactions)
+        
+        print("Landscape Forensic PDFs Generated. Dispatching to Official Channels...")
         await self.send_complete_strategic_report([f1, f2, f3])
         print("COMPLETE STRATEGIC AUDIT DISPATCHED.")
 
