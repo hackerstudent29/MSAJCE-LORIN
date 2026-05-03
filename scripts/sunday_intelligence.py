@@ -18,7 +18,8 @@ load_dotenv()
 
 class SundayIntelligence:
     def __init__(self):
-        self.report_dir = os.path.join("reports", "sunday")
+        # Vercel Compatibility: Use /tmp for writable storage
+        self.report_dir = "/tmp"
         os.makedirs(self.report_dir, exist_ok=True)
         self.styles = getSampleStyleSheet()
         self.title_style = ParagraphStyle(
