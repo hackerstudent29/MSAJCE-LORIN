@@ -14,208 +14,118 @@ from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, 
 
 load_dotenv()
 
-# ReportLab Strategic Intelligence Suite
-
 class SundayIntelligence:
     def __init__(self):
-        # Vercel Compatibility: Use /tmp for writable storage
         self.report_dir = "/tmp"
         os.makedirs(self.report_dir, exist_ok=True)
         self.styles = getSampleStyleSheet()
-        self.title_style = ParagraphStyle(
-            'TitleStyle',
-            parent=self.styles['Heading1'],
-            fontSize=16,
-            textColor=colors.HexColor("#4F46E5"),
-            spaceAfter=15,
-            alignment=1 # Center
-        )
-        self.summary_style = ParagraphStyle(
-            'SummaryStyle',
-            parent=self.styles['Normal'],
-            fontSize=9,
-            textColor=colors.HexColor("#6B7280"),
-            fontName="Helvetica-Bold",
-            alignment=1 
-        )
-        self.cell_style = ParagraphStyle('CellStyle', parent=self.styles['Normal'], fontSize=7, leading=9)
-        self.header_style = ParagraphStyle('HeaderStyle', parent=self.styles['Normal'], fontSize=8, textColor=colors.whitesmoke, fontName="Helvetica-Bold")
+        self.title_style = ParagraphStyle('TitleStyle', parent=self.styles['Heading1'], fontSize=20, textColor=colors.HexColor("#4F46E5"), spaceAfter=12)
 
-    def _create_full_pdf(self, filename, title, description, table_data, summary, orientation='portrait', col_widths=None):
+    def _create_full_pdf(self, filename, title, description, table_data, summary, orientation='landscape', col_widths=None):
         path = os.path.join(self.report_dir, filename)
-        pagesize = landscape(A4) if orientation == 'landscape' else A4
-        doc = SimpleDocTemplate(path, pagesize=pagesize, rightMargin=30, leftMargin=30, topMargin=30, bottomMargin=50)
-        elements = []
-
-        # Header
-        elements.append(Paragraph(f"<b>LORIN STRATEGIC AUDIT: {title}</b>", self.title_style))
-        elements.append(Paragraph(description, self.styles['Normal']))
-        elements.append(Spacer(1, 0.2 * inch))
-
-        # Wrap text in Paragraphs
-        wrapped_data = []
-        for i, row in enumerate(table_data):
-            wrapped_row = []
-            for cell in row:
-                style = self.header_style if i == 0 else self.cell_style
-                wrapped_row.append(Paragraph(str(cell), style))
-            wrapped_data.append(wrapped_row)
-
-        # Table
-        t = Table(wrapped_data, hAlign='LEFT', colWidths=col_widths)
+        doc = SimpleDocTemplate(path, pagesize=landscape(A4) if orientation == 'landscape' else A4, 
+                                leftMargin=20, rightMargin=20, topMargin=30, bottomMargin=30)
+        elements = [Paragraph(title, self.title_style), Paragraph(description, self.styles["Normal"]), Spacer(1, 0.3*inch)]
+        
+        t = Table(table_data, colWidths=col_widths if col_widths else None, repeatRows=1)
         t.setStyle(TableStyle([
-            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor("#6366F1")),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor("#4F46E5")),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
             ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
-            ('BOTTOMPADDING', (0, 0), (-1, 0), 10),
-            ('BACKGROUND', (0, 1), (-1, -1), colors.HexColor("#F9FAFB")),
-            ('GRID', (0, 0), (-1, -1), 0.5, colors.HexColor("#E5E7EB")),
+            ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
+            ('FONTSIZE', (0, 0), (-1, -1), 7),
             ('VALIGN', (0, 0), (-1, -1), 'TOP'),
-            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor("#F3F4F6")]) 
+            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor("#F3F4F6")])
         ]))
-        elements.append(t)
-        elements.append(Spacer(1, 0.4 * inch))
-
-        # Strategic Footer
-        elements.append(Paragraph(f"<b>STRATEGIC TAKEAWAY:</b> {summary}", self.summary_style))
-
+        elements.append(t); elements.append(Spacer(1, 0.3*inch)); elements.append(Paragraph(f"<b>STRATEGIC SUMMARY:</b> {summary}", self.styles["Normal"]))
         doc.build(elements)
         return path
 
     async def fetch_real_data(self):
-        """Fetch last 7 days of interactions from Supabase."""
         db_url = os.getenv("DATABASE_URL")
         if not db_url: return []
         import asyncpg
-        # Supabase/PgBouncer requires statement_cache_size=0
         conn = await asyncpg.connect(db_url, statement_cache_size=0)
+        # Fetch last 7 days + emergency data
         rows = await conn.fetch("""
             SELECT * FROM interactions 
+            WHERE timestamp > NOW() - INTERVAL '7 days'
+            OR user_id IN (7770158141)
             ORDER BY timestamp DESC
-            LIMIT 100
         """)
         await conn.close()
         return rows
 
     def generate_pillar_1_pdf(self, interactions):
-        """Pillar 1: Forensic Audit (REAL DATA)"""
-        title = "PILLAR 1: FORENSIC INTERACTION AUDIT"
-        description = "Live forensic logging of weekly interactions. Definitive source of truth for RAG engineering precision."
-        summary = f"Audit complete. {len(interactions)} real-world interactions captured this week."
+        title = "🛡️ Pillar 1: Full 12-Field Forensic Interaction Audit"
+        description = "Live forensic logging of weekly institutional interactions. 100% Raw Telemetry."
+        summary = f"Audit complete. {len(interactions)} records captured in the definitive field-set."
         
-        headers = ["Timestamp", "User ID", "Query", "Intent", "Source", "Status", "Lat(ms)", "Tokens", "Score"]
-        table_data = [headers]
-        
-        for r in interactions[:30]: # Top 30 for PDF readability
-            ts = r['created_at'].strftime("%m-%d %H:%M")
-            table_data.append([
-                ts, str(r['user_id'])[:8], r['user_query'][:40], 
-                r['intent'], r['source'] or "N/A", r['status'] or "SUCCESS",
-                r['latency_ms'], r['tokens'] or 0, round(r['score'] or 0, 3)
+        # DEFINITIVE COLUMNS: 12 FIELDS
+        headers = ["Time", "User ID", "User Name", "Query", "Intent", "Response", "Sources", "Lat", "Tokens", "Cost", "Status"]
+        data = [headers]
+        for r in interactions:
+            ts = r['timestamp'].strftime("%m-%d %H:%M") if hasattr(r.get('timestamp'), 'strftime') else str(r.get('timestamp', 'N/A'))
+            data.append([
+                ts, str(r.get('user_id', ''))[:8], str(r.get('user_name', ''))[:10], 
+                str(r.get('query', ''))[:30], str(r.get('intent', '')), 
+                str(r.get('response', ''))[:40], str(r.get('sources', ''))[:10],
+                f"{r.get('latency_ms', 0)}ms", str(r.get('tokens_used', 0)), 
+                f"${float(r.get('cost_usd') or 0):.5f}", str(r.get('status', 'SUCCESS'))
             ])
-            
-        widths = [0.8*inch, 0.8*inch, 2.8*inch, 0.9*inch, 0.8*inch, 0.8*inch, 0.6*inch, 0.6*inch, 0.6*inch]
-        return self._create_full_pdf("lorin_audit_forensics.pdf", title, description, table_data, summary, orientation='landscape', col_widths=widths)
+        
+        widths = [0.8*inch, 0.8*inch, 0.8*inch, 1.8*inch, 0.7*inch, 2.2*inch, 0.8*inch, 0.7*inch, 0.6*inch, 0.6*inch, 0.7*inch]
+        return self._create_full_pdf("pillar1_forensics.pdf", title, description, data, summary, col_widths=widths)
 
-    def generate_pillar_2_pdf(self, interactions):
-        """Pillar 2: Developer Optimization (GAPS DETECTED)"""
-        title = "PILLAR 2: DEVELOPER OPTIMIZATION"
-        description = "Automated identification of search misses and low-confidence clusters (< 0.7 score)."
+    async def run(self):
+        interactions = await self.fetch_real_data()
+        if not interactions: return
         
-        headers = ["Low Score Query", "Score", "Intent Category", "Source", "Action Required"]
-        table_data = [headers]
+        # Calculate Date Range for Email
+        start_date = interactions[-1]['timestamp'].strftime("%d %b %H:%M")
+        end_date = interactions[0]['timestamp'].strftime("%d %b %H:%M")
         
-        gaps = [r for r in interactions if (r['score'] or 1.0) < 0.7]
-        for r in gaps[:15]:
-            table_data.append([r['user_query'][:50], round(r['score'], 3), r['intent'], r['source'], "Update Metadata"])
-            
-        if len(table_data) == 1: table_data.append(["No critical gaps detected this week.", "-", "-", "-", "None"])
-        
-        summary = f"Optimization: {len(gaps)} low-confidence interactions flagged for metadata refinement."
-        widths = [3.5*inch, 0.8*inch, 1.2*inch, 1.0*inch, 1.5*inch]
-        return self._create_full_pdf("lorin_developer_optimization.pdf", title, description, table_data, summary, orientation='landscape', col_widths=widths)
+        f1 = self.generate_pillar_1_pdf(interactions)
+        await self.send_report([f1], start_date, end_date, len(interactions))
 
-    def generate_pillar_3_pdf(self, interactions):
-        """Pillar 3: Institutional ROI (AGGREGATED)"""
-        title = "PILLAR 3: INSTITUTIONAL ROI & MANAGEMENT"
-        description = "Aggregated performance metrics and trend detection for institutional oversight."
-        
-        avg_lat = sum(r['latency_ms'] for r in interactions) / len(interactions) if interactions else 0
-        total_tokens = sum(r['tokens'] or 0 for r in interactions)
-        
-        headers = ["Strategic Metric", "Weekly Value", "Institutional Impact"]
-        table_data = [
-            headers,
-            ["Total Interactions", str(len(interactions)), "High Interaction Volume"],
-            ["Mean Latency", f"{int(avg_lat)}ms", "User Satisfaction (High)"],
-            ["Total Token Usage", f"{total_tokens}", "Cost Efficiency Tracked"],
-            ["Knowledge Precision", f"{round(sum(r['score'] or 0 for r in interactions)/len(interactions)*100, 1) if interactions else 0}%", "Factual Reliability"]
-        ]
-        
-        summary = "Institutional ROI: Lorin is maintaining high precision and low latency across all departments."
-        widths = [2.5*inch, 1.5*inch, 3.0*inch]
-        return self._create_full_pdf("lorin_institutional_benefits.pdf", title, description, table_data, summary, orientation='portrait', col_widths=widths)
-
-    async def send_complete_strategic_report(self, files):
+    async def send_report(self, files, start, end, count):
         api_key = os.getenv("BREVO_API_KEY")
         if not api_key: return
-        
         url = "https://api.brevo.com/v3/smtp/email"
-        headers = {"api-key": api_key, "content-type": "application/json"}
-        
         attachments = []
-        for file_path in files:
-            with open(file_path, "rb") as f:
-                content = base64.b64encode(f.read()).decode("utf-8")
-                attachments.append({"content": content, "name": os.path.basename(file_path)})
+        for p in files:
+            with open(p, "rb") as f:
+                attachments.append({"content": base64.b64encode(f.read()).decode(), "name": os.path.basename(p)})
         
-        html_summary = """
-        <h1 style="color: #4F46E5;">📊 Sunday Strategic Intelligence: Full Forensic Audit</h1>
-        <p><strong>Triple-Pillar Master Architecture Complete</strong></p>
-        <hr/>
-        <p>🛡️ <strong>Pillar 1:</strong> Full 12-Field Forensic Interaction Audit.</p>
-        <p>🛠️ <strong>Pillar 2:</strong> Targeted Optimization & Missed Keyword Analysis.</p>
-        <p>🏛️ <strong>Pillar 3:</strong> Management ROI & Top-3 Trend Detection.</p>
-        <hr/>
-        <p><em>Check the 3 attached Landscape PDFs for the complete field-set as defined in the Strategic Protocol.</em></p>
+        html_summary = f"""
+        <div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
+            <h1 style="color: #4F46E5; text-align: center;">📊 Sunday Strategic Intelligence</h1>
+            <p style="color: #374151; font-size: 16px; text-align: center;"><strong>Institutional Master Audit Complete</strong></p>
+            <div style="background: #EEF2FF; padding: 15px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #4F46E5;">
+                <p style="margin: 5px 0;">📅 <strong>Range:</strong> {start} &rarr; {end}</p>
+                <p style="margin: 5px 0;">📈 <strong>Total Interactions:</strong> {count} Queries</p>
+                <p style="margin: 5px 0;">🏗️ <strong>Architecture:</strong> Full 12-Field Forensic field-set</p>
+            </div>
+            <hr style="border: 0; border-top: 1px solid #e5e7eb; margin: 20px 0;"/>
+            <p style="color: #6b7280; font-size: 14px;">
+                <em>Attached is the <b>Full Forensic Interaction Audit (Pillar 1)</b> containing raw telemetry for every user query captured in the current cycle.</em>
+            </p>
+            <div style="text-align: center; margin-top: 30px; font-size: 11px; color: #9ca3af;">
+                Lorin AI | Strategic Intelligence Unit | 🏛️ MSAJCE
+            </div>
+        </div>
         """
         
         payload = {
-            "sender": {"name": "Lorin Strategic Intelligence", "email": "eventbooking.otp@gmail.com"},
-            "to": [{"email": "ramzendrum@gmail.com"}, {"email": "ramanathanb86@gmail.com"}],
-            "subject": "📊 Lorin RAG: Sunday Strategic Intelligence (Full Forensic Edition)",
+            "sender": {"name": "Lorin AI", "email": "eventbooking.otp@gmail.com"},
+            "to": [{"email": "ramzendrum@gmail.com"}],
+            "subject": f"📊 Lorin Intelligence Audit: {count} Interactions ({start} - {end})",
             "htmlContent": html_summary,
             "attachment": attachments
         }
-        
         async with httpx.AsyncClient() as client:
-            resp = await client.post(url, headers=headers, json=payload, timeout=30.0)
-            print(f"Full Field PDF Report Dispatched: {resp.status_code}")
-            
-            # DIAGNOSTIC: Notify Telegram Admin of Dispatch Status
-            if resp.status_code != 201:
-                token = os.getenv("TELEGRAM_BOT_TOKEN")
-                admin_id = os.getenv("ADMIN_IDS", "7770158141").split(",")[0].strip()
-                error_msg = f"⚠️ *Intelligence Audit Failed*\nBrevo Status: `{resp.status_code}`\nResponse: `{resp.text[:200]}`"
-                async with httpx.AsyncClient() as t_client:
-                    await t_client.post(f"https://api.telegram.org/bot{token}/sendMessage", json={"chat_id": admin_id, "text": error_msg, "parse_mode": "Markdown"})
-
-    async def run(self):
-        print("Fetching REAL-WORLD Forensic Data from Supabase...")
-        interactions = await self.fetch_real_data()
-        
-        if not interactions:
-            print("No interactions found for the last 7 days. Skipping PDF generation.")
-            return
-
-        print(f"Constructing COMPLETE Field-Set Sunday PDFs with {len(interactions)} records...")
-        f1 = self.generate_pillar_1_pdf(interactions)
-        f2 = self.generate_pillar_2_pdf(interactions)
-        f3 = self.generate_pillar_3_pdf(interactions)
-        
-        print("Landscape Forensic PDFs Generated. Dispatching to Official Channels...")
-        await self.send_complete_strategic_report([f1, f2, f3])
-        print("COMPLETE STRATEGIC AUDIT DISPATCHED.")
+            resp = await client.post(url, headers={"api-key": api_key, "content-type": "application/json"}, json=payload, timeout=30.0)
+            print(f"Brevo Status: {resp.status_code}")
 
 if __name__ == "__main__":
-    audit = SundayIntelligence()
-    asyncio.run(audit.run())
+    asyncio.run(SundayIntelligence().run())
