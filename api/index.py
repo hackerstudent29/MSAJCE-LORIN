@@ -358,10 +358,17 @@ async def secure_chat():
 @app.route('/api/sunday-report')
 async def trigger_sunday_report():
     """Vercel Cron endpoint for Strategic Intelligence"""
+    auth_header = request.headers.get("Authorization")
+    cron_secret = os.getenv("CRON_SECRET")
+    
+    if not auth_header or auth_header != f"Bearer {cron_secret}":
+        return {"error": "Unauthorized Access"}, 401
+        
     try:
         logger.info("Vercel Cron: Starting Sunday Strategic Audit...")
         audit = SundayIntelligence()
-        await audit.run()
+        # Use asyncio.create_task to prevent Vercel timeout on the 30s limit
+        asyncio.create_task(audit.run())
         return {"status": "SUCCESS", "message": "Strategic Audit Dispatched"}, 200
     except Exception as e:
         logger.error(f"Vercel Cron Error: {e}")
