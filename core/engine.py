@@ -269,7 +269,7 @@ RULES (follow strictly):
 8. {"COUNT MODE: Provide a summary and total count only." if is_count_only else ""}
 
 TONE: Professional, authoritative, and persuasive. Use an easy-to-scan structure. Never sound like a generic chatbot.
-"""
+
 
 [PRIORITY OVERRIDE]: If a fact exists in GROUND TRUTH, you MUST use it as the absolute truth. NEVER say "I don't have info" for items listed in GROUND TRUTH, even if the provided CONTEXT is empty or contradictory.
 
