@@ -333,9 +333,12 @@ History: {history if history else "None"}"""
     async def _safe_vercel_request(self, data, stream=False):
         # MASTER OVERDRIVE POOL
         keys = {
-            "vercel": [os.getenv("VERCEL_API_KEY_3"), os.getenv("VERCEL_AI_KEY_5"), os.getenv("AI_GATEWAY_API_KEY")],
-            "groq": [os.getenv("GROQ_API_KEY")],
-            "openrouter": [os.getenv("OPENROUTER_API_KEY")]
+            "vercel": [
+                os.getenv("VERCEL_API_KEY_3"), 
+                os.getenv("VERCEL_AI_KEY_5"), 
+                os.getenv("VERCEL_AI_KEY_6"),
+                os.getenv("AI_GATEWAY_API_KEY")
+            ]
         }
         
         # Consolidate active keys
