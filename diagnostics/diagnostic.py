@@ -1,12 +1,16 @@
-import httpx
-import asyncio
-import sys
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Set output to UTF-8 for Windows compatibility
 sys.stdout.reconfigure(encoding='utf-8')
 
 async def check_bot():
-    token = "8709058081:AAGApD-3AsfV651MEWB5o527b2D4lhbMbvo"
+    token = os.getenv("TELEGRAM_BOT_TOKEN")
+    if not token:
+        print("[ERROR] TELEGRAM_BOT_TOKEN not found in environment!")
+        return
     url = f"https://api.telegram.org/bot{token}/getMe"
     
     print(f"--- DIAGNOSTIC START ---")

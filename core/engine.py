@@ -375,7 +375,7 @@ History: {history if history else "None"}"""
                     
                     elif p == "groq":
                         headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
-                        data["model"] = "llama-3.3-70b-specdec"
+                        data["model"] = "llama-3.3-70b-versatile"
                         resp = await client.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=data, timeout=30.0)
                         res = resp.json()
                         if "choices" in res: yield res["choices"][0]["message"]["content"]; return
