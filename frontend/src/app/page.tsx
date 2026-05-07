@@ -22,6 +22,7 @@ interface Message { id: string; role: "user" | "bot"; content: string; }
 export default function ChatPage() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [webUserId] = useState(() => "web_" + Math.random().toString(36).substring(7));
     const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => { 
@@ -48,7 +49,8 @@ export default function ChatPage() {
                 body: JSON.stringify({ 
                     message, 
                     model: model || "lorin-pro", 
-                    thinking: isThinkingEnabled 
+                    thinking: isThinkingEnabled,
+                    user_id: webUserId
                 }),
             });
             
