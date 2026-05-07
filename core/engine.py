@@ -332,12 +332,18 @@ History: {history if history else "None"}"""
 
         # FINAL TELEMETRY PAYLOAD (Master Rule Section 5C)
         end_time = time.time()
+        input_tokens = len(user_query.split()) + len(context_text.split()) + 150
+        output_tokens = len(full_answer.split())
         yield {
             "type": "telemetry",
             "intent": intent,
             "sources": list(set([c.get("metadata", {}).get("source_file", "Unknown") for c in context_chunks])),
             "latency_ms": int((end_time - start_time) * 1000),
-            "tokens": len(full_answer.split()) + len(context_text.split()) + 200 # Conservative estimate
+            "tokens": {
+                "input": input_tokens,
+                "output": output_tokens,
+                "total": input_tokens + output_tokens
+            }
         }
             
         trace.update(output=self._post_process(full_answer))

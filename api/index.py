@@ -285,13 +285,13 @@ async def chat_api():
         history_str = "\n".join([f"User: {h['q']}\nBot: {h['a']}" for h in history])
         
         full_response = ""
+        telemetry_data = {}
         # The engine.query_stream uses history to maintain context
         async for chunk in engine.query_stream(user_query, history=history_str):
             if isinstance(chunk, str):
                 full_response += chunk
             elif isinstance(chunk, dict) and chunk.get("type") == "telemetry":
-                # Handle telemetry if needed for web
-                pass
+                telemetry_data = chunk
         
         # Save to Redis history (limit to 5 turns to stay fast)
         history.append({"q": user_query, "a": full_response})
@@ -299,10 +299,13 @@ async def chat_api():
         
         # Log to interaction DB (Supabase)
         try:
-            await log_to_supabase(user_id, "Web User", user_query, full_response, {"source": "web"})
+            await log_to_supabase(user_id, "Web User", user_query, full_response, telemetry_data)
         except: pass
         
-        return {"response": full_response}, 200
+        return {
+            "response": full_response,
+            "telemetry": telemetry_data
+        }, 200
     except Exception as e:
         logger.error(f"Chat API Error: {e}")
         return {"response": f"Error: {str(e)}"}, 500

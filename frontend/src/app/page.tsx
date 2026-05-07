@@ -16,7 +16,7 @@ const Icons = {
     ),
 };
 
-interface Message { id: string; role: "user" | "bot"; content: string; }
+interface Message { id: string; role: "user" | "bot"; content: string; telemetry?: any; }
 
 /* --- MAIN PAGE --- */
 export default function ChatPage() {
@@ -60,7 +60,8 @@ export default function ChatPage() {
             setMessages(p => [...p, { 
                 id: (Date.now() + 1).toString(), 
                 role: "bot", 
-                content: responseData.response || "I encountered an error. Please try again." 
+                content: responseData.response || "I encountered an error. Please try again.",
+                telemetry: responseData.telemetry
             }]);
         } catch (e) { 
             setMessages(p => [...p, { 
@@ -134,6 +135,22 @@ export default function ChatPage() {
                                     `}>
                                         {m.content}
                                     </div>
+                                    {m.role === "bot" && m.telemetry && (
+                                        <div className="flex flex-wrap gap-2 pt-2 animate-in fade-in slide-in-from-top-1 duration-700">
+                                            <div className="px-2 py-0.5 rounded-full bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-100 dark:border-zinc-700/50 text-[9px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-tighter">
+                                                Query: {m.telemetry.tokens?.input || 0} t
+                                            </div>
+                                            <div className="px-2 py-0.5 rounded-full bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-100 dark:border-zinc-700/50 text-[9px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-tighter">
+                                                Reply: {m.telemetry.tokens?.output || 0} t
+                                            </div>
+                                            <div className="px-2 py-0.5 rounded-full bg-[#D46B4F]/5 border border-[#D46B4F]/10 text-[9px] font-bold text-[#D46B4F]/70 uppercase tracking-tighter">
+                                                Total: {m.telemetry.tokens?.total || 0} tokens
+                                            </div>
+                                            <div className="px-2 py-0.5 rounded-full bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-100 dark:border-zinc-700/50 text-[9px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-tighter">
+                                                Latency: {m.telemetry.latency_ms}ms
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         ))}
