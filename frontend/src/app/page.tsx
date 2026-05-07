@@ -88,7 +88,7 @@ export default function ChatPage() {
 
         try {
             // YOUR BOT BACKEND URL
-            const BACKEND_URL = "https://msajce-lorin-ai-rams-projects-e308a69c.vercel.app/api/chat";
+            const BACKEND_URL = "https://msajce-lorin.vercel.app/api/chat";
             
             const res = await fetch(BACKEND_URL, {
                 method: "POST",
