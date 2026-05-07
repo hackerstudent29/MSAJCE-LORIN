@@ -131,9 +131,6 @@ Lorin AI provides a multifaceted return on investment (ROI) across every departm
 *   **Knowledge Gap Analysis**: By analyzing what users ask, the system tells administrators exactly what information is missing or unclear in the current college documentation.
 *   **Full Forensic Transparency**: The Sunday Strategic Reports provide absolute oversight of usage patterns, popular departments, and system ROI.
 
-### **E. Accreditation Support (NAAC/NBA)**
-*   **Digital Transformation Evidence**: Lorin serves as a powerful exhibit for NAAC Criterion 4 (Infrastructure and Learning Resources) and Criterion 7 (Institutional Values and Best Practices), proving the adoption of advanced technology in student support services.
-
 ---
 **Institutional Intelligence Unit | 🏛️ MSAJCE**  
 *Lead Architect: Ramanathan S (Ram)*
