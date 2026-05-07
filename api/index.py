@@ -290,6 +290,9 @@ async def trigger_sunday_report():
         audit = SundayIntelligence()
         asyncio.create_task(audit.run())
         return {"status": "SUCCESS", "message": "Sunday Intelligence Audit Dispatched"}, 200
+    except ImportError:
+        logger.error("Sunday Intelligence dependencies missing (reportlab).")
+        return {"status": "SKIPPED", "message": "Report generation dependencies not installed for this build."}, 200
     except Exception as e:
         logger.error(f"Cron Error: {e}")
         return {"status": "ERROR", "message": str(e)}, 500
