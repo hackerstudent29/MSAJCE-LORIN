@@ -3,24 +3,48 @@
 :root {
   --background: #ffffff;
   --foreground: #0d0d0d;
-  --sidebar: #171717;
-  --sidebar-hover: #2f2f2f;
-  --chat-bg: #ffffff;
-  --input-bg: #ffffff;
-  --input-border: #e5e5e5;
-  --user-msg: #f4f4f4;
-  --bot-msg: transparent;
+  
+  /* Claude-style Design System Tokens */
+  --bg-100: #ffffff;
+  --bg-200: #f7f7f7;
+  --bg-300: #e5e5e5;
+  --text-100: #0d0d0d;
+  --text-200: #1a1a1a;
+  --text-300: #404040;
+  --text-400: #6b6b6b;
+  --text-500: #9ca3af;
+  --accent: #d46b4f;
+  --accent-hover: #b55a42;
 }
 
 .dark {
   --background: #212121;
   --foreground: #ececf1;
-  --sidebar: #171717;
-  --sidebar-hover: #2f2f2f;
-  --chat-bg: #212121;
-  --input-bg: #2f2f2f;
-  --input-border: #444654;
-  --user-msg: #2f2f2f;
+  
+  --bg-100: #212121;
+  --bg-200: #30302e;
+  --bg-300: #404040;
+  --text-100: #ececf1;
+  --text-200: #d1d5db;
+  --text-300: #9ca3af;
+  --text-400: #6b7280;
+  --text-500: #4b5563;
+  --accent: #d46b4f;
+  --accent-hover: #e07d63;
+}
+
+/* Map variables to Tailwind-like utility names for the component */
+@theme {
+  --color-bg-100: var(--bg-100);
+  --color-bg-200: var(--bg-200);
+  --color-bg-300: var(--bg-300);
+  --color-text-100: var(--text-100);
+  --color-text-200: var(--text-200);
+  --color-text-300: var(--text-300);
+  --color-text-400: var(--text-400);
+  --color-text-500: var(--text-500);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
 }
 
 body {
@@ -30,108 +54,30 @@ body {
   margin: 0;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* Scrollbar and Animations */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: var(--bg-300); border-radius: 10px; }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #d1d5db;
-  border-radius: 10px;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: #4b5563;
-}
-
-/* Iconic ChatGPT Elements - Standard CSS to avoid v4 @apply issues */
-.sidebar-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
-  transition: background-color 0.2s;
-  cursor: pointer;
-  color: #d1d5db;
-}
-
-.sidebar-item:hover {
-  background-color: #2f2f2f;
-}
-
+/* Chat Layout Fixes */
 .chat-container {
   max-width: 48rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  gap: 2rem;
+  padding: 4rem 1rem;
 }
 
-.message-row {
-  display: flex;
-  gap: 1rem;
-  width: 100%;
-}
-
-.avatar {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 9999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 0.75rem;
-}
-
-.message-content {
-  flex: 1 1 0%;
-  font-size: 0.9375rem;
-  line-height: 1.625;
-  overflow-wrap: break-word;
-}
-
-.input-container {
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  padding-top: 0.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  background: linear-gradient(to top, var(--background), var(--background), transparent);
-}
-
-.input-box {
-  max-width: 48rem;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  gap: 0.5rem;
-  background-color: var(--input-bg);
-  border: 1px solid var(--input-border);
-  border-radius: 1rem;
-  padding: 0.5rem;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  transition: all 0.2s;
-}
-
-.input-box:focus-within {
-  border-color: #9ca3af;
-}
+.message-row { display: flex; gap: 1rem; width: 100%; }
+.avatar { width: 2.25rem; height: 2.25rem; border-radius: 9999px; display: flex; items-center justify-center shrink-0 text-white font-bold; }
+.message-content { flex: 1; font-size: 0.95rem; line-height: 1.6; }
