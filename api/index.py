@@ -32,8 +32,8 @@ CRON_SECRET = os.getenv("CRON_SECRET")
 
 # Initialize Flask
 app = Flask(__name__)
-# Explicitly whitelist your new custom domain
-CORS(app, origins=["https://frontend-lorinai.vercel.app", "http://localhost:3000"]) 
+# Enable CORS for the web demo
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # --- Global State ---
 _engine = None
