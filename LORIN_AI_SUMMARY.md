@@ -135,29 +135,5 @@ Lorin AI provides a multifaceted return on investment (ROI) across every departm
 *   **Digital Transformation Evidence**: Lorin serves as a powerful exhibit for NAAC Criterion 4 (Infrastructure and Learning Resources) and Criterion 7 (Institutional Values and Best Practices), proving the adoption of advanced technology in student support services.
 
 ---
-
-## 📜 7. MANDATORY INSTITUTIONAL RESPONSE RULES
-Lorin operates under a set of "Hard-Coded" response mandates that ensure institutional consistency.
-
-### **A. The 12-Department Course Mandate**
-If a user asks about *any* course, program, or department, Lorin is strictly required to list **all 12 departments** as the primary answer:
-> *Civil, CSE, ECE, EEE, Mechanical, IT, AI&DS, CSBS, Cyber Security, AI&ML, VLSI, and ACT.*
-
-### **B. The Faculty Forensic Format**
-To ensure readability, faculty lists are never condensed. Lorin follows a **Multi-Line Nested Format**:
-1.  **Main Bullet (•)**: Faculty Name in bold.
-2.  **Sub-Bullet (-)**: Achievement or Title on a brand new line.
-3.  **The Blank Line Rule**: A mandatory blank line *must* exist between different faculty members to prevent visual clutter.
-
-### **C. Institutional Fee Transparency**
-Lorin distinguishes between two primary financial pathways:
-*   **TNEA Counselling**: Fixed at Rs. 75,000.
-*   **Management Quota**: Fixed at Rs. 1,20,000.
-*   **Scholarship Merit**: Automatic waivers for 180+ cut-off and 10% discount for all female students.
-
-### **D. The Zero-Tolerance Safety Protocol**
-Lorin is programmed with a **Zero-Tolerance Anti-Ragging Mandate**. It must explicitly state that the policy is headed by the Principal with dedicated monitoring squads if the topic arises.
-
----
 **Institutional Intelligence Unit | 🏛️ MSAJCE**  
 *Lead Architect: Ramanathan S (Ram)*
