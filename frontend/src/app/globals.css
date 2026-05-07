@@ -1,4 +1,5 @@
-/* PURE CSS SYSTEM FOR MAXIMUM STABILITY */
+@import "tailwindcss";
+
 :root {
   --background: #ffffff;
   --foreground: #0d0d0d;
@@ -29,69 +30,34 @@
   --accent-hover: #e07d63;
 }
 
+@theme {
+  --color-bg-100: var(--bg-100);
+  --color-bg-200: var(--bg-200);
+  --color-bg-300: var(--bg-300);
+  --color-text-100: var(--text-100);
+  --color-text-200: var(--text-200);
+  --color-text-300: var(--text-300);
+  --color-text-400: var(--text-400);
+  --color-text-500: var(--text-500);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   margin: 0;
-  padding: 0;
 }
 
-* { box-sizing: border-box; }
+/* ChatGPT/Claude Style Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: var(--bg-300); border-radius: 10px; }
 
-/* UTILS - Added manually because we are skipping Tailwind for the demo build */
-.flex { display: flex; }
-.flex-col { flex-direction: column; }
-.h-screen { height: 100vh; }
-.overflow-hidden { overflow: hidden; }
-.flex-1 { flex: 1 1 0%; }
-.relative { position: relative; }
-.w-full { width: 100%; }
-.h-full { height: 100%; }
-.max-w-3xl { max-width: 48rem; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.gap-2 { gap: 0.5rem; }
-.p-4 { padding: 1rem; }
-.rounded-xl { border-radius: 0.75rem; }
-.shadow-lg { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
-.border { border: 1px solid var(--bg-300); }
-
-/* ICONIC CHATGPT LOOK */
-.sidebar-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  border-radius: 0.75rem;
-  font-size: 0.875rem;
-  color: #d1d5db;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.sidebar-item:hover { background: #2f2f2f; }
-
-.chat-container {
-  max-width: 48rem;
-  margin: 0 auto;
-  width: 100%;
-  padding: 4rem 1rem;
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.message-row { display: flex; gap: 1.25rem; margin-bottom: 2rem; }
-.avatar { width: 2.25rem; height: 2.25rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.message-content { flex: 1; }
-
-.input-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.5rem 1rem 2rem;
-  background: linear-gradient(to top, var(--background) 60%, transparent);
-}
-
-/* Animations */
-@keyframes bounce { 0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8,0,1,1); } 50% { transform: none; animation-timing-function: cubic-bezier(0,0,0.2,1); } }
-.animate-bounce { animation: bounce 1s infinite; }
+.animate-fade-in { animation: fade-in 0.3s ease-out forwards; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
