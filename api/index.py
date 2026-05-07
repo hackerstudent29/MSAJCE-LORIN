@@ -265,6 +265,26 @@ async def create_app():
 @app.route('/')
 def home(): return "<h1>🚀 Lorin Bot Active</h1>", 200
 
+@app.route('/api/chat', methods=['POST'])
+async def chat_api():
+    try:
+        data = request.get_json(force=True)
+        user_query = data.get("message")
+        if not user_query:
+            return {"response": "Empty message"}, 400
+        
+        engine = await get_engine()
+        full_response = ""
+        # The engine.query_stream yields chunks
+        async for chunk in engine.query_stream(user_query):
+            if isinstance(chunk, str):
+                full_response += chunk
+        
+        return {"response": full_response}, 200
+    except Exception as e:
+        logger.error(f"Chat API Error: {e}")
+        return {"response": f"Error: {str(e)}"}, 500
+
 @app.route('/api/webhook', methods=['POST'])
 async def webhook():
     try:
