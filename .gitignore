@@ -12,4 +12,9 @@ brain/
 # data/bm25_index/
 backend.env
 DEPLOYMENT_VARS.txt
+.next/
+out/
+build/
+.env*.local
 .vercel
+node_modules
