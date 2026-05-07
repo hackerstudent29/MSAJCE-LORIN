@@ -11,4 +11,4 @@ DEPLOYMENT_VARS.txt
 .vercel
 node_modules/
 .next/
-frontend/
+# frontend/
