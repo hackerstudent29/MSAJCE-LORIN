@@ -36,7 +36,35 @@ Lorin is built using a "Best-of-Breed" stack to ensure speed, accuracy, and cost
 
 ---
 
-## 🔄 3. THE INTELLIGENCE PIPELINE (Efficiency & Optimization)
+## 🛠️ 3. INFRASTRUCTURE RATIONALE (The "Why")
+Every platform and language was selected strategically to ensure **speed, scale, and zero cost-wastage.**
+
+### **A. Backend: Python (Flask) on Vercel Edge**
+*   **Why Python?**: It is the global standard for AI. Python's native support for libraries like `BM25s`, `Stemmer`, and `httpx` made it the only choice for a high-performance RAG engine.
+*   **Why Vercel?**: We used Vercel Serverless Functions to ensure the backend scales to zero when not in use (saving costs) and responds from the "Edge" (the data center closest to the user) for ultra-low latency.
+
+### **B. Memory: Upstash Redis (Serverless)**
+*   **Why Redis?**: We used Upstash Redis because it is **Serverless and Global**. It handles our 5-turn conversation history and rate-limiting strikes with sub-millisecond speed, ensuring the bot feels "instant."
+*   **Why not a traditional DB for memory?**: Redis is much faster than standard databases for short-term "live" memory, which is critical for a smooth chat experience.
+
+### **C. Search: Pinecone (Vector) + BM25s (Lexical)**
+*   **Why Pinecone?**: It is the industry leader for **Semantic Search**. It allows Lorin to understand the *intent* behind a question even if the user uses different words than the document.
+*   **Why BM25s?**: We added a local BM25 index to handle **Institutional Precision**. For exact names, bus codes, or department IDs, a vector search can sometimes be too "fuzzy." BM25 ensures 100% keyword accuracy.
+
+### **D. Data Forensics: Supabase (PostgreSQL)**
+*   **Why Supabase?**: We needed a robust, relational database for our 12-field telemetry logging. Supabase provides a managed Postgres environment that integrates perfectly with our Python backend for long-term strategic audits.
+
+### **E. Intelligence: Gemini 2.0 Flash + Cohere Rerank**
+*   **Why Gemini 2.0 Flash?**: We chose the "Flash" model because it offers a massive context window with **lightning-fast generation speeds**, which is essential for a real-time conversational interface.
+*   **Why Cohere Rerank?**: Vector search alone isn't enough for 100% precision. Cohere acts as a "Secondary Judge" that re-evaluates the top results, ensuring only the absolute best facts are used in the final answer.
+
+### **F. Frontend: Next.js 15 & Tailwind CSS**
+*   **Why Next.js?**: It allows for **Server-Side Rendering (SSR)** and optimized builds, making the web UI load instantly.
+*   **Why Tailwind?**: Enabled us to build a **Premium, Glassmorphism-styled** interface that looks professional and institutional without the bloat of traditional CSS frameworks.
+
+---
+
+## 🔄 4. THE INTELLIGENCE PIPELINE (Efficiency & Optimization)
 How Lorin processes a query while saving **Cost, Tokens, and Time**.
 
 ### **Step 1: Intent Analysis & Query Rewriting**
