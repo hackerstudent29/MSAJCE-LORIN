@@ -7,8 +7,7 @@ import time
 import hashlib
 import re
 from datetime import datetime, timedelta
-from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask import Flask, request
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 from dotenv import load_dotenv
@@ -32,8 +31,6 @@ CRON_SECRET = os.getenv("CRON_SECRET")
 
 # Initialize Flask
 app = Flask(__name__)
-# Enable CORS for the web demo
-CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # --- Global State ---
 _engine = None
@@ -182,7 +179,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     is_allowed, reason, val = await check_security(user_id, user_query, engine)
     if not is_allowed:
         msgs = {"BLOCKED": f"⏳ Wait {val} min.", "MINUTE_LIMIT": "🐢 6 msg/min limit.", "DAILY_LIMIT": "🛑 30/day limit reached.", "BANNED": f"🚫 Blocked {val}h.", "WARNING": f"⚠️ Warning {val}/10: Abuse, Spam, or Gibberish detected."}
-        await update.message.reply_text("❌ System busy. Try again.")
+        await update.message.reply_text(msgs.get(reason, "Access denied."))
         return
 
     await context.bot.send_chat_action(chat_id=update.effective_chat.id, action="typing")
@@ -294,50 +291,5 @@ async def trigger_sunday_report():
     except Exception as e:
         logger.error(f"Cron Error: {e}")
         return {"status": "ERROR", "message": str(e)}, 500
-
-@app.route("/api/chat", methods=["POST"])
-async def chat_api():
-    try:
-        data = request.json
-        if not data:
-            return jsonify({"error": "No data provided"}), 400
-        
-        user_query = data.get("message")
-        user_id = data.get("user_id", "web_demo_user")
-        user_name = data.get("user_name", "Web User")
-        
-        if not user_query:
-            return jsonify({"error": "No message provided"}), 400
-            
-        engine = await get_engine()
-        
-        # Security check (optional for web demo, but good for stability)
-        is_allowed, reason, val = await check_security(user_id, user_query, engine)
-        if not is_allowed:
-             return jsonify({"error": f"Security check failed: {reason}", "retry_after": val}), 403
-
-        full_response = ""
-        telemetry = {}
-        async for chunk in engine.query_stream(user_query, history=""):
-            if isinstance(chunk, dict) and chunk.get("type") == "telemetry":
-                telemetry = chunk
-                continue
-            full_response += chunk
-            
-        # Log to Supabase/DB
-        await log_to_supabase(user_id, user_name, user_query, full_response, telemetry)
-        
-        return jsonify({
-            "response": full_response,
-            "telemetry": telemetry,
-            "timestamp": datetime.now().isoformat()
-        })
-    except Exception as e:
-        logger.error(f"Chat API Error: {e}")
-        return jsonify({"error": str(e)}), 500
-
-@app.route("/api/health", methods=["GET"])
-def health_check():
-    return jsonify({"status": "healthy", "service": "lorin-api"}), 200
 
 app_handler = app
