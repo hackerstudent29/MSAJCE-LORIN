@@ -34,9 +34,9 @@ Every component of Lorin’s infrastructure was selected for a specific strategi
 ## 🔄 3. THE INTELLIGENCE PIPELINE: TOKEN & COST OPTIMIZATION
 How Lorin processes a query to maximize value while minimizing institutional expenditure.
 
-### **Step 1: Greeting-Free Efficiency Protocol**
-*   **The Process**: After the initial interaction, Lorin skips all "Hellos" and "How can I help you" formalities.
-*   **Value**: Saves time for the user and significantly reduces "Token Waste" for the institution, focusing 100% of the budget on providing data.
+### **Step 1: Cognitive Language Matching**
+*   **The Logic**: Lorin automatically adjusts its language complexity to match the "User Level."
+*   **The Benefit**: It simplifies complex institutional jargon into **accessible, clear English**. This ensures that both a first-year student and a senior administrator can understand the same factual data without confusion.
 
 ### **Step 2: Typo-Resistant Intent Analysis**
 *   **The Logic**: The engine recognizes common student typos like `"wo is"` or `"ho is"`.
@@ -63,19 +63,26 @@ Lorin adapts its identity based on the user’s "Energy" and intent.
 
 ## 🛡️ 5. FORENSIC GOVERNANCE & SECURITY
 
-### **A. Triple-Pillar Strategic Audit (Sunday Intelligence)**
+### **A. Multi-Tiered User Ban System**
+Lorin protects itself from bad actors through a **Redis-backed strike system**:
+*   **Abuse/Spam Detection**: Automatically detects bad words or rapid-fire "spam" queries.
+*   **3 Strikes**: 6-hour temporary ban.
+*   **5 Strikes**: 24-hour ban.
+*   **10 Strikes**: Full **7-day institutional ban**.
+*   **Value**: Ensures that toxic users or bots cannot waste the institution's API budget or degrade the system's performance.
+
+### **B. Triple-Pillar Strategic Audit (Sunday Intelligence)**
 Every Sunday at 09:00 AM, Lorin acts as its own **Business Intelligence Analyst**, delivering a three-part forensic package:
 1.  **🛡️ Pillar 1 (Forensic Audit)**: Raw interaction telemetry for total transparency.
 2.  **🛠️ Pillar 2 (Strategic Gap Analysis)**: Identifies where the AI struggled or where college documentation is missing.
 3.  **🏛️ Pillar 3 (Institutional ROI)**: Executive summary of efficiency, token usage, and system value.
 
-### **B. The Emergency Alert System**
-*   **The Logic**: If the database logging fails, Lorin sends an **Emergency Telegram Message** to the developer instantly.
-*   **Value**: Ensures zero "silent failures" in the institutional data stream.
-
 ### **C. The Gibberish Shield**
 *   **The Logic**: Uses vowel-ratio analysis to ignore keyboard-mashing or random noise.
 *   **Value**: Protects the institution's budget from bad actors, spam, and bot-attacks.
+
+### **D. The Emergency Alert System**
+*   **The Logic**: If the database logging fails, Lorin sends an **Emergency Telegram Message** to the developer instantly.
 
 ---
 
