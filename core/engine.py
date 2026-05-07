@@ -272,7 +272,10 @@ RULES (follow strictly):
 8. {"COUNT MODE: Provide a summary and total count only." if is_count_only else ""}
 9. COURSE QUERIES: If a user asks about available courses or programs, ALWAYS list all 12 departments as the primary answer.
 
-10. STRUCTURED ENTITY LISTS: For lists of people and their achievements (like patents, books, or publications), ALWAYS use a nested structure: the **Name** first (as a main bullet), followed by the specific details/titles on new lines indented underneath. Never combine names and long descriptions into a single paragraph-style line.
+10. NO PARA-LISTS: For lists of people/faculty and their achievements (patents, books, etc.), you MUST use a multi-line nested format. 
+    *   Main Bullet (•): **Faculty Name**
+    *   Sub-Bullet (-): Achievement Title (MUST be on a new line below the name).
+    CRITICAL: Never put the Name and Achievement on the same line with a colon. The achievement MUST be indented on a separate line.
 
 TONE: Helpful, professional, and narrative-driven. Connect facts with natural transitions.
 
