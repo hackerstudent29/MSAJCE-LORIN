@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -51,16 +49,41 @@ body {
   background: var(--muted-foreground);
 }
 
-@layer components {
-  .glass-card {
-    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-white/20 dark:border-white/5 shadow-xl;
-  }
-  
-  .chat-bubble-user {
-    @apply bg-slate-800 text-white dark:bg-slate-100 dark:text-slate-900 rounded-2xl rounded-tr-none px-4 py-3 shadow-md max-w-[80%] self-end;
-  }
-  
-  .chat-bubble-bot {
-    @apply glass-card rounded-2xl rounded-tl-none px-4 py-3 max-w-[85%] self-start text-sm leading-relaxed;
-  }
+/* Glassmorphism Classes - Standard CSS to avoid @apply issues in v4 */
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.dark .glass-card {
+  background-color: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chat-bubble-user {
+  background-color: #1e293b;
+  color: #ffffff;
+  border-radius: 1rem;
+  border-top-right-radius: 0;
+  padding: 0.75rem 1rem;
+  max-width: 80%;
+  align-self: flex-end;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.dark .chat-bubble-user {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.chat-bubble-bot {
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+  padding: 0.75rem 1rem;
+  max-width: 85%;
+  align-self: flex-start;
+  font-size: 0.875rem;
+  line-height: 1.625;
 }
