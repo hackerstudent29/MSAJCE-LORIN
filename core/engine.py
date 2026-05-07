@@ -4,13 +4,8 @@ import time
 import hashlib
 import re
 import httpx
-try:
-    import bm25s
-    import Stemmer as PyStemmer
-except ImportError:
-    bm25s = None
-    PyStemmer = None
-
+import bm25s
+import Stemmer
 import cohere
 import logging
 import asyncio
@@ -18,24 +13,8 @@ from datetime import datetime
 from pinecone import Pinecone
 from upstash_redis.asyncio import Redis
 from dotenv import load_dotenv
-
-try:
-    from langsmith import traceable
-except ImportError:
-    def traceable(*args, **kwargs):
-        return lambda f: f
-
-try:
-    from langfuse import Langfuse
-except ImportError:
-    class Langfuse:
-        def __init__(self, *args, **kwargs): pass
-        def span(self, *args, **kwargs):
-            class MockSpan:
-                def __enter__(self): return self
-                def __exit__(self, *args): pass
-                def end(self, *args, **kwargs): pass
-            return MockSpan()
+from langsmith import traceable
+from langfuse import Langfuse
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -91,17 +70,14 @@ class RAGEngine:
             self.redis = Redis(url=os.getenv("UPSTASH_REDIS_REST_URL"), token=os.getenv("UPSTASH_REDIS_REST_TOKEN"))
         except: self.redis = None
 
-        if PyStemmer:
-            self.stemmer = PyStemmer.Stemmer("english")
-        else:
-            self.stemmer = None
+        self.stemmer = Stemmer.Stemmer("english")
         
         # Robust Vercel Path Detection
         core_dir = os.path.dirname(os.path.abspath(__file__))
         base_dir = os.path.dirname(core_dir) # Go up to the root
         
         index_dir = os.path.join(base_dir, "data", "bm25_index")
-        if bm25s and os.path.exists(os.path.join(index_dir, "params.index.json")):
+        if os.path.exists(os.path.join(index_dir, "params.index.json")):
             self.bm25 = bm25s.BM25.load(index_dir, load_corpus=True)
         else: self.bm25 = None
 

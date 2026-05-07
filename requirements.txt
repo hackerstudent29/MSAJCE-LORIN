@@ -6,6 +6,13 @@ requests
 flask[async]
 google-generativeai
 pinecone
-upstash_redis
+langfuse<3.0.0
+langsmith
+bm25s
+PyStemmer
 cohere
+upstash_redis
+reportlab
+fpdf2
+asyncpg
 flask-cors
