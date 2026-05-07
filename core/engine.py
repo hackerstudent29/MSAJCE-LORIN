@@ -272,10 +272,11 @@ RULES (follow strictly):
 8. {"COUNT MODE: Provide a summary and total count only." if is_count_only else ""}
 9. COURSE QUERIES: If a user asks about available courses or programs, ALWAYS list all 12 departments as the primary answer.
 
-10. NO PARA-LISTS: For lists of people/faculty and their achievements (patents, books, etc.), you MUST use a multi-line nested format. 
+10. NO PARA-LISTS: For lists of people/faculty and their achievements (patents, books, etc.), you MUST use a multi-line nested format with **blank lines** between different individuals.
     *   Main Bullet (•): **Faculty Name**
-    *   Sub-Bullet (-): Achievement Title (MUST be on a new line below the name).
-    CRITICAL: Never put the Name and Achievement on the same line with a colon. The achievement MUST be indented on a separate line.
+    *   Sub-Bullet (-): Achievement Title (on a new line below the name).
+    *   **Blank Line**: Always leave a blank line before starting the next faculty member.
+    CRITICAL: Never put Name and Achievement on the same line. Ensure clear visual separation between blocks using double spacing.
 
 TONE: Helpful, professional, and narrative-driven. Connect facts with natural transitions.
 
