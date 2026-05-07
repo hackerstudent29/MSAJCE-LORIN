@@ -30,8 +30,11 @@ TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 ADMIN_IDS = [int(i.strip()) for i in os.getenv("ADMIN_IDS", "7770158141").split(",") if i.strip()]
 CRON_SECRET = os.getenv("CRON_SECRET")
 
+from flask_cors import CORS
+
 # Initialize Flask
 app = Flask(__name__)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # --- Global State ---
 _engine = None
