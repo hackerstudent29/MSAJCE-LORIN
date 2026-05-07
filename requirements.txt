@@ -2,10 +2,8 @@ python-telegram-bot
 openai
 python-dotenv
 httpx
-requests
 flask[async]
 google-generativeai
 pinecone
 upstash_redis
-cohere
 flask-cors

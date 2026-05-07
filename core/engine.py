@@ -11,7 +11,11 @@ except ImportError:
     bm25s = None
     PyStemmer = None
 
-import cohere
+try:
+    import cohere
+except ImportError:
+    cohere = None
+
 import logging
 import asyncio
 from datetime import datetime
@@ -84,7 +88,10 @@ class RAGEngine:
         except: self.index = None
 
         try:
-            self.co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
+            if cohere:
+                self.co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
+            else:
+                self.co = None
         except: self.co = None
 
         try:
