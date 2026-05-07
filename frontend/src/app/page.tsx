@@ -87,14 +87,19 @@ export default function ChatPage() {
         setInput(""); setFiles([]); setPastes([]); setIsLoading(true);
 
         try {
-            const res = await fetch("/api/chat", {
+            // POINTING TO YOUR ACTUAL BOT URL
+            const BACKEND_URL = "https://msajce-lorin.vercel.app/api/chat";
+            
+            const res = await fetch(BACKEND_URL, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message: text, model, thinking }),
             });
             const data = await res.json();
-            setMessages(p => [...p, { id: (Date.now() + 1).toString(), role: "bot", content: data.response || "Error." }]);
-        } catch { /* error handling */ } finally { setIsLoading(false); }
+            setMessages(p => [...p, { id: (Date.now() + 1).toString(), role: "bot", content: data.response || "I encountered an error. Please try again." }]);
+        } catch (e) { 
+            setMessages(p => [...p, { id: Date.now().toString(), role: "bot", content: "Connection Error: Please ensure your Bot is awake at msajce-lorin.vercel.app" }]);
+        } finally { setIsLoading(false); }
     };
 
     return (
@@ -117,13 +122,13 @@ export default function ChatPage() {
                 ) : (
                     <div className="max-w-3xl mx-auto px-4 space-y-8">
                         {messages.map(m => (
-                            <div key={m.id} className="flex gap-4 group">
+                            <div key={m.id} className={`flex gap-4 group ${m.role === "user" ? "flex-row-reverse text-right" : ""}`}>
                                 <div className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 ${m.role === "user" ? "bg-zinc-700" : "bg-accent shadow-lg shadow-accent/20"}`}>
                                     {m.role === "user" ? <User size={18} className="text-white" /> : <Bot size={18} className="text-white" />}
                                 </div>
                                 <div className="flex-1 space-y-1">
                                     <p className="text-[11px] font-bold uppercase text-text-500 tracking-widest">{m.role === "user" ? "Principal / Faculty" : "LORIN Intelligence"}</p>
-                                    <div className="text-zinc-800 dark:text-zinc-200 leading-relaxed whitespace-pre-wrap">{m.content}</div>
+                                    <div className={`inline-block max-w-[85%] text-zinc-800 dark:text-zinc-200 leading-relaxed whitespace-pre-wrap ${m.role === "user" ? "bg-bg-200 p-3 rounded-2xl" : ""}`}>{m.content}</div>
                                 </div>
                             </div>
                         ))}
