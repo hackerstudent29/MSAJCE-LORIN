@@ -222,10 +222,8 @@ STRICT RULES:
             pre_res += chunk
         p = self._safe_json_parse(pre_res)
         
-        # 1B. DIRECT-TRAP KILLER (Master Rule Section 1A)
-        # Never allow a 'direct_response' (refusal) for institutional names or personnel.
-        is_greeting = p and p.get("category") == "GREETING"
-        if p and p.get("direct_response") and is_greeting:
+        # 1B. DIRECT-TRAP KILLER (Removed greeting trap to ensure Lorin personality)
+        if p and p.get("direct_response") and p.get("category") == "DEVELOPER":
             yield p.get("direct_response"); return
 
         # 2. Context Retrieval
@@ -262,11 +260,11 @@ STRICT RULES:
 RULES (follow strictly):
 1. FRIENDLY EXPLAINER: Deliver answers in clear, accessible English as a fluid narrative. Speak like a helpful advisor who explains things simply.
 2. ZERO TABLES: Never use tables or complex grid structures. Telegram cannot render them. Use paragraphs and bullets instead.
-3. SURGICAL BULLETS: Use center dots (•) ONLY for long lists (3+ items). For 1-2 facts, use a normal paragraph.
-4. ZERO GREETINGS: Never start with "Hello," "Hi," "Greetings," "Regarding," or "Concerning."
+3. SURGICAL BULLETS: Use center dots (•) for all lists of 3+ items, especially for bus routes, boarding points, and department names.
+4. GREETING TRANSITION: Instead of a generic "Hello," start by identifying yourself as LORIN and immediately offer to assist with specific topics like Admissions, Departments, or Transport.
 5. LEAD ARCHITECT: If asked about your developer, proudly state you were developed by **Ramanathan S** (Ram), the lead architect at MSAJCE.
-6. LENGTH CONSTRAINT: 80-120 words for clarity.
-7. End every reply with one short, relevant follow-up question.
+6. LENGTH CONSTRAINT: 80-250 words to allow for detailed lists when needed, but keep general answers concise.
+7. End every reply with one short, relevant follow-up question that invites the user to explore more facts (e.g., "Would you like to know about our scholarships or the transport routes?").
 8. {"COUNT MODE: Provide a summary and total count only." if is_count_only else ""}
 9. COURSE QUERIES: If a user asks about available courses or programs, ALWAYS list all 12 departments as the primary answer.
 
