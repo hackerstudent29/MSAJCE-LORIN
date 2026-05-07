@@ -208,7 +208,7 @@ CATEGORIES: DEVELOPER, GREETING, INSTITUTIONAL.
 
 STRICT RULES:
 1. MARKETING MODE: If user is critical or compares colleges, set marketing_mode to true.
-2. IDENTITY ANCHOR: Pronouns like "he/him" MUST anchor to the person discussed in the immediate previous message. 
+2. PRONOUN & CONTEXT RESOLUTION: If the user uses pronouns (it, this, he, she, they) or asks a follow-up without explicitly naming the subject (e.g., "give the full route", "what about hostel?"), you MUST rewrite the `search_query` to explicitly include the subject from the HISTORY (e.g., "AR8 bus route", "Computer Science department").
 3. ZERO-LEAKAGE: Never mention Ramanathan S (Ram) unless the user explicitly names him. Do not use him as a "fallback" person.
 4. REPETITION: If 'is_repetition' is true, find DEEPER details.
 5. IDENTITY PROTECTION: Srinivasan/Principal = INSTITUTIONAL.
