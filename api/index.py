@@ -293,3 +293,4 @@ async def trigger_sunday_report():
         return {"status": "ERROR", "message": str(e)}, 500
 
 app_handler = app
+handler = app  # Required by Vercel Python runtime
