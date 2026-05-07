@@ -11,7 +11,7 @@ def main():
     engine = RAGEngine()
     
     # Paths
-    chunks_path = os.path.join("data", "unified_master_chunks.json")
+    chunks_path = os.path.join("data", "knowledge_base", "unified_master_chunks.json")
     index_dir = os.path.join("data", "bm25_index")
     
     if not os.path.exists(chunks_path):
