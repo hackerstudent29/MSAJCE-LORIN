@@ -3,13 +3,12 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/index.py"
+      "destination": "api/index.py"
     }
   ],
-  "crons": [
-    {
-      "path": "/api/sunday-report",
-      "schedule": "30 3 * * 0" 
+  "functions": {
+    "api/index.py": {
+      "runtime": "vercel-python@0.1.0"
     }
-  ]
+  }
 }

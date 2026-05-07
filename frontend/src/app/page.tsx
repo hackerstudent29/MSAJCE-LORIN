@@ -87,7 +87,7 @@ export default function ChatPage() {
         setInput(""); setFiles([]); setPastes([]); setIsLoading(true);
 
         try {
-            // POINTING TO YOUR ACTUAL BOT URL
+            // YOUR BOT BACKEND URL
             const BACKEND_URL = "https://msajce-lorin.vercel.app/api/chat";
             
             const res = await fetch(BACKEND_URL, {
