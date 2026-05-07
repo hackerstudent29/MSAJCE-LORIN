@@ -21,9 +21,9 @@ Every component of Lorin’s infrastructure was selected for a specific strategi
 *   **What Benefits?**: Vercel allows us to run "Serverless Functions." This means the server only "wakes up" when a user asks a question.
 *   **Why it Fits?**: This is perfect for a college environment. During busy admission seasons, the system scales instantly to handle thousands of queries, but during holidays, it costs the institution **zero** because there are no active servers to maintain.
 
-### **B. Master Overdrive Pool (API Resilience)**
-*   **The Strategy**: The engine manages a **Round-Robin Pool** of multiple API keys (Vercel, OpenRouter, Groq).
-*   **The Logic**: If a primary key fails or hits a limit, the system automatically "rotates" to the next key in the pool and retries. This ensures **Zero-Downtime** for the college, even if external AI providers have temporary outages.
+### **B. Multi-Provider Failover (The "Unkillable" Architecture)**
+*   **The Strategy**: Lorin is built with **Multi-Cloud Redundancy**. It manages a **Round-Robin Pool** of multiple API providers (Google Gemini, Groq/Llama 3.3, and OpenRouter).
+*   **The Logic**: If the primary AI gateway (Google) has a global outage, Lorin **automatically hot-swaps** to a backup provider in real-time. This ensures that while other AI systems might fail, Lorin remains 100% operational for the institution.
 
 ### **C. Hybrid Memory Architecture**
 *   **The Components**: Uses **Upstash Redis** for "Active Memory" and **Supabase** for "Forensic Memory."
@@ -38,9 +38,9 @@ How Lorin processes a query to maximize value while minimizing institutional exp
 *   **The Logic**: Lorin automatically adjusts its language complexity to match the "User Level."
 *   **The Benefit**: It simplifies complex institutional jargon into **accessible, clear English**. This ensures that both a first-year student and a senior administrator can understand the same factual data without confusion.
 
-### **Step 2: Typo-Resistant Intent Analysis**
-*   **The Logic**: The engine recognizes common student typos like `"wo is"` or `"ho is"`.
-*   **Benefit**: Ensures the correct persona (e.g., Person Mode) is triggered even with sloppy typing, preventing retrieval errors.
+### **Step 2: Statistical Summarization Mode**
+*   **The Logic**: If a user asks "How many..." or "What percentage...", Lorin automatically switches to **Stat Mode**.
+*   **The Benefit**: Instead of a long narrative, it provides a concise, high-impact summary and total count. This provides instant clarity for data-driven institutional queries.
 
 ### **Step 3: Neural Reranking (The "Second Judge")**
 *   **The Process**: We use **Cohere v3.0** to re-evaluate search results.
@@ -56,33 +56,33 @@ How Lorin processes a query to maximize value while minimizing institutional exp
 Lorin adapts its identity based on the user’s "Energy" and intent.
 
 *   **Deterministic Hard-Check (Priority Override)**: If a fact exists in the **Ground Truth**, Lorin is hardcoded to prioritize it over ANY retrieved context. This makes the AI "Legally Safe" for the institution.
+*   **Zero-Leakage Identity Protection**: Lorin is strictly programmed to protect the privacy of the development team. It remains a purely institutional representative, never mentioning its lead architect unless explicitly and directly asked.
 *   **Defensive Marketing Mode**: If a user is critical, Lorin switches to **Advocacy Mode**, highlighting NAAC A+ Grades and Placements to protect the college brand.
-*   **VIP Fast-Pass**: Automatically pulls verified leadership profiles when the Principal or Student Council is mentioned.
 
 ---
 
 ## 🛡️ 5. FORENSIC GOVERNANCE & SECURITY
 
-### **A. Multi-Tiered User Ban System**
-Lorin protects itself from bad actors through a **Redis-backed strike system**:
-*   **Abuse/Spam Detection**: Automatically detects bad words or rapid-fire "spam" queries.
+### **A. Financial Guardrails (Quota Enforcement)**
+Lorin features built-in "Cost-Protection Firewalls" to manage the college budget:
+*   **Daily Quota**: Users are limited to **30 queries per day**.
+*   **Burst Protection**: Users are limited to **6 queries per minute**.
+*   **Value**: Prevents budget-drain and protects the system from automated spam-attacks or bot-traffic.
+
+### **B. Multi-Tiered User Ban System**
 *   **3 Strikes**: 6-hour temporary ban.
 *   **5 Strikes**: 24-hour ban.
 *   **10 Strikes**: Full **7-day institutional ban**.
-*   **Value**: Ensures that toxic users or bots cannot waste the institution's API budget or degrade the system's performance.
+*   **Value**: Ensures that toxic users or bad actors cannot degrade the system's performance for the rest of the student body.
 
-### **B. Triple-Pillar Strategic Audit (Sunday Intelligence)**
+### **C. Triple-Pillar Strategic Audit (Sunday Intelligence)**
 Every Sunday at 09:00 AM, Lorin acts as its own **Business Intelligence Analyst**, delivering a three-part forensic package:
 1.  **🛡️ Pillar 1 (Forensic Audit)**: Raw interaction telemetry for total transparency.
 2.  **🛠️ Pillar 2 (Strategic Gap Analysis)**: Identifies where the AI struggled or where college documentation is missing.
 3.  **🏛️ Pillar 3 (Institutional ROI)**: Executive summary of efficiency, token usage, and system value.
 
-### **C. The Gibberish Shield**
+### **D. The Gibberish Shield**
 *   **The Logic**: Uses vowel-ratio analysis to ignore keyboard-mashing or random noise.
-*   **Value**: Protects the institution's budget from bad actors, spam, and bot-attacks.
-
-### **D. The Emergency Alert System**
-*   **The Logic**: If the database logging fails, Lorin sends an **Emergency Telegram Message** to the developer instantly.
 
 ---
 
