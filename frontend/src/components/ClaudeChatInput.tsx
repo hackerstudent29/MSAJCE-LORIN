@@ -98,7 +98,13 @@ const PastedContentCard: React.FC<{ content: PastedContent; onRemove: (id: strin
     </div>
 );
 
-const ModelSelector: React.FC<{ models: any[]; selectedModel: string; onSelect: (id: string) => void }> = ({ models, selectedModel, onSelect }) => {
+interface Model {
+    id: string;
+    name: string;
+    description: string;
+}
+
+const ModelSelector: React.FC<{ models: Model[]; selectedModel: string; onSelect: (id: string) => void }> = ({ models, selectedModel, onSelect }) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
     const currentModel = models.find(m => m.id === selectedModel) || models[0];

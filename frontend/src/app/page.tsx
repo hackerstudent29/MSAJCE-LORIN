@@ -15,7 +15,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { ClaudeChatInput, AttachedFile } from "@/components/ClaudeChatInput";
+import { ClaudeChatInput, AttachedFile } from "../components/ClaudeChatInput";
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
