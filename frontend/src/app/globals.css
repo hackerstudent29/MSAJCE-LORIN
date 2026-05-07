@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0d0d0d;
+  --bg-100: #ffffff;
+  --bg-200: #f7f7f7;
+  --bg-300: #e5e5e5;
+  --text-100: #0d0d0d;
+  --text-200: #1a1a1a;
+  --text-300: #404040;
+  --text-400: #6b6b6b;
+  --text-500: #9ca3af;
+  --accent: #d46b4f;
+  --accent-hover: #b55a42;
+}
+
+.dark {
+  --background: #212121;
+  --foreground: #ececf1;
+  --bg-100: #212121;
+  --bg-200: #30302e;
+  --bg-300: #404040;
+  --text-100: #ececf1;
+  --text-200: #d1d5db;
+  --text-300: #9ca3af;
+  --text-400: #6b7280;
+  --text-500: #4b5563;
+  --accent: #d46b4f;
+  --accent-hover: #e07d63;
+}
+
+@theme {
+  --color-bg-100: var(--bg-100);
+  --color-bg-200: var(--bg-200);
+  --color-bg-300: var(--bg-300);
+  --color-text-100: var(--text-100);
+  --color-text-200: var(--text-200);
+  --color-text-300: var(--text-300);
+  --color-text-400: var(--text-400);
+  --color-text-500: var(--text-500);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+}
+
+/* ChatGPT/Claude Style Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: var(--bg-300); border-radius: 10px; }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { animation: fade-in 0.3s ease-out forwards; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
