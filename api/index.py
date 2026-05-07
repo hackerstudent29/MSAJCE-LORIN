@@ -1,3 +1,4 @@
+# Forced rebuild for Telegram Bot
 import os
 import sys
 import logging
