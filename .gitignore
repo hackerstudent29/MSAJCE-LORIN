@@ -1,16 +1,15 @@
 .env
 __pycache__/
 *.pyc
+.env
+__pycache__/
+*.pyc
 bot_logs.txt
 scratch/
 brain/
 .DS_Store
 *.log
+# data/bm25_index/
 backend.env
 DEPLOYMENT_VARS.txt
-.vercel
-node_modules/
-.next/
-# frontend/
-
 .vercel

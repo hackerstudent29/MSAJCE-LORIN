@@ -15,4 +15,3 @@ upstash_redis
 reportlab
 fpdf2
 asyncpg
-flask-cors
