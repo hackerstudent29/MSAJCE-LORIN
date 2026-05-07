@@ -270,15 +270,37 @@ async def chat_api():
     try:
         data = request.get_json(force=True)
         user_query = data.get("message")
+        user_id = data.get("user_id", "web_default")
+        thinking = data.get("thinking", False)
+        
         if not user_query:
             return {"response": "Empty message"}, 400
         
         engine = await get_engine()
+        
+        # Consistent History Management (Synced with Telegram)
+        redis_key = f"user_{user_id}_history"
+        hist_raw = await engine.redis.get(redis_key)
+        history = json.loads(hist_raw) if hist_raw else []
+        history_str = "\n".join([f"User: {h['q']}\nBot: {h['a']}" for h in history])
+        
         full_response = ""
-        # The engine.query_stream yields chunks
-        async for chunk in engine.query_stream(user_query):
+        # The engine.query_stream uses history to maintain context
+        async for chunk in engine.query_stream(user_query, history=history_str):
             if isinstance(chunk, str):
                 full_response += chunk
+            elif isinstance(chunk, dict) and chunk.get("type") == "telemetry":
+                # Handle telemetry if needed for web
+                pass
+        
+        # Save to Redis history (limit to 5 turns to stay fast)
+        history.append({"q": user_query, "a": full_response})
+        await engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
+        
+        # Log to interaction DB (Supabase)
+        try:
+            await log_to_supabase(user_id, "Web User", user_query, full_response, {"source": "web"})
+        except: pass
         
         return {"response": full_response}, 200
     except Exception as e:
