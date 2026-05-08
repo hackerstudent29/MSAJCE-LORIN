@@ -263,8 +263,9 @@ GROUND TRUTH (MUST USE FOR DIRECT ANSWERS):
 Return JSON: {category, search_query, alternative_queries: [q1, q2], direct_response, is_count_only, is_repetition, marketing_mode}
 
 STRICT RULES:
-1. PRONOUN & CONTEXT RESOLUTION: If the user uses pronouns (it, this, he, she, they), rewrite `search_query` and `alternative_queries` to explicitly include the subject from the HISTORY.
-2. ALTERNATIVE QUERIES: Generate 2 high-quality search variations.
+1. GROUND TRUTH PRIORITY: If the query is about CSI, the Principal, or College Code, you MUST fill the `direct_response` field with the answer from GROUND TRUTH and set `category` to "identity". Do not rely on search variations for these.
+2. PRONOUN & CONTEXT RESOLUTION: If the user uses pronouns (it, this, he, she, they), rewrite `search_query` and `alternative_queries` to explicitly include the subject from the HISTORY.
+3. ALTERNATIVE QUERIES: Generate 2 high-quality search variations.
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ]
