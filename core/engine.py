@@ -128,26 +128,9 @@ class RAGEngine:
         return final_hits
 
     def build_metadata_filter(self, user_query: str) -> dict:
-        """Enterprise Intent-to-Filter Mapping."""
-        q = user_query.lower()
-        filters = {"is_active": True} # Always only active data
-        
-        # 1. Chunk Type Specific Filtering
-        if any(w in q for w in ["who is", "contact", "faculty", "hod", "principal", "officer", "staff"]):
-            filters["chunk_type"] = {"$in": ["contact", "paragraph"]}
-        elif any(w in q for w in ["rule", "allowed", "policy", "permitted", "prohibited", "fine", "ragging"]):
-            filters["chunk_type"] = "rule"
-        elif any(w in q for w in ["bus", "route", "timing", "schedule", "table", "fare", "fee"]):
-            filters["chunk_type"] = "table"
-            
-        # 2. Department Specific Filtering
-        departments = ["cse", "it", "ece", "eee", "mech", "civil", "aids", "aiml", "csbs", "cyber", "vlsi", "act", "transport", "hostel", "placement"]
-        for dept in departments:
-            if dept in q:
-                filters["department"] = {"$eq": dept.upper()}
-                break
-                
-        return filters
+        # SYSTEMIC FIX: Removed intent-based filtering to prevent "blind spots".
+        # We now search the entire knowledge base to ensure no facts are missed.
+        return {} 
 
     @traceable(name="Hybrid Retrieval")
     async def get_context(self, queries: list, trace):
@@ -215,15 +198,42 @@ class RAGEngine:
         results = sorted(merged, key=lambda x: x.get("f_score", 1.0), reverse=True)
         if not results: return []
 
-        # LLM Reranking
+        # Systemic LLM Reranking Fallback
         texts = [r["text"] for r in results[:20]]
         try:
-            loop = asyncio.get_event_loop()
-            rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=10))
-            reranked = [results[r.index] for r in rerank.results]
-        except: reranked = results[:10]
+            # Primary: Cohere (if available)
+            if self.co:
+                loop = asyncio.get_event_loop()
+                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=10))
+                reranked = [results[r.index] for r in rerank.results]
+                return reranked
+        except: pass
+            
+        # SECONDARY SYSTEMIC FIX: Gemini Re-ranker (Stable & Intelligent)
+        try:
+            context_summary = "\n".join([f"[{i}] {r.get('text', '')[:300]}" for i, r in enumerate(results[:20])])
+            rerank_prompt = {
+                "model": "google/gemini-2.0-flash-exp:free",
+                "messages": [
+                    {"role": "system", "content": "Pick the indices [0, 1, 2...] of the chunks that BEST answer the user query. Return only a comma-separated list of numbers. If none match, return 'none'."},
+                    {"role": "user", "content": f"Query: {primary_q}\nChunks:\n{context_summary}"}
+                ]
+            }
+            
+            rerank_raw = ""
+            async for chunk in self._safe_vercel_request(rerank_prompt):
+                if isinstance(chunk, str): rerank_raw += chunk
+            
+            indices = re.findall(r'\d+', rerank_raw)
+            if indices:
+                reranked = []
+                for idx in indices:
+                    i = int(idx)
+                    if i < len(results): reranked.append(results[i])
+                if reranked: return reranked
+        except: pass
 
-        return reranked
+        return results[:10]
 
     def _post_process(self, text: str) -> str:
         """Strict aesthetic hardening (Master Rule Section 3)."""
@@ -244,19 +254,13 @@ class RAGEngine:
 
     async def query_stream(self, user_query, history=None):
         start_time = time.time()
-        trace = self.langfuse.trace(name="Lorin RAG Query", input=user_query)
+        trace = self.langfuse.trace(name="Lorin Enterprise RAG", input=user_query)
         
-        # EMERGENCY OVERRIDE (Hard-coded for pitch perfection)
-        lower_q = user_query.lower()
-        if "csi" in lower_q and ("president" in lower_q or "who" in lower_q):
-            yield "Saqlin Mustaq M is the Vice President of the Computer Society of India (CSI) at MSAJCE (Batch 2023-2027). The society is overseen by the Principal, Dr. K.S. Srinivasan."
-            return
-
         # 1. Intent & Refinement (Multi-Query Expansion)
         span = trace.span(name="Pre-Processor")
         data_pre = {
             "model": self.generation_model,
-            "cache_buster": str(time.time()), # Force fresh AI response
+            "cache_buster": str(time.time()),
             "messages": [
                 {"role": "system", "content": """Classify intent and generate 3 search variations.
 Analyze HISTORY to see if this is a follow-up, repetition, or CRITICISM.
