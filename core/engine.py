@@ -407,12 +407,15 @@ History: {history if history else "None"}"""
                 os.getenv("VERCEL_AI_KEY_5"), 
                 os.getenv("VERCEL_AI_KEY_6"),
                 os.getenv("AI_GATEWAY_API_KEY")
-            ]
+            ],
+            "openrouter": [os.getenv("OPENROUTER_API_KEY")],
+            "groq": [os.getenv("GROQ_API_KEY")]
         }
         
         # Consolidate active keys
         pool = []
         for p, k_list in keys.items():
+            if not k_list: continue
             for k in k_list:
                 if k: pool.append({"provider": p, "key": k})
         
