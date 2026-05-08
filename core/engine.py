@@ -408,7 +408,6 @@ History: {history if history else "None"}"""
                 os.getenv("VERCEL_AI_KEY_6"),
                 os.getenv("AI_GATEWAY_API_KEY")
             ],
-            "openrouter": [os.getenv("OPENROUTER_API_KEY")],
             "groq": [os.getenv("GROQ_API_KEY")]
         }
         
