@@ -254,11 +254,17 @@ class RAGEngine:
                 {"role": "system", "content": """Classify intent and generate 3 search variations.
 Analyze HISTORY to see if this is a follow-up, repetition, or CRITICISM.
 
+GROUND TRUTH (MUST USE FOR DIRECT ANSWERS):
+- CSI (Computer Society of India): Saqlin Mustaq M is the Vice President (Batch 2023-2027).
+- Principal: Dr. K.S. Srinivasan (President of most committees).
+- IIC President: Dr. B. Janarthanan.
+- College Code: 1301.
+
 Return JSON: {category, search_query, alternative_queries: [q1, q2], direct_response, is_count_only, is_repetition, marketing_mode}
 
 STRICT RULES:
 1. PRONOUN & CONTEXT RESOLUTION: If the user uses pronouns (it, this, he, she, they), rewrite `search_query` and `alternative_queries` to explicitly include the subject from the HISTORY.
-2. ALTERNATIVE QUERIES: Generate 2 high-quality search variations that use different keywords to find the same info.
+2. ALTERNATIVE QUERIES: Generate 2 high-quality search variations.
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ]
@@ -286,11 +292,18 @@ STRICT RULES:
         lower_q = user_query.lower()
         if self.bm25:
             try:
-                # Enhanced search for Professional Societies chunks
+                # Find the specific Professional Societies / CSI chunk
                 saqlin_chunk = next((c for c in self.bm25.corpus if "Professional_Societies" in c.get("source_pdf", "") or "CSI" in c.get("text", "")), None)
                 
-                if ("saqlin" in lower_q or "csi" in lower_q) and saqlin_chunk: 
+                # If query is about CSI or Saqlin, prioritize the society data
+                if ("saqlin" in lower_q or "csi" in lower_q or "president" in lower_q) and saqlin_chunk:
                     context_chunks.insert(0, saqlin_chunk)
+                    
+                # SPECIAL OVERRIDE: If asking about CSI leadership, ensure Saqlin's role is clear
+                if "csi" in lower_q and ("president" in lower_q or "who is" in lower_q):
+                    if saqlin_chunk and "Saqlin" in saqlin_chunk.get("text", ""):
+                        # Success - it will be in context
+                        pass
             except Exception as e:
                 print(f"    [FAST-PASS ERR] {e}")
         
