@@ -1,0 +1,22 @@
+{
+  "csi_vp": {
+    "value": "Saqlin Mustaq M (Batch 2023-2027)",
+    "valid_until": "2027-05-31",
+    "source": "Professional_Societies_2024.pdf"
+  },
+  "principal": {
+    "value": "Dr. K.S. Srinivasan",
+    "valid_until": "2026-12-31",
+    "source": "Institutional_Policy.pdf"
+  },
+  "iic_president": {
+    "value": "Dr. B. Janarthanan",
+    "valid_until": "2026-12-31",
+    "source": "IIC_Council_List.pdf"
+  },
+  "college_code": {
+    "value": "1301",
+    "valid_until": "2099-12-31",
+    "source": "Anna_University_Affiliation"
+  }
+}

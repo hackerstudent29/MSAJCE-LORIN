@@ -1,0 +1,55 @@
+[
+  {
+    "id": "CSI_VP",
+    "query": "Who is the Vice President of CSI?",
+    "expected_keywords": [
+      "Saqlin",
+      "Mustaq"
+    ],
+    "category": "Identity",
+    "actual_response": "Hello! I'm LORIN, the institutional AI for MSAJCE.\n\nI do not have information about the Vice President of the Computer Society of India (CSI) at MSAJCE. However, I can share that Saqlin Mustaq M from AI&DS (2023-2027) is a Vice President at MSAJCE.\n\nWould you like to explore other student leadership roles or perhaps learn about the different departments we have at MSAJCE?\n",
+    "status": "PASS"
+  },
+  {
+    "id": "WESLIN_ROLE",
+    "query": "Who is Weslin D?",
+    "expected_keywords": [
+      "Associate Professor",
+      "Information Technology",
+      "IT"
+    ],
+    "category": "Faculty",
+    "actual_response": "Hello! I'm LORIN, the institutional AI for MSAJCE.\n\nWeslin D is an academic staff member at MSAJCE. Currently, he serves as an Associate Professor in the Department of Information Technology. He holds an M.E. and a Ph.D. His expertise lies in Computer Science and Engineering.\n\nWould you like to know more about the faculty in other departments?\n",
+    "status": "PASS"
+  },
+  {
+    "id": "COLLEGE_CODE",
+    "query": "What is the college code for MSAJCE?",
+    "expected_keywords": [
+      "1301"
+    ],
+    "category": "Identity",
+    "actual_response": "Hello! I'm LORIN, the institutional AI for MSAJCE.\n\nThe official TNEA Counselling Code for Mohamed Sathak A.J. College of Engineering is 1301. This code is essential for the counselling process.\n\nWould you like to know more about the admission process or any other details?\n",
+    "status": "PASS"
+  },
+  {
+    "id": "BUS_COUNT",
+    "query": "How many buses does the college have?",
+    "expected_keywords": [
+      "22"
+    ],
+    "category": "Infrastructure",
+    "actual_response": "Hello! I'm LORIN, the institutional AI for MSAJCE.\n\nMSAJCE has a fleet of 22 buses, along with 1 Tata ACE, and 1 ambulance to serve the transportation needs of students and staff residing in and around the campus. These buses operate on various routes across Chennai, Chengalpattu, Kanchipuram and Thiruvallur districts, ensuring convenient access to the college on all working days. The transport facilities are also utilized for local social service, sports, NCC/NSS activities, placement and training, industrial visits, and educational trips.\n\nWould you like to know more about the specific bus routes or the transport fees?\n",
+    "status": "PASS"
+  },
+  {
+    "id": "IIC_PRESIDENT",
+    "query": "Who is the IIC President?",
+    "expected_keywords": [
+      "Janarthanan"
+    ],
+    "category": "Identity",
+    "actual_response": "Hello! I'm LORIN, the institutional AI for MSAJCE.\n\nThe IIC President is Dr. B. Janarthanan, a Professor in the Department of Mechanical Engineering at MSAJCE. He can be reached via email at mech.janarthanan@msajce-edu.in.\n\nWould you like to know more about the IIC's functions or its council members?\n",
+    "status": "PASS"
+  }
+]

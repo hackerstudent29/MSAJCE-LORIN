@@ -86,6 +86,29 @@ class RAGEngine:
         self.generation_model = "google/gemini-2.0-flash-001"
         self.embedding_model = "openai/text-embedding-3-small"
         self.langfuse = Langfuse()
+        
+        # AUDIT FIX: Ground Truth 2.0 (Problem 5)
+        self.ground_truth_path = os.path.join(base_dir, "data", "ground_truth.json")
+        self.ground_truth = self._load_ground_truth()
+
+    def _load_ground_truth(self):
+        if os.path.exists(self.ground_truth_path):
+            try:
+                with open(self.ground_truth_path, 'r') as f:
+                    data = json.load(f)
+                # Verify expiry
+                now = datetime.now()
+                fresh_data = {}
+                for key, fact in data.items():
+                    expiry = datetime.strptime(fact.get("valid_until", "2000-01-01"), "%Y-%m-%d")
+                    if now < expiry:
+                        fresh_data[key] = fact.get("value")
+                    else:
+                        logger.warning(f"Fact '{key}' has expired. Skipping fast-pass.")
+                return fresh_data
+            except Exception as e:
+                logger.error(f"Error loading ground truth: {e}")
+        return {}
 
     def _safe_json_parse(self, text):
         try: return json.loads(text.strip())
@@ -97,35 +120,25 @@ class RAGEngine:
         return None
 
     def rrf_merge(self, semantic_hits: list, keyword_hits: list, k: int = 60) -> list:
-        """Reciprocal Rank Fusion (RRF) to merge two ranked lists."""
-        scores = {}
+        """Robust Reciprocal Rank Fusion (RRF)."""
+        scores = {} # id -> RRF score
+        all_hits = {} # id -> full hit object
+        
+        # 1. Process Semantic
         for rank, hit in enumerate(semantic_hits):
             h_id = hit["id"]
+            all_hits[h_id] = hit
             scores[h_id] = scores.get(h_id, 0) + 1.0 / (k + rank)
-            if h_id not in scores: scores[h_id] = hit # Keep the full object
             
+        # 2. Process Keyword
         for rank, hit in enumerate(keyword_hits):
             h_id = hit["id"]
-            # Combined score + maintain hit object
-            if h_id in scores:
-                if isinstance(scores[h_id], dict): # First time seeing it from keyword
-                    scores[h_id] = (1.0 / (k + rank)) + (1.0 / (k + 0)) # Placeholder rank
-                else:
-                    scores[h_id] += 1.0 / (k + rank)
-            else:
-                scores[h_id] = 1.0 / (k + rank)
-
-        # Build final list
-        final_hits = []
-        # Re-attach metadata if we only have the score
-        all_hits = {h["id"]: h for h in semantic_hits + keyword_hits}
-        
-        sorted_ids = sorted(scores.keys(), key=lambda x: scores[x] if isinstance(scores[x], float) else 1.0, reverse=True)
-        for h_id in sorted_ids:
-            hit = all_hits[h_id]
-            final_hits.append(hit)
+            if h_id not in all_hits: all_hits[h_id] = hit
+            scores[h_id] = scores.get(h_id, 0) + 1.0 / (k + rank)
             
-        return final_hits
+        # 3. Sort by RRF score
+        sorted_ids = sorted(scores.keys(), key=lambda x: scores[x], reverse=True)
+        return [all_hits[h_id] for h_id in sorted_ids]
 
     def build_metadata_filter(self, user_query: str) -> dict:
         # SYSTEMIC FIX: Removed intent-based filtering to prevent "blind spots".
@@ -161,12 +174,11 @@ class RAGEngine:
                     tokens = bm25s.tokenize(q, stemmer=self.stemmer)
                     chunks, scores = self.bm25.retrieve(tokens, k=15)
                     for c, s in zip(chunks[0], scores[0]):
-                        # Manual meta filter
-                        match = True
-                        for k_f, v_f in meta_filter.items():
-                            if k_f == "is_active": continue
-                            if c["metadata"].get(k_f) != v_f: match = False; break
-                        if match: b_hits.append({"text": c["text"], "score": float(s), "id": c["chunk_id"], "metadata": c["metadata"]})
+                        # Robust check for data preservation
+                        if isinstance(c, dict):
+                            b_hits.append({"text": c.get("text", ""), "score": float(s), "id": c.get("chunk_id", ""), "metadata": c.get("metadata", {})})
+                        else:
+                            b_hits.append({"text": str(c), "score": float(s), "id": hashlib.md5(str(c).encode()).hexdigest()[:10], "metadata": {}})
                 
                 return p_hits, b_hits
             except: return [], []
@@ -198,42 +210,59 @@ class RAGEngine:
         results = sorted(merged, key=lambda x: x.get("f_score", 1.0), reverse=True)
         if not results: return []
 
-        # Systemic LLM Reranking Fallback
+        # SYSTEMIC BALANCE: Reviewing top 20 candidates (Optimal for Pitch Speed)
         texts = [r["text"] for r in results[:20]]
+        
+        # AUDIT FIX: Re-ranker Fallback (Problem 2)
+        reranked = None
         try:
             # Primary: Cohere (if available)
             if self.co:
                 loop = asyncio.get_event_loop()
                 rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=10))
                 reranked = [results[r.index] for r in rerank.results]
-                return reranked
         except: pass
             
-        # SECONDARY SYSTEMIC FIX: Gemini Re-ranker (Stable & Intelligent)
-        try:
-            context_summary = "\n".join([f"[{i}] {r.get('text', '')[:300]}" for i, r in enumerate(results[:20])])
-            rerank_prompt = {
-                "model": "google/gemini-2.0-flash-exp:free",
-                "messages": [
-                    {"role": "system", "content": "Pick the indices [0, 1, 2...] of the chunks that BEST answer the user query. Return only a comma-separated list of numbers. If none match, return 'none'."},
-                    {"role": "user", "content": f"Query: {primary_q}\nChunks:\n{context_summary}"}
-                ]
-            }
-            
-            rerank_raw = ""
-            async for chunk in self._safe_vercel_request(rerank_prompt):
-                if isinstance(chunk, str): rerank_raw += chunk
-            
-            indices = re.findall(r'\d+', rerank_raw)
-            if indices:
-                reranked = []
-                for idx in indices:
-                    i = int(idx)
-                    if i < len(results): reranked.append(results[i])
-                if reranked: return reranked
-        except: pass
+        if not reranked:
+            try:
+                # Secondary: Gemini Re-ranker (Balanced Vision)
+                context_summary = "\n".join([f"[{i}] {r.get('text', '')[:1200]}" for i, r in enumerate(results[:20])])
+                rerank_prompt = {
+                    "model": "google/gemini-2.0-flash-exp:free",
+                    "messages": [
+                        {"role": "system", "content": "Pick the indices [0, 1, 2...] of the chunks that BEST answer the user query. Return only a comma-separated list of numbers. If none match, return 'none'."},
+                        {"role": "user", "content": f"Query: {primary_q}\nChunks:\n{context_summary}"}
+                    ]
+                }
+                
+                rerank_raw = ""
+                async for chunk in self._safe_vercel_request(rerank_prompt):
+                    if isinstance(chunk, str): rerank_raw += chunk
+                
+                indices = re.findall(r'\d+', rerank_raw)
+                if indices:
+                    reranked = []
+                    for idx in indices:
+                        i = int(idx)
+                        if i < len(results): reranked.append(results[i])
+            except: pass
 
-        return results[:10]
+        # AUDIT FIX: Final Fallback to Score Sort (Problem 2)
+        if not reranked:
+            reranked = results[:10]
+
+        # AUDIT FIX: Confidence Gate (Problem 4)
+        # We calculate an aggregate relevance score. If the best result is too low, we flag it.
+        top_score = 0
+        if reranked:
+            # Simple heuristic: normalize Pinecone/BM25 scores
+            top_score = reranked[0].get("f_score", 0)
+            
+        # Attach confidence to metadata for the generator
+        for r in reranked:
+            r["confidence_low"] = (top_score < 0.3) # Threshold for "weak info"
+
+        return reranked
 
     def _post_process(self, text: str) -> str:
         """Strict aesthetic hardening (Master Rule Section 3)."""
@@ -256,49 +285,59 @@ class RAGEngine:
         start_time = time.time()
         trace = self.langfuse.trace(name="Lorin Enterprise RAG", input=user_query)
         
-        # 1. Intent & Refinement (Multi-Query Expansion)
-        span = trace.span(name="Pre-Processor")
-        data_pre = {
-            "model": self.generation_model,
-            "cache_buster": str(time.time()),
-            "messages": [
-                {"role": "system", "content": """Classify intent and generate 3 search variations.
-Analyze HISTORY to see if this is a follow-up, repetition, or CRITICISM.
-
-GROUND TRUTH (MUST USE FOR DIRECT ANSWERS):
-- CSI (Computer Society of India): Saqlin Mustaq M is the Vice President (Batch 2023-2027).
-- Principal: Dr. K.S. Srinivasan (President of most committees).
-- IIC President: Dr. B. Janarthanan.
-- College Code: 1301.
-
-Return JSON: {category, search_query, alternative_queries: [q1, q2], direct_response, is_count_only, is_repetition, marketing_mode}
-
-STRICT RULES:
-1. GROUND TRUTH PRIORITY: If the query is about CSI, the Principal, or College Code, you MUST fill the `direct_response` field with the answer from GROUND TRUTH and set `category` to "identity". Do not rely on search variations for these.
-2. PRONOUN & CONTEXT RESOLUTION: If the user uses pronouns (it, this, he, she, they), rewrite `search_query` and `alternative_queries` to explicitly include the subject from the HISTORY.
-3. ALTERNATIVE QUERIES: Generate 2 high-quality search variations.
-"""}, 
-                {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
-            ]
-        }
+        # AUDIT FIX: Initialize variables (Problem 1)
+        p = None
+        is_simple = len(user_query.split()) < 4 or any(w in user_query.lower() for w in ["hi", "hello", "bus", "code"])
         
-        pre_res = ""
-        async for chunk in self._safe_vercel_request(data_pre):
-            pre_res += chunk
-        p = self._safe_json_parse(pre_res)
+        queries = [user_query]
+        intent = "FACTUAL"
         
-        # 1B. DIRECT-TRAP KILLER
-        if p and p.get("direct_response") and p.get("category") == "DEVELOPER":
-            yield p.get("direct_response"); return
+        if not is_simple:
+            # AUDIT FIX: Inject dynamic ground truth (Problem 5)
+            gt_context = "\n".join([f"- {k.upper()}: {v}" for k, v in self.ground_truth.items()])
+            
+            data_pre = {
+                "model": "google/gemini-2.0-flash-exp:free",
+                "messages": [
+                    {"role": "system", "content": f"""Classify intent and generate 2 search variations.
+    Analyze HISTORY for pronoun resolution.
+    
+    GROUND TRUTH (STRICT):
+    {gt_context}
+
+    STRICT RULES:
+    1. If the query is about an item in GROUND TRUTH, you MUST put the answer in 'direct_response' and set category to 'Identity'.
+    2. For other queries, generate 2 variations in 'alternative_queries'.
+    
+    Return JSON: {{category, search_query, alternative_queries: [q1, q2], direct_response}}
+    """}, 
+                    {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
+                ]
+            }
+            
+            pre_res = ""
+            try:
+                async for chunk in self._safe_vercel_request(data_pre):
+                    pre_res += chunk
+                p = self._safe_json_parse(pre_res)
+                if p:
+                    # 1B. DIRECT-TRAP KILLER
+                    if p.get("direct_response"):
+                        yield p.get("direct_response"); return
+                    
+                    queries = [p.get("search_query", user_query)] + p.get("alternative_queries", [])
+                    intent = p.get("category", "FACTUAL")
+            except: pass
 
         # 2. Advanced Multi-Query Context Retrieval
-        primary_search = p.get("search_query", user_query) if p else user_query
-        alts = p.get("alternative_queries", []) if p else []
-        query_list = [primary_search] + alts
+        context_chunks = await self.get_context(queries, trace)
         
-        intent = p.get("category", "INSTITUTIONAL") if p else "INSTITUTIONAL"
-        
-        context_chunks = await self.get_context(query_list, trace)
+        # AUDIT FIX: Confidence Gate Response (Problem 4)
+        if context_chunks and context_chunks[0].get("confidence_low"):
+            # Check if this is an "identity" query we should have known
+            if intent == "Identity":
+                yield "I do not have specific information on that institutional detail. Please check the college website or contact the administration directly."
+                return
         
         # IDENTITY FAST-PASS (Student Leaders Only)
         lower_q = user_query.lower()
@@ -428,110 +467,78 @@ History: {history if history else "None"}"""
         trace.update(output=self._post_process(full_answer))
 
     async def _safe_vercel_request(self, data, stream=False):
-        # MASTER OVERDRIVE POOL
-        keys = {
-            "vercel": [
-                os.getenv("VERCEL_API_KEY_3"), 
-                os.getenv("VERCEL_AI_KEY_5"), 
-                os.getenv("VERCEL_AI_KEY_6"),
-                os.getenv("AI_GATEWAY_API_KEY")
-            ],
-            "google": [os.getenv("GEMINI_API_KEY")], # Added Gemini as stable fallback
-            "groq": [os.getenv("GROQ_API_KEY")]
-        }
-        
-        # Consolidate active keys
-        pool = []
-        for p, k_list in keys.items():
-            if not k_list: continue
-            for k in k_list:
-                if k: pool.append({"provider": p, "key": k})
-        
-        if not pool: yield "Error: No API Keys configured."; return
-        if not hasattr(self, "_pool_idx"): self._pool_idx = 0
-        
-        for attempt in range(len(pool) * 2):
-            node = pool[self._pool_idx % len(pool)]
-            self._pool_idx += 1
+        """Robust multi-provider request handler with instant fallback logic."""
+        # AUDIT FIX: Clean data & remove decommissioned models (Problem 2)
+        if "model" in data and "llama-3.3" in data["model"]:
+            data["model"] = "google/gemini-2.0-flash-001"
             
-            p, k = node["provider"], node["key"]
+        # Prioritized Pool
+        vercel_keys = [
+            os.getenv("VERCEL_API_KEY_3"), 
+            os.getenv("VERCEL_AI_KEY_5"), 
+            os.getenv("VERCEL_AI_KEY_6"),
+            os.getenv("AI_GATEWAY_API_KEY")
+        ]
+        google_key = os.getenv("GEMINI_API_KEY")
+        
+        # 1. TRY VERCEL POOL FIRST
+        for k in vercel_keys:
+            if not k: continue
             try:
+                headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
+                url = f"https://ai-gateway.vercel.sh/v1/chat/completions"
+                
                 async with httpx.AsyncClient() as client:
-                    if p == "vercel":
-                        headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
-                        if stream: data["stream"] = True
-                        async with client.stream("POST", f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=60.0) as response:
-                            if response.status_code != 200:
-                                print(f"    [FAIL] Vercel ({k[:8]}): {response.status_code}")
-                                continue
-                            async for line in response.aiter_lines():
-                                if line.startswith("data: "):
-                                    if line == "data: [DONE]": break
-                                    try:
-                                        chunk = json.loads(line[6:])
-                                        delta = chunk["choices"][0]["delta"].get("content", "")
-                                        if delta: yield delta
-                                    except: continue
-                            return
-                    
-                    elif p == "groq":
-                        headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
-                        # Use more stable model ID
-                        data["model"] = "llama-3.3-70b-specdec" 
-                        resp = await client.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=data, timeout=30.0)
-                        if resp.status_code != 200:
-                            print(f"    [FAIL] Groq: {resp.status_code} - {resp.text[:100]}")
-                            continue
-                        res = resp.json()
-                        if "choices" in res: yield res["choices"][0]["message"]["content"]; return
-
-                    elif p == "google":
-                        # Direct Gemini API Call (Most Stable)
-                        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?key={k}"
-                        headers = {"Content-Type": "application/json"}
-                        # Convert OpenAI format to Google format
-                        gemini_payload = {
-                            "contents": [{"role": "user", "parts": [{"text": data["messages"][0]["content"] + "\n\n" + data["messages"][1]["content"]}]}],
-                            "generationConfig": {"temperature": 0.7, "maxOutputTokens": 1000}
-                        }
-                        resp = await client.post(url, headers=headers, json=gemini_payload, timeout=30.0)
-                        if resp.status_code != 200:
-                            print(f"    [FAIL] Gemini: {resp.status_code}")
-                            continue
-                        # Simplified stream parsing for Gemini
-                        res = resp.json()
-                        if isinstance(res, list) and len(res) > 0:
-                            text = res[0].get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "")
-                            if text: yield text; return
-                        elif isinstance(res, dict):
-                            text = res.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "")
-                            if text: yield text; return
-
+                    if stream:
+                        data["stream"] = True
+                        async with client.stream("POST", url, headers=headers, json=data, timeout=30.0) as resp:
+                            if resp.status_code in [200]:
+                                async for line in resp.aiter_lines():
+                                    if line.startswith("data: "):
+                                        if "[DONE]" in line: break
+                                        try:
+                                            chunk = json.loads(line[6:])
+                                            content = chunk["choices"][0]["delta"].get("content", "")
+                                            if content: yield content
+                                        except: pass
+                                return # SUCCESS
+                            else:
+                                print(f"    [VERCEL FAIL] Key {k[:8]}... status {resp.status_code}")
+                    else:
+                        resp = await client.post(url, headers=headers, json=data, timeout=30.0)
+                        if resp.status_code == 200:
+                            content = resp.json()["choices"][0]["message"]["content"]
+                            if content: yield content; return
             except Exception as e:
-                print(f"    [OVERDRIVE ERR] {p} failed: {e}. Rotating...")
-            
-            await asyncio.sleep(0.1)
-        
-        yield "System busy. All providers (Vercel, Gemini, Groq) exhausted. Please check API keys in Vercel logs."
+                print(f"    [VERCEL ERR] Key {k[:8]}... failed: {e}")
 
-    async def _groq_request(self, data):
-        groq_key = os.getenv("GROQ_API_KEY")
-        if not groq_key: yield "Error: No Groq Key"; return
-        
-        headers = {"Authorization": f"Bearer {groq_key}", "Content-Type": "application/json"}
-        # Map to Groq models
-        data["model"] = "llama-3.3-70b-specdec" 
-        
-        try:
-            async with httpx.AsyncClient() as client:
-                resp = await client.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=data, timeout=30.0)
-                res_json = resp.json()
-                if "choices" in res_json:
-                    yield res_json["choices"][0]["message"]["content"]
-                else:
-                    print(f"    [GROQ ERR] {res_json}")
-        except Exception as e:
-            print(f"    [GROQ EXCEPTION] {e}")
+        # 2. EMERGENCY FALLBACK: DIRECT GOOGLE
+        if google_key:
+            try:
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:streamGenerateContent?key={google_key}"
+                # Convert OpenAI format to Google format
+                msg_content = ""
+                for m in data["messages"]: msg_content += f"{m['role']}: {m['content']}\n\n"
+                
+                payload = {
+                    "contents": [{"parts": [{"text": msg_content}]}],
+                    "generationConfig": {"temperature": 0.7, "maxOutputTokens": 1000}
+                }
+                
+                async with httpx.AsyncClient() as client:
+                    async with client.stream("POST", url, json=payload, timeout=30.0) as resp:
+                        if resp.status_code == 200:
+                            async for line in resp.aiter_lines():
+                                try:
+                                    chunk = json.loads(line)
+                                    text = chunk[0]["candidates"][0]["content"]["parts"][0]["text"]
+                                    if text: yield text
+                                except: pass
+                            return # SUCCESS
+            except Exception as e:
+                print(f"    [GOOGLE FALLBACK ERR] {e}")
+
+        yield "The system is currently handling high traffic. Please try again in a few seconds."
     def _rebuild_bm25(self, chunks_path, index_dir):
         import bm25s
         import Stemmer
