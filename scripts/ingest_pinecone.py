@@ -13,7 +13,7 @@ load_dotenv()
 # Configuration
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-INDEX_NAME = "quickstart"
+INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "raglorin")
 OPENROUTER_EMBED_URL = "https://openrouter.ai/api/v1/embeddings"
 
 # Initialize Clients

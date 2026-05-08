@@ -232,21 +232,22 @@ STRICT RULES:
         
         context_chunks = await self.get_context(search_query, trace)
         
-        # IDENTITY FAST-PASS (Student Leaders Only - Developer Removed to prevent leakage)
+        # IDENTITY FAST-PASS (Student Leaders Only)
         lower_q = user_query.lower()
         if self.bm25:
-            yogesh_chunk = next((c for c in self.bm25.corpus if "msajce_incubation_chunk_06" in c["chunk_id"]), None)
-            saqlin_chunk = next((c for c in self.bm25.corpus if "Professional_Societies" in c["metadata"].get("source_file", "")), None)
+            # Enhanced search for Professional Societies chunks
+            saqlin_chunk = next((c for c in self.bm25.corpus if "Professional_Societies" in c["metadata"].get("source_file", "") or "CSI" in c["text"]), None)
             
-            if "yogesh" in lower_q and yogesh_chunk: context_chunks.insert(0, yogesh_chunk)
-            if "saqlin" in lower_q and saqlin_chunk: context_chunks.insert(0, saqlin_chunk)
+            if ("saqlin" in lower_q or "csi" in lower_q) and saqlin_chunk: 
+                context_chunks.insert(0, saqlin_chunk)
         
         # Cleanup encoding artifacts and non-printable chars for LLM clarity
         def clean_text(t):
             t = re.sub(r'[^\x00-\x7F]+', ' ', t)
             return t.replace('  ', ' ').strip()
 
-        context_text = "\n\n".join([f"[Source {i+1}]: {clean_text(c['text'])}" for i, c in enumerate(context_chunks[:5])])
+        # Increased to 8 chunks for better information density
+        context_text = "\n\n".join([f"[Source {i+1}]: {clean_text(c['text'])}" for i, c in enumerate(context_chunks[:8])])
 
         # 3. Generation (High-Confidence Institutional Advocacy)
         start_gen_time = time.time()
