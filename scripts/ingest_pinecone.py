@@ -37,11 +37,15 @@ def get_embedding(text):
     response = requests.post(OPENROUTER_EMBED_URL, headers=headers, json=data)
     if response.status_code != 200:
         raise Exception(f"OpenRouter Embedding Error: {response.text}")
-    return response.json()["data"][0]["embedding"]
+    res_json = response.json()
+    if "data" not in res_json:
+        print(f"DEBUG: OpenRouter Response: {res_json}")
+        raise Exception(f"OpenRouter Error: Missing data key. Status: {response.status_code}")
+    return [float(x) for x in res_json["data"][0]["embedding"]]
 
 def ingest_data():
     """Production Ingestion Pipeline (OpenRouter 1536-dim + BM25)."""
-    json_path = os.path.join(ROOT_DIR, "data", "jsons", "*.json")
+    json_path = os.path.join(ROOT_DIR, "data", "knowledge_base", "*.json")
     files = glob.glob(json_path)
     
     all_corpus_texts = []
@@ -54,43 +58,79 @@ def ingest_data():
     except: pass
 
     for file_path in files:
-        print(f"Processing {os.path.basename(file_path)}...")
+        file_name = os.path.basename(file_path)
+        print(f"Processing {file_name}...")
         with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
-            chunks = data.get("chunks", [])
+            
+            if isinstance(data, list):
+                chunks = data
+                global_meta = {}
+            else:
+                chunks = data.get("chunks", [])
+                global_meta = data.get("metadata", {})
             
             vectors = []
-            for chunk in chunks:
+            for i, chunk in enumerate(chunks):
                 content = chunk.get("text") or chunk.get("content")
                 if not content: continue
                 
                 section = chunk.get('section', 'General')
                 context_summary = chunk.get('context', '')
                 possible_questions = "\n".join(chunk.get('possible_questions', []))
+
+                # Contextual Retrieval (Situational Prepending)
+                # This ensures the embedding knows exactly WHERE this chunk belongs in the college
+                institution = global_meta.get("institution", "MSAJCE")
+                dept = global_meta.get("department", "General")
+                title = global_meta.get("page_title", file_name)
                 
+                situational_context = (
+                    f"This information is from the {institution} institution, "
+                    f"specifically the {dept} department's document titled '{title}'. "
+                    f"Section: {section}."
+                )
+
+                # Super-Chunk 3.0: High-Precision Contextual Embedding
                 super_chunk_text = (
-                    f"SECTION: {section}\n"
+                    f"{situational_context}\n\n"
                     f"SUMMARY: {context_summary}\n"
                     f"QUESTIONS: {possible_questions}\n"
                     f"CONTENT: {content}"
                 )
                 
-                # No sleep - OpenRouter is fast
                 embedding = get_embedding(super_chunk_text)
                 
+                # Dynamic Entity Flattening for EXACT matching
+                entities_raw = chunk.get("entities", {})
+                flattened_entities = {}
+                for k, v in entities_raw.items():
+                    key = f"entity_{k}"
+                    if isinstance(v, list):
+                        flattened_entities[key] = ", ".join(map(str, v))
+                    else:
+                        flattened_entities[key] = str(v)
+
+                # Final Enterprise Metadata Schema
                 metadata = {
-                    "chunk_id": chunk.get("chunk_id", ""),
-                    "institution": data.get("metadata", {}).get("institution", "MSAJCE"),
-                    "page_title": data.get("metadata", {}).get("page_title", os.path.basename(file_path)),
-                    "section": chunk.get("section", "General"),
+                    "chunk_id": chunk.get("chunk_id", f"{file_name}_{i}"),
+                    "institution": institution,
+                    "page_title": title,
+                    "department": dept,
+                    "source_pdf": global_meta.get("source_pdf", file_name),
+                    "section": section,
                     "text": content,
-                    "source_url": chunk.get("source_url", ""),
-                    "keywords": ", ".join(chunk.get("keywords", [])),
-                    "entities": json.dumps(chunk.get("entities", {})),
-                    "last_updated": time.strftime("%Y-%m-%d")
+                    "chunk_type": chunk.get("chunk_type", "paragraph"),
+                    "priority": chunk.get("priority", "medium"),
+                    "academic_year": global_meta.get("academic_year", "2025-26"),
+                    "version": global_meta.get("version", "3.0"),
+                    "is_active": True,
+                    "pdf_page_number": chunk.get("pdf_page_number", 0),
+                    "last_updated": time.strftime("%Y-%m-%d"),
+                    **flattened_entities
                 }
                 
-                vectors.append({"id": chunk["chunk_id"], "values": embedding, "metadata": metadata})
+                vectors.append({"id": metadata["chunk_id"], "values": embedding, "metadata": metadata})
                 all_corpus_texts.append(super_chunk_text)
                 all_metadata.append(metadata)
             
@@ -107,7 +147,7 @@ def ingest_data():
     
     if not os.path.exists(BM25_INDEX_PATH): os.makedirs(BM25_INDEX_PATH)
     retriever.save(BM25_INDEX_PATH, corpus=all_metadata)
-    print(f"Production Ingestion Complete (BM25 + OpenRouter 1536-dim)")
+    print(f"Enterprise Ingestion Complete (BM25 + OpenRouter 1536-dim)")
 
 if __name__ == "__main__":
     # STRICT 1536 Dimension Reset

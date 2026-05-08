@@ -96,69 +96,134 @@ class RAGEngine:
                 except: pass
         return None
 
-    @traceable(name="Hybrid Retrieval")
-    async def get_context(self, query, trace):
-        q_type = classify_query(query)
+    def rrf_merge(self, semantic_hits: list, keyword_hits: list, k: int = 60) -> list:
+        """Reciprocal Rank Fusion (RRF) to merge two ranked lists."""
+        scores = {}
+        for rank, hit in enumerate(semantic_hits):
+            h_id = hit["id"]
+            scores[h_id] = scores.get(h_id, 0) + 1.0 / (k + rank)
+            if h_id not in scores: scores[h_id] = hit # Keep the full object
+            
+        for rank, hit in enumerate(keyword_hits):
+            h_id = hit["id"]
+            # Combined score + maintain hit object
+            if h_id in scores:
+                if isinstance(scores[h_id], dict): # First time seeing it from keyword
+                    scores[h_id] = (1.0 / (k + rank)) + (1.0 / (k + 0)) # Placeholder rank
+                else:
+                    scores[h_id] += 1.0 / (k + rank)
+            else:
+                scores[h_id] = 1.0 / (k + rank)
+
+        # Build final list
+        final_hits = []
+        # Re-attach metadata if we only have the score
+        all_hits = {h["id"]: h for h in semantic_hits + keyword_hits}
         
-        async def fetch_pinecone():
-            if not self.index: return []
+        sorted_ids = sorted(scores.keys(), key=lambda x: scores[x] if isinstance(scores[x], float) else 1.0, reverse=True)
+        for h_id in sorted_ids:
+            hit = all_hits[h_id]
+            final_hits.append(hit)
+            
+        return final_hits
+
+    def build_metadata_filter(self, user_query: str) -> dict:
+        """Enterprise Intent-to-Filter Mapping."""
+        q = user_query.lower()
+        filters = {"is_active": True} # Always only active data
+        
+        # 1. Chunk Type Specific Filtering
+        if any(w in q for w in ["who is", "contact", "faculty", "hod", "principal", "officer", "staff"]):
+            filters["chunk_type"] = {"$in": ["contact", "paragraph"]}
+        elif any(w in q for w in ["rule", "allowed", "policy", "permitted", "prohibited", "fine", "ragging"]):
+            filters["chunk_type"] = "rule"
+        elif any(w in q for w in ["bus", "route", "timing", "schedule", "table", "fare", "fee"]):
+            filters["chunk_type"] = "table"
+            
+        # 2. Department Specific Filtering
+        departments = ["cse", "it", "ece", "eee", "mech", "civil", "aids", "aiml", "csbs", "cyber", "vlsi", "act", "transport", "hostel", "placement"]
+        for dept in departments:
+            if dept in q:
+                filters["department"] = {"$eq": dept.upper()}
+                break
+                
+        return filters
+
+    @traceable(name="Hybrid Retrieval")
+    async def get_context(self, queries: list, trace):
+        """Advanced Multi-Query Retrieval with RRF."""
+        # 'queries' is now a list [original, alt1, alt2]
+        all_semantic = []
+        all_keyword = []
+        
+        # Build common filter once
+        primary_q = queries[0]
+        meta_filter = self.build_metadata_filter(primary_q)
+        q_type = classify_query(primary_q)
+
+        async def fetch_one(q):
             try:
-                top_k = 15 if q_type in ["person", "stat"] else 20
+                # 1. Pinecone
+                top_k = 25
                 async with httpx.AsyncClient() as client:
                     e_res = await client.post(self.openrouter_embed_url, headers={"Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}"}, 
-                                             json={"model": self.embedding_model, "input": query}, timeout=10.0)
+                                             json={"model": self.embedding_model, "input": q}, timeout=10.0)
                     emb = e_res.json()["data"][0]["embedding"]
-                    p_res = self.index.query(vector=emb, top_k=top_k, include_metadata=True)
-                    return [{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]]
-            except: return []
+                    p_res = self.index.query(vector=[float(x) for x in emb], top_k=top_k, filter=meta_filter, include_metadata=True)
+                    p_hits = [{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]]
+                
+                # 2. BM25
+                b_hits = []
+                if self.bm25:
+                    tokens = bm25s.tokenize(q, stemmer=self.stemmer)
+                    chunks, scores = self.bm25.retrieve(tokens, k=15)
+                    for c, s in zip(chunks[0], scores[0]):
+                        # Manual meta filter
+                        match = True
+                        for k_f, v_f in meta_filter.items():
+                            if k_f == "is_active": continue
+                            if c["metadata"].get(k_f) != v_f: match = False; break
+                        if match: b_hits.append({"text": c["text"], "score": float(s), "id": c["chunk_id"], "metadata": c["metadata"]})
+                
+                return p_hits, b_hits
+            except: return [], []
 
-        async def fetch_bm25():
-            if not self.bm25: return []
-            try:
-                k = 15 if q_type == "list" else 10
-                tokens = bm25s.tokenize(query, stemmer=self.stemmer)
-                chunks, scores = self.bm25.retrieve(tokens, k=k)
-                return [{"text": c["text"], "score": float(s), "id": c["chunk_id"], "metadata": c["metadata"]} for c, s in zip(chunks[0], scores[0])]
-            except: return []
+        # Parallelize all queries
+        tasks = [fetch_one(q) for q in queries]
+        results = await asyncio.gather(*tasks)
+        
+        for p, b in results:
+            all_semantic.extend(p)
+            all_keyword.extend(b)
 
-        p_hits, b_hits = await asyncio.gather(fetch_pinecone(), fetch_bm25())
-        # Person Boost: BM25 (0.7) for high-precision name matching
-        w = {"list": (0.4, 0.6), "person": (0.3, 0.7), "stat": (0.7, 0.3), "fact": (0.7, 0.3)}[q_type]
+        # Reciprocal Rank Fusion
+        merged = self.rrf_merge(all_semantic, all_keyword)
         
-        combined = {}; seen = set()
-        for h in p_hits:
-            h["f_score"] = h["score"] * w[0]
-            combined[h["id"]] = h
-        for h in b_hits:
-            if h["id"] in combined: combined[h["id"]]["f_score"] += h["score"] * w[1]
-            else: h["f_score"] = h["score"] * w[1]; combined[h["id"]] = h
+        # PRIORITY & ENTITY BOOST
+        priority_map = {"high": 1.6, "medium": 1.0, "low": 0.7}
+        q_lower = primary_q.lower()
         
-        results = sorted(combined.values(), key=lambda x: x["f_score"], reverse=True)
+        for h in merged:
+            # Priority boost
+            h["f_score"] = priority_map.get(h["metadata"].get("priority", "medium"), 1.0)
+            # Exact entity boost
+            for key, val in h["metadata"].items():
+                if key.startswith("entity_") and str(val).lower() in q_lower:
+                    h["f_score"] *= 1.4
+
+        # Final Sort
+        results = sorted(merged, key=lambda x: x.get("f_score", 1.0), reverse=True)
         if not results: return []
 
-        texts = [r["text"] for r in results]
+        # LLM Reranking
+        texts = [r["text"] for r in results[:20]]
         try:
             loop = asyncio.get_event_loop()
-            top_n = 8 if q_type in ["person", "stat"] else 10
-            rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=query, documents=texts, top_n=top_n))
+            rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=10))
             reranked = [results[r.index] for r in rerank.results]
         except: reranked = results[:10]
 
-        if q_type == "list":
-            vips = [r for r in results if r["metadata"].get("chunk_type") == "group_list"]
-            non_vips = [r for r in reranked if r["metadata"].get("chunk_type") != "group_list"]
-            return (vips + non_vips)[:10]
-        
-        if q_type == "person":
-            # Prioritize Faculty AND Student Leaders/Office Bearers
-            profs = [r for r in reranked if "profile" in r["metadata"].get("source_file", "").lower() or 
-                    "faculty" in r["metadata"].get("section", "").lower() or 
-                    "office bearers" in r["metadata"].get("section", "").lower() or
-                    "convenor" in r["metadata"].get("section", "").lower()]
-            others = [r for r in reranked if r not in profs]
-            return (profs + others)[:8]
-
-        return reranked[:10]
+        return reranked
 
     def _post_process(self, text: str) -> str:
         """Strict aesthetic hardening (Master Rule Section 3)."""
@@ -181,37 +246,19 @@ class RAGEngine:
         start_time = time.time()
         trace = self.langfuse.trace(name="Lorin RAG Query", input=user_query)
         
-        # 1. Intent & Refinement (Restored & Improved Memory)
+        # 1. Intent & Refinement (Multi-Query Expansion)
         span = trace.span(name="Pre-Processor")
         data_pre = {
             "model": self.generation_model,
             "messages": [
-                {"role": "system", "content": """Classify intent and rewrite for search. 
+                {"role": "system", "content": """Classify intent and generate 3 search variations.
 Analyze HISTORY to see if this is a follow-up, repetition, or CRITICISM.
 
-Return JSON: {category, search_query, direct_response, is_count_only, is_repetition, marketing_mode}
-
-GROUND TRUTH (Use this for direct_response if needed):
-• NAAC: A+ Grade, valid until Jan 30, 2028.
-• NBA Accredited: CSE, ECE, EEE, Mechanical.
-• Highest Salary (2024): 12 LPA.
-• Top Recruiters: Fidelity, Intel, Amazon, Zoho, TCS, CTS.
-• Code: 1301.
-• Hostel: Needs written HOD/Warden permission for outings.
-• Scholarship: 180+ cutoff for merit; 10% discount for girls.
-• Transport: 22 Buses, 1 Tata ACE, 1 Ambulance. MTC 105, 102, 570.
-• Departments: 12 (CSE, IT, ECE, EEE, MECH, CIVIL, AI&DS, AI&ML, CSBS, Cyber Security, VLSI, ACT).
-• Events: 'Sathak Thiruvizha' (Cultural), 'HABIBI' (Symposium).
-• Lateral Entry: TN-LEA counselling.
-
-CATEGORIES: DEVELOPER, GREETING, INSTITUTIONAL.
+Return JSON: {category, search_query, alternative_queries: [q1, q2], direct_response, is_count_only, is_repetition, marketing_mode}
 
 STRICT RULES:
-1. MARKETING MODE: If user is critical or compares colleges, set marketing_mode to true.
-2. PRONOUN & CONTEXT RESOLUTION: If the user uses pronouns (it, this, he, she, they) or asks a follow-up without explicitly naming the subject (e.g., "give the full route", "what about hostel?"), you MUST rewrite the `search_query` to explicitly include the subject from the HISTORY (e.g., "AR8 bus route", "Computer Science department").
-3. ZERO-LEAKAGE: Never mention Ramanathan S (Ram) unless the user explicitly names him. Do not use him as a "fallback" person.
-4. REPETITION: If 'is_repetition' is true, find DEEPER details.
-5. IDENTITY PROTECTION: Srinivasan/Principal = INSTITUTIONAL.
+1. PRONOUN & CONTEXT RESOLUTION: If the user uses pronouns (it, this, he, she, they), rewrite `search_query` and `alternative_queries` to explicitly include the subject from the HISTORY.
+2. ALTERNATIVE QUERIES: Generate 2 high-quality search variations that use different keywords to find the same info.
 """}, 
                 {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
             ]
@@ -222,15 +269,18 @@ STRICT RULES:
             pre_res += chunk
         p = self._safe_json_parse(pre_res)
         
-        # 1B. DIRECT-TRAP KILLER (Removed greeting trap to ensure Lorin personality)
+        # 1B. DIRECT-TRAP KILLER
         if p and p.get("direct_response") and p.get("category") == "DEVELOPER":
             yield p.get("direct_response"); return
 
-        # 2. Context Retrieval
-        search_query = p.get("search_query", user_query) if p else user_query
+        # 2. Advanced Multi-Query Context Retrieval
+        primary_search = p.get("search_query", user_query) if p else user_query
+        alts = p.get("alternative_queries", []) if p else []
+        query_list = [primary_search] + alts
+        
         intent = p.get("category", "INSTITUTIONAL") if p else "INSTITUTIONAL"
         
-        context_chunks = await self.get_context(search_query, trace)
+        context_chunks = await self.get_context(query_list, trace)
         
         # IDENTITY FAST-PASS (Student Leaders Only)
         lower_q = user_query.lower()
