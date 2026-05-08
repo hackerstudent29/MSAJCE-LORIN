@@ -408,6 +408,7 @@ History: {history if history else "None"}"""
                 os.getenv("VERCEL_AI_KEY_6"),
                 os.getenv("AI_GATEWAY_API_KEY")
             ],
+            "google": [os.getenv("GEMINI_API_KEY")], # Added Gemini as stable fallback
             "groq": [os.getenv("GROQ_API_KEY")]
         }
         
@@ -418,7 +419,7 @@ History: {history if history else "None"}"""
             for k in k_list:
                 if k: pool.append({"provider": p, "key": k})
         
-        if not pool: yield "Error: No API Keys"; return
+        if not pool: yield "Error: No API Keys configured."; return
         if not hasattr(self, "_pool_idx"): self._pool_idx = 0
         
         for attempt in range(len(pool) * 2):
@@ -431,42 +432,59 @@ History: {history if history else "None"}"""
                     if p == "vercel":
                         headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
                         if stream: data["stream"] = True
-                        if stream:
-                            async with client.stream("POST", f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=60.0) as response:
-                                async for line in response.aiter_lines():
-                                    if line.startswith("data: "):
-                                        if line == "data: [DONE]": break
-                                        try:
-                                            chunk = json.loads(line[6:])
-                                            delta = chunk["choices"][0]["delta"].get("content", "")
-                                            if delta: yield delta
-                                        except: continue
-                                return
-                        else:
-                            resp = await client.post(f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=60.0)
-                            res = resp.json()
-                            if "choices" in res: yield res["choices"][0]["message"]["content"]; return
+                        async with client.stream("POST", f"{self.vercel_gateway_url}/chat/completions", headers=headers, json=data, timeout=60.0) as response:
+                            if response.status_code != 200:
+                                print(f"    [FAIL] Vercel ({k[:8]}): {response.status_code}")
+                                continue
+                            async for line in response.aiter_lines():
+                                if line.startswith("data: "):
+                                    if line == "data: [DONE]": break
+                                    try:
+                                        chunk = json.loads(line[6:])
+                                        delta = chunk["choices"][0]["delta"].get("content", "")
+                                        if delta: yield delta
+                                    except: continue
+                            return
                     
                     elif p == "groq":
                         headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
-                        data["model"] = "llama-3.3-70b-versatile"
+                        # Use more stable model ID
+                        data["model"] = "llama-3.3-70b-specdec" 
                         resp = await client.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=data, timeout=30.0)
+                        if resp.status_code != 200:
+                            print(f"    [FAIL] Groq: {resp.status_code} - {resp.text[:100]}")
+                            continue
                         res = resp.json()
                         if "choices" in res: yield res["choices"][0]["message"]["content"]; return
 
-                    elif p == "openrouter":
-                        headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
-                        data["model"] = "google/gemini-2.0-flash-001"
-                        resp = await client.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=data, timeout=30.0)
+                    elif p == "google":
+                        # Direct Gemini API Call (Most Stable)
+                        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:streamGenerateContent?key={k}"
+                        headers = {"Content-Type": "application/json"}
+                        # Convert OpenAI format to Google format
+                        gemini_payload = {
+                            "contents": [{"role": "user", "parts": [{"text": data["messages"][0]["content"] + "\n\n" + data["messages"][1]["content"]}]}],
+                            "generationConfig": {"temperature": 0.7, "maxOutputTokens": 1000}
+                        }
+                        resp = await client.post(url, headers=headers, json=gemini_payload, timeout=30.0)
+                        if resp.status_code != 200:
+                            print(f"    [FAIL] Gemini: {resp.status_code}")
+                            continue
+                        # Simplified stream parsing for Gemini
                         res = resp.json()
-                        if "choices" in res: yield res["choices"][0]["message"]["content"]; return
+                        if isinstance(res, list) and len(res) > 0:
+                            text = res[0].get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "")
+                            if text: yield text; return
+                        elif isinstance(res, dict):
+                            text = res.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "")
+                            if text: yield text; return
 
             except Exception as e:
                 print(f"    [OVERDRIVE ERR] {p} failed: {e}. Rotating...")
             
             await asyncio.sleep(0.1)
         
-        yield "System busy. All providers exhausted."
+        yield "System busy. All providers (Vercel, Gemini, Groq) exhausted. Please check API keys in Vercel logs."
 
     async def _groq_request(self, data):
         groq_key = os.getenv("GROQ_API_KEY")
