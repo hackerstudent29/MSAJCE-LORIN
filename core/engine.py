@@ -285,11 +285,14 @@ STRICT RULES:
         # IDENTITY FAST-PASS (Student Leaders Only)
         lower_q = user_query.lower()
         if self.bm25:
-            # Enhanced search for Professional Societies chunks
-            saqlin_chunk = next((c for c in self.bm25.corpus if "Professional_Societies" in c["metadata"].get("source_file", "") or "CSI" in c["text"]), None)
-            
-            if ("saqlin" in lower_q or "csi" in lower_q) and saqlin_chunk: 
-                context_chunks.insert(0, saqlin_chunk)
+            try:
+                # Enhanced search for Professional Societies chunks
+                saqlin_chunk = next((c for c in self.bm25.corpus if "Professional_Societies" in c.get("source_pdf", "") or "CSI" in c.get("text", "")), None)
+                
+                if ("saqlin" in lower_q or "csi" in lower_q) and saqlin_chunk: 
+                    context_chunks.insert(0, saqlin_chunk)
+            except Exception as e:
+                print(f"    [FAST-PASS ERR] {e}")
         
         # Cleanup encoding artifacts and non-printable chars for LLM clarity
         def clean_text(t):
