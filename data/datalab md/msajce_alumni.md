@@ -1,0 +1,966 @@
+
+
+# MSAJCE — Mohamed Sathak A.J. College of EngineeringMSAJCE Alumni Association — Complete Data Extract for RAG Model
+
+Source URL: <https://www.msjace-edu.in/alumni.php> | Sections: 13 sections covered
+
+Scraped: 2026-04-27 | Chunks: 12 | Token Target: 500 | Overlap: 100 | Model: text-embedding-3-small
+
+---
+
+## 1. Alumni Association Overview and Objectives
+
+Chunk ID: msajce\_alumni\_chunk\_01 | URL: <https://www.msjace-edu.in/alumni.php#tab1> | ~370 tokens
+
+Context: Describes the purpose, mission, and seven core objectives of the MSAJCE Alumni Association, useful for students and alumni wanting to know what the association does.
+
+### MSAJCE Alumni Association — Overview
+
+Alumni association of Mohamed Sathak AJ College of Engineering welcomes you all to join us. This association is formed to reconnect and foster intellectual and emotional relationship between alumni and parent organisation. Also to bring in goodwill and voluntary commitment to support future engineers of the institution and provide industry-institute relationship and enthusiastically participate in various activities organised by the college.
+
+#### Our Objectives:
+
+1. To foster a sense of connectedness back to the institution
+2. To establish and renew student relationship
+3. To involve in various activities of the college
+4. To provide assistance to needful students by way of funds and scholarship
+5. To gather and maintain database of employment and assist in placements
+6. To arrange teaching and training classes to students
+7. To contribute for the overall upgrading of the institution
+
+Alumni Registration Form: <https://forms.gle/CBMdXCDEb9uXVEBv6>
+
+#### Association Reports and Documents:
+
+- ALUMNI ASSOCIATION BY-LAWS (Tamil): <https://www.msjace-edu.in/uploads/alumni/Alumni-Bylaw.pdf>
+- ALUMNI MEET MINUTES: <https://www.msjace-edu.in/uploads/alumni/543-B-ALUMNIMEETMINUTES.pdf>
+- ALUMNI ASSOCIATION BY-LAWS (English): <https://www.msjace-edu.in/uploads/alumni/Alumni-Bylaw-English.pdf>
+- ALUMNI MEET REPORT: <https://www.msjace-edu.in/uploads/alumni/543-C-ALUMNIMEETREPORT.pdf>
+
+### Sample Questions this chunk answers:
+
+- What is the MSAJCE Alumni Association?
+- What are the objectives of the MSAJCE Alumni Association?
+- How does the alumni association help students?
+- How can I register as an MSAJCE alumni?
+- Where can I find the alumni association by-laws?
+- Does MSAJCE alumni association provide scholarships?
+- What is the purpose of the MSAJCE alumni association?
+- How does the alumni association support placements?
+
+Keywords: alumni association, MSAJCE alumni, objectives, connectedness, scholarship, placement assistance, industry institute relationship, alumni registration, by-laws, alumni meet minutes
+
+---
+
+## 2. Office Bearers 2024 - Till Now
+
+Chunk ID: msajce\_alumni\_chunk\_02 | URL: <https://www.msjace-edu.in/alumni.php#tab2> | ~490 tokens
+
+Context: Lists all 31 office bearers of the MSAJCE Alumni Association for the current term 2024 onwards, including names, designations and roles, useful for contacting alumni leadership.
+
+### MSAJCE Alumni Association — Office Bearers (2024 - Till Now)
+
+| S. No. | Name of the Alumni | Designation |
+|--------|--------------------|-------------|
+|--------|--------------------|-------------|
+
+|    |                                         |                     |
+|----|-----------------------------------------|---------------------|
+| 1  | Dr. K. S. Srinivasan (Principal)        | President           |
+| 2  | Mr. Ahamed Jameel A.M.T (Alumni)        | Secretary           |
+| 3  | Administrative Officer                  | Treasurer           |
+| 4  | Mr. J. Abdul Rahman (Alumni)            | Vice President      |
+| 5  | Mr. Mohamed Yasar (Alumni)              | Executive Member    |
+| 6  | Mr. M.M. Syed Sultan Allaudeen (Alumni) | Joint Secretary     |
+| 7  | Mr. Asim Ali L (Alumni)                 | Joint Secretary     |
+| 8  | Mr. Abdul Majeed Shiblee (Alumni)       | Joint Secretary     |
+| 9  | Mr. Noorul Jaman (Alumni)               | Executive Member    |
+| 10 | Mr. N. Naveen (Alumni)                  | Executive Member    |
+| 11 | Mr. Mikail Ismail (Alumni)              | Program Coordinator |
+| 12 | Mr. Mohammed Umar Farook B (Alumni)     | Executive Member    |
+| 13 | Mr. Mano Raja (Alumni)                  | Executive Member    |
+| 14 | Mr. N. Abdul Hameed (Alumni)            | Executive Member    |
+| 15 | Mr. Narenthiran (Alumni)                | Executive Member    |
+| 16 | Mr. T.H. Mohamed Jiavur Rahman (Alumni) | Executive Member    |
+| 17 | Mr. Syed N Zaheer Abbas (Alumni)        | Executive Member    |
+| 18 | Mr. P. Nadir Khan (Alumni)              | Executive Member    |
+| 19 | Srikanth K (Alumni)                     | Executive Member    |
+| 20 | Ms. Misbah Khairunissa A (Alumni)       | Executive Member    |
+| 21 | Ms. Akila Rajesh (Alumni)               | Executive Member    |
+| 22 | Mr. Seyed Mohamed Mustafa H (Alumni)    | Executive Member    |
+| 23 | Mr. Ram Kumar C (Alumni)                | Executive Member    |
+| 24 | Mr. Themotheyu S (Alumni)               | Executive Member    |
+| 25 | Mr. Mohammed Khaja Nawaz A (Alumni)     | Executive Member    |
+| 26 | Mr. Mohammed Thaqiuddin N (Alumni)      | Executive Member    |
+| 27 | Mr. Harish N (Alumni)                   | Executive Member    |
+| 28 | Mr. Diwakaran k (Alumni)                | Executive Member    |
+| 29 | Mr. Deepak V R (Alumni)                 | Executive Member    |
+| 30 | Mr. Vineeth Baba K B (Alumni)           | Executive Member    |
+| 31 | Mr. Firthouse Mohideen J K (Alumni)     | Executive Member    |
+
+### Office Bearers 2024 - Till Now
+
+| S. No. | Name of the Alumni               | Designation |
+|--------|----------------------------------|-------------|
+| 1      | Dr. K. S. Srinivasan (Principal) | President   |
+| 2      | Mr. Ahamed Jameel A.M.T (Alumni) | Secretary   |
+
+|    |                                         |                     |
+|----|-----------------------------------------|---------------------|
+| 3  | Administrative Officer                  | Treasurer           |
+| 4  | Mr. J. Abdul Rahman (Alumni)            | Vice President      |
+| 5  | Mr. Mohamed Yasar (Alumni)              | Executive Member    |
+| 6  | Mr. M.M. Syed Sultan Allaudeen (Alumni) | Joint Secretary     |
+| 7  | Mr. Asim Ali L (Alumni)                 | Joint Secretary     |
+| 8  | Mr. Abdul Majeed Shiblee (Alumni)       | Joint Secretary     |
+| 9  | Mr. Noorul Jaman (Alumni)               | Executive Member    |
+| 10 | Mr. N. Naveen (Alumni)                  | Executive Member    |
+| 11 | Mr. Mikail Ismail (Alumni)              | Program Coordinator |
+| 12 | Mr. Mohammed Umar Farook B (Alumni)     | Executive Member    |
+| 13 | Mr. Mano Raja (Alumni)                  | Executive Member    |
+| 14 | Mr. N. Abdul Hameed (Alumni)            | Executive Member    |
+| 15 | Mr. Narenthiran (Alumni)                | Executive Member    |
+| 16 | Mr. T.H. Mohamed Jiavur Rahman (Alumni) | Executive Member    |
+| 17 | Mr. Syed N Zaheer Abbas (Alumni)        | Executive Member    |
+| 18 | Mr. P. Nadir Khan (Alumni)              | Executive Member    |
+| 19 | Srikanth K (Alumni)                     | Executive Member    |
+| 20 | Ms. Misbah Khairunissa A (Alumni)       | Executive Member    |
+| 21 | Ms. Akila Rajesh (Alumni)               | Executive Member    |
+| 22 | Mr. Seyed Mohamed Mustafa H (Alumni)    | Executive Member    |
+| 23 | Mr. Ram Kumar C (Alumni)                | Executive Member    |
+| 24 | Mr. Themotheyu S (Alumni)               | Executive Member    |
+| 25 | Mr. Mohammed Khaja Nawaz A (Alumni)     | Executive Member    |
+| 26 | Mr. Mohammed Thaqiuddin N (Alumni)      | Executive Member    |
+| 27 | Mr. Harish N (Alumni)                   | Executive Member    |
+| 28 | Mr. Diwakaran k (Alumni)                | Executive Member    |
+| 29 | Mr. Deepak V R (Alumni)                 | Executive Member    |
+| 30 | Mr. Vineeth Baba K B (Alumni)           | Executive Member    |
+| 31 | Mr. Firthouse Mohideen J K (Alumni)     | Executive Member    |
+
+### Sample Questions this chunk answers:
+
+- Who is the president of the MSAJCE Alumni Association?
+- Who is the secretary of the MSAJCE Alumni Association?
+- Who are the current office bearers of the alumni association?
+- Who is the vice president of MSAJCE alumni?
+- Who is the program coordinator of MSAJCE Alumni Association?
+- Who are the joint secretaries of the alumni association?
+- What is Dr. K. S. Srinivasan's role in alumni association?
+
+##### • Who is Ahamed Jameel in MSAJCE?
+
+Keywords: office bearers, president, secretary, treasurer, vice president, joint secretary, program coordinator, executive member, Ahamed Jameel, Dr. K. S. Srinivasan, 2024 alumni committee
+
+## 3. Office Bearers 2020-2021 to 2023-2024
+
+Chunk ID: msajce\_alumni\_chunk\_03 | URL: <https://www.msajce-edu.in/alumni.php#tab2> | ~480 tokens
+
+Context: Lists office bearers for 2020-21, 2021-22, 2022-23, and 2023-24 terms to show the historical committee structure of the MSAJCE Alumni Association.
+
+### MSAJCE Alumni Association — Office Bearers (2023 - 2024)
+
+| S. No. | Name                                        | Designation         |
+|--------|---------------------------------------------|---------------------|
+| 1      | Dr. K. S. Srinivasan (Principal)            | President           |
+| 2      | Mr. Ahamed Jameel A.M.T                     | Secretary           |
+| 3      | Dr. S. Vijayakumar (Administrative Officer) | Treasurer           |
+| 4      | Mr. J. Abdul Rahman                         | Vice President      |
+| 5      | Mr. Mohamed Yasar                           | Executive Member    |
+| 6      | Mr. M.M. Syed Sultan Allaudeen              | Joint Secretary     |
+| 7      | Mr. Asim Ali L                              | Joint Secretary     |
+| 8      | Mr. Abdul Majeed Shiblee                    | Joint Secretary     |
+| 9      | Mr. Noorul Jaman                            | Executive Member    |
+| 10     | Mr. N. Naveen                               | Executive Member    |
+| 11     | Mr. Mikail Ismail                           | Program Coordinator |
+
+12-23: Mohammed Umar Farook B, Mano Raja, N. Abdul Hameed, Narenthiran, T.H. Mohamed Jiavur Rahman, Syed N Zaheer Abbas, P. Nadir Khan, Srikanth K, Ms. Misbah Khairunissa A, Ms. Akila Rajesh, Mr. Seyed Mohamed Mustafa H, Mr. Ram Kumar C — all Executive Members
+
+#### Office Bearers (2022 - 2023):
+
+| 1 | Dr. K. S. Srinivasan    | President |
+|---|-------------------------|-----------|
+| 2 | Mr. Ahamed Jameel A.M.T | Secretary |
+| 3 | Dr. S. Vijayakumar      | Treasurer |
+
+4-18 | Mr. J. Abdul Rahman, Mr. Mohamed Yasar, Mr. M.M. Syed Sultan Allaudeen, Mr. Asim Ali L, Mr. Abdul Majeed Shiblee, Mr. Kalidoss, Mr. Noorul Jaman, Mr. N. Naveen, Ms. J. Stella Marry, Mr. Mikali Ismail, Mr. Mohammed Umar Farook B, Mr. Mano Raja, Mr. N. Abdul Hameed, Mr. Narenthiran, Mr. J. Prasanth — all Executive Members
+
+#### Office Bearers (2021 - 2022):
+
+Same as 2022-23 except Ms. J. Stella Marry replaced by (not listed). Committee had 16 members.
+
+#### Office Bearers (2020 - 2021):
+
+| 1 | Dr. K. S. Srinivasan                        | President        |
+|---|---------------------------------------------|------------------|
+| 2 | Mr. J. Kalidoss (Alumni)                    | Vice President   |
+| 3 | Dr. R. Senthilkumar (HOD/MECH)              | Secretary        |
+| 4 | Dr. S. Vijayakumar (Administrative Officer) | Treasurer        |
+| 5 | Dr. S. Prasath (Associate Professor)        | Executive Member |
+| 6 | Mrs. K. Saipriya (Associate Professor)      | Executive Member |
+
+|    |                                         |                  |
+|----|-----------------------------------------|------------------|
+| 7  | Mr. A. Abdul Gafoor (Admission Officer) | Executive Member |
+| 8  | Mr. Mikali Ismail (Alumni)              | Executive Member |
+| 9  | Mr. Ahamed Jameel A.M.T (Alumni)        | Executive Member |
+| 10 | Mr. Syed Mosin Akram (Alumni)           | Executive Member |
+| 11 | Mr. Salman Akram (Alumni)               | Executive Member |
+| 12 | Mr. Shaik Suhail Ahmed (Alumni)         | Executive Member |
+| 13 | Mr. Shahul Hameed Sirajdeen (Alumni)    | Executive Member |
+| 14 | Mr. Nishathul Hasan (Alumni)            | Executive Member |
+| 15 | Mr. Mohammed Aslam (Alumni)             | Executive Member |
+| 16 | Mr. Vignesh Rajendiran (Alumni)         | Executive Member |
+
+### Office Bearers 2020-2021
+
+| S. No. | Name                                        | Designation      |
+|--------|---------------------------------------------|------------------|
+| 1      | Dr. K. S. Srinivasan (Principal)            | President        |
+| 2      | Mr. J. Kalidoss (Alumni)                    | Vice President   |
+| 3      | Dr. R. Senthilkumar (HOD/MECH)              | Secretary        |
+| 4      | Dr. S. Vijayakumar (Administrative Officer) | Treasurer        |
+| 5      | Dr. S. Prasath (Associate Professor)        | Executive Member |
+| 6      | Mrs. K. Saipriya (Associate Professor)      | Executive Member |
+| 7      | Mr. A. Abdul Gafoor (Admission Officer)     | Executive Member |
+| 8      | Mr. Mikali Ismail (Alumni)                  | Executive Member |
+| 9      | Mr. Ahamed Jameel A.M.T (Alumni)            | Executive Member |
+| 10     | Mr. Syed Mosin Akram (Alumni)               | Executive Member |
+| 11     | Mr. Salman Akram (Alumni)                   | Executive Member |
+| 12     | Mr. Shaik Suhail Ahmed (Alumni)             | Executive Member |
+| 13     | Mr. Shahul Hameed Sirajdeen (Alumni)        | Executive Member |
+| 14     | Mr. Nishathul Hasan (Alumni)                | Executive Member |
+| 15     | Mr. Mohammed Aslam (Alumni)                 | Executive Member |
+| 16     | Mr. Vignesh Rajendiran (Alumni)             | Executive Member |
+
+### Sample Questions this chunk answers:
+
+- Who was the secretary of the alumni association in 2020-2021?
+- Who was vice president of alumni in 2020-21?
+- Who was the treasurer of the alumni association in 2023-24?
+- Who is Dr. S. Vijayakumar?
+- What were the previous office bearer committees of MSAJCE alumni?
+- Who is Dr. R. Senthilkumar in the alumni association?
+
+Keywords: office bearers 2020, office bearers 2021, office bearers 2022, office bearers 2023, alumni committee history, Dr. S. Vijayakumar, Dr. R. Senthilkumar, Kalidoss, Stella Marry
+
+Overlap carry-forward: Mr. Firthouse Mohideen J K (Alumni) | Executive Member. The current term (2024 onwards) has 31 office bearers including President Dr. K.S. Srinivasan, Secretary Mr. Ahmed Jameel A.M.T, and Vice President Mr. J. Abdul Rahman.
+
+## 4. Alumni Contribution Activities 2023–2026
+
+Chunk ID: msajce\_alumni\_chunk\_04 | URL: <https://www.msajce-edu.in/alumni.php#tab5> | ~510 tokens
+
+Context: Records alumni contribution activities from 2023 to 2026, including guest lectures, internship placements, scholarship sessions, and industry connect events.
+
+### MSAJCE Alumni Contribution Activities (2023–2026)
+
+| S.N o. | Programme                                                                         | Alumni Details                                                                                                 | Date       |
+|--------|-----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|------------|
+| 1      | Silver Jubilee Event                                                              | Alumni Guest of Honour - Anbazhagan, Saranraj Saravanan and Mohammed Ateeq                                     | 17.04.2026 |
+| 2      | Engineers Edge 3.0                                                                | Alumni Abdur Rahim Saleh - CEO - V5 Innovations                                                                | 08.04.2026 |
+| 3      | Attended AAC Meeting                                                              | Alumni Deepak from 2011-2015 Batch                                                                             | 13.02.2026 |
+| 4      | A Session on "My Story Successful Innovators"                                     | Alumni Diwakaran - Managing Director - DKM Enterprises                                                         | 17.09.2025 |
+| 5      | Student got placed in "The BIM Engineers" Company                                 | Reference Alumni Ahmed Jameel, Alumni Secretary - 1 Student placed in EEE Dept                                 | 08.09.2025 |
+| 6      | Student Internship at StayIndiaDigital                                            | Reference Alumni Ahmed Jameel - 6 Students placed in AIDS and CSBS Dept                                        | 10.07.2025 |
+| 7      | Student Internship at StayIndiaDigital                                            | Reference Alumni Ahmed Jameel - 3 Students placed in AIDS and CSBS Dept                                        | 01.07.2025 |
+| 8      | Project X Hackathon                                                               | Alumni Aniruddhan Narayanan (2006-2010 Batch) - Guest of Honor                                                 | 10.04.2025 |
+| 9      | International Women's Day Celebration                                             | Honoured Women Achiever Award:<br>1. Ms. Vani Parachuri (2003-2007 Batch)<br>2. Ms. P.Rosiah (2006-2010 Batch) | 8.03.2025  |
+| 10     | Silver Jubilee Reunion Meet 2025                                                  | MSAJCE Alumni Sports Pavilion - Alumni of 2001-2005 Batch & Alumni Association Donated                         | 01.02.2025 |
+| 11     | Silver Jubilee Reunion Meet 2025                                                  | More than 500+ Alumnus participated in the Alumni Meet Function                                                | 01.02.2025 |
+| 12     | A Session on "From Idea to Impact: Exploring Opportunities in Startup Eco System" | Alumni Naveen Zahir - Founder and CEO of Drop Truck                                                            | 04.12.2024 |
+| 13     | A Session on "Core Industries Unlocked - Pathways for Tomorrow's Innovators"      | Alumni Diwakaran - Managing Director - KDM Enterprises                                                         | 03.12.2024 |
+| 14     | A Session on "Electromagnetic Fields in Modern Application"                       | Alumni Imran Javeed - Assistant Professor Veltech University                                                   | 28.11.2024 |
+| 15     | A Session on "Motivational Session by Successful Innovators"                      | Alumni Shiblee - Founder of Debugger Shirts                                                                    | 20.11.2024 |
+| 16     | A Session on "Empowering our Educational Journey: the role of Quality Assurance"  | Alumni Juveriya Khan - Senior Quality Assurance Manager - DMCG, Dubai                                          | 14.11.2024 |
+
+|    |                                                                                                    |                                                                              |            |
+|----|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|------------|
+| 17 | A Session on "Preparing for the Future: Skills, Technologies and Mindset for Engineering Students" | Alumni Lubna Amathul Wadhoodh - PMP, Product Consultant - Vembu Technologies | 25.10.2024 |
+| 18 | A Session on "Front Static Pages to Dynamic Applications"                                          | Alumni Titus Vimalraj - Front End Engineer Amazon                            | 14.09.2024 |
+| 19 | Alumni Association Meet                                                                            | Around 17 Alumni participated                                                | 09.03.2024 |
+| 20 | Mentoring Session                                                                                  | Alumni Ms. Misbah Khairunissa A - counselling for college students           | 06.01.2024 |
+| 21 | Placement Recruitment at Lightenz Technovations Pvt Ltd                                            | Alumni Shanmugasarathy hired 1 student from 2023 batch                       | 05.01.2024 |
+
+### Alumni Contribution Activities 2024-2026
+
+| S. No | Programme                                 | Alumni Details                                                          | Date       |
+|-------|-------------------------------------------|-------------------------------------------------------------------------|------------|
+| 1     | Silver Jubilee Event                      | Anbazhagan, Saranraj Saravanan and Mohammed Ateeq - Guests of Honour    | 17.04.2026 |
+| 2     | Engineers Edge 3.0                        | Abdur Rahim Saleh - CEO - V5 Innovations                                | 08.04.2026 |
+| 3     | AAC Meeting                               | Alumni Deepak from 2011-2015 Batch                                      | 13.02.2026 |
+| 4     | Session on My Story Successful Innovators | Diwakaran - MD - DKM Enterprises                                        | 17.09.2025 |
+| 5     | Placement - The BIM Engineers             | Ahamed Jameel - 1 Student EEE Dept                                      | 08.09.2025 |
+| 6     | Internship StayIndiaDigital               | Ahamed Jameel - 6 Students AIDS and CSBS                                | 10.07.2025 |
+| 7     | Internship StayIndiaDigital               | Ahamed Jameel - 3 Students AIDS and CSBS                                | 01.07.2025 |
+| 8     | Project X Hackathon                       | Aniruddhan Narayanan (2006-2010) - Guest of Honor                       | 10.04.2025 |
+| 9     | Women's Day Celebration                   | Vani Parachuri (2003-2007), P.Rosiah (2006-2010) - Women Achiever Award | 08.03.2025 |
+| 10    | Silver Jubilee Reunion 2025               | Alumni Sports Pavilion donation by 2001-2005 Batch                      | 01.02.2025 |
+| 11    | Silver Jubilee Reunion 2025               | 500+ Alumnus participated                                               | 01.02.2025 |
+| 12    | Session: From Idea to Impact              | Naveen Zahir - Founder and CEO of Drop Truck                            | 04.12.2024 |
+| 13    | Session: Core Industries Unlocked         | Diwakaran - MD - KDM Enterprises                                        | 03.12.2024 |
+| 14    | Session: EM Fields in Modern Application  | Imran Javeed - Asst Professor Veltech University                        | 28.11.2024 |
+| 15    | Motivational Session                      | Shiblee - Founder of Debugger Shirts                                    | 20.11.2024 |
+| 16    | Session: Quality Assurance in Education   | Juveriya Khan - Sr. QA Manager - DMCG Dubai                             | 14.11.2024 |
+| 17    | Session: Skills for Engineering Students  | Lubna Amathul Wadhoodh - PMP - Vembu Technologies                       | 25.10.2024 |
+| 18    | Session: Static to Dynamic Applications   | Titus Vimalraj - Front End Engineer Amazon                              | 14.09.2024 |
+| 19    | Alumni Association Meet                   | 17 Alumni participated                                                  | 09.03.2024 |
+
+|    |                                     |                                              |            |
+|----|-------------------------------------|----------------------------------------------|------------|
+| 20 | Mentoring Session                   | Misbah Khairunissa A - counselling           | 06.01.2024 |
+| 21 | Placement at Lightenz Technovations | Shanmugasarathy hired 1 student (2023 batch) | 05.01.2024 |
+
+### Sample Questions this chunk answers:
+
+- What activities has the MSAJCE alumni association done recently?
+- Did alumni help with student placements?
+- How many students attended the Silver Jubilee Alumni Meet 2025?
+- What internship opportunities did alumni provide in 2025?
+- Who is Naveen Zahir from MSAJCE alumni?
+- Who is Titus Vimalraj from MSAJCE?
+- What is the Silver Jubilee Reunion Meet 2025?
+- Did alumni from MSAJCE conduct guest lectures?
+
+Keywords: alumni contribution, guest lecture, internship, placement, Silver Jubilee, Women's Day, Naveen Zahir, Titus Vimalraj, Amazon, Drop Truck, Ahamed Jameel, alumni meet 2025
+
+Overlap carry-forward: Mr. Firhouse Mohideen J K (Alumni) is an Executive Member in the 2024 onwards committee. The MSAJCE Alumni Association has 31 office bearers with Dr. K. S. Srinivasan as President and Mr. Ahamed Jameel A.M.T as Secretary.
+
+## 5. Alumni Contribution Activities 2019–2023
+
+Chunk ID: msajce\_alumni\_chunk\_05 | URL: <https://www.msajce-edu.in/alumni.php#tab5> | ~495 tokens
+
+Context: Records alumni contribution activities from 2019 to 2023, including sessions, placements, NAAC inspections, and NBA visits supported by alumni.
+
+MSAJCE Alumni Contribution Activities (2019–2023) — Continued
+
+| S.N o. | Programme                                          | Alumni Details                                                                                     | Date       |
+|--------|----------------------------------------------------|----------------------------------------------------------------------------------------------------|------------|
+| 22     | GoldenGuru Award in Producing Youngminds           | College awarded best college in OMR. Conceptualized by Alumni Ashwin C and team                    | 01.12.2023 |
+| 23     | Awareness session "You are important"              | Alumnae Akila Rajesh                                                                               | 25.11.2023 |
+| 24     | Engineer's Edge 2k23                               | Alumni Karthikeyan and Lubna Amathul - Guests of Honour                                            | 02.11.2023 |
+| 25     | Alumni Association Meet                            | 16 Alumni participated                                                                             | 28.10.2023 |
+| 26     | NBA Visit                                          | 23 Alumnus participated for NBA Inspection from various departments                                | 30.09.2023 |
+| 27     | Session on Opportunities in IT world               | Alumni Rahul Murali - Product Manager Thoughtworks, Vinoth Kumar Manickam - Lead Developer Striven | 15.09.2023 |
+| 28     | Session on Solid Principle                         | Alumni Sivanathan - Manager, Software Engineering, ADF Data Science Pvt Ltd                        | 13.09.2023 |
+| 29     | Session on CAD Automation                          | Alumni Mohamed Ateeq - Senior Engineer, Hubbel Incorporated Chennai                                | 09.09.2023 |
+| 30     | Session on Procurement and Supply Chain Management | Alumni Umar Farooq - KK Wind Solutions India Pvt Ltd, Chennai                                      | 02.09.2023 |
+| 31     | Session on AWS - Hosting Static/Dynamic websites   | Alumni FHM Afzal Bijli - Founder Webxo360                                                          | 12.08.2023 |
+
+|    |                                               |                                                                             |            |
+|----|-----------------------------------------------|-----------------------------------------------------------------------------|------------|
+| 32 | Session on VLSI                               | External Trainer - Md Ilyas, CEO - E Learning Platform                      | 23.08.2023 |
+| 33 | Session on Early Stage Entrepreneurs          | Alumni Akther Ilyas - Founder Skit Media                                    | 02.08.2023 |
+| 34 | Session on Devops - Kubernetes and Containers | Alumni Arun Natarajan - Emirates Bank Dubai - Principal Consultant          | 08.08.2023 |
+| 35 | Session on Solar PV System Basics             | Alumni Shaik Fathaulloh S - Daystar Solar - Technical Sales Engineer        | 04.08.2023 |
+| 36 | Student Internship at Sportasy                | Alumni Sabarish - Founder Sportasy - 3 Students from IT Dept                | 27.07.2023 |
+| 37 | Placement Recruitment at Platform 3 Solutions | Reference Alumni Ahmed Jameel - 3 Students placed in CSE Dept               | 12.07.2023 |
+| 38 | Session on Career Guidance                    | Alumni Syed Faiyaz Hussain - Digital Product Manager - Elevance Health      | 28.06.2023 |
+| 39 | Student Internship at JFX Events & Media      | Alumni V. Ganesh - MD - JFX Events & Media - 15 Students from CSE           | 21.06.2023 |
+| 40 | Session on Robotics                           | Alumni Majed Arafat A - IT Consultant - TCS                                 | 10.05.2023 |
+| 41 | Session on Embedded System                    | Alumni Sarathy - Consultant Embedded System Architect                       | 05.04.2023 |
+| 42 | Session on Motivational Speech                | Alumni Abur Raheem - Founder and Director - V5 Innovation                   | 30.03.2023 |
+| 43 | Session on Voice over IP                      | Alumni Anbazhagan AT - Technical Manager CTS                                | 22.03.2023 |
+| 44 | Session on Digital Marketing                  | Alumni Md Afroze - Managing Director - J Digitals                           | 17.03.2023 |
+| 45 | Session on AI Technology                      | External Trainer - Anisha, Intel Corporation                                | 10.03.2023 |
+| 46 | Alumni Meet 2009-2020 Batch                   | More than 300 Alumnus participated                                          | 11.02.2023 |
+| 47 | NAAC Meeting                                  | 16 Alumnus participated for NAAC Inspection                                 | 23.01.2023 |
+| 48 | Entrepreneurship Skill - National Youth Day   | Alumni Md Rameez - Founder Zeemrah Energy; Alumni Zubair - Proprietor USITE | 12.01.2023 |
+| 49 | Student Internship at Hasna Technology        | Alumni Mr. Ahmed Jameel - Technical Consultant, HCL                         | 02.11.2022 |
+| 50 | Student Internship at Edvoy Technologies      | Alumni Mohamed Yasar - Edvoy Technologies Chennai                           | 03.12.2022 |
+| 51 | Placement Recruitment at J Digitals           | Alumni Mr. Mohamed Afroze - CEO J Digital                                   | 10.11.2022 |
+| 63 | FDP on Embedded & IoT Boot Camp               | Alumni Mr. M. Prabakaran - Senior Software Architect, Caterpillar           | 29.05.2019 |
+
+### Sample Questions this chunk answers:
+
+- Did MSAJCE alumni support the NAAC inspection?
+- Did alumni support the NBA visit?
+
+- How many students did internship at JFX Events through alumni?
+- Who conducted the session on Kubernetes for MSAJCE students?
+- Did alumni conduct a session on Digital Marketing?
+- Who is Rahul Murali from MSAJCE alumni?
+- How many alumni participated in the 2023 alumni meet?
+- Did alumni help with placements in 2022?
+
+Keywords: NAAC alumni, NBA alumni inspection, alumni internship, CSE placement alumni, Devops session, Kubernetes, Digital Marketing, Solar PV, VLSI session, alumni meet 2023, Embedded IoT
+
+Overlap carry-forward: Silver Jubilee Reunion Meet 2025 saw more than 500+ Alumnus participate. Reference alumni Ahmed Jameel helped place 10 students in StayIndiaDigital internships in 2025, and 1 student at The BIM Engineers company.
+
+## 6. Institution Recognition to Alumni (Awards and Events)
+
+Chunk ID: msajce\_alumni\_chunk\_06 | URL: <https://www.msajce-edu.in/alumni.php#tab6> | ~505 tokens
+
+Context: Lists events where MSAJCE recognised its alumni through awards, invited them as guests of honour to institutional events, and their participation in governance meetings.
+
+### MSAJCE Institution Recognition to Alumni
+
+| S.N o. | Programme          | Alumni Details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Date       |
+|--------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| 1      | Engineers Day 2025 | 25 alumni honoured including: Rajeswari Kumaresan (Cisco USA), Ranjani Rajagopalan (Mphasis, Sr. Technical Lead), Benny Diwakar S (Bank of America, Asst VP), Sheik Mohamed Rizwan (DXC Technology, Associate Manager), Pavithra Elumalai (TCS, IT Consultant), Shanmugam V (Zyle Software Solutions, CEO), Mohammed Rameez (Zeemrah Energy, Founder), Gatheejaithul Kubra (Sha's Online Academy, Founder), Manimala (Akamai Technology, Data Analyst), Aniruddhan Narayanan (Pfizer Healthcare, Business Analyst Manager), Fayaz Ahmed (Recode Solutions, Sr. Solution Architect), Noorul Jaman J (Mindgate Solutions, Sr. Manager Product), Abrar Ahmed (Commercial Bank of Dubai), Aswin Panneerselvam (Spark Group - India Zambia Kenya UAE, Director), N. Nazhrudeen (Xperthom Technologies, Business Head), Nasarullah (Wipro Dubai, Sr. Techno Functional Lead), Razik Fareed (YUBI, Senior Director), Syed Athreeq Ur Rahman (Bahwan Cybertek, Manager), H Barakath Nisha (Wipro, Sr. Software Engineer), Linga Prabhu V (Mithran Engineering, CEO), Narenthiran (Virtana Corporation, Team Lead), AbdulHameed N (Rambal Hitech Engineers, Manager), Jamal Shagul Ameedh (General Electric, Commercial Manager), Mohamed Fazil (Equate Petrochemical Kuwait, Sr. Instrument Engineer), Meeraan Sha (Zoho Corporation, Software Technical Consultant) | 04.10.2025 |
+
+|    |                                                   |                                                                                                                                                                                                                                                                                                                                             |            |
+|----|---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| 2  | Session: An Introduction to Industry Preparedness | Alumni Aniruddhan - Manager - PFIZER Healthcare India                                                                                                                                                                                                                                                                                       | 07.08.2025 |
+| 3  | Session: How to Get into IT Sector                | Alumni Deepak - CTO - MH Doodle Solutions                                                                                                                                                                                                                                                                                                   | 06.08.2025 |
+| 4  | Academic Advisory Board Meeting                   | Alumni Deepak from 2011-2015 Batch                                                                                                                                                                                                                                                                                                          | 16.07.2025 |
+| 5  | Silver Jubilee Reunion Meet 2025 Awards           | 1. Ahamed Jameel A.M.T (2001-2005) - Lifetime Achievement Award 2. J. Abdul Rahaman (2001-2005) - Outstanding Alumni Award 3. M.M. Syed Sultan Allaudeen (2003-2007) - Distinguished Service Award 4. Yasar (2002-2006) - Distinguished Service Award 5. Asim Ali L - Outstanding Young Alumni Award 2025                                   | 01.02.2025 |
+| 6  | Alumni Association Meet                           | 23 Alumni participated                                                                                                                                                                                                                                                                                                                      | 26.10.2024 |
+| 7  | Engineers Day 2024                                | 1. Md Kamaal Yasin (TCS, Associate Consultant) 2. A.S. Balagurunathan (HCL, Project Manager) 3. Chandra Bose (CMA CGM GBSI, Deputy General Manager) 4. Ameena Bathool (Zuora India, Senior Technical Writer) 5. Sivanathan Balaguru (ADF Datascience, Manager Software Engineering) 6. Sabarish SR (Blossomfield Gamingzone, Founder & CEO) | 16.09.2024 |
+| 8  | First Year Induction - Guest of Honour            | Alumni Rahul Murali - Product Manager, Thoughtworks Technologies                                                                                                                                                                                                                                                                            | 09.09.2024 |
+| 9  | Planning and Monitoring Committee Meeting         | Alumni Dr. Ezhilazhagan C - Associate Professor, Veltech                                                                                                                                                                                                                                                                                    | 08.07.2024 |
+| 10 | Board of Studies Meeting                          | Alumni Deepak VR - Senior Data Engineer, Manuh Solutions                                                                                                                                                                                                                                                                                    | 06.07.2024 |
+| 11 | Board of Studies - Civil Dept                     | Alumni Akila Rajeshwari - Associate VP, Casagrand Builder                                                                                                                                                                                                                                                                                   | 18.06.2024 |
+
+### Sample Questions this chunk answers:
+
+- Which alumni were honoured on Engineers Day 2025?
+- Who received the Lifetime Achievement Award from MSJCE alumni?
+- Who received the Outstanding Alumni Award 2025?
+- Who received the Outstanding Young Alumni Award?
+- Which alumni serve on the MSJCE Board of Studies?
+- Which alumni attended Planning and Monitoring Board meetings?
+- Who is Aniruddhan Narayanan in MSJCE alumni?
+- Did MSJCE alumni attend Academic Advisory Board meetings?
+
+Keywords: Engineers Day 2025, Lifetime Achievement Award, Outstanding Alumni Award, Distinguished Service Award, Outstanding Young Alumni, Board of Studies, Ahamed Jameel, Asim Ali, Pfizer, Cisco, Wipro, Zoho, GE, Engineers Day 2024, Silver Jubilee awards
+
+Overlap carry-forward: Alumni Md Afroze (MD, J Digitals) conducted a Digital Marketing session on 17.03.2023. The 2023 Alumni Meet had 300+ alumni. NAAC inspection had 16 alumni; NBA Visit had 23 alumni participants.
+
+## 7. Institution Recognition to Alumni — Historical 2021-2023
+
+Chunk ID: msajce\_alumni\_chunk\_07 | URL: https://www.msajce-edu.in/alumni.php#tab6 | ~490 tokens
+
+Context: Lists historical recognition events for alumni from 2021 to 2023 including Engineers Day awards, guest of honour invitations, and committee participation.
+
+### MSAJCE Institution Recognition to Alumni (2021–2023)
+
+| S.N o. | Programme                                                                                  | Alumni Details                                                                                                                                                                                                                                 | Date       |
+|--------|--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| 12     | Board of Studies - CSE and IT                                                              | Alumni Sivanathan - ADF Data Science, Manager                                                                                                                                                                                                  | 28.05.2024 |
+| 13     | Guest of Honour for International Conference on R&D in Engineering, Science and Technology | Alumni Sheikh Azharuddin - IT Operation Head NRFSI                                                                                                                                                                                             | 24.05.2024 |
+| 14     | Guest of Honour for Annual Day                                                             | Alumni Suresh Kumar - Scientist                                                                                                                                                                                                                | 09.03.2024 |
+| 15     | Guest of Honour for Festaverse                                                             | Alumni Aadil Ibrahim - Entrepreneur Public Speaker                                                                                                                                                                                             | 05.03.2024 |
+| 16     | Guest of Honour for Women's Day                                                            | Alumni Lakshmi Narayanan - Senior HR, Valeo                                                                                                                                                                                                    | 04.03.2024 |
+| 17     | Planning and Monitoring Board Meeting                                                      | Alumni Majed Arafat                                                                                                                                                                                                                            | 16.12.2023 |
+| 18     | Academic Advisory Board Meeting                                                            | Alumni Secretary Ahamed Jameel and Srikanth K                                                                                                                                                                                                  | 09.12.2023 |
+| 19     | Golden Jubilee Celebration at Mohamed Sathak Trust in Keelakari                            | Ahamed Jameel - Best Alumni Service Award; Md Rizwan and Purushothaman - Guest of Honour                                                                                                                                                       | 14.10.2023 |
+| 20     | Engineers Day 2023                                                                         | 1. Majed Arafat A - IT Consultant TCS 2. Abdurrahim Salih - GV Academy - Best Entrepreneur 3. Misbah Khairunnissa - Savista, Senior Manager 4. S Ram Prabhu - QBurst Technologies, Senior QA Engineer 5. Mikail Ismail - KLA, Technical Writer | 16.09.2023 |
+| 21     | First Year Induction Guest of Honour                                                       | Alumni Sheikh Azharuddin - Nissan Renault Financial Services - IT Operation Head                                                                                                                                                               | 11.09.2023 |
+| 22     | Planning and Monitoring Meeting                                                            | Alumni Majed Arafat (TCS), Alumni Jaleel (Founder Kings Travels), Alumni Samir (Fidelity National Financial, Cyber Security Manager)                                                                                                           | 20.05.2023 |
+| 23     | Academic Advisory Board Meeting                                                            | Alumni Ahamed Jameel, Misbah (Savista Sr. HR Manager), Shiblee (Founder Debugger)                                                                                                                                                              | 13.05.2023 |
+| 24     | Guest of Honour                                                                            | Alumni Nazeef Hussain                                                                                                                                                                                                                          | 24.03.2023 |
+| 25     | Annual Day Guest of Honour                                                                 | Alumni Ahamed Jameel, Abdul Rahman (MD Blue Bell Business Management), Sathish Charan (Writer/Director, Film Industry)                                                                                                                         | 18.03.2023 |
+| 26     | Guest of Honour for BSM Cricket Trophy                                                     | Alumni Ahamed Jameel and Sabarish inaugurated the function                                                                                                                                                                                     | 12.03.2023 |
+| 27     | Women's Day Guest of Honour                                                                | Alumni Akila Rajesh - Voora Property Developer - Sales and Marketing Head                                                                                                                                                                      | 10.03.2023 |
+| 28     | Alumni Meet Outstanding Award 2023                                                         | Ahamed Jameel receives MSAJCE Outstanding Alumni Award 2023                                                                                                                                                                                    | 01.02.2023 |
+
+|    |                                          |                                                                                                                                                                                                                                                              |            |
+|----|------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| 29 | First Year Induction 2022                | Alumni Lakshmi Narayanan - Societe General, HR Talent Acquisition                                                                                                                                                                                            | 14.11.2022 |
+| 30 | Graduation Day Special Guest             | Mr. Ahamed Jameel - Technical Consultant, HCL                                                                                                                                                                                                                | 29.10.2022 |
+| 31 | Symposium Tech Unity Guest               | Alumni K Srikanth (Technical Architect, Teleapps), Mohamed Afroze (CEO, Jdigitals)                                                                                                                                                                           | 28.10.2022 |
+| 32 | First Alumni Association Meet in Chennai | Organized by MSAJCE                                                                                                                                                                                                                                          | 15.10.2022 |
+| 33 | Engineers Day 2022                       | Best Alumni of Decade: Ahamed Jameel (HCL). Best Engineers: J Abdul Rahman (MD Blue Bell), MM Syed Sultan Allaudeen (MD MM Internationals), A Raju (Infra Tech Manager CITS), L Asim Ali (CMO Customer Labs), N Feroz Khan (Delivery Manager MAERSK Chennai) | 17.09.2022 |
+
+### Sample Questions this chunk answers:
+
+- Who received the Best Alumni of Decade award from MSAJCE?
+- Who received the Best Alumni Service Award at Golden Jubilee?
+- Who is Majed Arafat in MSAJCE alumni?
+- Who spoke at the First Year Induction in 2022?
+- Which alumni participated in Planning and Monitoring Board meetings?
+- Who is Sheikh Azharuddin from MSAJCE?
+- What award did Ahamed Jameel receive in 2022?
+
+Keywords: Best Alumni of Decade, Outstanding Alumni Award, Engineers Day 2022, Engineers Day 2023, Ahamed Jameel, Golden Jubilee Keelakari, Majed Arafat, Sheikh Azharuddin, Annual Day guest, Women's Day alumni, BSM Cricket Trophy
+
+Overlap carry-forward: Silver Jubilee Reunion Meet 2025 Awards: Lifetime Achievement Award to Ahamed Jameel A.M.T, Outstanding Alumni Award to J. Abdul Rahaman, Distinguished Service Award to M.M. Syed Sultan Allaudeen and Yasar, Outstanding Young Alumni Award to Asim Ali L.
+
+## 8. Distinguished Alumni — From Industry
+
+Chunk ID: msajce\_alumni\_chunk\_08 | URL: <https://www.msajce-edu.in/alumni.php#tab6> | ~580 tokens
+
+Context: Lists 85 distinguished alumni working in industry across India and abroad, with their batch year, current designation, and employer organisation.
+
+### MSAJCE Distinguished Alumni — From Industry (Selected List)
+
+| S. No | Name                    | Batch     | Credentials              | Industry                      |
+|-------|-------------------------|-----------|--------------------------|-------------------------------|
+| 1     | Mr. Purushothaman N     | 2001-2005 | Assistant Vice President | Standard Chartered            |
+| 2     | Ms. Sabana Yasmi S      | 2001-2005 | Vice President           | DBS Bank                      |
+| 3     | Mr. Saravanan Perumal   | 2001-2005 | Senior Manager           | LTI MINDTREE                  |
+| 4     | Mr. Mohammed Fareed     | 2001-2005 | Program Manager          | Lululemon - Canada            |
+| 5     | Mr. Ahamed Jameel A.M.T | 2001-2005 | Technical Consultant     | HCL                           |
+| 6     | Mr. Feroz Khan N        | 2001-2005 | General Manager          | Maersk                        |
+| 7     | Mr. Fayad Ahamed        | 2001-2005 | Project Manager          | Union Insurance Company Dubai |
+
+|    |                           |           |                                     |                                      |
+|----|---------------------------|-----------|-------------------------------------|--------------------------------------|
+| 8  | Mr. Mohammed Azeem        | 2001-2005 | Senior Manager Sales                | Allied Motors Dubai                  |
+| 9  | Mr. Srikanth K            | 2001-2005 | Technical Architect                 | TeleApps                             |
+| 10 | Mr. Majed Arafat          | 2001-2005 | IT Consultant                       | TCS                                  |
+| 11 | Mr. Santhosh Kumar V      | 2001-2005 | Technical Architect                 | HCL                                  |
+| 12 | Mr. Anbazhagan AT         | 2001-2005 | Technical Manager                   | CTS                                  |
+| 13 | Mr. Balagurunathan        | 2001-2005 | Project Manager                     | HCL                                  |
+| 14 | Dr. Ezhilazhagan C        | 2001-2005 | Associate Professor                 | Vel Tech                             |
+| 15 | Mr. Suresh Kumar N        | 2001-2005 | Scientist E                         | INCOIS                               |
+| 16 | Mr. Mohammed Kamaal Yasin | 2001-2005 | Service Delivery Manager            | TCS                                  |
+| 17 | Mr. Abdul Jaleel          | 2001-2005 | Infra Manager                       | Emirates                             |
+| 18 | Mr. Imran Sheik           | 2002-2006 | Customer Success Manager            | Firmex, Canada                       |
+| 19 | Mr. Md Yasar              | 2002-2006 | Product Owner Manager               | Edvoy                                |
+| 20 | Mr. Raju A                | 2002-2006 | Infra Technology Manager            | CTS                                  |
+| 21 | Mr. Syed Faiyaz Hussain   | 2002-2006 | Digital Product Manager             | Anthem USA                           |
+| 22 | Ms. Harini Raman          | 2002-2006 | Business Analyst                    | IBM                                  |
+| 23 | Mr. Hafeez Rahman         | 2002-2006 | Manager                             | AL ZARA TRADING AND CONTRACTING      |
+| 24 | Mr. Mohamed Yusuff Shah   | 2002-2006 | Senior Accountant Manager           | Indian Audit and Accounts Department |
+| 25 | Ms. Uma Maheshwari G      | 2002-2006 | Principal Member of Technical Staff | Oracle India                         |
+| 26 | Mr. Chandra Bose          | 2003-2007 | Senior Delivery Manager             | CMA CGM India                        |
+| 27 | Mr. Ahmed Mubeen          | 2003-2007 | Manager                             | Lighthouse Navigation Singapore      |
+| 28 | Mr. Arun Natarajan        | 2003-2007 | Principle Consultant                | Emirates National Bank of Dubai      |
+| 29 | Mr. Ashik Mohamed         | 2004-2008 | Manager IT                          | Hyundai Motors Group                 |
+| 30 | Mr. Mohamed Thahir N      | 2004-2008 | Lead - QA & CART Team               | Zoho Corporation                     |
+| 31 | Ms. Misbah Khairunissa A  | 2005-2009 | Senior HR Manager                   | Savista                              |
+| 32 | Ms. Reshma M              | 2005-2009 | Project Manager                     | HCL                                  |
+| 33 | Mr. Nizamuddin K          | 2005-2009 | Business Development Manager        | Touchline Technologies Pvt Ltd       |
+| 34 | Mr. Abubucker Siddiq      | 2005-2009 | Deputy Manager                      | Transys Global Forwarding Pvt Ltd    |
+| 35 | Ms. Lakshmi Narayanan     | 2005-2009 | HR Manager                          | Valeo                                |
+| 36 | Mr. Ahmad Abdullateef     | 2005-2009 | Principal Software Architect        | Microsoft                            |
+
+|    |                            |           |                            |                                         |
+|----|----------------------------|-----------|----------------------------|-----------------------------------------|
+| 37 | Mr. Mohamed Hussain T R    | 2006-2010 | Staff Devops Engineer      | ARM Embedded Technologies               |
+| 38 | Mr. Sivanathan             | 2006-2010 | Manager                    | ADF Data Science Pvt Ltd                |
+| 39 | Mr. Rahul Murali           | 2006-2010 | Lead Product Manager       | Thoughtworks                            |
+| 40 | Mr. Vinoth Kumar Manickam  | 2006-2010 | Lead Developer             | Striven                                 |
+| 41 | Mr. Sathakathulla E        | 2006-2010 | eApps Testing Lead         | Hitachi Energy Global Services Pvt Ltd  |
+| 42 | Mr. Noorul Jaman           | 2007-2011 | Product Manager QA         | Mind Gate Solutions Pvt Ltd             |
+| 43 | Mr. Shaik Salaudeen        | 2007-2011 | Technical Lead             | NTT Data Business Solutions             |
+| 44 | Mr. Sakthi Ajay            | 2007-2011 | Senior Consultant          | Virtusa                                 |
+| 45 | Mr. Sheikh Azharuddin      | 2008-2012 | IT Operations Head         | Nissan Renault Financial Services India |
+| 46 | Ms. Akila Rajesh           | 2008-2012 | Sales and Marketing Head   | Voora Property Developer                |
+| 47 | Mr. Deiva                  | 2008-2012 | Senior Manager             | SPR Construction Pvt Ltd                |
+| 48 | Mr. Nasarullah S           | 2009-2013 | Tech Lead                  | Wipro Ltd                               |
+| 49 | Mr. Feroz Khan S           | 2009-2013 | SDET 2                     | Vonage                                  |
+| 50 | Mr. Marzook Ahamed         | 2010-2014 | Assistant Manager          | PIXELS Dubai                            |
+| 51 | Mr. Mohamed Yousuf Shariff | 2010-2014 | Tax Consultant             | Shariff and Co                          |
+| 52 | Mr. Muhamed Samir          | 2011-2015 | Cyber Security Manager     | Fidelity National Financial             |
+| 53 | M. Sharmela                | 2011-2015 | Senior Product Analyst     | Photon Interactive Pvt Ltd              |
+| 54 | Mr. Vignesh                | 2011-2015 | Senior BIM Modeler         | MCC Engineering Singapore               |
+| 55 | Mr. Harish N               | 2012-2016 | Technical Support Engineer | iOPEX Technologies                      |
+| 56 | Mr. Ram Prabhu S           | 2012-2016 | Senior QA Engineer         | QBurst Technologies                     |
+| 57 | Ms. Reshma Rahila S        | 2013-2017 | Senior Software Engineer   | Proadapt Solutions                      |
+| 58 | Mr. Mohammed Asif          | 2013-2017 | QAQC Civil Inspector       | Samsung C & T                           |
+| 59 | Mr. Syed Haja Shereef S    | 2014-2018 | Recruitment Specialist     | Scaleneworks                            |
+| 60 | Mr. Shanthoshkumar J       | 2014-2018 | Senior Software Engineer   | Broadcom                                |
+| 61 | Mr. Safeeq Ahamed S        | 2015-2019 | Design Engineer            | KONE Elevators                          |
+| 62 | Mr. Shaik Fathullah S      | 2015-2019 | Technical & Sales Engineer | DAYSTAR SOLAR                           |
+| 63 | Mr. Md Mubarak             | 2016-2020 | MEP Team Leader            | EJADAH UAE                              |
+
+|    |                       |           |                                       |                                             |
+|----|-----------------------|-----------|---------------------------------------|---------------------------------------------|
+| 64 | Mr. Md Junaid A       | 2016-2020 | Estimation/Quantity Surveyor Engineer | ELEMEC ELECTRICAL CONTRACTING LLC           |
+| 65 | Mr. Sabari Murugan    | 2016-2020 | Associate Design Engineer             | Wall Technology                             |
+| 66 | Mr. Jawahar Shalim    | 2017-2021 | Team Leader                           | Milkbasket                                  |
+| 67 | Mr. Abdul Mukshith A  | 2017-2021 | Senior BIM Engineer                   | MICRON ELECTRICALS                          |
+| 68 | Mr. Mohamed Ali Hasan | 2017-2021 | Operation Head                        | Veena Jewellers                             |
+| 69 | Mr. Imran L           | 2017-2021 | Site Engineer                         | Al Rasheediah Safety and Security, Abudhabi |
+| 70 | Mr. Shamsudeen A      | 2018-2022 | Software Engineer                     | HCL                                         |
+| 71 | Mr. Nadir Khan        | 2019-2023 | Supply Chain Engineer                 | Inathiram Impex Internet Pvt Ltd            |
+| 72 | Mr. Sathiyan          | 2019-2023 | Software Engineer                     | Relevantz Technology Services               |
+| 73 | Mr. Md Zaid           | 2019-2023 | Software Engineer                     | TCS                                         |
+
+#### Distinguished Alumni from Industry (2001–2023 Batches)
+
+| S. N O. | Name                   | Batch     | Credentials                  | Industry                    |
+|---------|------------------------|-----------|------------------------------|-----------------------------|
+| 1       | Mr. Purushothaman N    | 2001-2005 | Assistant Vice President     | Standard Chartered          |
+| 2       | Ms. Sabana Yasmi S     | 2001-2005 | Vice President               | DBS Bank                    |
+| 3       | Mr. Saravanan Perumal  | 2001-2005 | Senior Manager               | LTI MINDTREE                |
+| 4       | Mr. Mohammed Fareed    | 2001-2005 | Program Manager              | Lululemon Canada            |
+| 5       | Mr. Ahmed Jameel A.M.T | 2001-2005 | Technical Consultant         | HCL                         |
+| 6       | Mr. Feroz Khan N       | 2001-2005 | General Manager              | Maersk                      |
+| 7       | Mr. Fayad Ahmed        | 2001-2005 | Project Manager              | Union Insurance Dubai       |
+| 8       | Mr. Mohammed Azeem     | 2001-2005 | Senior Manager Sales         | Allied Motors Dubai         |
+| 9       | Mr. Srikanth K         | 2001-2005 | Technical Architect          | TeleApps                    |
+| 10      | Mr. Majed Arafat       | 2001-2005 | IT Consultant                | TCS                         |
+| 36      | Mr. Ahmad Abdullateef  | 2005-2009 | Principal Software Architect | Microsoft                   |
+| 39      | Mr. Rahul Murali       | 2006-2010 | Lead Product Manager         | Thoughtworks                |
+| 52      | Mr. Muhamed Samir      | 2011-2015 | Cyber Security Manager       | Fidelity National Financial |
+| 70      | Mr. Shamsudeen A       | 2018-2022 | Software Engineer            | HCL                         |
+| 73      | Mr. Md Zaid            | 2019-2023 | Software Engineer            | TCS                         |
+
+### Sample Questions this chunk answers:
+
+- Which MSAJCE alumni work at TCS?
+- Which MSAJCE alumni work at Microsoft?
+- Which MSAJCE alumni are in the 2001-2005 batch?
+- Does MSAJCE have alumni at international companies?
+- Who from MSAJCE alumni works in Dubai?
+- Which alumni from MSAJCE work in banking?
+- Which MSAJCE alumni is a VP at DBS Bank?
+- Which MSAJCE alumni work at HCL?
+
+Keywords: distinguished alumni, industry alumni, TCS alumni, HCL alumni, Microsoft alumni, Maersk alumni, DBS Bank, Thoughtworks, Zoho alumni, Standard Chartered, Wipro alumni, 2001 batch
+
+Overlap carry-forward: Engineers Day 2025 honoured 25 alumni including Rajeswari Kumaresan (Cisco USA), Ranjani Rajagopalan (Mphasis Sr. Tech Lead), Benny Diwakar S (Bank of America AVP), and Razik Fareed (Senior Director, YUBI).
+
+## 9. Distinguished Alumni — Entrepreneurs
+
+Chunk ID: msajce\_alumni\_chunk\_09 | URL: <https://www.msajce-edu.in/alumni.php#tab6> | ~570 tokens
+
+Context: Lists 56 distinguished alumni who are entrepreneurs, with their batch year, business designation, and company name, useful for knowing MSAJCE's startup ecosystem.
+
+### MSAJCE Distinguished Alumni — Entrepreneurs
+
+| S. No | Name                    | Batch     | Credentials                                           | Company                                   |
+|-------|-------------------------|-----------|-------------------------------------------------------|-------------------------------------------|
+| 1     | Mr. Abdul Rahman J      | 2001-2005 | Entrepreneur - Managing Director                      | Blue Bell Business Management             |
+| 2     | Mr. Mohammed Rizwan Ali | 2001-2005 | Entrepreneur - Managing Director, Saudi/Dubai/Bahrain | Excellence Prices Company Limited         |
+| 3     | Mr. Krishna Kumar       | 2001-2005 | Entrepreneur - Managing Director                      | Markk Imaging and Automation              |
+| 4     | Ahamed Jameel A M T     | 2001-2005 | Entrepreneur - IT Consultant                          | 4A Technology                             |
+| 5     | Elavarasan              | 2001-2005 | Entrepreneur - Managing Director                      | RMP Solutions                             |
+| 6     | Mallam Mustak           | 2001-2005 | Entrepreneur - Business Consultant Singapore          | Mallang Salma Consulting Services Pvt Ltd |
+| 7     | Behin Samuel            | 2001-2005 | Entrepreneur - Managing Director                      | Clysico                                   |
+| 8     | Abdul Wahab             | 2001-2005 | Entrepreneur - Managing Director                      | Midas Associates                          |
+| 9     | Firhouse                | 2001-2005 | Entrepreneur - Managing Director                      | Nice Technology                           |
+| 10    | Mr. Syed Shahul Hameed  | 2002-2006 | Entrepreneur - Managing Director Bahrain              | Deysla for IT Solutions W.L.L.            |
+| 11    | Aswin Chandran          | 2002-2006 | Entrepreneur - CMD                                    | Pixtronics Global Chennai                 |
+| 12    | Athifur Rahaman         | 2002-2006 | Entrepreneur - Managing Director                      | Learn Soft                                |
+
+|    |                               |           |                                  |                                        |
+|----|-------------------------------|-----------|----------------------------------|----------------------------------------|
+| 13 | Abdul Jaleel                  | 2002-2006 | Entrepreneur - Managing Director | King Travels                           |
+| 14 | Mr. Syed Sultan Allaudeen M.M | 2003-2007 | Entrepreneur - Managing Director | MM International                       |
+| 15 | Mr. Mohammed Rameez           | 2004-2008 | Entrepreneur - Founder           | Zeemrah Energy                         |
+| 16 | Mr. Ganesh                    | 2004-2008 | Entrepreneur - CEO               | JFX Events and Media                   |
+| 17 | Mr. Rahumathulla A.S          | 2004-2008 | Entrepreneur - Managing Director | Rekha Decor                            |
+| 18 | Mr. Abdur Rahim Salih         | 2004-2008 | Entrepreneur - Director and CEO  | V5 Innovations Pvt Ltd                 |
+| 19 | Mr. Shanmugam                 | 2004-2008 | Entrepreneur - IT Director       | Zyle Software Solutions Pvt Ltd        |
+| 20 | Mr. Asim Ali L                | 2005-2009 | Entrepreneur - CMO               | Customer Labs                          |
+| 21 | Mr. Syed Yousuf               | 2005-2009 | Entrepreneur - Business Partner  | Milestone Speciality Equipment Pvt Ltd |
+| 22 | Mr. Ahmed Asif A              | 2005-2009 | Entrepreneur - Managing Director | First Alcon Infrastructures Pvt Ltd    |
+| 23 | Mr. Md Sikkander Kasim M      | 2005-2009 | Entrepreneur - Managing Director | Faaz                                   |
+| 24 | Mr. Mohammed Zubair           | 2006-2010 | Entrepreneur - Managing Director | Usite Safety and Security              |
+| 25 | Mr. Abdul Majeed Shiblee      | 2006-2010 | Entrepreneur - Proprietor        | DEBUGGER                               |
+| 26 | Mr. F H M Afzal Bijli         | 2006-2010 | Entrepreneur - Founder           | Webxo360 Technology Solutions          |
+| 27 | Mr. Abdul Kader               | 2007-2011 | Entrepreneur - Business Partner  | AI Qima technologies LLC - Sharjah UAE |
+| 28 | Mr. Mohammed Parvez Shariff   | 2007-2011 | Entrepreneur - Proprietor        | Air Mechon Solutions                   |
+| 29 | Mr. Kalidoss J                | 2007-2011 | Music Director                   | Film Industry                          |
+| 30 | Mr. Mohamed Jiavur Rahman T H | 2008-2012 | Entrepreneur - Founder           | Motowear                               |
+| 31 | Mr. Sadhaam                   | 2008-2012 | Entrepreneur - Business Partner  | Phoenix Print Hub                      |
+| 32 | Mr. Nazhrudeen                | 2008-2012 | Entrepreneur - Founder           | Xperthom Technologies                  |
+| 33 | Mr. Prasand P                 | 2008-2012 | Entrepreneur - Managing Director | PROZ SOLUTIONS LLP                     |
+| 34 | Mr. K. Hakeem                 | 2008-2012 | Entrepreneur - Managing Director | Safka Engineering Works                |
+| 35 | Mr. P. Arun Kumar             | 2009-2013 | Entrepreneur - Managing Director | AG Interior and Mithra Traders         |
+| 36 | Mr. Abdul Riyaz M             | 2009-2013 | Entrepreneur - Managing Director | RIHAAB ALIYAR ASSOCIATES               |
+| 37 | Mr. Sabarish S R              | 2010-2014 | Entrepreneur - Founder and CEO   | Sportasy                               |
+
+|    |                             |           |                                          |                                     |
+|----|-----------------------------|-----------|------------------------------------------|-------------------------------------|
+| 38 | Mr. Mohan Kumar             | 2010-2014 | Entrepreneur - Founder and CEO           | Gamasome Interactive LLP            |
+| 39 | Mr. Adil Ibrahim            | 2010-2014 | Entrepreneur - Founder and CEO           | CameraMan Security System Installer |
+| 40 | Mr. J. Mohamed Salman Azeem | 2010-2014 | Entrepreneur - Acupuncturist and Trainer | Global Acupuncture Clinic           |
+| 41 | Mr. Veeramanikandan P       | 2011-2015 | Entrepreneur - Managing Director         | SPS Traders                         |
+| 42 | Mr. J. Mohammed Abbas Ali   | 2011-2015 | Entrepreneur - Managing Director         | A.J Mobiles and Electronics         |
+| 43 | Mr. Rafi Ansari             | 2011-2015 | Entrepreneur - Managing Director         | Rashab Consultancy                  |
+| 44 | Mr. Mohamed Afroze          | 2012-2016 | Entrepreneur - Managing Director         | J Digitals                          |
+| 45 | Ms. Salmaa Gaffoor          | 2013-2017 | Entrepreneur - Managing Director         | Digiwiz Marketing Solutions         |
+| 46 | Mr. Basker                  | 2013-2017 | Entrepreneur - Business Partner          | Studio Zero 7                       |
+| 47 | Mr. Abdullah                | 2014-2018 | Entrepreneur - CEO                       | Redwood Construction                |
+| 48 | Mr. Md Hyder Shareef        | 2015-2019 | Entrepreneur - Managing Director         | SAAHICORP PRIVATE LIMITED           |
+| 49 | Mr. Mohamed Naveeth B       | 2015-2019 | Entrepreneur - Managing Director         | Reliance Trading Service            |
+| 50 | Mr. Ashwin P                | 2015-2019 | Entrepreneur - Managing Director         | P & P Marketing                     |
+| 51 | Mr. Dhanachezian K          | 2016-2020 | Entrepreneur - Managing Director         | Shri Dhanalakshmi Engineering Works |
+| 52 | Mr. Dawan                   | 2016-2020 | Entrepreneur - Managing Director         | Enigma Catalyst                     |
+| 53 | Mr. Akther Ilyas            | 2018-2022 | Entrepreneur - Creative Director         | Skit Media                          |
+| 54 | Mr. Ram Kumar               | 2019-2023 | Entrepreneur - Managing Director         | YC Events and Productions           |
+| 55 | Mr. Syed Aakhib Mohammed    | 2019-2023 | Entrepreneur - Managing Director         | BLACKBOX                            |
+| 56 | Mr. Suhaib                  | 2022-2026 | Entrepreneur - CEO                       | IK Digital                          |
+
+### Sample Questions this chunk answers:
+
+- How many entrepreneur alumni does MSJCE have?
+- Which MSJCE alumni started their own companies?
+- Who is Abdur Rahim Salih from MSJCE?
+- Which alumni from MSJCE are CEOs?
+- Does MSJCE have alumni who are music directors?
+- Who is Sabarish from MSJCE alumni?
+- Which MSJCE alumni are in the film industry?
+- Does MSJCE alumni have a startup ecosystem?
+
+Keywords: entrepreneur alumni, startup alumni, MSAJCE startup, V5 Innovations, Customer Labs, JFX Events, Pixtronics, Sportasy, J Digitals, Zeemrah Energy, Debugger shirts, alumni CEO, alumni managing director, film industry alumni
+
+Overlap carry-forward: Distinguished Alumni from Industry (Batch 2001-2005) include: Purushothaman N (Asst VP Standard Chartered), Sabana Yasmi S (VP DBS Bank), Ahamed Jameel A.M.T (Technical Consultant HCL), Feroz Khan N (General Manager Maersk), Majed Arafat (IT Consultant TCS), and Suresh Kumar N (Scientist E, INCOIS).
+
+## 10. Alumni Scholarship Contribution — Student Beneficiaries 2022-2026
+
+Chunk ID: msajce\_alumni\_chunk\_10 | URL: <https://www.msajce-edu.in/alumni.php#tab7> | ~520 tokens
+
+Context: Lists students who received alumni-funded scholarships from 2022 to 2026, with the total scholarship amount sponsored by alumni, useful for students seeking financial support information.
+
+MSAJCE Alumni Scholarship Contribution
+
+Total Amount Sponsored from Alumni: Rs. 37,94,972
+
+Student Beneficiaries (2022–2026):
+
+| S.N o. | Student Name             | Batch / Department  | Date       |
+|--------|--------------------------|---------------------|------------|
+| 1      | Priyadharshini S         | 2023-2027 / CSBS    | 07.03.2026 |
+| 2      | Revathi A                | 2024-2028 / ECE     | 07.03.2026 |
+| 3      | Sireesh B                | 2024-2028 / ECE     | 07.03.2026 |
+| 4      | Mohammed Shahul Hameed B | 2024-2028 / ECE     | 06.03.2026 |
+| 5      | Rahya N                  | 2025-2029 / ECE     | 05.03.2026 |
+| 6      | Rahini Mugil J           | 2025-2029 / Mech    | 04.03.2026 |
+| 7      | Gopika R                 | 2025-2029 / ECE ACT | 04.03.2026 |
+| 8      | Sujatha R                | 2025-2029 / CSE     | 04.03.2026 |
+| 9      | Harini R                 | 2024-2028 / AIML    | 04.03.2026 |
+| 10     | Prathiba M               | 2025-2029 / ECE     | 04.03.2026 |
+| 11     | Doorika M                | 2025-2029 / EEE     | 04.03.2026 |
+| 12     | Jafeer Mohamed J         | 2024-2028 / AIDS    | 04.03.2026 |
+| 13     | Rahim Basha W            | 2023-2027 / AIML    | 27.02.2026 |
+| 14     | Mohamed ZiamZian A       | 2025-2029 / IT      | 26.02.2026 |
+| 15     | Ameer Shahith M          | 2023-2027 / CSE     | 26.02.2026 |
+| 16     | Abdullah N               | 2023-2027 / IT      | 26.02.2026 |
+| 17     | Pirivindhan A            | 2024-2028 / AIDS    | 26.02.2026 |
+| 18     | Afreen Fathim S          | 2024-2028 / VLSI    | 25.02.2026 |
+| 19     | Afasr Ali N              | 2024-2028 / AIML    | 24.02.2026 |
+| 20     | Afrin Fathima B          | 2023-2027 / IT      | 24.02.2026 |
+| 21     | Pragatha                 | 2023-2027 / CSE     | 22.02.2026 |
+| 22     | Samira Farhana T         | 2025-2029 / AIML    | 22.02.2026 |
+| 23     | Md Suhail F              | 2024-2028 / CSE     | 22.02.2026 |
+| 24     | Mahira Sultana           | 2023-2027 / ECE     | 22.02.2026 |
+| 25     | Mohamed Salman J         | 2023-2027 / ECE     | 20.09.2025 |
+
+|    |                                                                  |                      |            |
+|----|------------------------------------------------------------------|----------------------|------------|
+| 26 | Afrin Fathima                                                    | 2023-2027 / IT       | 26.08.2025 |
+| 27 | Harini R                                                         | 2024-2028 / AIML     | 06.08.2025 |
+| 28 | Samira Farhana T                                                 | 2025-2029 / AIML     | 06.08.2025 |
+| 29 | Indhuja I                                                        | 2024-2028 / IT       | 29.05.2025 |
+| 30 | Abu Jabar Mubarak U                                              | 2022-2026 / CSBS     | 29.05.2025 |
+| 31 | Md Abdul Kalam N                                                 | 2022-2026 / CSBS     | 29.05.2025 |
+| 32 | Nazmi A                                                          | 2022-2026 / CSE      | 29.05.2025 |
+| 33 | Amirudeen F                                                      | 2022-2026 / IT       | 29.05.2025 |
+| 34 | Md Ashraf                                                        | 2022-2026 / CSE      | 29.05.2025 |
+| 35 | F. Md Suhail                                                     | 2024-2028 / CSE      | 29.05.2025 |
+| 36 | Md Sarhan K                                                      | 2022-2026 / MECH     | 29.05.2025 |
+| 37 | Mohamed Ashraf                                                   | 2022-2026 / ECE      | 07.04.2025 |
+| 38 | M.S. Shajaneshwar                                                | 2022-2026 / CSE      | 26.03.2025 |
+| 39 | M. Mohamed Ashraf                                                | 2022-2026 / CSE      | 25.03.2025 |
+| 40 | Afrin Fathima B                                                  | 2023-2027 / IT       | 25.03.2025 |
+| 41 | M. Mohamed Rasim                                                 | 2023-2027 / IT       | 13.03.2025 |
+| 42 | Zakir Hussain                                                    | 2022-2026 / ECE      | 12.03.2025 |
+| 43 | Rahim Basha W                                                    | 2024-2028 / CSE AIML | 12.03.2025 |
+| 44 | Pragatha                                                         | 2023-2027 / CSE      | 12.03.2025 |
+| 45 | Mahira Sultana                                                   | 2022-2027 / ECE      | 07.03.2025 |
+| 46 | Md Sajith                                                        | 2022-2026 / ECE      | 07.03.2025 |
+| 47 | B. Dhanalakshmi                                                  | 2023-2027 / IT       | 07.03.2025 |
+| 48 | Nilofer Nisha                                                    | 2022-2026 / ECE      | 07.03.2025 |
+| 49 | MSAJCE Alumni Association Sponsored Sports Jersey to Hockey Team | NA                   | 30.09.2024 |
+| 50 | V. Abinaya                                                       | 2021-2025 / ECE      | 01.08.2024 |
+| 51 | M. Mohamed Afsal                                                 | 2022-2026 / IT       | 12.05.2024 |
+| 52 | B. Dhanalakshmi                                                  | 2022-2026 / IT       | 12.05.2024 |
+
+### Alumni Scholarship Recipients 2022-2026 (Selected)
+
+| S. No | Student Name             | Batch / Department | Date       |
+|-------|--------------------------|--------------------|------------|
+| 1     | Priyadharshini S         | 2023-2027 / CSBS   | 07.03.2026 |
+| 2     | Revathi A                | 2024-2028 / ECE    | 07.03.2026 |
+| 3     | Sireesh B                | 2024-2028 / ECE    | 07.03.2026 |
+| 4     | Mohammed Shahul Hameed B | 2024-2028 / ECE    | 06.03.2026 |
+| 5     | Rahya N                  | 2025-2029 / ECE    | 05.03.2026 |
+
+|    |                             |                  |            |
+|----|-----------------------------|------------------|------------|
+| 13 | Rahim Basha W               | 2023-2027 / AIML | 27.02.2026 |
+| 18 | Afreen Fathim S             | 2024-2028 / VLSI | 25.02.2026 |
+| 30 | Abu Jabar Mubarak U         | 2022-2026 / CSBS | 29.05.2025 |
+| 49 | Sports Jersey - Hockey Team | NA               | 30.09.2024 |
+| 50 | V. Abinaya                  | 2021-2025 / ECE  | 01.08.2024 |
+
+### Sample Questions this chunk answers:
+
+- How much money has MSAJCE alumni sponsored for scholarships?
+- Do MSAJCE alumni give scholarships to students?
+- Which departments have students received alumni scholarships?
+- Can I apply for an alumni scholarship at MSAJCE?
+- How many students have received alumni scholarships?
+- Did MSAJCE alumni sponsor sports jerseys?
+- What is the total alumni scholarship fund amount?
+
+Keywords: alumni scholarship, scholarship amount, Rs 37 lakh scholarship, student scholarship, ECE scholarship, CSE scholarship, IT scholarship, AIML scholarship, CSBS scholarship, alumni financial support, sports jersey alumni, student financial aid MSAJCE
+
+Overlap carry-forward: Distinguished Entrepreneur alumni include: Abdul Rahman J (MD Blue Bell), Abdur Rahim Salih (CEO V5 Innovations), Asim Ali L (CMO Customer Labs), Kalidoss J (Music Director), and Sabarish S R (CEO Sportasy). Total 56 entrepreneur alumni listed.
+
+## 11. Alumni Scholarship Contribution — Student Beneficiaries 2019–2022
+
+Chunk ID: msajce\_alumni\_chunk\_11 | URL: <https://www.msajce-edu.in/alumni.php#tab7> | ~460 tokens
+
+Context: Continues the list of student scholarship beneficiaries from 2019 to 2022, including various departments across ECE, CSE, MECH, and IT.
+
+MSAJCE Alumni Scholarship Beneficiaries (2019–2022) — Continued
+
+| S.N o. | Student Name                                                                    | Batch / Department | Date       |
+|--------|---------------------------------------------------------------------------------|--------------------|------------|
+| 53     | Pragatha                                                                        | 2023-2027 / CSE    | 16.03.2024 |
+| 54     | Md Abdul Kalam                                                                  | 2022-2026 / CSBS   | 16.03.2024 |
+| 55     | Nazmi A                                                                         | 2022-2026 / CSE    | 16.03.2024 |
+| 56     | Abu Jabar Mubarak                                                               | 2022-2026 / CSBS   | 16.03.2024 |
+| 57     | Nilofer Nisha                                                                   | 2022-2026 / ECE    | 16.03.2024 |
+| 58     | Shaik Irfan                                                                     | 2021-2025 / Mech   | 16.03.2024 |
+| 59     | Md Rasin                                                                        | 2023-2027 / IT     | 15.03.2024 |
+| 60     | Farhan Basha T                                                                  | 2021-2025 / CSE    | 13.03.2024 |
+| 61     | Ahamed Sheik                                                                    | 2021-2025 / CSE    | 09.03.2024 |
+| 62     | Amirudeen                                                                       | 2022-2026 / IT     | 09.03.2024 |
+| 63     | N. Abdullah                                                                     | 2022-2026 / IT     | 09.03.2024 |
+| 64     | Md Sajith                                                                       | 2022-2026 / ECE    | 09.03.2024 |
+| 65     | Ahamed Sheik                                                                    | 2021-2025 / CSE    | 09.11.2023 |
+| 66     | MSAJCE Alumni Association Sponsored Sports Jersey to Cricket and Football Teams | NA                 | 01.11.2023 |
+
+|    |                                                    |                  |            |
+|----|----------------------------------------------------|------------------|------------|
+| 67 | Tech Unity - Sponsored for College Symposium Event | NA               | 16.10.2023 |
+| 68 | Parvez Nabi Z                                      | 2023-2027 / IT   | 02.08.2023 |
+| 69 | Amirudeen F                                        | 2022-2026 / IT   | 08.08.2023 |
+| 70 | Fahd Ahmed Khan K                                  | 2023-2027 / ECE  | 11.09.2023 |
+| 71 | Pragatha M                                         | 2023-2027 / CSE  | 04.09.2023 |
+| 72 | Abdullah N                                         | 2023-2027 / IT   | 04.09.2023 |
+| 73 | Ijas Ahmed R                                       | 2023-2027 / MECH | 04.09.2023 |
+| 74 | Md Sajith S                                        | 2022-2026 / ECE  | 04.09.2023 |
+| 75 | Md Khaja Nawaz A                                   | 2020-2024 / CSE  | 04.09.2023 |
+| 76 | Codeathon - Symposium Sponsored                    | NA               | 08.05.2023 |
+| 77 | Md Sajith S                                        | 2022-2026 / ECE  | 07.04.2023 |
+| 78 | Md Sajith S                                        | 2022-2026 / ECE  | 06.04.2023 |
+| 79 | Syeda Zuha Tasneem                                 | 2021-2025 / CSE  | 29.03.2023 |
+| 80 | Md Khaja Nawaz A                                   | 2020-2024 / CSE  | 29.03.2023 |
+| 81 | Farhan Basha T                                     | 2021-2025 / CSE  | 24.03.2023 |
+| 82 | Abdullah S                                         | 2020-2024 / IT   | 18.03.2023 |
+| 83 | BSM Cricket Trophy Tournament Sponsored            | NA               | 24.02.2023 |
+| 84 | Sponsored Smart Board Device                       | NA               | 23.01.2023 |
+| 85 | Top Performer - Dept Wise                          | NA               | 15.10.2022 |
+| 86 | Cricket Kit Sponsored                              | NA               | 07.10.2022 |
+| 87 | Abdullah S                                         | 2020-2024 / IT   | 15.09.2022 |
+| 88 | Ashwini A                                          | 2019-2023 / ECE  | 08.09.2022 |
+| 89 | Akshaya K                                          | 2019-2023 / ECE  | 08.09.2022 |
+| 90 | Md Sajith S                                        | 2022-2026 / ECE  | 11.08.2022 |
+| 91 | Aayathul Mufarak A                                 | 2019-2023 / MECH | 02.08.2022 |
+| 92 | Assifa A                                           | 2019-2023 / ECE  | 02.09.2023 |
+| 93 | Farhan Basha T                                     | 2021-2025 / CSE  | 29.06.2022 |
+| 94 | Aayathul Mufarak A                                 | 2019-2023 / MECH | 30.03.2022 |
+| 95 | Parveen Begum M                                    | 2018-2022 / CSE  | 30.03.2022 |
+| 96 | Aayathul Mufarak A                                 | 2019-2023 / MECH | 13.02.2021 |
+| 97 | Akshaya K                                          | 2019-2023 / ECE  | 13.02.2021 |
+
+### Other Alumni Contributions:
+
+- Alumni Association Sponsored Sports Jersey to Cricket and Football Teams (01.11.2023)
+- Tech Unity Symposium Sponsored (16.10.2023)
+- Codeathon Symposium Sponsored (08.05.2023)
+- BSM Cricket Trophy Tournament Sponsored (24.02.2023)
+- Smart Board Device Sponsored (23.01.2023)
+
+- Cricket Kit Sponsored (07.10.2022)
+
+### Sample Questions this chunk answers:
+
+- Did alumni sponsor sports equipment for MSAJCE students?
+- Did alumni contribute to the Smart Board at MSAJCE?
+- Did MSAJCE alumni sponsor the BSM Cricket Trophy?
+- How long has alumni scholarship been running?
+- Did the alumni sponsor the Tech Unity symposium?
+- Who are the MECH department scholarship recipients?
+
+Keywords: alumni scholarship 2022, alumni scholarship 2021, scholarship ECE, scholarship CSE, cricket kit sponsored, smart board alumni, BSM Cricket Trophy, Tech Unity sponsored, Codeathon sponsored, football jersey alumni, sports jersey alumni
+
+Overlap carry-forward: Total alumni scholarship sponsored: Rs. 37,94,972. Recent 2026 recipients include Priyadharshini S (CSBS), Revathi A (ECE), and Sireesh B (ECE). Alumni also sponsored sports jerseys for Hockey, Cricket, and Football teams.
+
+---
+
+## 12. Alumni Meet Programme and Contact Information
+
+Chunk ID: msajce\_alumni\_chunk\_12 | URL: <https://www.msajce-edu.in/alumni.php#tab9> | ~380 tokens
+
+Context: Contains information about past alumni meet events, photos links, registration form, and complete college contact details for alumni-related enquiries.
+
+### MSAJCE Alumni Meet Programme
+
+Alumni Meet - 2k23 (2009 - 2020 Batch):
+
+- Photos: <https://photos.app.goo.gl/Qg5EabymfsW948G37>
+
+Alumni Meet - 2021 (2005, 2006 & 2007 Batch):
+
+- Photos: <https://www.msajce-edu.in/images/alumni/AlumniMeet2021.jpg>
+
+Silver Jubilee Reunion Meet 2025:
+
+- 500+ Alumnus participated
+
+- Sports Pavilion donated by 2001-2005 Batch
+
+- Held on: 01.02.2025
+
+- 18th Graduation Day 22 Feb 2025 Photos: <https://photos.app.goo.gl/LF3brje3EwmQcbx18>
+
+Alumni Registration Form: <https://forms.gle/CBMdXCDEb9uXVEBv6>
+
+MSAJCE Alumni Association Registration Certificate available on the alumni page.
+
+Useful Alumni Links:
+
+- ALUMNI ASSOCIATION BY-LAWS (Tamil): <https://www.msajce-edu.in/uploads/alumni/Alumni-Bylaw.pdf>
+
+- ALUMNI MEET MINUTES: <https://www.msajce-edu.in/uploads/alumni/543-B-ALUMNIMEETMINUTES.pdf>
+
+- ALUMNI ASSOCIATION BY-LAWS (English): <https://www.msajce-edu.in/uploads/alumni/Alumni-Bylaw-English.pdf>
+
+- ALUMNI MEET REPORT: <https://www.msajce-edu.in/uploads/alumni/543-C-ALUMNIMEETREPORT.pdf>
+
+College Contact Details:
+
+Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103
+
+Phone: +91 99400 04500
+
+Email: [msajce.office@gmail.com](mailto:msajce.office@gmail.com)
+
+Website: [www.msajce-edu.in](http://www.msajce-edu.in)
+
+Grievance Cell: [grievance@msajce-edu.in](mailto:grievance@msajce-edu.in)
+
+Online Application Form: <https://enrollonline.co.in/Registration/Apply/MSAJCE>
+
+Online Fee Payment: <https://www.feepayr.com/>
+
+Admission 2026-2027 Flyer: <https://www.msajce-edu.in/uploads/Admission24-25Flyer.pdf>
+
+Students Corner: <https://www.msajce-edu.in/studentscorner.php>
+
+College Video: <https://youtu.be/aNVaQWh1Pp4>
+
+### Sample Questions this chunk answers:
+
+- How can I register as an MSAJCE alumni?
+- When was the last MSAJCE alumni meet?
+- Where can I find alumni meet photos?
+- What is the MSAJCE alumni registration form link?
+- What is MSAJCE phone number?
+- What is MSAJCE email address?
+- Where is MSAJCE located?
+- How many people attended the Silver Jubilee Reunion Meet?
+- What is MSAJCE's website?
+
+Keywords: alumni meet, alumni registration, alumni meet photos, Silver Jubilee Meet 2025, alumni registration form, MSAJCE contact, MSAJCE phone, MSAJCE address, alumni by-laws, alumni meet report, MSAJCE website, alumni meet 2023
+
+Overlap carry-forward: Alumni scholarship beneficiaries from 2019 include Aayathul Mufarak A (MECH), Akshaya K (ECE), and Parveen Begum M (CSE). The total alumni scholarship fund stands at Rs. 37,94,972.
+
+| <b>MSAJCE — Alumni Association Contact</b>                                                                                                                                                                      |  |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--|
+| Alumni Secretary: Mr. Ahmed Jameel A.M.T   Alumni President: Dr. K. S. Srinivasan (Principal)                                                                                                                   |  |
+| Alumni Registration Form: <a href="https://forms.gle/CBMdXCDEb9uXVEBv6">https://forms.gle/CBMdXCDEb9uXVEBv6</a>                                                                                                 |  |
+| Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103                                                                                                                             |  |
+| Phone: +91 99400 04500   Email: <a href="mailto:msajce.office@gmail.com">msajce.office@gmail.com</a>   Grievance: <a href="mailto:grievance@msajce-edu.in">grievance@msajce-edu.in</a>                          |  |
+| Website: <a href="http://www.msajce-edu.in">www.msajce-edu.in</a>   Online Application: <a href="https://enrollonline.co.in/Registration/Apply/MSAJCE">https://enrollonline.co.in/Registration/Apply/MSAJCE</a> |  |
+
+MSAJCE | 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103 | +91 99400 04500 | [msajce.office@gmail.com](mailto:msajce.office@gmail.com) | [www.msajce-edu.in](http://www.msajce-edu.in) | RAG Extract: msajce\_alumni | 12 Chunks | 2026-04-27
