@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "total_entities": 5,
+    "generated_on": "2026-05-09",
+    "version": "v2"
+  },
+  "entity_registry": [
+    {
+      "canonical_name": "Head of Department",
+      "role": "HOD",
+      "department": null,
+      "email": "",
+      "phone": "",
+      "specialization": "",
+      "source_type": "knowledge_base_json",
+      "mention_count": 1,
+      "source_quotes": [
+        "Hostellers are generally not permitted to leave the campus except on holidays and require prior written permission from their Head of Department (HOD) and the hostel warden."
+      ]
+    },
+    {
+      "canonical_name": "warden",
+      "role": "hostel warden",
+      "department": null,
+      "email": "",
+      "phone": "",
+      "specialization": "",
+      "source_type": "knowledge_base_json",
+      "mention_count": 2,
+      "source_quotes": [
+        "Hostellers are generally not permitted to leave the campus except on holidays and require prior written permission from their Head of Department (HOD) and the hostel warden.",
+        "For outstation travel or going home, written permission from the warden or superintendent is mandatory."
+      ]
+    },
+    {
+      "canonical_name": "President",
+      "role": "President",
+      "department": "Student Council",
+      "email": "",
+      "phone": "",
+      "specialization": "",
+      "source_type": "knowledge_base_json",
+      "mention_count": 1,
+      "source_quotes": [
+        "Student Council: Comprises President, Secretary, and Department Coordinators."
+      ]
+    },
+    {
+      "canonical_name": "Secretary",
+      "role": "Secretary",
+      "department": "Student Council",
+      "email": "",
+      "phone": "",
+      "specialization": "",
+      "source_type": "knowledge_base_json",
+      "mention_count": 1,
+      "source_quotes": [
+        "Student Council: Comprises President, Secretary, and Department Coordinators."
+      ]
+    },
+    {
+      "canonical_name": "Principal",
+      "role": "Principal",
+      "department": null,
+      "email": "",
+      "phone": "",
+      "specialization": "",
+      "source_type": "knowledge_base_json",
+      "mention_count": 1,
+      "source_quotes": [
+        "Headed by the Principal with dedicated squads."
+      ]
+    }
+  ],
+  "entity_chunks": [
+    {
+      "chunk_id": "person_head_of_department_000",
+      "node_type": "PERSON",
+      "chunk_type": "profile",
+      "priority": "critical",
+      "page_title": "General — HOD Profile",
+      "department": "General",
+      "section": "HOD",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [],
+      "source_types": [],
+      "text": "Head of Department serves as HOD at MSAJCE. Hostellers are generally not permitted to leave the campus except on holidays and require prior written permission from their Head of Department (HOD) and the hostel warden.",
+      "super_chunk_text": "INSTITUTION: MSAJCE\nDEPARTMENT: General\nSECTION: HOD Profile\nENTITY_TYPE: PERSON\nSUMMARY: Head of Department is the HOD of General at MSAJCE.\nQUESTIONS: Who is Head of Department? | What is the role of Head of Department? | Who is the HOD of General? | Who heads the General department at MSAJCE? | General department head contact\nCONTENT: Head of Department serves as HOD at MSAJCE. Hostellers are generally not permitted to leave the campus except on holidays and require prior written permission from their Head of Department (HOD) and the hostel warden.\nKEYWORDS: Head of Department, HOD, General, , ",
+      "context": "Head of Department is the HOD at the General department of MSAJCE.",
+      "keywords": [
+        "Head of Department",
+        "HOD",
+        "General",
+        "",
+        ""
+      ],
+      "entities": {
+        "name": "Head of Department",
+        "role": "HOD",
+        "department": "General",
+        "email": "",
+        "phone": "",
+        "specialization": ""
+      },
+      "possible_questions": [
+        "Who is Head of Department?",
+        "What is the role of Head of Department?",
+        "Who is the HOD of General?",
+        "Who heads the General department at MSAJCE?",
+        "General department head contact"
+      ],
+      "edges": [
+        {
+          "relation": "WORKS_IN",
+          "target": "dept_general",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "chunk_id": "person_warden_001",
+      "node_type": "PERSON",
+      "chunk_type": "profile",
+      "priority": "critical",
+      "page_title": "General — hostel warden Profile",
+      "department": "General",
+      "section": "hostel warden",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [],
+      "source_types": [],
+      "text": "warden serves as hostel warden at MSAJCE. Hostellers are generally not permitted to leave the campus except on holidays and require prior written permission from their Head of Department (HOD) and the hostel warden. For outstation travel or going home, written permission from the warden or superintendent is mandatory.",
+      "super_chunk_text": "INSTITUTION: MSAJCE\nDEPARTMENT: General\nSECTION: hostel warden Profile\nENTITY_TYPE: PERSON\nSUMMARY: warden is the hostel warden of General at MSAJCE.\nQUESTIONS: Who is warden? | What is the role of warden?\nCONTENT: warden serves as hostel warden at MSAJCE. Hostellers are generally not permitted to leave the campus except on holidays and require prior written permission from their Head of Department (HOD) and the hostel warden. For outstation travel or going home, written permission from the warden or superintendent is mandatory.\nKEYWORDS: warden, hostel warden, General, , ",
+      "context": "warden is the hostel warden at the General department of MSAJCE.",
+      "keywords": [
+        "warden",
+        "hostel warden",
+        "General",
+        "",
+        ""
+      ],
+      "entities": {
+        "name": "warden",
+        "role": "hostel warden",
+        "department": "General",
+        "email": "",
+        "phone": "",
+        "specialization": ""
+      },
+      "possible_questions": [
+        "Who is warden?",
+        "What is the role of warden?"
+      ],
+      "edges": [
+        {
+          "relation": "WORKS_IN",
+          "target": "dept_general",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "chunk_id": "person_president_002",
+      "node_type": "PERSON",
+      "chunk_type": "profile",
+      "priority": "high",
+      "page_title": "Student Council — President Profile",
+      "department": "Student Council",
+      "section": "President",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [],
+      "source_types": [],
+      "text": "President serves as President in the Student Council department at MSAJCE. Student Council: Comprises President, Secretary, and Department Coordinators.",
+      "super_chunk_text": "INSTITUTION: MSAJCE\nDEPARTMENT: Student Council\nSECTION: President Profile\nENTITY_TYPE: PERSON\nSUMMARY: President is the President of Student Council at MSAJCE.\nQUESTIONS: Who is President? | What is the role of President?\nCONTENT: President serves as President in the Student Council department at MSAJCE. Student Council: Comprises President, Secretary, and Department Coordinators.\nKEYWORDS: President, President, Student Council, , ",
+      "context": "President is the President at the Student Council department of MSAJCE.",
+      "keywords": [
+        "President",
+        "President",
+        "Student Council",
+        "",
+        ""
+      ],
+      "entities": {
+        "name": "President",
+        "role": "President",
+        "department": "Student Council",
+        "email": "",
+        "phone": "",
+        "specialization": ""
+      },
+      "possible_questions": [
+        "Who is President?",
+        "What is the role of President?"
+      ],
+      "edges": [
+        {
+          "relation": "WORKS_IN",
+          "target": "dept_student_council",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "chunk_id": "person_secretary_003",
+      "node_type": "PERSON",
+      "chunk_type": "profile",
+      "priority": "high",
+      "page_title": "Student Council — Secretary Profile",
+      "department": "Student Council",
+      "section": "Secretary",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [],
+      "source_types": [],
+      "text": "Secretary serves as Secretary in the Student Council department at MSAJCE. Student Council: Comprises President, Secretary, and Department Coordinators.",
+      "super_chunk_text": "INSTITUTION: MSAJCE\nDEPARTMENT: Student Council\nSECTION: Secretary Profile\nENTITY_TYPE: PERSON\nSUMMARY: Secretary is the Secretary of Student Council at MSAJCE.\nQUESTIONS: Who is Secretary? | What is the role of Secretary?\nCONTENT: Secretary serves as Secretary in the Student Council department at MSAJCE. Student Council: Comprises President, Secretary, and Department Coordinators.\nKEYWORDS: Secretary, Secretary, Student Council, , ",
+      "context": "Secretary is the Secretary at the Student Council department of MSAJCE.",
+      "keywords": [
+        "Secretary",
+        "Secretary",
+        "Student Council",
+        "",
+        ""
+      ],
+      "entities": {
+        "name": "Secretary",
+        "role": "Secretary",
+        "department": "Student Council",
+        "email": "",
+        "phone": "",
+        "specialization": ""
+      },
+      "possible_questions": [
+        "Who is Secretary?",
+        "What is the role of Secretary?"
+      ],
+      "edges": [
+        {
+          "relation": "WORKS_IN",
+          "target": "dept_student_council",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "chunk_id": "person_principal_004",
+      "node_type": "PERSON",
+      "chunk_type": "profile",
+      "priority": "critical",
+      "page_title": "General — Principal Profile",
+      "department": "General",
+      "section": "Principal",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [],
+      "source_types": [],
+      "text": "Principal serves as Principal at MSAJCE. Headed by the Principal with dedicated squads.",
+      "super_chunk_text": "INSTITUTION: MSAJCE\nDEPARTMENT: General\nSECTION: Principal Profile\nENTITY_TYPE: PERSON\nSUMMARY: Principal is the Principal of General at MSAJCE.\nQUESTIONS: Who is Principal? | What is the role of Principal?\nCONTENT: Principal serves as Principal at MSAJCE. Headed by the Principal with dedicated squads.\nKEYWORDS: Principal, Principal, General, , ",
+      "context": "Principal is the Principal at the General department of MSAJCE.",
+      "keywords": [
+        "Principal",
+        "Principal",
+        "General",
+        "",
+        ""
+      ],
+      "entities": {
+        "name": "Principal",
+        "role": "Principal",
+        "department": "General",
+        "email": "",
+        "phone": "",
+        "specialization": ""
+      },
+      "possible_questions": [
+        "Who is Principal?",
+        "What is the role of Principal?"
+      ],
+      "edges": [
+        {
+          "relation": "WORKS_IN",
+          "target": "dept_general",
+          "weight": 1.0
+        }
+      ]
+    }
+  ]
+}

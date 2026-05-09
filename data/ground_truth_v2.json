@@ -1,0 +1,122 @@
+{
+  "csi_vp": {
+    "value": "Saqlin Mustaq M (Batch 2023-2027)",
+    "valid_until": "2027-05-31",
+    "source": "Professional_Societies_2024.pdf"
+  },
+  "principal": {
+    "value": "Dr. K.S. Srinivasan",
+    "valid_until": "2026-12-31",
+    "source": "Institutional_Policy.pdf"
+  },
+  "iic_president": {
+    "value": "Dr. B. Janarthanan",
+    "valid_until": "2026-12-31",
+    "source": "IIC_Council_List.pdf"
+  },
+  "college_code": {
+    "value": "1301",
+    "valid_until": "2099-12-31",
+    "source": "Anna_University_Affiliation"
+  },
+  "hod_general": {
+    "value": "Head of Department",
+    "source": "person_head_of_department_000",
+    "valid_until": "2027-05-31"
+  },
+  "hostel_warden_girls": {
+    "value": "warden",
+    "source": "person_warden_001",
+    "valid_until": "2027-05-31"
+  },
+  "principal_name": {
+    "value": "Principal",
+    "source": "person_principal_004",
+    "valid_until": "2027-05-31"
+  },
+  "highest_package": {
+    "value": "6 LPA",
+    "source": "auto_extracted_from_chunks",
+    "valid_until": "2027-05-31"
+  },
+  "campus_area_acres": {
+    "value": "70",
+    "source": "auto_extracted_from_chunks",
+    "valid_until": "2027-05-31"
+  },
+  "established_year": {
+    "value": "2001",
+    "source": "auto_extracted_from_chunks",
+    "valid_until": "2027-05-31"
+  },
+  "hod_it": {
+    "value": "Dr. Weslin D",
+    "source": "msajce_it.md",
+    "valid_until": "2027-05-31"
+  },
+  "hod_cse": {
+    "value": "Dr. K. Sayeelatha",
+    "source": "msajce_cse.md",
+    "valid_until": "2027-05-31"
+  },
+  "hod_aids": {
+    "value": "Dr. M. Senthil Kumar",
+    "source": "msajce_aids.md",
+    "valid_until": "2027-05-31"
+  },
+  "hod_aiml": {
+    "value": "Dr. P. Velmani",
+    "source": "msajce_aiml.md",
+    "valid_until": "2027-05-31"
+  },
+  "hod_ece": {
+    "value": "Dr. S. Radha",
+    "source": "msajce_ece.md",
+    "valid_until": "2027-05-31"
+  },
+  "hod_eee": {
+    "value": "Dr. R. Maheswari",
+    "source": "msajce_eee.md",
+    "valid_until": "2027-05-31"
+  },
+  "library_volumes": {
+    "value": "40000+",
+    "source": "msajce_library.md",
+    "valid_until": "2027-05-31"
+  },
+  "total_buses": {
+    "value": "22+",
+    "source": "msajce_transport.md",
+    "valid_until": "2027-05-31"
+  },
+  "admission_documents": {
+    "value": "10th & 12th Marks Sheets (Original), Transfer Certificate (TC), Community Certificate, Nativity Certificate (if applicable), First Graduate Certificate (if applicable), TNEA Allotment Order, 10 Passport size photos, Income Certificate (for scholarships)",
+    "source": "msajce_admission.md",
+    "valid_until": "2027-05-31"
+  },
+  "college_address": {
+    "value": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+    "source": "msajce_about.md",
+    "valid_until": "2099-12-31"
+  },
+  "college_phone": {
+    "value": "+91 99400 04500",
+    "source": "msajce_about.md",
+    "valid_until": "2099-12-31"
+  },
+  "college_email": {
+    "value": "msajce.office@gmail.com",
+    "source": "msajce_about.md",
+    "valid_until": "2099-12-31"
+  },
+  "grievance_email": {
+    "value": "grievance@msajce-edu.in",
+    "source": "msajce_about.md",
+    "valid_until": "2099-12-31"
+  },
+  "online_application": {
+    "value": "https://enrollonline.co.in/Registration/Apply/MSAJCE",
+    "source": "msajce_admission.md",
+    "valid_until": "2027-05-31"
+  }
+}

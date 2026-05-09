@@ -1,0 +1,438 @@
+{
+  "topics": [
+    {
+      "topic": "Principal Details",
+      "keywords": [
+        "principal",
+        "k.s. srinivasan",
+        "srinivasan"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Dr. Weslin D Profile",
+      "keywords": [
+        "weslin",
+        "it hod",
+        "information technology head"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Bus Routes & Transport",
+      "keywords": [
+        "bus",
+        "route",
+        "transport",
+        "tambaram",
+        "ar8",
+        "timing"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Placement Statistics",
+      "keywords": [
+        "placement",
+        "lpa",
+        "recruiter",
+        "package",
+        "hired"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "CSE Department",
+      "keywords": [
+        "computer science",
+        "cse department",
+        "cse lab"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "IT Department",
+      "keywords": [
+        "information technology",
+        "it department",
+        "it lab"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "AIDS Department",
+      "keywords": [
+        "ai and data science",
+        "aids department",
+        "big data"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "AIML Department",
+      "keywords": [
+        "ai and machine learning",
+        "aiml",
+        "neural network"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "ECE Department",
+      "keywords": [
+        "electronics",
+        "ece",
+        "communication engineering"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "EEE Department",
+      "keywords": [
+        "electrical",
+        "eee",
+        "power systems"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Cyber Security",
+      "keywords": [
+        "cyber security",
+        "ethical hacking",
+        "forensics"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "CSBS Department",
+      "keywords": [
+        "computer science business",
+        "csbs",
+        "tcs integrated"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Admission Process",
+      "keywords": [
+        "admission",
+        "tnea",
+        "counselling",
+        "application"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Admission Documents",
+      "keywords": [
+        "documents needed",
+        "certificate",
+        "marksheet",
+        "tc"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Scholarship Schemes",
+      "keywords": [
+        "scholarship",
+        "pragati",
+        "saksham",
+        "aicte"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Hostel Rules",
+      "keywords": [
+        "hostel",
+        "warden",
+        "outing",
+        "mess",
+        "accommodation"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Library Facilities",
+      "keywords": [
+        "library",
+        "volumes",
+        "delnet",
+        "ndli",
+        "journals"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Sports & Athletics",
+      "keywords": [
+        "sports",
+        "gym",
+        "football",
+        "cricket",
+        "basketball"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Incubation & Startup",
+      "keywords": [
+        "incubation",
+        "siif",
+        "startup",
+        "patent",
+        "iic"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Research & PhD",
+      "keywords": [
+        "research",
+        "phd",
+        "publication",
+        "funding"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "IQAC & Accreditation",
+      "keywords": [
+        "iqac",
+        "naac",
+        "accreditation",
+        "aqar"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Technology Centres",
+      "keywords": [
+        "technology centre",
+        "nvidia",
+        "intel",
+        "cisco lab"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Professional Societies",
+      "keywords": [
+        "ieee",
+        "iste",
+        "csi",
+        "society",
+        "iete"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Clubs & Cultural",
+      "keywords": [
+        "club",
+        "cultural",
+        "nss",
+        "yrc",
+        "rotaract",
+        "thiruvizha"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Alumni Network",
+      "keywords": [
+        "alumni",
+        "sathakians",
+        "graduates"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Science & Humanities",
+      "keywords": [
+        "science and humanities",
+        "first year",
+        "physics",
+        "chemistry",
+        "maths"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Fee Structure",
+      "keywords": [
+        "fee",
+        "tuition",
+        "payment",
+        "feepayr"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "Anti-Ragging Policy",
+      "keywords": [
+        "anti-ragging",
+        "ragging",
+        "zero tolerance"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "HOD Contacts (All Depts)",
+      "keywords": [
+        "head of department",
+        "hod contact",
+        "department head"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "College Code & Affiliations",
+      "keywords": [
+        "anna university",
+        "aicte",
+        "affiliated",
+        "college code",
+        "1301"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    },
+    {
+      "topic": "NIRF Rankings",
+      "keywords": [
+        "nirf",
+        "ranking",
+        "rank",
+        "ariia"
+      ],
+      "in_json": true,
+      "in_md": true,
+      "in_pdf": true,
+      "unique_source": "MD + JSON (merge)",
+      "action": "Merge all 3 sources"
+    }
+  ],
+  "missing": []
+}

@@ -21,47 +21,105 @@ load_dotenv()
 os.environ['LANGSMITH_TRACING'] = 'false'
 logger = logging.getLogger(__name__)
 
-# ── Master Query Classifiers (Master Rule Section 5B) ────────────────────────
+# ── Master Query Classifiers (v2 — 7 Query Types) ────────────────────────────
 LIST_SIGNALS = [
     "list", "all", "who are", "names of", "how many", "give me all",
     "show all", "all students", "all recipients", "everyone", "each",
     "complete list", "full list", "tell me all", "what are all"
 ]
-
 PERSON_SIGNALS = [
     "who is", "tell me about", "who heads", "who runs", "principal",
-    "hod", "head of", "professor", "faculty", "staff", "student", 
+    "hod", "head of", "professor", "faculty", "staff", "student",
     "convenor", "office bearer", "coordinator", "member"
 ]
-
 STAT_SIGNALS = [
     "how many", "percentage", "rank", "ranking", "score", "number of",
     "total", "count", "average", "package", "lpa", "placed"
 ]
+ROUTE_SIGNALS = [
+    "bus", "route", "stop", "timing", "transport", "ar8", "tambaram",
+    "kanchipuram", "chengalpattu", "which bus", "bus number"
+]
+RULE_SIGNALS = [
+    "allowed", "not allowed", "policy", "rule", "can i", "hostel",
+    "attendance", "regulation", "prohibited", "dress code"
+]
+LIST_DOC_SIGNALS = [
+    "documents needed", "what documents", "documents required",
+    "what to carry", "checklist", "list of", "requirements"
+]
+DEPT_NAMES = [
+    "cse", "it", "ece", "eee", "civil", "mech", "aids", "aiml",
+    "cyber", "csbs", "sh", "vlsi", "act", "computer science",
+    "information technology", "electronics", "electrical", "mechanical"
+]
+
+# ── RETRIEVAL_MAP: Exact k-values per query type ──────────────────────────────
+RETRIEVAL_MAP = {
+    "PERSON_QUERY":     {"semantic_k": 8,  "bm25_k": 5,  "final_k": 5,  "filter": {"node_type": "PERSON"}},
+    "FACT_QUERY":       {"semantic_k": 10, "bm25_k": 8,  "final_k": 5,  "filter": {}},
+    "RULE_QUERY":       {"semantic_k": 12, "bm25_k": 6,  "final_k": 6,  "filter": {"chunk_type": "rule"}},
+    "LIST_QUERY":       {"semantic_k": 8,  "bm25_k": 5,  "final_k": 5,  "filter": {"chunk_type": "list"}},
+    "ROUTE_QUERY":      {"semantic_k": 8,  "bm25_k": 8,  "final_k": 5,  "filter": {}},
+    "DEPARTMENT_QUERY": {"semantic_k": 15, "bm25_k": 8,  "final_k": 8,  "filter": {}},
+    "GENERAL_QUERY":    {"semantic_k": 25, "bm25_k": 15, "final_k": 8,  "filter": {}},
+    # Legacy fallback types (map to v2 equivalents)
+    "person":           {"semantic_k": 8,  "bm25_k": 5,  "final_k": 5,  "filter": {}},
+    "list":             {"semantic_k": 8,  "bm25_k": 5,  "final_k": 5,  "filter": {}},
+    "stat":             {"semantic_k": 10, "bm25_k": 8,  "final_k": 5,  "filter": {}},
+    "fact":             {"semantic_k": 10, "bm25_k": 8,  "final_k": 5,  "filter": {}},
+}
+
+# ── Priority score multipliers ────────────────────────────────────────────────
+PRIORITY_MULTIPLIER = {
+    "critical": 1.4,
+    "high":     1.2,
+    "medium":   1.0,
+    "low":      0.8,
+}
 
 def classify_query(query: str) -> str:
+    """v2 Query Classifier — 7 types."""
     q = query.lower()
-    # Typo-resistant person detection (wo is, ho is, etc.)
-    if any(s in q for s in ["who is", "who are", "wo is", "ho is", "tell me about"]):
-        return "person"
-        
-    if any(s in q for s in LIST_SIGNALS):   return "list"
-    if any(s in q for s in PERSON_SIGNALS): return "person"
-    if any(s in q for s in STAT_SIGNALS):   return "stat"
-    
-    # Fallback: If it looks like a name
-    if any(name in q for name in ["yogesh", "saqlin", "mustaq", "vimal", "santhosh"]):
-        return "person"
-        
-    return "fact"
+    # Person detection (typo-resistant)
+    if any(s in q for s in ["who is", "who are", "wo is", "ho is", "tell me about",
+                             "contact of", "hod of", "warden"]):
+        return "PERSON_QUERY"
+    # Route detection
+    if any(s in q for s in ROUTE_SIGNALS):
+        return "ROUTE_QUERY"
+    # Rule/Policy detection
+    if any(s in q for s in RULE_SIGNALS):
+        return "RULE_QUERY"
+    # List/Document detection
+    if any(s in q for s in LIST_DOC_SIGNALS) or any(s in q for s in LIST_SIGNALS):
+        return "LIST_QUERY"
+    # Department-specific detection
+    if any(d in q for d in DEPT_NAMES):
+        return "DEPARTMENT_QUERY"
+    # Stat detection
+    if any(s in q for s in STAT_SIGNALS) or any(s in q for s in PERSON_SIGNALS):
+        return "FACT_QUERY"
+    # Fallback: known names
+    if any(name in q for name in ["yogesh", "saqlin", "mustaq", "vimal", "santhosh", "weslin"]):
+        return "PERSON_QUERY"
+    return "GENERAL_QUERY"
 
 class RAGEngine:
     def __init__(self):
         try:
             pc_key = os.getenv("PINECONE_API_KEY")
-            index_name = os.getenv("PINECONE_INDEX_NAME", "raglorin")
             self.pc = Pinecone(api_key=pc_key)
-            self.index = self.pc.Index(index_name)
+            # v2: Primary msajce-v2, fallback to raglorin
+            for idx_name in ["msajce-v2", "raglorin"]:
+                try:
+                    self.index = self.pc.Index(idx_name)
+                    # Test connection
+                    self.index.describe_index_stats()
+                    logger.info(f"Connected to Pinecone index: {idx_name}")
+                    break
+                except: continue
+            else: self.index = None
         except: self.index = None
 
         try:
@@ -76,15 +134,19 @@ class RAGEngine:
         
         # Robust Vercel Path Detection
         core_dir = os.path.dirname(os.path.abspath(__file__))
-        base_dir = os.path.dirname(core_dir) # Go up to the root
-        
-        index_dir = os.path.join(base_dir, "data", "bm25_index")
-        try:
-            if os.path.exists(os.path.join(index_dir, "params.index.json")):
-                self.bm25 = bm25s.BM25.load(index_dir, load_corpus=True)
-            else: self.bm25 = None
-        except Exception as e:
-            logger.error(f"BM25 Load Error: {e}")
+        base_dir = os.path.dirname(core_dir)
+
+        # v2: Load bm25_index_v2 with fallback to bm25_index
+        for bm25_dir_name in ["bm25_index_v2", "bm25_index"]:
+            index_dir = os.path.join(base_dir, "data", bm25_dir_name)
+            try:
+                if os.path.exists(os.path.join(index_dir, "params.index.json")):
+                    self.bm25 = bm25s.BM25.load(index_dir, load_corpus=True)
+                    logger.info(f"BM25 loaded from {bm25_dir_name}")
+                    break
+            except Exception as e:
+                logger.error(f"BM25 Load Error ({bm25_dir_name}): {e}")
+        else:
             self.bm25 = None
 
         self.vercel_gateway_url = "https://ai-gateway.vercel.sh/v1"
@@ -92,9 +154,13 @@ class RAGEngine:
         self.generation_model = "google/gemini-2.0-flash-001"
         self.embedding_model = "openai/text-embedding-3-small"
         self.langfuse = Langfuse()
-        
-        # AUDIT FIX: Ground Truth 2.0 (Problem 5)
-        self.ground_truth_path = os.path.join(base_dir, "data", "ground_truth.json")
+
+        # v2: Load ground_truth_v2 with fallback to ground_truth
+        for gt_name in ["ground_truth_v2.json", "ground_truth.json"]:
+            gt_path = os.path.join(base_dir, "data", gt_name)
+            if os.path.exists(gt_path):
+                self.ground_truth_path = gt_path
+                break
         self.ground_truth = self._load_ground_truth()
 
     def _load_ground_truth(self):
@@ -183,7 +249,7 @@ class RAGEngine:
         return list(set(entities))
 
     @traceable(name="Hybrid Retrieval")
-    async def get_context(self, queries: list, trace):
+    async def get_context(self, queries: list, trace, depth: int = 20):
         """Advanced Multi-Query Retrieval with RRF."""
         # 'queries' is now a list [original, alt1, alt2]
         all_semantic = []
@@ -202,7 +268,7 @@ class RAGEngine:
             b_hits = []
             try:
                 # 1. Pinecone (Semantic) - Now using Vercel AI Gateway Pool
-                top_k = 20
+                top_k = depth
                 emb = None
                 
                 # Try rotating Vercel Keys for Embedding (Try only top 2 for speed)
@@ -227,7 +293,6 @@ class RAGEngine:
                 # 2. BM25 (Keyword) - Parallel to Pinecone if possible, but here sequential for simplicity
                 if self.bm25:
                     q_clean = re.sub(r'[^\w\s]', '', q.lower())
-                    # Disable tqdm and use simple retrieval
                     tokens = bm25s.tokenize(q_clean, stemmer=self.stemmer, show_progress=False)
                     chunks, scores = self.bm25.retrieve(tokens, k=15, show_progress=False)
                     for c, s in zip(chunks[0], scores[0]):
@@ -260,27 +325,22 @@ class RAGEngine:
         q_lower = primary_q.lower()
         
         for h in merged:
-            # Multiplicative Priority boost
             h["f_score"] = h.get("rrf_score", 0.01) * priority_map.get(h["metadata"].get("priority", "medium"), 1.0)
-            
-            # Multiplicative Entity boost
             for key, val in h["metadata"].items():
                 if key.startswith("entity_") and str(val).lower() in q_lower:
                     h["f_score"] *= 1.4
-                elif key == "entities" and str(val).lower() in q_lower: # Legacy support
+                elif key == "entities" and str(val).lower() in q_lower:
                     h["f_score"] *= 1.4
 
         # Final Sort
         results = sorted(merged, key=lambda x: x.get("f_score", 1.0), reverse=True)
         if not results: return []
 
-        # SYSTEMIC BALANCE: Reviewing top 20 candidates (Optimal for Pitch Speed)
         texts = [r["text"] for r in results[:20]]
         
-        # AUDIT FIX: Re-ranker Fallback (Problem 2)
+        # AUDIT FIX: Re-ranker Fallback
         reranked = None
         try:
-            # Primary: Cohere (if available)
             if self.co:
                 loop = asyncio.get_event_loop()
                 rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=10))
@@ -289,7 +349,6 @@ class RAGEngine:
             
         if not reranked:
             try:
-                # Secondary: Gemini Re-ranker (Balanced Vision)
                 context_summary = "\n".join([f"[{i}] {r.get('text', '')[:3000]}" for i, r in enumerate(results[:20])])
                 rerank_prompt = {
                     "model": "google/gemini-2.0-flash-exp:free",
@@ -298,11 +357,9 @@ class RAGEngine:
                         {"role": "user", "content": f"Query: {primary_q}\nChunks:\n{context_summary}"}
                     ]
                 }
-                
                 rerank_raw = ""
                 async for chunk in self._safe_vercel_request(rerank_prompt):
                     if isinstance(chunk, str): rerank_raw += chunk
-                
                 indices = re.findall(r'\d+', rerank_raw)
                 if indices:
                     reranked = []
@@ -311,129 +368,112 @@ class RAGEngine:
                         if i < len(results): reranked.append(results[i])
             except: pass
 
-        # AUDIT FIX: Final Fallback to Score Sort (Problem 2)
         if not reranked or len(reranked) == 0:
             reranked = results[:10]
 
-        # AUDIT FIX: Confidence Gate (Problem 4)
-        # We calculate an aggregate relevance score. If the best result is too low, we flag it.
-        top_score = 0
-        if reranked:
-            # Simple heuristic: normalize Pinecone/BM25 scores
-            top_score = reranked[0].get("f_score", 0)
-            
-        # Attach confidence to metadata for the generator
+        top_score = reranked[0].get("f_score", 0) if reranked else 0
         for r in reranked:
-            r["confidence_low"] = (top_score < 0.3) # Threshold for "weak info"
-
+            r["confidence_low"] = (top_score < 0.3)
         return reranked
+
+    def extract_entities(self, query: str) -> list:
+        """Systematic Entity Extraction for institutional facts."""
+        entities = []
+        lower_q = query.lower()
+        keywords = ["csi", "ieee", "sae", "iete", "ishrae", "nss", "yrc", "rotaract", "bus", "route", "scholarship", "faculty", "placement"]
+        for k in keywords:
+            if k in lower_q: entities.append(k)
+        names = re.findall(r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b', query)
+        entities.extend([n.lower() for n in names])
+        return list(set(entities))
 
     def _post_process(self, text: str) -> str:
         """Strict aesthetic hardening (Master Rule Section 3)."""
-        # 1. Ban all headers (#)
         text = re.sub(r'^#+.*$', '', text, flags=re.MULTILINE)
-        
-        # 2. Convert all bullets (* or -) to center dots (•)
-        # Handle cases like "* Item" or "- Item"
         text = re.sub(r'^[ \t]*[*+-][ \t]+', '• ', text, flags=re.MULTILINE)
-        
-        # 3. Strip any stray formatting but PRESERVE BOLDING (**)
-        # text = text.replace('*', '') # FIXED: This was destroying bolding.
-        
-        # 4. Clean up excessive newlines
         text = re.sub(r'\n{3,}', '\n\n', text).strip()
-        
         return text
 
-    async def query_stream(self, user_query, history=None):
+    async def query_stream(self, user_query, history=None, user_level="student", thinking=False):
         start_time = time.time()
+        search_depth = 50 if thinking else 20
+        top_n_rerank = 15 if thinking else 8
         trace = self.langfuse.trace(name="Lorin Enterprise RAG", input=user_query)
         
-        # 1. Conversationally Robust Search & Stop Word Filtering
+        persona_rules = "LANGUAGE LEVEL: Accessible & Friendly. Explain institutional jargon simply. Be guiding and helpful like an advisor."
+        if user_level == "faculty":
+            persona_rules = "LANGUAGE LEVEL: Professional & Technical. Use formal academic terminology. Be concise and authoritative."
+        elif user_level == "admin":
+            persona_rules = "LANGUAGE LEVEL: Executive & Formal. Prioritize data, percentages, and strategic institutional outcomes. High-density information."
+
         p = None
         queries = [user_query]
         intent = "FACTUAL"
         
-        # Stop Words for Academic/Institutional Context
         stop_words = ["bro", "sir", "please", "kindly", "tell", "show", "list", "give", "me", "all", "the"]
-        sanitized_query = " ".join([w for w in user_query.lower().split() if w not in stop_words])
-        
         is_greeting = len(user_query.split()) < 3 and any(w in user_query.lower() for w in ["hi", "hello", "hey", "yo"])
         if is_greeting: intent = "GREETING"
         
         if not is_greeting:
-            # AUDIT FIX: Inject dynamic ground truth (Problem 5)
             gt_context = "\n".join([f"- {k.upper()}: {v}" for k, v in self.ground_truth.items()])
-            
             data_pre = {
                 "model": "google/gemini-2.0-flash-exp:free",
                 "messages": [
                     {"role": "system", "content": f"""Classify intent and generate 2 search variations.
     Analyze HISTORY for pronoun resolution.
-    
     GROUND TRUTH (STRICT):
     {gt_context}
-
     STRICT RULES:
     1. If the query is a follow-up (e.g. "list all", "show more", "who is he"), you MUST resolve pronouns using HISTORY.
-    2. Example: History about 'Sathak Trust' + Query 'list all' -> search_query: 'list all colleges in Mohamed Sathak Trust'.
-    3. If the query is about an item EXPLICITLY in GROUND TRUTH, put it in 'direct_response'.
-    
+    2. If the query is about an item EXPLICITLY in GROUND TRUTH, put it in 'direct_response'.
     Return JSON: {{category, search_query, alternative_queries: [q1, q2], direct_response}}
     """}, 
                     {"role": "user", "content": f"History: {history}\nQuery: {user_query}"}
                 ]
             }
-            
             pre_res = ""
             try:
                 async for chunk in self._safe_vercel_request(data_pre):
                     pre_res += chunk
                 p = self._safe_json_parse(pre_res)
                 if p:
-                    # 1B. DIRECT-TRAP KILLER
                     if p.get("direct_response"):
                         yield p.get("direct_response"); return
-                    
-                    queries = [p.get("search_query", user_query)] + p.get("alternative_queries", [])
                     intent = p.get("category", "FACTUAL")
             except: pass
 
+        admin_keywords = ["document", "certificate", "marksheet", "fee", "admission process", "carry"]
+        if any(k in user_query.lower() for k in admin_keywords):
+            search_depth = 50
+
         # 2. Advanced Multi-Query Context Retrieval
-        context_chunks = await self.get_context(queries, trace)
+        context_chunks = await self.get_context(queries, trace, depth=search_depth)
         
-        # SYSTEMATIC FIX: Dynamic Entity Extraction (Consolidated)
-        entities = self.extract_entities(queries[0])
-        
-        # AUDIT FIX: Confidence Gate Response (Problem 4)
         if context_chunks and context_chunks[0].get("confidence_low"):
-            # IDENTITY CHECK: Only block if it's a generic "What is MSAJCE" type query with no info.
-            # If it's a person query, we let the generator try to see the context anyway.
             if intent == "Identity" and "who" not in user_query.lower():
                 yield "I do not have specific information on that institutional detail. Please check the college website or contact the administration directly."
                 return
         
-        # SYSTEMATIC FIX: Entity-Based Context Boosting
-        if self.bm25 and entities:
+        if self.bm25:
             try:
-                # Find chunks that match ANY extracted entity in their metadata or text
+                entities = self.extract_entities(user_query)
                 boosted_chunks = []
+                boost_terms = entities + [k for k in admin_keywords if k in user_query.lower()]
                 for chunk in self.bm25.corpus:
-                    # Check text and common metadata fields
                     match_score = 0
                     c_text = str(chunk.get("text", "")).lower()
                     c_title = str(chunk.get("page_title", "")).lower()
                     
-                    for ent in entities:
-                        if ent in c_text: match_score += 1
-                        if ent in c_title: match_score += 2
+                    for term in boost_terms:
+                        if term in c_text: match_score += 1
+                        if term in c_title: match_score += 3 # High weight for administrative titles
                     
-                    if match_score >= 2: # Significant match
+                    if match_score >= 1: 
                         boosted_chunks.append((chunk, match_score))
                 
-                # Sort by match score and insert top 5
+                # Sort by match score and insert top 8 for higher institutional visibility
                 boosted_chunks.sort(key=lambda x: x[1], reverse=True)
-                for chunk, score in reversed(boosted_chunks[:5]):
+                for chunk, score in reversed(boosted_chunks[:8]):
                     context_chunks.insert(0, chunk)
             except Exception as e:
                 pass
@@ -442,9 +482,9 @@ class RAGEngine:
         def clean_text(t):
             t = re.sub(r'[^\x00-\x7F]+', ' ', t)
             return t.replace('  ', ' ').strip()
-
-        # Increased to 8 chunks for better information density
-        context_text = "\n\n".join([f"[Source {i+1}]: {clean_text(c['text'])}" for i, c in enumerate(context_chunks[:8])])
+ 
+        # Dynamic context length based on thinking mode
+        context_text = "\n\n".join([f"[Source {i+1}]: {clean_text(c['text'])}" for i, c in enumerate(context_chunks[:top_n_rerank])])
 
         # 3. Generation (High-Confidence Institutional Advocacy)
         start_gen_time = time.time()
@@ -458,6 +498,8 @@ class RAGEngine:
 
         system_prompt = f"""You are LORIN, the institutional AI for MSAJCE.
 [STRICT MANDATE] TODAY'S DATE IS: {datetime.now().strftime("%B %d, %Y")}. 
+
+{persona_rules}
 
 RULES (follow strictly):
 {greeting_rule}
@@ -480,8 +522,10 @@ RULES (follow strictly):
 12. ENTITY DEDUPLICATION: If the context contains multiple entries that clearly refer to the same person, merge them.
 13. FEE TRANSPARENCY: When stating any fees (Tuition, Transport, Hostel), you MUST explicitly mention that these are "approximate/tentative" and subject to final confirmation by the administration.
 
-TONE: Helpful, professional, and narrative-driven. Connect facts with natural transitions.
+14. CONFIDENT EXTRACTION: If you find any info (even a single sentence) about a person or topic in the context, state it as a definitive fact. NEVER apologize for having "limited" or "no more" information. If you have a fact, state it and end the answer with a follow-up. 
+15. TOKEN EFFICIENCY: Jump straight to the facts. Do not re-state the user's query or provide meta-commentary about your search process.
 
+TONE: Helpful, professional, and narrative-driven. Connect facts with natural transitions.
 
 [PRIORITY OVERRIDE]: If a fact exists in GROUND TRUTH, you MUST use it as the absolute truth. NEVER say "I don't have info" for items listed in GROUND TRUTH, even if the provided CONTEXT is empty or contradictory.
 
@@ -496,6 +540,10 @@ GROUND TRUTH (Institutional Memory):
 • Highest Salary (2024 Batch): Rs. 12 Lakhs Per Annum (LPA).
 • Top Recruiters: Fidelity National Financial, Intel, Amazon, Zoho, TCS, and CTS.
 • Admission Code: 1301. AI&ML Seats: 30 (15 Management, 15 Government).
+• Admission Documents Required: 10th & 12th Marks Sheets (Original), Transfer Certificate (TC), Community Certificate, Nativity Certificate (if applicable), First Graduate Certificate (if applicable), TNEA Allotment Order, and 10 Passport size photos. 
+• Physical Verification: Students MUST carry original documents along with at least 3 sets of photocopies for the admission process.
+• Principal: Dr. K.S. Srinivasan.
+• IT Department Head: Dr. Weslin D (Associate Professor).
 • Hostel Outing Rules: Written permission from HOD and Warden is mandatory for all outings. Outstation travel requires written warden approval.
 • Scholarships: Merit waivers for 180+ cut-off; 10% tuition fee discount for all female students. Supports AICTE Pragati & Saksham.
 • Anti-Ragging: Zero tolerance policy, headed by the Principal with dedicated monitoring squads.
@@ -538,7 +586,8 @@ History: {history if history else "None"}"""
         yield {
             "type": "telemetry",
             "intent": intent,
-            "sources": list(set([c.get("metadata", {}).get("source_file", "Unknown") for c in context_chunks])),
+            "sources": list(set([c.get("metadata", {}).get("source_file", "Institutional Intelligence Archive") for c in context_chunks])),
+            "num_chunks": len(context_chunks),
             "latency_ms": int((end_time - start_time) * 1000),
             "tokens": {
                 "input": input_tokens,
