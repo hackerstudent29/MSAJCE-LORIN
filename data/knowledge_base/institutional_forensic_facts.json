@@ -53,8 +53,20 @@
     {
       "chunk_id": "forensic_discipline_01",
       "section": "Anti-Ragging and Lateral Entry",
-      "text": "Anti-Ragging: Headed by the Principal with dedicated squads. Zero tolerance policy—punishments include FIR filing, hostel expulsion, and admission cancellation. Lateral Entry: Admissions conducted via TN-LEA counselling. Candidates must hold a Diploma in Engineering/Technology or a B.Sc. with Mathematics.",
-      "keywords": ["anti-ragging", "principal", "lateral entry", "TN-LEA", "diploma"]
+      "text": "Anti-Ragging: Headed by the Principal with dedicated squads. Zero tolerance policy—punishments include FIR filing, hostel expulsion, and admission cancellation. Lateral Entry: Admissions conducted via TN-LEA counselling. Candidates must hold a Diploma in Engineering/Technology or a B.Sc. with Mathematics. IMPORTANT: Lateral Entry is strictly for DIRECT SECOND YEAR only. There is NO lateral entry option for the third year.",
+      "keywords": ["anti-ragging", "principal", "lateral entry", "TN-LEA", "diploma", "second year", "no third year"]
+    },
+    {
+      "chunk_id": "forensic_library_01",
+      "section": "Library Working Hours for Hostellers",
+      "text": "Library Working Hours: The College Main Library is kept open until 7:00 PM on all working days (Monday to Saturday) specifically for the benefit of students staying in the hostel. Sunday hours are from 10:00 AM to 4:00 PM.",
+      "keywords": ["library working hours", "hostel", "hostellers", "7:00 PM", "7 PM", "Sundays"]
+    },
+    {
+      "chunk_id": "forensic_labs_01",
+      "section": "Lab Facilities for AIDS and CSBS Departments",
+      "text": "Lab Facilities for AIDS and CSBS: The newly established Artificial Intelligence & Data Science (AIDS) and Computer Science and Business Systems (CSBS) departments share state-of-the-art laboratory facilities. These include the C Programming Lab, Internet Programming Lab, Operating Systems Lab, OOAD Lab, Web Technology Lab, Networks Lab, and specialized Artificial Intelligence and Data Exploration labs equipped with high-performance computing resources.",
+      "keywords": ["lab facilities", "AIDS", "CSBS", "laboratories", "computer labs"]
     }
   ]
 }
