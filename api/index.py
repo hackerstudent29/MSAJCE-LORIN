@@ -40,6 +40,7 @@ CORS(app, resources={r"/api/*": {"origins": "*"}})
 # --- Global State ---
 _engine = None
 _db_pool = None
+_telegram_app = None
 
 async def get_db_pool():
     global _db_pool
@@ -58,6 +59,16 @@ async def get_engine():
         from core.engine import RAGEngine
         _engine = RAGEngine()
     return _engine
+
+async def get_telegram_app():
+    global _telegram_app
+    if _telegram_app is None:
+        request_obj = HTTPXRequest(connect_timeout=30.0, read_timeout=30.0)
+        _telegram_app = ApplicationBuilder().token(TOKEN).request(request_obj).build()
+        _telegram_app.add_handler(CommandHandler("start", start))
+        _telegram_app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+        await _telegram_app.initialize()
+    return _telegram_app
 
 async def log_to_supabase(user_id, user_name, query, response, tel):
     try:
@@ -245,13 +256,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if not full_response:
             await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.", parse_mode="Markdown")
 
-async def create_app():
-    request_obj = HTTPXRequest(connect_timeout=30.0, read_timeout=30.0)
-    application = ApplicationBuilder().token(TOKEN).request(request_obj).build()
-    application.add_handler(CommandHandler("start", start))
-    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-    await application.initialize()
-    return application
 
 @app.route('/')
 def home(): return "<h1>🚀 Lorin Bot Active</h1>", 200
@@ -304,14 +308,13 @@ async def chat_api():
 @app.route('/api/webhook', methods=['POST'])
 async def webhook():
     try:
-        application = await create_app()
+        application = await get_telegram_app()
         update = Update.de_json(request.get_json(force=True), application.bot)
         await application.process_update(update)
-        await application.shutdown()
         return "OK", 200
     except Exception as e:
         logger.error(f"Webhook Error: {e}")
-        return str(e), 500
+        return str(e), 200
 
 @app.route('/api/sunday-report')
 async def trigger_sunday_report():

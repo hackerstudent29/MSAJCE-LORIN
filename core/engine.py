@@ -173,52 +173,46 @@ class RAGEngine:
             b_hits = []
             try:
                 # 1. Pinecone (Semantic) - Now using Vercel AI Gateway Pool
-                top_k = 25
+                top_k = 20
                 emb = None
                 
-                # Try rotating Vercel Keys for Embedding
+                # Try rotating Vercel Keys for Embedding (Try only top 2 for speed)
                 vercel_keys = [
                     os.getenv("VERCEL_AI_KEY_6"),
-                    os.getenv("VERCEL_AI_KEY_5"),
-                    os.getenv("VERCEL_API_KEY_3"),
-                    os.getenv("AI_GATEWAY_API_KEY")
+                    os.getenv("VERCEL_AI_KEY_5")
                 ]
                 
-                for k in vercel_keys:
-                    if not k: continue
-                    try:
-                        headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
-                        url = "https://ai-gateway.vercel.sh/v1/embeddings"
-                        async with httpx.AsyncClient() as client:
+                async with httpx.AsyncClient() as client:
+                    for k in vercel_keys:
+                        if not k: continue
+                        try:
+                            headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
+                            url = "https://ai-gateway.vercel.sh/v1/embeddings"
                             e_res = await client.post(url, headers=headers, 
-                                                     json={"model": self.embedding_model, "input": q}, timeout=10.0)
+                                                     json={"model": self.embedding_model, "input": q}, timeout=5.0)
                             if e_res.status_code == 200:
                                 emb = e_res.json()["data"][0]["embedding"]
                                 break
-                            else:
-                                logger.error(f"Vercel Embedding Fail (Key {k[:5]}): {e_res.status_code}")
-                    except: continue
+                        except: continue
 
-                if emb:
-                    p_res = self.index.query(vector=[float(x) for x in emb], top_k=top_k, filter=meta_filter, include_metadata=True)
-                    p_hits = [{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]]
-                else:
-                    logger.error(f"All Embedding Providers failed for query '{q}' - Falling back to BM25 only.")
-                
-                # 2. BM25 (Keyword) - Always run, or fallback if Pinecone failed
+                # 2. BM25 (Keyword) - Parallel to Pinecone if possible, but here sequential for simplicity
                 if self.bm25:
                     q_clean = re.sub(r'[^\w\s]', '', q.lower())
-                    tokens = bm25s.tokenize(q_clean, stemmer=self.stemmer)
-                    chunks, scores = self.bm25.retrieve(tokens, k=25)
+                    # Disable tqdm and use simple retrieval
+                    tokens = bm25s.tokenize(q_clean, stemmer=self.stemmer, show_progress=False)
+                    chunks, scores = self.bm25.retrieve(tokens, k=15, show_progress=False)
                     for c, s in zip(chunks[0], scores[0]):
                         if isinstance(c, dict):
                             b_hits.append({"text": c.get("text", ""), "score": float(s), "id": c.get("chunk_id", ""), "metadata": c.get("metadata", {})})
                         else:
                             b_hits.append({"text": str(c), "score": float(s), "id": hashlib.md5(str(c).encode()).hexdigest()[:10], "metadata": {}})
+
+                if emb and self.index:
+                    p_res = self.index.query(vector=[float(x) for x in emb], top_k=top_k, filter=meta_filter, include_metadata=True)
+                    p_hits = [{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]]
                 
                 return p_hits, b_hits
             except Exception as e:
-                logger.error(f"Retrieval error for query '{q}': {e}")
                 return [], []
 
         # Parallelize all queries
