@@ -433,6 +433,8 @@ RULES (follow strictly):
     *   **Blank Line**: Always leave a blank line before starting the next faculty member.
     CRITICAL: Never put Name and Achievement on the same line. Ensure clear visual separation between blocks using double spacing.
 
+11. ENTITY DEDUPLICATION: If the context contains multiple entries that clearly refer to the same person (e.g., "Afrin Fathima B" and "Afrin Fathima" with the same batch and department), you MUST merge them into a single, comprehensive entry. Never list the same person twice in your response.
+
 TONE: Helpful, professional, and narrative-driven. Connect facts with natural transitions.
 
 
