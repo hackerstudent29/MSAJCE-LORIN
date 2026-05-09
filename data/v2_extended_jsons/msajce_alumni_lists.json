@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "document_title": "Alumni Scholarship — Pre-Aggregated List Chunks",
+    "purpose": "Provides complete, pre-built group summaries for batch and department-based queries.",
+    "strategy": "Pre-Aggregated List Chunks",
+    "version": "v2",
+    "last_updated": "2026-05-01",
+    "source_file": "msajce_alumni_lists.json"
+  },
+  "chunks": [
+    {
+      "chunk_id": "alumni_scholarship_ALL_STUDENTS",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — All Beneficiaries (Complete List)",
+      "context": "Complete list of all 97 students who received alumni scholarships from MSAJCE Alumni Association between 2019 and 2026.",
+      "text": "MSAJCE Alumni Scholarship — All Beneficiary Students (2019–2026)\n\nTotal Students: 97 | Total Amount: Rs. 37,94,972\n\nComplete List:\n1. Priyadharshini S (2023-2027 / CSBS)\n2. Revathi A (2024-2028 / ECE)\n3. Sireesh B (2024-2028 / ECE)\n4. Mohammed Shahul Hameed B (2024-2028 / ECE)\n5. Rahya N (2025-2029 / ECE)\n6. Rahini Mugil J (2025-2029 / Mech)\n7. Gopika R (2025-2029 / ECE ACT)\n8. Sujatha R (2025-2029 / CSE)\n9. Harini R (2024-2028 / AIML)\n10. Prathiba M (2025-2029 / ECE)\n11. Doorika M (2025-2029 / EEE)\n12. Jafeer Mohamed J (2024-2028 / AIDS)\n13. Rahim Basha W (2023-2027 / AIML)\n14. Mohamed ZiamZian A (2025-2029 / IT)\n15. Ameer Shahith M (2023-2027 / CSE)\n16. Abdullah N (2023-2027 / IT)\n17. Pirivindhan A (2024-2028 / AIDS)\n18. Afreen Fathim S (2024-2028 / VLSI)\n19. Afasr Ali N (2024-2028 / AIML)\n20. Afrin Fathima B (2023-2027 / IT)\n21. Pragatha (2023-2027 / CSE)\n22. Samira Farhana T (2025-2029 / AIML)\n23. Md Suhail F (2024-2028 / CSE)\n24. Mahira Sultana (2023-2027 / ECE)\n25. Mohamed Salman J (2023-2027 / ECE)\n26. Afrin Fathima (2023-2027 / IT)\n27. Harini R (2024-2028 / AIML)\n28. Samira Farhana T (2025-2029 / AIML)\n29. Indhuja I (2024-2028 / IT)\n30. Abu Jabar Mubarak U (2022-2026 / CSBS)\n31. Md Abdul Kalam N (2022-2026 / CSBS)\n32. Nazmi A (2022-2026 / CSE)\n33. Amirudeen F (2022-2026 / IT)\n34. Md Ashraf (2022-2026 / CSE)\n35. F. Md Suhail (2024-2028 / CSE)\n36. Md Sarhan K (2022-2026 / MECH)\n37. Mohamed Ashraf (2022-2026 / ECE)\n38. M.S. Shajaneshwar (2022-2026 / CSE)\n39. M. Mohamed Ashraf (2022-2026 / CSE)\n40. Afrin Fathima B (2023-2027 / IT)\n41. M. Mohamed Rasim (2023-2027 / IT)\n42. Zakir Hussain (2022-2026 / ECE)\n43. Rahim Basha W (2024-2028 / CSE AIML)\n44. Pragatha (2023-2027 / CSE)\n45. Mahira Sultana (2022-2027 / ECE)\n46. Md Sajith (2022-2026 / ECE)\n47. B. Dhanalakshmi (2023-2027 / IT)\n48. Nilofer Nisha (2022-2026 / ECE)\n49. V. Abinaya (2021-2025 / ECE)\n50. M. Mohamed Afsal (2022-2026 / IT)\n51. B. Dhanalakshmi (2022-2026 / IT)\n52. Pragatha (2023-2027 / CSE)\n53. Md Abdul Kalam (2022-2026 / CSBS)\n54. Nazmi A (2022-2026 / CSE)\n55. Abu Jabar Mubarak (2022-2026 / CSBS)\n56. Nilofer Nisha (2022-2026 / ECE)\n57. Shaik Irfan (2021-2025 / Mech)\n58. Md Rasin (2023-2027 / IT)\n59. Farhan Basha T (2021-2025 / CSE)\n60. Ahamed Sheik (2021-2025 / CSE)\n61. Amirudeen (2022-2026 / IT)\n62. N. Abdullah (2022-2026 / IT)\n63. Md Sajith (2022-2026 / ECE)\n64. Parvez Nabi Z (2023-2027 / IT)\n65. Amirudeen F (2022-2026 / IT)\n66. Fahd Ahmed Khan K (2023-2027 / ECE)\n67. Pragatha M (2023-2027 / CSE)\n68. Abdullah N (2023-2027 / IT)\n69. Ijas Ahamed R (2023-2027 / MECH)\n70. Md Sajith S (2022-2026 / ECE)\n71. Md Khaja Nawaz A (2020-2024 / CSE)\n72. Md Sajith S (2022-2026 / ECE)\n73. Syeda Zuha Tasneem (2021-2025 / CSE)\n74. Md Khaja Nawaz A (2020-2024 / CSE)\n75. Farhan Basha T (2021-2025 / CSE)\n76. Abdullah S (2020-2024 / IT)\n77. Abdullah S (2020-2024 / IT)\n78. Ashwini A (2019-2023 / ECE)\n79. Akshaya K (2019-2023 / ECE)\n80. Md Sajith S (2022-2026 / ECE)\n81. Aayathul Mufarak A (2019-2023 / MECH)\n82. Assifa A (2019-2023 / ECE)\n83. Farhan Basha T (2021-2025 / CSE)\n84. Aayathul Mufarak A (2019-2023 / MECH)\n85. Parveen Begum M (2018-2022 / CSE)\n86. Aayathul Mufarak A (2019-2023 / MECH)\n87. Akshaya K (2019-2023 / ECE)",
+      "keywords": [
+        "all scholarship students",
+        "scholarship list",
+        "alumni scholarship beneficiaries"
+      ],
+      "entities": {
+        "persons": [],
+        "numbers": [
+          "97 total students"
+        ]
+      },
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entity_persons": "",
+      "entity_numbers": "97 total students"
+    },
+    {
+      "chunk_id": "alumni_scholarship_BATCH_2024_2028",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — Batch 2024-2028 Recipients",
+      "context": "Complete list of students from the 2024-2028 batch who received alumni scholarships.",
+      "text": "MSAJCE Alumni Scholarship — Batch 2024-2028 Recipients:\n\n1. Revathi A — ECE department\n2. Sireesh B — ECE department\n3. Mohammed Shahul Hameed B — ECE department\n4. Harini R — AIML department\n5. Jafeer Mohamed J — AIDS department\n6. Pirivindhan A — AIDS department\n7. Afreen Fathim S — VLSI department\n8. Afasr Ali N — AIML department\n9. Md Suhail F — CSE department\n10. Indhuja I — IT department\n11. F. Md Suhail — CSE department\n12. Rahim Basha W — CSE AIML department",
+      "keywords": [
+        "2024-2028 batch",
+        "2024 batch scholarship"
+      ],
+      "entities": {
+        "persons": [
+          "Revathi A",
+          "Sireesh B",
+          "Mohammed Shahul Hameed B",
+          "Harini R",
+          "Jafeer Mohamed J",
+          "Pirivindhan A",
+          "Afreen Fathim S",
+          "Afasr Ali N",
+          "Md Suhail F",
+          "Indhuja I",
+          "F. Md Suhail",
+          "Rahim Basha W"
+        ]
+      },
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entity_persons": "Revathi A, Sireesh B, Mohammed Shahul Hameed B, Harini R, Jafeer Mohamed J, Pirivindhan A, Afreen Fathim S, Afasr Ali N, Md Suhail F, Indhuja I, F. Md Suhail, Rahim Basha W"
+    },
+    {
+      "chunk_id": "alumni_scholarship_BATCH_2023_2027",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — Batch 2023-2027 Recipients",
+      "context": "Complete list of students from the 2023-2027 batch who received alumni scholarships.",
+      "text": "MSAJCE Alumni Scholarship — Batch 2023-2027 Recipients:\n\n1. Priyadharshini S — CSBS department\n2. Rahim Basha W — AIML department\n3. Ameer Shahith M — CSE department\n4. Abdullah N — IT department\n5. Afrin Fathima B — IT department\n6. Pragatha — CSE department\n7. Mahira Sultana — ECE department\n8. Mohamed Salman J — ECE department\n9. Afrin Fathima (IT department)\n10. M. Mohamed Rasim — IT department\n11. B. Dhanalakshmi — IT department\n12. Parvez Nabi Z — IT department\n13. Fahd Ahmed Khan K — ECE department\n14. Pragatha M — CSE department\n15. Abdullah N — IT department\n16. Ijas Ahamed R — MECH department\n17. Md Rasin — IT department",
+      "keywords": [
+        "2023-2027 batch",
+        "2023 batch scholarship"
+      ],
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entities": {}
+    },
+    {
+      "chunk_id": "alumni_scholarship_BATCH_2025_2029",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — Batch 2025-2029 Recipients",
+      "context": "Complete list of students from the 2025-2029 batch who received alumni scholarships.",
+      "text": "MSAJCE Alumni Scholarship — Batch 2025-2029 Recipients:\n\n1. Rahya N — ECE department\n2. Rahini Mugil J — Mechanical department\n3. Gopika R — ECE ACT department\n4. Sujatha R — CSE department\n5. Prathiba M — ECE department\n6. Doorika M — EEE department\n7. Mohamed ZiamZian A — IT department\n8. Samira Farhana T — AIML department",
+      "keywords": [
+        "2025-2029 batch",
+        "2025 batch scholarship"
+      ],
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entities": {}
+    },
+    {
+      "chunk_id": "alumni_scholarship_BATCH_2022_2026",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — Batch 2022-2026 Recipients",
+      "context": "Complete list of students from the 2022-2026 batch who received alumni scholarships.",
+      "text": "MSAJCE Alumni Scholarship — Batch 2022-2026 Recipients:\n\n1. Abu Jabar Mubarak U — CSBS department\n2. Md Abdul Kalam N — CSBS department\n3. Nazmi A — CSE department\n4. Amirudeen F — IT department\n5. Md Ashraf — CSE department\n6. Md Sarhan K — MECH department\n7. Mohamed Ashraf — ECE department\n8. M.S. Shajaneshwar — CSE department\n9. M. Mohamed Ashraf — CSE department\n10. Zakir Hussain — ECE department\n11. Mahira Sultana — ECE department\n12. Md Sajith — ECE department\n13. Nilofer Nisha — ECE department\n14. M. Mohamed Afsal — IT department\n15. B. Dhanalakshmi — IT department\n16. Amirudeen — IT department\n17. N. Abdullah — IT department",
+      "keywords": [
+        "2022-2026 batch",
+        "2022 batch scholarship"
+      ],
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entities": {}
+    },
+    {
+      "chunk_id": "alumni_scholarship_BATCH_2021_2025",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — Batch 2021-2025 Recipients",
+      "context": "Complete list of students from the 2021-2025 batch who received alumni scholarships.",
+      "text": "MSAJCE Alumni Scholarship — Batch 2021-2025 Recipients:\n\n1. V. Abinaya — ECE department\n2. Shaik Irfan — Mechanical department\n3. Farhan Basha T — CSE department\n4. Ahamed Sheik — CSE department\n5. Syeda Zuha Tasneem — CSE department",
+      "keywords": [
+        "2021-2025 batch",
+        "2021 batch scholarship"
+      ],
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entities": {}
+    },
+    {
+      "chunk_id": "alumni_scholarship_BATCH_2020_2024",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — Batch 2020-2024 Recipients",
+      "context": "Complete list of students from the 2020-2024 batch who received alumni scholarships.",
+      "text": "MSAJCE Alumni Scholarship — Batch 2020-2024 Recipients:\n\n1. Md Khaja Nawaz A — CSE department\n2. Abdullah S — IT department",
+      "keywords": [
+        "2020-2024 batch",
+        "2020 batch scholarship"
+      ],
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entities": {}
+    },
+    {
+      "chunk_id": "alumni_scholarship_BATCH_2019_2023",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — Batch 2019-2023 Recipients",
+      "context": "Complete list of students from the 2019-2023 batch who received alumni scholarships.",
+      "text": "MSAJCE Alumni Scholarship — Batch 2019-2023 Recipients:\n\n1. Ashwini A — ECE department\n2. Akshaya K — ECE department\n3. Aayathul Mufarak A — MECH department\n4. Assifa A — ECE department",
+      "keywords": [
+        "2019-2023 batch",
+        "2019 batch scholarship"
+      ],
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entities": {}
+    },
+    {
+      "chunk_id": "alumni_scholarship_DEPT_IT",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — IT Department Recipients",
+      "context": "Complete list of IT department students who received alumni scholarships.",
+      "text": "MSAJCE Alumni Scholarship — IT Department Recipients (All Batches):\n\n1. Afrin Fathima B — 2023-2027 batch\n2. Abdullah N — 2023-2027 batch\n3. Afrin Fathima — 2023-2027 batch\n4. M. Mohamed Rasim — 2023-2027 batch\n5. B. Dhanalakshmi — 2023-2027 batch\n6. Indhuja I — 2024-2028 batch\n7. Amirudeen F — 2022-2026 batch\n8. N. Abdullah — 2022-2026 batch\n9. M. Mohamed Afsal — 2022-2026 batch\n10. B. Dhanalakshmi — 2022-2026 batch\n11. Amirudeen — 2022-2026 batch\n12. Abdullah S — 2020-2024 batch\n13. Parvez Nabi Z — 2023-2027 batch\n14. Abdullah N — 2023-2027 batch\n15. Mohamed ZiamZian A — 2025-2029 batch\n16. Md Rasin — 2023-2027 batch",
+      "keywords": [
+        "IT department scholarship",
+        "IT students scholarship"
+      ],
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entities": {}
+    },
+    {
+      "chunk_id": "alumni_scholarship_DEPT_CSE",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — CSE Department Recipients",
+      "context": "Complete list of CSE department students who received alumni scholarships.",
+      "text": "MSAJCE Alumni Scholarship — CSE Department Recipients (All Batches):\n\n1. Ameer Shahith M — 2023-2027 batch\n2. Pragatha — 2023-2027 batch (multiple times)\n3. Md Suhail F — 2024-2028 batch\n4. F. Md Suhail — 2024-2028 batch\n5. Nazmi A — 2022-2026 batch\n6. Md Ashraf — 2022-2026 batch\n7. M.S. Shajaneshwar — 2022-2026 batch\n8. M. Mohamed Ashraf — 2022-2026 batch\n9. Farhan Basha T — 2021-2025 batch\n10. Ahamed Sheik — 2021-2025 batch\n11. Syeda Zuha Tasneem — 2021-2025 batch\n12. Sujatha R — 2025-2029 batch\n13. Md Khaja Nawaz A — 2020-2024 batch\n14. Parveen Begum M — 2018-2022 batch",
+      "keywords": [
+        "CSE scholarship",
+        "computer science scholarship"
+      ],
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entities": {}
+    },
+    {
+      "chunk_id": "alumni_scholarship_DEPT_ECE",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — ECE Department Recipients",
+      "context": "Complete list of ECE department students who received alumni scholarships.",
+      "text": "MSAJCE Alumni Scholarship — ECE Department Recipients (All Batches):\n\n1. Revathi A — 2024-2028 batch\n2. Sireesh B — 2024-2028 batch\n3. Mohammed Shahul Hameed B — 2024-2028 batch\n4. Rahya N — 2025-2029 batch\n5. Prathiba M — 2025-2029 batch\n6. Mahira Sultana — 2023-2027 batch\n7. Mohamed Salman J — 2023-2027 batch\n8. Zakir Hussain — 2022-2026 batch\n9. Mohamed Ashraf — 2022-2026 batch\n10. Md Sajith — 2022-2026 batch\n11. Nilofer Nisha — 2022-2026 batch\n12. V. Abinaya — 2021-2025 batch\n13. Fahd Ahmed Khan K — 2023-2027 batch\n14. Ashwini A — 2019-2023 batch\n15. Akshaya K — 2019-2023 batch\n16. Assifa A — 2019-2023 batch",
+      "keywords": [
+        "ECE scholarship",
+        "electronics scholarship"
+      ],
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entities": {}
+    },
+    {
+      "chunk_id": "alumni_scholarship_DEPT_AIDS_AIML_CSBS",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — AIDS, AIML, CSBS Department Recipients",
+      "context": "Complete list of AIDS, AIML, and CSBS department students who received alumni scholarships.",
+      "text": "MSAJCE Alumni Scholarship — AIDS, AIML & CSBS Department Recipients:\n\nAIDS Department:\n1. Jafeer Mohamed J — 2024-2028 batch\n2. Pirivindhan A — 2024-2028 batch\n\nAIML Department:\n1. Harini R — 2024-2028 batch\n2. Afasr Ali N — 2024-2028 batch\n3. Rahim Basha W — 2023-2027 batch\n4. Samira Farhana T — 2025-2029 batch\n5. Rahim Basha W — 2024-2028 (CSE AIML)\n\nCSBS Department:\n1. Priyadharshini S — 2023-2027 batch\n2. Abu Jabar Mubarak U — 2022-2026 batch\n3. Md Abdul Kalam N — 2022-2026 batch",
+      "keywords": [
+        "AIDS scholarship",
+        "AIML scholarship",
+        "CSBS scholarship"
+      ],
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entities": {}
+    },
+    {
+      "chunk_id": "alumni_scholarship_DEPT_OTHER",
+      "chunk_type": "group_list",
+      "section": "Alumni Scholarship — MECH, EEE, VLSI, ECE-ACT Department Recipients",
+      "context": "Complete list of Mechanical, EEE, VLSI, and ECE-ACT department students who received alumni scholarships.",
+      "text": "MSAJCE Alumni Scholarship — MECH, EEE, VLSI & ECE-ACT Recipients:\n\nMECH Department:\n1. Rahini Mugil J — 2025-2029 batch\n2. Md Sarhan K — 2022-2026 batch\n3. Shaik Irfan — 2021-2025 batch\n4. Ijas Ahamed R — 2023-2027 batch\n5. Aayathul Mufarak A — 2019-2023 batch (multiple times)\n\nEEE Department:\n1. Doorika M — 2025-2029 batch\n\nVLSI Department:\n1. Afreen Fathim S — 2024-2028 batch\n\nECE ACT Department:\n1. Gopika R — 2025-2029 batch",
+      "keywords": [
+        "MECH scholarship",
+        "mechanical scholarship",
+        "EEE scholarship"
+      ],
+      "node_type": "FACT",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_alumni_lists.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "entities": {}
+    }
+  ]
+}

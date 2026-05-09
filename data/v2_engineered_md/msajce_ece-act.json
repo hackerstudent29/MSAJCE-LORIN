@@ -1,0 +1,117 @@
+{
+  "source": "msajce_ece-act.md",
+  "sections": [
+    {
+      "header": "2. Programme Details — Duration, Seats, Eligibility, Vision and Mission",
+      "level": 2,
+      "text": "Contains the key programme details for B.Tech ECE-ACT including duration, seat count, eligibility criteria, and the department's vision and mission statements.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "B.Tech ECE Advanced Communication Technology — Programme Details",
+      "level": 3,
+      "text": "Duration: 4 years (Regular) / 3 years (Lateral Entry)\n\nNo. of Semesters: 8 (Regular) / 6 (Lateral Entry)\n\nIntake / No. of Seats: Total — 30 (Government — 15, Management — 15)\n\nEligibility: 10+2 system of Education. Must have secured a pass in Physics, Chemistry and Mathematics in the qualifying examination.\n\nCurriculum & Syllabus (2021 Regulation): <https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf>\n\nScope for Higher Studies: M.E. / M.Tech. / M.B.A.\n\n#### Vision:\n\nTo be a centre of excellence for transforming students into proficient Communication Engineers through sustainable practices.\n\n#### Mission:\n\nM1. Impart core fundamental knowledge and necessary skills in communication systems through innovative teaching and learning methodology.\n\nM2. Inculcate critical thinking, ethics, lifelong learning and creativity needed for industry and society.\n\nM3. Cultivate the students with all-round competencies, for career, higher education and self-employability.\n\nNote: NRI Quota applies — 5% of sanctioned seats (approximately 1–2 seats) are reserved under NRI quota as per standard Anna University / TNEA norms.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "6. Employment by Role, Government Initiatives and Skills/Certifications Demand",
+      "level": 2,
+      "text": "The following data is from the Employment Opportunities by Role (2025–2030) — Advanced Communication Technology table: Telecom Engineer (5G/6G) has high employment opportunities with skills in RF design, Antenna design, mmWave, LTE, 5G NR, and network optimization. Satellite Communication Engineer has high employment opportunities with skills in Satellite design, payload integration, frequency planning, and communication systems. IoT Network Engineer has very high employment opportunities with skills in Low-power protocols (LoRa, NB-IoT), sensor networks, and embedded systems. Wireless Communication Specialist has moderate to high employment opportunities with skills in Wi-Fi 6, mmWave, optical fiber, SDR, and broadband deployment. Research Engineer (6G/Quantum Comms) has high employment opportunities with skills in Quantum computing, 6G technologies, and advanced wireless systems. RF System Engineer has high employment opportunities with skills in Signal processing, RF components, and microwave engineering. Network Security Engineer has very high employment opportunities with skills in Network protocols, cybersecurity, 5G security, and encryption.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Key Government Initiatives & Policy Impacts:",
+      "level": 3,
+      "text": "1. National Digital Communications Policy (NDCP 2018): Aimed at positioning India as a global leader in communication technologies and attracting investment in 5G and beyond.\n2. Space Policy: Promoting private-sector participation in satellite communications.\n3. Smart Cities Mission: Generating demand for IoT, broadband, and wireless communication infrastructure.\n4. PLI Scheme (Production Linked Incentive): Boosting manufacturing of telecom equipment and network components in India, leading to job creation.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Skills and Certifications Demand in Industry:",
+      "level": 3,
+      "text": "1. 5G & 6G Expertise: Certifications from 3GPP, IEEE, and Cisco.\n2. IoT & Embedded Systems: Courses on Arduino, Raspberry Pi, STM32, and LoRaWAN.\n3. Satellite Communications: Hands-on experience with Satcom equipment and ground stations.\n4. Wireless Protocols: Knowledge of Wi-Fi 6, Bluetooth 5.0/5.1, LoRa, and NB-IoT.\n5. Software-Defined Networking (SDN): Familiarity with SDN and Network Function Virtualization (NFV).",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "**Employment Opportunities by Role 2025–2030**",
+      "level": 3,
+      "text": "The following data is from the Role table: Telecom Engineer (5G/6G) has High job growth requiring skills such as RF design, Antenna design, mmWave, LTE, 5G NR, and network optimization. Satellite Communication Engineer has High job growth requiring skills such as Satellite design, payload integration, frequency planning, and communication systems. IoT Network Engineer has Very High job growth requiring skills such as Low-power protocols (LoRa, NB-IoT), sensor networks, and embedded systems. Wireless Communication Specialist has Moderate to High job growth requiring skills such as Wi-Fi 6, mmWave communication, optical fiber, SDR, and broadband deployment. Research Engineer (6G/Quantum) has High job growth requiring skills such as Quantum computing, 6G technologies, and advanced wireless systems. RF System Engineer has High job growth requiring skills such as Signal processing, RF components, and microwave engineering.\n\nThe following data is from the Role table: Network Security Engineer has Very High job growth requiring skills such as Network protocols, cybersecurity, 5G security, and encryption.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "This chunk answers what skills are needed to become a Network Security Engineer after ECE-ACT, what certifications should be obtained after B.Tech ECE-ACT at MSJCE, what the demand is for IoT Network Engineers in India, how the PLI scheme creates jobs for ECE graduates, what NDCP 2018 is and how it affects ECE job opportunities, what skills are needed for a 5G/6G Telecom Engineer, which ECE roles have very high job growth by 2030, and what certifications are in demand for ECE-ACT graduates.\n\nKeywords include Telecom Engineer, Satellite Communication Engineer, IoT Network Engineer, Network Security Engineer, RF System Engineer, Wireless Communication Specialist, Research Engineer, 5G NR, LTE, antenna design, 3GPP, IEEE, Cisco, Arduino, Raspberry Pi, STM32, LoRaWAN, Bluetooth 5.0, SDN, NFV, NDCP 2018, PLI scheme, Smart Cities Mission, and Space Policy.\n\nSector-wise growth from 2025–2030 includes IoT & Embedded Systems at 15–18% per year which is the highest, Satellite Communications at 12–15% per year, R&D & Next-Gen Comms at 10–14% per year, Telecom (5G/6G) at 10–12% per year, and Broadband & Wireless at 8–10% per year.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "7. Faculty Details — ECE w/s in Advanced Communication Technology",
+      "level": 2,
+      "text": "The following data is from the Faculty Details — ECE w/s in Advanced Communication Technology table: Dr. NAGASUBRAMANIAN R has qualifications of M.E., Ph.D. and is the Head - PG specializing in Computer Science Engineering. Dr. SUBRAMANIAN P has qualifications of M.E., Ph.D. and is the Head - UG specializing in Wireless Sensor Networking and Image Processing. Dr. PREMALATHA G has qualifications of M.E., Ph.D. and is an Associate Professor specializing in Image Processing and Machine Learning. Mrs. SARANYA V has qualifications of M.Tech., (Ph.D) and is an Assistant Professor specializing in IoT and Cloud Computing. Mrs. SASIKALA L has a qualification of M.E. and is an Assistant Professor specializing in Computer Science and Engineering. Mrs. KIRUTHIKA S has a qualification of M.E. and is an Assistant Professor specializing in Computer Science and Engineering. Mrs. ASRIN MAHMOOTH A has a qualification of M.E. and is an Assistant Professor specializing in Computer Science Engineering. Mr. PRAVEENKUMAR P has a qualification of M.E. and is an Assistant Professor specializing in Computer Science Engineering. Mr. RAJAKUMAR B has qualifications of M.Tech., (Ph.D) and is an Assistant Professor specializing in IoT, AI, NLP and Image Processing. Mr. RAJASEKAR R has qualifications of M.E., (Ph.D) and is an Assistant Professor specializing in IoT, Network Security.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Faculty — ECE-ACT Department",
+      "level": 3,
+      "text": "The following data is from the Name, Qualification, Designation, Area of Specialization table: Dr. NAGASUBRAMANIAN R has a qualification of M.E., Ph.D. and is designated as Head - PG with an area of specialization in Computer Science Engineering.\nThe following data is from the Name, Qualification, Designation, Area of Specialization table: Dr. SUBRAMANIAN P has a qualification of M.E., Ph.D. and is designated as Head - UG with an area of specialization in Wireless Sensor Networking and Image Processing. Dr. PREMALATHA G has a qualification of M.E., Ph.D. and is designated as Associate Professor with an area of specialization in Image Processing and Machine Learning. Mrs. SARANYA V has a qualification of M.Tech., (Ph.D) and is designated as Assistant Professor with an area of specialization in IoT and Cloud Computing. Mrs. SASIKALA L has a qualification of M.E. and is designated as Assistant Professor with an area of specialization in Computer Science and Engineering. Mrs. KIRUTHIKA S has a qualification of M.E. and is designated as Assistant Professor with an area of specialization in Computer Science and Engineering. Mrs. ASRIN MAHMOOTHAA has a qualification of M.E. and is designated as Assistant Professor with an area of specialization in Computer Science Engineering. Mr. PRAVEENKUMAR P has a qualification of M.E. and is designated as Assistant Professor with an area of specialization in Computer Science Engineering. Mr. RAJAKUMAR B has a qualification of M.Tech., (Ph.D) and is designated as Assistant Professor with an area of specialization in IoT, AI, NLP and Image Processing. Mr. RAJASEKAR R has a qualification of M.E., (Ph.D) and is designated as Assistant Professor with an area of specialization in IoT, Network Security.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "**Sample Questions this chunk answers:**",
+      "level": 3,
+      "text": "Who is the Head of Department for ECE-ACT at MSAJCE? Who teaches IoT at the ECE-ACT department of MSAJCE? Who are the faculty members of ECE-ACT at MSAJCE? Does ECE-ACT at MSAJCE have faculty specializing in machine learning? Who is the UG head of ECE-ACT at MSJCE? What is Dr. SUBRAMANIAN P's specialization at MSJCE? Does MSJCE ECE-ACT have a faculty member for network security? Who teaches AI and NLP in ECE-ACT at MSJCE?",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "8. Laboratory Facilities — ECE-ACT Department",
+      "level": 2,
+      "text": "The following data is from the laboratory facilities table: Analog Electronics Lab is linked to the course Analog Electronics, with a virtual lab link available and an option to download lab records. Digital Electronics Lab is linked to the course Digital Electronics, with a virtual lab link available and an option to download lab records. Electronic Circuits Lab is linked to the course Electronic Circuits, with a virtual lab link available and an option to download lab records. Microprocessor Lab is linked to the course Microprocessor, with a virtual lab link available and an option to download lab records. Digital Communication Lab is linked to the course Digital Communication, with a virtual lab link available and an option to download lab records. Optical Fiber Communication Lab is linked to the course Optical Fiber Communication, with a virtual lab link available and an option to download lab records. Microwave Engineering Lab is linked to the course Microwave Engineering, with a virtual lab link available and an option to download lab records. Embedded Systems Lab is linked to the course Embedded Systems, with a virtual lab link available and an option to download lab records. VLSI Lab is linked to the course VLSI, with a virtual lab link available and an option to download lab records. DSP Lab is linked to the course DSP, with a virtual lab link available and an option to download lab records. PCB & Simulation Lab is linked to the course PCB & Simulation, with a virtual lab link available and an option to download lab records.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Laboratory Facilities — ECE-ACT Department, MSJCE",
+      "level": 3,
+      "text": "The following data is from the Laboratory Facilities table:\nC Programming Lab is associated with CS8261 - C Programming, with a Virtual Lab at <https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-C-Programming.pdf> and objectives at <https://www.msajce-edu.in/images/departments/cse/Obj-c.pdf> and equipment details at <https://www.msajce-edu.in/images/departments/cse/Equipments-C-Programming.pdf>. Internet Programming Lab is associated with CS8661 - Internet Programming, with a Virtual Lab at <https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-Internet-Programming.pdf> and objectives at <https://www.msajce-edu.in/images/departments/cse/Obj-INTERNET.pdf>. Operating Systems Lab is associated with CS8461 - Operating Systems, with a Virtual Lab at <https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-OS.pdf> and objectives at <https://www.msajce-edu.in/images/departments/cse/Obj-os.pdf>. Object Oriented Analysis and Design Lab is associated with CS8461 - Object Oriented Analysis and Design, with a Virtual Lab at <https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-oad.pdf> and objectives at <https://www.msajce-edu.in/images/departments/cse/Obj-oad.pdf>. Web Technology Lab is associated with IT8511 - Web Technology, with a Virtual Lab at <https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-Web-Technology.pdf> and objectives at <https://www.msajce-edu.in/images/departments/cse/Obj-web.pdf>. Networks Lab is associated with CS8581 - Networks Lab, with a Virtual Lab at <https://www.msajce-edu.in/images/departments/cse/Networks.pdf> and objectives at <https://www.msajce-edu.in/images/departments/cse/Obj-Networks.pdf>.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Laboratory Facilities — ECE-ACT",
+      "level": 3,
+      "text": "The following data is from the Lab Name table:\n1 C Programming Lab offers CS8261 C Programming with the virtual link at https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-C-Programming.pdf.\n2 Internet Programming Lab offers CS8661 Internet Programming with the virtual link at https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-Internet-Programming.pdf.\n\nThe following data is from the Lab Name table:\n3 Operating Systems Lab offers CS8461 Operating Systems with the virtual link at https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-OS.pdf.\n4 Object Oriented Analysis and Design Lab offers CS8461 OOAD with the virtual link at https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-ooad.pdf.\n5 Web Technology Lab offers IT8511 Web Technology with the virtual link at https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-Web-Technology.pdf.\n6 Networks Lab offers CS8581 Networks Lab with the virtual link at https://www.msajce-edu.in/images/departments/cse/Networks.pdf.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "The chunk answers what labs are available in the ECE-ACT department at MSAJCE, and if ECE-ACT at MSAJCE has a Networks Lab. It includes where to find the virtual lab link for C Programming at MSAJCE and if ECE-ACT at MSAJCE has an Operating Systems Lab. Also, what course is offered in the Web Technology Lab at MSAJCE, and where to download lab records for ECE-ACT at MSAJCE. It asks if MSAJCE ECE-ACT provides virtual lab access, and what is the lab code for Networks Lab at MSAJCE ECE-ACT.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    }
+  ]
+}

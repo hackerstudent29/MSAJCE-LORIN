@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "institution": "MSAJCE",
+    "page_title": "Admission Essentials & Key Codes",
+    "priority": "CRITICAL",
+    "version": "v2",
+    "source_file": "admission_essentials.json"
+  },
+  "chunks": [
+    {
+      "chunk_id": "admission_codes_01",
+      "section": "Institutional Codes & Accreditation",
+      "text": "The official TNEA Counselling Code for Mohamed Sathak A.J. College of Engineering (MSAJCE) is 1301. The college is officially accredited by NAAC with an 'A+' Grade, which is a testament to its high academic standards and quality infrastructure.",
+      "keywords": [
+        "1301",
+        "counselling code",
+        "TNEA code",
+        "college code",
+        "admission code",
+        "NAAC",
+        "A+ Grade",
+        "accreditation"
+      ],
+      "entities": {
+        "codes": [
+          "1301"
+        ],
+        "accreditation": [
+          "NAAC A+ Grade"
+        ]
+      },
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "admission_essentials.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "context": "",
+      "edges": [],
+      "institution": "MSAJCE",
+      "page_title": "Admission Essentials & Key Codes",
+      "entity_codes": "1301",
+      "entity_accreditation": "NAAC A+ Grade"
+    },
+    {
+      "chunk_id": "admission_links_01",
+      "section": "Quick Admission Links",
+      "text": "For direct admissions and enquiries, visit the official portal: https://enrollonline.co.in/Registration/Apply/MSAJCE. For fee payments, use: https://www.feepayr.com/.",
+      "keywords": [
+        "apply online",
+        "admission link",
+        "fee payment",
+        "enquiry"
+      ],
+      "entities": {
+        "urls": [
+          "https://enrollonline.co.in/Registration/Apply/MSAJCE"
+        ]
+      },
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "admission_essentials.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "context": "",
+      "edges": [],
+      "institution": "MSAJCE",
+      "page_title": "Admission Essentials & Key Codes",
+      "entity_urls": "https://enrollonline.co.in/Registration/Apply/MSAJCE"
+    }
+  ]
+}

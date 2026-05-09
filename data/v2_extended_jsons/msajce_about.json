@@ -1,0 +1,475 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "About Us — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/about.php",
+    "sections_covered": [
+      "An Overview",
+      "Why Join MSAJCE",
+      "Vision and Mission",
+      "Quality Policy",
+      "Mohamed Sathak Trust — Management",
+      "Chairman Message",
+      "Principal Message",
+      "Key Links and Downloads",
+      "Contact and Footer Information"
+    ],
+    "scraped_date": "2026-04-28",
+    "total_chunks": 6,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_about",
+    "version": "v2",
+    "source_file": "msajce_about.json"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_about_chunk_01",
+      "section": "MSAJCE — An Overview and Establishment",
+      "source_url": "https://www.msajce-edu.in/about.php",
+      "context": "Introduces MSAJCE's founding, approvals, affiliations, campus details, location, and surrounding industry environment — essential for students researching the college.",
+      "text": "MSAJCE — An Overview\n\nThe Mohamed Sathak A.J. College of Engineering (MSAJCE), established on 5th July 2001 under the aegis of Mohamed Sathak Trust, is approved by AICTE New Delhi, affiliated to Anna University Chennai and Government of Tamil Nadu. MSAJCE strives to continuously upgrade its facilities to provide quality technical education to meet the industrial and societal needs, by providing skill-based training with state of the art facilities.\n\nThe college campus, sprawling over 70 acres of greenery, is located inside the SIPCOT IT Park, Siruseri, and is surrounded by multinational IT companies such as TCS, CTS, Intellect, Aspire, Steria, Polaris, FSS, etc. MSAJCE has good infrastructure facilities such as spacious classrooms, drawing halls, laboratories, seminar halls, computer facilities with internet and wifi connectivity, library, workshops, auditorium and playground. The college is well connected by Road, Rail and Air from various parts of the country. A team of well qualified and experienced faculty supports the teaching and learning process. The college provides equal importance for academic, co-curricular and extracurricular activities. MSAJCE provides all kinds of training for the professional and overall transformation of the students.\n\nAddress: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103\nPhone: +91 99400 04500\nEmail: msajce.office@gmail.com\nWebsite: www.msajce-edu.in\nOnline Application Form: https://enrollonline.co.in/Registration/Apply/MSAJCE\nOnline Fee Payment: https://www.feepayr.com/\nCollege Video: https://youtu.be/aNVaQWh1Pp4\nBrochure/Prospectus: https://www.msajce-edu.in/uploads/College-Prospectus.pdf",
+      "tables": [],
+      "possible_questions": [
+        "When was MSAJCE established?",
+        "Which trust runs MSAJCE?",
+        "Is MSAJCE affiliated to Anna University?",
+        "Is MSAJCE approved by AICTE?",
+        "How big is the MSAJCE campus?",
+        "Where is MSAJCE located?",
+        "What IT companies are near MSAJCE campus?",
+        "What facilities does MSAJCE have?",
+        "How can I apply online to MSAJCE?",
+        "What is the phone number of MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+          "SIPCOT IT Park, Siruseri"
+        ],
+        "numbers": [
+          "5th July 2001 — established",
+          "70 acres — campus area"
+        ]
+      },
+      "keywords": [
+        "MSAJCE",
+        "Mohamed Sathak AJ College of Engineering",
+        "established 2001",
+        "AICTE approved",
+        "Anna University affiliated",
+        "SIPCOT IT Park",
+        "Siruseri",
+        "70 acres",
+        "engineering college Chennai",
+        "TCS CTS Infosys neighbours",
+        "campus facilities",
+        "wifi internet",
+        "skill-based training"
+      ],
+      "overlap_text": "",
+      "token_count": 430,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_about.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "About Us — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103, SIPCOT IT Park, Siruseri",
+      "entity_numbers": "5th July 2001 — established, 70 acres — campus area"
+    },
+    {
+      "chunk_id": "msajce_about_chunk_02",
+      "section": "Why Join MSAJCE — Key Benefits and Features",
+      "source_url": "https://www.msajce-edu.in/about.php",
+      "context": "Lists the specific reasons and benefits for students choosing MSAJCE, covering industry proximity, faculty, research, international programs, and placements.",
+      "text": "Why Join MSAJCE?\n\n• Located in a green lush environment at Siruseri IT Park surrounded by 100+ leading IT industries like TCS, CTS, Infosys, Intellect, FSS, HCL etc.\n• State of art facilities with industry collaborative technology centres.\n• Qualified, Experienced and Dedicated team of faculty members.\n• Well defined academic process makes the student Smart learning.\n• Students are involved in various research and industrial projects, Industrial Hackathon and Project competitions — gaining Competency-based learning.\n• Professional society, Club activities and Student chapter activities enable Innovative learning.\n• Student Exchange Program for Cultural learning.\n• Internship, Industrial Visits, Guest lectures, Seminars and Webinars by Industrial Experts to meet the Industrial Expectations.\n• Communication Language Learning facility — English, German and Japanese.\n• Value Added Courses and Technology Training to bridge the gap between Institute and Industry.\n• Good Placement Record.\n• Support for Higher Education and becoming an Entrepreneur.\n\nKey Links:\nAdmission: https://www.msajce-edu.in/admission.php\nCurriculum and Syllabus: https://www.msajce-edu.in/curriculm.php\nDepartments: https://www.msajce-edu.in/departments.php\nTechnology Centre: https://www.msajce-edu.in/technologycentre.php\nPlacement: https://www.msajce-edu.in/placement.php\nResearch: https://www.msajce-edu.in/research.php\nLibrary: https://www.msajce-edu.in/library.php\nHostel: https://www.msajce-edu.in/hostel.php\nTransport: https://www.msajce-edu.in/transport.php\nAlumni: https://www.msajce-edu.in/alumni.php",
+      "tables": [],
+      "possible_questions": [
+        "Why should I join MSAJCE?",
+        "What are the advantages of studying at MSAJCE?",
+        "Does MSAJCE have foreign language courses?",
+        "Does MSAJCE support student exchange programs?",
+        "What kind of industry exposure does MSAJCE offer?",
+        "Does MSAJCE have good placements?",
+        "Are there hackathons and project competitions at MSAJCE?",
+        "Does MSAJCE offer support for entrepreneurship?",
+        "What language learning options are available at MSAJCE?",
+        "What technology centres does MSAJCE have?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "Siruseri IT Park"
+        ],
+        "numbers": [
+          "100+ leading IT industries nearby"
+        ]
+      },
+      "keywords": [
+        "why join MSAJCE",
+        "student exchange program",
+        "German language",
+        "Japanese language",
+        "hackathon",
+        "industrial visits",
+        "internship",
+        "placement record",
+        "technology centre",
+        "value added courses",
+        "entrepreneurship support",
+        "professional society",
+        "faculty qualified",
+        "100+ IT companies"
+      ],
+      "overlap_text": "MSAJCE provides all kinds of training for the professional and overall transformation of the students. Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103. Phone: +91 99400 04500. Email: msajce.office@gmail.com. Website: www.msajce-edu.in.",
+      "token_count": 420,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_about.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "About Us — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "Siruseri IT Park",
+      "entity_numbers": "100+ leading IT industries nearby"
+    },
+    {
+      "chunk_id": "msajce_about_chunk_03",
+      "section": "Vision, Mission and Quality Policy of MSAJCE",
+      "source_url": "https://www.msajce-edu.in/visionmission.php",
+      "context": "Contains the official Vision, Mission statements, and Quality Policy of MSAJCE — critical for students, accreditation queries, and institutional understanding.",
+      "text": "Vision and Mission of MSAJCE\n\nVision:\n\"To be an eminent institute for higher education and research through innovative teaching-learning and sustainable practices to meet the industrial and societal needs.\"\n\nMission:\n• To impart quality technical education by transforming students into professionally competent technocrats.\n• To nurture the students in all-round sustainable development, for career and self employability.\n• To inculcate critical thinking, professional ethics with civic responsibilities by instilling values.\n\nQuality Policy:\nMSAJCE is committed to create quality professionals through innovative teaching, research, industrial relations and nurturing human values and ethics to meet the industrial and societal needs on a continual improvement basis.\n\nRelated Links:\nVision and Mission page: https://www.msajce-edu.in/visionmission.php\nNAAC: https://www.msajce-edu.in/naac.php\nIQAC: https://www.msajce-edu.in/iqac.php\nNIRF: https://www.msajce-edu.in/nirf.php\nARIIA Certificate: https://www.msajce-edu.in/uploads/ariia/ARIIA-2021-CERTIFICATE.pdf\nMSAJCE Policies: https://www.msajce-edu.in/msajcepolicy.php\nMandatory Disclosure: https://www.msajce-edu.in/mandatorydisclosure.php\nCode of Conduct: https://www.msajce-edu.in/uploads/naac/cdeofconduct.pdf\nBest Practices: https://www.msajce-edu.in/uploads/naac/bestpractices.pdf\nAICTE Approval: https://www.msajce-edu.in/uploads/AICTE-APPROVAL.pdf\nAnna University Approval: https://www.msajce-edu.in/uploads/AnnaUnivApproval.pdf",
+      "tables": [],
+      "possible_questions": [
+        "What is the vision of MSAJCE?",
+        "What is the mission statement of MSAJCE?",
+        "What is the quality policy of MSAJCE?",
+        "Is MSAJCE NAAC accredited?",
+        "What is MSAJCE's ranking in NIRF?",
+        "Where can I find the AICTE approval of MSAJCE?",
+        "What are the core values of MSAJCE?",
+        "What does MSAJCE stand for in education?",
+        "Does MSAJCE focus on ethics and values?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": []
+      },
+      "keywords": [
+        "vision MSAJCE",
+        "mission MSAJCE",
+        "quality policy",
+        "NAAC",
+        "NIRF",
+        "IQAC",
+        "ARIIA",
+        "innovative teaching",
+        "research",
+        "professional ethics",
+        "civic responsibility",
+        "sustainable development",
+        "eminent institute",
+        "technical education",
+        "continual improvement"
+      ],
+      "overlap_text": "Good Placement Record. Support for Higher Education and becoming an Entrepreneur. Key Links: Admission: https://www.msajce-edu.in/admission.php. Departments: https://www.msajce-edu.in/departments.php. Technology Centre: https://www.msajce-edu.in/technologycentre.php.",
+      "token_count": 390,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_about.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "About Us — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": ""
+    },
+    {
+      "chunk_id": "msajce_about_chunk_04",
+      "section": "Mohamed Sathak Trust — History, Founding and Management",
+      "source_url": "https://www.msajce-edu.in/ourhistory.php",
+      "context": "Details the history, founding, and charitable mission of Mohamed Sathak Trust, the parent body of MSAJCE, including its network of 18 institutions.",
+      "text": "Mohamed Sathak Trust — Management\n\nMohamed Sathak Trust, a charitable and educational organization, was established on 26 October 1973 at Kilakarai, by the Philanthropic Mohamed Sathak Family of Kilakarai, Ramanathapuram District, Tamil Nadu, with the sole purpose of helping deprived people from rural and financially challenged backgrounds to obtain quality education.\n\nThe first self-financing engineering college in the country was established by the Trust in 1984 at Kilakarai. From that day onwards, the Trust has been contributing to provide quality education with academic excellence to meet the requirements of industries at national and international levels.\n\nThe Trust has an impeccable track record of running quality educational institutions from higher secondary level to undergraduate and postgraduate levels in various disciplines such as Engineering Technology, Arts and Science, Pharmacy, Physiotherapy, Nursing and Medical Sciences. It has 18 educational institutions at present in Kilakarai, Ramanathapuram and Chennai.\n\nThe Trust's guiding philosophy: \"God will not change the condition of a people until they try to change themselves.\" The Trust focuses on doing right things without any bias and with a charitable mind to build institutions of academic excellence and help in building the nation.\n\nManagement page: https://www.msajce-edu.in/ourhistory.php\nGroup of Institutions: https://www.msajce-edu.in/groupofinstitutions.php\nFunctional Committees: https://www.msajce-edu.in/FunctionalCommittees.php\nGoverning Council: https://www.msajce-edu.in/governingcouncil.php\nPlanning and Monitoring Board: https://www.msajce-edu.in/planningmonitoringboard.php\nAcademic Advisory Committee: https://www.msajce-edu.in/academicadvisorycommitte.php",
+      "tables": [],
+      "possible_questions": [
+        "Who founded Mohamed Sathak Trust?",
+        "When was Mohamed Sathak Trust established?",
+        "Where is Mohamed Sathak Trust headquartered?",
+        "How many institutions does Mohamed Sathak Trust run?",
+        "What was the first college established by Mohamed Sathak Trust?",
+        "What disciplines do Mohamed Sathak Trust institutions cover?",
+        "Is Mohamed Sathak Trust a charitable organization?",
+        "What is the philosophy of Mohamed Sathak Trust?",
+        "Where are the Mohamed Sathak Trust institutions located?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "Kilakarai",
+          "Ramanathapuram District, Tamil Nadu",
+          "Chennai"
+        ],
+        "numbers": [
+          "26 October 1973 — Trust established",
+          "1984 — first self-financing engineering college",
+          "18 educational institutions"
+        ]
+      },
+      "keywords": [
+        "Mohamed Sathak Trust",
+        "Kilakarai",
+        "Ramanathapuram",
+        "1973",
+        "charitable trust",
+        "18 institutions",
+        "self-financing engineering college",
+        "first self-financing college 1984",
+        "Tamil Nadu",
+        "pharmacy",
+        "nursing",
+        "medical sciences",
+        "arts and science",
+        "management trust"
+      ],
+      "overlap_text": "What is the quality policy of MSAJCE? MSAJCE is committed to create quality professionals through innovative teaching, research, industrial relations and nurturing human values and ethics to meet the industrial and societal needs on a continual improvement basis.",
+      "token_count": 410,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_about.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "About Us — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "Kilakarai, Ramanathapuram District, Tamil Nadu, Chennai",
+      "entity_numbers": "26 October 1973 — Trust established, 1984 — first self-financing engineering college, 18 educational institutions"
+    },
+    {
+      "chunk_id": "msajce_about_chunk_05",
+      "section": "Chairman Message and Principal Message",
+      "source_url": "https://www.msajce-edu.in/ourhistory.php",
+      "context": "Contains motivational messages from the Chairman and Principal of MSAJCE, useful for students seeking leadership perspectives on the institution's values and goals.",
+      "text": "Chairman Message\n\nDear Parents and Prospective Students,\n\nWelcome to Mohamed Sathak A.J. College of Engineering, Chennai. Choosing the right institute to pursue your higher studies is one of the most important decisions that you will ever make. It can be the key for the door of your lifelong opportunity for sustainable growth and service. We want you to base your choice at the right place with relevant and reliable education.\n\nThe success depends on the effort you invest in your own intellectual and professional development. Invest wisely and be assured that MSAJCE faculty and staff pledge their best efforts in helping you to achieve your educational goals. Our standards are challenging and we are dedicating ourselves in helping you to meet the standards. We will judge our institution's success by how best you succeed in realizing your potential as a student and later in your professional career. I invite you to visit our magnificent campus, to witness our state-of-the-art facilities including the Technology Centres, interact with students and faculty, and convince yourselves on why so many bright students have made MSAJCE their choice of institution.\n\nI am confident that you will take pride in joining our college.\n\n---\n\nPrincipal Message — Dr. K.S. Srinivasan Ph.D, Principal, MSAJCE\n\nDear Parents and Prospective Students,\n\nAs Principal, I am impressed by the commitment of our management and the faculty for the provision of an excellent all-round education with state of the art facilities to our students so that they become multidimensional rather than uni-dimensional. Acquiring information is no longer the main focus of education; instead the main aim is to build the powers of human mind and spirit. MSAJCE believes in providing our students an environment which is rich in knowledge and supportive for their extra-curricular interests. We evaluate our students on the basis of their physical, mental, social, emotional and intellectual development. MSAJCE is dedicated to developing skilled and outstanding students who can pursue their interest and strength to the best of their ability. Our enriched students will be able to actively face Industry 4.0 challenges as well as build a strong society for a better world. We practice a holistic approach with an enabled new structure that stimulates young minds in terms of innovative and creative thinking with great freedom to learn with different perceptiveness.\n\nI welcome you all and wish a Memorable Studentship. I hope you will be able to achieve greater heights and bring laurels to our Institute.\n\nPrincipal page: https://www.msajce-edu.in/principal.php",
+      "tables": [],
+      "possible_questions": [
+        "Who is the principal of MSAJCE?",
+        "What is the qualification of MSAJCE principal?",
+        "What does the MSAJCE chairman say about the college?",
+        "What is MSAJCE's approach to student development?",
+        "How does MSAJCE prepare students for Industry 4.0?",
+        "What is the principal's message to new students at MSAJCE?",
+        "Does MSAJCE focus on holistic student development?",
+        "What is MSAJCE's stand on extracurricular activities?",
+        "Who leads MSAJCE as principal?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. K.S. Srinivasan Ph.D — Principal, MSAJCE"
+        ],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": []
+      },
+      "keywords": [
+        "principal MSAJCE",
+        "Dr K.S. Srinivasan",
+        "chairman message",
+        "principal message",
+        "Industry 4.0",
+        "holistic development",
+        "multidimensional education",
+        "Technology Centres",
+        "creative thinking",
+        "extracurricular",
+        "student potential",
+        "faculty commitment",
+        "memorable studentship",
+        "higher studies",
+        "academic excellence"
+      ],
+      "overlap_text": "The Trust's guiding philosophy: God will not change the condition of a people until they try to change themselves. The Trust focuses on doing right things without any bias and with a charitable mind to build institutions of academic excellence and help in building the nation.",
+      "token_count": 500,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "critical",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_about.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "About Us — Complete Data Extract for RAG Model",
+      "entity_persons": "Dr. K.S. Srinivasan Ph.D — Principal, MSAJCE",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": ""
+    },
+    {
+      "chunk_id": "msajce_about_chunk_06",
+      "section": "Key Links, Downloads, Committees and Contact Information",
+      "source_url": "https://www.msajce-edu.in/about.php",
+      "context": "Provides a comprehensive list of all key institutional links, documents, statutory committees, and contact information useful for students navigating MSAJCE resources.",
+      "text": "Key Downloads and Institutional Links\n\nCollege Prospectus/Brochure: https://www.msajce-edu.in/uploads/College-Prospectus.pdf\nAICTE Approval: https://www.msajce-edu.in/uploads/AICTE-APPROVAL.pdf\nAnna University Approval: https://www.msajce-edu.in/uploads/AnnaUnivApproval.pdf\nMandatory Disclosure (PDF): http://msajce-edu.in/uploads/MandatoryDisclosure.pdf\nCode of Conduct: https://www.msajce-edu.in/uploads/naac/cdeofconduct.pdf\nBest Practices: https://www.msajce-edu.in/uploads/naac/bestpractices.pdf\nAnnual Report AY2023-2024: https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf\nInstitutional Distinctiveness: http://msajce-edu.in/uploads/naac/7.3/7.3LH.pdf\nAdmission 2026-2027 Flyer: https://www.msajce-edu.in/uploads/Admission24-25Flyer.pdf\nOnline Application: https://enrollonline.co.in/Registration/Apply/MSAJCE\nOnline Fee Payment: https://www.feepayr.com/\n\nStatutory Committees:\nGoverning Council: https://www.msajce-edu.in/governingcouncil.php\nPlanning & Monitoring Board: https://www.msajce-edu.in/planningmonitoringboard.php\nAcademic Advisory Committee: https://www.msajce-edu.in/academicadvisorycommitte.php\nGrievance and Redressal Committee: https://www.msajce-edu.in/grievanceredressalcommittee.php (Email: grievance@msajce-edu.in)\nAnti-Ragging Committee & Squad: https://www.msajce-edu.in/Anti-Ragging.php\nWomens Empowerment Cell: https://www.msajce-edu.in/womensempowermentcell.php\nFunctional Committees: https://www.msajce-edu.in/FunctionalCommittees.php\n\nWeb/Student Links:\nCollege Management System: https://cims.mastersofterp.in/\nAcademic Calendar: https://www.msajce-edu.in/AC.php\nStudents Corner: https://www.msajce-edu.in/studentscorner.php\nNAAC: https://www.msajce-edu.in/naac.php\nIQAC: https://www.msajce-edu.in/iqac.php\nNIRF: https://www.msajce-edu.in/nirf.php\nNews Letter: https://www.msajce-edu.in/NewsLetter.php\nBalance Sheet: https://www.msajce-edu.in/BS.php\nKARMA: https://www.msajce-edu.in/karma.php\nUBA: https://unnatbharatabhiyan.gov.in/participating_institutes\nFacebook: https://www.facebook.com/msaj.engg.college/\nAICTE Scholarship Schemes: https://www.aicte.gov.in/schemes/students-development-schemes\n\nContact Information:\nAddress: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103\nPhone: +91 99400 04500\nEmail: msajce.office@gmail.com\nGrievance Email: grievance@msajce-edu.in\nWebsite: www.msajce-edu.in",
+      "tables": [],
+      "possible_questions": [
+        "Where can I download the MSAJCE college brochure?",
+        "How do I contact MSAJCE grievance cell?",
+        "Where can I find MSAJCE AICTE approval document?",
+        "What is the MSAJCE Anti-Ragging committee link?",
+        "Where can I pay fees online for MSAJCE?",
+        "What is the MSAJCE Women's Empowerment Cell page?",
+        "Where is the MSAJCE academic calendar?",
+        "What is the MSAJCE grievance email?",
+        "How do I access the MSAJCE college management system?",
+        "Where can I apply online for MSAJCE admission?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com",
+          "grievance@msajce-edu.in"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": []
+      },
+      "keywords": [
+        "MSAJCE brochure download",
+        "AICTE approval document",
+        "Anna University approval",
+        "mandatory disclosure",
+        "grievance cell",
+        "anti-ragging committee",
+        "womens empowerment cell",
+        "governing council",
+        "academic calendar",
+        "NAAC",
+        "IQAC",
+        "NIRF",
+        "fee payment online",
+        "online application",
+        "college management system",
+        "students corner",
+        "KARMA",
+        "UBA"
+      ],
+      "overlap_text": "MSAJCE is dedicated to developing skilled and outstanding students who can pursue their interest and strength to the best of their ability. Our enriched students will be able to actively face Industry 4.0 challenges as well as build a strong society for a better world.",
+      "token_count": 460,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "critical",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_about.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "About Us — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com, grievance@msajce-edu.in",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": ""
+    }
+  ]
+}

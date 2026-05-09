@@ -1,0 +1,117 @@
+{
+  "source": "msajce_about.md",
+  "sections": [
+    {
+      "header": "Introduction",
+      "level": 1,
+      "text": "The following data is from the Source URL table: The source URL is <https://www.msjace-edu.in/about.php> and covers 9 sections. The data was scraped on 2026-04-28 with 6 chunks, a token target of 500, an overlap of 100, and uses the text-embedding-3-small model.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "MSAJCE - An Overview",
+      "level": 3,
+      "text": "The Mohamed Sathak A.J. College of Engineering (MSAJCE), established on 5th July 2001 under the aegis of Mohamed Sathak Trust, is approved by AICTE New Delhi, affiliated to Anna University Chennai and Government of Tamil Nadu. MSAJCE strives to continuously upgrade its facilities to provide quality technical education to meet the industrial and societal needs, by providing skill-based training with state of the art facilities. The college campus, sprawling over 70 acres of greenery, is located inside the SIPCOT IT Park, Siruseri, and is surrounded by multinational IT companies such as TCS, CTS, Intellect, Aspire, Steria, Polaris, FSS, etc. MSAJCE has good infrastructure facilities such as spacious classrooms, drawing halls, laboratories, seminar halls, computer facilities with internet and wifi connectivity, library, workshops, auditorium and playground. The college is well connected by Road, Rail and Air from various parts of the country. A team of well qualified and experienced faculty supports the teaching and learning process. The college provides equal importance for academic, co-curricular and extracurricular activities. MSAJCE provides all kinds of training for the professional and overall transformation of the students. Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai - 603103 Phone: +91 99400 04500 Email: msajce.office@gmail.com Website: www.msjace-edu.in Online Application Form: <https://enrollonline.co.in/Registration/Apply/MSAJCE> Online Fee Payment: <https://www.feepayr.com/> College Video: <https://youtu.be/aNVaQWh1Pp4> Brochure/Prospectus: <https://www.msjace-edu.in/uploads/College-Prospectus.pdf>",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "2. Why Join MSAJCE — Key Benefits and Features",
+      "level": 2,
+      "text": "The following data is from the Industry Collabrations table: Oracle has a collaboration, Microsoft has a collaboration, and TCS has a collaboration.\n\nThe following data is from the Highest Package Offered table: Zoho recruited 450 students with a package of 6 LPA, Capgemini recruited 210 students with a package of 4.5 LPA, and Cognizant recruited 180 students with a package of 4 LPA.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Why Join MSAJCE?",
+      "level": 3,
+      "text": "The institution is located in a green lush environment at Siruseri IT Park, surrounded by 100+ leading IT industries like TCS, CTS, Infosys, Intellect, FSS, and HCL. It features state of art facilities with industry collaborative technology centres, and a qualified, experienced, and dedicated team of faculty members. A well defined academic process makes the student learning smart. Students are involved in various research and industrial projects, Industrial Hackathons, and project competitions, gaining Competency-based learning. Professional societies, club activities, and student chapter activities enable Innovative learning, and a student exchange program is available for cultural learning. The institution provides internships, industrial visits, guest lectures, seminars and webinars by Industrial Experts to meet the Industrial Expectations. Communication Language Learning facilities are available for English, German, and Japanese. Value Added Courses and Technology Training bridge the gap between the Institute and Industry, leading to a good Placement Record, and there is support for Higher Education and becoming an Entrepreneur.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "3. Vision, Mission and Quality Policy of MSJACE",
+      "level": 2,
+      "text": "The vision of MSJACE is to be a premier institution that produces globally competent and socially responsible engineers and entrepreneurs. The mission of MSJACE is to provide quality education through innovative teaching-learning practices, state-of-the-art infrastructure, and a conducive learning environment, to foster research and development, entrepreneurship, and lifelong learning, and to instill ethical values and social responsibility. The quality policy of MSJACE is to establish and maintain a quality management system that meets the requirements of ISO 9001:2015, to continually improve the effectiveness of the quality management system, and to satisfy the needs and expectations of our students, parents, employers, and other stakeholders.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "**Vision:**",
+      "level": 3,
+      "text": "\"To be an eminent institute for higher education and research through innovative teaching-learning and sustainable practices to meet the industrial and societal needs.\"",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "**Mission:**",
+      "level": 3,
+      "text": "The mission is to impart quality technical education by transforming students into professionally competent technocrats, nurture the students in all-round sustainable development for career and self employability, and inculcate critical thinking, professional ethics with civic responsibilities by instilling values.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "**Quality Policy:**",
+      "level": 3,
+      "text": "MSAJCE is committed to create quality professionals through innovative teaching, research, industrial relations and nurturing human values and ethics to meet the industrial and societal needs on a continual improvement basis.\n\n#### Related Links:\n\nVision and Mission page: <https://www.msjce-edu.in/visionmission.php>\n\nNAAC: <https://www.msjce-edu.in/naac.php>\n\nIQAC: <https://www.msjce-edu.in/iqac.php>\n\nNIRF: <https://www.msjce-edu.in/nirf.php>\n\nARIAA Certificate: <https://www.msjce-edu.in/uploads/ariaa/ARIAA-2021-CERTIFICATE.pdf>\n\nMSAJCE Policies: <https://www.msjce-edu.in/msajcepolicy.php>\n\nMandatory Disclosure: <https://www.msjce-edu.in/mandatorydisclosure.php>\n\nCode of Conduct: <https://www.msjce-edu.in/uploads/naac/cdeofconduct.pdf>\n\nBest Practices: <https://www.msjce-edu.in/uploads/naac/bestpractices.pdf>\n\nAICTE Approval: <https://www.msjce-edu.in/uploads/AICTE-APPROVAL.pdf>\n\nAnna University Approval: <https://www.msjce-edu.in/uploads/AnnaUnivApproval.pdf>",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "**Sample Questions this chunk answers:**",
+      "level": 3,
+      "text": "This chunk answers what the vision and mission statement of MSAJCE are, what the quality policy of MSAJCE is, whether MSAJCE is NAAC accredited, what MSAJCE's ranking is in NIRF, where to find the AICTE approval of MSAJCE, what the core values of MSAJCE are, what MSAJCE stands for in education, and whether MSAJCE focuses on ethics and values.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "--- **4. Mohamed Sathak Trust — History, Founding and Management**",
+      "level": 2,
+      "text": "The following data is from the table about recruiters: Zoho recruited 450 students with a package of 6 LPA, TCS recruited 347 students with a package of 3.6 LPA, Wipro recruited 277 students with a package of 3.6 LPA, HCL recruited 142 students with a package of 4 LPA, Infosys recruited 97 students with a package of 3.6 LPA, Capgemini recruited 84 students with a package of 3.8 LPA, and Cognizant recruited 76 students with a package of 4 LPA.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "**Mohamed Sathak Trust - Management**",
+      "level": 3,
+      "text": "Mohamed Sathak Trust, a charitable and educational organization, was established on 26 October 1973 at Kilakarai, by the Philanthropic Mohamed Sathak Family of Kilakarai, Ramanathapuram District, Tamil Nadu, with the sole purpose of helping deprived people from rural and financially challenged backgrounds to obtain quality education. The first self-financing engineering college in the country was established by the Trust in 1984 at Kilakarai. From that day onwards, the Trust has been contributing to provide quality education with academic excellence to meet the requirements of industries at national and international levels. The Trust has an impeccable track record of running quality educational institutions from higher secondary level to undergraduate and postgraduate levels in various disciplines such as Engineering Technology, Arts and Science, Pharmacy, Physiotherapy, Nursing and Medical Sciences. It has 18 educational institutions at present in Kilakarai, Ramanathapuram and Chennai. The Trust's guiding philosophy: \"God will not change the condition of a people until they try to change themselves.\" The Trust focuses on doing right things without any bias and with a charitable mind to build institutions of academic excellence and help in building the nation. Management page: <https://www.msjace-edu.in/ourhistory.php> Group of Institutions: <https://www.msjace-edu.in/groupofinstitutions.php> Functional Committees: <https://www.msjace-edu.in/FunctionalCommittees.php> Governing Council: <https://www.msjace-edu.in/governingcouncil.php> Planning and Monitoring Board: <https://www.msjace-edu.in/planningmonitoringboard.php> Academic Advisory Committee: <https://www.msjace-edu.in/academicadvisorycommitte.php>",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "Statutory Committees:",
+      "level": 3,
+      "text": "Governing Council: <https://www.msjce-edu.in/governingcouncil.php>\n\nPlanning & Monitoring Board: <https://www.msjce-edu.in/planningmonitoringboard.php>\n\nAcademic Advisory Committee: <https://www.msjce-edu.in/academicadvisorycommitte.php>\n\nGrievance and Redressal Committee: <https://www.msjce-edu.in/grievanceredressalcommittee.php> (Email: grievance@msjce-edu.in)\n\nAnti-Ragging Committee & Squad: <https://www.msjce-edu.in/Anti-Ragging.php>\n\nWomens Empowerment Cell: <https://www.msjce-edu.in/womensempowermentcell.php>\n\nFunctional Committees: <https://www.msjce-edu.in/FunctionalCommittees.php>",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "**Web/Student Links:**",
+      "level": 3,
+      "text": "College Management System: <https://cims.mastersoferp.in/>\n\nAcademic Calendar: <https://www.msjce-edu.in/AC.php>\n\nStudents Corner: <https://www.msjce-edu.in/studentscorner.php>\n\nNAAC: <https://www.msjce-edu.in/naac.php>\n\nIQAC: <https://www.msjce-edu.in/iqac.php>\n\nNIRF: <https://www.msjce-edu.in/nirf.php>\n\nNews Letter: <https://www.msjce-edu.in/NewsLetter.php>\n\nBalance Sheet: <https://www.msjce-edu.in/BS.php>\n\nKARMA: <https://www.msjce-edu.in/karma.php>\n\nUBA: https://unnatbharatabhiyan.gov.in/participating\\\\_institutes\n\nFacebook: <https://www.facebook.com/msaj.engg.college/>\n\nAICTE Scholarship Schemes: <https://www.aicte.gov.in/schemes/students-development-schemes>",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "**Contact Information:**",
+      "level": 3,
+      "text": "Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai - 603103\n\nPhone: +91 99400 04500\n\nEmail: msjce.office@gmail.com\n\nGrievance Email: grievance@msjce-edu.in\n\nWebsite: www.msjce-edu.in",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    }
+  ]
+}

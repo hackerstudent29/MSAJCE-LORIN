@@ -1,0 +1,85 @@
+{
+  "source": "msajce_iqac.md",
+  "sections": [
+    {
+      "header": "Introduction",
+      "level": 1,
+      "text": "The following data is from the IQAC (Internal Quality Assurance Cell) - Complete Data Extract for RAG Model table: The source URL is <https://www.msjace-edu.in/iqac.php> covering 11 sections. The data was scraped on 2026-04-28, split into 10 chunks, targeting 500 tokens with an overlap of 100, and uses the text-embedding-3-small model.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "1. IQAC - Overview, Purpose and Background",
+      "level": 2,
+      "text": "The IQAC or Internal Quality Assurance Cell is a quality enhancement and sustenance system of MSAJCE. It is a facilitative and participative management system. The IQAC is a consistent driving force for planning, guiding and monitoring Quality Assurance and Quality Enhancement activities of the college. It was established on 20-08-2012 as per the NAAC guidelines. The IQAC assures the stakeholders i.e., students, parents, teachers, staff, management, funding agencies and society in general of the accountability and transparency in the quality education concern in the institution. It also coordinates various activities like application for accreditation, preparation of AQAR, organization of workshops and seminars on quality related themes, and promote quality circles.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "INTERNAL QUALITY ASSURANCE CELL (IQAC) - Overview",
+      "level": 3,
+      "text": "In pursuance of the National Action Plan of the National Assessment and Accreditation Council (NAAC), Bangalore, for performance evaluation, assessment and accreditation and quality upgradation of institutions of higher education, the NAAC proposes that every accredited institution should establish an Internal Quality Assurance Cell (IQAC) as a post-accreditation quality sustenance measure.\n\nSince quality enhancement is a continuous process, the IQAC will become a part of an institution's system and work towards realizing the goals of quality enhancement and sustenance. The prime task of the IQAC is to develop a system for conscious, consistent and catalytic improvement in the performance of institutions. The IQAC will make a significant and meaningful contribution in the post-accreditation phase of institutions. During the post-accreditation period, the IQAC will channelise the efforts and measures of an institution towards academic excellence.\n\nThe guidelines provided will facilitate the institution in the creation and operation of the IQAC. The work of the IQAC is the first step towards the internalization and institutionalization of quality enhancement. Its success depends upon the sense of belongingness and participation it can inculcate in all the constituents of the institution. It will not be yet another hierarchical structure or record-keeping exercise in the institution; it will be a facilitative and participative voluntary system of the institution. The IQAC has the potential to become a vehicle for ushering in quality by working out intervention strategies to remove deficiencies and enhance quality. Quality circles in industries operate on similar lines.\n\nIQAC Page URL: <https://www.msjace-edu.in/iqac.php>\n\nNAAC Page: <https://www.msjace-edu.in/naac.php>",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "This chunk answers questions about what IQAC is in MSAJCE, why IQAC was established at MSAJCE, and what the role of IQAC is in MSAJCE. It also answers what NAAC says about IQAC, what the prime task of IQAC is, and how IQAC helps in quality enhancement. Additionally, it addresses whether MSAJCE is NAAC accredited, what post-accreditation quality sustenance is, and what the IQAC page of MSAJCE is.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "2. IQAC - Objectives, Strategies and Functions",
+      "level": 2,
+      "text": "The following data is from the Objectives of IQAC table: Developing a quality system for conscious, consistent and catalytic programmed action to improve the academic and administrative performance of the institution is an objective of IQAC. Promoting measures for institutional functioning towards quality enhancement through internalization of quality culture and institutionalization of best practices is an objective of IQAC.\n\nThe following data is from the Strategies of IQAC table: Ensuring timely, efficient and progressive performance of academic, administrative and financial tasks is a strategy of IQAC. Relevant and quality academic and research programmes are part of the strategies of IQAC. Equitable access to and affordability of academic programmes for various sections of the society is a strategy of IQAC. Optimization and integration of modern methods of teaching and learning is a strategy of IQAC. The credibility of the evaluation process is a strategy of IQAC. Ensuring the adequacy, maintenance and proper allocation of support structure and services is a strategy of IQAC. Sharing of research findings and networking with other institutions in India and abroad is a strategy of IQAC.\n\nThe following data is from the Functions of IQAC table: Development and application of quality benchmarks or parameters for various academic and administrative activities of the institution is a function of IQAC. Facilitating the creation of a learner centric environment conducive to quality education and faculty maturation to adopt the required knowledge and technology for participatory teaching and learning process is a function of IQAC. Arrangement for feedback responses from students, parents and other stakeholders on quality related institutional processes is a function of IQAC. Dissemination of information on various quality parameters of higher education is a function of IQAC. Organization of inter and intra institutional workshops, seminars on quality related themes and promotion of quality circles is a function of IQAC. Documentation of the various programmes or activities leading to quality improvement is a function of IQAC. Acting as a nodal agency of the Institution for coordinating quality related activities, including adoption and dissemination of best practices is a function of IQAC. Development and maintenance of institutional database through MIS for the purpose of maintaining, enhancing the institutional quality is a function of IQAC. Development of Quality Culture in the institution is a function of IQAC. Preparation of the Annual Quality Assurance Report (AQAR) as per guidelines and recommendations of NAAC, is a function of IQAC.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "**The Role of Coordinator / Director:**",
+      "level": 3,
+      "text": "The role of the coordinator of the IQAC is crucial in ensuring the effective functioning of all the members. The coordinator of the IQAC may be a senior person with expertise in quality aspects. She/he may be a full-time functionary or, to start with, she/he may be a senior academic/administrator entrusted with the IQAC as an additional responsibility. Secretarial assistance may be\n\nfacilitated by the administration. It is preferable that the coordinator may have a sound knowledge about the computer, its various functions and usage for effective communication.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Operational Features of the IQAC:",
+      "level": 3,
+      "text": "Quality assurance is a by-product of ongoing efforts to define the objectives of an institution, to have a work plan to achieve them and to specify the checks and balances to evaluate the degree to which each of the tasks is fulfilled. Hence devotion and commitment to improvement rather than mere institutional control is the basis for devising procedures and instruments for assuring quality. The right balance between the health and growth of an institution needs to be struck. The IQAC has to ensure that whatever is done in the institution for education is done efficiently and effectively with high standards. In order to do this, the IQAC will have to first establish procedures and modalities to collect data and information on various aspects of institutional functioning. The coordinators of the IQAC and the secretary have a major role in implementing these functions.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "**Criteria 3: Research, Innovations and Extension (120 marks)**",
+      "level": 3,
+      "text": "3.1.1: <https://www.msjce-edu.in/uploads/aqar/2022/3.1.1/3.1.1IndexPage.pdf>  \n3.1.2: <https://www.msjce-edu.in/uploads/aqar/2022/3.1.2/3.1.2IndexPage.pdf>  \n3.1.3: <https://www.msjce-edu.in/uploads/aqar/2022/3.1.3/3.1.3IndexPage.pdf>  \n3.2.1: <https://www.msjce-edu.in/uploads/aqar/2022/3.2.1/3.2.1IndexPage.pdf>  \n3.2.2: <https://www.msjce-edu.in/uploads/aqar/2022/3.2.2/3.2.2IndexPage.pdf>  \n3.3.1: <https://www.msjce-edu.in/uploads/aqar/2022/3.3.1/3.3.1IndexPage.pdf>  \n3.3.2: <https://www.msjce-edu.in/uploads/aqar/2022/3.3.2/3.3.2IndexPage.pdf>  \n3.3.3: <https://www.msjce-edu.in/uploads/aqar/2022/3.3.3/3.3.3IndexPage.pdf>  \n3.4.1: <https://www.msjce-edu.in/uploads/aqar/2022/3.4.1/3.4.1IndexPage.pdf>  \n3.4.2: <https://www.msjce-edu.in/uploads/aqar/2022/3.4.2/3.4.2IndexPage.pdf>  \n3.4.3: <https://www.msjce-edu.in/uploads/aqar/2022/3.4.3/3.4.3IndexPage.pdf>  \n3.4.4: <https://www.msjce-edu.in/uploads/aqar/2022/3.4.4/3.4.4IndexPage.pdf>\n\n3.5.1: <https://www.msjce-edu.in/uploads/aqar/2022/3.5.1/3.5.1IndexPage.pdf>\n\n3.5.2: <https://www.msjce-edu.in/uploads/aqar/2022/3.5.2/3.5.2IndexPage.pdf>",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Criteria 4: Infrastructure (71 marks)",
+      "level": 3,
+      "text": "4.1.1: <https://www.msjce-edu.in/uploads/aqar/2022/4.1.1/4.1.1IndexPage.pdf>\n\n4.1.2: <https://www.msjce-edu.in/uploads/aqar/2022/4.1.2/4.1.2IndexPage.pdf>\n\n4.1.3: <https://www.msjce-edu.in/uploads/aqar/2022/4.1.3/4.1.3IndexPage.pdf>\n\n4.1.4: <https://www.msjce-edu.in/uploads/aqar/2022/4.1.4/4.1.4IndexPage.pdf>\n\n4.2.1: <https://www.msjce-edu.in/uploads/aqar/2022/4.2.1/4.2.1IndexPage.pdf>\n\n4.2.2: <https://www.msjce-edu.in/uploads/aqar/2022/4.2.2/4.2.2IndexPage.pdf>\n\n4.2.3: <https://www.msjce-edu.in/uploads/aqar/2022/4.2.3/4.2.3IndexPage.pdf>\n\n4.2.4: <https://www.msjce-edu.in/uploads/aqar/2022/4.2.4/4.2.4IndexPage.pdf>\n\n4.3.1: <https://www.msjce-edu.in/uploads/aqar/2022/4.3.1/4.3.1IndexPage.pdf>\n\n4.3.2: <https://www.msjce-edu.in/uploads/aqar/2022/4.3.2/4.3.2IndexPage.pdf>\n\n4.3.3: <https://www.msjce-edu.in/uploads/aqar/2022/4.3.3/4.3.3MainPage.pdf>\n\n4.4.1: <https://www.msjce-edu.in/uploads/aqar/2022/4.4.1/4.4.1IndexPage.pdf>\n\n4.4.2: <https://www.msjce-edu.in/uploads/aqar/2022/4.4.2/4.4.2IndexPage.pdf>",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Criteria 5: Student Support (130 marks)",
+      "level": 3,
+      "text": "5.1.1: <https://www.msjce-edu.in/uploads/aqar/2022/5.1.1/5.1.1IndexPage.pdf>\n\n5.1.2: <https://www.msjce-edu.in/uploads/aqar/2022/5.1.2/5.1.2IndexPage.pdf>\n\n5.1.3: <https://www.msjce-edu.in/uploads/aqar/2022/5.1.3/5.1.3IndexPage.pdf>\n\n5.1.4: <https://www.msjce-edu.in/uploads/aqar/2022/5.1.4/5.1.4IndexPage.pdf>\n\n5.1.5: <https://www.msjce-edu.in/uploads/aqar/2022/5.1.5/5.1.5IndexPage.pdf>\n\n5.2.1: <https://www.msjce-edu.in/uploads/aqar/2022/5.2.1/5.2.1IndexPage.pdf>\n\n5.2.2: <https://www.msjce-edu.in/uploads/aqar/2022/5.2.2/5.2.2IndexPage.pdf>\n\n5.2.3: <https://www.msjce-edu.in/uploads/aqar/2022/5.2.3/5.2.3IndexPage.pdf>\n\n5.3.1: <https://www.msjce-edu.in/uploads/aqar/2022/5.3.1/5.3.1IndexPage.pdf>\n\n5.3.2: <https://www.msjce-edu.in/uploads/aqar/2022/5.3.2/5.3.2IndexPage.pdf>\n\n5.3.3: <https://www.msjce-edu.in/uploads/aqar/2022/5.3.3/5.3.3IndexPage.pdf>\n\n5.4.1: <https://www.msjce-edu.in/uploads/aqar/2022/5.4.1/5.4.1IndexPage.pdf>\n\n5.4.2: <https://www.msjce-edu.in/uploads/aqar/2022/5.4.2/5.4.2IndexPage.pdf>",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    }
+  ]
+}

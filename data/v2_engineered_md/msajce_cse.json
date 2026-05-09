@@ -1,0 +1,13 @@
+{
+  "source": "msajce_cse.md",
+  "sections": [
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "The following data is from the MSAJCE Computer Science and Engineering Contact table: The address is 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103, the phone number is +91 99400 04500, the email is msajce.office@gmail.com, and the grievance email is grievance@msajce-edu.in. The website is www.msjce-edu.in and the online application link is enrollonline.co.in/Registration/Apply/MSAJCE. The following data is from the table: MSAJCE is located at 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103, the phone number is +91 99400 04500, the email address is msajce.office@gmail.com, and the website is www.msjce-edu.in.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": true
+    }
+  ]
+}

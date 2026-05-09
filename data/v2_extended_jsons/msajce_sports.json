@@ -1,0 +1,553 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Sports and Physical Education — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/sports.php",
+    "sections_covered": [
+      "Physical Education Overview",
+      "Director of Physical Education — Profile",
+      "Assistant Director of Physical Education — Profile",
+      "Department Objectives",
+      "Sports Quota Scholarship",
+      "Sports Facilities and Games Available",
+      "Fitness Centre — Gymnasium Equipment List",
+      "Annual Sports Activities",
+      "Contact Information"
+    ],
+    "scraped_date": "2026-04-29",
+    "total_chunks": 5,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_sports",
+    "version": "v2",
+    "source_file": "msajce_sports.json"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_sports_chunk_01",
+      "section": "Physical Education Overview, Director and Assistant Director Profiles",
+      "source_url": "https://www.msajce-edu.in/sports.php",
+      "context": "Overview of MSAJCE's Department of Physical Education with its philosophy, and full profiles of the Director and Assistant Director of Physical Education including qualifications and contact.",
+      "text": "Department of Physical Education — MSAJCE\n\nSports activities are given utmost importance as it makes the student physically strong and increases stamina and strength. MSAJCE has created necessary sports and games facilities for the students to strengthen physical education. Since sports and games play an integral part in molding and refining the character of an individual. Studies have shown that exercise and sport activities increase the blood flow to the brain and help in increased concentration, stimulate creativity, develop better problem solving methods and enable quick learning methods.\n\nDirector of Physical Education:\nName: Dr. K. P. SANTHOSH NATHAN\nQualification: B.P.E.S., B.P.Ed., M.P.Ed., M.Phil., Ph.D\nE-Mail: ped.santhosh@msajce-edu.in\n\nAssistant Director of Physical Education:\nName: Mr. M. Janakiraman\nQualification: B.Sc., M.P.Ed., NSNIS (Cricket)\n\nDepartment Objectives:\n1. To provide an opportunity through talent identification\n2. To develop identified talent to excel at inter collegiate, University, inter-university levels\n3. To bring a unique culture throughout the MSAJCE in order to promote physical fitness, talent identification, competitiveness and brotherhood",
+      "tables": [
+        {
+          "table_title": "Physical Education Staff Profiles",
+          "headers": [
+            "Role",
+            "Name",
+            "Qualification",
+            "Email"
+          ],
+          "rows": [
+            [
+              "Director of Physical Education",
+              "Dr. K. P. SANTHOSH NATHAN",
+              "B.P.E.S., B.P.Ed., M.P.Ed., M.Phil., Ph.D",
+              "ped.santhosh@msajce-edu.in"
+            ],
+            [
+              "Assistant Director of Physical Education",
+              "Mr. M. Janakiraman",
+              "B.Sc., M.P.Ed., NSNIS (Cricket)",
+              "—"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Who is the Director of Physical Education at MSAJCE?",
+        "What is the qualification of the sports director at MSAJCE?",
+        "What is the email of the physical education department at MSAJCE?",
+        "Who is Mr. Janakiraman at MSAJCE?",
+        "What are the objectives of the sports department at MSAJCE?",
+        "Does MSAJCE have a physical education department?",
+        "How does MSAJCE support student physical development?",
+        "Who is the Assistant Director of Physical Education at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. K. P. SANTHOSH NATHAN — Director of Physical Education",
+          "Mr. M. Janakiraman — Assistant Director of Physical Education"
+        ],
+        "phones": [],
+        "emails": [
+          "ped.santhosh@msajce-edu.in"
+        ],
+        "locations": [],
+        "numbers": []
+      },
+      "keywords": [
+        "physical education",
+        "Director of Physical Education",
+        "Dr. K. P. Santhosh Nathan",
+        "Mr. M. Janakiraman",
+        "NSNIS Cricket",
+        "sports department",
+        "talent identification",
+        "inter-collegiate",
+        "inter-university",
+        "physical fitness",
+        "ped.santhosh@msajce-edu.in"
+      ],
+      "overlap_text": "",
+      "token_count": 410,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_sports.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Sports and Physical Education — Complete Data Extract for RAG Model",
+      "entity_persons": "Dr. K. P. SANTHOSH NATHAN — Director of Physical Education, Mr. M. Janakiraman — Assistant Director of Physical Education",
+      "entity_phones": "",
+      "entity_emails": "ped.santhosh@msajce-edu.in",
+      "entity_locations": "",
+      "entity_numbers": ""
+    },
+    {
+      "chunk_id": "msajce_sports_chunk_02",
+      "section": "Sports Quota Scholarship and Sports Facilities Available",
+      "source_url": "https://www.msajce-edu.in/sports.php",
+      "context": "Details of the sports quota scholarship for district, state and national level participants, and the complete list of 11 sports and games facilities available at MSAJCE.",
+      "text": "Sports Quota Scholarship:\nThe college encourages SPORTS ENTHUSIASTS by rendering admission through Sports Quota and also by offering scholarship to District, State and National level participants. The college provides sports quota admission and scholarship support for outstanding athletes at district, state, and national levels.\n\nSports Facilities and Games Available at MSAJCE:\nThe college has excellent infrastructure required for development of sports skills in students. The following sports and games facilities are available:\n\n1. Basketball\n2. Football\n3. Cricket and Cricket Nets\n4. Yoga\n5. Kabaddi\n6. Volleyball\n7. Table Tennis\n8. Carrom\n9. Chess\n10. Track and Field\n11. Kho Kho\n\nImages of facilities available:\n- Kabaddi: https://www.msajce-edu.in/images/sports/kabadi.jpg\n- Basketball: https://www.msajce-edu.in/images/sports/BasketBall.jpg\n- Volleyball: https://www.msajce-edu.in/images/sports/Volleyball.jpg\n- Football: https://www.msajce-edu.in/images/sports/FootBall.jpg\n- Cricket Net: https://www.msajce-edu.in/images/sports/CriketNet.jpg\n- Table Tennis: https://www.msajce-edu.in/images/sports/TableTinnies.jpg\n- Carrom: https://www.msajce-edu.in/images/sports/Carrom.jpg\n- Chess: https://www.msajce-edu.in/images/sports/Chess.jpg",
+      "tables": [
+        {
+          "table_title": "Sports and Games Facilities at MSAJCE",
+          "headers": [
+            "S.No.",
+            "Sport / Game"
+          ],
+          "rows": [
+            [
+              "1",
+              "Basketball"
+            ],
+            [
+              "2",
+              "Football"
+            ],
+            [
+              "3",
+              "Cricket and Cricket Nets"
+            ],
+            [
+              "4",
+              "Yoga"
+            ],
+            [
+              "5",
+              "Kabaddi"
+            ],
+            [
+              "6",
+              "Volleyball"
+            ],
+            [
+              "7",
+              "Table Tennis"
+            ],
+            [
+              "8",
+              "Carrom"
+            ],
+            [
+              "9",
+              "Chess"
+            ],
+            [
+              "10",
+              "Track and Field"
+            ],
+            [
+              "11",
+              "Kho Kho"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Does MSAJCE offer a sports quota for admission?",
+        "What sports facilities are available at MSAJCE?",
+        "Is there a scholarship for sports students at MSAJCE?",
+        "Does MSAJCE have a cricket ground?",
+        "Is volleyball available at MSAJCE?",
+        "Does MSAJCE have a basketball court?",
+        "What games can students play at MSAJCE?",
+        "Is there Kho Kho facility at MSAJCE?",
+        "Does MSAJCE support district-level sports players?",
+        "How many sports are offered at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "11 sports and games facilities",
+          "district level scholarship",
+          "state level scholarship",
+          "national level scholarship"
+        ]
+      },
+      "keywords": [
+        "sports quota",
+        "sports scholarship",
+        "basketball",
+        "football",
+        "cricket",
+        "yoga",
+        "kabaddi",
+        "volleyball",
+        "table tennis",
+        "carrom",
+        "chess",
+        "track and field",
+        "kho kho",
+        "cricket nets",
+        "district level",
+        "state level",
+        "national level"
+      ],
+      "overlap_text": "Director of Physical Education: Dr. K. P. SANTHOSH NATHAN — Qualification: B.P.E.S., B.P.Ed., M.P.Ed., M.Phil., Ph.D — Email: ped.santhosh@msajce-edu.in. Assistant Director: Mr. M. Janakiraman — Qualification: B.Sc., M.P.Ed., NSNIS (Cricket). Objectives: talent identification, inter-collegiate and inter-university excellence, physical fitness and brotherhood.",
+      "token_count": 420,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_sports.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Sports and Physical Education — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "11 sports and games facilities, district level scholarship, state level scholarship, national level scholarship"
+    },
+    {
+      "chunk_id": "msajce_sports_chunk_03",
+      "section": "Fitness Centre — Gymnasium Equipment List",
+      "source_url": "https://www.msajce-edu.in/sports.php",
+      "context": "Details of the well-equipped indoor gymnasium at MSAJCE open to all students and faculty, including the complete list of 14 categories of gym equipment available.",
+      "text": "Fitness Centre — Gymnasium:\nThere is a well-equipped gymnasium for all the students and faculties with the latest equipment in the well laid out in-door Gym. To encourage the Weight lifters, Body builders and Fitness seekers, the following equipment for the above purpose are made available.\n\nList of Gymnasium Equipment:\nColumn A | Column B\nMulti Gym | Leg Extension\nPreacher Curl Bench | Multi Adjustable Bench Press\nCable Cross Over Machine | Sitting and Standing Twister\nLeg Press | Spin Bike\nRound Dumbbells (Rubberised) | Rubber Weight Plates\nOlympic Curl Bar | Olympic Weight Lifting Bar\nChrome Push Up Bar | Triceps Rope",
+      "tables": [
+        {
+          "table_title": "Fitness Centre — List of Gymnasium Equipment",
+          "headers": [
+            "Equipment (Column A)",
+            "Equipment (Column B)"
+          ],
+          "rows": [
+            [
+              "Multi Gym",
+              "Leg Extension"
+            ],
+            [
+              "Preacher Curl Bench",
+              "Multi Adjustable Bench Press"
+            ],
+            [
+              "Cable Cross Over Machine",
+              "Sitting and Standing Twister"
+            ],
+            [
+              "Leg Press",
+              "Spin Bike"
+            ],
+            [
+              "Round Dumbbells (Rubberised)",
+              "Rubber Weight Plates"
+            ],
+            [
+              "Olympic Curl Bar",
+              "Olympic Weight Lifting Bar"
+            ],
+            [
+              "Chrome Push Up Bar",
+              "Triceps Rope"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Does MSAJCE have a gym?",
+        "What equipment is available in the MSAJCE gym?",
+        "Is the gym open to all students at MSAJCE?",
+        "Does MSAJCE have a fitness centre?",
+        "Is there a gymnasium for faculty at MSAJCE?",
+        "What is available in the MSAJCE fitness centre?",
+        "Does MSAJCE have weight lifting equipment?",
+        "Is there a spin bike at MSAJCE gym?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "In-door Gym, MSAJCE"
+        ],
+        "numbers": [
+          "14 pieces of gym equipment (7 pairs)"
+        ]
+      },
+      "keywords": [
+        "gym",
+        "gymnasium",
+        "fitness centre",
+        "multi gym",
+        "leg extension",
+        "preacher curl",
+        "bench press",
+        "cable crossover",
+        "leg press",
+        "dumbbells",
+        "spin bike",
+        "Olympic bar",
+        "weight lifting",
+        "triceps rope",
+        "indoor gym",
+        "body building"
+      ],
+      "overlap_text": "Sports Quota Scholarship available for District, State, and National level participants. 11 sports facilities: Basketball, Football, Cricket and Cricket Nets, Yoga, Kabaddi, Volleyball, Table Tennis, Carrom, Chess, Track and Field, Kho Kho.",
+      "token_count": 360,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_sports.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Sports and Physical Education — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "In-door Gym, MSAJCE",
+      "entity_numbers": "14 pieces of gym equipment (7 pairs)"
+    },
+    {
+      "chunk_id": "msajce_sports_chunk_04",
+      "section": "Annual Sports Activities and Tournament Events",
+      "source_url": "https://www.msajce-edu.in/sports.php",
+      "context": "List of annual sports events and tournaments conducted and participated in by MSAJCE, including named trophies and cyclothon events.",
+      "text": "Annual Sports Activities at MSAJCE:\n\n1. Participation in Anna University, South Zone and Invitation Tournaments.\n2. Conducting Anna University Zonal and Inter-Zonal Tournaments.\n3. Conducting Annual Sports Day.\n4. Conducting Mohamed Sathak Trophy — Football and BSM Trophy — Cricket.\n5. Conducting Fit India Cyclothon.\n\nNotable Events and Tournaments (from sports gallery):\n- Fit India Cyclothon 2020 (22 km)\n- Rugby Tournament (Runner-up)\n- Intramural Tournament 2020 (including Kho Kho)\n- State Level Football Tournament\n- Gold Medal (Equipped category)\n- Anna University (Runner-up)\n- Chess Tournament\n- MNM Jain Cricket Tournament\n- JETS Chess Tournament\n- ASAN Volleyball Tournament\n- Swamikannu Volleyball\n- PITS State Level Tournament\n- ASAN Memorial (Runner-up)\n\nTrophy Events:\n- Mohamed Sathak Trophy: Football\n- BSM Trophy: Cricket",
+      "tables": [
+        {
+          "table_title": "Annual Sports Activities",
+          "headers": [
+            "S.No.",
+            "Activity"
+          ],
+          "rows": [
+            [
+              "1",
+              "Participation in Anna University, South Zone and Invitation Tournaments"
+            ],
+            [
+              "2",
+              "Conducting Anna University Zonal and Inter-Zonal Tournaments"
+            ],
+            [
+              "3",
+              "Conducting Annual Sports Day"
+            ],
+            [
+              "4",
+              "Conducting Mohamed Sathak Trophy (Football) and BSM Trophy (Cricket)"
+            ],
+            [
+              "5",
+              "Conducting Fit India Cyclothon"
+            ]
+          ]
+        },
+        {
+          "table_title": "Named Trophy Events",
+          "headers": [
+            "Trophy Name",
+            "Sport"
+          ],
+          "rows": [
+            [
+              "Mohamed Sathak Trophy",
+              "Football"
+            ],
+            [
+              "BSM Trophy",
+              "Cricket"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What annual sports events does MSAJCE conduct?",
+        "What is the Mohamed Sathak Trophy?",
+        "What is the BSM Trophy at MSAJCE?",
+        "Does MSAJCE participate in Anna University tournaments?",
+        "Does MSAJCE conduct a sports day?",
+        "What is the Fit India Cyclothon at MSAJCE?",
+        "Has MSAJCE won any sports tournaments?",
+        "Does MSAJCE host inter-zonal tournaments?",
+        "What tournaments has MSAJCE participated in?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "22 km Fit India Cyclothon distance"
+        ]
+      },
+      "keywords": [
+        "annual sports day",
+        "Mohamed Sathak Trophy",
+        "BSM Trophy",
+        "Fit India Cyclothon",
+        "Anna University tournament",
+        "South Zone tournament",
+        "inter-zonal tournament",
+        "football trophy",
+        "cricket trophy",
+        "rugby runner up",
+        "chess tournament",
+        "volleyball tournament",
+        "PITS tournament",
+        "ASAN memorial"
+      ],
+      "overlap_text": "Fitness Centre has a well-equipped indoor gymnasium open to all students and faculty. Equipment includes: Multi Gym, Leg Extension, Preacher Curl Bench, Multi Adjustable Bench Press, Cable Cross Over Machine, Sitting and Standing Twister, Leg Press, Spin Bike, Round Dumbbells (Rubberised), Rubber Weight Plates, Olympic Curl Bar, Olympic Weight Lifting Bar, Chrome Push Up Bar, Triceps Rope.",
+      "token_count": 390,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_sports.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Sports and Physical Education — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "22 km Fit India Cyclothon distance"
+    },
+    {
+      "chunk_id": "msajce_sports_chunk_05",
+      "section": "Contact Information and Important College Links",
+      "source_url": "https://www.msajce-edu.in/sports.php",
+      "context": "MSAJCE institution and sports department contact details, and key portal links for students.",
+      "text": "MSAJCE — Mohamed Sathak A.J. College of Engineering\nAddress: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103\nPhone: +91 99400 04500\nEmail: msajce.office@gmail.com\nGrievance Email: grievance@msajce-edu.in\nWebsite: www.msajce-edu.in\n\nSports Department Contact:\nDirector of Physical Education: Dr. K. P. SANTHOSH NATHAN\nEmail: ped.santhosh@msajce-edu.in\n\nImportant Links:\n- Online Application Form: https://enrollonline.co.in/Registration/Apply/MSAJCE\n- Online Fee Payment: https://www.feepayr.com/\n- Students Corner: https://www.msajce-edu.in/studentscorner.php\n- Sports Page: https://www.msajce-edu.in/sports.php\n- Hostel: https://www.msajce-edu.in/hostel.php\n- Transport: https://www.msajce-edu.in/transport.php\n- Library: https://www.msajce-edu.in/library.php\n- Placement: https://www.msajce-edu.in/placement.php\n- NAAC: https://www.msajce-edu.in/naac.php\n- IQAC: https://www.msajce-edu.in/iqac.php\n- Grievance Cell: https://www.msajce-edu.in/grievanceredressalcommittee.php\n- Exam Registration I & II Year: https://tinyurl.com/I-AND-II-YEAR-REGISTRATION\n- Exam Registration III & IV Year: https://tinyurl.com/III-AND-IV-YEAR-REGISTRATION\n- ESE Results: https://results.msajce-edu.in/\n- AICTE Scholarship: https://www.aicte.gov.in/schemes/students-development-schemes\n- Annual Report AY2023-2024: https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf",
+      "tables": [],
+      "possible_questions": [
+        "What is the phone number of MSAJCE?",
+        "How do I contact the sports department at MSAJCE?",
+        "What is the email of the Director of Physical Education at MSAJCE?",
+        "Where is MSAJCE located?",
+        "How do I apply online for admission to MSAJCE?",
+        "What is the address of MSAJCE?",
+        "How do I check exam results at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. K. P. SANTHOSH NATHAN — Director of Physical Education"
+        ],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com",
+          "grievance@msajce-edu.in",
+          "ped.santhosh@msajce-edu.in"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": []
+      },
+      "keywords": [
+        "MSAJCE contact",
+        "sports department contact",
+        "ped.santhosh@msajce-edu.in",
+        "phone number",
+        "address",
+        "Siruseri",
+        "OMR Chennai",
+        "online application",
+        "fee payment",
+        "ESE results",
+        "grievance cell"
+      ],
+      "overlap_text": "Annual Sports Activities: Participation in Anna University, South Zone and Invitation Tournaments. Conducting Anna University Zonal and Inter-Zonal Tournaments. Annual Sports Day. Mohamed Sathak Trophy (Football), BSM Trophy (Cricket). Fit India Cyclothon (22 km).",
+      "token_count": 360,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "critical",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_sports.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Sports and Physical Education — Complete Data Extract for RAG Model",
+      "entity_persons": "Dr. K. P. SANTHOSH NATHAN — Director of Physical Education",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com, grievance@msajce-edu.in, ped.santhosh@msajce-edu.in",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": ""
+    }
+  ]
+}

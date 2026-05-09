@@ -1,0 +1,37 @@
+{
+  "source": "msajce_hostel.md",
+  "sections": [
+    {
+      "header": "Boys Hostel",
+      "level": 3,
+      "text": "A home away from home is provided for boys, accommodating 480 boy students. All rooms are well furnished with modern amenities: cot, mattress with pillows, bed-spreads, individual cup-boards, chair-table with lamp and wall hangers. Each room accommodates only 2 persons.\n\nA hygienic canteen is available for dining within the premises. An entertainment hall with LCD-TV, indoor game facilities, reading room with newspapers and popular magazines are available. The Hostel has land-line telephone and Wi-Fi internet access.\n\nThe College Main Library and the Computer Centre are kept open till 7:00 PM for the benefit of hostellers. Students will feel more at home and concentrate on their studies, facilitated by a serene atmosphere filled with greenery.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Girls Hostel",
+      "level": 3,
+      "text": "The MSJACE Girls Hostel is situated at Sholinganallur — 5 KM away from the campus. This hostel is located in a main posh area with safety and security. Everything is available at the entrance of the Hostel.\n\nThere are about 71 rooms, accommodating 3 girl students per room. All rooms are well furnished with: cot, mattress with pillows, bed-spreads, individual cup-boards, chair-table with lamp, and wall hangers. Each room is provided with bath and toilet facilities, wash basin and mirror.\n\nAn entertainment hall with LCD-TV, indoor game facilities, reading room with newspapers and popular magazines are available. The Hostel is connected with land-line telephone and Wi-Fi internet access. Library and Computer facility are made available till 9:00 PM.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Hostel Rules",
+      "level": 3,
+      "text": "1. Students must occupy the rooms allotted to them by the Warden (Principal).\n2. Students should refrain from anti-social and undesirable activities such as consumption of alcohol, tobacco, gambling, ragging etc.\n3. Students are responsible for the cleanliness of their rooms.\n4. No student will be allowed to leave the hostel based on a phone call.\n5. Parents are requested to give a list of authorized visitors / local guardians. Visitors not mentioned in the list will not be permitted.\n6. Students will be permitted to go home only if the college is closed continuously for five days or more.\n7. Any student wishing to attend a function (marriage or other ceremony) will be permitted only if the request is made by the parents to the Principal.\n8. Visitors are allowed on holidays from 11:00 A.M. to 6:00 P.M.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Dining Hall",
+      "level": 3,
+      "text": "Hostel Mess is run by the Management through a private contractor under the guidance of the Principal and Administrative Officer. Both Vegetarian and Non-Vegetarian food is served. Mess charges are collected on an annual basis at the time of admission. Parents and guests are allowed to consume food by paying for them. Separate seating arrangements are made for both boys and girls.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    }
+  ]
+}

@@ -1,0 +1,1329 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Computer Science & Engineering - Cyber Security — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/cyber.php",
+    "sections_covered": [
+      "Department Overview and Key Features",
+      "B.E. CSE Cyber Security Programme Details",
+      "Department Vision and Mission",
+      "PEOs / PSOs / Programme Outcomes (OBE)",
+      "Job Profiles — Employment Growth in Cyber Security 2025-2030",
+      "High-Demand Cyber Security Roles and Responsibilities",
+      "Sectors with High Employment Potential",
+      "Key Skills Required for Cyber Security Roles",
+      "Cyber Security Certifications",
+      "Learning Paths and Online Courses",
+      "Free and Low-Cost Learning Resources",
+      "Faculty List with Specializations",
+      "Department Facilities / Labs",
+      "Academics — Course Materials (2017 Regulation)",
+      "Placement Details",
+      "Contact Information"
+    ],
+    "scraped_date": "2026-04-28",
+    "total_chunks": 11,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_cyber",
+    "version": "v2",
+    "source_file": "msajce_cyber.json"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_cyber_chunk_01",
+      "section": "Department Overview, Key Features, Programme Details and Vision & Mission",
+      "source_url": "https://www.msajce-edu.in/cyber.php#tab1",
+      "context": "Overview of the B.E. CSE Cyber Security (CSCS) programme at MSAJCE, its key features, programme details (seats, duration, eligibility), top recruiters, and department Vision and Mission.",
+      "text": "Department of Computer Science & Engineering — Cyber Security (CSCS) — MSAJCE\n\nThe B.E. Computer Science and Engineering with Specialization in Cyber Security (CSCS) is an undergraduate engineering degree program focused on equipping students with the knowledge and skills needed to protect computer systems, networks, and data from cyber threats and attacks. With the increasing reliance on digital infrastructure across sectors, cyber security has become a critical field, and this course is designed to meet the growing demand for professionals in this area.\n\nObjective: To develop experts in the field of information security, ethical hacking, and digital forensics.\n\nKey Features:\n1. Specialized Curriculum — Focused on security principles, network security, cryptography, ethical hacking, and digital forensics. Includes foundational courses in computer science (Data Structures, Algorithms, Operating Systems).\n2. Hands-on Learning — Labs and simulation environments for penetration testing, secure coding, and threat analysis. Capstone projects, internships, and real-world problem-solving.\n3. Legal and Ethical Foundations — Cyber laws and ethics, compliance, and governance integrated into the curriculum.\n4. Emerging Technologies — Security in AI, IoT, Cloud computing, and Blockchain.\n\nTop Recruiters:\n1. Government & Defense Agencies (DRDO, CERT-IN, etc.)\n2. IT and Cyber Security Firms (TCS, Infosys, Accenture, Palo Alto Networks, IBM Security)\n3. Banks and Financial Institutions\n4. Healthcare and Insurance Companies\n5. E-commerce and Cloud Service Providers\n\nWhy B.E. in CSE — Cyber Security?\n1. Industry-aligned skills in a high-demand domain\n2. Greater job security and compensation potential\n3. Opportunity to contribute to national and corporate security\n4. Global relevance and international career pathways\n\nProgramme Details — B.E. CSE (Cyber Security Specialization):\nDuration: 4 years (Regular) / 3 years (Lateral Entry)\nNo. of Semesters: 8 (Regular) / 6 (Lateral Entry)\nIntake / No. of Seats: Total - 30 (Government - 15, Management - 15)\nEligibility: 10+2 system of Education. Must have secured a pass in Physics, Chemistry and Mathematics in the qualifying examination.\nCurriculum & Syllabus: 2021 Regulation — https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf\nScope for Higher Studies: M.E. / M.Tech. / M.B.A.\n\nDepartment Vision:\nTo be a centre of excellence for transforming students into proficient Cyber Security Specialists through sustainable practices.\n\nDepartment Mission:\nM1. Impart core fundamental knowledge and necessary skills in Cyber Security through innovative teaching and learning methodology.\nM2. Inculcate critical thinking, ethics, lifelong learning and creativity needed for industry and society.\nM3. Cultivate the students with all-round competencies, for career, higher education and self-employability.",
+      "tables": [
+        {
+          "table_title": "B.E. CSE Cyber Security Programme Summary",
+          "headers": [
+            "Parameter",
+            "Details"
+          ],
+          "rows": [
+            [
+              "Programme",
+              "B.E. Computer Science & Engineering — Cyber Security (CSCS)"
+            ],
+            [
+              "Duration",
+              "4 years (Regular) / 3 years (Lateral Entry)"
+            ],
+            [
+              "No. of Semesters",
+              "8 (Regular) / 6 (Lateral Entry)"
+            ],
+            [
+              "Total Seats",
+              "30"
+            ],
+            [
+              "Government Quota",
+              "15"
+            ],
+            [
+              "Management Quota",
+              "15"
+            ],
+            [
+              "Eligibility",
+              "10+2 with Physics, Chemistry, Mathematics pass"
+            ],
+            [
+              "Syllabus",
+              "2021 Regulation"
+            ],
+            [
+              "Higher Studies",
+              "M.E. / M.Tech. / M.B.A."
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is B.E. CSE Cyber Security at MSAJCE?",
+        "How many seats are available in Cyber Security at MSAJCE?",
+        "What is the duration of B.E. Cyber Security at MSAJCE?",
+        "How many government quota seats are in CSE Cyber Security at MSAJCE?",
+        "What is the eligibility for B.E. Cyber Security at MSAJCE?",
+        "What is the vision of the Cyber Security department at MSAJCE?",
+        "Which top companies recruit Cyber Security graduates from MSAJCE?",
+        "Why should I choose B.E. CSE Cyber Security at MSAJCE?",
+        "Is lateral entry available for Cyber Security at MSAJCE?",
+        "What higher studies can I pursue after B.E. Cyber Security from MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": [
+          "30 total seats",
+          "15 government quota",
+          "15 management quota",
+          "4 years duration",
+          "8 semesters"
+        ]
+      },
+      "keywords": [
+        "B.E. CSE Cyber Security",
+        "CSCS",
+        "cyber security seats",
+        "cyber security admission",
+        "government quota 15",
+        "management quota 15",
+        "ethical hacking",
+        "digital forensics",
+        "network security",
+        "DRDO",
+        "CERT-IN",
+        "Palo Alto Networks",
+        "IBM Security",
+        "2021 regulation cyber security",
+        "lateral entry cyber security"
+      ],
+      "overlap_text": "",
+      "token_count": 520,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_cyber.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Computer Science & Engineering - Cyber Security — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": "30 total seats, 15 government quota, 15 management quota, 4 years duration, 8 semesters"
+    },
+    {
+      "chunk_id": "msajce_cyber_chunk_02",
+      "section": "OBE — PEOs, PSOs, and Programme Outcomes (PO1–PO12)",
+      "source_url": "https://www.msajce-edu.in/cyber.php#tab2",
+      "context": "Outcome-Based Education details for B.E. CSE Cyber Security at MSAJCE: Programme Educational Objectives, Programme Specific Outcomes, and all 12 Programme Outcomes.",
+      "text": "Programme Educational Objectives (PEOs)\n\nPEO1: Graduates will be prepared for analysing, designing, developing and testing the software solutions and products with creativity and sustainability.\nPEO2: Graduates will be skilled in the use of modern tools for critical problem solving and analyzing industrial and societal requirements.\nPEO3: Graduates will be prepared with managerial and leadership skills for career and starting up own firms.\n\nProgram Specific Outcomes (PSOs) — Engineering Graduates will be able to:\nPSO1: Develop creative solutions by adapting emerging technologies / tools for real time applications of Industry.\nPSO2: Apply the acquired knowledge to develop software solutions and innovative mobile apps for various automation applications.\n\nProgramme Outcomes (POs):\nPO1. Engineering Knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.\nPO2. Problem Analysis: Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.\nPO3. Design/Development Of Solutions: Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.\nPO4. Conduct Investigations of Complex Problems: Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.\nPO5. Modern Tool Usage: Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations.\nPO6. The Engineer and Society: Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.\nPO7. Environment and Sustainability: Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.\nPO8. Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.\nPO9. Individual and Team Work: Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.\nPO10. Communication: Communicate effectively on complex engineering activities with the engineering community and with society at large.\nPO11. Project Management and Finance: Demonstrate knowledge and understanding of the engineering and management principles and apply these to one's own work.\nPO12. Life-long Learning: Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.",
+      "tables": [],
+      "possible_questions": [
+        "What are the PEOs for Cyber Security at MSAJCE?",
+        "What are the programme educational objectives of CSCS at MSAJCE?",
+        "What are the PSOs for Cyber Security at MSAJCE?",
+        "What are the programme outcomes for B.E. Cyber Security at MSAJCE?",
+        "How many programme outcomes are defined for Cyber Security at MSAJCE?",
+        "What is OBE in CSCS at MSAJCE?",
+        "What skills will Cyber Security graduates have from MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "3 PEOs",
+          "2 PSOs",
+          "12 Programme Outcomes"
+        ]
+      },
+      "keywords": [
+        "PEO Cyber Security",
+        "PSO Cyber Security",
+        "programme outcomes CSCS",
+        "OBE cyber security",
+        "engineering knowledge",
+        "problem analysis",
+        "ethics",
+        "sustainability",
+        "lifelong learning",
+        "team work",
+        "project management",
+        "communication PO"
+      ],
+      "overlap_text": "B.E. CSE Cyber Security (CSCS) at MSAJCE: Total 30 seats — Government 15, Management 15. Duration 4 years Regular, 8 semesters. Eligibility: 10+2 with Physics Chemistry Mathematics. Vision: To be a centre of excellence for transforming students into proficient Cyber Security Specialists through sustainable practices. Mission M1: Impart core knowledge in Cyber Security. M2: Critical thinking and ethics. M3: All-round competencies.",
+      "token_count": 490,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_cyber.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Computer Science & Engineering - Cyber Security — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "3 PEOs, 2 PSOs, 12 Programme Outcomes"
+    },
+    {
+      "chunk_id": "msajce_cyber_chunk_03",
+      "section": "Employment Growth in Cyber Security in India (2025–2030) — Key Drivers",
+      "source_url": "https://www.msajce-edu.in/cyber.php#tab3",
+      "context": "Detailed analysis of the key drivers of employment growth in Cyber Security in India for the period 2025–2030, as provided on the MSAJCE Cyber Security department page.",
+      "text": "Employment Growth in Cyber Security in India (2025–2030)\n\nThe Cyber Security sector in India is expected to experience strong growth over the next five years (2025–2030) due to the increasing frequency and sophistication of cyber attacks, the rapid digitization of businesses, and the expansion of digital infrastructures in various industries. As businesses and government organizations continue to embrace digital transformation, the demand for cyber security professionals will rise significantly.\n\nKey Drivers of Employment Growth in Cyber Security in India (2025–2030):\n\n1. Increasing Cyber Security Threats\nWith more data moving online and increasing cyber threats, the demand for cyber security experts is projected to rise. Organizations will need professionals to design secure systems, prevent data breaches, and mitigate cyber risks.\n\n2. Government Initiatives and Regulations\n   - Personal Data Protection Bill and National Cyber Security Strategy creating more demand for professionals.\n   - Digital India and Smart Cities initiatives.\n   - CERT-In (Indian Computer Emergency Response Team) and NCIIPC (National Critical Information Infrastructure Protection Centre): Government agencies pushing for enhanced cyber security protocols, encouraging private sector adoption.\n\n3. Growth of Cloud Computing and IoT\n   - Cloud Adoption: As companies migrate to AWS, Azure, and Google Cloud, professionals in cloud security will be in high demand.\n   - Smart Devices: Rise of IoT devices in healthcare, agriculture, manufacturing, and home automation requiring professionals for IoT platform development, device connectivity, data management, and security.\n\n4. Digital Payments and Financial Services\n   - Fintech Boom: India's fintech sector growth increasing need for cyber security professionals to protect digital payment systems, mobile banking apps, and blockchain-based solutions.\n   - RBI and SEBI implementing stricter cyber security regulations for financial institutions.\n\n5. Data Privacy and GDPR Compliance\n   - As the government enforces stronger data protection regulations such as the Personal Data Protection Bill, companies will require professionals with expertise in data security and privacy laws.\n\n6. Digital Transformation Across Industries\n   - Digital India Initiative boosting demand for computer scientists and engineers.\n   - Smart Cities and IoT implementation driving need for software developers, system integrators, and data engineers.\n   - Automation and AI Adoption making CSE professionals essential for developing, integrating, and managing these technologies.",
+      "tables": [],
+      "possible_questions": [
+        "What is the job outlook for Cyber Security graduates in India 2025-2030?",
+        "Why is cyber security in high demand in India?",
+        "What government initiatives are driving cyber security jobs in India?",
+        "What is CERT-In and how is it related to cyber security jobs?",
+        "What is NCIIPC and its role in cyber security in India?",
+        "How does the Personal Data Protection Bill affect cyber security jobs?",
+        "Why is cloud computing driving cyber security employment?",
+        "How does fintech growth affect cyber security job demand in India?",
+        "Will RBI and SEBI regulations increase cyber security jobs?",
+        "What are the key drivers of cyber security employment growth in India?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "India"
+        ],
+        "numbers": [
+          "2025-2030 employment forecast"
+        ]
+      },
+      "keywords": [
+        "cyber security jobs India 2025-2030",
+        "CERT-In",
+        "NCIIPC",
+        "Personal Data Protection Bill",
+        "Digital India",
+        "Smart Cities",
+        "GDPR compliance",
+        "RBI cyber security",
+        "SEBI cyber security",
+        "cloud computing security jobs",
+        "IoT security jobs",
+        "fintech cyber security",
+        "National Cyber Security Strategy"
+      ],
+      "overlap_text": "PEO1: Graduates prepared for analysing, designing, developing and testing software solutions with creativity and sustainability. PEO2: Skilled in modern tools for critical problem solving. PEO3: Managerial and leadership skills for career and starting firms. PSO1: Creative solutions adapting emerging technologies. PSO2: Software solutions and mobile apps for automation. 12 Programme Outcomes covering Engineering Knowledge through Life-long Learning.",
+      "token_count": 470,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_cyber.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Computer Science & Engineering - Cyber Security — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "India",
+      "entity_numbers": "2025-2030 employment forecast"
+    },
+    {
+      "chunk_id": "msajce_cyber_chunk_04",
+      "section": "High-Demand Cyber Security Job Roles and Responsibilities (2025–2030)",
+      "source_url": "https://www.msajce-edu.in/cyber.php#tab3",
+      "context": "Detailed descriptions of the top 10 high-demand cyber security job roles, their responsibilities, and required skills for graduates of the CSCS programme.",
+      "text": "Employment Opportunities in High Demand (2025–2030):\n\n1. Cyber Security Analyst\nResponsibilities: Monitor network traffic, identify security breaches, implement protective measures. First line of defense in identifying threats and responding to incidents.\nSkills Required: Network security, incident response, SIEM tools, firewall management, penetration testing.\n\n2. Security Architect\nResponsibilities: Design and implement complex security infrastructures to protect IT systems, networks, and data. Set up secure frameworks for cloud, IoT, and enterprise networks.\nSkills Required: Network architecture, security frameworks, risk management, cloud security (AWS, Azure), firewalls, encryption technologies.\n\n3. Penetration Tester (Ethical Hacker)\nResponsibilities: Conduct penetration tests to identify and exploit vulnerabilities. Simulate cyber attacks to help organizations find weaknesses before malicious hackers can exploit them.\nSkills Required: Kali Linux, Metasploit, Wireshark, nmap, vulnerability scanning tools, ethical hacking certifications (CEH, OSCP).\n\n4. Security Operations Center (SOC) Analyst\nResponsibilities: Monitor organization's network for potential security threats, respond to security incidents in real-time to ensure minimal downtime and risk.\nSkills Required: Threat analysis, log analysis, incident detection and response, SIEM systems (Splunk, IBM QRadar).\n\n5. Cloud Security Specialist\nResponsibilities: Ensure security of cloud infrastructures and applications. Prevent unauthorized access, data breaches, and ensure compliance with cloud-specific security protocols.\nSkills Required: AWS, Azure, Google Cloud, cloud security best practices, identity and access management (IAM), encryption.\n\n6. Cyber Security Consultant\nResponsibilities: Provide expertise on improving organizations' cyber security posture. Assess vulnerabilities, provide strategic recommendations, help implement security solutions.\nSkills Required: Risk assessment, security audits, compliance frameworks (ISO 27001, NIST), penetration testing, security policy development.\n\n7. Incident Responder\nResponsibilities: Investigate and respond to cybersecurity incidents including data breaches and malware attacks. Mitigate damage and prevent further issues.\nSkills Required: Incident handling, forensics, malware analysis, root cause analysis, digital forensics tools.\n\n8. Cyber Security Engineer\nResponsibilities: Build and maintain security systems, firewalls, and encryption technologies to protect organizational assets. Proactively design systems to prevent breaches.\nSkills Required: Firewall configuration, endpoint protection, network security protocols, security software development.\n\n9. Chief Information Security Officer (CISO)\nResponsibilities: Oversee an organization's entire cybersecurity strategy including policies, systems, and incident response. Ensure compliance with relevant regulations and industry standards.\nSkills Required: Leadership skills, risk management, compliance knowledge (GDPR, PCI DSS), security program management, business continuity planning.\n\n10. IoT Security Expert\nResponsibilities: Protect connected devices in IoT ecosystems from cyber threats. Ensure IoT devices are secure, encrypted, and do not pose risks to organizational infrastructure.\nSkills Required: IoT protocols, embedded security, network security, data encryption, IoT device security.",
+      "tables": [
+        {
+          "table_title": "High-Demand Cyber Security Roles 2025-2030",
+          "headers": [
+            "Role",
+            "Key Responsibilities",
+            "Core Skills"
+          ],
+          "rows": [
+            [
+              "Cyber Security Analyst",
+              "Monitor network, identify breaches, incident response",
+              "SIEM, firewall, penetration testing"
+            ],
+            [
+              "Security Architect",
+              "Design security infrastructure for cloud/IoT/enterprise",
+              "AWS, Azure, encryption, risk management"
+            ],
+            [
+              "Penetration Tester (Ethical Hacker)",
+              "Conduct pen tests, simulate cyber attacks",
+              "Kali Linux, Metasploit, Wireshark, CEH, OSCP"
+            ],
+            [
+              "SOC Analyst",
+              "Real-time threat monitoring and incident response",
+              "Splunk, IBM QRadar, SIEM, threat analysis"
+            ],
+            [
+              "Cloud Security Specialist",
+              "Secure cloud infra, prevent breaches, IAM",
+              "AWS, Azure, Google Cloud, IAM, encryption"
+            ],
+            [
+              "Cyber Security Consultant",
+              "Advise on security posture, audits, compliance",
+              "ISO 27001, NIST, risk assessment, pen testing"
+            ],
+            [
+              "Incident Responder",
+              "Investigate breaches, malware, root cause analysis",
+              "Forensics, malware analysis, incident handling"
+            ],
+            [
+              "Cyber Security Engineer",
+              "Build firewalls, security systems, encryption",
+              "Firewall config, endpoint protection, network security"
+            ],
+            [
+              "CISO",
+              "Oversee entire cybersecurity strategy",
+              "Leadership, GDPR, PCI DSS, risk management"
+            ],
+            [
+              "IoT Security Expert",
+              "Protect IoT devices, ensure encryption",
+              "IoT protocols, embedded security, data encryption"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What are the job roles for a Cyber Security graduate from MSAJCE?",
+        "What does a SOC Analyst do?",
+        "What skills do I need to become an ethical hacker?",
+        "What is the role of a CISO?",
+        "What is the job profile for a Cloud Security Specialist?",
+        "What tools does a Penetration Tester use?",
+        "What is the difference between a Cyber Security Analyst and a Security Architect?",
+        "What does an Incident Responder do?",
+        "What skills are needed for IoT Security Expert role?",
+        "What are the responsibilities of a Cyber Security Engineer?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "10 high-demand roles"
+        ]
+      },
+      "keywords": [
+        "cyber security analyst",
+        "security architect",
+        "penetration tester",
+        "ethical hacker",
+        "SOC analyst",
+        "cloud security specialist",
+        "cyber security consultant",
+        "incident responder",
+        "CISO",
+        "IoT security expert",
+        "Kali Linux",
+        "Metasploit",
+        "Wireshark",
+        "Splunk",
+        "IBM QRadar",
+        "SIEM",
+        "CEH",
+        "OSCP",
+        "ISO 27001",
+        "NIST",
+        "GDPR",
+        "PCI DSS",
+        "IAM",
+        "firewall",
+        "endpoint protection"
+      ],
+      "overlap_text": "Key drivers of cyber security employment growth 2025-2030: Increasing cyber threats, Government initiatives (CERT-In, NCIIPC, Personal Data Protection Bill, Digital India), Cloud Computing and IoT growth, Digital Payments and Fintech Boom (RBI and SEBI regulations), Data Privacy and GDPR compliance, Digital Transformation across industries.",
+      "token_count": 530,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_cyber.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Computer Science & Engineering - Cyber Security — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "10 high-demand roles"
+    },
+    {
+      "chunk_id": "msajce_cyber_chunk_05",
+      "section": "Sectors with High Employment Potential and Key Skills Required",
+      "source_url": "https://www.msajce-edu.in/cyber.php#tab3",
+      "context": "Sectors offering high employment for Cyber Security professionals and the detailed key skills required for cyber security roles as listed on the MSAJCE CSCS page.",
+      "text": "Sectors with High Employment Potential for Cyber Security Professionals:\n\n1. IT and IT Services — Companies offering IT solutions and managed services need cyber security experts to protect their own systems and clients'.\n2. Financial Services and Fintech — Banks, insurance companies, digital payment providers, and fintech startups investing in cyber security to safeguard transactions, customer data, and comply with financial regulations.\n3. E-Commerce — E-commerce platforms requiring professionals to safeguard customer data, payment systems, and business operations from cyber threats.\n4. Government and Defense — Government's focus on digital governance and smart cities increasing need for cyber security experts to protect critical infrastructure (energy, transportation, healthcare).\n5. Telecommunications — 5G technology rollout and connected devices requiring network security experts to protect data and ensure infrastructure reliability.\n6. Healthcare — Digitalization of healthcare systems increasing need for healthcare cyber security specialists ensuring sensitive health records and telemedicine systems are secure.\n7. Cloud Services — Companies providing cloud solutions (AWS, Azure, Google Cloud) requiring professionals skilled in securing cloud platforms and ensuring compliance with data protection laws.\n\nKey Skills Required for Cyber Security Roles:\n\n1. Network Security — Knowledge of TCP/IP, network protocols, and firewalls. Tools: Wireshark, nmap, Snort for network analysis and intrusion detection.\n2. Ethical Hacking and Penetration Testing — Skills to simulate cyberattacks. Tools: Kali Linux, Metasploit, Burp Suite, Nessus, Aircrack-ng.\n3. Cloud Security — Securing AWS, Azure, Google Cloud environments. IAM (Identity and Access Management), encryption, and data protection in cloud services.\n4. Incident Response and Forensics — Skills to detect, respond, and recover from cybersecurity incidents. Expertise in digital forensics tools and techniques.\n5. Data Encryption and Cryptography — Strong understanding of cryptography principles, apply encryption to protect data in transit and at rest. Tools: OpenSSL, GPG, AES.\n6. Risk Management and Compliance — Cyber risk assessment and frameworks like ISO 27001, GDPR, HIPAA, and PCI DSS — especially valuable for banking, fintech, and healthcare.\n7. SIEM (Security Information and Event Management) — Proficiency in Splunk, IBM QRadar, or ArcSight to detect, monitor, and respond to security threats in real-time.\n8. Security Automation and Scripting — Automation tools (Puppet, Ansible) and scripting languages (Python, Bash) for automating security tasks and incident responses.\n9. Threat Intelligence — Identifying, analyzing, and responding to emerging cyber threats using threat intelligence platforms.\n10. Security in IoT and Mobile Devices — Understanding IoT security and mobile device security.",
+      "tables": [],
+      "possible_questions": [
+        "Which sectors hire the most Cyber Security professionals in India?",
+        "What skills do I need to work in financial services cyber security?",
+        "What is SIEM and why is it important in cyber security?",
+        "What scripting skills are needed for cyber security roles?",
+        "What is threat intelligence in cyber security?",
+        "What cryptography tools are used in cyber security?",
+        "How does cloud security differ from traditional network security?",
+        "What tools are used for penetration testing?",
+        "Why is healthcare cyber security a growing field?",
+        "What is IAM and why is it important for cloud security?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "7 high-employment sectors",
+          "10 key skills"
+        ]
+      },
+      "keywords": [
+        "network security skills",
+        "ethical hacking tools",
+        "cloud security IAM",
+        "incident response forensics",
+        "cryptography AES OpenSSL GPG",
+        "ISO 27001",
+        "GDPR",
+        "HIPAA",
+        "PCI DSS",
+        "SIEM Splunk QRadar ArcSight",
+        "Python Bash automation security",
+        "threat intelligence",
+        "IoT mobile security",
+        "Wireshark nmap Snort",
+        "Kali Linux Metasploit Burp Suite Nessus",
+        "TCP/IP network protocols",
+        "healthcare cyber security",
+        "fintech cyber security",
+        "government defense cyber security",
+        "5G telecom security"
+      ],
+      "overlap_text": "High-demand roles: Cyber Security Analyst (SIEM, firewall), Security Architect (AWS, Azure, encryption), Penetration Tester (Kali Linux, Metasploit, CEH, OSCP), SOC Analyst (Splunk, IBM QRadar), Cloud Security Specialist (AWS, Azure, IAM), Cyber Security Consultant (ISO 27001, NIST), Incident Responder (forensics, malware), Cyber Security Engineer (firewall, endpoint protection), CISO (GDPR, PCI DSS), IoT Security Expert (embedded security).",
+      "token_count": 480,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_cyber.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Computer Science & Engineering - Cyber Security — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "7 high-employment sectors, 10 key skills"
+    },
+    {
+      "chunk_id": "msajce_cyber_chunk_06",
+      "section": "Cyber Security Certifications and Learning Paths",
+      "source_url": "https://www.msajce-edu.in/cyber.php#tab3",
+      "context": "All cyber security certifications recommended for CSCS graduates and structured learning paths from beginner to advanced level as listed on the MSAJCE Cyber Security page.",
+      "text": "Cyber Security Certifications:\n\nCertifications can greatly enhance your credibility and job prospects in the cyber security field.\n\n1. Certified Ethical Hacker (CEH) — Certification Body: EC-Council\n2. Certified Information Systems Security Professional (CISSP) — Certification Body: (ISC)²\n3. Certified Information Security Manager (CISM) — Certification Body: ISACA\n4. Certified Information Systems Auditor (CISA) — Certification Body: ISACA\n5. CompTIA Security+ — Certification Body: CompTIA\n6. Certified Cloud Security Professional (CCSP) — Certification Body: (ISC)²\n7. Certified Penetration Testing Engineer (CPTE) — Certification Body: EC-Council\n8. Certified SOC Analyst (CSA) — Certification Body: EC-Council\n9. Cisco Certified CyberOps Associate — Certification Body: Cisco\n10. GIAC Security Essentials (GSEC) — Certification Body: Global Information Assurance Certification (GIAC)\n\nLearning Paths for Cyber Security Careers:\n\nBeginner Level:\n  Certifications: CompTIA Security+, Certified Ethical Hacker (CEH) Foundation\n  Skills Focus: Network security basics, firewall setup, vulnerability scanning\n  Training Resources: Udemy, Coursera, edX for beginner courses\n\nIntermediate Level:\n  Certifications: CISSP, CISM, Certified Cloud Security Professional (CCSP)\n  Skills Focus: Advanced network security, cloud security, penetration testing, risk management\n  Training Resources: Cybrary, Pluralsight, SANS Institute\n\nAdvanced Level:\n  Certifications: Certified Information Systems Auditor (CISA), Certified Penetration Testing Engineer (CPTE)\n  Skills Focus: Ethical hacking, penetration testing, security management, incident response\n  Training Resources: EC-Council, GIAC, SANS Institute for specialized and advanced cyber security training",
+      "tables": [
+        {
+          "table_title": "Cyber Security Certifications",
+          "headers": [
+            "Certification",
+            "Abbreviation",
+            "Certification Body"
+          ],
+          "rows": [
+            [
+              "Certified Ethical Hacker",
+              "CEH",
+              "EC-Council"
+            ],
+            [
+              "Certified Information Systems Security Professional",
+              "CISSP",
+              "(ISC)²"
+            ],
+            [
+              "Certified Information Security Manager",
+              "CISM",
+              "ISACA"
+            ],
+            [
+              "Certified Information Systems Auditor",
+              "CISA",
+              "ISACA"
+            ],
+            [
+              "CompTIA Security+",
+              "Security+",
+              "CompTIA"
+            ],
+            [
+              "Certified Cloud Security Professional",
+              "CCSP",
+              "(ISC)²"
+            ],
+            [
+              "Certified Penetration Testing Engineer",
+              "CPTE",
+              "EC-Council"
+            ],
+            [
+              "Certified SOC Analyst",
+              "CSA",
+              "EC-Council"
+            ],
+            [
+              "Cisco Certified CyberOps Associate",
+              "CyberOps",
+              "Cisco"
+            ],
+            [
+              "GIAC Security Essentials",
+              "GSEC",
+              "GIAC"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What certifications are recommended for cyber security career?",
+        "What is CEH certification and who provides it?",
+        "What is CISSP certification?",
+        "What is CompTIA Security+ certification?",
+        "What is CCSP certification?",
+        "What is GSEC and who provides it?",
+        "What certifications should a beginner in cyber security pursue?",
+        "What is the learning path to become a cyber security professional?",
+        "What training resources are available for cyber security certifications?",
+        "What is the difference between CISM and CISA?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "10 recommended certifications",
+          "3 learning levels"
+        ]
+      },
+      "keywords": [
+        "CEH",
+        "CISSP",
+        "CISM",
+        "CISA",
+        "CompTIA Security+",
+        "CCSP",
+        "CPTE",
+        "CSA",
+        "Cisco CyberOps",
+        "GSEC",
+        "EC-Council",
+        "ISC2",
+        "ISACA",
+        "CompTIA",
+        "GIAC",
+        "SANS Institute",
+        "Cybrary",
+        "Pluralsight",
+        "beginner cyber security",
+        "intermediate cyber security",
+        "advanced cyber security",
+        "Udemy",
+        "Coursera"
+      ],
+      "overlap_text": "Sectors with high cyber security employment: IT Services, Financial Services and Fintech, E-Commerce, Government and Defense, Telecommunications (5G), Healthcare, Cloud Services. Key skills: Network Security (TCP/IP, Wireshark), Ethical Hacking (Kali Linux, Metasploit, Burp Suite), Cloud Security (AWS, Azure, IAM), Incident Response and Forensics, Cryptography (OpenSSL, AES), Risk Management (ISO 27001, GDPR, HIPAA, PCI DSS), SIEM (Splunk, QRadar), Security Automation (Python, Bash).",
+      "token_count": 450,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_cyber.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Computer Science & Engineering - Cyber Security — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "10 recommended certifications, 3 learning levels"
+    },
+    {
+      "chunk_id": "msajce_cyber_chunk_07",
+      "section": "Top Online Courses and Free/Low-Cost Cyber Security Learning Resources",
+      "source_url": "https://www.msajce-edu.in/cyber.php#tab3",
+      "context": "Comprehensive list of recommended online cyber security courses and free/low-cost learning resources for students and professionals, as provided on the MSAJCE CSCS page.",
+      "text": "Top Online Cyber Security Courses:\n\n1. CompTIA Security+ (SY0-601) — Platform: Udemy, LinkedIn Learning, Cybrary. Overview: Beginner-friendly, covers network security, risk management, cryptography. Ideal For: Beginners. Certification: CompTIA Security+\n2. Certified Ethical Hacker (CEH) — Platform: EC-Council, Udemy. Overview: Penetration testing techniques, ethical hacking methodologies, security analysis. Ideal For: Aspiring penetration testers and ethical hackers. Certification: CEH\n3. Cisco CCNA Security — Platform: Cisco Networking Academy, Udemy. Overview: Network security, firewall technologies, VPNs, intrusion prevention. Ideal For: Network security and Cisco certifications. Certification: Cisco CCNA Security\n4. CISSP — Platform: Udemy, LinkedIn Learning, Cybrary. Overview: Security management, risk management, architecture. Ideal For: Experienced professionals and those seeking leadership roles. Certification: CISSP\n5. CCSP — Platform: (ISC)², Udemy, LinkedIn Learning. Overview: Cloud security, securing cloud services, IAM. Ideal For: Professionals working with cloud computing and security. Certification: CCSP\n6. GIAC Security Essentials (GSEC) — Platform: SANS Institute. Overview: Covers basic cyber security skills, network security, cryptography, security policies. Ideal For: Professionals strengthening foundation in security. Certification: GSEC\n7. Cyber Security Specialization by University of Maryland — Platform: Coursera. Overview: Cryptography, security protocols, network security. Ideal For: Beginners building strong foundation. Certification: Certificate of completion\n8. Advanced Penetration Testing and Ethical Hacking — Platform: Offensive Security (OffSec), Udemy. Overview: Advanced penetration testing skills, ethical hacking, exploitation techniques. Ideal For: Advanced learners. Certification: OSCP\n9. CISM — Platform: ISACA, Udemy. Overview: Information security management, risk management, governance. Ideal For: Professionals seeking managerial roles. Certification: CISM\n10. Cyber Security for Business Specialization — Platform: Coursera (University of Colorado). Overview: Cyber security from a business perspective, data protection, regulations, security risk management. Ideal For: Business professionals and security team managers. Certification: Certificate of completion\n\nFree and Low-Cost Cyber Security Learning Resources:\n\n1. Cybrary — Free and paid courses from beginner to advanced in network security, ethical hacking, cloud security, incident response. Link: https://www.cybrary.it/\n2. Udemy — Affordable cybersecurity courses (often discounted). Link: https://www.udemy.com/topic/cyber-security/\n3. Coursera — Free courses from University of Maryland, UC, and more. Certificates available for a fee. Link: https://www.coursera.org/courses?query=cybersecurity\n4. SANS Cyber Aces — Free introductory courses on network security, operating systems, system administration. Link: https://www.sans.org/cyberaces/\n5. OWASP (Open Web Application Security Project) — Open-source resources for web application security. Link: https://owasp.org/\n6. TryHackMe — Interactive, hands-on challenges for penetration testing, ethical hacking, security analysis. Link: https://tryhackme.com/\n7. Hack The Box — Practice penetration testing and ethical hacking by solving challenges. Link: https://www.hackthebox.com/\n8. YouTube Channels — The Cyber Mentor (ethical hacking), NetworkChuck (networking/firewall/security), Professor Messer (free CompTIA Security+ videos).",
+      "tables": [],
+      "possible_questions": [
+        "Where can I learn cyber security online for free?",
+        "What are the best online platforms for cyber security courses?",
+        "What is TryHackMe and how does it help in cyber security learning?",
+        "What is Hack The Box used for?",
+        "What is OWASP and its use in cyber security?",
+        "Which platform offers free cyber security courses?",
+        "What is the best course for beginners in cyber security?",
+        "Where can I practice penetration testing online?",
+        "What is the OSCP certification and where can I get it?",
+        "Which YouTube channels are good for learning cyber security?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "10 top online courses",
+          "8 free/low-cost resources"
+        ]
+      },
+      "keywords": [
+        "TryHackMe",
+        "Hack The Box",
+        "OWASP",
+        "Cybrary",
+        "Udemy",
+        "Coursera",
+        "SANS Cyber Aces",
+        "CompTIA Security+ course",
+        "CEH course",
+        "CISSP course",
+        "CCSP course",
+        "GSEC SANS Institute",
+        "OSCP Offensive Security",
+        "CISM course",
+        "Cisco CCNA Security",
+        "The Cyber Mentor YouTube",
+        "NetworkChuck",
+        "Professor Messer",
+        "free cyber security learning",
+        "online cyber security India"
+      ],
+      "overlap_text": "Cyber Security Certifications: CEH (EC-Council), CISSP (ISC)², CISM (ISACA), CISA (ISACA), CompTIA Security+, CCSP (ISC)², CPTE (EC-Council), CSA (EC-Council), Cisco CyberOps, GSEC (GIAC). Learning Paths: Beginner — CompTIA Security+, CEH, resources Udemy/Coursera/edX. Intermediate — CISSP, CISM, CCSP, resources Cybrary/Pluralsight/SANS. Advanced — CISA, CPTE, resources EC-Council/GIAC/SANS.",
+      "token_count": 510,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_cyber.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Computer Science & Engineering - Cyber Security — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "10 top online courses, 8 free/low-cost resources"
+    },
+    {
+      "chunk_id": "msajce_cyber_chunk_08",
+      "section": "Career Path Resources — Podcasts, Communities, Books",
+      "source_url": "https://www.msajce-edu.in/cyber.php#tab3",
+      "context": "Additional cyber security career path resources including LinkedIn Learning, podcasts, community platforms, and recommended books as listed on the MSAJCE CSCS page.",
+      "text": "Cyber Security Career Path Resources:\n\n1. LinkedIn Learning — Courses focusing on cybersecurity fundamentals, ethical hacking, risk management, and cloud security. Link: https://www.linkedin.com/learning/topics/cybersecurity\n\n2. Cyber Security Podcasts:\n   - Darknet Diaries — Explores real-life cyberattacks and security breaches.\n   - The CyberWire — Provides news and analysis of the latest cybersecurity threats.\n   - Security Now — A weekly podcast covering cybersecurity news and tips.\n\n3. Cyber Security Communities:\n   - Reddit (r/cybersecurity) — Community for cybersecurity news, jobs, and discussions.\n   - Stack Exchange — Platform to ask questions and share knowledge with fellow cybersecurity enthusiasts.\n   - Twitter — Follow cybersecurity experts like Troy Hunt (@troyhunt) and Brian Krebs (@briankrebs) for the latest updates.\n\n4. Books to Consider:\n   - The Web Application Hacker's Handbook by Dafydd Stuttard and Marcus Pinto — Detailed guide on web application security.\n   - Hacking: The Art of Exploitation by Jon Erickson — Book focused on understanding hacking techniques and security vulnerabilities.\n   - The CISSP All-in-One Exam Guide by Shon Harris — Comprehensive guide for CISSP certification.\n\nAdditional Resources to Enhance Your Skills:\n   - Capture The Flag (CTF) Challenges — Participate in CTF challenges to practice penetration testing, forensics, and cryptography. Platforms: Hack The Box, TryHackMe, and Over The Wire.\n   - Cyber Security Blogs — Krebs On Security, Dark Reading, SANS Internet Storm Center.\n   - Webinars and Conferences — Black Hat, DEFCON, and RSA Conference to network with experts and stay updated on emerging threats.\n   - Open-Source Tools — Wireshark, Metasploit, Kali Linux, Burp Suite.",
+      "tables": [],
+      "possible_questions": [
+        "What are good podcasts to learn about cyber security?",
+        "What books should I read to learn cyber security?",
+        "What is Darknet Diaries podcast about?",
+        "What is Capture The Flag (CTF) in cyber security?",
+        "What is Black Hat conference in cyber security?",
+        "What is DEFCON and how is it related to cyber security?",
+        "What is Over The Wire for cyber security practice?",
+        "Who is Troy Hunt and Brian Krebs in cyber security?",
+        "What is Krebs On Security blog?",
+        "What are the best communities to follow for cyber security updates?"
+      ],
+      "entities": {
+        "persons": [
+          "Troy Hunt — Cyber Security Expert (@troyhunt)",
+          "Brian Krebs — Cyber Security Expert (@briankrebs)",
+          "Dafydd Stuttard — Author, Web Application Hacker's Handbook",
+          "Marcus Pinto — Author, Web Application Hacker's Handbook",
+          "Jon Erickson — Author, Hacking: The Art of Exploitation",
+          "Shon Harris — Author, CISSP All-in-One Exam Guide"
+        ],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": []
+      },
+      "keywords": [
+        "Darknet Diaries",
+        "The CyberWire",
+        "Security Now podcast",
+        "r/cybersecurity Reddit",
+        "Stack Exchange security",
+        "Troy Hunt",
+        "Brian Krebs",
+        "CTF challenges",
+        "Hack The Box CTF",
+        "TryHackMe CTF",
+        "Over The Wire",
+        "Black Hat conference",
+        "DEFCON",
+        "RSA Conference",
+        "Krebs On Security",
+        "Dark Reading",
+        "SANS Internet Storm Center",
+        "CISSP All-in-One",
+        "Hacking Art of Exploitation",
+        "Web Application Hacker's Handbook"
+      ],
+      "overlap_text": "Top online courses: CompTIA Security+ (Udemy/LinkedIn/Cybrary), CEH (EC-Council/Udemy), Cisco CCNA Security, CISSP (Udemy/LinkedIn/Cybrary), CCSP (ISC)², GSEC (SANS), University of Maryland Cybersecurity (Coursera), Advanced Pen Testing OSCP (OffSec), CISM (ISACA), Cyber Security for Business (Coursera). Free resources: Cybrary, Udemy, Coursera, SANS Cyber Aces, OWASP, TryHackMe, Hack The Box, YouTube channels.",
+      "token_count": 420,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_cyber.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Computer Science & Engineering - Cyber Security — Complete Data Extract for RAG Model",
+      "entity_persons": "Troy Hunt — Cyber Security Expert (@troyhunt), Brian Krebs — Cyber Security Expert (@briankrebs), Dafydd Stuttard — Author, Web Application Hacker's Handbook, Marcus Pinto — Author, Web Application Hacker's Handbook, Jon Erickson — Author, Hacking: The Art of Exploitation, Shon Harris — Author, CISSP All-in-One Exam Guide",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": ""
+    },
+    {
+      "chunk_id": "msajce_cyber_chunk_09",
+      "section": "Faculty List and Department Facilities / Labs",
+      "source_url": "https://www.msajce-edu.in/cyber.php",
+      "context": "Complete faculty list of the Cyber Security department at MSAJCE with qualifications and specializations, and details of all 6 department labs including course codes and virtual lab links.",
+      "text": "Faculty — Computer Science & Engineering (Cyber Security Department):\n\nName | Qualification | Designation | Area of Specialization\nDr. NAGASUBRAMANIAN R | M.E., Ph.D. | Head - PG | Computer Science Engineering\nDr. SUBRAMANIAN P | M.E., Ph.D. | Head - UG | Wireless Sensor Networking and Image Processing\nDr. PREMALATHA G | M.E., Ph.D. | Associate Professor | Image Processing and Machine Learning\nMrs. SARANYA V | M.Tech., (Ph.D) | Assistant Professor | IOT and Cloud Computing\nMrs. SASIKALA L | M.E. | Assistant Professor | Computer Science and Engineering\nMrs. KIRUTHIKA S | M.E. | Assistant Professor | Computer Science and Engineering\nMrs. ASRIN MAHMOOTHA A | M.E. | Assistant Professor | Computer Science Engineering\nMr. PRAVEENKUMAR P | M.E. | Assistant Professor | Computer Science Engineering\nMr. RAJAKUMAR B | M.Tech., (Ph.D) | Assistant Professor | IOT, AI, NLP and Image Processing\nMr. RAJASEKAR R | M.E., (Ph.D) | Assistant Professor | IOT, Network Security\n\nDepartment Facilities — Labs:\nSl.No. | Lab Name | Course Code & Name | Virtual Lab Link\n1 | C Programming Lab | CS8261 - C Programming | https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-C-Programming.pdf\n2 | Internet Programming Lab | CS8661 - Internet Programming | https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-Internet-Programming.pdf\n3 | Operating Systems Lab | CS8461 - Operating Systems | https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-OS.pdf\n4 | Object Oriented Analysis and Design Lab | CS8461 - OOAD | https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-ooad.pdf\n5 | Web Technology Lab | IT8511 - Web Technology | https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-Web-Technology.pdf\n6 | Networks Lab | CS8581 Networks Lab | https://www.msajce-edu.in/images/departments/cse/Networks.pdf",
+      "tables": [
+        {
+          "table_title": "Cyber Security Department Faculty",
+          "headers": [
+            "Name",
+            "Qualification",
+            "Designation",
+            "Area of Specialization"
+          ],
+          "rows": [
+            [
+              "Dr. NAGASUBRAMANIAN R",
+              "M.E., Ph.D.",
+              "Head - PG",
+              "Computer Science Engineering"
+            ],
+            [
+              "Dr. SUBRAMANIAN P",
+              "M.E., Ph.D.",
+              "Head - UG",
+              "Wireless Sensor Networking and Image Processing"
+            ],
+            [
+              "Dr. PREMALATHA G",
+              "M.E., Ph.D.",
+              "Associate Professor",
+              "Image Processing and Machine Learning"
+            ],
+            [
+              "Mrs. SARANYA V",
+              "M.Tech., (Ph.D)",
+              "Assistant Professor",
+              "IOT and Cloud Computing"
+            ],
+            [
+              "Mrs. SASIKALA L",
+              "M.E.",
+              "Assistant Professor",
+              "Computer Science and Engineering"
+            ],
+            [
+              "Mrs. KIRUTHIKA S",
+              "M.E.",
+              "Assistant Professor",
+              "Computer Science and Engineering"
+            ],
+            [
+              "Mrs. ASRIN MAHMOOTHA A",
+              "M.E.",
+              "Assistant Professor",
+              "Computer Science Engineering"
+            ],
+            [
+              "Mr. PRAVEENKUMAR P",
+              "M.E.",
+              "Assistant Professor",
+              "Computer Science Engineering"
+            ],
+            [
+              "Mr. RAJAKUMAR B",
+              "M.Tech., (Ph.D)",
+              "Assistant Professor",
+              "IOT, AI, NLP and Image Processing"
+            ],
+            [
+              "Mr. RAJASEKAR R",
+              "M.E., (Ph.D)",
+              "Assistant Professor",
+              "IOT, Network Security"
+            ]
+          ]
+        },
+        {
+          "table_title": "Cyber Security Department Labs",
+          "headers": [
+            "Sl.No.",
+            "Lab Name",
+            "Course Code & Name",
+            "Virtual Lab Link"
+          ],
+          "rows": [
+            [
+              "1",
+              "C Programming Lab",
+              "CS8261 - C Programming",
+              "https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-C-Programming.pdf"
+            ],
+            [
+              "2",
+              "Internet Programming Lab",
+              "CS8661 - Internet Programming",
+              "https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-Internet-Programming.pdf"
+            ],
+            [
+              "3",
+              "Operating Systems Lab",
+              "CS8461 - Operating Systems",
+              "https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-OS.pdf"
+            ],
+            [
+              "4",
+              "OOAD Lab",
+              "CS8461 - OOAD",
+              "https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-ooad.pdf"
+            ],
+            [
+              "5",
+              "Web Technology Lab",
+              "IT8511 - Web Technology",
+              "https://www.msajce-edu.in/images/departments/cse/Virtual-Lab-Web-Technology.pdf"
+            ],
+            [
+              "6",
+              "Networks Lab",
+              "CS8581 Networks Lab",
+              "https://www.msajce-edu.in/images/departments/cse/Networks.pdf"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Who are the faculty in the Cyber Security department at MSAJCE?",
+        "Who is the Head of the Cyber Security department at MSAJCE?",
+        "Who is Dr. Nagasubramanian R at MSAJCE?",
+        "Who is the UG Head of Cyber Security at MSAJCE?",
+        "What labs are available in the Cyber Security department at MSAJCE?",
+        "Does MSAJCE Cyber Security have a Networks Lab?",
+        "What is Dr. Premalatha G's specialization at MSAJCE?",
+        "How many faculty members are in the CSCS department at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. NAGASUBRAMANIAN R — Head PG, Computer Science Engineering",
+          "Dr. SUBRAMANIAN P — Head UG, Wireless Sensor Networking and Image Processing",
+          "Dr. PREMALATHA G — Associate Professor, Image Processing and Machine Learning",
+          "Mrs. SARANYA V — Assistant Professor, IOT and Cloud Computing",
+          "Mrs. SASIKALA L — Assistant Professor, Computer Science and Engineering",
+          "Mrs. KIRUTHIKA S — Assistant Professor, Computer Science and Engineering",
+          "Mrs. ASRIN MAHMOOTHA A — Assistant Professor, Computer Science Engineering",
+          "Mr. PRAVEENKUMAR P — Assistant Professor, Computer Science Engineering",
+          "Mr. RAJAKUMAR B — Assistant Professor, IOT AI NLP Image Processing",
+          "Mr. RAJASEKAR R — Assistant Professor, IOT Network Security"
+        ],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "10 faculty members",
+          "6 labs"
+        ]
+      },
+      "keywords": [
+        "cyber security faculty MSAJCE",
+        "Dr Nagasubramanian R",
+        "Dr Subramanian P",
+        "Dr Premalatha G",
+        "CSCS HOD",
+        "UG head cyber security",
+        "PG head cyber security",
+        "Saranya V IOT",
+        "Rajakumar B AI NLP",
+        "Rajasekar R network security",
+        "C programming lab",
+        "networks lab",
+        "OOAD lab",
+        "web technology lab",
+        "virtual lab cyber security",
+        "CS8261",
+        "CS8581",
+        "IT8511"
+      ],
+      "overlap_text": "Career path resources: LinkedIn Learning cyber security courses. Podcasts: Darknet Diaries, The CyberWire, Security Now. Communities: Reddit r/cybersecurity, Stack Exchange, Twitter @troyhunt @briankrebs. Books: Web Application Hacker's Handbook, Hacking Art of Exploitation, CISSP All-in-One Exam Guide. CTF Platforms: Hack The Box, TryHackMe, Over The Wire. Conferences: Black Hat, DEFCON, RSA Conference.",
+      "token_count": 490,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_cyber.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Computer Science & Engineering - Cyber Security — Complete Data Extract for RAG Model",
+      "entity_persons": "Dr. NAGASUBRAMANIAN R — Head PG, Computer Science Engineering, Dr. SUBRAMANIAN P — Head UG, Wireless Sensor Networking and Image Processing, Dr. PREMALATHA G — Associate Professor, Image Processing and Machine Learning, Mrs. SARANYA V — Assistant Professor, IOT and Cloud Computing, Mrs. SASIKALA L — Assistant Professor, Computer Science and Engineering, Mrs. KIRUTHIKA S — Assistant Professor, Computer Science and Engineering, Mrs. ASRIN MAHMOOTHA A — Assistant Professor, Computer Science Engineering, Mr. PRAVEENKUMAR P — Assistant Professor, Computer Science Engineering, Mr. RAJAKUMAR B — Assistant Professor, IOT AI NLP Image Processing, Mr. RAJASEKAR R — Assistant Professor, IOT Network Security",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "10 faculty members, 6 labs"
+    },
+    {
+      "chunk_id": "msajce_cyber_chunk_10",
+      "section": "Academics — Course Materials (2017 Regulation) and Placement Details",
+      "source_url": "https://www.msajce-edu.in/cyber.php",
+      "context": "Course materials for Cyber Security programme (2017 Regulation) with all subject codes and names, plus placement details showing companies that have recruited from the department.",
+      "text": "Academics — Course Materials (2017 Regulation, B.E. CSE Cyber Security):\nAll materials (Lesson Plan, Question Bank, Lecture Notes, ICT Tools) accessible via: http://msajce-edu.in/msajce-student-portal/index.php\n\nSl.No. | Subject Code | Subject Name\n1 | GE8151 | Problem Solving and Python Programming\n2 | CS8251 | Programming in C\n3 | MA8351 | Discrete Mathematics\n4 | CS8351 | Digital Principles and System Design\n5 | CS8391 | Data Structures\n6 | CS8392 | Object Oriented Programming\n7 | EC8395 | Communication Engineering\n8 | MA8402 | Probability and Queueing Theory\n9 | CS8491 | Computer Architecture\n10 | CS8492 | Database Management Systems\n11 | CS8451 | Design and Analysis of Algorithms\n12 | CS8493 | Operating Systems\n13 | CS8494 | Software Engineering\n14 | MA8551 | Algebra and Number Theory\n15 | CS8591 | Computer Networks\n16 | EC8691 | Microprocessors and Microcontrollers\n17 | CS8501 | Theory of Computation\n18 | CS8592 | Object Oriented Analysis and Design\n19 | (blank) | Open Elective I\n20 | CS8651 | Internet Programming\n21 | CS8691 | Artificial Intelligence\n22 | CS8601 | Mobile Computing\n23 | CS8602 | Compiler Design\n24 | CS8603 | Distributed Systems\n25 | (blank) | Professional Elective I\n26 | MG8591 | Principles of Management\n27 | CS8792 | Cryptography and Network Security\n28 | CS8791 | Cloud Computing\n29 | (blank) | Open Elective II\n30 | (blank) | Professional Elective II\n31 | (blank) | Professional Elective III\n32 | (blank) | Professional Elective IV\n33 | (blank) | Professional Elective V\n\nCS8592 OOAD Lesson Plan: https://www.msajce-edu.in/academics/cse/lessonplan/CS8592OOADLP.pdf\nCS8651 Internet Programming Lesson Plan: https://www.msajce-edu.in/academics/cse/lessonplan/CS8651IPLP.pdf\n\nPlacement Details — Off Campus Placed Students in Various Companies:\nAccenture | AT&T | Byjus | Capgemini | Carbonite | CISCO | CTS (Cognizant) | Deloitte Consulting | EMIS Health | Futurefocus | HCL | HP | HTC | IBM | Infosys | Infoview | LT Infotech | Newegesoftware | Oracle | Saudi Airlines | Solverminds | Sutherland | TCS | Tech Mahindra | Wells Fargo | Wipro | Wolters Kluwer ELM\n\nPlacement page: https://www.msajce-edu.in/placement.php\nInternship Report Format 2025: https://online.fliphtml5.com/euxeg/oqsi/#p=1\nInternship Report Download: https://www.msajce-edu.in/uploads/placement/internship/Intership%20Report%202025.pdf",
+      "tables": [
+        {
+          "table_title": "2017 Regulation Course Materials — B.E. CSE Cyber Security (Selected Subjects)",
+          "headers": [
+            "Sl.No.",
+            "Subject Code",
+            "Subject Name"
+          ],
+          "rows": [
+            [
+              "1",
+              "GE8151",
+              "Problem Solving and Python Programming"
+            ],
+            [
+              "2",
+              "CS8251",
+              "Programming in C"
+            ],
+            [
+              "3",
+              "MA8351",
+              "Discrete Mathematics"
+            ],
+            [
+              "4",
+              "CS8351",
+              "Digital Principles and System Design"
+            ],
+            [
+              "5",
+              "CS8391",
+              "Data Structures"
+            ],
+            [
+              "6",
+              "CS8392",
+              "Object Oriented Programming"
+            ],
+            [
+              "7",
+              "EC8395",
+              "Communication Engineering"
+            ],
+            [
+              "8",
+              "MA8402",
+              "Probability and Queueing Theory"
+            ],
+            [
+              "9",
+              "CS8491",
+              "Computer Architecture"
+            ],
+            [
+              "10",
+              "CS8492",
+              "Database Management Systems"
+            ],
+            [
+              "11",
+              "CS8451",
+              "Design and Analysis of Algorithms"
+            ],
+            [
+              "12",
+              "CS8493",
+              "Operating Systems"
+            ],
+            [
+              "13",
+              "CS8494",
+              "Software Engineering"
+            ],
+            [
+              "14",
+              "MA8551",
+              "Algebra and Number Theory"
+            ],
+            [
+              "15",
+              "CS8591",
+              "Computer Networks"
+            ],
+            [
+              "16",
+              "EC8691",
+              "Microprocessors and Microcontrollers"
+            ],
+            [
+              "17",
+              "CS8501",
+              "Theory of Computation"
+            ],
+            [
+              "18",
+              "CS8592",
+              "Object Oriented Analysis and Design"
+            ],
+            [
+              "20",
+              "CS8651",
+              "Internet Programming"
+            ],
+            [
+              "21",
+              "CS8691",
+              "Artificial Intelligence"
+            ],
+            [
+              "22",
+              "CS8601",
+              "Mobile Computing"
+            ],
+            [
+              "23",
+              "CS8602",
+              "Compiler Design"
+            ],
+            [
+              "24",
+              "CS8603",
+              "Distributed Systems"
+            ],
+            [
+              "26",
+              "MG8591",
+              "Principles of Management"
+            ],
+            [
+              "27",
+              "CS8792",
+              "Cryptography and Network Security"
+            ],
+            [
+              "28",
+              "CS8791",
+              "Cloud Computing"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What subjects are offered in Cyber Security programme at MSAJCE?",
+        "Is Cryptography taught in the Cyber Security programme at MSAJCE?",
+        "What is the subject code for Cloud Computing in CSCS at MSAJCE?",
+        "Does the Cyber Security programme include Artificial Intelligence?",
+        "Which companies have recruited from MSAJCE Cyber Security?",
+        "Has TCS recruited from MSAJCE CSCS department?",
+        "Where can I access course materials for Cyber Security at MSAJCE?",
+        "What is the student portal link for MSAJCE course materials?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": [
+          "33 subjects listed",
+          "27+ companies recruiting"
+        ]
+      },
+      "keywords": [
+        "2017 regulation cyber security",
+        "CS8792 Cryptography Network Security",
+        "CS8791 Cloud Computing",
+        "CS8691 Artificial Intelligence",
+        "CS8591 Computer Networks",
+        "CS8492 DBMS",
+        "CS8451 Algorithms",
+        "cyber security course materials",
+        "student portal MSAJCE",
+        "CSCS placement",
+        "TCS",
+        "Infosys",
+        "Wipro",
+        "HCL",
+        "IBM",
+        "Accenture",
+        "placement cyber security",
+        "internship report 2025"
+      ],
+      "overlap_text": "Cyber Security Faculty: Dr. NAGASUBRAMANIAN R — Head PG; Dr. SUBRAMANIAN P — Head UG (Wireless Sensor Networking); Dr. PREMALATHA G — Associate Professor (Image Processing ML); Mrs. SARANYA V — IOT Cloud Computing; Mr. RAJAKUMAR B — IOT AI NLP Image Processing; Mr. RAJASEKAR R — IOT Network Security. 6 labs including C Programming, Internet Programming, OS, OOAD, Web Technology, Networks Lab.",
+      "token_count": 500,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_cyber.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Computer Science & Engineering - Cyber Security — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": "33 subjects listed, 27+ companies recruiting"
+    },
+    {
+      "chunk_id": "msajce_cyber_chunk_11",
+      "section": "Contact Information and Important Links",
+      "source_url": "https://www.msajce-edu.in/cyber.php",
+      "context": "Complete contact details, important links and quick reference for student inquiries related to the CSE Cyber Security department at MSAJCE.",
+      "text": "MSAJCE — Mohamed Sathak A.J. College of Engineering\nDepartment of Computer Science & Engineering — Cyber Security (CSCS)\n\nAddress: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103\nPhone: +91 99400 04500\nEmail: msajce.office@gmail.com\nGrievance Email: grievance@msajce-edu.in\nWebsite: www.msajce-edu.in\n\nImportant Links:\n  Online Application Form: https://enrollonline.co.in/Registration/Apply/MSAJCE\n  Online Fee Payment: https://www.feepayr.com/\n  Students Corner: https://www.msajce-edu.in/studentscorner.php\n  College Management System: https://cims.mastersofterp.in/\n  Academic Calendar: https://www.msajce-edu.in/AC.php\n  Curriculum and Syllabus: https://www.msajce-edu.in/curriculm.php\n  Departments: https://www.msajce-edu.in/departments.php\n  NAAC: https://www.msajce-edu.in/naac.php\n  IQAC: https://www.msajce-edu.in/iqac.php\n  NIRF: https://www.msajce-edu.in/nirf.php\n  Mandatory Disclosure: https://www.msajce-edu.in/mandatorydisclosure.php\n  Grievance and Redressal Committee: https://www.msajce-edu.in/grievanceredressalcommittee.php\n  Anti-Ragging Committee: https://www.msajce-edu.in/Anti-Ragging.php\n  AICTE Approval: https://www.msajce-edu.in/uploads/AICTE-APPROVAL.pdf\n  Anna University Approval: https://www.msajce-edu.in/uploads/AnnaUnivApproval.pdf\n  2021 Regulation Syllabus (CSCS): https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf\n  ESE Results: https://results.msajce-edu.in/\n  Placement: https://www.msajce-edu.in/placement.php\n  Annual Report 2023-2024: https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf\n  AICTE Scholarship Schemes: https://www.aicte.gov.in/schemes/students-development-schemes\n  Admission 2026-2027 Flyer: https://www.msajce-edu.in/uploads/Admission24-25Flyer.pdf\n  ESE Timetable June 2025: https://www.msajce-edu.in/ESETT-June25.php\n  Internship Report Format 2025: https://online.fliphtml5.com/euxeg/oqsi/#p=1\n  College Video: https://youtu.be/aNVaQWh1Pp4",
+      "tables": [],
+      "possible_questions": [
+        "What is the phone number of MSAJCE?",
+        "What is the address of MSAJCE?",
+        "What is the email of MSAJCE?",
+        "How do I apply online for Cyber Security at MSAJCE?",
+        "Where can I pay fees online at MSAJCE?",
+        "How do I contact the grievance cell at MSAJCE?",
+        "Where can I find the ESE results for MSAJCE?",
+        "Where is the MSAJCE Cyber Security department located?",
+        "What is the link for admission to CSCS at MSAJCE for 2026-2027?",
+        "Where can I download the AICTE approval for MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com",
+          "grievance@msajce-edu.in"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": []
+      },
+      "keywords": [
+        "MSAJCE contact",
+        "MSAJCE phone",
+        "MSAJCE address",
+        "MSAJCE email",
+        "cyber security admission 2026-2027",
+        "online application CSCS",
+        "fee payment MSAJCE",
+        "grievance cell",
+        "NAAC",
+        "IQAC",
+        "NIRF",
+        "ESE results",
+        "academic calendar",
+        "AICTE approval",
+        "anti-ragging MSAJCE",
+        "mandatory disclosure"
+      ],
+      "overlap_text": "2017 Regulation Cyber Security courses include CS8792 Cryptography and Network Security, CS8791 Cloud Computing, CS8691 Artificial Intelligence, CS8591 Computer Networks, CS8451 Design Analysis Algorithms, CS8492 DBMS. Placement companies: Accenture, AT&T, Capgemini, CISCO, CTS, Deloitte, HCL, IBM, Infosys, Oracle, TCS, Tech Mahindra, Wells Fargo, Wipro. Student portal: http://msajce-edu.in/msajce-student-portal/index.php",
+      "token_count": 390,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "critical",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_cyber.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Computer Science & Engineering - Cyber Security — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com, grievance@msajce-edu.in",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": ""
+    }
+  ]
+}

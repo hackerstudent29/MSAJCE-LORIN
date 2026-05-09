@@ -1,0 +1,149 @@
+{
+  "source": "msajce_cyber.md",
+  "sections": [
+    {
+      "header": "Introduction",
+      "level": 1,
+      "text": "The following data is from the introduction table: Source URL is located at https://www.msjace-edu.in/cyber.php with 16 sections covered. Data was scraped on 2026-04-28, consisting of 11 chunks, with a token target of 500, an overlap of 100, and using the text-embedding-3-small model.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "1. Department Overview, Key Features, Programme Details and Vision & Mission",
+      "level": 2,
+      "text": "The following data is from the top recruiters table: Government & Defense Agencies such as DRDO and CERT-IN recruit. IT and Cyber Security Firms such as TCS, Infosys, Accenture, Palo Alto Networks, and IBM Security recruit. Banks and Financial Institutions recruit. Healthcare and Insurance Companies recruit. E-commerce and Cloud Service Providers recruit.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "B.E. CSE Cyber Security Programme Summary",
+      "level": 3,
+      "text": "The following data is from the programme summary table: The programme is B.E. Computer Science & Engineering — Cyber Security (CSCS). The duration is 4 years (Regular) / 3 years (Lateral Entry). The number of Semesters is 8 (Regular) / 6 (Lateral Entry). The total seats are 30. The government quota is 15. The management quota is 15. The eligibility is 10+2 with Physics, Chemistry, Mathematics pass. The syllabus is 2021 Regulation. Higher Studies options are M.E. / M.Tech. / M.B.A.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "This chunk answers what B.E. CSE Cyber Security is at MSJCE, how many seats are available in Cyber Security at MSJCE, and what the duration of B.E. Cyber Security is at MSJCE. It also answers how many government quota seats are in CSE Cyber Security at MSJCE, what the eligibility is for B.E. Cyber Security at MSJCE, and what the vision of the Cyber Security department is at MSJCE. It further answers which top companies recruit Cyber Security graduates from MSJCE, why one should choose B.E. CSE Cyber Security at MSJCE, whether lateral entry is available for Cyber Security at MSJCE, and what higher studies one can pursue after B.E. Cyber Security from MSJCE.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "2. OBE — PEOs, PSOs, and Programme Outcomes (PO1–PO12)",
+      "level": 2,
+      "text": "The following data is from the Programme Educational Objectives (PEOs) table: Graduates will excel as ethical and responsible cybersecurity professionals in globally competitive environments. Graduates will contribute to society through innovation and research in cybersecurity and allied domains. Graduates will demonstrate lifelong learning through continuous professional development.\n\nThe following data is from the Programme Specific Outcomes (PSOs) table: Graduates will be able to analyze, design, and implement secure computing systems. Graduates will be capable of applying security principles and practices to solve real-world problems in cybersecurity. Graduates will possess the skills to investigate and respond to cyber threats and vulnerabilities.\n\nThe following data is from the Programme Outcomes (POs) table: Graduates will be able to apply knowledge of mathematics, science, and engineering fundamentals to solve complex cybersecurity problems. Graduates will be able to identify, formulate, and analyze complex cybersecurity problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences. Graduates will be able to design solutions for complex cybersecurity problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations. Graduates will be able to use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions. Graduates will be able to create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex cybersecurity activities with an understanding of the limitations. Graduates will be able to apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal, and cultural issues and the consequent responsibilities relevant to the professional engineering practice. Graduates will be able to understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development. Graduates will be able to apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice. Graduates will be able to function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings. Graduates will be able to communicate effectively on complex engineering activities with the engineering community and with society at large, such as being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions. Graduates will be able to demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments. Graduates will be able to recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Programme Educational Objectives (PEOs)",
+      "level": 3,
+      "text": "Graduates will be prepared for analysing, designing, developing and testing the software solutions and products with creativity and sustainability. Graduates will be skilled in the use of modern tools for critical problem solving and analyzing industrial and societal requirements. Graduates will be prepared with managerial and leadership skills for career and starting up own firms.\nEngineering Graduates will be able to develop creative solutions by adapting emerging technologies / tools for real time applications of Industry. Engineering Graduates will be able to apply the acquired knowledge to develop software solutions and innovative mobile apps for various automation applications.\nApply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems. Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences. Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations. Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions. Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations. Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice. Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development. Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice. Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings. Communicate effectively on complex engineering activities with the engineering community and with society at large. Demonstrate knowledge and understanding of the engineering and management principles and apply these to one's own work. Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "This chunk answers questions about the PEOs for Cyber Security at MSAJCE, the programme educational objectives of CSCS at MSAJCE, the PSO for Cyber Security at MSAJCE, the programme outcomes for B.E. Cyber Security at MSAJCE, the number of programme outcomes defined for Cyber Security at MSAJCE, what OBE is in CSCS at MSAJCE, and what skills Cyber Security graduates will have from MSAJCE.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "--- 3. Employment Growth in Cyber Security in India (2025–2030) — Key Drivers",
+      "level": 2,
+      "text": "The following data is from the table about employment growth in Cyber Security in India (2025–2030) — Key Drivers: Zoho recruited 450 students with a package of 6 LPA. TCS recruited 320 students with a package of 4.5 LPA. Wipro recruited 280 students with a package of 3.8 LPA. HCL recruited 200 students with a package of 4 LPA. Infosys recruited 180 students with a package of 4.2 LPA.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "1. Cyber Security Analyst",
+      "level": 3,
+      "text": "Responsibilities: Monitor network traffic, identify security breaches, implement protective measures. First line of defense in identifying threats and responding to incidents.\n\nSkills Required: Network security, incident response, SIEM tools, firewall management, penetration testing.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "2. Security Architect",
+      "level": 3,
+      "text": "Responsibilities: Design and implement complex security infrastructures to protect IT systems, networks, and data. Set up secure frameworks for cloud, IoT, and enterprise networks.\n\nSkills Required: Network architecture, security frameworks, risk management, cloud security (AWS, Azure), firewalls, encryption technologies.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "3. Penetration Tester (Ethical Hacker)",
+      "level": 3,
+      "text": "Responsibilities: Conduct penetration tests to identify and exploit vulnerabilities. Simulate cyber attacks to help organizations find weaknesses before malicious hackers can exploit them.\n\nSkills Required: Kali Linux, Metasploit, Wireshark, nmap, vulnerability scanning tools, ethical hacking certifications (CEH, OSCP).",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "4. Security Operations Center (SOC) Analyst",
+      "level": 3,
+      "text": "Responsibilities: Monitor organization's network for potential security threats, respond to security incidents in real-time to ensure minimal downtime and risk.\n\nSkills Required: Threat analysis, log analysis, incident detection and response, SIEM systems (Splunk, IBM QRadar).",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "5. Cloud Security Specialist",
+      "level": 3,
+      "text": "Responsibilities: Ensure security of cloud infrastructures and applications. Prevent unauthorized access, data breaches, and ensure compliance with cloud-specific security protocols.\n\nSkills Required: AWS, Azure, Google Cloud, cloud security best practices, identity and access management (IAM), encryption.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "6. Cyber Security Consultant",
+      "level": 3,
+      "text": "Responsibilities: Provide expertise on improving organizations' cyber security posture. Assess vulnerabilities, provide strategic recommendations, help implement security solutions.\n\nSkills Required: Risk assessment, security audits, compliance frameworks (ISO 27001, NIST), penetration testing, security policy development.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "7. Incident Responder",
+      "level": 3,
+      "text": "Responsibilities: Investigate and respond to cybersecurity incidents including data breaches and malware attacks. Mitigate damage and prevent further issues.\n\nSkills Required: Incident handling, forensics, malware analysis, root cause analysis, digital forensics tools.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "8. Cyber Security Engineer",
+      "level": 3,
+      "text": "Responsibilities: Build and maintain security systems, firewalls, and encryption technologies to protect organizational assets. Proactively design systems to prevent breaches.\n\nSkills Required: Firewall configuration, endpoint protection, network security protocols, security software development.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "9. Chief Information Security Officer (CISO)",
+      "level": 3,
+      "text": "Responsibilities: Oversee an organization's entire cybersecurity strategy including policies, systems, and incident response. Ensure compliance with relevant regulations and industry standards.\n\nSkills Required: Leadership skills, risk management, compliance knowledge (GDPR, PCI DSS), security program management, business continuity planning.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "10. IoT Security Expert",
+      "level": 3,
+      "text": "Responsibilities: Protect connected devices in IoT ecosystems from cyber threats. Ensure IoT devices are secure, encrypted, and do not pose risks to organizational infrastructure.\n\nSkills Required: IoT protocols, embedded security, network security, data encryption, IoT device security.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    }
+  ]
+}

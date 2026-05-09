@@ -1,0 +1,125 @@
+{
+  "source": "msajce_technologycentre.md",
+  "sections": [
+    {
+      "header": "Technology Centre — MSAJCE",
+      "level": 3,
+      "text": "In pursuit of MSAJCE's vision and mission to make students deployable and equip them with upcoming emerging industrial demands, various Technology Centres were established in the year 2019-2020 to educate, train and up-skill students in niche technologies. The courses and training are designed based on the recommendations of AICTE and India Skill Report 2020. The Technology Centers, established with state-of-art facilities, provide an ambient learning environment for research and innovation. Each centre is collaborated with industry/government organizations to provide certifications, onsite/offsite projects and internships.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Syllabus Modules",
+      "level": 3,
+      "text": "1. 3D Printing (Additive Manufacturing) — 6 Hours: Introduction, Process, Classifications, Advantages, Additive vs Conventional Manufacturing, Applications.\n2. CAD for Additive Manufacturing — 4 Hours: CAD Data formats, Data translation, Data loss, STL format.\n3. Additive Manufacturing Techniques — 10 Hours: Stereo-Lithography, LOM, FDM, SLS, SLM, Binder Jet technology. Process parameters, Process Selection. Application Domains: Aerospace, Electronics, Healthcare, Defence, Automotive, Construction, Food Processing, Machine Tools.\n4. Materials — 4 Hours: Polymers, Metals, Non-Metals, Ceramics. Various forms of raw material (Liquid, Solid, Wire, Powder). Powder Preparation and their desired properties. Support Materials.\n\n5. Additive Manufacturing Equipment — 4 Hours: Process Equipment Design and parameters, Governing Bonding Mechanism, Common faults and troubleshooting, Process Design.\n6. Post Processing — 1 Hour: Support Removal, Sanding, Acetone treatment, Polishing.\n7. Product Quality — 1 Hour: Inspection and testing, Defects and their causes.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Syllabus",
+      "level": 3,
+      "text": "1. Introduction to IoT (8 Hours): Architectural Overview – Design principles – IoT Applications – Sensing – Actuation – Basics of Networking – M2M and IoT Technology Fundamentals – Devices and gateways – Data management – Business processes in IoT – Everything as a Service (XaaS) – Role of Cloud in IoT – Security aspects in IoT.\n2. Elements of IoT (9 Hours): Hardware Components (Arduino, Raspberry Pi, Communication, Sensing, Actuation, I/O Interfaces) – Software Components – Programming APIs using Python/Node.js/Arduino – Communication Protocols: MQTT, ZigBee, Bluetooth, CoAP, UDP, TCP.\n3. IoT Application Development (18 Hours): Solution framework for IoT applications – Implementation of Device integration – Data acquisition and integration – Device data storage (unstructured data on cloud/local server) – Authentication and authorization of devices.\n4. IoT Case Studies (10 Hours): Mini projects in Industrial automation, Transportation, Agriculture, Healthcare, Home Automation.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Gaming & AR/VR Centre",
+      "level": 3,
+      "text": "Students will be able to learn technical and design aspects of AR and VR, create 3D design, Visualization and Animation for various objects and scenes, apply virtual and augmented reality methods, tools and equipment in industry, education and social life, and gain an overview of the concepts and working of AR-VR techniques. Students will be able to build basic applications considering technical and design aspects of AR and VR, develop PC/Mobile-based VR applications, develop 3D Visualization and Visualization projects, and design applications in Gaming, Architecture, Manufacturing, Retail, Healthcare, etc.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "Syllabus Modules",
+      "level": 3,
+      "text": "1. Introduction to Virtual Reality (6 Hours): Fundamental Concept and Components of VR – Primary Features and Present Development – Computer graphics – Real time computer graphics – Flight Simulation – Benefits of VR – Historical development – 3D Computer Graphics: Virtual world space, positioning the virtual observer, perspective projection, human vision, stereo perspective projection, 3D clipping, Colour theory, Simple 3D modelling, Illumination models, Reflection models, Shading algorithms, Radiosity, Hidden Surface Removal, Realism-Stereographic image.\n2. Interactive Techniques in VR (6 Hours): From 2D to 3D – 3D space curves – 3D boundary representation – Geometric Transformations – Frames of reference – Modeling transformations – Instances – Picking – Flying – Scaling the VE – Collision detection – Generic VR system: Virtual environment, Computer environment, VR technology, Model of interaction, VR Systems.\n3. Visual Computation in VR (6 Hours): Animating the Virtual Environment – Dynamics of numbers – Linear and Nonlinear interpolation – Animation of objects – Shape and object inbetweening – Free-form deformation – Particle system – Physical Simulation: Objects in gravitational field, Rotating wheels, Elastic collisions, Projectiles, Simple pendulum, Springs, Flight dynamics.\n4. Augmented and Mixed Reality (6 Hours): Taxonomy, technology and features of AR – Difference between AR and VR – Challenges with AR – AR systems and functionality – AR methods – Visualization techniques – Wireless displays in educational AR – Mobile projection interfaces – Marker-less tracking – Enhancing interactivity in AR – Evaluating AR systems.\n5. Multiple Models of Input and Output Interface in VR (6 Hours): Human factors – VR Hardware: Head-coupled displays, Acoustic hardware, Integrated VR systems – VR Software: Modeling virtual world, Physical simulation, VR toolkits, Introduction to VRML – Input: Tracker, Sensor, Digital Glove, Movement Capture, Video-based Input, 3D Menus, 3D Scanner – Output: Visual/Auditory/Haptic Devices.\n6. Application of VR in Digital Entertainment (6 Hours): VR in Film & TV Production – VR in Physical Exercises and Games – Demonstration of Digital Entertainment by VR.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Practicals (9 Hours)",
+      "level": 3,
+      "text": "The practicals section includes architecture design using VR, CRO experiments using VR, qualitative analysis in Chemistry using VR, engine assembly/disassembly using VR, human anatomy exploration, simulation of blood circulation, simulation of Flight/Vehicle/Space Station, building Electronic circuits using VR, and developing Virtual Classroom with multiplayer. Resources are from AICTE and IIT Varanasi, India.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": true
+    },
+    {
+      "header": "Bentley's Building Information Modelling (BIM) Centre",
+      "level": 3,
+      "text": "The objectives are to gain basic theoretical knowledge and practical skills of BIM techniques, interpret 2D & 3D drawings and structural analysis, understand regulations as per National Building Code, and prepare students for actual work situations through practical training. The outcomes are to prepare a component to meet desired needs within realistic constraints (economic, environmental, social, ethical, sustainability), create 2D drawings of building, industrial structures and various framed structures using AUTOCAD software, create and simulate a virtual building model using REVIT ARCHITECTURE software with intelligent building elements, and design and analyse different types of structures (liquid retaining structures, bridge components, retaining wall, industrial and commercial structures) in 3D form using STAAD.Pro software to predict performances before construction. Software Used: AUTOCAD, REVIT ARCHITECTURE, STAAD.Pro",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "Centre for CAE — Supported by Altair & CATIA",
+      "level": 3,
+      "text": "Industry Partner: Altair\n\nObjectives include understanding and interpreting drawings of machine components, preparing assembly drawings using standard CAD packages, gaining practical experience in handling 2D drafting and 3D modeling software systems and comprehending, designing, analyzing, and suggesting novel materials, products and solutions for contemporary manufacturing issues.\n\nOutcomes include developing CAD models for Hypermesh, importing and exporting CAD data and generate .hm files, attaining accurate and high quality meshes in 1D, 2D and 3D elements, carrying out Linear Static Analysis and carrying out Dynamic Analysis.\n\nSoftware Used: Altair HyperMesh, CATIA",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "Communication Language Learning Centre",
+      "level": 3,
+      "text": "The objective is to acquire knowledge in foreign languages and become proficient in communication skills — Listening, Speaking, Reading and Writing (LSRW) — to achieve employability standard at international level. Students will be able to become expert bilinguals to learn work ethic and business etiquette in career opportunities, gain deeper knowledge and higher understanding of foreign languages, boost professional value in Business, Social Science, Humanities, Technology and Science, get exposure to culture ingrained in the people of various countries, improve higher thinking skills, new learning strategies, and exposure to advanced technologies, and grow as leaders in many leading sectors to drive for innovation. The focus is on Language Skills (LSRW — Listening, Speaking, Reading, Writing), Foreign Language Proficiency, International Employability, and Business Communication.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "**About MIT Square Services Private Limited**",
+      "level": 3,
+      "text": "MIT Square is an ISO Certified Company headquartered in Bangalore (Silicon Valley of India) and registered office in London (Silicon Valley of UK). It is a registered MSME recognised by the Ministry of MSME, Govt. of India and recognised by the Ministry of Corporate Affairs, Govt. of UK. Network offices in USA, Australia and Singapore. MIT stands for 'Management and Innovation for Transformation'. Square represents 'People + Process + Product + Profit' — tagline: 'We transform your life'. Core technical team from IITs and Universities in London.\n\nMIT Square is a globally trusted brand in EduTech, HealthTech, AgroTech and GreenTech supporting: incubation/start-up, business operations, talent enablement (training & learning), talent acquisition, innovations, patent filing, product design & development, manufacturing and supply of technological and non-technological products.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "**About RAISE**",
+      "level": 3,
+      "text": "RAISE stands for Research, Arts & Applications, Innovation & Intelligence, Science & Technology, and Entrepreneurship. The CoE for IoT at MSAJCE campus was established in June 2022 through MoU with MIT Square London. The vision is to enable the institution as an innovation hub in emerging technologies.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "**Key Initiatives — i-10 Model**",
+      "level": 3,
+      "text": "The key initiatives of the i-10 Model include Innovation & Research, Ideas to Prototypes & Products, Inductive Programs, Internships & Talent Transformation, International Publications, I-Centric Events, IP Rights & Protection, Intrapreneurship & Entrepreneurship, Institution & Industry Connects, and Incubation, Investments & Fundings.\n\nSpecific initiatives encompass Abroad Studies, Abroad Traineeships, Abroad Internships, Abroad Placements, Abroad Mentorships, Abroad Fellowships, Abroad Inventorships, Startup Founderships, Disruptive Technologies, Product Development, and CSR Activities.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": true
+    },
+    {
+      "header": "**Detailed Objectives**",
+      "level": 3,
+      "text": "The objectives are to create innovative applications and domain capability for Smart City, Smart Health, Smart Manufacturing, and Smart Agriculture; to build industry capable talent, a startup community, and an entrepreneurial ecosystem; to provide an ecosystem for innovation and entrepreneurship; to energize a research mind-set and reduce costs in R&D with neutral, interoperable, multi-technology stack laboratory facilities; to reduce import dependency on technology components and promote indigenization; to position the institution as a provider of end-to-end solutions in education and technology; to provide training and learning, including internships, both online and offline; to provide an environment for product creation, testing, validation, and incubation; and to provide learning in breakthrough technologies, specifically AR/VR, Data Analytics, and AI.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "RAISE Centre — Benefits for Students and Nodal Centre Details",
+      "level": 3,
+      "text": "The RAISE CoE provides a great learning and leadership opportunity, allowing students to become coding gurus. It aims to spread Techno-Entrepreneurship Culture within the Campus through events, workshops and hackathons, while also providing Internship Opportunities. The CoE offers the opportunity to work in startups or prestigious companies, with the possibility to study abroad. Students also have the opportunity to intern or work full-time abroad, and can receive a Personalised LinkedIn recommendation, along with a Letter of Recommendation after successful Internship/techno programs completion.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "MSAJCE as RAISE Nodal Centre — Benefits",
+      "level": 3,
+      "text": "The department has a fully Techno-Entrepreneurship Innovation lab with hardware and software tools with licenses for development and research projects. The department also has recognition as one of the top National Academies for the innovation lab. They provide essential curriculum and resource kits for comprehensive training and industry readiness, alongside scalable infrastructure to extend training to corporates and professionals from other industries. The department provides up to 10 years assured training support from MIT Square to empower faculty, research scholars and students and, based on NEP 2020, support is provided in regional languages as well.\n\nThe government initiatives supported are Digital India, Make in India, Startup India, Standup India, Skill India and Self-reliant India (Atmanirbhar Bharat).\n\nThe following data is from the MSAJCE Contact Information table: Mohamed Sathak A.J. College of Engineering (MSAJCE) is the institution, located at 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103. The phone number is +91 99400 04500, and the email is msajce.office@gmail.com. The grievance email is grievance@msajce-edu.in and the website is www.msajce-edu.in. The institution is affiliated to Anna University Chennai, approved by AICTE New Delhi, and operates under the aegis of Mohamed Sathak Trust, approved by the Government of Tamil Nadu.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": true
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Institutional Forensic Facts — Hostel, Scholarships, and Discipline",
+    "source_url": "Institutional Handbooks and Internal Policy",
+    "scraped_date": "2026-05-02",
+    "accreditation": {
+      "naac_grade": "A+",
+      "valid_until": "January 30, 2028",
+      "nba_departments": [
+        "CSE",
+        "ECE",
+        "EEE",
+        "Mechanical Engineering"
+      ]
+    },
+    "version": "v2",
+    "source_file": "institutional_forensic_facts.json"
+  },
+  "chunks": [
+    {
+      "chunk_id": "forensic_hostel_01",
+      "section": "Girls Hostel Outing and Security Rules",
+      "text": "Girls Hostel Outing Rules: Hostellers are generally not permitted to leave the campus except on holidays and require prior written permission from their Head of Department (HOD) and the hostel warden. For outstation travel or going home, written permission from the warden or superintendent is mandatory. Parents must provide a list of authorized visitors or local guardians; outsiders and friends are strictly prohibited from entering rooms. Return times are strictly enforced. Location: Sholinganallur (5 km from campus).",
+      "keywords": [
+        "hostel",
+        "outing",
+        "rules",
+        "permission",
+        "warden",
+        "HOD",
+        "visitors"
+      ],
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "institutional_forensic_facts.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "context": "",
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Institutional Forensic Facts — Hostel, Scholarships, and Discipline",
+      "entities": {}
+    },
+    {
+      "chunk_id": "forensic_campus_life_01",
+      "section": "Events, Symposiums and Student Leadership",
+      "text": "Major Events: 'Sathak Thiruvizha' is the annual flagship cultural festival. Technical Symposiums include 'HABIBI', 'Ciphera' (Capture the Flag), and 'SATHAK-A-THON'. Student Council: Comprises President, Secretary, and Department Coordinators. For current office bearer names, students should contact the Head of Student Affairs office.",
+      "keywords": [
+        "Sathak Thiruvizha",
+        "HABIBI",
+        "Ciphera",
+        "SATHAK-A-THON",
+        "student council",
+        "symposium"
+      ],
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "institutional_forensic_facts.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "context": "",
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Institutional Forensic Facts — Hostel, Scholarships, and Discipline",
+      "entities": {}
+    },
+    {
+      "chunk_id": "forensic_transport_01",
+      "section": "College and Public Transport Routes",
+      "text": "Transport: Public bus route 105 connects Tambaram West to Siruseri IT Park. OMR routes 102, 570, and 221 stop at SIPCOT. The college private fleet covers Chengalpattu, Kanchipuram, and Thiruvallur districts. Transport helpline: +91 94430 10256.",
+      "keywords": [
+        "bus",
+        "transport",
+        "Tambaram",
+        "105",
+        "570",
+        "102",
+        "route"
+      ],
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "institutional_forensic_facts.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "context": "",
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Institutional Forensic Facts — Hostel, Scholarships, and Discipline",
+      "entities": {}
+    },
+    {
+      "chunk_id": "forensic_scholarship_01",
+      "section": "Scholarship and Financial Aid Details",
+      "text": "MSAJCE Merit Scholarships: Students with a cut-off of 180+ out of 200 are eligible for merit-based tuition waivers. Female students receive a special 10% discount on tuition fees. Government schemes supported include: AICTE Pragati (for girls), AICTE Saksham (for specially-abled), and Merit-cum-means Minority Community scholarships.",
+      "keywords": [
+        "scholarship",
+        "merit",
+        "female discount",
+        "Pragati",
+        "Saksham",
+        "cutoff"
+      ],
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "institutional_forensic_facts.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "context": "",
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Institutional Forensic Facts — Hostel, Scholarships, and Discipline",
+      "entities": {}
+    },
+    {
+      "chunk_id": "forensic_discipline_01",
+      "section": "Anti-Ragging and Lateral Entry",
+      "text": "Anti-Ragging: Headed by the Principal with dedicated squads. Zero tolerance policy—punishments include FIR filing, hostel expulsion, and admission cancellation. Lateral Entry: Admissions conducted via TN-LEA counselling. Candidates must hold a Diploma in Engineering/Technology or a B.Sc. with Mathematics. IMPORTANT: Lateral Entry is strictly for DIRECT SECOND YEAR only. There is NO lateral entry option for the third year.",
+      "keywords": [
+        "anti-ragging",
+        "principal",
+        "lateral entry",
+        "TN-LEA",
+        "diploma",
+        "second year",
+        "no third year"
+      ],
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "institutional_forensic_facts.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "context": "",
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Institutional Forensic Facts — Hostel, Scholarships, and Discipline",
+      "entities": {}
+    },
+    {
+      "chunk_id": "forensic_library_01",
+      "section": "Library Working Hours for Hostellers",
+      "text": "Library Working Hours: The College Main Library is kept open until 7:00 PM on all working days (Monday to Saturday) specifically for the benefit of students staying in the hostel. Sunday hours are from 10:00 AM to 4:00 PM.",
+      "keywords": [
+        "library working hours",
+        "hostel",
+        "hostellers",
+        "7:00 PM",
+        "7 PM",
+        "Sundays"
+      ],
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "institutional_forensic_facts.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "context": "",
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Institutional Forensic Facts — Hostel, Scholarships, and Discipline",
+      "entities": {}
+    },
+    {
+      "chunk_id": "forensic_labs_01",
+      "section": "Lab Facilities for AIDS and CSBS Departments",
+      "text": "Lab Facilities for AIDS and CSBS: The newly established Artificial Intelligence & Data Science (AIDS) and Computer Science and Business Systems (CSBS) departments share state-of-the-art laboratory facilities. These include the C Programming Lab, Internet Programming Lab, Operating Systems Lab, OOAD Lab, Web Technology Lab, Networks Lab, and specialized Artificial Intelligence and Data Exploration labs equipped with high-performance computing resources.",
+      "keywords": [
+        "lab facilities",
+        "AIDS",
+        "CSBS",
+        "laboratories",
+        "computer labs"
+      ],
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "institutional_forensic_facts.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "context": "",
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Institutional Forensic Facts — Hostel, Scholarships, and Discipline",
+      "entities": {}
+    }
+  ]
+}

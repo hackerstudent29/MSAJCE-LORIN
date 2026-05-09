@@ -1,0 +1,93 @@
+{
+  "source": "msajce_research.md",
+  "sections": [
+    {
+      "header": "Introduction",
+      "level": 1,
+      "text": "The following data is from the Placement statistics table: Zoho recruited 450 students with a package of 6 LPA. TCS recruited 340 students with a package of 4.5 LPA. Wipro recruited 280 students with a package of 4 LPA. HCL recruited 220 students with a package of 3.6 LPA. Infosys recruited 180 students with a package of 5 LPA.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "1. R&D Cell — Objectives",
+      "level": 2,
+      "text": "The following data is from the Key funding agencies supported table: TNSCST, MSME, IEI (I), DST, AICTE, UGC, ISRO, DRDO, CSIR, and DBT are key funding agencies supported.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "The purpose of the MSAJCE Research and Development Cell is discussed, as well as the funding agencies that MSAJCE R&D Cell works with. Support for research among students and faculty at MSAJCE is mentioned and whether MSAJCE helps students apply for research funding is addressed. The types of research activities that MSAJCE promotes and how MSAJCE promotes Institute-Industry Collaboration through R&D are also covered. Whether students at MSAJCE can apply for government research funding is clarified and the role of the R&D Cell at MSAJCE is explained.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "2. Research Advisory Committee",
+      "level": 2,
+      "text": "Lists all members of the MSAJCE Research Advisory Committee with their designations, contact numbers, and email addresses. The MSAJCE Research Advisory Committee includes Dr. B. Janarthanan, Head-Research, MSAJCE, Chennai as Convener. Dr. Srinivasan, Secretary TNSCST, Chennai, with Phone: 044-22301428 and Email: ms.tanscst@nic.in, serves as Advisor. Dr. Parthiban, Asso. Prof / Prod. NIT, Trichy, with Phone: 9443430246 and Email: parthiban@nitt.edu, is an Advisor. Dr. Somashekhar S Hiremath, Associate Professor, MSB 310, Manufacturing Engineering Section, Dept of Mechanical Engineering, IIT Madras, Chennai, also serves as Advisor, with his profile available at https://iitm.irins.org/profile/61849#personal_information_panel. Dr. Sabitha Ramakrishnan, Professor, Dept of Instrumentation MIT, Chennai, with Phone: 9789977989 and Email: sabitha.ramakrishnan@gmail.com, is an Advisor. All Ph.D qualified faculty are Members. An alternate listing includes Dr. B. Sheela Rani, Dean Research, Sathyabama University, Chennai, with Phone: 9840941389 and Email: directorresearch@sathyabama.ac.in as Advisor, replacing Dr. Somashekhar S Hiremath in that version.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": true
+    },
+    {
+      "header": "Research Advisory Committee",
+      "level": 3,
+      "text": "The following data is from the Research Advisory Committee table:\n1 Dr. B. Janarthanan, Head-Research, MSJCE, Chennai is the Convener. 2 Dr. Srinivasan, Secretary TNSCST, Chennai with phone number 044-22301428 and email ms.tanscst@nic.in is an Advisor. 3 Dr. Parthiban, Asso.Prof/Prod. NIT, Trichy with phone number 9443430246 and email parthiban@nitt.edu is an Advisor. 4 Dr. Somashekhar S Hiremath, Associate Professor, IIT Madras, Chennai with website https://iitm.irins.org/profile/61849 is an Advisor. 5 Dr. Sabitha Ramakrishnan, Professor, Dept of Instrumentation MIT, Chennai with phone number 9789977989 and email sabitha.ramakrishnan@gmail.com is an Advisor. 6 All Ph.D qualified faculty are Members.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "This chunk answers who is the convener of the MSJCE Research Advisory Committee, who are the advisors in the MSJCE Research Advisory Committee, and what is Dr. B. Janarthanan's role at MSJCE. It also answers how to contact the Research Advisory Committee at MSJCE, who from IIT Madras is an advisor to MSJCE research, who is Dr. Sabitha Ramakrishnan and what is her role at MSJCE, what is the Research Advisory Committee structure at MSJCE, and what are the contact details for TNSCST related to MSJCE research.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "3. List of Supervisors — PhD Research Supervisors",
+      "level": 2,
+      "text": "The following data is from the List of Supervisors — PhD Research Supervisors table: Dr. K.S. Srinivasan's reference number is 1440364, and their research areas are VLSI Design, Digital Signal and Image Processing. Dr. I. Manju's reference number is 3040008, and their research areas are VLSI Design, Video Processing. Dr. B. Janarthanan's reference number is 2620054, and their research areas are Machine Design, Mechanical Vibrations, Vehicle Dynamics. Dr. G. Ramesh's reference number is 4120175, and their research areas are Natural Fiber, Composite Material, Mathematical Modeling. Dr. S. Prasath's reference number is 4220015, and their research areas are Welding Technology, Materials Engineering, Manufacturing Engineering. Dr. A. Suvitha's reference number is 2070720, and their research area is Inorganic Chemistry. Dr. M. Vigneshkumar's reference number is 3910019, and their research areas are Remote Sensing, GIS, Survey & Geology, Environmental Engineering.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "List of PhD Supervisors",
+      "level": 3,
+      "text": "The following data is from the List of PhD Supervisors table: Dr. K.S. Srinivasan, with Anna University Ref. No 1440364, researches VLSI Design, Digital Signal and Image Processing. Dr. I. Manju, with Anna University Ref. No 3040008, researches VLSI Design, Video Processing. Dr. B. Janarthanan, with Anna University Ref. No 2620054, researches Machine Design, Mechanical Vibrations, Vehicle Dynamics. Dr. G. Ramesh, with Anna University Ref. No 4120175, researches Natural Fiber, Composite Material, Mathematical Modeling. Dr. S. Prasath, with Anna University Ref. No 4220015, researches Welding Technology, Materials Engineering, Manufacturing Engineering. Dr. A. Suvitha, with Anna University Ref. No 2070720, researches Inorganic Chemistry. Dr. M. Vigneshkumar, with Anna University Ref. No 3910019, researches Remote Sensing, GIS, Survey & Geology, Environmental Engineering.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "This chunk answers questions about who the PhD supervisors are at MSAJCE and which MSAJCE faculty can guide PhD research. It covers Dr. K.S. Srinivasan's research area at MSAJCE and Dr. B. Janarthanan's Anna University reference number. It asks if MSAJCE has a supervisor for VLSI research and who supervises mechanical engineering PhD at MSAJCE. It also asks what the Anna University ref no is for Dr. I. Manju and if one can do PhD in Environmental Engineering at MSAJCE. It further inquires about who the IIC President is at MSAJCE and the email of the Principal of MSAJCE.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "4. Publications — Faculty and Students (2016–2024)",
+      "level": 2,
+      "text": "MSAJCE maintains year-wise publications records for faculty and students. The following annual publication lists are available for download: Publications for 2023-2024 are available at <https://www.msajce-edu.in/images/research/Publications23-24.pdf>. Publications for 2022-2023 are available at <https://www.msajce-edu.in/images/research/Publications22-23.pdf>. Publications for 2021-2022 are available at <https://www.msajce-edu.in/images/research/Publications21-22.pdf>. Publications for 2020-2021 are available at <https://www.msajce-edu.in/images/research/Publications20-21.pdf>. Publications for 2019-2020 are available at <https://www.msajce-edu.in/images/research/Publications19-20.pdf>. Publications for 2018-2019 are available at <https://www.msajce-edu.in/images/research/Publications18-19.pdf>. Publications for 2017-2018 are available at <https://www.msajce-edu.in/images/research/Publications17-18.pdf>. Publications for 2016-2017 are available at <https://www.msajce-edu.in/images/research/Publications16-17.pdf>.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": true
+    },
+    {
+      "header": "**9. NISP Thrust Areas, KPI Monitoring and 5-Year Activity Plan**",
+      "level": 2,
+      "text": "Details the NISP strategic thrust areas, key performance indicators for monitoring innovation and entrepreneurship outcomes, and the tentative 5-year activity plan.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    }
+  ]
+}

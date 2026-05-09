@@ -1,0 +1,1353 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Electronics Engineering with Specialization in VLSI Design & Technology — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/ece-vlsi.php",
+    "sections_covered": [
+      "Department Overview and Programme Introduction",
+      "Global Semiconductor Market Context",
+      "Government Initiatives — National Semiconductor Mission",
+      "VLSI Curriculum Scope and Objectives",
+      "Career Prospects and Prominent VLSI Companies",
+      "B.Tech Programme Details — Seats, Duration, Eligibility",
+      "Vision and Mission",
+      "Programme Educational Objectives (PEOs)",
+      "Programme Specific Outcomes (PSOs)",
+      "Programme Outcomes (POs)",
+      "VLSI Employment Forecast 2025–2030",
+      "Sector-Wise Job Growth Projections",
+      "Key Skills in Demand for VLSI Design",
+      "Government and Industry Initiatives",
+      "Employment Opportunities by Role",
+      "Faculty Details",
+      "Department Labs and Facilities",
+      "Course Materials — 2021 Regulation",
+      "Placement Details"
+    ],
+    "scraped_date": "2026-04-29",
+    "total_chunks": 10,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_ece_vlsi",
+    "version": "v2",
+    "source_file": "msajce_ece_vlsi.json"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_ece_vlsi_chunk_01",
+      "section": "Department Overview — Global Semiconductor Context and Programme Introduction",
+      "source_url": "https://www.msajce-edu.in/ece-vlsi.php#tab1",
+      "context": "Overview of the ECE-VLSI department at MSAJCE, including the global semiconductor market size, India's chip import situation, government policies, and the rationale for introducing the VLSI specialisation programme.",
+      "text": "Department of Electronics Engineering with Specialization in VLSI Design & Technology — MSAJCE\n\nB.Tech in Electronics Engineering with Specialization in VLSI Design & Technology\n\nThe proliferation of digital economy and consumer electronics has increased the demand for integrated chips and sensors exponentially. Meeting this burgeoning domestic demand is very challenging. Currently, India is importing integrated chips worth billions of US dollars. Post-COVID, the global semiconductor market has grown exponentially to $590 billion in 2021 and is expected to grow to $1 Trillion by 2030. The driving force of this tremendous growth includes Artificial Intelligence (AI), Electric Vehicles (EV), 5G Networks, Internet of Things (IoT), and Health Care sectors. Realization of these technologies depends on the production of silicon chips for hardware.\n\nMany chip-making industries in R&D, design, manufacturing, and testing are being established to fill the gap in the chip supply chain. Overall semiconductor import has surpassed gold, standing second only to crude oil. India has only a single Integrated Design to Manufacturing (IDM) pilot line at Semi-Conductor Laboratory (SCL), Chandigarh, based on 180nm Node.\n\nGovt. of India (GoI) has given impetus to the Electronics System Design & Manufacturing (ESDM) policy for full flow / custom design (Front-end and Back-end) solutions. Foundries and companies are encouraged to set up chip manufacturing units under GoI's Indian Semiconductor Mission to build vibrant ecosystems of Semiconductor and display systems.\n\nIt has been estimated that total manpower requirement over the next five to seven years will be around 85,000 at levels of B.Tech, M.Tech and Ph.D in the fields of VLSI Technology, Semiconductor Manufacturing, Electronics, Electrical, Mechanical and Chemical Engineering. Government of India announced Semiconductor scheme with an outlay of Rs 76,000 Crore in December 2021 to fulfil Aatma Nirbhar Bharat and contribute significantly to the global semiconductor market.\n\nChips to Startup (C2S) programme of Ministry of Electronics and Information Technology (MeitY), Govt. of India is also actively supporting VLSI education and talent creation in India.",
+      "tables": [
+        {
+          "table_title": "Global Semiconductor Market Key Facts",
+          "headers": [
+            "Parameter",
+            "Details"
+          ],
+          "rows": [
+            [
+              "Global Market Size (2021)",
+              "$590 billion"
+            ],
+            [
+              "Expected Market Size (2030)",
+              "$1 Trillion"
+            ],
+            [
+              "India's Semiconductor Scheme Outlay (Dec 2021)",
+              "Rs 76,000 Crore"
+            ],
+            [
+              "Estimated Manpower Requirement (next 5–7 years)",
+              "85,000 engineers (B.Tech, M.Tech, Ph.D)"
+            ],
+            [
+              "India's only IDM Pilot Line",
+              "Semi-Conductor Laboratory (SCL), Chandigarh — 180nm Node"
+            ],
+            [
+              "Largest Semiconductor Fab in India (planned)",
+              "Mysuru — Investment of $3 billion"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the global semiconductor market size?",
+        "Why is India focusing on VLSI education?",
+        "What is the government scheme for semiconductor manufacturing in India?",
+        "What is the Chips to Startup programme?",
+        "What is the National Semiconductor Mission?",
+        "How many VLSI engineers are needed in India in the next 5 years?",
+        "What is the semiconductor outlay by Government of India?",
+        "Where is India's only semiconductor IDM pilot line located?",
+        "What is the ESDM policy?",
+        "Why is VLSI an important field in India?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "Semi-Conductor Laboratory (SCL), Chandigarh",
+          "Mysuru",
+          "India"
+        ],
+        "numbers": [
+          "$590 billion global semiconductor market 2021",
+          "$1 Trillion expected by 2030",
+          "Rs 76,000 Crore Government of India semiconductor scheme",
+          "85,000 manpower requirement",
+          "180nm Node SCL Chandigarh",
+          "$3 billion Mysuru fab investment"
+        ]
+      },
+      "keywords": [
+        "VLSI",
+        "semiconductor",
+        "global semiconductor market",
+        "National Semiconductor Mission",
+        "Chips to Startup",
+        "C2S",
+        "MeitY",
+        "ESDM",
+        "SCL Chandigarh",
+        "180nm",
+        "Rs 76000 crore",
+        "$590 billion",
+        "$1 trillion",
+        "85000 engineers",
+        "Aatma Nirbhar Bharat",
+        "Indian Semiconductor Mission",
+        "chip manufacturing"
+      ],
+      "overlap_text": "",
+      "token_count": 520,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_ece_vlsi.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Electronics Engineering with Specialization in VLSI Design & Technology — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "Semi-Conductor Laboratory (SCL), Chandigarh, Mysuru, India",
+      "entity_numbers": "$590 billion global semiconductor market 2021, $1 Trillion expected by 2030, Rs 76,000 Crore Government of India semiconductor scheme, 85,000 manpower requirement, 180nm Node SCL Chandigarh, $3 billion Mysuru fab investment"
+    },
+    {
+      "chunk_id": "msajce_ece_vlsi_chunk_02",
+      "section": "VLSI Curriculum Scope, Career Prospects, and Prominent Companies",
+      "source_url": "https://www.msajce-edu.in/ece-vlsi.php#tab1",
+      "context": "Describes the VLSI curriculum structure, key application areas, career prospects, salary ranges, and the list of prominent companies that hire VLSI graduates.",
+      "text": "VLSI is the process of design and manufacturing of integrated circuits (IC). The VLSI Design curriculum emphasises the key aspects of software and hardware design and development of VLSI applications such as: Device modeling, RF Circuit Design, Testing and diagnosis of VLSI Circuits, VLSI Signal Processing, Chip Packaging, System Design Verification and SOC.\n\nVLSI Design and its applications are found in areas like signal processing, image processing, networks and communication applications, space applications, and Quantum computing.\n\nThis programme aims to cater to the exponential rise in demand for semiconductor talent pool in India and across the globe. It prepares market-ready engineers in the field of semiconductor technology and electronics industries.\n\nThis course is structured in line with the AICTE model curriculum and covers: Semiconductor device fundamentals, Analog and Digital circuits, VLSI circuits and design, IC design and technology, Semiconductor equipment operation, manufacturing, assembly, testing and packaging, Microcontrollers, Embedded systems, Algorithms in Design Automation, Logic Synthesis, Testability and Design for Testability, Device and Process simulation of semiconductor devices, and Physical Verification Flows. It also includes study and usage of Electronic Design Automation (EDA) tools and programming/scripting languages for semiconductor design, synthesis, simulation, fabrication and testing.\n\nCareer Prospects — Job Roles for VLSI Graduates:\n• Design Engineer\n• Verification Engineer\n• CAD Engineer\n• Application Engineer\n• Analog Circuit Designer\n• DFT Engineer\n• FPGA Verification Engineer\n• EDA Tool Validation Engineer\n• VLSI Micro-architecture Engineer\n\nOn successful completion, graduates are recruited in: Fabless design companies, Display Fabs, Semiconductor Fabs, Fabs for Compound Semiconductors, Silicon Photonics, Sensors, Discrete Semiconductors, and Semiconductor Assembly, Testing, Marking, and Packaging (ATMP) / OSAT facilities.\n\nSalary: Starting salary in a VLSI company varies from Rs 3 lakhs to Rs 20 lakhs per annum, with an average annual salary of Rs 14 lakhs. In core multinational companies, the average annual salary for beginners varies from Rs 30 lakh to Rs 80 lakh.\n\nProminent Companies hiring VLSI Graduates:\nIntel Corporation, Global Foundries, Micron Technologies, Marvell Semiconductor, ARM, AMD, NVIDIA, Infineon Technologies, MediaTek Inc., NXP Semiconductors, TSMC, Qualcomm, Philips R&D, Samsung R&D, Siemens, IBM, Bosch, Wipro, Tata ELXSI, QUALCOMM, Dell, Apex Semiconductor, Free Scale Semiconductor, Texas Instruments, Synopsys, Cadence, Microchip.\n\nGovernment PSUs recruiting VLSI engineers: SCL, ISRO, DRDO, HAL, BEL.",
+      "tables": [
+        {
+          "table_title": "VLSI Salary Ranges",
+          "headers": [
+            "Category",
+            "Salary Range (per annum)"
+          ],
+          "rows": [
+            [
+              "Starting Salary — VLSI Companies",
+              "Rs 3 lakhs to Rs 20 lakhs"
+            ],
+            [
+              "Average Annual Salary — VLSI",
+              "Rs 14 lakhs"
+            ],
+            [
+              "Beginners — Core MNC VLSI",
+              "Rs 30 lakhs to Rs 80 lakhs"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the salary for VLSI engineers in India?",
+        "Which companies hire VLSI graduates?",
+        "What are the job roles for VLSI engineers?",
+        "Does Intel hire VLSI graduates?",
+        "Does ISRO hire VLSI engineers?",
+        "What is the average salary of a VLSI engineer in India?",
+        "What does VLSI stand for?",
+        "What is the curriculum of the VLSI programme at MSAJCE?",
+        "What are the career prospects for VLSI graduates?",
+        "Does NVIDIA hire VLSI engineers?",
+        "What is the starting salary in a VLSI company?",
+        "What government PSUs hire VLSI engineers?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "Rs 3 lakhs to Rs 20 lakhs starting salary",
+          "Rs 14 lakhs average salary",
+          "Rs 30 lakhs to Rs 80 lakhs MNC salary"
+        ]
+      },
+      "keywords": [
+        "VLSI salary",
+        "VLSI job roles",
+        "Design Engineer",
+        "Verification Engineer",
+        "DFT Engineer",
+        "FPGA",
+        "EDA tools",
+        "Intel",
+        "NVIDIA",
+        "AMD",
+        "TSMC",
+        "Cadence",
+        "Synopsys",
+        "Tata ELXSI",
+        "ISRO",
+        "DRDO",
+        "HAL",
+        "BEL",
+        "SCL",
+        "Fabless",
+        "ATMP",
+        "OSAT",
+        "Rs 14 lakhs",
+        "Rs 30 lakhs",
+        "semiconductor manufacturing",
+        "analog circuit designer"
+      ],
+      "overlap_text": "Manpower requirement over next 5–7 years estimated at 85,000 at levels of B.Tech, M.Tech and Ph.D in VLSI Technology and semiconductor fields. Government of India announced Semiconductor scheme with an outlay of Rs 76,000 Crore in December 2021. Chips to Startup (C2S) programme by MeitY actively supports VLSI talent creation.",
+      "token_count": 510,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_ece_vlsi.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Electronics Engineering with Specialization in VLSI Design & Technology — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "Rs 3 lakhs to Rs 20 lakhs starting salary, Rs 14 lakhs average salary, Rs 30 lakhs to Rs 80 lakhs MNC salary"
+    },
+    {
+      "chunk_id": "msajce_ece_vlsi_chunk_03",
+      "section": "B.Tech Programme Details, Vision, Mission, PEOs and PSOs",
+      "source_url": "https://www.msajce-edu.in/ece-vlsi.php#tab1",
+      "context": "Complete programme details including seat intake, duration, eligibility, curriculum links, vision and mission of the department, and the Programme Educational Objectives and Programme Specific Outcomes.",
+      "text": "Programme: B.Tech. — Electronics Engineering with Specialization in VLSI Design & Technology\n\nDuration: 4 years (Regular) / 3 years (Lateral Entry)\nNo. of Semesters: 8 (Regular) / 6 (Lateral Entry)\nIntake / No. of Seats: Total — 30 (Government — 15, Management — 15)\nEligibility: 10+2 system of Education. Must have secured a pass in Physics, Chemistry and Mathematics in the qualifying examination.\nCurriculum & Syllabus: 2021 Regulation — https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf\nScope for Higher Studies: M.E. / M.Tech. / M.B.A.\nOnline Admission: https://enrollonline.co.in/Registration/Apply/MSAJCE\n\nVision:\nTo be a centre of excellence for transforming students into proficient electronics engineers with specialisation in VLSI design through sustainable practices.\n\nMission:\nM1. Impart core fundamental knowledge and necessary skills through innovative teaching and learning methodology.\nM2. Inculcate critical thinking, ethics, lifelong learning and creativity needed for industry and society.\nM3. Cultivate the students with all-round competencies, for career, higher education and self-employability.\n\nProgramme Educational Objectives (PEOs):\nPEO1 | Graduates will be prepared for analysing, designing, developing and testing the software solutions and products with creativity and sustainability\nPEO2 | Graduates will be skilled in the use of modern tools for critical problem solving and analyzing industrial and societal requirements\nPEO3 | Graduates will be prepared with managerial and leadership skills for career and starting up own firms\n\nProgram Specific Outcomes (PSOs):\nPSO1 | Develop creative solutions by adapting emerging technologies / tools for real time applications of Industry\nPSO2 | Apply the acquired knowledge to develop software solutions and innovative mobile apps for various automation applications",
+      "tables": [
+        {
+          "table_title": "B.Tech ECE-VLSI Programme Summary",
+          "headers": [
+            "Parameter",
+            "Details"
+          ],
+          "rows": [
+            [
+              "Programme",
+              "B.Tech. — Electronics Engineering with Specialization in VLSI Design & Technology"
+            ],
+            [
+              "Duration",
+              "4 years (Regular) / 3 years (Lateral Entry)"
+            ],
+            [
+              "No. of Semesters",
+              "8 (Regular) / 6 (Lateral Entry)"
+            ],
+            [
+              "Total Seats",
+              "30"
+            ],
+            [
+              "Government Quota",
+              "15"
+            ],
+            [
+              "Management Quota",
+              "15"
+            ],
+            [
+              "Eligibility",
+              "10+2 with Physics, Chemistry and Mathematics"
+            ],
+            [
+              "Regulation",
+              "2021 Regulation"
+            ],
+            [
+              "Higher Studies",
+              "M.E. / M.Tech. / M.B.A."
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "How many seats are available in the VLSI programme at MSAJCE?",
+        "What is the intake for ECE VLSI at MSAJCE?",
+        "What is the duration of the VLSI programme at MSAJCE?",
+        "What is the eligibility for admission to VLSI at MSAJCE?",
+        "What is the government quota for VLSI at MSAJCE?",
+        "What is the management quota for VLSI at MSAJCE?",
+        "What is the vision of the VLSI department at MSAJCE?",
+        "What are the PEOs of the VLSI department at MSAJCE?",
+        "Can I do lateral entry to VLSI programme at MSAJCE?",
+        "Where can I find the 2021 regulation syllabus for VLSI at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "30 total seats",
+          "15 Government quota",
+          "15 Management quota",
+          "4 years duration",
+          "8 semesters"
+        ]
+      },
+      "keywords": [
+        "B.Tech VLSI",
+        "ECE VLSI",
+        "30 seats",
+        "15 government quota",
+        "15 management quota",
+        "lateral entry",
+        "2021 regulation",
+        "eligibility",
+        "PEO",
+        "PSO",
+        "vision",
+        "mission",
+        "VLSI Design Technology",
+        "MSAJCE"
+      ],
+      "overlap_text": "Prominent companies hiring VLSI graduates: Intel, Global Foundries, Micron, ARM, AMD, NVIDIA, Infineon, MediaTek, NXP, TSMC, Qualcomm, Samsung R&D, IBM, Wipro, Tata ELXSI, Texas Instruments, Synopsys, Cadence. Govt PSUs: SCL, ISRO, DRDO, HAL, BEL. Starting salary Rs 3–20 lakhs; MNC average Rs 30–80 lakhs per annum.",
+      "token_count": 470,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_ece_vlsi.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Electronics Engineering with Specialization in VLSI Design & Technology — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "30 total seats, 15 Government quota, 15 Management quota, 4 years duration, 8 semesters"
+    },
+    {
+      "chunk_id": "msajce_ece_vlsi_chunk_04",
+      "section": "Programme Outcomes (POs)",
+      "source_url": "https://www.msajce-edu.in/ece-vlsi.php#tab2",
+      "context": "The 12 Programme Outcomes (POs) for the B.Tech ECE-VLSI programme defining graduate competencies in engineering knowledge, problem solving, design, ethics, and lifelong learning.",
+      "text": "Programme Outcomes (PO) — B.Tech Electronics Engineering with Specialization in VLSI Design & Technology, MSAJCE\n\nPO1 — Engineering Knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.\nPO2 — Problem Analysis: Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.\nPO3 — Design/Development Of Solutions: Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.\nPO4 — Conduct Investigations of Complex Problems: Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.\nPO5 — Modern Tool Usage: Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations.\nPO6 — The Engineer and Society: Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.\nPO7 — Environment and Sustainability: Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.\nPO8 — Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.\nPO9 — Individual and Team Work: Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.\nPO10 — Communication: Communicate effectively on complex engineering activities with the engineering community and with society at large, such as being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.\nPO11 — Project Management and Finance: Demonstrate knowledge and understanding of the engineering and management principles and apply these to one's own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.\nPO12 — Life-long Learning: Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.",
+      "tables": [
+        {
+          "table_title": "Programme Outcomes — ECE VLSI",
+          "headers": [
+            "PO",
+            "Title",
+            "Description"
+          ],
+          "rows": [
+            [
+              "PO1",
+              "Engineering Knowledge",
+              "Apply mathematics, science, engineering fundamentals to complex problems"
+            ],
+            [
+              "PO2",
+              "Problem Analysis",
+              "Identify, formulate, and analyze complex engineering problems"
+            ],
+            [
+              "PO3",
+              "Design/Development",
+              "Design solutions for complex engineering problems"
+            ],
+            [
+              "PO4",
+              "Investigations",
+              "Use research-based knowledge and methods for valid conclusions"
+            ],
+            [
+              "PO5",
+              "Modern Tool Usage",
+              "Create and apply modern engineering and IT tools"
+            ],
+            [
+              "PO6",
+              "Engineer and Society",
+              "Assess societal, health, safety, legal, cultural issues"
+            ],
+            [
+              "PO7",
+              "Environment & Sustainability",
+              "Understand environmental impact of engineering solutions"
+            ],
+            [
+              "PO8",
+              "Ethics",
+              "Apply ethical principles and professional ethics"
+            ],
+            [
+              "PO9",
+              "Team Work",
+              "Function as individual and team member or leader"
+            ],
+            [
+              "PO10",
+              "Communication",
+              "Communicate effectively on complex engineering activities"
+            ],
+            [
+              "PO11",
+              "Project Management",
+              "Apply engineering and management principles"
+            ],
+            [
+              "PO12",
+              "Life-long Learning",
+              "Engage in independent and life-long learning"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What are the Programme Outcomes for ECE VLSI at MSAJCE?",
+        "What are the 12 POs of the VLSI department at MSAJCE?",
+        "Does the VLSI programme at MSAJCE include ethics and sustainability?",
+        "What competencies do VLSI graduates from MSAJCE gain?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "12 Programme Outcomes"
+        ]
+      },
+      "keywords": [
+        "programme outcomes",
+        "PO1",
+        "PO12",
+        "engineering knowledge",
+        "problem analysis",
+        "design",
+        "ethics",
+        "sustainability",
+        "team work",
+        "communication",
+        "life-long learning",
+        "project management",
+        "VLSI programme outcomes",
+        "ECE VLSI"
+      ],
+      "overlap_text": "B.Tech ECE-VLSI: 30 seats total (15 Government, 15 Management). Duration 4 years / 8 semesters. Eligibility: 10+2 with Physics, Chemistry, Mathematics. Vision: centre of excellence for VLSI engineers through sustainable practices. Mission M1-M3: innovative teaching, critical thinking, all-round competencies.",
+      "token_count": 450,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_ece_vlsi.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Electronics Engineering with Specialization in VLSI Design & Technology — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "12 Programme Outcomes"
+    },
+    {
+      "chunk_id": "msajce_ece_vlsi_chunk_05",
+      "section": "VLSI Employment Forecast 2025–2030 — Key Industry Drivers",
+      "source_url": "https://www.msajce-edu.in/ece-vlsi.php#tab3",
+      "context": "Detailed employment forecast for the VLSI Design industry in India from 2025 to 2030, including key industry drivers such as semiconductor growth, 5G/6G, automotive electronics, IoT, and AI hardware.",
+      "text": "VLSI Design Employment Opportunity Forecast by 2025–2030 in India\n\nThe VLSI Design industry in India is poised for substantial growth over the next five years, driven by advancements in Semiconductor technology, 5G/6G networks, Automotive electronics, and the Internet of Things (IoT).\n\nKey Industry Drivers:\n\n1. Semiconductor Industry Growth:\nIndia is increasing its focus on domestic semiconductor manufacturing, driven by the National Policy on Electronics and semiconductor manufacturing plans from both government and private entities. Large-scale investments are being made by companies like Intel, TSMC, Samsung, and Global Foundries, all of which will require skilled VLSI engineers for design, testing, and validation of chips.\n\n2. 5G and 6G Technologies:\nWith the roll-out of 5G networks and planning for 6G, there will be a massive demand for VLSI design for communication chips, RF components, and signal processing units. This will create opportunities for professionals skilled in RFIC (Radio Frequency Integrated Circuits), mixed-signal design, and high-speed digital circuit design.\n\n3. Automotive Electronics (ADAS and EVs):\nThe rise of Electric Vehicles (EVs) and Advanced Driver Assistance Systems (ADAS) will require VLSI design for power management, sensors, and control systems. Demand for autonomous driving chips, sensor fusion technologies, and energy-efficient electronics will create a specialised job market.\n\n4. IoT and Consumer Electronics:\nAs India moves towards the Smart India initiative with IoT-based applications (smart cities, industrial IoT, and smart appliances), there will be growing demand for low-power system-on-chip (SoC) designs. Companies developing wearables, health devices, and home automation systems will require VLSI design engineers to develop efficient chips.\n\n5. AI and Machine Learning Hardware:\nThe advent of AI-driven hardware accelerators (AI chips, GPUs, and FPGAs) for machine learning will drive the need for specialised skills in hardware design for AI, edge computing, and neural networks.",
+      "tables": [],
+      "possible_questions": [
+        "What is the VLSI employment forecast in India for 2025 to 2030?",
+        "What are the key drivers of VLSI industry growth in India?",
+        "How will 5G impact VLSI job opportunities?",
+        "What is the role of automotive electronics in VLSI job growth?",
+        "How will AI hardware create VLSI jobs?",
+        "Will IoT create VLSI engineering jobs?",
+        "What is ADAS and how does it relate to VLSI?",
+        "How will electric vehicles boost VLSI job market?",
+        "Which companies are investing in semiconductor manufacturing in India?",
+        "What is RFIC design?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "India"
+        ],
+        "numbers": [
+          "2025-2030 forecast period"
+        ]
+      },
+      "keywords": [
+        "VLSI employment forecast",
+        "2025 2030",
+        "semiconductor industry growth",
+        "5G 6G",
+        "automotive electronics",
+        "ADAS",
+        "electric vehicles EV",
+        "IoT consumer electronics",
+        "AI machine learning hardware",
+        "RFIC",
+        "SoC",
+        "GPU",
+        "FPGA",
+        "edge computing",
+        "neural networks",
+        "Intel",
+        "TSMC",
+        "Samsung",
+        "Global Foundries"
+      ],
+      "overlap_text": "Programme Outcomes PO1–PO12 cover Engineering Knowledge, Problem Analysis, Design, Investigations, Modern Tool Usage, Engineer and Society, Environment and Sustainability, Ethics, Team Work, Communication, Project Management, and Life-long Learning for ECE VLSI graduates at MSAJCE.",
+      "token_count": 480,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_ece_vlsi.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Electronics Engineering with Specialization in VLSI Design & Technology — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "India",
+      "entity_numbers": "2025-2030 forecast period"
+    },
+    {
+      "chunk_id": "msajce_ece_vlsi_chunk_06",
+      "section": "VLSI Sector-Wise Job Growth, Key Skills, and Government Initiatives",
+      "source_url": "https://www.msajce-edu.in/ece-vlsi.php#tab3",
+      "context": "Sector-wise growth projections for VLSI roles from 2025-2030, key skills in demand, and government/industry initiatives driving VLSI employment in India.",
+      "text": "Sector-Wise Job Growth Projections (2025–2030):\n\nSector | Growth Rate | Key Hiring Areas\nSemiconductor Design | 15–18% per year | Front-end VLSI design, SoC architecture, physical design\nTelecommunication (5G/6G) | 12–15% per year | RFIC design, signal processing, analog-digital integration\nAutomotive Electronics | 10–12% per year | ADAS chips, EV power management, sensor design\nIoT & Consumer Electronics | 10–12% per year | Low-power design, SoC design, embedded systems\nAI/ML Hardware | 18–20% per year | AI accelerators, FPGAs, GPUs, edge computing hardware\nTest and Verification | 8–10% per year | Verification engineers, automated test benches, DFT\n\nKey Skills in Demand for VLSI Design:\n1. Design Tools: Proficiency in Cadence, Mentor Graphics, Synopsys, and Xilinx Vivado.\n2. Languages: Expertise in Verilog, VHDL, SystemVerilog, and C/C++ for embedded systems.\n3. Analog and Digital Design: Knowledge of analog circuits (transistors, op-amps) and digital circuits (logic gates, flip-flops, multiplexers).\n4. Testing & Verification: Experience in functional verification, formal verification, DVT (Design Verification Test), and UVM.\n5. RF Design: Skills in RF circuit design, signal processing, and communication protocols for telecom and IoT.\n6. Low-Power Design: Ability to work on low-power ICs, especially for IoT and wearable devices.\n7. AI Hardware: Design expertise for AI accelerators, neural network processors, GPUs, and FPGAs.\n\nKey Government and Industry Initiatives:\n1. National Semiconductor Mission: Boost semiconductor manufacturing and design in India — significant number of VLSI jobs in design and fabrication.\n2. PLI Scheme (Production-Linked Incentive): Aimed at increasing domestic manufacturing and assembly of electronics, fostering job creation in VLSI design.\n3. Smart Cities & Digital India: Increasing reliance on IoT, sensor networks, and smart devices will drive demand for VLSI engineers in consumer electronics and automotive sectors.\n4. Automotive Industry Growth: Shift toward EVs and ADAS will require VLSI design for power electronics, control systems, and sensors.",
+      "tables": [
+        {
+          "table_title": "Sector-Wise VLSI Job Growth Projections 2025–2030",
+          "headers": [
+            "Sector",
+            "Growth Rate (2025–2030)",
+            "Key Hiring Areas"
+          ],
+          "rows": [
+            [
+              "Semiconductor Design",
+              "15–18% per year",
+              "Front-end VLSI design, SoC architecture, physical design"
+            ],
+            [
+              "Telecommunication (5G/6G)",
+              "12–15% per year",
+              "RFIC design, signal processing, analog-digital integration"
+            ],
+            [
+              "Automotive Electronics",
+              "10–12% per year",
+              "ADAS chips, EV power management, sensor design"
+            ],
+            [
+              "IoT & Consumer Electronics",
+              "10–12% per year",
+              "Low-power design, SoC design, embedded systems"
+            ],
+            [
+              "AI/ML Hardware",
+              "18–20% per year",
+              "AI accelerators, FPGAs, GPUs, edge computing hardware"
+            ],
+            [
+              "Test and Verification",
+              "8–10% per year",
+              "Verification engineers, automated test benches, DFT"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the growth rate for VLSI semiconductor design jobs in India?",
+        "What skills are required for VLSI design jobs?",
+        "What is Verilog and why is it important for VLSI?",
+        "What tools are used in VLSI design?",
+        "What is the PLI scheme for semiconductors?",
+        "What government initiatives support VLSI in India?",
+        "What is UVM in VLSI verification?",
+        "What is the growth rate for AI hardware VLSI jobs?",
+        "What are the key sectors hiring VLSI engineers?",
+        "What are the skills required for RFIC design?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "India"
+        ],
+        "numbers": [
+          "15–18% growth — Semiconductor Design",
+          "12–15% growth — Telecom 5G/6G",
+          "10–12% growth — Automotive Electronics",
+          "10–12% growth — IoT Consumer Electronics",
+          "18–20% growth — AI/ML Hardware",
+          "8–10% growth — Test and Verification"
+        ]
+      },
+      "keywords": [
+        "sector wise growth",
+        "15-18% semiconductor",
+        "18-20% AI hardware",
+        "Cadence",
+        "Synopsys",
+        "Mentor Graphics",
+        "Xilinx Vivado",
+        "Verilog",
+        "VHDL",
+        "SystemVerilog",
+        "UVM",
+        "DFT",
+        "RFIC",
+        "low power design",
+        "National Semiconductor Mission",
+        "PLI scheme",
+        "Smart Cities",
+        "Digital India",
+        "FPGA",
+        "GPU",
+        "AI accelerators"
+      ],
+      "overlap_text": "VLSI key industry drivers: Semiconductor growth, 5G/6G telecommunications, Automotive Electronics (ADAS and EVs), IoT and Consumer Electronics, AI and Machine Learning Hardware. Companies investing in India: Intel, TSMC, Samsung, Global Foundries.",
+      "token_count": 510,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_ece_vlsi.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Electronics Engineering with Specialization in VLSI Design & Technology — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "India",
+      "entity_numbers": "15–18% growth — Semiconductor Design, 12–15% growth — Telecom 5G/6G, 10–12% growth — Automotive Electronics, 10–12% growth — IoT Consumer Electronics, 18–20% growth — AI/ML Hardware, 8–10% growth — Test and Verification"
+    },
+    {
+      "chunk_id": "msajce_ece_vlsi_chunk_07",
+      "section": "Employment Opportunities by Role — VLSI",
+      "source_url": "https://www.msajce-edu.in/ece-vlsi.php#tab3",
+      "context": "Detailed table of VLSI engineering roles with their expected job growth rates from 2025–2030 and required skills, along with an employment forecast summary.",
+      "text": "Employment Opportunities by Role in VLSI Design (2025–2030):\n\nRole | Job Growth | Skills Required\nVLSI Design Engineer | Very High | RTL design (Verilog/VHDL), FPGA design, ASIC design\nVerification Engineer | High | UVM, SystemVerilog, functional verification, testbench development\nLayout Engineer | High | Physical design, DRC/LVS, CAD tools (Mentor, Cadence)\nRFIC Design Engineer | High | RF circuit design, communication systems, signal integrity\nAnalog/Mixed-Signal Design Engineer | Very High | Analog circuits, op-amps, DAC/ADC, simulation tools (Cadence, Synopsys)\nAutomotive VLSI Design Engineer (ADAS/EV) | Moderate to High | Power management ICs, automotive safety standards, sensor integration\nAI Hardware Design Engineer | Very High | AI accelerators, GPU/FPGA design, neural network hardware\nEmbedded Systems Engineer | High | Embedded hardware, microcontroller programming, low-power circuits\n\nEmployment Forecast Summary:\n1. VLSI Design in India will experience 15–18% annual growth in the next 5 years, fuelled by demand in semiconductor manufacturing, telecom (5G/6G), IoT, automotive, and AI hardware sectors.\n2. The focus on domestic semiconductor fabrication, 5G/6G networks, AI chip design, and electric vehicle electronics will open up numerous roles for VLSI engineers, especially those with expertise in RF, analog/mixed-signal design, embedded systems, and verification.",
+      "tables": [
+        {
+          "table_title": "VLSI Roles and Job Growth 2025–2030",
+          "headers": [
+            "Role",
+            "Job Growth (2025–2030)",
+            "Skills Required"
+          ],
+          "rows": [
+            [
+              "VLSI Design Engineer",
+              "Very High",
+              "RTL design (Verilog/VHDL), FPGA design, ASIC design"
+            ],
+            [
+              "Verification Engineer",
+              "High",
+              "UVM, SystemVerilog, functional verification, testbench development"
+            ],
+            [
+              "Layout Engineer",
+              "High",
+              "Physical design, DRC/LVS, CAD tools (Mentor, Cadence)"
+            ],
+            [
+              "RFIC Design Engineer",
+              "High",
+              "RF circuit design, communication systems, signal integrity"
+            ],
+            [
+              "Analog/Mixed-Signal Design Engineer",
+              "Very High",
+              "Analog circuits, op-amps, DAC/ADC, simulation tools (Cadence, Synopsys)"
+            ],
+            [
+              "Automotive VLSI Design Engineer (ADAS/EV)",
+              "Moderate to High",
+              "Power management ICs, automotive safety standards, sensor integration"
+            ],
+            [
+              "AI Hardware Design Engineer",
+              "Very High",
+              "AI accelerators, GPU/FPGA design, neural network hardware"
+            ],
+            [
+              "Embedded Systems Engineer",
+              "High",
+              "Embedded hardware, microcontroller programming, low-power circuits"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is a VLSI Design Engineer?",
+        "What does a Verification Engineer do in VLSI?",
+        "What is a Layout Engineer in semiconductor?",
+        "What is an RFIC Design Engineer?",
+        "What is an Analog/Mixed-Signal Design Engineer?",
+        "What skills does an AI Hardware Design Engineer need?",
+        "What is DRC/LVS in VLSI layout?",
+        "What is ASIC design?",
+        "What is RTL design?",
+        "How much growth is expected for VLSI engineers in India?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "India"
+        ],
+        "numbers": [
+          "15–18% annual growth VLSI India"
+        ]
+      },
+      "keywords": [
+        "VLSI Design Engineer",
+        "Verification Engineer",
+        "Layout Engineer",
+        "RFIC Design Engineer",
+        "Analog Mixed-Signal",
+        "AI Hardware Design Engineer",
+        "Embedded Systems Engineer",
+        "RTL",
+        "ASIC",
+        "FPGA",
+        "UVM",
+        "SystemVerilog",
+        "DRC LVS",
+        "DAC ADC",
+        "testbench",
+        "power management ICs",
+        "automotive safety",
+        "neural network hardware"
+      ],
+      "overlap_text": "Key VLSI skills in demand: Cadence, Synopsys, Mentor Graphics, Xilinx Vivado (tools); Verilog, VHDL, SystemVerilog, C/C++ (languages); UVM, DFT, formal verification (testing); RF design, low-power design, AI hardware. Government initiatives: National Semiconductor Mission, PLI Scheme, Digital India.",
+      "token_count": 450,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_ece_vlsi.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Electronics Engineering with Specialization in VLSI Design & Technology — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "India",
+      "entity_numbers": "15–18% annual growth VLSI India"
+    },
+    {
+      "chunk_id": "msajce_ece_vlsi_chunk_08",
+      "section": "Faculty Details — ECE VLSI Department",
+      "source_url": "https://www.msajce-edu.in/ece-vlsi.php#faculty",
+      "context": "Complete list of faculty members in the ECE-VLSI department at MSAJCE with their qualifications, designations, and areas of specialisation.",
+      "text": "Faculty — Department of Electronics Engineering with Specialization in VLSI Design & Technology, MSAJCE\n\nName | Qualification | Designation | Area of Specialization\nDr. NAGASUBRAMANIAN R | M.E., Ph.D. | Head - PG | Computer Science Engineering\nDr. SUBRAMANIAN P | M.E., Ph.D. | Head - UG | Wireless Sensor Networking and Image Processing\nDr. PREMALATHA G | M.E., Ph.D. | Associate Professor | Image Processing and Machine Learning\nMrs. SARANYA V | M.Tech., (Ph.D.) | Assistant Professor | IOT and Cloud Computing\nMrs. SASIKALA L | M.E. | Assistant Professor | Computer Science and Engineering\nMrs. KIRUTHIKA S | M.E. | Assistant Professor | Computer Science and Engineering\nMrs. ASRIN MAHMOOTHA A | M.E. | Assistant Professor | Computer Science Engineering\nMr. PRAVEENKUMAR P | M.E. | Assistant Professor | Computer Science Engineering\nMr. RAJAKUMAR B | M.Tech., (Ph.D.) | Assistant Professor | IOT, AI, NLP and Image Processing\nMr. RAJASEKAR R | M.E., (Ph.D.) | Assistant Professor | IOT, Network Security",
+      "tables": [
+        {
+          "table_title": "Faculty — ECE VLSI Department",
+          "headers": [
+            "Name",
+            "Qualification",
+            "Designation",
+            "Area of Specialization"
+          ],
+          "rows": [
+            [
+              "Dr. NAGASUBRAMANIAN R",
+              "M.E., Ph.D.",
+              "Head - PG",
+              "Computer Science Engineering"
+            ],
+            [
+              "Dr. SUBRAMANIAN P",
+              "M.E., Ph.D.",
+              "Head - UG",
+              "Wireless Sensor Networking and Image Processing"
+            ],
+            [
+              "Dr. PREMALATHA G",
+              "M.E., Ph.D.",
+              "Associate Professor",
+              "Image Processing and Machine Learning"
+            ],
+            [
+              "Mrs. SARANYA V",
+              "M.Tech., (Ph.D.)",
+              "Assistant Professor",
+              "IOT and Cloud Computing"
+            ],
+            [
+              "Mrs. SASIKALA L",
+              "M.E.",
+              "Assistant Professor",
+              "Computer Science and Engineering"
+            ],
+            [
+              "Mrs. KIRUTHIKA S",
+              "M.E.",
+              "Assistant Professor",
+              "Computer Science and Engineering"
+            ],
+            [
+              "Mrs. ASRIN MAHMOOTHA A",
+              "M.E.",
+              "Assistant Professor",
+              "Computer Science Engineering"
+            ],
+            [
+              "Mr. PRAVEENKUMAR P",
+              "M.E.",
+              "Assistant Professor",
+              "Computer Science Engineering"
+            ],
+            [
+              "Mr. RAJAKUMAR B",
+              "M.Tech., (Ph.D.)",
+              "Assistant Professor",
+              "IOT, AI, NLP and Image Processing"
+            ],
+            [
+              "Mr. RAJASEKAR R",
+              "M.E., (Ph.D.)",
+              "Assistant Professor",
+              "IOT, Network Security"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Who are the faculty in the ECE VLSI department at MSAJCE?",
+        "Who is the Head of the VLSI department at MSAJCE?",
+        "Who is Dr. Nagasubramanian R at MSAJCE?",
+        "Who is Dr. Subramanian P at MSAJCE?",
+        "Who is Dr. Premalatha G at MSAJCE?",
+        "How many PhD faculty are there in the ECE VLSI department?",
+        "Who is the UG Head of ECE VLSI at MSAJCE?",
+        "Who is the PG Head of ECE VLSI at MSAJCE?",
+        "What are the specialisations of ECE VLSI faculty at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. NAGASUBRAMANIAN R — Head PG, Computer Science Engineering",
+          "Dr. SUBRAMANIAN P — Head UG, Wireless Sensor Networking and Image Processing",
+          "Dr. PREMALATHA G — Associate Professor, Image Processing and Machine Learning",
+          "Mrs. SARANYA V — Assistant Professor, IOT and Cloud Computing",
+          "Mrs. SASIKALA L — Assistant Professor, Computer Science and Engineering",
+          "Mrs. KIRUTHIKA S — Assistant Professor, Computer Science and Engineering",
+          "Mrs. ASRIN MAHMOOTHA A — Assistant Professor, Computer Science Engineering",
+          "Mr. PRAVEENKUMAR P — Assistant Professor, Computer Science Engineering",
+          "Mr. RAJAKUMAR B — Assistant Professor, IOT, AI, NLP and Image Processing",
+          "Mr. RAJASEKAR R — Assistant Professor, IOT, Network Security"
+        ],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "10 faculty members",
+          "3 PhD holders (full)"
+        ]
+      },
+      "keywords": [
+        "Dr Nagasubramanian R",
+        "Dr Subramanian P",
+        "Dr Premalatha G",
+        "Saranya V",
+        "Sasikala L",
+        "Kiruthika S",
+        "Asrin Mahmootha",
+        "Praveenkumar P",
+        "Rajakumar B",
+        "Rajasekar R",
+        "Head PG",
+        "Head UG",
+        "Associate Professor",
+        "Assistant Professor",
+        "ECE VLSI faculty",
+        "Image Processing",
+        "IOT",
+        "Cloud Computing",
+        "Network Security"
+      ],
+      "overlap_text": "VLSI roles in high demand: VLSI Design Engineer (Very High), Analog/Mixed-Signal Design Engineer (Very High), AI Hardware Design Engineer (Very High), Verification Engineer (High), Layout Engineer (High), RFIC Design Engineer (High), Embedded Systems Engineer (High). India expected 15–18% annual VLSI growth.",
+      "token_count": 440,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_ece_vlsi.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Electronics Engineering with Specialization in VLSI Design & Technology — Complete Data Extract for RAG Model",
+      "entity_persons": "Dr. NAGASUBRAMANIAN R — Head PG, Computer Science Engineering, Dr. SUBRAMANIAN P — Head UG, Wireless Sensor Networking and Image Processing, Dr. PREMALATHA G — Associate Professor, Image Processing and Machine Learning, Mrs. SARANYA V — Assistant Professor, IOT and Cloud Computing, Mrs. SASIKALA L — Assistant Professor, Computer Science and Engineering, Mrs. KIRUTHIKA S — Assistant Professor, Computer Science and Engineering, Mrs. ASRIN MAHMOOTHA A — Assistant Professor, Computer Science Engineering, Mr. PRAVEENKUMAR P — Assistant Professor, Computer Science Engineering, Mr. RAJAKUMAR B — Assistant Professor, IOT, AI, NLP and Image Processing, Mr. RAJASEKAR R — Assistant Professor, IOT, Network Security",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "10 faculty members, 3 PhD holders (full)"
+    },
+    {
+      "chunk_id": "msajce_ece_vlsi_chunk_09",
+      "section": "Department Labs, Facilities, and Course Materials",
+      "source_url": "https://www.msajce-edu.in/ece-vlsi.php#labs",
+      "context": "Details of laboratories available for the ECE-VLSI department and the 2021 Regulation course materials list with subject codes and resource links.",
+      "text": "Department Facilities — Labs (shared with ECE/CSBS infrastructure), MSAJCE\n\nSl.No. | Name of the Lab | Course Offered | Lab PDF\n1 | C Programming Lab | CS8261 - C Programming | https://www.msajce-edu.in/images/departments/csbs/Obj-c.pdf\n2 | Internet Programming Lab | CS8661 - Internet Programming | https://www.msajce-edu.in/images/departments/csbs/Obj-INTERNET.pdf\n3 | Operating Systems Lab | CS8461 - Operating Systems | https://www.msajce-edu.in/images/departments/csbs/Obj-os.pdf\n4 | Object Oriented Analysis and Design Lab | CS8461 - OOAD | https://www.msajce-edu.in/images/departments/csbs/Obj-ooad.pdf\n5 | Web Technology Lab | IT8511 - Web Technology | https://www.msajce-edu.in/images/departments/csbs/Obj-web.pdf\n6 | Networks Lab | CS8581 - Networks Lab | https://www.msajce-edu.in/images/departments/csbs/Obj-Networks.pdf\n\n2021 Regulation Course Materials — ECE VLSI / CSBS, MSAJCE:\n\nS.No. | Subject Code | Subject Name\n1 | MA3354 | Discrete Mathematics\n2 | CS3351 | Digital Principles and Computer Organization\n3 | AD3391 | Database Design and Management\n4 | AD3351 | Design and Analysis of Algorithms\n5 | AD3301 | Data Exploration and Visualization\n6 | AL3391 | Artificial Intelligence\n7 | AD3381 | Database Design and Management Laboratory\n8 | AD3311 | Artificial Intelligence Laboratory\n9 | GE3361 | Professional Development\n\nAll course material resources available at:\nhttps://www.msajce-edu.in/academics/csbs/2021/LessonPlan/[SubjectCode]-LP.pdf\nhttps://www.msajce-edu.in/academics/csbs/2021/QuestionBank/[SubjectCode]-QB.pdf\nhttps://www.msajce-edu.in/academics/csbs/2021/LectureNote/[SubjectCode]-LN.pdf\nhttps://www.msajce-edu.in/academics/csbs/2021/ICTTools/[SubjectCode]-ICT.pdf\n\nRegulation: Anna University 2021 Syllabus (BE)\nCurriculum PDF: https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf",
+      "tables": [
+        {
+          "table_title": "ECE VLSI Department Labs",
+          "headers": [
+            "Sl.No.",
+            "Lab Name",
+            "Course Code",
+            "Resource URL"
+          ],
+          "rows": [
+            [
+              "1",
+              "C Programming Lab",
+              "CS8261",
+              "https://www.msajce-edu.in/images/departments/csbs/Obj-c.pdf"
+            ],
+            [
+              "2",
+              "Internet Programming Lab",
+              "CS8661",
+              "https://www.msajce-edu.in/images/departments/csbs/Obj-INTERNET.pdf"
+            ],
+            [
+              "3",
+              "Operating Systems Lab",
+              "CS8461",
+              "https://www.msajce-edu.in/images/departments/csbs/Obj-os.pdf"
+            ],
+            [
+              "4",
+              "OOAD Lab",
+              "CS8461",
+              "https://www.msajce-edu.in/images/departments/csbs/Obj-ooad.pdf"
+            ],
+            [
+              "5",
+              "Web Technology Lab",
+              "IT8511",
+              "https://www.msajce-edu.in/images/departments/csbs/Obj-web.pdf"
+            ],
+            [
+              "6",
+              "Networks Lab",
+              "CS8581",
+              "https://www.msajce-edu.in/images/departments/csbs/Obj-Networks.pdf"
+            ]
+          ]
+        },
+        {
+          "table_title": "2021 Regulation Subjects — ECE VLSI / CSBS",
+          "headers": [
+            "S.No.",
+            "Subject Code",
+            "Subject Name"
+          ],
+          "rows": [
+            [
+              "1",
+              "MA3354",
+              "Discrete Mathematics"
+            ],
+            [
+              "2",
+              "CS3351",
+              "Digital Principles and Computer Organization"
+            ],
+            [
+              "3",
+              "AD3391",
+              "Database Design and Management"
+            ],
+            [
+              "4",
+              "AD3351",
+              "Design and Analysis of Algorithms"
+            ],
+            [
+              "5",
+              "AD3301",
+              "Data Exploration and Visualization"
+            ],
+            [
+              "6",
+              "AL3391",
+              "Artificial Intelligence"
+            ],
+            [
+              "7",
+              "AD3381",
+              "Database Design and Management Laboratory"
+            ],
+            [
+              "8",
+              "AD3311",
+              "Artificial Intelligence Laboratory"
+            ],
+            [
+              "9",
+              "GE3361",
+              "Professional Development"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What labs are available for ECE VLSI students at MSAJCE?",
+        "What subjects are taught in ECE VLSI under 2021 regulation at MSAJCE?",
+        "Where can I find the lecture notes for AD3391 at MSAJCE?",
+        "Is Artificial Intelligence taught in ECE VLSI at MSAJCE?",
+        "What is the subject code for Discrete Mathematics in VLSI at MSAJCE?",
+        "Does the VLSI programme have a Networks Lab at MSAJCE?",
+        "What is AD3301 at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "6 laboratories",
+          "9 subjects under 2021 regulation"
+        ]
+      },
+      "keywords": [
+        "labs",
+        "C Programming Lab",
+        "Internet Programming Lab",
+        "Operating Systems Lab",
+        "OOAD Lab",
+        "Web Technology Lab",
+        "Networks Lab",
+        "2021 regulation",
+        "MA3354",
+        "CS3351",
+        "AD3391",
+        "AD3351",
+        "AL3391",
+        "Artificial Intelligence",
+        "Discrete Mathematics",
+        "lesson plan",
+        "question bank",
+        "lecture notes"
+      ],
+      "overlap_text": "ECE VLSI Faculty: Dr. NAGASUBRAMANIAN R — Head PG, Dr. SUBRAMANIAN P — Head UG, Dr. PREMALATHA G — Associate Professor, Mrs. SARANYA V, Mrs. SASIKALA L, Mrs. KIRUTHIKA S, Mrs. ASRIN MAHMOOTHA A, Mr. PRAVEENKUMAR P, Mr. RAJAKUMAR B, Mr. RAJASEKAR R — all Assistant Professors.",
+      "token_count": 460,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_ece_vlsi.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Electronics Engineering with Specialization in VLSI Design & Technology — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "6 laboratories, 9 subjects under 2021 regulation"
+    },
+    {
+      "chunk_id": "msajce_ece_vlsi_chunk_10",
+      "section": "Placement Details and Contact Information",
+      "source_url": "https://www.msajce-edu.in/ece-vlsi.php#placement",
+      "context": "Companies that have placed ECE-VLSI students from MSAJCE, and complete contact information for the college.",
+      "text": "Placement Details — ECE VLSI Department, MSAJCE\n\nOff Campus Placed Students — Companies that have recruited:\nAccenture, Arabic (company), AT&T, BYJU's, Capgemini, Carbonite, Chella, CISCO, City West Water, Cognizant Technology Solutions (CTS), Deloitte Consulting, EMI Health, Future Focus, HCL, HP, HTC, IBM, Infosys, Infoview Technologies, Intelact, L&T Infotech, Newage Software, Oracle, Saudi Airlines, Solverminds, Sutherland, TCS (Tata Consultancy Services), Tech Mahindra, Wells Fargo, Wipro, Wolters Kluwer ELM.\n\nNote: Placement companies listed include those shared across ECE/CSBS/VLSI departments.\n\nContact — MSAJCE:\nAddress: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103\nPhone: +91 99400 04500\nEmail: msajce.office@gmail.com\nWebsite: www.msajce-edu.in\nGrievance Cell: grievance@msajce-edu.in\nGrievance URL: https://www.msajce-edu.in/grievanceredressalcommittee.php\nOnline Admission 2026-2027: https://enrollonline.co.in/Registration/Apply/MSAJCE\nOnline Fee Payment: https://www.feepayr.com/\nStudents Corner: https://www.msajce-edu.in/studentscorner.php\nAICTE Scholarship Schemes: https://www.aicte.gov.in/schemes/students-development-schemes\nMSAJCE Annual Report 2023-2024: https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf\nAICTE Approval: https://www.msajce-edu.in/uploads/AICTE-APPROVAL.pdf\nAnna University Approval: https://www.msajce-edu.in/uploads/AnnaUnivApproval.pdf",
+      "tables": [
+        {
+          "table_title": "Companies that Recruited ECE/VLSI Students from MSAJCE",
+          "headers": [
+            "S.No.",
+            "Company Name"
+          ],
+          "rows": [
+            [
+              "1",
+              "Accenture"
+            ],
+            [
+              "2",
+              "AT&T"
+            ],
+            [
+              "3",
+              "BYJU's"
+            ],
+            [
+              "4",
+              "Capgemini"
+            ],
+            [
+              "5",
+              "CISCO"
+            ],
+            [
+              "6",
+              "Cognizant Technology Solutions (CTS)"
+            ],
+            [
+              "7",
+              "Deloitte Consulting"
+            ],
+            [
+              "8",
+              "HCL"
+            ],
+            [
+              "9",
+              "IBM"
+            ],
+            [
+              "10",
+              "Infosys"
+            ],
+            [
+              "11",
+              "L&T Infotech"
+            ],
+            [
+              "12",
+              "Oracle"
+            ],
+            [
+              "13",
+              "Sutherland"
+            ],
+            [
+              "14",
+              "TCS"
+            ],
+            [
+              "15",
+              "Tech Mahindra"
+            ],
+            [
+              "16",
+              "Wells Fargo"
+            ],
+            [
+              "17",
+              "Wipro"
+            ],
+            [
+              "18",
+              "Wolters Kluwer ELM"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Which companies hire from ECE VLSI at MSAJCE?",
+        "Has TCS recruited from MSAJCE?",
+        "Has Infosys recruited from MSAJCE VLSI department?",
+        "Has IBM hired from MSAJCE?",
+        "What is the contact number of MSAJCE?",
+        "What is the email address of MSAJCE?",
+        "What is the address of MSAJCE?",
+        "How do I apply for admission to ECE VLSI at MSAJCE?",
+        "What is the grievance cell email of MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com",
+          "grievance@msajce-edu.in"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": [
+          "30+ placement companies"
+        ]
+      },
+      "keywords": [
+        "placement",
+        "TCS",
+        "Infosys",
+        "IBM",
+        "Wipro",
+        "Accenture",
+        "Capgemini",
+        "CISCO",
+        "Oracle",
+        "Deloitte",
+        "HCL",
+        "Tech Mahindra",
+        "Wells Fargo",
+        "L&T Infotech",
+        "Cognizant CTS",
+        "+91 99400 04500",
+        "msajce.office@gmail.com",
+        "Chennai 603103",
+        "admission 2026-2027",
+        "grievance cell"
+      ],
+      "overlap_text": "ECE VLSI Department labs: C Programming Lab (CS8261), Internet Programming Lab (CS8661), Operating Systems Lab (CS8461), OOAD Lab, Web Technology Lab (IT8511), Networks Lab (CS8581). 2021 Regulation subjects include MA3354, CS3351, AD3391, AL3391 AI, AD3301 Data Exploration.",
+      "token_count": 430,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "critical",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_ece_vlsi.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Electronics Engineering with Specialization in VLSI Design & Technology — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com, grievance@msajce-edu.in",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": "30+ placement companies"
+    }
+  ]
+}

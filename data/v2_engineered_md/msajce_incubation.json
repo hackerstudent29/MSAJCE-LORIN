@@ -1,0 +1,53 @@
+{
+  "source": "msajce_incubation.md",
+  "sections": [
+    {
+      "header": "8. Academic Toppers & General College Contact Information",
+      "level": 2,
+      "text": "The following data is from the Academic Toppers (by Department and Year) table: Mohamed Jassim .M is the II Year topper from the Department of Civil Engineering. Veera Kumar .M is the III Year topper from the Department of Civil Engineering. Mohmood Naina .M.H is the IV Year topper from the Department of Civil Engineering. Salman is the II Year topper from the Department of Mechanical Engineering. Atef Jamaludeen .N is the III Year topper from the Department of Mechanical Engineering. Mohamed Nibras .M is the IV Year topper from the Department of Mechanical Engineering. Vinitha .M is the II Year topper from the Department of Computer Science and Engineering. Bhuvaneshwari .B is the III Year topper from the Department of Computer Science and Engineering. Mahalakshmi .R is the IV Year topper from the Department of Computer Science and Engineering.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "General College Contact:",
+      "level": 3,
+      "text": "The following data is from the General College Contact table: The address is 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103. The phone number is +91 99400 04500. The email address is msajce.office@gmail.com. The website is www.msajce-edu.in. The online admission link is <https://enrollonline.co.in/Registration/Apply/MSAJCE>. The online fee payment link is <https://www.feepayr.com/>. For grievances, email grievance@msajce-edu.in or visit <https://www.msajce-edu.in/grievanceredressalcommittee.php>.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Useful Links from Incubation Page:",
+      "level": 3,
+      "text": "The incubation page provides the SIIF website at <https://www.siif.ventures/>, the IIC Ratings Certificate 2023-24 at [https://www.msajce-edu.in/images/research/RatingCertificate_2023-24.jpg](https://www.msajce-edu.in/images/research/RatingCertificate_2023-24.jpg), the IIC Ratings Certificate 2022-23 at [https://www.msajce-edu.in/images/research/RatingCertificate_2022-23.jpg](https://www.msajce-edu.in/images/research/RatingCertificate_2022-23.jpg), the IIC Ratings Certificate 2020-21 at <https://www.msajce-edu.in/images/research/2RatingCertificate2020-21.jpg>, and the IIC Ratings Certificate 2019-20 at <https://www.msajce-edu.in/images/research/1RatingCertificate2019-20.jpg>.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "Academic Toppers by Department",
+      "level": 3,
+      "text": "The following data is from the Academic Toppers by Department table: S.No 1 Name of Student Mohamed Jassim .M Department Civil Engineering Year II. S.No 2 Name of Student Veera Kumar .M Department Civil Engineering Year III. S.No 3 Name of Student Mohmood Naina .M.H Department Civil Engineering Year IV. S.No 4 Name of Student Salman Department Mechanical Engineering Year II. S.No 5 Name of Student Atef Jamaludeen .N Department Mechanical Engineering Year III. S.No 6 Name of Student Mohamed Nibras .M Department Mechanical Engineering Year IV. S.No 7 Name of Student Vinitha .M Department Computer Science and Engineering Year II. S.No 8 Name of Student Bhuvaneshwari .B Department Computer Science and Engineering Year III.\n\nThe following data is from the Academic Toppers by Department table: S.No 9 Name of Student Mahalakshmi .R Department Computer Science and Engineering Year IV. S.No 10 Name of Student Shalini .M Department Information Technology Year II. S.No 11 Name of Student Ganga .M Department Information Technology Year III. S.No 12 Name of Student Fouzia .M.A Department Information Technology Year IV. S.No 13 Name of Student Satheshkumar .V Department Electronics and Communication Engineering Year II. S.No 14 Name of Student Assifa .A Department Electronics and Communication Engineering Year III. S.No 15 Name of Student Vigneshwaran .V Department Electronics and Communication Engineering Year IV. S.No 16 Name of Student Divyasri .S Department Electrical and Electronics Engineering Year II. S.No 17 Name of Student Sathyan .S Department Electrical and Electronics Engineering Year III. S.No 18 Name of Student Sanjith .S Department Electrical and Electronics Engineering Year IV.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample questions this chunk answers:",
+      "level": 3,
+      "text": "This chunk answers who the academic toppers are at MSAJCE, what the phone number of MSAJCE is, what the email address of MSAJCE is, where MSAJCE is located, how to apply online for admission at MSAJCE, how to pay fees online at MSAJCE, what the grievance email is at MSAJCE, what the SIIF website is, and what the MSAJCE IIC rating certificates are.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "MSAJCE — Incubation & Startup Contact Information",
+      "level": 2,
+      "text": "The following data is from the Incubation Lead table: Akshita K is the Incubation Lead with the email info@siif.ventures and website www.siif.ventures.\n\nThe following data is from the IIC President table: Mr. S. Vimalathithan is the IIC President with the email iic.head@msajce-edu.in.\n\nThe following data is from the Principal table: Dr. K.S. Srinivasan is the Principal with the email principal@msajce-edu.in.\n\nThe following data is from the Address table: The address is 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103.\n\nThe following data is from the contact information table: The phone number is +91 99400 04500, the email is msajce.office@gmail.com, and the website is www.msajce-edu.in.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    }
+  ]
+}

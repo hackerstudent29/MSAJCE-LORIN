@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "entity": "Ramanathan S (Ram)",
+    "role": "Lead AI Developer & System Architect",
+    "institution": "MSAJCE",
+    "last_updated": "2026-05-01",
+    "version": "v2",
+    "source_file": "ramanathan_profile.json"
+  },
+  "chunks": [
+    {
+      "chunk_id": "PROFILE_RAMANATHAN_S_LINKS",
+      "text": "Official Portfolio: https://ramanathan-s.vercel.app/ | LinkedIn: https://www.linkedin.com/in/ramanathan-s-it",
+      "metadata": {
+        "section": "Contact & Links",
+        "source_file": "ramanathan_profile.json"
+      },
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "ramanathan_profile.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "keywords": [],
+      "context": "",
+      "edges": [],
+      "institution": "MSAJCE",
+      "entities": {}
+    },
+    {
+      "chunk_id": "ram_projects_summary",
+      "section": "Developer Portfolio",
+      "context": "Major Engineering Projects by Ramanathan S",
+      "entities": {
+        "persons": [
+          "Ramanathan S — Lead AI Developer"
+        ]
+      },
+      "text": "Ramanathan S (Ram) has architected several high-performance ecosystems: \n1. **Lorin RAG (Flagship):** The institutional intelligence engine for MSAJCE using Pinecone, BM25s, and Langfuse.\n2. **Zenify:** A high-performance music streaming ecosystem (Next.js 14, Fastify, Prisma, Supabase).\n3. **Zenpay:** A production-grade Payment Gateway platform for fintech infrastructure.\n4. **Pocket Lawyer:** An AI legal-tech platform with specialized high-fidelity Tamil support.\n5. **Formora:** An AI-driven SaaS form builder using Turborepo and Next.js.",
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "ramanathan_profile.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "keywords": [],
+      "edges": [],
+      "institution": "MSAJCE",
+      "entity_persons": "Ramanathan S — Lead AI Developer"
+    },
+    {
+      "chunk_id": "ram_technical_focus",
+      "section": "Technical Expertise",
+      "context": "Architectural Specialization of Ramanathan S",
+      "entities": {
+        "persons": [
+          "Ramanathan S — System Architect"
+        ]
+      },
+      "text": "Ram specializes in high-performance AI systems and Fintech architecture. His work focuses on enterprise-grade monorepos, secure JWT authentication (RBAC), and low-latency RAG pipelines. He is currently a 2nd-year B.Tech IT student at MSAJCE and serves as the visionary Lead Architect for the college's AI initiatives.",
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "ramanathan_profile.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "keywords": [],
+      "edges": [],
+      "institution": "MSAJCE",
+      "entity_persons": "Ramanathan S — System Architect"
+    }
+  ]
+}

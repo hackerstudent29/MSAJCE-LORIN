@@ -1,0 +1,460 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "National Institutional Ranking Framework (NIRF) — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/nirf.php",
+    "sections_covered": [
+      "NIRF Overview — What is NIRF",
+      "NIRF 2026 — Engineering, Overall, Innovation",
+      "NIRF 2025 — Engineering, Overall, Innovation",
+      "NIRF 2024 — Engineering, Overall",
+      "NIRF 2023 — Engineering, Overall",
+      "All NIRF Document Download Links (10 PDFs)",
+      "General Contact Information"
+    ],
+    "scraped_date": "2026-04-27",
+    "total_chunks": 3,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_nirf",
+    "version": "v2",
+    "source_file": "msajce_nirf.json"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_nirf_chunk_01",
+      "section": "NIRF Overview & NIRF 2026 + NIRF 2025 Document Links",
+      "source_url": "https://www.msajce-edu.in/nirf.php",
+      "context": "This chunk explains what NIRF is, and provides all NIRF 2026 and NIRF 2025 submission document download links for MSAJCE covering Engineering, Overall, and Innovation categories.",
+      "text": "National Institutional Ranking Framework (NIRF) — Overview: The National Institutional Ranking Framework (NIRF) is a methodology adopted by the Ministry of Education (MoE), Government of India, to rank institutions of higher education across the country. MSAJCE participates in NIRF rankings annually and submits data across three categories: Engineering, Overall, and Innovation. NIRF 2026 Documents: NIRF 2026 Engineering: https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2026.pdf. NIRF 2026 Overall: https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2026.pdf. NIRF 2026 Innovation: https://www.msajce-edu.in/uploads/nift/MSAJCE-INNOV-2026.pdf. NIRF 2025 Documents: NIRF 2025 Engineering: https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2025.pdf. NIRF 2025 Overall: https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2025.pdf. NIRF 2025 Innovation: https://www.msajce-edu.in/uploads/nift/MSAJCE-INNOV-2025.pdf.",
+      "tables": [
+        {
+          "table_title": "NIRF 2026 — Document Downloads",
+          "headers": [
+            "Category",
+            "Download URL"
+          ],
+          "rows": [
+            [
+              "NIRF 2026 — Engineering",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2026.pdf"
+            ],
+            [
+              "NIRF 2026 — Overall",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2026.pdf"
+            ],
+            [
+              "NIRF 2026 — Innovation",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-INNOV-2026.pdf"
+            ]
+          ]
+        },
+        {
+          "table_title": "NIRF 2025 — Document Downloads",
+          "headers": [
+            "Category",
+            "Download URL"
+          ],
+          "rows": [
+            [
+              "NIRF 2025 — Engineering",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2025.pdf"
+            ],
+            [
+              "NIRF 2025 — Overall",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2025.pdf"
+            ],
+            [
+              "NIRF 2025 — Innovation",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-INNOV-2025.pdf"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Is MSAJCE ranked in NIRF?",
+        "What is the NIRF ranking of MSAJCE?",
+        "Where can I download MSAJCE NIRF 2026 report?",
+        "Does MSAJCE participate in NIRF Innovation ranking?",
+        "What is NIRF?",
+        "Where is the MSAJCE NIRF 2025 Engineering document?",
+        "Does MSAJCE submit NIRF data every year?",
+        "Where can I find MSAJCE NIRF Overall ranking document?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "3 NIRF categories",
+          "NIRF 2026",
+          "NIRF 2025"
+        ]
+      },
+      "keywords": [
+        "NIRF",
+        "National Institutional Ranking Framework",
+        "NIRF ranking MSAJCE",
+        "NIRF 2026",
+        "NIRF 2025",
+        "NIRF Engineering",
+        "NIRF Overall",
+        "NIRF Innovation",
+        "Ministry of Education",
+        "MoE ranking",
+        "higher education ranking India",
+        "MSAJCE ranking",
+        "NIRF PDF download",
+        "engineering college ranking"
+      ],
+      "overlap_text": "",
+      "token_count": 320,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_nirf.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "National Institutional Ranking Framework (NIRF) — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "3 NIRF categories, NIRF 2026, NIRF 2025"
+    },
+    {
+      "chunk_id": "msajce_nirf_chunk_02",
+      "section": "NIRF 2024 & NIRF 2023 Document Links — Complete Year-wise Table",
+      "source_url": "https://www.msajce-edu.in/nirf.php",
+      "context": "This chunk provides all NIRF 2024 and NIRF 2023 document download links for MSAJCE, and a complete consolidated year-wise table of all 10 NIRF documents from 2023 to 2026.",
+      "text": "NIRF 2024 Documents: NIRF 2024 Engineering: https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2024.pdf. NIRF 2024 Overall: https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2024.pdf. Note: NIRF 2024 does not have a separate Innovation submission listed on the page. NIRF 2023 Documents: NIRF 2023 Engineering: https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2023.pdf. NIRF 2023 Overall: https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2023.pdf. Note: NIRF 2023 does not have a separate Innovation submission listed on the page. Complete Year-wise Summary of All NIRF Documents (2023-2026): Year 2026 — Engineering: https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2026.pdf | Overall: https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2026.pdf | Innovation: https://www.msajce-edu.in/uploads/nift/MSAJCE-INNOV-2026.pdf. Year 2025 — Engineering: https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2025.pdf | Overall: https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2025.pdf | Innovation: https://www.msajce-edu.in/uploads/nift/MSAJCE-INNOV-2025.pdf. Year 2024 — Engineering: https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2024.pdf | Overall: https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2024.pdf | Innovation: Not listed. Year 2023 — Engineering: https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2023.pdf | Overall: https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2023.pdf | Innovation: Not listed. Total documents available: 10 PDFs across 4 years.",
+      "tables": [
+        {
+          "table_title": "NIRF 2024 — Document Downloads",
+          "headers": [
+            "Category",
+            "Download URL"
+          ],
+          "rows": [
+            [
+              "NIRF 2024 — Engineering",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2024.pdf"
+            ],
+            [
+              "NIRF 2024 — Overall",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2024.pdf"
+            ]
+          ]
+        },
+        {
+          "table_title": "NIRF 2023 — Document Downloads",
+          "headers": [
+            "Category",
+            "Download URL"
+          ],
+          "rows": [
+            [
+              "NIRF 2023 — Engineering",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2023.pdf"
+            ],
+            [
+              "NIRF 2023 — Overall",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2023.pdf"
+            ]
+          ]
+        },
+        {
+          "table_title": "Complete NIRF Document Directory — MSAJCE (2023–2026)",
+          "headers": [
+            "Year",
+            "Engineering PDF",
+            "Overall PDF",
+            "Innovation PDF"
+          ],
+          "rows": [
+            [
+              "2026",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2026.pdf",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2026.pdf",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-INNOV-2026.pdf"
+            ],
+            [
+              "2025",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2025.pdf",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2025.pdf",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-INNOV-2025.pdf"
+            ],
+            [
+              "2024",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2024.pdf",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2024.pdf",
+              "Not listed"
+            ],
+            [
+              "2023",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2023.pdf",
+              "https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2023.pdf",
+              "Not listed"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Where can I download MSAJCE NIRF 2024 report?",
+        "Where is the MSAJCE NIRF 2023 Engineering document?",
+        "How many years of NIRF data does MSAJCE have?",
+        "Does MSAJCE have NIRF Innovation submission for 2024?",
+        "What is the URL for MSAJCE NIRF 2023 Overall?",
+        "Where can I find all MSAJCE NIRF documents?",
+        "Has MSAJCE submitted NIRF data since 2023?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "10 total NIRF PDFs",
+          "4 years of NIRF data",
+          "2023 to 2026"
+        ]
+      },
+      "keywords": [
+        "NIRF 2024",
+        "NIRF 2023",
+        "NIRF Engineering download",
+        "NIRF Overall download",
+        "MSAJCE NIRF PDF",
+        "NIRF document",
+        "ranking framework",
+        "MSAJCE-ENGG-2024",
+        "MSAJCE-OVERALL-2023",
+        "MSAJCE-ENGG-2023",
+        "10 NIRF PDFs",
+        "4 years NIRF",
+        "NIRF history MSAJCE"
+      ],
+      "overlap_text": "NIRF 2026: Engineering — https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2026.pdf | Overall — https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2026.pdf | Innovation — https://www.msajce-edu.in/uploads/nift/MSAJCE-INNOV-2026.pdf. NIRF 2025: Engineering — https://www.msajce-edu.in/uploads/nift/MSAJCE-ENGG-2025.pdf | Overall — https://www.msajce-edu.in/uploads/nift/MSAJCE-OVERALL-2025.pdf | Innovation — https://www.msajce-edu.in/uploads/nift/MSAJCE-INNOV-2025.pdf.",
+      "token_count": 380,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_nirf.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "National Institutional Ranking Framework (NIRF) — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "10 total NIRF PDFs, 4 years of NIRF data, 2023 to 2026"
+    },
+    {
+      "chunk_id": "msajce_nirf_chunk_03",
+      "section": "Related Accreditation Links & General Contact Information",
+      "source_url": "https://www.msajce-edu.in/nirf.php",
+      "context": "This chunk covers all related accreditation and compliance links (NAAC, IQAC, ARIIA, Mandatory Disclosure) that appear alongside the NIRF page, plus complete MSAJCE general contact details.",
+      "text": "Related Accreditation & Compliance Links on NIRF Page: NAAC: https://www.msajce-edu.in/naac.php. IQAC: https://www.msajce-edu.in/iqac.php. NIRF: https://www.msajce-edu.in/nirf.php. ARIIA Certificate 2021: https://www.msajce-edu.in/uploads/ariia/ARIIA-2021-CERTIFICATE.pdf. Anna University Approval: https://www.msajce-edu.in/uploads/AnnaUnivApproval.pdf. AICTE Approval: https://www.msajce-edu.in/uploads/AICTE-APPROVAL.pdf. Code of Conduct: https://www.msajce-edu.in/uploads/naac/cdeofconduct.pdf. Best Practices: https://www.msajce-edu.in/uploads/naac/bestpractices.pdf. Mandatory Disclosure: http://msajce-edu.in/uploads/MandatoryDisclosure.pdf. Institutional Distinctiveness: http://msajce-edu.in/uploads/naac/7.3/7.3LH.pdf. Annual Report AY2023-2024: https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf. Online Admission: https://enrollonline.co.in/Registration/Apply/MSAJCE. Online Fee Payment: https://www.feepayr.com/. College Management System: https://cims.mastersofterp.in/. ESE Timetable June 2025: https://www.msajce-edu.in/ESETT-June25.php. Exam Results: https://results.msajce-edu.in/. AICTE Scholarship Schemes: https://www.aicte.gov.in/schemes/students-development-schemes. Grievance Cell: https://www.msajce-edu.in/grievanceredressalcommittee.php. Email: grievance@msajce-edu.in. General Contact — MSAJCE: Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103. Phone: +91 99400 04500. Email: msajce.office@gmail.com. Website: www.msajce-edu.in.",
+      "tables": [
+        {
+          "table_title": "Accreditation & Compliance Links",
+          "headers": [
+            "Document / Page",
+            "URL"
+          ],
+          "rows": [
+            [
+              "NAAC Page",
+              "https://www.msajce-edu.in/naac.php"
+            ],
+            [
+              "IQAC Page",
+              "https://www.msajce-edu.in/iqac.php"
+            ],
+            [
+              "NIRF Page",
+              "https://www.msajce-edu.in/nirf.php"
+            ],
+            [
+              "ARIIA Certificate 2021",
+              "https://www.msajce-edu.in/uploads/ariia/ARIIA-2021-CERTIFICATE.pdf"
+            ],
+            [
+              "Anna University Approval",
+              "https://www.msajce-edu.in/uploads/AnnaUnivApproval.pdf"
+            ],
+            [
+              "AICTE Approval",
+              "https://www.msajce-edu.in/uploads/AICTE-APPROVAL.pdf"
+            ],
+            [
+              "Code of Conduct",
+              "https://www.msajce-edu.in/uploads/naac/cdeofconduct.pdf"
+            ],
+            [
+              "Best Practices",
+              "https://www.msajce-edu.in/uploads/naac/bestpractices.pdf"
+            ],
+            [
+              "Mandatory Disclosure",
+              "http://msajce-edu.in/uploads/MandatoryDisclosure.pdf"
+            ],
+            [
+              "Institutional Distinctiveness",
+              "http://msajce-edu.in/uploads/naac/7.3/7.3LH.pdf"
+            ],
+            [
+              "Annual Report AY2023-2024",
+              "https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf"
+            ],
+            [
+              "Online Admission",
+              "https://enrollonline.co.in/Registration/Apply/MSAJCE"
+            ],
+            [
+              "Fee Payment",
+              "https://www.feepayr.com/"
+            ],
+            [
+              "Exam Results",
+              "https://results.msajce-edu.in/"
+            ],
+            [
+              "AICTE Scholarship",
+              "https://www.aicte.gov.in/schemes/students-development-schemes"
+            ],
+            [
+              "Grievance Cell",
+              "https://www.msajce-edu.in/grievanceredressalcommittee.php"
+            ]
+          ]
+        },
+        {
+          "table_title": "MSAJCE General Contact",
+          "headers": [
+            "Field",
+            "Details"
+          ],
+          "rows": [
+            [
+              "Address",
+              "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+            ],
+            [
+              "Phone",
+              "+91 99400 04500"
+            ],
+            [
+              "Email",
+              "msajce.office@gmail.com"
+            ],
+            [
+              "Website",
+              "www.msajce-edu.in"
+            ],
+            [
+              "Grievance Email",
+              "grievance@msajce-edu.in"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Is MSAJCE accredited by NAAC?",
+        "What is the MSAJCE ARIIA certificate link?",
+        "Where is the MSAJCE mandatory disclosure document?",
+        "What is the MSAJCE AICTE approval document?",
+        "What is the contact number of MSAJCE?",
+        "What is the email of MSAJCE?",
+        "Where is MSAJCE located?",
+        "How to apply for admission to MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com",
+          "grievance@msajce-edu.in"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": []
+      },
+      "keywords": [
+        "NAAC",
+        "IQAC",
+        "ARIIA",
+        "mandatory disclosure",
+        "AICTE approval",
+        "Anna University approval",
+        "code of conduct",
+        "best practices",
+        "institutional distinctiveness",
+        "annual report",
+        "MSAJCE contact",
+        "99400 04500",
+        "msajce.office@gmail.com",
+        "grievance",
+        "online admission",
+        "exam results",
+        "AICTE scholarship",
+        "accreditation links"
+      ],
+      "overlap_text": "Complete NIRF Directory: 2026 — Engineering, Overall, Innovation. 2025 — Engineering, Overall, Innovation. 2024 — Engineering, Overall. 2023 — Engineering, Overall. Total: 10 NIRF PDFs. All at https://www.msajce-edu.in/uploads/nift/ with naming convention MSAJCE-ENGG-YYYY.pdf, MSAJCE-OVERALL-YYYY.pdf, MSAJCE-INNOV-YYYY.pdf.",
+      "token_count": 350,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "critical",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_nirf.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "National Institutional Ranking Framework (NIRF) — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com, grievance@msajce-edu.in",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": ""
+    }
+  ]
+}

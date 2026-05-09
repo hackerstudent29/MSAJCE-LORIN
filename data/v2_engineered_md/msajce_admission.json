@@ -1,0 +1,13 @@
+{
+  "source": "msajce_admission.md",
+  "sections": [
+    {
+      "header": "ELIGIBILITY FOR STUDENTS FROM OTHER STATES (Andhra Pradesh, Telangana, Kerala & all Northern States)",
+      "level": 3,
+      "text": "Selection is based on qualifying marks (Q) in Mathematics, Physics and Chemistry at Plus Two / Intermediate level:\n\nFormula:  $Q = (\\text{Mathematics} \\div 2) + ((\\text{Physics} + \\text{Chemistry}) \\div 4)$",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    }
+  ]
+}

@@ -1,0 +1,1329 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Artificial Intelligence and Data Science — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/aids.php",
+    "sections_covered": [
+      "Department Overview — AI and Data Science",
+      "Career Opportunities for AIDS Graduates",
+      "B.Tech AIDS Programme Details — Duration, Seats, Eligibility, Syllabus",
+      "Department Vision and Mission",
+      "Programme Educational Objectives (PEOs)",
+      "Programme Specific Outcomes (PSOs)",
+      "Programme Outcomes (PO1–PO12)",
+      "AI and Data Science Growth in India 2025–2030 — Key Drivers",
+      "Key AI and Data Science Job Roles in India 2025–2030",
+      "Industry-Specific AI and Data Science Job Trends",
+      "Expected Growth and Salary Trends",
+      "Skills and Certifications for AI and Data Science Jobs",
+      "Faculty List with Specializations",
+      "Department Facilities / Labs",
+      "Academics — 2021 Regulation Course Materials",
+      "Placement Details",
+      "Contact Information"
+    ],
+    "scraped_date": "2026-04-28",
+    "total_chunks": 10,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_aids",
+    "version": "v2",
+    "source_file": "msajce_aids.json"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_aids_chunk_01",
+      "section": "Department Overview — Artificial Intelligence and Data Science (AIDS)",
+      "source_url": "https://www.msajce-edu.in/aids.php#tab1",
+      "context": "Overview of the B.Tech Artificial Intelligence and Data Science (AIDS) programme at MSAJCE, explaining what AI and Data Science are, the programme focus, and career opportunities for graduates.",
+      "text": "Department of Artificial Intelligence and Data Science — MSAJCE\n\nArtificial Intelligence (AI) is the process of creating machines to think like humans. AI is a term used to describe the simulation of human intelligence processes in machines. It typically involves sophisticated algorithms that enable computers to perform tasks that normally require human intelligence, such as visual perception, speech recognition and decision making.\n\nData Science is a field of knowledge which applies advanced statistical and mathematical techniques to large datasets in order to extract knowledge from them. Data can be structured like a spreadsheet or unstructured like text or video data. Data science is the application of techniques from statistics, mathematics, computer programming and other fields to solve real-world problems using information technology.\n\nDue to the exploration of the Internet, AI and Data Science deliver data-driven solutions using computational principles, methods, and systems for extracting information from data and modern computational systems that reveal capabilities of insight, way of thinking, learning, and action that are typical of human intelligence.\n\nB.Tech Artificial Intelligence and Data Science (AIDS) has emerged as one of the most high-growth, dynamic, and lucrative careers in technology since 2015. This course aims at providing core technologies such as artificial intelligence, data mining, and data modeling, and also gives intensive inputs in areas of machine learning and big data analytics. Students gain cross-disciplinary skills across fields such as statistics, computer science, machine learning, and logic. Career opportunities exist in healthcare, business, e-commerce, social networking companies, climatology, biotechnology, genetics, and other important areas. The major focus of this programme is to equip students with statistical, mathematical reasoning, machine learning, knowledge discovery, and visualization skills.\n\nThe programme also deals with core principles and ethical issues in Data Science and AI, and motivates students to explore cutting-edge applications related to Big Data, Neural Networks, and Deep Learning. Applications like Alexa/Siri, Erica/Sophia, Tesla's driverless car, Chat-bot, etc. are becoming common. AI-powered Robots can take over human life-endangering jobs like firefighting, deep-sea oil drilling, and mining works with high mortality rates.\n\nCareer Opportunities for AIDS Graduates (across Manufacturing, Software, Research, Education, Defense, Banking & Finance, e-Commerce, Transport and Health Science):\n• Software Engineer\n• Software Tester\n• Application Developer\n• Information and Multimedia Designer\n• Medical Information Scientist\n• Technology Developer\n• IT Specialist\n• Technical Consultant\n• Quality Analyst\n• Information Network Manager\n• Data Quality Analyst",
+      "tables": [],
+      "possible_questions": [
+        "What is B.Tech Artificial Intelligence and Data Science at MSAJCE?",
+        "What is the AIDS programme about at MSAJCE?",
+        "What is Artificial Intelligence in the context of MSAJCE AIDS department?",
+        "What is Data Science at MSAJCE?",
+        "What career opportunities are available after AIDS from MSAJCE?",
+        "What industries can AIDS graduates from MSAJCE work in?",
+        "What is the focus of the B.Tech AIDS programme at MSAJCE?",
+        "What real-world AI applications are relevant to the AIDS course at MSAJCE?",
+        "What skills will students gain from the AIDS programme at MSAJCE?",
+        "Is AIDS a good programme in terms of career growth?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": [
+          "since 2015 high-growth career"
+        ]
+      },
+      "keywords": [
+        "B.Tech AIDS",
+        "Artificial Intelligence Data Science",
+        "AIDS MSAJCE",
+        "machine learning",
+        "big data analytics",
+        "data mining",
+        "neural networks",
+        "deep learning",
+        "AI career opportunities",
+        "data scientist",
+        "software engineer AIDS",
+        "healthcare AI",
+        "e-commerce AI",
+        "biotechnology AI",
+        "cross-disciplinary skills",
+        "Alexa Siri AI",
+        "Tesla driverless car",
+        "chatbot AI"
+      ],
+      "overlap_text": "",
+      "token_count": 490,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_aids.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Artificial Intelligence and Data Science — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": "since 2015 high-growth career"
+    },
+    {
+      "chunk_id": "msajce_aids_chunk_02",
+      "section": "B.Tech AIDS Programme Details, Vision, Mission and OBE (PEOs, PSOs, POs)",
+      "source_url": "https://www.msajce-edu.in/aids.php#tab1",
+      "context": "Complete programme details for B.Tech AIDS at MSAJCE including duration, seats, eligibility, syllabus, higher studies scope, department Vision and Mission, PEOs, PSOs, and all 12 Programme Outcomes.",
+      "text": "B.Tech — Artificial Intelligence and Data Science (AIDS)\n\nDuration: 4 years (Regular) / 3 years (Lateral Entry)\nNo. of Semesters: 8 (Regular) / 6 (Lateral Entry)\nIntake / No. of Seats: Total - 30 (Government - 15, Management - 15)\nEligibility: 10+2 system of Education. Must have secured a pass in Physics, Chemistry and Mathematics in the qualifying examination.\nCurriculum & Syllabus: 2021 Regulation — https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf\nCareer Opportunities: Public Sector Undertaking | Government Sector\nScope for Higher Studies: M.E. / M.Tech. / M.B.A.\n\nVision: To be a centre of excellence for transforming students into proficient Artificial Intelligence and Data Science using through sustainable practices.\n\nMission:\nM1. Impart core fundamental knowledge and necessary skills in Artificial Intelligence and Data Science through innovative teaching and learning methodology.\nM2. Inculcate critical thinking, ethics, lifelong learning and creativity needed for industry and society.\nM3. Cultivate the students with all-round competencies, for career, higher education and self-employability.\n\nProgramme Educational Objectives (PEOs):\nPEO1: Graduates will be prepared for analysing, designing, developing and testing the software solutions and products with creativity and sustainability.\nPEO2: Graduates will be skilled in the use of modern tools for critical problem solving and analyzing industrial and societal requirements.\nPEO3: Graduates will be prepared with managerial and leadership skills for career and starting up own firms.\n\nProgram Specific Outcomes (PSOs):\nPSO1: Develop creative solutions by adapting emerging technologies / tools for real time applications of Industry.\nPSO2: Apply the acquired knowledge to develop software solutions and innovative mobile apps for various automation applications.\n\nProgramme Outcomes (POs):\nPO1. Engineering Knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.\nPO2. Problem Analysis: Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles.\nPO3. Design/Development Of Solutions: Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health, safety, cultural, societal, and environmental considerations.\nPO4. Conduct Investigations of Complex Problems: Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of information to provide valid conclusions.\nPO5. Modern Tool Usage: Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities.\nPO6. The Engineer and Society: Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and consequent responsibilities relevant to professional engineering practice.\nPO7. Environment and Sustainability: Understand the impact of professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.\nPO8. Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.\nPO9. Individual and Team Work: Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.\nPO10. Communication: Communicate effectively on complex engineering activities with the engineering community and with society at large.\nPO11. Project Management and Finance: Demonstrate knowledge and understanding of engineering and management principles and apply these to one's own work.\nPO12. Life-long Learning: Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.",
+      "tables": [
+        {
+          "table_title": "B.Tech AIDS Programme Summary",
+          "headers": [
+            "Parameter",
+            "Details"
+          ],
+          "rows": [
+            [
+              "Programme",
+              "B.Tech Artificial Intelligence and Data Science (AIDS)"
+            ],
+            [
+              "Duration",
+              "4 years (Regular) / 3 years (Lateral Entry)"
+            ],
+            [
+              "No. of Semesters",
+              "8 (Regular) / 6 (Lateral Entry)"
+            ],
+            [
+              "Total Seats",
+              "30"
+            ],
+            [
+              "Government Quota",
+              "15"
+            ],
+            [
+              "Management Quota",
+              "15"
+            ],
+            [
+              "Eligibility",
+              "10+2 with Physics, Chemistry, Mathematics pass"
+            ],
+            [
+              "Syllabus",
+              "2021 Regulation"
+            ],
+            [
+              "Higher Studies",
+              "M.E. / M.Tech. / M.B.A."
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "How many seats are available in B.Tech AIDS at MSAJCE?",
+        "What is the duration of B.Tech AIDS at MSAJCE?",
+        "How many government quota seats are in AIDS at MSAJCE?",
+        "What is the eligibility for B.Tech AIDS at MSAJCE?",
+        "What is the vision of the AIDS department at MSAJCE?",
+        "What are the PEOs for AIDS at MSAJCE?",
+        "What are the programme outcomes for AIDS at MSAJCE?",
+        "Is lateral entry available for AIDS at MSAJCE?",
+        "What higher studies can I pursue after B.Tech AIDS from MSAJCE?",
+        "What regulation does B.Tech AIDS follow at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": [
+          "30 total seats",
+          "15 government quota",
+          "15 management quota",
+          "4 years duration",
+          "8 semesters",
+          "3 PEOs",
+          "2 PSOs",
+          "12 POs"
+        ]
+      },
+      "keywords": [
+        "B.Tech AIDS seats",
+        "AIDS admission MSAJCE",
+        "AIDS government quota 15",
+        "AIDS management quota 15",
+        "2021 regulation AIDS",
+        "AIDS eligibility",
+        "AIDS vision MSAJCE",
+        "AIDS mission MSAJCE",
+        "PEO AIDS",
+        "PSO AIDS",
+        "programme outcomes AIDS",
+        "OBE AIDS",
+        "lateral entry AIDS",
+        "M.E. after AIDS",
+        "M.Tech after AIDS",
+        "MBA after AIDS"
+      ],
+      "overlap_text": "B.Tech AIDS at MSAJCE focuses on artificial intelligence, data mining, data modeling, machine learning, and big data analytics. Career opportunities span Software Engineer, Software Tester, Application Developer, Medical Information Scientist, Technology Developer, IT Specialist, Technical Consultant, Quality Analyst, Information Network Manager, Data Quality Analyst — across Manufacturing, Software, Research, Education, Defense, Banking & Finance, e-Commerce, Transport and Health Science.",
+      "token_count": 540,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_aids.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Artificial Intelligence and Data Science — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": "30 total seats, 15 government quota, 15 management quota, 4 years duration, 8 semesters, 3 PEOs, 2 PSOs, 12 POs"
+    },
+    {
+      "chunk_id": "msajce_aids_chunk_03",
+      "section": "AI and Data Science Growth in India 2025–2030 — Key Drivers and Job Roles",
+      "source_url": "https://www.msajce-edu.in/aids.php#tab3",
+      "context": "Analysis of employment growth in AI and Data Science in India for 2025–2030, key drivers of growth, and detailed profiles of the top 8 in-demand AI and Data Science job roles.",
+      "text": "AI and Data Science Growth in India by 2025–2030\n\nThe Artificial Intelligence (AI) and Data Science sectors in India are expected to have explosive growth over the next five years. AI-driven solutions and data analytics are driving better decisions across all sectors, and the demand for professionals in these fields is expected to grow significantly.\n\nKey Drivers:\n1. Increased AI Adoption Across Industries — Healthcare, Finance, E-commerce, Telecommunications, Automotive, and Manufacturing. AI will be used for Predictive analytics, Personalized services, Data-driven decision-making, and Automation. AI-driven solutions in core business functions (HR, finance, customer service).\n2. Government Support and Initiatives — Digital India, National AI Strategy, and the National AI Mission initiatives boost AI research, startups, and adoption across public services. India aims to be a global leader in AI for Smart cities, Healthcare, and Agriculture.\n3. Rising Demand for Data-Driven Decision Making — Customer segmentation, Fraud detection, and Supply chain optimization.\n4. Growth in AI-Powered Startups — AI startups expected to double in the next few years, creating job opportunities for AI engineers, data scientists, and product managers.\n5. Integration of AI into Business Functions — Finance, retail, e-commerce, and manufacturing increasingly adopting AI-based automation to streamline operations, reduce costs, and offer personalized experiences.\n\nKey AI and Data Science Job Roles in India (2025–2030):\n\n1. Data Scientist\nRoles: Analyze large datasets to derive actionable insights, build predictive models, help organizations make data-driven decisions.\nSkills: Python, R, SQL, Machine Learning Algorithms, Statistical analysis, Data visualization (Tableau, Power BI), Deep learning.\nDemand: High demand across healthcare, finance, retail, and e-commerce.\n\n2. Machine Learning Engineer\nRoles: Build and deploy machine learning models, implement algorithms, optimize model performance for real-world applications.\nSkills: Python, TensorFlow, Keras, PyTorch, Neural networks, Cloud platforms (AWS, Azure, Google Cloud), Algorithm optimization.\nDemand: Rising, especially in startups and tech giants as companies adopt more AI solutions.\n\n3. AI Research Scientist\nRoles: Conduct cutting-edge research in AI; focus on Deep learning, Reinforcement learning, Computer vision, and NLP.\nSkills: Machine learning algorithms, Python, Mathematical modeling, Research publications, Deep learning frameworks.\nDemand: High demand due to growing AI investment from global tech companies and research labs.\n\n4. Data Analyst\nRoles: Collect, process, and analyze data to uncover trends, create dashboards, and support decision-making with data-driven insights.\nSkills: Excel, SQL, Python, Tableau, Power BI, R, SAS.\nDemand: Increasing in finance, retail, and healthcare as companies focus on data-driven decision-making.\n\n5. Data Engineer\nRoles: Design, construct, and maintain large-scale data pipelines; work with big data technologies to ensure data is stored, processed, and accessible.\nSkills: SQL, Python, Hadoop, Spark, Kafka, AWS, Google Cloud, ETL processes.\nDemand: Rising with the growth of big data and cloud computing in data-driven companies.\n\n6. AI Product Manager\nRoles: Oversee the development and deployment of AI-powered products; manage cross-functional teams of engineers and data scientists.\nSkills: Product lifecycle management, Agile methodology, Machine learning, Project management, Business strategy.\nDemand: Rising with AI product development across industries.\n\n7. Business Intelligence (BI) Developer\nRoles: Design and develop BI tools to collect, store, and analyze business data; help businesses make strategic decisions using AI-driven insights.\nSkills: SQL, Power BI, Tableau, data visualization, reporting tools, Python.\nDemand: Increasing as companies shift to data-driven strategies, particularly in e-commerce and retail.\n\n8. Natural Language Processing (NLP) Engineer\nRoles: Work on algorithms and models that allow machines to process and understand human language, like chatbots, virtual assistants, and sentiment analysis.\nSkills: Python, NLP frameworks (NLTK, SpaCy, Hugging Face), Machine learning, Deep learning, Text mining.\nDemand: Growing in e-commerce, finance, and telecommunications with the rise of AI chatbots, voice assistants, and text analytics.",
+      "tables": [
+        {
+          "table_title": "Key AI and Data Science Job Roles 2025–2030",
+          "headers": [
+            "Role",
+            "Core Skills",
+            "High Demand Sectors"
+          ],
+          "rows": [
+            [
+              "Data Scientist",
+              "Python, R, SQL, Tableau, Power BI, ML, Deep Learning",
+              "Healthcare, Finance, Retail, E-commerce"
+            ],
+            [
+              "Machine Learning Engineer",
+              "Python, TensorFlow, Keras, PyTorch, AWS, Azure",
+              "Startups, Tech Giants"
+            ],
+            [
+              "AI Research Scientist",
+              "ML Algorithms, Python, Deep Learning frameworks, NLP",
+              "Tech companies, Research Labs"
+            ],
+            [
+              "Data Analyst",
+              "Excel, SQL, Python, Tableau, Power BI, R, SAS",
+              "Finance, Retail, Healthcare"
+            ],
+            [
+              "Data Engineer",
+              "SQL, Python, Hadoop, Spark, Kafka, AWS, ETL",
+              "Data-driven Companies, Cloud"
+            ],
+            [
+              "AI Product Manager",
+              "Agile, ML, Product Lifecycle, Project Management",
+              "All AI Product Companies"
+            ],
+            [
+              "BI Developer",
+              "SQL, Power BI, Tableau, Python, Reporting Tools",
+              "E-commerce, Retail"
+            ],
+            [
+              "NLP Engineer",
+              "Python, NLTK, SpaCy, Hugging Face, ML, Deep Learning",
+              "E-commerce, Finance, Telecom"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the job market for AI and Data Science graduates in India 2025-2030?",
+        "What is the role of a Data Scientist and what skills are needed?",
+        "What does a Machine Learning Engineer do?",
+        "What is an NLP Engineer and what do they work on?",
+        "What are the skills needed for a Data Engineer role?",
+        "What is a Business Intelligence Developer?",
+        "What is an AI Product Manager?",
+        "What are the key drivers of AI employment growth in India?",
+        "What government initiatives are supporting AI jobs in India?",
+        "How will AI startups affect job opportunities for AIDS graduates?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "India"
+        ],
+        "numbers": [
+          "8 key job roles",
+          "2025-2030 forecast"
+        ]
+      },
+      "keywords": [
+        "Data Scientist",
+        "Machine Learning Engineer",
+        "AI Research Scientist",
+        "Data Analyst",
+        "Data Engineer",
+        "AI Product Manager",
+        "BI Developer",
+        "NLP Engineer",
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "PyTorch",
+        "Tableau",
+        "Power BI",
+        "Hadoop",
+        "Spark",
+        "Kafka",
+        "NLTK",
+        "SpaCy",
+        "Hugging Face",
+        "Digital India",
+        "National AI Strategy",
+        "National AI Mission",
+        "AI startups India",
+        "data-driven decision making",
+        "AI 2025-2030 India"
+      ],
+      "overlap_text": "B.Tech AIDS: 30 total seats, 15 Government quota, 15 Management quota. Duration 4 years Regular / 3 years Lateral Entry, 8 semesters. Eligibility: 10+2 with Physics Chemistry Mathematics. Vision: Centre of excellence for proficient AI and Data Science using sustainable practices. Mission M1: Core knowledge in AI and DS. M2: Critical thinking and ethics. M3: All-round competencies.",
+      "token_count": 560,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_aids.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Artificial Intelligence and Data Science — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "India",
+      "entity_numbers": "8 key job roles, 2025-2030 forecast"
+    },
+    {
+      "chunk_id": "msajce_aids_chunk_04",
+      "section": "Industry-Specific AI Job Trends, Expected Salary Growth and Required Skills & Certifications",
+      "source_url": "https://www.msajce-edu.in/aids.php#tab3",
+      "context": "Industry-wise AI and Data Science job trends, expected salary ranges by experience level, CAGR of job market growth, and required skills and certifications for AIDS graduates.",
+      "text": "Industry-Specific AI and Data Science Job Trends:\n\n1. Healthcare Sector — Diagnostics, Personalized treatment, Drug discovery, Robot-assisted surgery, Bioinformatics, Healthcare data analysis, and Medical AI applications.\n2. Finance and Fintech — Fraud detection, Credit scoring, Automated trading, and Personalized financial services. Employers: Banks, Insurance companies, and Fintech startups.\n3. E-Commerce and Retail — Personalization, Dynamic pricing, Inventory optimization, and Recommendation systems.\n4. Automotive and Autonomous Vehicles — Autonomous driving, Vehicle-to-everything (V2X) communication, Predictive maintenance, Computer vision, Sensor data processing, and AI-powered automotive solutions.\n5. Telecommunication Sector — Network optimization, Customer service Chatbots, Predictive maintenance, 5G, IoT, and Edge computing.\n\nExpected Growth in AI and Data Science Jobs:\n\nJob Market Growth: Expected CAGR (Compound Annual Growth Rate) of 30–40%. By 2030, India could see hundreds of thousands of AI and data science job openings in Tech companies, Startups, and Industries adopting data-driven transformation.\n\nSalary Trends:\n- Entry-level roles (0–2 years experience): Rs. 6 – Rs. 12 Lakhs per annum\n- Mid-level roles (3–5 years experience): Rs. 12 – Rs. 25 Lakhs per annum\n- Senior-level roles (5+ years experience): Rs. 25 – Rs. 50 Lakhs per annum\n- AI Research Scientists: Rs. 30 – Rs. 70 Lakhs per annum\n\nSkills and Certifications Required for AI and Data Science Jobs:\n\nTechnical Skills:\n1. Python, R, and SQL for data manipulation and machine learning algorithms.\n2. Machine learning frameworks: TensorFlow, Keras, and PyTorch.\n3. Cloud platforms (AWS, Google Cloud, Azure) for deploying AI models.\n4. Big data tools such as Hadoop, Spark, and Kafka.\n5. Advanced certifications from platforms like Coursera, edX, and Udacity.\n\nRecommended Certifications:\n1. Google Professional Machine Learning Engineer\n2. AWS Certified Machine Learning Specialty\n3. Data Science Specialization by IBM\n4. Deep Learning Specialization by Andrew Ng",
+      "tables": [
+        {
+          "table_title": "AI and Data Science Salary Trends in India",
+          "headers": [
+            "Experience Level",
+            "Annual Salary Range"
+          ],
+          "rows": [
+            [
+              "Entry-level (0–2 years)",
+              "Rs. 6 – Rs. 12 Lakhs per annum"
+            ],
+            [
+              "Mid-level (3–5 years)",
+              "Rs. 12 – Rs. 25 Lakhs per annum"
+            ],
+            [
+              "Senior-level (5+ years)",
+              "Rs. 25 – Rs. 50 Lakhs per annum"
+            ],
+            [
+              "AI Research Scientist",
+              "Rs. 30 – Rs. 70 Lakhs per annum"
+            ]
+          ]
+        },
+        {
+          "table_title": "Recommended AI and Data Science Certifications",
+          "headers": [
+            "Certification",
+            "Provider / Platform"
+          ],
+          "rows": [
+            [
+              "Google Professional Machine Learning Engineer",
+              "Google"
+            ],
+            [
+              "AWS Certified Machine Learning Specialty",
+              "Amazon Web Services"
+            ],
+            [
+              "Data Science Specialization",
+              "IBM (Coursera)"
+            ],
+            [
+              "Deep Learning Specialization",
+              "Andrew Ng (Coursera / deeplearning.ai)"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the salary for a Data Scientist in India?",
+        "What is the expected salary for an AI Research Scientist?",
+        "What is the salary of an entry-level AIDS graduate in India?",
+        "What is the CAGR of AI job market growth in India?",
+        "What certifications are recommended for AI and Data Science jobs?",
+        "What is the Google Professional Machine Learning Engineer certification?",
+        "What is the AWS Certified Machine Learning Specialty?",
+        "What is the Deep Learning Specialization by Andrew Ng?",
+        "What AI skills are most in demand for jobs?",
+        "How is AI used in the healthcare and automotive sectors?"
+      ],
+      "entities": {
+        "persons": [
+          "Andrew Ng — Deep Learning Specialization"
+        ],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "India"
+        ],
+        "numbers": [
+          "30-40% CAGR AI job market growth",
+          "Rs. 6-12 Lakhs entry-level salary",
+          "Rs. 12-25 Lakhs mid-level salary",
+          "Rs. 25-50 Lakhs senior-level salary",
+          "Rs. 30-70 Lakhs AI Research Scientist salary"
+        ]
+      },
+      "keywords": [
+        "AI salary India",
+        "data science salary India",
+        "AI Research Scientist salary",
+        "CAGR 30-40% AI jobs",
+        "Google ML Engineer certification",
+        "AWS Machine Learning certification",
+        "IBM Data Science Specialization",
+        "Andrew Ng Deep Learning",
+        "Coursera AI certification",
+        "edX AI",
+        "Udacity AI",
+        "healthcare AI jobs",
+        "fintech AI jobs",
+        "autonomous vehicles AI",
+        "5G IoT AI telecom",
+        "TensorFlow Keras PyTorch",
+        "Hadoop Spark Kafka",
+        "Python R SQL AI skills"
+      ],
+      "overlap_text": "Key AI and Data Science Job Roles 2025-2030: Data Scientist (Python, R, SQL, Tableau, Power BI, ML, Deep Learning), Machine Learning Engineer (TensorFlow, Keras, PyTorch, AWS, Azure), AI Research Scientist (ML, Python, Deep Learning, NLP), Data Analyst (Excel, SQL, Tableau, Power BI), Data Engineer (Hadoop, Spark, Kafka, ETL), AI Product Manager, BI Developer (SQL, Power BI, Tableau), NLP Engineer (NLTK, SpaCy, Hugging Face).",
+      "token_count": 480,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_aids.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Artificial Intelligence and Data Science — Complete Data Extract for RAG Model",
+      "entity_persons": "Andrew Ng — Deep Learning Specialization",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "India",
+      "entity_numbers": "30-40% CAGR AI job market growth, Rs. 6-12 Lakhs entry-level salary, Rs. 12-25 Lakhs mid-level salary, Rs. 25-50 Lakhs senior-level salary, Rs. 30-70 Lakhs AI Research Scientist salary"
+    },
+    {
+      "chunk_id": "msajce_aids_chunk_05",
+      "section": "Faculty List with Specializations",
+      "source_url": "https://www.msajce-edu.in/aids.php",
+      "context": "Complete faculty list of the Artificial Intelligence and Data Science (AIDS) department at MSAJCE, with qualifications, designations, and areas of specialization.",
+      "text": "Faculty — Artificial Intelligence and Data Science Department (AIDS) — MSAJCE\n\nName | Qualification | Designation | Area of Specialization\nDr. NAGASUBRAMANIAN R | M.E., Ph.D. | Head - PG | Computer Science Engineering\nDr. SUBRAMANIAN P | M.E., Ph.D. | Head - UG | Wireless Sensor Networking and Image Processing\nDr. PREMALATHA G | M.E., Ph.D. | Associate Professor | Image Processing and Machine Learning\nMrs. SARANYA V | M.Tech., (Ph.D) | Assistant Professor | IOT and Cloud Computing\nMrs. SASIKALA L | M.E. | Assistant Professor | Computer Science and Engineering\nMrs. KIRUTHIKA S | M.E. | Assistant Professor | Computer Science and Engineering\nMrs. ASRIN MAHMOOTHA A | M.E. | Assistant Professor | Computer Science Engineering\nMr. PRAVEENKUMAR P | M.E. | Assistant Professor | Computer Science Engineering\nMr. RAJAKUMAR B | M.Tech., (Ph.D) | Assistant Professor | IOT, AI, NLP and Image Processing\nMr. RAJASEKAR R | M.E., (Ph.D) | Assistant Professor | IOT, Network Security",
+      "tables": [
+        {
+          "table_title": "AIDS Department Faculty",
+          "headers": [
+            "Name",
+            "Qualification",
+            "Designation",
+            "Area of Specialization"
+          ],
+          "rows": [
+            [
+              "Dr. NAGASUBRAMANIAN R",
+              "M.E., Ph.D.",
+              "Head - PG",
+              "Computer Science Engineering"
+            ],
+            [
+              "Dr. SUBRAMANIAN P",
+              "M.E., Ph.D.",
+              "Head - UG",
+              "Wireless Sensor Networking and Image Processing"
+            ],
+            [
+              "Dr. PREMALATHA G",
+              "M.E., Ph.D.",
+              "Associate Professor",
+              "Image Processing and Machine Learning"
+            ],
+            [
+              "Mrs. SARANYA V",
+              "M.Tech., (Ph.D)",
+              "Assistant Professor",
+              "IOT and Cloud Computing"
+            ],
+            [
+              "Mrs. SASIKALA L",
+              "M.E.",
+              "Assistant Professor",
+              "Computer Science and Engineering"
+            ],
+            [
+              "Mrs. KIRUTHIKA S",
+              "M.E.",
+              "Assistant Professor",
+              "Computer Science and Engineering"
+            ],
+            [
+              "Mrs. ASRIN MAHMOOTHA A",
+              "M.E.",
+              "Assistant Professor",
+              "Computer Science Engineering"
+            ],
+            [
+              "Mr. PRAVEENKUMAR P",
+              "M.E.",
+              "Assistant Professor",
+              "Computer Science Engineering"
+            ],
+            [
+              "Mr. RAJAKUMAR B",
+              "M.Tech., (Ph.D)",
+              "Assistant Professor",
+              "IOT, AI, NLP and Image Processing"
+            ],
+            [
+              "Mr. RAJASEKAR R",
+              "M.E., (Ph.D)",
+              "Assistant Professor",
+              "IOT, Network Security"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Who are the faculty in the AIDS department at MSAJCE?",
+        "Who is the Head of the AIDS department at MSAJCE?",
+        "Who is Dr. Nagasubramanian R at MSAJCE?",
+        "Who is the UG Head of the AIDS department?",
+        "Who teaches AI and NLP in the AIDS department at MSAJCE?",
+        "What is Dr. Premalatha G's specialization at MSAJCE?",
+        "How many faculty members are there in the AIDS department at MSAJCE?",
+        "Who specializes in IOT and Cloud Computing in AIDS at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. NAGASUBRAMANIAN R — Head PG, Computer Science Engineering",
+          "Dr. SUBRAMANIAN P — Head UG, Wireless Sensor Networking and Image Processing",
+          "Dr. PREMALATHA G — Associate Professor, Image Processing and Machine Learning",
+          "Mrs. SARANYA V — Assistant Professor, IOT and Cloud Computing",
+          "Mrs. SASIKALA L — Assistant Professor, Computer Science and Engineering",
+          "Mrs. KIRUTHIKA S — Assistant Professor, Computer Science and Engineering",
+          "Mrs. ASRIN MAHMOOTHA A — Assistant Professor, Computer Science Engineering",
+          "Mr. PRAVEENKUMAR P — Assistant Professor, Computer Science Engineering",
+          "Mr. RAJAKUMAR B — Assistant Professor, IOT AI NLP Image Processing",
+          "Mr. RAJASEKAR R — Assistant Professor, IOT Network Security"
+        ],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "10 faculty members"
+        ]
+      },
+      "keywords": [
+        "AIDS faculty MSAJCE",
+        "Dr Nagasubramanian R",
+        "Dr Subramanian P",
+        "Dr Premalatha G",
+        "AIDS HOD",
+        "UG head AIDS",
+        "PG head AIDS",
+        "Saranya V IOT cloud",
+        "Rajakumar B AI NLP",
+        "Rajasekar R IOT network security",
+        "image processing machine learning faculty",
+        "wireless sensor networking",
+        "AIDS department professors"
+      ],
+      "overlap_text": "Industry-Specific AI Trends: Healthcare (diagnostics, drug discovery, medical AI), Finance and Fintech (fraud detection, credit scoring, automated trading), E-Commerce (personalization, recommendation systems), Automotive (autonomous driving, V2X, computer vision), Telecom (5G, IoT, edge computing). Salary: Entry-level Rs.6-12L, Mid-level Rs.12-25L, Senior Rs.25-50L, AI Research Scientist Rs.30-70L. CAGR 30-40%. Certifications: Google ML Engineer, AWS ML Specialty, IBM Data Science, Andrew Ng Deep Learning.",
+      "token_count": 420,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_aids.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Artificial Intelligence and Data Science — Complete Data Extract for RAG Model",
+      "entity_persons": "Dr. NAGASUBRAMANIAN R — Head PG, Computer Science Engineering, Dr. SUBRAMANIAN P — Head UG, Wireless Sensor Networking and Image Processing, Dr. PREMALATHA G — Associate Professor, Image Processing and Machine Learning, Mrs. SARANYA V — Assistant Professor, IOT and Cloud Computing, Mrs. SASIKALA L — Assistant Professor, Computer Science and Engineering, Mrs. KIRUTHIKA S — Assistant Professor, Computer Science and Engineering, Mrs. ASRIN MAHMOOTHA A — Assistant Professor, Computer Science Engineering, Mr. PRAVEENKUMAR P — Assistant Professor, Computer Science Engineering, Mr. RAJAKUMAR B — Assistant Professor, IOT AI NLP Image Processing, Mr. RAJASEKAR R — Assistant Professor, IOT Network Security",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "10 faculty members"
+    },
+    {
+      "chunk_id": "msajce_aids_chunk_06",
+      "section": "Department Facilities — Labs",
+      "source_url": "https://www.msajce-edu.in/aids.php",
+      "context": "Details of all 6 laboratories available in the AIDS department at MSAJCE, including courses offered and virtual lab links.",
+      "text": "Department Facilities — Labs (AIDS Department, MSAJCE):\n\nSl.No. | Lab Name | Course Code & Name | Virtual Lab Link\n1 | C Programming Lab | CS8261 - C Programming | https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-C-Programming.pdf\n2 | Internet Programming Lab | CS8661 - Internet Programming | https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-Internet-Programming.pdf\n3 | Operating Systems Lab | CS8461 - Operating Systems | https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-OS.pdf\n4 | Object Oriented Analysis and Design Lab | CS8461 - Object Oriented Analysis and Design | https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-ooad.pdf\n5 | Web Technology Lab | IT8511 - Web Technology | https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-Web-Technology.pdf\n6 | Networks Lab | CS8581 - Networks Lab | https://www.msajce-edu.in/images/departments/aids/Networks.pdf\n\nEquipment Details URLs:\nC Programming Lab Equipment: https://www.msajce-edu.in/images/departments/aids/Equipments-C-Programming.pdf\nInternet Programming Lab Equipment: https://www.msajce-edu.in/images/departments/aids/Equipments-Internet-Programming.pdf\nOperating Systems Lab Equipment: https://www.msajce-edu.in/images/departments/aids/Equipments-OS.pdf\nOOAD Lab Equipment: https://www.msajce-edu.in/images/departments/aids/Equipments-OOAD.pdf\nWeb Technology Lab Equipment: https://www.msajce-edu.in/images/departments/aids/Equipments-Web-Technology.pdf\nNetworks Lab Equipment: https://www.msajce-edu.in/images/departments/aids/Equipments-Networks.pdf\n\nLab Objective Documents:\nC Programming Lab Objective: https://www.msajce-edu.in/images/departments/aids/Obj-c.pdf\nInternet Programming Lab Objective: https://www.msajce-edu.in/images/departments/aids/Obj-INTERNET.pdf\nOperating Systems Lab Objective: https://www.msajce-edu.in/images/departments/aids/Obj-os.pdf\nOOAD Lab Objective: https://www.msajce-edu.in/images/departments/aids/Obj-ooad.pdf\nWeb Technology Lab Objective: https://www.msajce-edu.in/images/departments/aids/Obj-web.pdf\nNetworks Lab Objective: https://www.msajce-edu.in/images/departments/aids/Obj-Networks.pdf",
+      "tables": [
+        {
+          "table_title": "AIDS Department Labs",
+          "headers": [
+            "Sl.No.",
+            "Lab Name",
+            "Course Code & Name",
+            "Virtual Lab Link"
+          ],
+          "rows": [
+            [
+              "1",
+              "C Programming Lab",
+              "CS8261 - C Programming",
+              "https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-C-Programming.pdf"
+            ],
+            [
+              "2",
+              "Internet Programming Lab",
+              "CS8661 - Internet Programming",
+              "https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-Internet-Programming.pdf"
+            ],
+            [
+              "3",
+              "Operating Systems Lab",
+              "CS8461 - Operating Systems",
+              "https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-OS.pdf"
+            ],
+            [
+              "4",
+              "Object Oriented Analysis and Design Lab",
+              "CS8461 - OOAD",
+              "https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-ooad.pdf"
+            ],
+            [
+              "5",
+              "Web Technology Lab",
+              "IT8511 - Web Technology",
+              "https://www.msajce-edu.in/images/departments/aids/Virtual-Lab-Web-Technology.pdf"
+            ],
+            [
+              "6",
+              "Networks Lab",
+              "CS8581 - Networks Lab",
+              "https://www.msajce-edu.in/images/departments/aids/Networks.pdf"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What labs are available in the AIDS department at MSAJCE?",
+        "Does the AIDS department at MSAJCE have a Networks Lab?",
+        "Is there a Web Technology Lab in AIDS at MSAJCE?",
+        "Where can I access the virtual lab for C Programming in AIDS?",
+        "What courses are offered in the AIDS labs at MSAJCE?",
+        "What lab equipment is available in the AIDS department?",
+        "What is the virtual lab link for Operating Systems in AIDS at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "6 labs"
+        ]
+      },
+      "keywords": [
+        "AIDS labs MSAJCE",
+        "C programming lab AIDS",
+        "networks lab AIDS",
+        "web technology lab AIDS",
+        "OOAD lab AIDS",
+        "operating systems lab AIDS",
+        "internet programming lab AIDS",
+        "virtual lab AIDS",
+        "CS8261",
+        "CS8661",
+        "CS8461",
+        "IT8511",
+        "CS8581",
+        "lab equipment AIDS",
+        "lab objectives AIDS"
+      ],
+      "overlap_text": "AIDS Faculty: Dr. NAGASUBRAMANIAN R — Head PG; Dr. SUBRAMANIAN P — Head UG (Wireless Sensor Networking); Dr. PREMALATHA G — Associate Professor (Image Processing, Machine Learning); Mrs. SARANYA V — IOT and Cloud Computing; Mr. RAJAKUMAR B — IOT, AI, NLP, Image Processing; Mr. RAJASEKAR R — IOT, Network Security. Total 10 faculty members.",
+      "token_count": 400,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_aids.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Artificial Intelligence and Data Science — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "6 labs"
+    },
+    {
+      "chunk_id": "msajce_aids_chunk_07",
+      "section": "Academics — 2021 Regulation Course Materials (AIDS)",
+      "source_url": "https://www.msajce-edu.in/aids.php#tab6",
+      "context": "All course materials available for the B.Tech AIDS 2021 Regulation at MSAJCE, including subject codes, subject names, and direct links to lesson plans, question banks, lecture notes, and ICT tools.",
+      "text": "Academics — Anna University 2021 Regulation Course Materials (B.Tech AIDS)\n\nAll materials include: Lesson Plan, Question Bank, Lecture Notes, ICT Tools.\nBase URL: https://www.msajce-edu.in/academics/aids/2021/\n\nS.No. | Subject Code | Subject Name | Resources\n1 | MA3354 | Discrete Mathematics\n   Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/MA3354-LP.pdf\n   Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/MA3354-QB.pdf\n   Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/MA3354-LN.pdf\n   ICT Tools: https://www.msajce-edu.in/academics/aids/2021/ICTTools/MA3354-ICT.pdf\n\n2 | CS3351 | Digital Principles and Computer Organization\n   Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/CS3351-LP.pdf\n   Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/CS3351-QB.pdf\n   Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/CS3351-LN.pdf\n   ICT Tools: https://www.msajce-edu.in/academics/aids/2021/ICTTools/CS3351-ICT.pdf\n\n3 | AD3391 | Database Design and Management\n   Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AD3391-LP.pdf\n   Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AD3391-QB.pdf\n   Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/AD3391-LN.pdf\n   ICT Tools: https://www.msajce-edu.in/academics/aids/2021/ICTTools/AD3391-ICT.pdf\n\n4 | AD3351 | Design and Analysis of Algorithms\n   Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AD3351-LP.pdf\n   Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AD3351-QB.pdf\n   Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/AD3351-LN.pdf\n   ICT Tools: https://www.msajce-edu.in/academics/aids/2021/ICTTools/AD3351-ICT.pdf\n\n5 | AD3301 | Data Exploration and Visualization\n   Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AD3301-LP.pdf\n   Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AD3301-QB.pdf\n   Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/AD3301-LN.pdf\n   ICT Tools: https://www.msajce-edu.in/academics/aids/2021/ICTTools/AD3301-ICT.pdf\n\n6 | AL3391 | Artificial Intelligence\n   Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AL3391-LP.pdf\n   Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AL3391-QB.pdf\n   Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/AL3391-LN.pdf\n   ICT Tools: https://www.msajce-edu.in/academics/aids/2021/ICTTools/AL3391-ICT.pdf\n\n7 | AD3381 | Database Design and Management Laboratory\n   Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/AD3381-LP.pdf\n   Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/AD3381-QB.pdf\n   Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/AD3381-LN.pdf\n   ICT Tools: https://www.msajce-edu.in/academics/aids/2021/ICTTools/AD3381-ICT.pdf\n\n8 | AD3311 | Artificial Intelligence Laboratory\n   Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/GE3151-LP.pdf\n   Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/GE3151-QB.pdf\n   Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/GE3151-LN.pdf\n   ICT Tools: https://www.msajce-edu.in/academics/aids/2021/ICTTools/GE3151-ICT.pdf\n\n9 | GE3361 | Professional Development\n   Lesson Plan: https://www.msajce-edu.in/academics/aids/2021/LessonPlan/GE3151-LP.pdf\n   Question Bank: https://www.msajce-edu.in/academics/aids/2021/QuestionBank/GE3151-QB.pdf\n   Lecture Notes: https://www.msajce-edu.in/academics/aids/2021/LectureNote/GE3151-LN.pdf\n   ICT Tools: https://www.msajce-edu.in/academics/aids/2021/ICTTools/GE3151-ICT.pdf",
+      "tables": [
+        {
+          "table_title": "2021 Regulation AIDS Course Materials",
+          "headers": [
+            "S.No.",
+            "Subject Code",
+            "Subject Name"
+          ],
+          "rows": [
+            [
+              "1",
+              "MA3354",
+              "Discrete Mathematics"
+            ],
+            [
+              "2",
+              "CS3351",
+              "Digital Principles and Computer Organization"
+            ],
+            [
+              "3",
+              "AD3391",
+              "Database Design and Management"
+            ],
+            [
+              "4",
+              "AD3351",
+              "Design and Analysis of Algorithms"
+            ],
+            [
+              "5",
+              "AD3301",
+              "Data Exploration and Visualization"
+            ],
+            [
+              "6",
+              "AL3391",
+              "Artificial Intelligence"
+            ],
+            [
+              "7",
+              "AD3381",
+              "Database Design and Management Laboratory"
+            ],
+            [
+              "8",
+              "AD3311",
+              "Artificial Intelligence Laboratory"
+            ],
+            [
+              "9",
+              "GE3361",
+              "Professional Development"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What subjects are taught in B.Tech AIDS at MSAJCE?",
+        "What is the subject code for Artificial Intelligence in AIDS at MSAJCE?",
+        "Where can I download the lesson plan for Data Exploration and Visualization?",
+        "What is AD3391 in the AIDS programme at MSAJCE?",
+        "Is there a lab for Artificial Intelligence in AIDS at MSAJCE?",
+        "Where can I find the question bank for Discrete Mathematics in AIDS?",
+        "What is the subject code for Database Design in AIDS at MSAJCE?",
+        "What subjects are part of the 2021 regulation for AIDS at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [],
+        "numbers": [
+          "9 subjects listed in 2021 regulation"
+        ]
+      },
+      "keywords": [
+        "2021 regulation AIDS",
+        "MA3354 Discrete Mathematics",
+        "CS3351 Digital Principles",
+        "AD3391 Database Design",
+        "AD3351 Design Analysis Algorithms",
+        "AD3301 Data Exploration Visualization",
+        "AL3391 Artificial Intelligence",
+        "AD3381 Database Lab",
+        "AD3311 AI Laboratory",
+        "GE3361 Professional Development",
+        "AIDS course materials",
+        "lesson plan AIDS",
+        "question bank AIDS",
+        "lecture notes AIDS",
+        "ICT tools AIDS"
+      ],
+      "overlap_text": "AIDS Labs: C Programming Lab (CS8261), Internet Programming Lab (CS8661), Operating Systems Lab (CS8461), OOAD Lab (CS8461), Web Technology Lab (IT8511), Networks Lab (CS8581). All virtual lab links available under https://www.msajce-edu.in/images/departments/aids/. Equipment details also available at same base URL.",
+      "token_count": 470,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_aids.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Artificial Intelligence and Data Science — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "",
+      "entity_numbers": "9 subjects listed in 2021 regulation"
+    },
+    {
+      "chunk_id": "msajce_aids_chunk_08",
+      "section": "Placement Details — Companies Recruiting AIDS Graduates",
+      "source_url": "https://www.msajce-edu.in/aids.php",
+      "context": "Placement information for the AIDS department at MSAJCE, listing companies that have recruited students through off-campus placement.",
+      "text": "Placement Details — Off Campus Placed Students in Various Companies (AIDS Department)\n\nAIDS graduates from MSAJCE have been placed in the following companies:\n\nAccenture | AT&T | Byjus | Capgemini | Carbonite | CISCO | CTS (Cognizant) | Deloitte Consulting | EMIS Health | Futurefocus | HCL | HP | HTC | IBM | Infosys | Infoview | Intelact | LT Infotech | Newegesoftware | Oracle | Saudi Airlines | Solverminds | Sutherland | TCS (Tata Consultancy Services) | Tech Mahindra | Wells Fargo | Wipro | Wolters Kluwer ELM\n\nFull placement details: https://www.msajce-edu.in/placement.php\n\nInternship Details:\n  Internship Report Format 2025: https://online.fliphtml5.com/euxeg/oqsi/#p=1\n  Internship Report Download 2025: https://www.msajce-edu.in/uploads/placement/internship/Intership%20Report%202025.pdf\n\nStudent Activities:\n  Co-Curricular Activities: Internship Details, Industrial Visits, Professional Society Activities\n  Extra-Curricular Activities available\n\nAlumni: Members of Alumni Association — active alumni network at MSAJCE.\n\nWhat's New (Latest Updates):\n  Teachers & Engineers Day 2025 Celebration Photos: https://photos.app.goo.gl/d8o8TBGRNm47un5J8\n  ESE Timetable June 2025: https://www.msajce-edu.in/ESETT-June25.php\n  18th Graduation Day 22 Feb 2025 Photos: https://photos.app.goo.gl/LF3brje3EwmQcbx18\n  Admission 2026-2027 Flyer: https://www.msajce-edu.in/uploads/Admission24-25Flyer.pdf",
+      "tables": [
+        {
+          "table_title": "Companies Recruiting AIDS Graduates from MSAJCE",
+          "headers": [
+            "S.No.",
+            "Company Name"
+          ],
+          "rows": [
+            [
+              "1",
+              "Accenture"
+            ],
+            [
+              "2",
+              "AT&T"
+            ],
+            [
+              "3",
+              "Byjus"
+            ],
+            [
+              "4",
+              "Capgemini"
+            ],
+            [
+              "5",
+              "Carbonite"
+            ],
+            [
+              "6",
+              "CISCO"
+            ],
+            [
+              "7",
+              "CTS (Cognizant)"
+            ],
+            [
+              "8",
+              "Deloitte Consulting"
+            ],
+            [
+              "9",
+              "EMIS Health"
+            ],
+            [
+              "10",
+              "Futurefocus"
+            ],
+            [
+              "11",
+              "HCL"
+            ],
+            [
+              "12",
+              "HP"
+            ],
+            [
+              "13",
+              "HTC"
+            ],
+            [
+              "14",
+              "IBM"
+            ],
+            [
+              "15",
+              "Infosys"
+            ],
+            [
+              "16",
+              "LT Infotech"
+            ],
+            [
+              "17",
+              "Oracle"
+            ],
+            [
+              "18",
+              "Saudi Airlines"
+            ],
+            [
+              "19",
+              "Solverminds"
+            ],
+            [
+              "20",
+              "Sutherland"
+            ],
+            [
+              "21",
+              "TCS (Tata Consultancy Services)"
+            ],
+            [
+              "22",
+              "Tech Mahindra"
+            ],
+            [
+              "23",
+              "Wells Fargo"
+            ],
+            [
+              "24",
+              "Wipro"
+            ],
+            [
+              "25",
+              "Wolters Kluwer ELM"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Which companies hire AIDS graduates from MSAJCE?",
+        "Has TCS recruited from the AIDS department at MSAJCE?",
+        "Does Infosys recruit AIDS graduates from MSAJCE?",
+        "What is the placement record of the AIDS department at MSAJCE?",
+        "Which MNCs recruit from MSAJCE AIDS?",
+        "What is the internship report format for MSAJCE 2025?",
+        "Does IBM recruit from MSAJCE AIDS?",
+        "What are the student activity opportunities in AIDS at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": [
+          "28+ companies recruiting AIDS graduates"
+        ]
+      },
+      "keywords": [
+        "AIDS placement MSAJCE",
+        "TCS AIDS",
+        "Infosys AIDS",
+        "Wipro AIDS",
+        "HCL AIDS",
+        "IBM AIDS",
+        "Accenture AIDS",
+        "Capgemini AIDS",
+        "Oracle AIDS",
+        "Deloitte AIDS",
+        "Wells Fargo AIDS",
+        "Cognizant CTS AIDS",
+        "Tech Mahindra AIDS",
+        "off campus placement AIDS",
+        "internship 2025 AIDS",
+        "EMIS Health placement",
+        "Solverminds placement"
+      ],
+      "overlap_text": "2021 Regulation AIDS Subjects: MA3354 Discrete Mathematics, CS3351 Digital Principles, AD3391 Database Design and Management, AD3351 Design and Analysis of Algorithms, AD3301 Data Exploration and Visualization, AL3391 Artificial Intelligence, AD3381 Database Lab, AD3311 AI Laboratory, GE3361 Professional Development. Course materials at https://www.msajce-edu.in/academics/aids/2021/",
+      "token_count": 420,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_aids.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Artificial Intelligence and Data Science — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": "28+ companies recruiting AIDS graduates"
+    },
+    {
+      "chunk_id": "msajce_aids_chunk_09",
+      "section": "Contact Information and Important Links",
+      "source_url": "https://www.msajce-edu.in/aids.php",
+      "context": "Complete contact details, important links and quick reference for student inquiries related to the AIDS department at MSAJCE.",
+      "text": "MSAJCE — Mohamed Sathak A.J. College of Engineering\nDepartment of Artificial Intelligence and Data Science (AIDS)\n\nAddress: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103\nPhone: +91 99400 04500\nEmail: msajce.office@gmail.com\nGrievance Email: grievance@msajce-edu.in\nWebsite: www.msajce-edu.in\n\nImportant Links:\n  Online Application Form (Admission 2026-2027): https://enrollonline.co.in/Registration/Apply/MSAJCE\n  Online Fee Payment: https://www.feepayr.com/\n  Students Corner: https://www.msajce-edu.in/studentscorner.php\n  College Management System: https://cims.mastersofterp.in/\n  Academic Calendar: https://www.msajce-edu.in/AC.php\n  Curriculum and Syllabus: https://www.msajce-edu.in/curriculm.php\n  Departments: https://www.msajce-edu.in/departments.php\n  NAAC: https://www.msajce-edu.in/naac.php\n  IQAC: https://www.msajce-edu.in/iqac.php\n  NIRF: https://www.msajce-edu.in/nirf.php\n  Mandatory Disclosure: https://www.msajce-edu.in/mandatorydisclosure.php\n  Grievance and Redressal Committee: https://www.msajce-edu.in/grievanceredressalcommittee.php\n  Anti-Ragging Committee: https://www.msajce-edu.in/Anti-Ragging.php\n  AICTE Approval: https://www.msajce-edu.in/uploads/AICTE-APPROVAL.pdf\n  Anna University Approval: https://www.msajce-edu.in/uploads/AnnaUnivApproval.pdf\n  2021 Regulation Syllabus (AIDS): https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf\n  Autonomous Regulation R24: https://www.msajce-edu.in/uploads/autonomous/AutonomousR24.pdf\n  ESE Timetable June 2025: https://www.msajce-edu.in/ESETT-June25.php\n  ESE NOV-DEC 2025 Results: https://results.msajce-edu.in/\n  Exam Registration May-Jun 2025 (I & II Year): https://tinyurl.com/I-AND-II-YEAR-REGISTRATION\n  Exam Registration May-Jun 2025 (III & IV Year): https://tinyurl.com/III-AND-IV-YEAR-REGISTRATION\n  Placement: https://www.msajce-edu.in/placement.php\n  Annual Report 2023-2024: https://www.msajce-edu.in/uploads/aqar/AnnualReport2023-2024.pdf\n  AICTE Scholarship Schemes: https://www.aicte.gov.in/schemes/students-development-schemes\n  Admission 2026-2027 Flyer: https://www.msajce-edu.in/uploads/Admission24-25Flyer.pdf\n  College Video: https://youtu.be/aNVaQWh1Pp4\n  News Letter: https://www.msajce-edu.in/NewsLetter.php\n  Balance Sheet: https://www.msajce-edu.in/BS.php\n  Incubation and Startup: https://www.msajce-edu.in/Incubation&Startup.php",
+      "tables": [],
+      "possible_questions": [
+        "What is the phone number of MSAJCE?",
+        "What is the address of MSAJCE?",
+        "What is the email of MSAJCE?",
+        "How do I apply online for AIDS at MSAJCE?",
+        "Where can I pay fees online at MSAJCE?",
+        "How do I contact the grievance cell at MSAJCE?",
+        "Where can I find the ESE results for MSAJCE?",
+        "What is the link for AIDS admission 2026-2027?",
+        "Where can I download the 2021 regulation syllabus for AIDS?",
+        "How do I register for exams at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com",
+          "grievance@msajce-edu.in"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": []
+      },
+      "keywords": [
+        "MSAJCE contact AIDS",
+        "MSAJCE phone number",
+        "MSAJCE address",
+        "MSAJCE email",
+        "AIDS admission 2026-2027",
+        "online application AIDS",
+        "fee payment MSAJCE",
+        "grievance cell AIDS",
+        "NAAC",
+        "IQAC",
+        "NIRF",
+        "AICTE approval",
+        "Anna University approval",
+        "ESE results",
+        "exam registration May June 2025",
+        "academic calendar",
+        "anti-ragging MSAJCE",
+        "mandatory disclosure",
+        "incubation startup MSAJCE"
+      ],
+      "overlap_text": "AIDS Placement companies: Accenture, AT&T, Byjus, Capgemini, CISCO, CTS, Deloitte, EMIS Health, HCL, HP, IBM, Infosys, LT Infotech, Oracle, Saudi Airlines, Solverminds, Sutherland, TCS, Tech Mahindra, Wells Fargo, Wipro, Wolters Kluwer ELM. Placement page: https://www.msajce-edu.in/placement.php. Internship Report 2025: https://online.fliphtml5.com/euxeg/oqsi/#p=1",
+      "token_count": 390,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "critical",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_aids.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Artificial Intelligence and Data Science — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com, grievance@msajce-edu.in",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": ""
+    },
+    {
+      "chunk_id": "msajce_aids_chunk_10",
+      "section": "Quick Reference Summary — AIDS Department at MSAJCE",
+      "source_url": "https://www.msajce-edu.in/aids.php",
+      "context": "Consolidated quick-reference summary of all key facts about the AIDS department at MSAJCE for fast RAG retrieval — programme details, faculty heads, labs, subjects, salary, certifications, and contacts.",
+      "text": "QUICK REFERENCE — Artificial Intelligence and Data Science (AIDS) Department — MSAJCE\n\nProgramme: B.Tech Artificial Intelligence and Data Science (AIDS)\nRegulation: 2021 (Anna University)\nTotal Seats: 30 (Government Quota: 15 | Management Quota: 15)\nDuration: 4 years Regular (8 semesters) / 3 years Lateral Entry (6 semesters)\nEligibility: 10+2 with Physics, Chemistry, Mathematics pass\nHigher Studies: M.E. / M.Tech. / M.B.A.\nSyllabus Download: https://www.msajce-edu.in/uploads/academics/2021Regulation.pdf\n\nDepartment Heads:\n  UG Head: Dr. SUBRAMANIAN P (M.E., Ph.D.) — Wireless Sensor Networking and Image Processing\n  PG Head: Dr. NAGASUBRAMANIAN R (M.E., Ph.D.) — Computer Science Engineering\n\nKey Subjects (2021 Regulation):\n  MA3354 — Discrete Mathematics\n  CS3351 — Digital Principles and Computer Organization\n  AD3391 — Database Design and Management\n  AD3351 — Design and Analysis of Algorithms\n  AD3301 — Data Exploration and Visualization\n  AL3391 — Artificial Intelligence\n  AD3381 — Database Design and Management Laboratory\n  AD3311 — Artificial Intelligence Laboratory\n  GE3361 — Professional Development\n\nLabs: C Programming, Internet Programming, Operating Systems, OOAD, Web Technology, Networks\n\nTop Recruiters: TCS, Infosys, Wipro, HCL, IBM, Accenture, Capgemini, Oracle, Deloitte, Wells Fargo, Tech Mahindra, CISCO, Cognizant (CTS)\n\nKey Job Roles for AIDS Graduates:\n  Data Scientist | Machine Learning Engineer | AI Research Scientist | Data Analyst | Data Engineer | AI Product Manager | BI Developer | NLP Engineer | Software Engineer | Data Quality Analyst\n\nSalary Ranges (India):\n  Entry-level: Rs. 6–12 LPA | Mid-level: Rs. 12–25 LPA | Senior: Rs. 25–50 LPA | AI Research: Rs. 30–70 LPA\n\nRecommended Certifications:\n  Google Professional ML Engineer | AWS Certified ML Specialty | IBM Data Science Specialization | Deep Learning Specialization (Andrew Ng)\n\nContact:\n  Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103\n  Phone: +91 99400 04500\n  Email: msajce.office@gmail.com\n  Grievance: grievance@msajce-edu.in\n  Online Application: https://enrollonline.co.in/Registration/Apply/MSAJCE\n  Fee Payment: https://www.feepayr.com/\n  ESE Results: https://results.msajce-edu.in/",
+      "tables": [
+        {
+          "table_title": "AIDS Department At-a-Glance",
+          "headers": [
+            "Parameter",
+            "Details"
+          ],
+          "rows": [
+            [
+              "Programme",
+              "B.Tech Artificial Intelligence and Data Science (AIDS)"
+            ],
+            [
+              "Total Seats",
+              "30 (Govt: 15 | Mgmt: 15)"
+            ],
+            [
+              "Duration",
+              "4 years Regular / 3 years Lateral Entry"
+            ],
+            [
+              "Regulation",
+              "2021 (Anna University)"
+            ],
+            [
+              "UG Head",
+              "Dr. SUBRAMANIAN P"
+            ],
+            [
+              "PG Head",
+              "Dr. NAGASUBRAMANIAN R"
+            ],
+            [
+              "Phone",
+              "+91 99400 04500"
+            ],
+            [
+              "Email",
+              "msajce.office@gmail.com"
+            ],
+            [
+              "Entry Salary",
+              "Rs. 6–12 LPA"
+            ],
+            [
+              "Senior Salary",
+              "Rs. 25–50 LPA"
+            ],
+            [
+              "AI Research Scientist Salary",
+              "Rs. 30–70 LPA"
+            ],
+            [
+              "Job Market CAGR",
+              "30–40% (2025–2030)"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Give me a quick summary of the AIDS department at MSAJCE.",
+        "What are the key facts about B.Tech AIDS at MSAJCE?",
+        "Who are the department heads for AIDS at MSAJCE?",
+        "What is the salary range for AIDS graduates in India?",
+        "What certifications are recommended for AIDS students at MSAJCE?",
+        "What are the top recruiters for AIDS graduates from MSAJCE?",
+        "What is the CAGR of AI job market growth in India?",
+        "How can I apply for AIDS at MSAJCE?",
+        "What subjects are there in 2021 regulation for AIDS at MSAJCE?",
+        "What labs are available in AIDS at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. SUBRAMANIAN P — UG Head, Wireless Sensor Networking and Image Processing",
+          "Dr. NAGASUBRAMANIAN R — PG Head, Computer Science Engineering"
+        ],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com",
+          "grievance@msajce-edu.in"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": [
+          "30 total seats",
+          "15 government quota",
+          "15 management quota",
+          "Rs. 6-12 LPA entry level",
+          "Rs. 12-25 LPA mid level",
+          "Rs. 25-50 LPA senior level",
+          "Rs. 30-70 LPA AI Research Scientist",
+          "30-40% CAGR AI jobs"
+        ]
+      },
+      "keywords": [
+        "AIDS quick reference",
+        "AIDS at a glance",
+        "B.Tech AIDS summary",
+        "AIDS seats MSAJCE",
+        "Dr Subramanian P UG head",
+        "Dr Nagasubramanian R PG head",
+        "AIDS salary LPA",
+        "AIDS top recruiters",
+        "AIDS certifications",
+        "AIDS subjects 2021",
+        "Google ML Engineer",
+        "AWS ML Specialty",
+        "Andrew Ng Deep Learning",
+        "IBM Data Science"
+      ],
+      "overlap_text": "MSAJCE Contact: Phone +91 99400 04500, Email msajce.office@gmail.com, Grievance grievance@msajce-edu.in. Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103. Online Application: https://enrollonline.co.in/Registration/Apply/MSAJCE. Fee Payment: https://www.feepayr.com/. ESE Results: https://results.msajce-edu.in/. Exam Registration May-Jun 2025: I&II Year https://tinyurl.com/I-AND-II-YEAR-REGISTRATION; III&IV Year https://tinyurl.com/III-AND-IV-YEAR-REGISTRATION",
+      "token_count": 450,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "medium",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_aids.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Artificial Intelligence and Data Science — Complete Data Extract for RAG Model",
+      "entity_persons": "Dr. SUBRAMANIAN P — UG Head, Wireless Sensor Networking and Image Processing, Dr. NAGASUBRAMANIAN R — PG Head, Computer Science Engineering",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com, grievance@msajce-edu.in",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": "30 total seats, 15 government quota, 15 management quota, Rs. 6-12 LPA entry level, Rs. 12-25 LPA mid level, Rs. 25-50 LPA senior level, Rs. 30-70 LPA AI Research Scientist, 30-40% CAGR AI jobs"
+    }
+  ]
+}

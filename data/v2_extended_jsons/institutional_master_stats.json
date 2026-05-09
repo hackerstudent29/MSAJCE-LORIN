@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "document_title": "Institutional Master Statistics & Strategic Totals",
+    "purpose": "High-priority ground truth for global counts to prevent RAG fragmentation",
+    "version": "v2",
+    "last_updated": "2026-05-01",
+    "source_file": "institutional_master_stats.json"
+  },
+  "chunks": []
+}

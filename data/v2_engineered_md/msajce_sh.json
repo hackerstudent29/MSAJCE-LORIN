@@ -1,0 +1,77 @@
+{
+  "source": "msajce_sh.md",
+  "sections": [
+    {
+      "header": "5. Faculty 2020-2021 and Department Lab",
+      "level": 2,
+      "text": "The following data is from the Faculty 2020-2021 and Department Lab table:\nDr. S. A. Jain is the HOD of Physics, and the link to their profile is sites.google.com/view/drsajain. Dr. V. Srinivasadesikan is a faculty member in Physics, and the link to their profile is sites.google.com/view/dr-v-srinivasadesikan. Dr. R. Rajeswari is a faculty member in Physics, and the link to their profile is sites.google.com/view/dr-r-rajeswari. Dr. J. Madhavan is a faculty member in Physics, and the link to their profile is sites.google.com/view/dr-j-madhavan. Dr. V. Renuka is a faculty member in Physics, and the link to their profile is sites.google.com/view/dr-v-renuka. Dr. B. Karthikeyan is a faculty member in Chemistry, and the link to their profile is sites.google.com/view/dr-b-karthikeyan. Dr. S. Chenthur Pandian is a faculty member in Chemistry, and the link to their profile is sites.google.com/view/dr-s-chenthur-pandian. Dr. S. Chitra is a faculty member in Chemistry, and the link to their profile is sites.google.com/view/dr-s-chitra. Dr. K. Sumathi is a faculty member in Chemistry, and the link to their profile is sites.google.com/view/dr-k-sumathi. Dr. S. Thenmozhi is a faculty member in Chemistry, and the link to their profile is sites.google.com/view/dr-s-thenmozhi. Dr. D. Geetha is a faculty member in Chemistry, and the link to their profile is sites.google.com/view/dr-d-geetha. Mr. G. Venkatesan is an Assistant Professor in Physics, and the lab is the Physics Lab. The courses include Engineering Physics and Material Science. The document link is here. Mrs. V. Vijayalakshmi is an Assistant Professor in Chemistry, and the lab is the Chemistry Lab. The courses include Engineering Chemistry. The document link is here.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Faculty 2020-2021",
+      "level": 3,
+      "text": "The following data is from the Faculty 2020-2021 table: Dr. ALOCIOUS GONSAGO C is a Professor who joined on 08.08.2001 and has a Ph.D.. Dr. BALAJI D is an Associate Professor who joined on 23.10.2019 and has a Ph.D.. Dr. BALAKRISHNAN A is an Associate Professor who joined on 15.07.2013 and has a Ph.D.. Dr. DEVI BALA B is an Assistant Professor who joined on 05.08.2020 and has a Ph.D.. Mrs. USHA S is an Assistant Professor who joined on 17.07.2019 and has an M.Phil.. Mrs. SAIPRIYA K is an Assistant Professor who joined on 27.06.2016 and has an M.Phil.. Mrs. SUBHASHINI is an Assistant Professor who joined on 01.08.2014 and has an M.Phil.. Mr. SYED RAHMATHULA S is an Assistant Professor who joined on 21.08.2019 and has an M.Phil..\nThe following data is from the S&H; Department Lab table: The Physics & Chemistry Lab is for Physics & Chemistry with course code BS8161.\nThe lab document links include the Objectives PDF at <https://www.msajce-edu.in/images/departments/sh/Ph-Ch-Obj.pdf>, Equipment Details at <https://www.msajce-edu.in/images/departments/sh/Ph-Ch-eqp.pdf>, and the Course PDF at <https://www.msajce-edu.in/images/departments/sh/BS8161.pdf>.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": true
+    },
+    {
+      "header": "Sample Questions:",
+      "level": 3,
+      "text": "The S&H department has a lab at MSAJCE, and BS8161 is a subject. Dr. Alocious Gonsago C is someone, as is the longest serving faculty in S&H at MSAJCE. Dr. Balaji D is in S&H, and the Physics and Chemistry lab contains equipment.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "6. Academics — Course Materials (Own and Service Subjects)",
+      "level": 2,
+      "text": "The following data is from the academics course materials table: The S&H department provides all subjects with lesson plans, question banks, lecture notes and ICT tools links, including own subjects and subjects offered to other engineering departments.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "S&H; Own Subjects",
+      "level": 3,
+      "text": "The following data is from the Subject Name table: HS3151 corresponds to Professional English - I, PH3151 corresponds to Engineering Physics, CY3151 corresponds to Engineering Chemistry, MA3151 corresponds to Matrices and Calculus, GE3151 corresponds to Problem Solving and Python Programming, HS8251 corresponds to Technical English, MA8251 corresponds to Engineering Mathematics – II, PH8253 corresponds to Physics for Electronics Engineering, GE8291 corresponds to Environmental Science and Engineering, PH8252 corresponds to Physics for Information Science, PH8251 corresponds to Materials Science, and PH8201 corresponds to Physics For Civil Engineering.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Service Department Subjects",
+      "level": 3,
+      "text": "The following data is from the Service Department Subjects table:\nFor the II year of CIVIL and MECH departments, the code MA8351 corresponds to the subject Transforms and Partial Differential Equations. For the II year of the ECE department, the code MA8352 corresponds to the subject Linear Algebra and Partial Differential Equations. For the II year of the CSE and IT departments, the code MA3354 corresponds to the subject Discrete Mathematics. For the II year of the EEE and CIVIL departments, the code MA8491 corresponds to the subject Numerical Methods. For the II year of the MECH department, the code MA8452 corresponds to the subject Statistics and Numerical Methods. For the II year of the CSE department, the code MA8402 corresponds to the subject Probability and Queueing Theory. For the II year of the IT department, the code MA8391 corresponds to the subject Probability and Statistics. For the III year of the CSE and IT departments, the code MA8551 corresponds to the subject Algebra and Number Theory. For the II year of the IT and ECE departments, the code GE8291 corresponds to the subject Environmental Science and Engineering.\n\nThe following data is from the Service Department Subjects table:\nFor the II year of the EEE department, the code MA3303 corresponds to the subject Probability and Complex Function.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions:",
+      "level": 3,
+      "text": "What subjects does S&H department teach at MSJCE? Where can I find lecture notes for Engineering Physics at MSJCE? What is the subject code for Professional English I? Does S&H department teach mathematics to other departments? Where can I download question bank for MA8351? What is GE3151 subject? Which department teaches Discrete Mathematics at MSJCE? Where are S&H department course materials available online?",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "S&H; Department Events",
+      "level": 3,
+      "text": "The following data is from the Department Events table: 8 Days National Level FDP took place from 29 Jan – 06 Feb 2024, 2:00–3:00 PM. A 5 Days Online FDP was held from 14–18 Aug 2023, 2:00–3:00 PM. Details for the AICTE-ATAL Sponsored 6-Day FDP are in the linked PDF.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions:",
+      "level": 3,
+      "text": "S&H teaches 12 own subjects including HS3151, PH3151, CY3151, MA3151, GE3151 and 10 service department subjects including MA8351, MA8352, MA3354, MA8491, MA8452, MA8402, MA8391, MA8551, GE8291, MA3303, with all materials available at <https://www.msjce-edu.in/academics/sh/>.\n\nThe address is 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103. The phone number is +91 99400 04500, and the email is msajce.office@gmail.com, with the grievance email at grievance@msjce-edu.in. The website is www.msjce-edu.in and the application link is <https://enrollonline.co.in/Registration/Apply/MSAJCE>.\n\nMSAJCE is located at 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103, with the phone number +91 99400 04500 and the email address msajce.office@gmail.com, and their website is www.msjce-edu.in; the RAG extract is msajce_sh, with 7 Chunks, dated 2026-04-29.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": true
+    }
+  ]
+}

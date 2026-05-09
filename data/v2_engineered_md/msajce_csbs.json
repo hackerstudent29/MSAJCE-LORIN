@@ -1,0 +1,85 @@
+{
+  "source": "msajce_csbs.md",
+  "sections": [
+    {
+      "header": "Programme Educational Objectives (PEOs)",
+      "level": 3,
+      "text": "The following data is from the Programme Educational Objectives (PEOs) table: PEO1 describes graduates prepared for analysing, designing, developing and testing software solutions with creativity and sustainability. PEO2 describes graduates skilled in modern tools for critical problem solving and analysing industrial and societal requirements. PEO3 describes graduates prepared with managerial and leadership skills for career and starting own firms.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Program Specific Outcomes (PSOs)",
+      "level": 3,
+      "text": "The following data is from the PSO table:\nPSO1 describes developing creative solutions by adapting emerging technologies or tools for real time industry applications. PSO2 describes applying acquired knowledge to develop software solutions and innovative mobile apps for automation applications.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Programme Outcomes (POs) — All 12",
+      "level": 3,
+      "text": "The following data is from the Programme Outcomes (POs) — All 12 table:\nPO 1 titled Engineering Knowledge means to apply knowledge of mathematics, science, engineering fundamentals. PO 2 titled Problem Analysis means to identify, formulate and analyze complex engineering problems. PO 3 titled Design/Development means to design solutions for complex problems meeting specified needs. PO 4 titled Conduct Investigations means to use research-based knowledge and methods for valid conclusions. PO 5 titled Modern Tool Usage means to create, select and apply appropriate techniques and modern IT tools. PO 6 titled Engineer & Society means to apply reasoning to assess societal, health, safety, legal and cultural issues. PO 7 titled Environment & Sustainability means to understand impact of engineering solutions in societal and environmental contexts. PO 8 titled Ethics means to apply ethical principles and commit to professional ethics and norms.\n\nThe following data is from the unnamed table:\nPO 9 titled Team Work means to function effectively as individual, member or leader in diverse and multidisciplinary teams. PO 10 titled Communication means to communicate effectively, write reports, make presentations. PO 11 titled Project Management means to demonstrate knowledge of engineering and management principles. PO 12 titled Life-long Learning means to engage in independent and life-long learning in technological change.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "The chunk answers questions about the vision of CSBS at MSAJCE, the PEOs for CSBS, the 12 programme outcomes for CSBS, and whether CSBS teaches business thinking.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "3. Employment Growth 2025-2030 — Key Drivers for CSBS Graduates",
+      "level": 2,
+      "text": "The following data is from the Driver, Key Technologies / Areas, Job Impact table: Digital Transformation uses SAP, Oracle, Microsoft Dynamics, SaaS, and ERP and has an impact on ERP Consultants and Business Systems Analysts. AI, ML and Analytics uses Python, Hadoop, Spark, Tableau, and Power BI and has an impact on Data Scientists, BI Analysts, and ML Engineers. Cloud Computing uses AWS, Azure, Google Cloud, Serverless, and multi-cloud and has an impact on Cloud Architects and Cloud Engineers. E-Commerce Growth uses AI chatbots, recommendation systems, and supply chain and has an impact on Data Scientists and Systems Analysts. FinTech Expansion uses Blockchain, digital payments, and AI financial services and has an impact on FinTech Professionals and Blockchain Developers. Healthcare Digitalization uses Digital records, telemedicine, and AI diagnostics and has an impact on Healthcare IT Professionals. Smart Manufacturing (Industry 4.0) uses IoT, AI, and cloud in manufacturing and has an impact on IT-Business Bridge Professionals. Cyber Security & Compliance uses Firewalls, encryption, GDPR, and Data Protection Bill and has an impact on Cyber Security Specialists and Compliance Experts.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "This chunk answers what jobs CSBS graduates can get, if CSBS is in demand in India, if CSBS has scope in FinTech, and if CSBS graduates will get jobs in cybersecurity.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "4. Key Job Roles in High Demand — CSBS Graduates 2025-2030",
+      "level": 2,
+      "text": "The following data is from the table detailing job roles and key skills required: Business Systems Analyst requires business analysis, ERP such as SAP and Oracle, Agile, requirements gathering, and systems design. Data Scientists and Data Analysts require Python, R, SQL, ML, Tableau, Power BI, Hadoop, Spark, and statistical modeling. Cloud Architects and Cloud Engineers require AWS, Azure, Google Cloud, cloud architecture, Serverless technologies, and cloud security. ERP Consultants and Implementation Specialists require SAP, Oracle, business process modeling, project management, and change management. AI and ML Engineers require Python, TensorFlow, Keras, AI algorithms, NLP, and data preprocessing. Cyber Security Specialists require network security, ethical hacking, penetration testing, data encryption, and GDPR. Business Intelligence Analysts require SQL, Tableau, Power BI, data mining, business analytics, and decision support systems. Blockchain Developers require Ethereum, Hyperledger, smart contracts, cryptography, and distributed ledgers. FinTech Professionals require FinTech platforms, blockchain, digital payments, regulatory compliance, and data analytics.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "This chunk answers questions about the responsibilities of a Business Systems Analyst, whether CSBS graduates can become data scientists, the necessary skills for an ERP Consultant, and the role of a Blockchain Developer. The keywords associated with this chunk are business systems analyst, data scientist, cloud architect, ERP consultant SAP Oracle, AI ML engineer, cyber security, BI analyst, blockchain developer Ethereum, and FinTech professional.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "5. Employment Sectors & CSBS Faculty List",
+      "level": 2,
+      "text": "The following data is from the Sector table: Information Technology (IT Services) has key opportunities in Cloud computing, BPO, ERP implementation. E-Commerce has key opportunities in Data analytics, customer experience design, supply chain management. Financial Services and FinTech has key opportunities in Digital payments, blockchain, insurtech, investment technology. Healthcare has key opportunities in Digital health, telemedicine, AI for diagnostics. Manufacturing and Industry 4.0 has key opportunities in IoT, AI, cloud computing integration with industrial processes.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "CSBS Department Faculty",
+      "level": 3,
+      "text": "The following data is from the CSBS Department Faculty table:\nDr. NAGASUBRAMANIAN R has a qualification of M.E., Ph.D. and a designation of Head — PG with a specialization in Computer Science Engineering. Dr. SUBRAMANIAN P has a qualification of M.E., Ph.D. and a designation of Head — UG with a specialization in Wireless Sensor Networking & Image Processing. Dr. PREMALATHA G has a qualification of M.E., Ph.D. and a designation of Associate Professor with a specialization in Image Processing and Machine Learning. Mrs. SARANYA V has a qualification of M.Tech., (Ph.D) and a designation of Asst. Professor with a specialization in IOT and Cloud Computing. Mrs. SASIKALA L has a qualification of M.E. and a designation of Asst. Professor with a specialization in Computer Science and Engineering. Mrs. KIRUTHIKA S has a qualification of M.E. and a designation of Asst. Professor with a specialization in Computer Science and Engineering. Mrs. ASRIN MAHMOOTHA A has a qualification of M.E. and a designation of Asst. Professor with a specialization in Computer Science Engineering. Mr. PRAVEENKUMAR P has a qualification of M.E. and a designation of Asst. Professor with a specialization in Computer Science Engineering. Mr. RAJAKUMAR B has a qualification of M.Tech., (Ph.D) and a designation of Asst. Professor with a specialization in IOT, AI, NLP and Image Processing. Mr. RAJASEKAR R has a qualification of M.E., (Ph.D) and a designation of Asst. Professor with a specialization in IOT, Network Security.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    }
+  ]
+}

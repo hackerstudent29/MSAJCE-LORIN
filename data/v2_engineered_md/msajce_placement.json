@@ -1,0 +1,29 @@
+{
+  "source": "msajce_placement.md",
+  "sections": [
+    {
+      "header": "Introduction",
+      "level": 1,
+      "text": "The following data is from the Introduction table: The source URL is <https://www.msjace-edu.in/placement.php>, there are 19 sections covered. The data was scraped on 2026-04-27, with 12 chunks, a token target of 500, an overlap of 100, and using the text-embedding-3-small model.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "1. Placement Cell Overview — Mission, Objectives & Placement Committee",
+      "level": 2,
+      "text": "The chunk describes the overall mission and objectives of the MSAJCE Placement Cell and lists the full placement committee with names and positions. In a competitive job market, employers expect graduates to have a range of skills and right experience of the workplace. MSAJCE provides at most care, support and ample opportunities to help students develop requisite skills and expertise and make them employable graduates. The Placement Cell Objectives are to provide Employment Opportunities for students in reputed companies, to organize On and Off Campus Recruitment Drives for students, to Train students on employability skills such as Aptitude Skills, Communication Skills and Technical Skills, to conduct Value Added Certification courses to gain domain specific knowledge, to conduct Mock Aptitude, Mock Interview, Mock GD to prepare students to face the interview with confidence, to arrange In-plant training, Internship and Industrial visits, and to organize workshops on Recent Technologies by industrial experts which benefits students to understand technological innovations. Besides providing support to entrepreneurial ventures, MSAJCE keeps its employability services up to date with the demands of the job market and aims to ensure that graduates are in the strongest position possible when they leave.\n\nThe following data is from the Placement Committee table: Dr. S. Vijay Ananth is the Placement Director. Mr. L. Tharanikumar is the Assistant Placement Officer. Mr. S.V. Vinodh is a Member. Mr. J.H. Hammer Shield is a Member. Mr. M. Dominic Bro is a Member. Mr. P. Nithin Karthik is a Member.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": true
+    },
+    {
+      "header": "2. Placement Facilities — Infrastructure for Recruitment Activities",
+      "level": 3,
+      "text": "This chunk describes the physical and infrastructure facilities available at MSAJCE for conducting placement activities including written tests, group discussions, interviews and career counselling. MSAJCE has well-furnished air-conditioned rooms for written tests, group discussions, and face-to-face interviews, well-established computer labs for online training and examinations, air-conditioned auditorium, seminar halls and meeting halls, and dedicated AC rooms for conducting group discussions. Career counselling is available on campus directing students to choose the best possible stream that meets their requirement in a unique way, and the students have mentors who handle their problems and make them focused about their targets. Year-wise placement details are available for download for 2022–2023, 2021–2022, 2020–2021, 2019–2020, 2018–2019, 2017–2018, and 2016–2017. Internship details are available for download for 2020–2021, 2019–2020, 2018–2019, 2017–2018, and 2016–2017, and the internship report format for 2025 is also available.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": true
+    }
+  ]
+}

@@ -81,9 +81,9 @@ PRIORITY_MULTIPLIER = {
 def classify_query(query: str) -> str:
     """v2 Query Classifier — 7 types."""
     q = query.lower()
-    # Person detection (typo-resistant)
+    # Person detection (hardened for student leaders & names)
     if any(s in q for s in ["who is", "who are", "wo is", "ho is", "tell me about",
-                             "contact of", "hod of", "warden"]):
+                             "contact of", "hod of", "warden", "president", "secretary", "yogesh", "saqlin", "mustaq"]):
         return "PERSON_QUERY"
     # Route detection
     if any(s in q for s in ROUTE_SIGNALS):
@@ -101,8 +101,11 @@ def classify_query(query: str) -> str:
     if any(s in q for s in STAT_SIGNALS) or any(s in q for s in PERSON_SIGNALS):
         return "FACT_QUERY"
     # Fallback: known names
-    if any(name in q for name in ["yogesh", "saqlin", "mustaq", "vimal", "santhosh", "weslin"]):
+    if any(name in q for name in ["yogesh", "saqlin", "mustaq", "vimal", "santhosh", "weslin", "ramanathan"]):
         return "PERSON_QUERY"
+    # Continuation detection
+    if q.strip() in ["yes", "no", "ok", "sure", "tell me more", "elaborate", "go on", "yup", "yeah", "okay"]:
+        return "ELABORATION_QUERY"
     return "GENERAL_QUERY"
 
 class RAGEngine:
@@ -171,12 +174,17 @@ class RAGEngine:
                 # Verify expiry
                 now = datetime.now()
                 fresh_data = {}
+                # Case-insensitive mapping for easier access
                 for key, fact in data.items():
-                    expiry = datetime.strptime(fact.get("valid_until", "2000-01-01"), "%Y-%m-%d")
+                    expiry_str = fact.get("valid_until", "2099-12-31")
+                    expiry = datetime.strptime(expiry_str, "%Y-%m-%d")
                     if now < expiry:
-                        fresh_data[key] = fact.get("value")
-                    else:
-                        logger.warning(f"Fact '{key}' has expired. Skipping fast-pass.")
+                        val = fact.get("value")
+                        fresh_data[key.lower()] = val
+                        # Also add common names as keys for direct matching
+                        if "president" in key.lower(): fresh_data["president"] = val
+                        if "yogesh" in str(val).lower(): fresh_data["yogesh"] = val
+                        if "ramanathan" in str(val).lower(): fresh_data["ramanathan"] = val
                 return fresh_data
             except Exception as e:
                 logger.error(f"Error loading ground truth: {e}")
@@ -271,10 +279,12 @@ class RAGEngine:
                 top_k = depth
                 emb = None
                 
-                # Try rotating Vercel Keys for Embedding (Try only top 2 for speed)
+                # Try rotating Vercel Keys for Embedding
                 vercel_keys = [
                     os.getenv("VERCEL_AI_KEY_6"),
-                    os.getenv("VERCEL_AI_KEY_5")
+                    os.getenv("VERCEL_AI_KEY_5"),
+                    os.getenv("VERCEL_AI_KEY_7"),
+                    os.getenv("AI_GATEWAY_API_KEY")
                 ]
                 
                 async with httpx.AsyncClient() as client:
@@ -307,6 +317,7 @@ class RAGEngine:
                 
                 return p_hits, b_hits
             except Exception as e:
+                print(f"    [FETCH ERROR] {e}")
                 return [], []
 
         # Parallelize all queries
@@ -411,7 +422,29 @@ class RAGEngine:
             persona_rules = "LANGUAGE LEVEL: Executive & Formal. Prioritize data, percentages, and strategic institutional outcomes. High-density information."
 
         p = None
+        # v2: Topic Anchoring for short continuations (fixes 'yes' hijacking)
+        intent = classify_query(user_query)
         queries = [user_query]
+        
+        # [CRITICAL] Manual Identity Catch for Production Integrity
+        if "yogesh" in user_query.lower():
+            yield "Yogesh R is the President of the Computer Society of India (CSI) student chapter at MSAJCE. He is from the IT department (Batch 2022-2026)."
+            return
+        if "ramanathan" in user_query.lower() or "who built you" in user_query.lower():
+            yield "I was developed by Ramanathan S (Ram), the Lead AI Architect at MSAJCE. He has built several high-performance systems including me (Lorin AI), Zenify, Zenpay, Pocket Lawyer, and Formora."
+            return
+
+        if intent == "ELABORATION_QUERY" and history:
+            # Extract last assistant message to anchor retrieval
+            last_lines = history.split("\n")
+            anchor = ""
+            for line in reversed(last_lines):
+                if line.startswith("assistant:") or line.startswith("Lorin:"):
+                    anchor = line.replace("assistant:", "").replace("Lorin:", "").strip()[:100]
+                    break
+            if anchor:
+                queries.append(f"{anchor} {user_query}")
+                print(f"    [ANCHORING] Query augmented with: {anchor}")
         intent = "FACTUAL"
         
         stop_words = ["bro", "sir", "please", "kindly", "tell", "show", "list", "give", "me", "all", "the"]
@@ -442,6 +475,10 @@ class RAGEngine:
                 p = self._safe_json_parse(pre_res)
                 if p:
                     if p.get("direct_response"):
+                        # If ground truth has a match for this name/key, use it
+                        for k, v in self.ground_truth.items():
+                            if k in user_query.lower():
+                                yield v; return
                         yield p.get("direct_response"); return
                     intent = p.get("category", "FACTUAL")
             except: pass
@@ -526,8 +563,10 @@ RULES (follow strictly):
 12. ENTITY DEDUPLICATION: If the context contains multiple entries that clearly refer to the same person, merge them.
 13. FEE TRANSPARENCY: When stating any fees (Tuition, Transport, Hostel), you MUST explicitly mention that these are "approximate/tentative" and subject to final confirmation by the administration.
 
-14. CONFIDENT EXTRACTION: If you find any info (even a single sentence) about a person or topic in the context, state it as a definitive fact. NEVER apologize for having "limited" or "no more" information. If you have a fact, state it and end the answer with a follow-up. 
-15. TOKEN EFFICIENCY: Jump straight to the facts. Do not re-state the user's query or provide meta-commentary about your search process.
+14. SURGICAL FOCUS: If a user asks for a specific individual (e.g., "Who is Yogesh?") or a specific role (e.g., "Who is the CSI President?"), you MUST provide only that specific person's details. NEVER list the entire committee, faculty group, or department members unless the user explicitly asks for a "list" or "all members".
+15. CONFIDENT EXTRACTION: If you find any info (even a single sentence) about a person or topic in the context, state it as a definitive fact. NEVER apologize for having "limited" or "no more" information.
+17. CONVERSATIONAL ANCHORING: If the user says "yes", "tell me more", or "sure", you MUST continue the previous topic. Do not switch to a new institutional fact (like CSI or Bus routes) unless the user specifically mentions a new topic.
+18. STAY SURGICAL: Answer only what is asked. Do not dump entire lists if the user is following up on a specific person.
 
 TONE: Helpful, professional, and narrative-driven. Connect facts with natural transitions.
 

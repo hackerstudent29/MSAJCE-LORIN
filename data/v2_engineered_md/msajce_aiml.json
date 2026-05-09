@@ -1,0 +1,101 @@
+{
+  "source": "msajce_aiml.md",
+  "sections": [
+    {
+      "header": "Programme Details",
+      "level": 3,
+      "text": "The following data is from the Detail table:\nThe Programme Name is B.E. Artificial Intelligence & Machine Learning (CSE-AIML). The Duration is 4 years (Regular) / 3 years (Lateral Entry). The No. of Semesters is 8 (Regular) / 6 (Lateral Entry). The Total Seats are 60. The Government Quota is 30. The Management Quota is 30. The Eligibility is 10+2 with Physics, Chemistry and Mathematics. The Curriculum is 2021 Regulation — <a href=\"https://www.msjace-edu.in/uploads/academics/2021Regulation.pdf\">https://www.msjace-edu.in/uploads/academics/2021Regulation.pdf</a>. Higher Studies include M.E. / M.Tech. / M.B.A.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions this chunk answers:",
+      "level": 3,
+      "text": "This chunk answers whether MSAJCE offers AI and ML courses, the seat intake for AIML at MSAJCE, the eligibility for AIML at MSAJCE, the duration of the AIML programme, and which companies recruit AIML graduates from MSAJCE.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "2. Vision, Mission, PEOs, PSO & Programme Outcomes (POs)",
+      "level": 2,
+      "text": "The following data is from the Vision, Mission, PEOs, PSO & Programme Outcomes table: To be a Centre of Excellence in Artificial Intelligence and Machine Learning to create globally competent professionals is the vision. To impart quality education in Artificial Intelligence and Machine Learning through innovative teaching-learning process is the mission. To provide students with a strong foundation in the core principles and practices of AI and ML, enabling them to solve complex engineering problems is the first PEO. To prepare students to be successful professionals in the field of AI and ML, equipped with the skills and knowledge to adapt to rapidly changing technologies is the second PEO. To encourage students to pursue lifelong learning and research, contributing to the advancement of AI and ML is the third PEO. Graduates will be able to apply their knowledge of AI and ML to develop innovative solutions for real-world problems is the first PSO. Graduates will be able to work effectively in teams and communicate their ideas clearly and concisely is the second PSO. Engineering knowledge: Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems is the first PO. Problem analysis: Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences is the second PO. Design/development of solutions: Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations is the third PO. Conduct investigations of complex problems: Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions is the fourth PO. Modern tool usage: Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations is the fifth PO. The engineer and society: Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice is the sixth PO. Environment and sustainability: Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development is the seventh PO. Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice is the eighth PO. Individual and team work: Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings is the ninth PO. Communication: Communicate effectively on complex engineering activities with the engineering community and with society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions is the tenth PO. Project management and finance: Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments is the eleventh PO. Life-long learning: Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change is the twelfth PO.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Vision",
+      "level": 3,
+      "text": "To be a centre of excellence for transforming students into proficient Artificial Intelligence and Machine Learning Engineers using through sustainable practices.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Mission",
+      "level": 3,
+      "text": "The department imparts core fundamental knowledge and necessary skills in Artificial Intelligence and Data Science through innovative teaching and learning methodology. It inculcates critical thinking, ethics, lifelong learning and creativity needed for industry and society. The department cultivates the students with all-round competencies, for career, higher education and self-employability.",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "Programme Educational Objectives (PEOs)",
+      "level": 3,
+      "text": "The following data is from the Programme Educational Objectives (PEOs) table: PEO1 indicates that graduates will be prepared for analysing, designing, developing and testing software solutions and products with creativity and sustainability. PEO2 indicates that graduates will be skilled in the use of modern tools for critical problem solving and analyzing industrial and societal requirements. PEO3 indicates that graduates will be prepared with managerial and leadership skills for career and starting up own firms.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Program Specific Outcomes (PSOs)",
+      "level": 3,
+      "text": "The following data is from the PSO table: PSO1 Develop creative solutions by adapting emerging technologies/tools for real time applications of Industry. PSO2 Apply the acquired knowledge to develop software solutions and innovative mobile apps for various automation applications.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Programme Outcomes (POs) — All 12",
+      "level": 3,
+      "text": "The following data is from the Programme Outcomes (POs) — All 12 table: PO 1 is Engineering Knowledge, which means to apply knowledge of mathematics, science, engineering fundamentals and specialization to solve complex problems. PO 2 is Problem Analysis, which means to identify, formulate, review literature and analyze complex engineering problems. PO 3 is Design/Development, which means to design solutions for complex problems meeting specified needs with consideration for public health and safety. PO 4 is Investigations, which means to use research-based knowledge including design of experiments, analysis and interpretation of data. PO 5 is Modern Tool Usage, which means to create, select and apply appropriate techniques, resources and modern engineering/IT tools. PO 6 is Engineer & Society, which means to apply reasoning to assess societal, health, safety, legal and cultural issues. PO 7 is Environment & Sustainability, which means to understand impact of engineering solutions in societal and environmental contexts. PO 8 is Ethics, which means to apply ethical principles and commit to professional ethics and norms of engineering practice. PO 9 is Team Work, which means to function effectively as individual, member or leader in diverse teams and multidisciplinary settings. PO 10 is Communication, which means to communicate effectively, write reports, design documentation, make presentations. PO 11 is Project Management, which means to demonstrate knowledge of engineering and management principles as member and leader. PO 12 is Life-long Learning, which means to recognize need for and engage in independent and life-long learning in technological change.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Sample Questions:",
+      "level": 3,
+      "text": "What is the vision of the AIML department at MSAJCE? What are the PEOs for AIML at MSAJCE? What are the programme outcomes for AIML?",
+      "engineered": true,
+      "has_table": false,
+      "has_bullet": true
+    },
+    {
+      "header": "3. AI & ML Job Roles, Salary Trends & Employment Forecast India 2025-2030",
+      "level": 2,
+      "text": "The following data is from the Top Recruiters table: Zoho recruited 450 students with a package of 6 LPA. TCS recruited 320 students with a package of 4.5 LPA. Capgemini recruited 270 students with a package of 4 LPA. Wipro recruited 240 students with a package of 3.8 LPA. Infosys recruited 210 students with a package of 4 LPA. HCL recruited 180 students with a package of 4.2 LPA. Tech Mahindra recruited 160 students with a package of 3.6 LPA. Cognizant recruited 140 students with a package of 4.1 LPA. Accenture recruited 120 students with a package of 4.5 LPA. L&T recruited 100 students with a package of 5 LPA.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Salary Ranges — AI & ML Roles in India (2025–2030)",
+      "level": 3,
+      "text": "The following data is from the Annual Salary (INR) table: Entry-level with 0-2 years of experience has an annual salary of Rs. 6 – 12 Lakhs per annum. Mid-level with 3-5 years of experience has an annual salary of Rs. 12 – 20 Lakhs per annum. Senior-level with 5+ years of experience has an annual salary of Rs. 20 – 35 Lakhs per annum. An AI Research Scientist has an annual salary of Rs. 25 – 50 Lakhs per annum. A Senior AI/ML Project Manager has an annual salary of Rs. 30 – 60 Lakhs per annum.",
+      "engineered": true,
+      "has_table": true,
+      "has_bullet": false
+    },
+    {
+      "header": "Targeted Job Applications",
+      "level": 3,
+      "text": "AI-centric companies: Google, Microsoft, Amazon, NVIDIA, IBM, TCS, Infosys. Startups: India's growing AI/ML startups in Bangalore, Hyderabad, Pune. Freelancing: Upwork and Freelancer for AI/ML freelance opportunities.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    }
+  ]
+}

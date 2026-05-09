@@ -1,0 +1,1095 @@
+{
+  "metadata": {
+    "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+    "page_title": "Admission — Complete Data Extract for RAG Model",
+    "source_url": "https://www.msajce-edu.in/admission.php",
+    "sections_covered": [
+      "Programmes Offered & Seats Available — UG",
+      "Programmes Offered & Seats Available — PG",
+      "Research Programs (Ph.D)",
+      "Admission through TNEA Counselling",
+      "Eligibility for Students from Other States",
+      "B.E / B.Tech Eligibility — HSC Academic",
+      "B.E / B.Tech Eligibility — HSC Vocational",
+      "Direct Second Year Lateral Entry Eligibility",
+      "Lateral Entry Minimum Eligibility Marks",
+      "M.E / M.Tech Eligibility",
+      "Ph.D Mechanical Engineering Eligibility",
+      "Skill Development Course — Model 1",
+      "Skill Development Course — Model 2",
+      "B.E / B.Tech Scholarships",
+      "Admission Contact"
+    ],
+    "scraped_date": "2026-04-27",
+    "total_chunks": 8,
+    "token_target": 500,
+    "overlap_tokens": 100,
+    "embedding_model": "text-embedding-3-small",
+    "rag_file_id": "msajce_admission",
+    "version": "v2",
+    "source_file": "msajce_admission.json"
+  },
+  "chunks": [
+    {
+      "chunk_id": "msajce_admission_chunk_01",
+      "section": "Programmes Offered & Seats Available — Undergraduate",
+      "source_url": "https://www.msajce-edu.in/admission.php#tab1",
+      "context": "Lists all UG engineering programmes at MSAJCE with sanctioned intake, government quota and management quota seat counts, plus NRI seat policy.",
+      "text": "PROGRAMMES OFFERED & SEATS AVAILABLE\n\nUNDER GRADUATE PROGRAMMES\n\nName of the Programme | Total Sanctioned Intake | Government Quota | Management Quota\nCivil Engineering | 30 | 15 | 15\nComputer Science & Engineering (Permanent Affiliation) | 60 | 30 | 30\nElectronics & Communication Engineering | 60 | 30 | 30\nElectrical & Electronics Engineering | 30 | 15 | 15\nMechanical Engineering (Permanent Affiliation) | 30 | 15 | 15\nInformation Technology | 60 | 30 | 30\nArtificial Intelligence & Data Science | 30 | 15 | 15\nComputer Science & Business Systems | 30 | 15 | 15\nComputer Science & Engineering (Cyber Security) | 30 | 15 | 15\nArtificial Intelligence & Machine Learning | 60 | 30 | 30\nElectronics Engg w/s in VLSI Design & Technology | 30 | 15 | 15\nECE w/s in Advanced Communication Technology | 30 | 15 | 15\n\n* Five percent (5%) of seats within Approved Intake shall be allowed for admission under NRI category. In the event of non-availability of students in NRI seats, the seats shall be given to general candidates as per merit.\n\nPOST GRADUATE PROGRAMMES\n\nName of the Programme | Total Sanctioned Intake | Government Quota | Management Quota\nComputer Science & Engineering | 9 | 3 | 6\nStructural Engineering | 18 | 6 | 12\n\n* Five percent (5%) of seats within Approved Intake shall be allowed for admission under NRI category. In the event of non-availability of students in NRI seats, the seats shall be given to general candidates as per merit.\n\nRESEARCH PROGRAMS (Ph.D)\n\nName of the Programme:\nMechanical Engineering\n\nDownload Brochure: https://www.msajce-edu.in/uploads/College-Prospectus.pdf\nOnline Application Form: https://enrollonline.co.in/Registration/Apply/MSAJCE",
+      "tables": [
+        {
+          "table_title": "UG Programmes — Seats",
+          "headers": [
+            "Name of the Programme",
+            "Total Sanctioned Intake",
+            "Government Quota",
+            "Management Quota"
+          ],
+          "rows": [
+            [
+              "Civil Engineering",
+              "30",
+              "15",
+              "15"
+            ],
+            [
+              "Computer Science & Engineering (Permanent Affiliation)",
+              "60",
+              "30",
+              "30"
+            ],
+            [
+              "Electronics & Communication Engineering",
+              "60",
+              "30",
+              "30"
+            ],
+            [
+              "Electrical & Electronics Engineering",
+              "30",
+              "15",
+              "15"
+            ],
+            [
+              "Mechanical Engineering (Permanent Affiliation)",
+              "30",
+              "15",
+              "15"
+            ],
+            [
+              "Information Technology",
+              "60",
+              "30",
+              "30"
+            ],
+            [
+              "Artificial Intelligence & Data Science",
+              "30",
+              "15",
+              "15"
+            ],
+            [
+              "Computer Science & Business Systems",
+              "30",
+              "15",
+              "15"
+            ],
+            [
+              "Computer Science & Engineering (Cyber Security)",
+              "30",
+              "15",
+              "15"
+            ],
+            [
+              "Artificial Intelligence & Machine Learning",
+              "60",
+              "30",
+              "30"
+            ],
+            [
+              "Electronics Engg w/s in VLSI Design & Technology",
+              "30",
+              "15",
+              "15"
+            ],
+            [
+              "ECE w/s in Advanced Communication Technology",
+              "30",
+              "15",
+              "15"
+            ]
+          ]
+        },
+        {
+          "table_title": "PG Programmes — Seats",
+          "headers": [
+            "Name of the Programme",
+            "Total Sanctioned Intake",
+            "Government Quota",
+            "Management Quota"
+          ],
+          "rows": [
+            [
+              "Computer Science & Engineering",
+              "9",
+              "3",
+              "6"
+            ],
+            [
+              "Structural Engineering",
+              "18",
+              "6",
+              "12"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "How many seats are available in CSE at MSAJCE?",
+        "What is the government quota and management quota for ECE at MSAJCE?",
+        "Does MSAJCE offer Artificial Intelligence and Machine Learning?",
+        "How many seats does MSAJCE have in total for UG programmes?",
+        "What are the NRI seat rules at MSAJCE?",
+        "Does MSAJCE have Cyber Security programme?",
+        "What PG programmes are offered at MSAJCE?",
+        "Is there a Ph.D programme at MSAJCE?",
+        "Where can I download the MSAJCE college brochure?",
+        "Where can I apply online for MSAJCE admission?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "Chennai"
+        ],
+        "numbers": [
+          "30 seats Civil",
+          "60 seats CSE",
+          "60 seats ECE",
+          "30 seats EEE",
+          "30 seats Mech",
+          "60 seats IT",
+          "30 seats AI&DS",
+          "30 seats CSBS",
+          "30 seats CS Cyber Security",
+          "60 seats AI&ML",
+          "30 seats VLSI",
+          "30 seats ACT",
+          "9 seats ME CSE",
+          "18 seats ME Structural",
+          "5% NRI quota"
+        ]
+      },
+      "keywords": [
+        "MSAJCE admission",
+        "UG seats",
+        "PG seats",
+        "CSE seats",
+        "ECE seats",
+        "AI ML",
+        "VLSI",
+        "Cyber Security",
+        "government quota",
+        "management quota",
+        "NRI quota",
+        "Mechanical Engineering PhD",
+        "IT seats",
+        "Structural Engineering",
+        "brochure download"
+      ],
+      "overlap_text": "",
+      "token_count": 520,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_admission.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Admission — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "Chennai",
+      "entity_numbers": "30 seats Civil, 60 seats CSE, 60 seats ECE, 30 seats EEE, 30 seats Mech, 60 seats IT, 30 seats AI&DS, 30 seats CSBS, 30 seats CS Cyber Security, 60 seats AI&ML, 30 seats VLSI, 30 seats ACT, 9 seats ME CSE, 18 seats ME Structural, 5% NRI quota"
+    },
+    {
+      "chunk_id": "msajce_admission_chunk_02",
+      "section": "Admission through TNEA Counselling & Eligibility for Other State Students",
+      "source_url": "https://www.msajce-edu.in/admission.php#tab2",
+      "context": "Explains the TNEA counselling process for B.E/B.Tech admission and the eligibility formula and contact for students from other states.",
+      "text": "ADMISSION THROUGH TNEA COUNSELLING\n\nStudents who have completed Plus 2 / Diploma may apply for Tamil Nadu Engineering Admissions (TNEA Counselling) for B.E / B.Tech programmes admission conducted by Directorate of Technical Education (DoTE), Chennai.\n\nFor More Details Please Visit:\nTNEA: https://tneaonline.org/\nDoTE: http://www.tndte.gov.in/site/\nAnna University: https://www.annauniv.edu/\n\nELIGIBILITY FOR STUDENTS FROM OTHER STATES\n(Andhra Pradesh, Telangana, Kerala and all Northern States)\n\nSelection of candidates will be based on the qualifying marks (Q) obtained in Mathematics, Physics and Chemistry at the Plus Two or Intermediate level. The qualifying marks (Q) are calculated as follows:\n\nQ = (Mathematics / 2) + ((Physics + Chemistry) / 4)\n\nwhere M, P, and C represent the percentage marks in Mathematics, Physics and Chemistry, respectively.\n\nFor Admission (Students from Other States):\nFor assistance, students can contact Dr. Vamsi Naga Mohan .A, who can communicate in Telugu, Tamil, Malayalam and Hindi.\n\nContact Numbers: 9043358674, 9502687344\nEmail: cse.vamsi@msajce-edu.in",
+      "tables": [],
+      "possible_questions": [
+        "How can I apply for MSAJCE through TNEA counselling?",
+        "What is the TNEA website link for engineering admissions?",
+        "Can students from Andhra Pradesh or Telangana apply to MSAJCE?",
+        "How is the qualifying score calculated for other state students at MSAJCE?",
+        "Who should I contact for admission from other states?",
+        "Does MSAJCE have a Telugu-speaking admission contact?",
+        "What is the formula for Q score for other state candidates?",
+        "Can Kerala students apply to MSAJCE?",
+        "What is the email of the other states admission coordinator at MSAJCE?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. Vamsi Naga Mohan A. — Coordinator, Admission for Students from Other States"
+        ],
+        "phones": [
+          "9043358674",
+          "9502687344"
+        ],
+        "emails": [
+          "cse.vamsi@msajce-edu.in"
+        ],
+        "locations": [
+          "Andhra Pradesh",
+          "Telangana",
+          "Kerala",
+          "Chennai"
+        ],
+        "numbers": []
+      },
+      "keywords": [
+        "TNEA counselling",
+        "other state students",
+        "Andhra Pradesh admission",
+        "Telangana admission",
+        "Kerala admission",
+        "Q score formula",
+        "Dr Vamsi Naga Mohan",
+        "DoTE",
+        "Anna University",
+        "Plus 2 admission",
+        "Mathematics Physics Chemistry",
+        "Telugu coordinator"
+      ],
+      "overlap_text": "* Five percent (5%) of seats within Approved Intake shall be allowed for admission under NRI category. In the event of non-availability of students in NRI seats, the seats shall be given to general candidates as per merit. RESEARCH PROGRAMS (Ph.D) — Mechanical Engineering. Download Brochure: https://www.msajce-edu.in/uploads/College-Prospectus.pdf",
+      "token_count": 390,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_admission.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Admission — Complete Data Extract for RAG Model",
+      "entity_persons": "Dr. Vamsi Naga Mohan A. — Coordinator, Admission for Students from Other States",
+      "entity_phones": "9043358674, 9502687344",
+      "entity_emails": "cse.vamsi@msajce-edu.in",
+      "entity_locations": "Andhra Pradesh, Telangana, Kerala, Chennai",
+      "entity_numbers": ""
+    },
+    {
+      "chunk_id": "msajce_admission_chunk_03",
+      "section": "B.E / B.Tech Eligibility — HSC Academic, HSC Vocational & Lateral Entry",
+      "source_url": "https://www.msajce-edu.in/admission.php#tab2",
+      "context": "Detailed community-wise minimum eligibility marks for B.E/B.Tech admission via HSC Academic, HSC Vocational, and Lateral Entry (Diploma/B.Sc.) routes.",
+      "text": "B.E / B.TECH — ADMISSION ELIGIBILITY\n\nB.E. / B.Tech. Degree Programmes (4 Years)\n\nHSC (ACADEMIC)\nA pass in the HSC (Academic) or its equivalent with a minimum average percentage in Mathematics, Physics and Chemistry put together as given below:\n\nS.No. | Community | Minimum Average Marks in Maths, Physics & Chemistry\n1 | General Category | 45.00%\n2 | Backward Class including Backward Class Muslim | 40.00%\n3 | MBC & DNC | 40.00%\n4 | SC / SCA / ST | 40.00%\n\nHSC (VOCATIONAL)\nA pass in any one of the HSC (Vocational subject) with any one of the Engineering related subjects namely Mathematics, Physics or Chemistry with a minimum average percentage put together:\n\nS.No. | Community | Minimum Average Marks in related subjects, Vocational Theory & Practicals\n1 | General Category | 45.00%\n2 | Backward Class including Backward Class Muslim | 40.00%\n3 | MBC & DNC | 40.00%\n4 | SC / SCA / ST | 40.00%\n\nDIRECT SECOND YEAR B.E./B.TECH. (LATERAL ENTRY) DEGREE COURSES\n\nQualifying Examination — Diploma Candidates:\nA pass with prescribed minimum eligibility marks in any one of the Diploma in appropriate branch of Engineering / Technology of the State Board of Technical Education and Training, Tamil Nadu / equivalent prescribed for admission to the Degree Course.\n\nQualifying Examination — B.Sc. Candidates:\nA pass with prescribed minimum eligibility marks in any recognized Bachelor's Degree in Science of minimum 3 years duration with 10+2+3 years pattern and studied core Mathematics as one of the subjects at degree level.\nNote: Candidates with Degree other than Bachelor of Science are not eligible.\n\nFor any clarification with regard to Diploma qualification, write a letter to DOTE, get it clarified and then admit students. On any account, candidates without prescribed qualifications will not be given admission approval.\n\nMinimum Eligibility Marks — Lateral Entry (Diploma & B.Sc.):\nAs per G.O. (Ms.) No.263, Higher Education (J2) Department, dated: 30.6.2008 and Government Letter No.5464 / J1 / 2011-1, Higher Education Department, dated: 4.7.2011\n\nS.No. | Community | Minimum Average Marks\n1 | General Category | 55.00%\n2 | Backward Class including Backward Class Muslim | 50.00%\n3 | MBC & DNC | 45.00%\n4 | SC / SCA / ST | Mere pass in the qualifying examination for Diploma / B.Sc. Degree / Equivalent\n\nNote: When the candidates produce grade certificate, they have to produce the actual marks also; otherwise only the minimum marks applicable to the grades in the subjects will be taken into account.",
+      "tables": [
+        {
+          "table_title": "HSC Academic Eligibility — Community-wise Minimum Marks",
+          "headers": [
+            "S.No.",
+            "Community",
+            "Minimum Average Marks (Maths + Physics + Chemistry)"
+          ],
+          "rows": [
+            [
+              "1",
+              "General Category",
+              "45.00%"
+            ],
+            [
+              "2",
+              "Backward Class including Backward Class Muslim",
+              "40.00%"
+            ],
+            [
+              "3",
+              "MBC & DNC",
+              "40.00%"
+            ],
+            [
+              "4",
+              "SC / SCA / ST",
+              "40.00%"
+            ]
+          ]
+        },
+        {
+          "table_title": "HSC Vocational Eligibility — Community-wise Minimum Marks",
+          "headers": [
+            "S.No.",
+            "Community",
+            "Minimum Average Marks (Vocational Theory & Practicals)"
+          ],
+          "rows": [
+            [
+              "1",
+              "General Category",
+              "45.00%"
+            ],
+            [
+              "2",
+              "Backward Class including Backward Class Muslim",
+              "40.00%"
+            ],
+            [
+              "3",
+              "MBC & DNC",
+              "40.00%"
+            ],
+            [
+              "4",
+              "SC / SCA / ST",
+              "40.00%"
+            ]
+          ]
+        },
+        {
+          "table_title": "Lateral Entry Minimum Eligibility Marks",
+          "headers": [
+            "S.No.",
+            "Community",
+            "Minimum Average Marks"
+          ],
+          "rows": [
+            [
+              "1",
+              "General Category",
+              "55.00%"
+            ],
+            [
+              "2",
+              "Backward Class including Backward Class Muslim",
+              "50.00%"
+            ],
+            [
+              "3",
+              "MBC & DNC",
+              "45.00%"
+            ],
+            [
+              "4",
+              "SC / SCA / ST",
+              "Mere pass in qualifying exam"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the minimum percentage required for General category students to join B.E at MSAJCE?",
+        "What marks are needed for SC/ST students to get admission in B.E at MSAJCE?",
+        "Can I join MSAJCE through lateral entry with a Diploma?",
+        "What is the minimum percentage for OBC students in MSAJCE admission?",
+        "Can B.Sc. graduates join B.E second year at MSAJCE?",
+        "What is the lateral entry eligibility for BC students at MSAJCE?",
+        "What is the HSC vocational minimum mark for MBC students?",
+        "Do I need to produce actual marks if I have a grade certificate?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "Tamil Nadu"
+        ],
+        "numbers": [
+          "45% General HSC",
+          "40% BC/MBC/SC HSC",
+          "55% General Lateral",
+          "50% BC Lateral",
+          "45% MBC Lateral"
+        ]
+      },
+      "keywords": [
+        "B.E eligibility",
+        "B.Tech eligibility",
+        "HSC academic",
+        "HSC vocational",
+        "lateral entry",
+        "Diploma admission",
+        "B.Sc lateral entry",
+        "General category marks",
+        "BC marks",
+        "MBC marks",
+        "SC ST eligibility",
+        "minimum percentage",
+        "DOTE",
+        "Engineering admission Tamil Nadu"
+      ],
+      "overlap_text": "Selection of candidates will be based on the qualifying marks (Q) obtained in Mathematics, Physics and Chemistry at the Plus Two or Intermediate level. Q = (Mathematics / 2) + ((Physics + Chemistry) / 4). Contact Dr. Vamsi Naga Mohan: 9043358674, 9502687344, cse.vamsi@msajce-edu.in",
+      "token_count": 540,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_admission.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Admission — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "Tamil Nadu",
+      "entity_numbers": "45% General HSC, 40% BC/MBC/SC HSC, 55% General Lateral, 50% BC Lateral, 45% MBC Lateral"
+    },
+    {
+      "chunk_id": "msajce_admission_chunk_04",
+      "section": "M.E / M.Tech & Ph.D Admission Eligibility",
+      "source_url": "https://www.msajce-edu.in/admission.php#tab3",
+      "context": "Specifies the eligibility qualifications for M.E./M.Tech. programmes in CSE and Structural Engineering, and Ph.D in Mechanical Engineering including CGPA requirements.",
+      "text": "M.E / M.TECH — ADMISSION ELIGIBILITY\n\nM.E. / M.Tech. Degree Programmes (2 Years)\n\nS.No. | PG Programme | Qualifications for Admission\n1 | M.E. (Computer Science and Engineering) | B.E. / B.Tech. (EEE / ECE / CSE / IT / I&C / E&I / IT / Electronics / Instrumentation) OR M.C.A.* or M.Sc. 5 years integrated (IT / CSE / Software Engg.)* (10+2+3+3 years pattern)\n2 | M.E. (Structural Engineering) | B.E. Degree in Civil\n\nFor M.E. Courses, students are admitted by the college as per Government rules and regulations on the basis of the marks obtained by the candidates in their qualifying examinations. The candidates can be admitted through the Tamil Nadu Common Entrance Test (TANCET) conducted by Anna University.\n\nPh.D — MECHANICAL ENGINEERING — ADMISSION ELIGIBILITY\n\n1.1 Master's Degree or any other qualification recognized as equivalent thereto in the fields of study notified from time to time by Anna University.\n\nS.No. | Programme | Qualification for Admission\n1 | Ph.D Degree in Mechanical Engineering | M.E./M.Tech./M.S. (By Research) in the relevant branch of Engineering or Technology\n\nNote: Candidates should have the required qualification in the order of studies: 10th, HSC, UG/PG degree or its equivalent qualification.\n\n1.2 Bachelor's Degree in Engineering / Technology with a minimum of 15 years of R & D Experience in National Research Laboratories / Public sector undertakings and with minimum of three publications in referred impact factor journals or two approved international patents in the last five years.\n\n1.3 A minimum of 55% marks or CGPA of 5.5 on a 10 point scale in the qualifying examination.\nIn case of SC/ST / Differently-Abled candidates: 50% marks or CGPA of 5.0 on a 10 point scale.",
+      "tables": [
+        {
+          "table_title": "M.E / M.Tech Programmes — Eligibility",
+          "headers": [
+            "S.No.",
+            "PG Programme",
+            "Qualifications for Admission"
+          ],
+          "rows": [
+            [
+              "1",
+              "M.E. (Computer Science and Engineering)",
+              "B.E./B.Tech. (EEE/ECE/CSE/IT/I&C/E&I/Electronics/Instrumentation) or M.C.A.* or M.Sc. 5yr integrated (IT/CSE/Software Engg)*"
+            ],
+            [
+              "2",
+              "M.E. (Structural Engineering)",
+              "B.E. Degree in Civil"
+            ]
+          ]
+        },
+        {
+          "table_title": "Ph.D — Mechanical Engineering Eligibility",
+          "headers": [
+            "S.No.",
+            "Programme",
+            "Qualification for Admission"
+          ],
+          "rows": [
+            [
+              "1",
+              "Ph.D Degree in Mechanical Engineering",
+              "M.E./M.Tech./M.S. (By Research) in relevant branch of Engineering or Technology"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What is the eligibility for M.E. Computer Science at MSAJCE?",
+        "Can MCA graduates join M.E. CSE at MSAJCE?",
+        "How are M.E. students admitted at MSAJCE?",
+        "What is TANCET and how does it relate to M.E. admission at MSAJCE?",
+        "What qualification is needed for Ph.D in Mechanical Engineering at MSAJCE?",
+        "What is the minimum CGPA for Ph.D admission at MSAJCE?",
+        "Can SC/ST students have lower CGPA for Ph.D at MSAJCE?",
+        "Does MSAJCE accept working professionals for Ph.D in Mechanical Engineering?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "Tamil Nadu"
+        ],
+        "numbers": [
+          "55% or CGPA 5.5 for Ph.D general",
+          "50% or CGPA 5.0 for SC/ST PhD",
+          "15 years R&D experience alternative route",
+          "3 publications or 2 patents required"
+        ]
+      },
+      "keywords": [
+        "M.E admission",
+        "M.Tech admission",
+        "ME CSE eligibility",
+        "ME Structural Engineering",
+        "TANCET",
+        "Anna University",
+        "Ph.D Mechanical Engineering",
+        "CGPA 5.5",
+        "MCA eligibility ME",
+        "PhD eligibility",
+        "research admission",
+        "postgraduate admission MSAJCE"
+      ],
+      "overlap_text": "Minimum Eligibility Marks — Lateral Entry: General 55%, BC 50%, MBC 45%, SC/ST mere pass. Note: When the candidates produce grade certificate, they have to produce the actual marks also otherwise only the minimum marks applicable to the grades will be taken into account.",
+      "token_count": 490,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_admission.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Admission — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "Tamil Nadu",
+      "entity_numbers": "55% or CGPA 5.5 for Ph.D general, 50% or CGPA 5.0 for SC/ST PhD, 15 years R&D experience alternative route, 3 publications or 2 patents required"
+    },
+    {
+      "chunk_id": "msajce_admission_chunk_05",
+      "section": "Skill Development Courses — Model 1 & Model 2",
+      "source_url": "https://www.msajce-edu.in/admission.php#tab5",
+      "context": "Details all Skill Development Courses (Model 1 and Model 2) offered at MSAJCE including sector, job role, intake, NSQF level, and duration in hours.",
+      "text": "SKILL DEVELOPMENT COURSE — ADMISSION\n\nMODEL 1:\n\nS.No. | Sector/Course Basket | Job Roll | Approved Intake | NSQF Level | No. of Hours\n1 | Computer Science and Engineering | Computer Hardware Network Maintenance | 30 | Level 4 | 1600\n2 | Mechanical Engineering | Refrigeration And Air Conditioning Technician | 30 | Level 5 | 3200\n\nMODEL 2:\n\nS.No. | Sector/Course Basket | Job Roll | Approved Intake | NSQF Level | No. of Hours\n1 | Computer Science and Engineering | AI - Machine Learning Developer | 30 | Level 7 | 756\n2 | Mechanical Engineering | Refrigeration And Air Conditioning Technician | 30 | Level 5 | 3200\n3 | Mechanical Engineering | Additive Manufacturing Technician (3D Printing) (CTS) | 30 | Level 4 | 2080\n4 | Electronics Engineering | Certificate Course in Embedded System Design using ARM/Cortex Microcontroller | 30 | Level 5 | 80\n5 | Architecture Engineering | Architectural Drafting and Basic 3D Design with Autodesk Revit (MES) | 30 | Level 4 | 500\n\nOnline Application Form: https://enrollonline.co.in/Registration/Apply/MSAJCE",
+      "tables": [
+        {
+          "table_title": "Skill Development — Model 1",
+          "headers": [
+            "S.No.",
+            "Sector/Course Basket",
+            "Job Roll",
+            "Approved Intake",
+            "NSQF Level",
+            "No. of Hours"
+          ],
+          "rows": [
+            [
+              "1",
+              "Computer Science and Engineering",
+              "Computer Hardware Network Maintenance",
+              "30",
+              "Level 4",
+              "1600"
+            ],
+            [
+              "2",
+              "Mechanical Engineering",
+              "Refrigeration And Air Conditioning Technician",
+              "30",
+              "Level 5",
+              "3200"
+            ]
+          ]
+        },
+        {
+          "table_title": "Skill Development — Model 2",
+          "headers": [
+            "S.No.",
+            "Sector/Course Basket",
+            "Job Roll",
+            "Approved Intake",
+            "NSQF Level",
+            "No. of Hours"
+          ],
+          "rows": [
+            [
+              "1",
+              "Computer Science and Engineering",
+              "AI - Machine Learning Developer",
+              "30",
+              "Level 7",
+              "756"
+            ],
+            [
+              "2",
+              "Mechanical Engineering",
+              "Refrigeration And Air Conditioning Technician",
+              "30",
+              "Level 5",
+              "3200"
+            ],
+            [
+              "3",
+              "Mechanical Engineering",
+              "Additive Manufacturing Technician (3D Printing) (CTS)",
+              "30",
+              "Level 4",
+              "2080"
+            ],
+            [
+              "4",
+              "Electronics Engineering",
+              "Certificate Course in Embedded System Design using ARM/Cortex Microcontroller",
+              "30",
+              "Level 5",
+              "80"
+            ],
+            [
+              "5",
+              "Architecture Engineering",
+              "Architectural Drafting and Basic 3D Design with Autodesk Revit (MES)",
+              "30",
+              "Level 4",
+              "500"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What skill development courses does MSAJCE offer?",
+        "Is there an AI Machine Learning skill course at MSAJCE?",
+        "What is the NSQF level for the 3D Printing course at MSAJCE?",
+        "How many hours is the Embedded System Design course at MSAJCE?",
+        "Does MSAJCE offer a course in Architectural Drafting using Revit?",
+        "What is the intake for skill development courses at MSAJCE?",
+        "How long is the Refrigeration and Air Conditioning course?",
+        "What is the difference between Model 1 and Model 2 skill courses?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "MSAJCE"
+        ],
+        "numbers": [
+          "30 intake per course",
+          "1600 hours Computer Hardware",
+          "3200 hours RAC Technician",
+          "756 hours AI ML Developer",
+          "2080 hours 3D Printing",
+          "80 hours Embedded Systems",
+          "500 hours Architectural Drafting"
+        ]
+      },
+      "keywords": [
+        "skill development",
+        "NSQF",
+        "AI machine learning course",
+        "3D printing course",
+        "embedded systems ARM",
+        "Autodesk Revit",
+        "refrigeration technician",
+        "computer hardware networking",
+        "Model 1 Model 2",
+        "vocational course MSAJCE",
+        "certificate course",
+        "CTS course"
+      ],
+      "overlap_text": "Ph.D Mechanical Engineering: Minimum 55% or CGPA 5.5 (general), 50% or CGPA 5.0 (SC/ST/Differently-abled). Candidates admitted through TANCET conducted by Anna University for M.E programmes.",
+      "token_count": 440,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_admission.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Admission — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "MSAJCE",
+      "entity_numbers": "30 intake per course, 1600 hours Computer Hardware, 3200 hours RAC Technician, 756 hours AI ML Developer, 2080 hours 3D Printing, 80 hours Embedded Systems, 500 hours Architectural Drafting"
+    },
+    {
+      "chunk_id": "msajce_admission_chunk_06",
+      "section": "B.E / B.Tech Scholarships",
+      "source_url": "https://www.msajce-edu.in/admission.php#tab6",
+      "context": "Comprehensive list of scholarships available to B.E/B.Tech students at MSAJCE including scheme names, eligibility criteria, funding agencies, amounts, and number of scholarships.",
+      "text": "B.E / B.TECH SCHOLARSHIPS\n\nName of the Scheme | Eligibility | Funding Agency | Scholarship Amount (Rs.) | No. of Scholarships for Tamil Nadu\nPragati Scholarship Scheme for Girl Students | Max two girl children per family; Income less than 8 Lakh per annum | AICTE | Rs. 50,000 per year | 800\nSaksham Scholarship Scheme for Specially Abled Students | Having disability not less than 40%; Income less than 8 Lakh per annum | AICTE | Rs. 50,000 per year | All Eligible Candidates\nMerit cum Means Based Scholarship (Minority Community only) | 50% marks in final examination; Income less than 2.5 Lakh per annum | Ministry of Minority Affairs | Rs. 20,000 per year + Rs. 12,000 for Hostellers / Rs. 6,000 for Day Scholars | 1075 for Muslim, 1173 for Christian\nCentral Sector Scheme | 80% marks in final examination; Income less than 8 Lakh per annum | MHRD | Rs. 10,000 per year | 4883\nFinancial Assistance for Education to the wards of Beedi/Mine/Cine workers | Income less than Rs. 10,000 per month | Ministry of Labour & Employment | Rs. 15,000 per year | All Eligible Candidates\n\nAICTE Scholarship / Fellowship Schemes: https://www.aicte.gov.in/schemes/students-development-schemes\nOnline Application Form: https://enrollonline.co.in/Registration/Apply/MSAJCE",
+      "tables": [
+        {
+          "table_title": "B.E / B.Tech Scholarships",
+          "headers": [
+            "Name of Scheme",
+            "Eligibility",
+            "Funding Agency",
+            "Scholarship Amount (Rs.)",
+            "No. of Scholarships for Tamil Nadu"
+          ],
+          "rows": [
+            [
+              "Pragati Scholarship Scheme for Girl Students",
+              "Max two girl children per family; Income < 8 Lakh",
+              "AICTE",
+              "Rs. 50,000 per year",
+              "800"
+            ],
+            [
+              "Saksham Scholarship Scheme for Specially Abled Students",
+              "Disability >= 40%; Income < 8 Lakh",
+              "AICTE",
+              "Rs. 50,000 per year",
+              "All Eligible Candidates"
+            ],
+            [
+              "Merit cum Means Based Scholarship (Minority Community)",
+              "50% marks; Income < 2.5 Lakh",
+              "Ministry of Minority Affairs",
+              "Rs. 20,000 + Rs. 12,000 Hosteller / Rs. 6,000 Day Scholar",
+              "1075 Muslim, 1173 Christian"
+            ],
+            [
+              "Central Sector Scheme",
+              "80% marks; Income < 8 Lakh",
+              "MHRD",
+              "Rs. 10,000 per year",
+              "4883"
+            ],
+            [
+              "Financial Assistance — Beedi/Mine/Cine Workers' Wards",
+              "Income < Rs. 10,000/month",
+              "Ministry of Labour & Employment",
+              "Rs. 15,000 per year",
+              "All Eligible Candidates"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "What scholarships are available for girl students at MSAJCE?",
+        "What is the Pragati scholarship amount at MSAJCE?",
+        "Is there a scholarship for disabled students at MSAJCE?",
+        "What are the income limits for AICTE scholarships?",
+        "What scholarship is available for Muslim students at MSAJCE?",
+        "How much is the minority scholarship at MSAJCE?",
+        "What marks are needed for the Central Sector Scheme scholarship?",
+        "Is there financial assistance for children of mine workers at MSAJCE?",
+        "How much extra do hostellers get in the minority scholarship?",
+        "Who provides the Saksham scholarship?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [],
+        "emails": [],
+        "locations": [
+          "Tamil Nadu"
+        ],
+        "numbers": [
+          "Rs. 50,000 Pragati",
+          "Rs. 50,000 Saksham",
+          "Rs. 20,000 minority",
+          "Rs. 12,000 hosteller bonus",
+          "Rs. 6,000 day scholar bonus",
+          "Rs. 10,000 Central Sector",
+          "Rs. 15,000 Beedi/Mine workers",
+          "800 Pragati scholarships TN",
+          "4883 Central Sector scholarships TN",
+          "40% disability threshold",
+          "8 Lakh income limit",
+          "2.5 Lakh minority income limit"
+        ]
+      },
+      "keywords": [
+        "Pragati scholarship",
+        "Saksham scholarship",
+        "girl student scholarship",
+        "disability scholarship",
+        "minority scholarship",
+        "Muslim scholarship",
+        "Christian scholarship",
+        "AICTE scholarship",
+        "Central Sector Scheme",
+        "Beedi workers scholarship",
+        "MHRD scholarship",
+        "Ministry Minority Affairs",
+        "income limit scholarship",
+        "scholarship amount"
+      ],
+      "overlap_text": "SKILL DEVELOPMENT — Model 2 includes: AI Machine Learning Developer (30 seats, Level 7, 756 hours), 3D Printing (30 seats, Level 4, 2080 hours), Embedded Systems (30 seats, Level 5, 80 hours), Autodesk Revit Architectural (30 seats, Level 4, 500 hours).",
+      "token_count": 510,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_admission.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Admission — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "",
+      "entity_emails": "",
+      "entity_locations": "Tamil Nadu",
+      "entity_numbers": "Rs. 50,000 Pragati, Rs. 50,000 Saksham, Rs. 20,000 minority, Rs. 12,000 hosteller bonus, Rs. 6,000 day scholar bonus, Rs. 10,000 Central Sector, Rs. 15,000 Beedi/Mine workers, 800 Pragati scholarships TN, 4883 Central Sector scholarships TN, 40% disability threshold, 8 Lakh income limit, 2.5 Lakh minority income limit"
+    },
+    {
+      "chunk_id": "msajce_admission_chunk_07",
+      "section": "Admission Contact Details",
+      "source_url": "https://www.msajce-edu.in/admission.php#tab7",
+      "context": "Complete list of MSAJCE admission contact persons with their designations, phone numbers, and email addresses including the coordinator for other state students.",
+      "text": "ADMISSION CONTACT\n\nS.No. | Name | Phone | Email\n1 | Dr. K.S. Srinivasan, Principal, MSAJCE, Chennai | 9150575066 | principal@msajce-edu.in\n2 | Mr. A. Abdul Gafoor, Administrative Officer, MSAJCE, Chennai | 9940319629 | abdulgafoor@msajce-edu.in\n3 | Dr. K.P. Santhosh Nathan, Physical Education Director & Head-Admission, MSAJCE, Chennai | 9840886992 | ped.santhosh@msajce-edu.in\n4 | Mr. S. Syed Abuthahir, Assistant Professor, MSAJCE, Chennai | 9944127339 | mech.syedabuthahir@msajce-edu.in\n5 | Mr. B. Rizha Ur Rahman, Assistant Professor, MSAJCE, Chennai | 9790836981 | civil.rizha@msajce-edu.in\n6 | Mrs. I.S. Suganthi, Assistant Professor, MSAJCE, Chennai | 7299772958 | ece.suganthi@msajce-edu.in\n7 | Dr. Vamsi Naga Mohan A., Assistant Professor, MSAJCE, Chennai (Coordinator – Admission for Students from Other States) | 9043358674 / 9502687344 | cse.vamsi@msajce-edu.in\n\nGeneral College Contact:\nAddress: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103\nPhone: +91 99400 04500\nEmail: msajce.office@gmail.com\nWebsite: www.msajce-edu.in\n\nOnline Application Form: https://enrollonline.co.in/Registration/Apply/MSAJCE\nOnline Fee Payment: https://www.feepayr.com/",
+      "tables": [
+        {
+          "table_title": "Admission Contact Persons",
+          "headers": [
+            "S.No.",
+            "Name & Designation",
+            "Phone",
+            "Email"
+          ],
+          "rows": [
+            [
+              "1",
+              "Dr. K.S. Srinivasan — Principal",
+              "9150575066",
+              "principal@msajce-edu.in"
+            ],
+            [
+              "2",
+              "Mr. A. Abdul Gafoor — Administrative Officer",
+              "9940319629",
+              "abdulgafoor@msajce-edu.in"
+            ],
+            [
+              "3",
+              "Dr. K.P. Santhosh Nathan — PED & Head-Admission",
+              "9840886992",
+              "ped.santhosh@msajce-edu.in"
+            ],
+            [
+              "4",
+              "Mr. S. Syed Abuthahir — Assistant Professor",
+              "9944127339",
+              "mech.syedabuthahir@msajce-edu.in"
+            ],
+            [
+              "5",
+              "Mr. B. Rizha Ur Rahman — Assistant Professor",
+              "9790836981",
+              "civil.rizha@msajce-edu.in"
+            ],
+            [
+              "6",
+              "Mrs. I.S. Suganthi — Assistant Professor",
+              "7299772958",
+              "ece.suganthi@msajce-edu.in"
+            ],
+            [
+              "7",
+              "Dr. Vamsi Naga Mohan A. — Coordinator Other States",
+              "9043358674 / 9502687344",
+              "cse.vamsi@msajce-edu.in"
+            ]
+          ]
+        }
+      ],
+      "possible_questions": [
+        "Who is the Principal of MSAJCE and what is his contact?",
+        "Who is the Head of Admissions at MSAJCE?",
+        "What is the phone number of MSAJCE admission office?",
+        "Who should I contact for admission queries at MSAJCE?",
+        "What is the email of the MSAJCE principal?",
+        "Who handles admission for students from other states at MSAJCE?",
+        "What is the administrative officer phone number at MSAJCE?",
+        "How do I pay the fee online at MSAJCE?",
+        "Where is MSAJCE located?"
+      ],
+      "entities": {
+        "persons": [
+          "Dr. K.S. Srinivasan — Principal",
+          "Mr. A. Abdul Gafoor — Administrative Officer",
+          "Dr. K.P. Santhosh Nathan — Physical Education Director & Head-Admission",
+          "Mr. S. Syed Abuthahir — Assistant Professor",
+          "Mr. B. Rizha Ur Rahman — Assistant Professor",
+          "Mrs. I.S. Suganthi — Assistant Professor",
+          "Dr. Vamsi Naga Mohan A. — Coordinator Admission Other States"
+        ],
+        "phones": [
+          "9150575066",
+          "9940319629",
+          "9840886992",
+          "9944127339",
+          "9790836981",
+          "7299772958",
+          "9043358674",
+          "9502687344",
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "principal@msajce-edu.in",
+          "abdulgafoor@msajce-edu.in",
+          "ped.santhosh@msajce-edu.in",
+          "mech.syedabuthahir@msajce-edu.in",
+          "civil.rizha@msajce-edu.in",
+          "ece.suganthi@msajce-edu.in",
+          "cse.vamsi@msajce-edu.in",
+          "msajce.office@gmail.com"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": []
+      },
+      "keywords": [
+        "Dr K.S. Srinivasan",
+        "Abdul Gafoor",
+        "Santhosh Nathan",
+        "Syed Abuthahir",
+        "Rizha Ur Rahman",
+        "Suganthi",
+        "Vamsi Naga Mohan",
+        "admission contact",
+        "principal contact",
+        "MSAJCE phone",
+        "MSAJCE email",
+        "head admission",
+        "other states coordinator",
+        "online fee payment",
+        "apply online"
+      ],
+      "overlap_text": "Scholarships: Pragati Rs.50,000 (girl students, AICTE), Saksham Rs.50,000 (disabled, AICTE), Minority Rs.20,000+hostel allowance (Ministry of Minority Affairs), Central Sector Rs.10,000 (MHRD, 80% marks), Beedi/Mine workers Rs.15,000 (Ministry of Labour).",
+      "token_count": 480,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "critical",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_admission.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Admission — Complete Data Extract for RAG Model",
+      "entity_persons": "Dr. K.S. Srinivasan — Principal, Mr. A. Abdul Gafoor — Administrative Officer, Dr. K.P. Santhosh Nathan — Physical Education Director & Head-Admission, Mr. S. Syed Abuthahir — Assistant Professor, Mr. B. Rizha Ur Rahman — Assistant Professor, Mrs. I.S. Suganthi — Assistant Professor, Dr. Vamsi Naga Mohan A. — Coordinator Admission Other States",
+      "entity_phones": "9150575066, 9940319629, 9840886992, 9944127339, 9790836981, 7299772958, 9043358674, 9502687344, +91 99400 04500",
+      "entity_emails": "principal@msajce-edu.in, abdulgafoor@msajce-edu.in, ped.santhosh@msajce-edu.in, mech.syedabuthahir@msajce-edu.in, civil.rizha@msajce-edu.in, ece.suganthi@msajce-edu.in, cse.vamsi@msajce-edu.in, msajce.office@gmail.com",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": ""
+    },
+    {
+      "chunk_id": "msajce_admission_chunk_08",
+      "section": "Important Links & Downloads",
+      "source_url": "https://www.msajce-edu.in/admission.php",
+      "context": "All important links related to MSAJCE admission including application forms, brochures, fee payment, regulatory bodies, and approvals.",
+      "text": "IMPORTANT LINKS & DOWNLOADS — MSAJCE ADMISSION\n\nOnline Application Form: https://enrollonline.co.in/Registration/Apply/MSAJCE\nCollege Brochure / Prospectus Download: https://www.msajce-edu.in/uploads/College-Prospectus.pdf\nAdmission 2026-2027 Flyer: https://www.msajce-edu.in/uploads/Admission24-25Flyer.pdf\nOnline Fee Payment: https://www.feepayr.com/\nInternship Report Format 2025: https://online.fliphtml5.com/euxeg/oqsi/#p=1\nInternship Report Format 2025 (Download): https://www.msajce-edu.in/uploads/placement/internship/Intership Report 2025.pdf\n\nREGULATORY & ACCREDITATION LINKS\nTNEA Counselling: https://tneaonline.org/\nDirectorate of Technical Education (DoTE): http://www.tndte.gov.in/site/\nAnna University: https://www.annauniv.edu/\nAICTE Scholarship Schemes: https://www.aicte.gov.in/schemes/students-development-schemes\nAICTE Student Feedback: https://www.aicte-india.org/feedback/index.php\n\nCOLLEGE DOCUMENTS\nAnna University Approval: https://www.msajce-edu.in/uploads/AnnaUnivApproval.pdf\nAICTE Approval: https://www.msajce-edu.in/uploads/AICTE-APPROVAL.pdf\nMandatory Disclosure: http://msajce-edu.in/uploads/MandatoryDisclosure.pdf\nCode of Conduct: https://www.msajce-edu.in/uploads/naac/cdeofconduct.pdf\nBest Practices: https://www.msajce-edu.in/uploads/naac/bestpractices.pdf\nAutonomous Regulations (R24): https://www.msajce-edu.in/uploads/autonomous/AutonomousR24.pdf\n\nGRIEVANCE: grievance@msajce-edu.in\nGrievance Redressal Committee: https://www.msajce-edu.in/grievanceredressalcommittee.php\n\nCOLLEGE ADDRESS:\n34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103\nPhone: +91 99400 04500 | Email: msajce.office@gmail.com | Website: www.msajce-edu.in",
+      "tables": [],
+      "possible_questions": [
+        "Where can I apply online for MSAJCE?",
+        "How can I download the MSAJCE college prospectus?",
+        "Where do I pay college fees online for MSAJCE?",
+        "What is the AICTE approval link for MSAJCE?",
+        "Where is the Anna University approval document for MSAJCE?",
+        "What is the grievance email at MSAJCE?",
+        "Where can I find the MSAJCE Autonomous Regulations?",
+        "What is the TNEA website link?"
+      ],
+      "entities": {
+        "persons": [],
+        "phones": [
+          "+91 99400 04500"
+        ],
+        "emails": [
+          "msajce.office@gmail.com",
+          "grievance@msajce-edu.in"
+        ],
+        "locations": [
+          "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103"
+        ],
+        "numbers": []
+      },
+      "keywords": [
+        "online application MSAJCE",
+        "college prospectus download",
+        "fee payment online",
+        "TNEA link",
+        "DoTE link",
+        "Anna University",
+        "AICTE approval",
+        "mandatory disclosure",
+        "code of conduct",
+        "autonomous regulations R24",
+        "grievance email",
+        "MSAJCE website"
+      ],
+      "overlap_text": "Admission contacts: Dr. K.S. Srinivasan (Principal) 9150575066, Dr. K.P. Santhosh Nathan (Head-Admission) 9840886992, Mr. Abdul Gafoor (Admin) 9940319629, Dr. Vamsi Naga Mohan (Other States) 9043358674 / 9502687344.",
+      "token_count": 420,
+      "node_type": "FACT",
+      "chunk_type": "paragraph",
+      "priority": "high",
+      "is_parent": false,
+      "parent_id": "",
+      "child_ids": [],
+      "language": "en",
+      "is_active": true,
+      "version": "v2",
+      "academic_year": "2025-26",
+      "source_files": [
+        "msajce_admission.json"
+      ],
+      "source_types": [
+        "json"
+      ],
+      "edges": [],
+      "institution": "MSAJCE — Mohamed Sathak A.J. College of Engineering",
+      "page_title": "Admission — Complete Data Extract for RAG Model",
+      "entity_persons": "",
+      "entity_phones": "+91 99400 04500",
+      "entity_emails": "msajce.office@gmail.com, grievance@msajce-edu.in",
+      "entity_locations": "34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai – 603103",
+      "entity_numbers": ""
+    }
+  ]
+}

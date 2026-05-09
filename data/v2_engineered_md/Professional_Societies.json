@@ -1,0 +1,53 @@
+{
+  "source": "Professional_Societies.md",
+  "sections": [
+    {
+      "header": "Vision: \"IT for Masses\"",
+      "level": 3,
+      "text": "Keeping in mind the interest of IT professionals and computer users, CSI works towards making the profession an area of choice amongst all sections of society. CSI regularly organizes conferences, conventions, lectures, projects, and awards. It also provides training for physically challenged citizens ('Punarjani') and assists governments in formulating IT strategy and planning.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "Kanchipuram Chapter",
+      "level": 3,
+      "text": "The Society has developed a well-established network across the country. Activities for students include lecture meetings, seminars, conferences, training programs, programming contests, and industrial visits. CSI's Educational Directorate undertakes certification of professionals on the latest technologies and offers distance education in Business Domain areas.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "2. IEEE — Institute of Electrical and Electronics Engineers",
+      "level": 2,
+      "text": "The IEEE is a United States-based non-profit organization and the world's leading professional association for the advancement of technology. It covers areas ranging from aerospace systems, electrical, electronics, computers, telecommunications, biomedical engineering, electric power, and consumer electronics. IEEE publishes technical literature and highly qualified research articles across all engineering domains.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "3. IETE — Institution of Electronics and Telecommunication Engineers",
+      "level": 2,
+      "text": "IETE is one of the leading Professional Societies in India for Electronics and Communication Engineers. MSAJCE established its IETE Students Forum on 16/08/2017 with 100 active members. The forum organizes guest lectures, seminars, workshops, and conferences. Student members benefit from technical visits, practical training, and project work in R&D; laboratories and industries.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "4. SAE — Society of Automotive Engineers",
+      "level": 2,
+      "text": "SAE is a US-based, globally active professional association and standards developing organization for engineering professionals. Principal emphasis is placed on global transport industries such as aerospace, automotive, and commercial vehicles. SAEINDIA is India's leading resource for mobility technology, operating across four sections: Northern, Eastern, Southern, and Western.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    },
+    {
+      "header": "5. ISHRAE — Indian Society of Heating, Refrigerating and Air Conditioning Engineers",
+      "level": 2,
+      "text": "ISHRAE was founded in 1981 at New Delhi by a group of eminent HVAC&R; professionals. It operates from 41 chapters and sub-chapters spread all over India, with HQ in Delhi. ISHRAE works with various Govt. Ministries/Departments including BIS, BEE (ECBC), MoEFCC (Ozone Cell), and NCCD (Ministry of Agriculture). It is looked upon as a repository of technical knowledge in the HVAC&R; and Building Industry field by peer organizations and the Government of India.",
+      "engineered": false,
+      "has_table": false,
+      "has_bullet": false
+    }
+  ]
+}

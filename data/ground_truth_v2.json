@@ -1,8 +1,28 @@
 {
+  "csi_president": {
+    "value": "Yogesh R (Batch 2022-2026, IT Department)",
+    "valid_until": "2026-05-31",
+    "source": "MSAJCE_Professional_Societies_supplement.json"
+  },
   "csi_vp": {
-    "value": "Saqlin Mustaq M (Batch 2023-2027)",
+    "value": "Saqlin Mustaq M (Batch 2023-2027, AI&DS Department)",
     "valid_until": "2027-05-31",
-    "source": "Professional_Societies_2024.pdf"
+    "source": "MSAJCE_Professional_Societies_supplement.json"
+  },
+  "csi_secretary": {
+    "value": "Abu Jabar Mubarak (Batch 2022-2026, CS&BS Department)",
+    "valid_until": "2026-05-31",
+    "source": "MSAJCE_Professional_Societies_supplement.json"
+  },
+  "lead_architect": {
+    "value": "Ramanathan S (Ram). Lead AI Architect at MSAJCE. Developed Lorin AI, Zenify, Zenpay, Pocket Lawyer, and Formora.",
+    "valid_until": "2029-12-31",
+    "source": "ramanathan_profile.json"
+  },
+  "developer": {
+    "value": "Ramanathan S",
+    "valid_until": "2029-12-31",
+    "source": "ramanathan_profile.json"
   },
   "principal": {
     "value": "Dr. K.S. Srinivasan",

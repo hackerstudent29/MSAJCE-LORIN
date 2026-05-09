@@ -416,6 +416,7 @@ if __name__ == "__main__":
     print("\n[3] Adding Canonical Extended JSON chunks...")
     json_count = 0
     for jpath in glob.glob(os.path.join(KB_DIR, "*.json")):
+        print(f"    Processing JSON: {os.path.basename(jpath)}")
         with open(jpath, encoding='utf-8') as f:
             data = json.load(f)
         chunks = data.get("chunks", []) if isinstance(data, dict) else data
