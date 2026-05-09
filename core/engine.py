@@ -167,6 +167,18 @@ class RAGEngine:
         primary_q = queries[0]
         meta_filter = self.build_metadata_filter(primary_q)
         q_type = classify_query(primary_q)
+        
+        # SYSTEMATIC FIX: Dynamic Entity Extraction
+        entities = []
+        lower_q = primary_q.lower()
+        # Common entity categories across the college
+        keywords = ["csi", "ieee", "sae", "iete", "ishrae", "nss", "yrc", "rotaract", "bus", "route", "scholarship", "faculty", "placement"]
+        for k in keywords:
+            if k in lower_q: entities.append(k)
+        
+        # Regex for potential names (Capitalized words)
+        names = re.findall(r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b', primary_q)
+        entities.extend([n.lower() for n in names])
 
         async def fetch_one(q):
             p_hits = []
@@ -376,19 +388,29 @@ class RAGEngine:
                 yield "I do not have specific information on that institutional detail. Please check the college website or contact the administration directly."
                 return
         
-        # IDENTITY FAST-PASS (Student Leaders Only)
-        lower_q = user_query.lower()
-        if self.bm25:
+        # SYSTEMATIC FIX: Entity-Based Context Boosting
+        if self.bm25 and entities:
             try:
-                # Find the specific Professional Societies / CSI chunks
-                csi_chunks = [c for c in self.bm25.corpus if "Professional_Societies" in c.get("page_title", "")]
+                # Find chunks that match ANY extracted entity in their metadata or text
+                boosted_chunks = []
+                for chunk in self.bm25.corpus:
+                    # Check text and common metadata fields
+                    match_score = 0
+                    c_text = str(chunk.get("text", "")).lower()
+                    c_title = str(chunk.get("page_title", "")).lower()
+                    
+                    for ent in entities:
+                        if ent in c_text: match_score += 1
+                        if ent in c_title: match_score += 2
+                    
+                    if match_score >= 2: # Significant match
+                        boosted_chunks.append((chunk, match_score))
                 
-                # If query is about CSI or Office Bearers, prioritize the society data
-                if any(w in lower_q for w in ["csi", "office", "bearer", "president", "secretary", "saqlin"]) and csi_chunks:
-                    # Insert top relevant society chunks at the front
-                    for chunk in reversed(csi_chunks[:3]):
-                        context_chunks.insert(0, chunk)
-            except:
+                # Sort by match score and insert top 5
+                boosted_chunks.sort(key=lambda x: x[1], reverse=True)
+                for chunk, score in reversed(boosted_chunks[:5]):
+                    context_chunks.insert(0, chunk)
+            except Exception as e:
                 pass
         
         # Cleanup encoding artifacts and non-printable chars for LLM clarity
