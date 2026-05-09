@@ -168,17 +168,34 @@ class RAGEngine:
         meta_filter = self.build_metadata_filter(primary_q)
         q_type = classify_query(primary_q)
         
-        # SYSTEMATIC FIX: Dynamic Entity Extraction
+    def extract_entities(self, query: str) -> list:
+        """Systematic Entity Extraction for institutional facts."""
         entities = []
-        lower_q = primary_q.lower()
+        lower_q = query.lower()
         # Common entity categories across the college
         keywords = ["csi", "ieee", "sae", "iete", "ishrae", "nss", "yrc", "rotaract", "bus", "route", "scholarship", "faculty", "placement"]
         for k in keywords:
             if k in lower_q: entities.append(k)
         
         # Regex for potential names (Capitalized words)
-        names = re.findall(r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b', primary_q)
+        names = re.findall(r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b', query)
         entities.extend([n.lower() for n in names])
+        return list(set(entities))
+
+    @traceable(name="Hybrid Retrieval")
+    async def get_context(self, queries: list, trace):
+        """Advanced Multi-Query Retrieval with RRF."""
+        # 'queries' is now a list [original, alt1, alt2]
+        all_semantic = []
+        all_keyword = []
+        
+        # Build common filter once
+        primary_q = queries[0]
+        meta_filter = self.build_metadata_filter(primary_q)
+        q_type = classify_query(primary_q)
+        
+        # SYSTEMATIC FIX: Dynamic Entity Extraction (Consolidated)
+        entities = self.extract_entities(primary_q)
 
         async def fetch_one(q):
             p_hits = []
@@ -320,8 +337,8 @@ class RAGEngine:
         # Handle cases like "* Item" or "- Item"
         text = re.sub(r'^[ \t]*[*+-][ \t]+', '• ', text, flags=re.MULTILINE)
         
-        # 3. Strip any remaining asterisks (e.g. bolding/italics)
-        text = text.replace('*', '')
+        # 3. Strip any stray formatting but PRESERVE BOLDING (**)
+        # text = text.replace('*', '') # FIXED: This was destroying bolding.
         
         # 4. Clean up excessive newlines
         text = re.sub(r'\n{3,}', '\n\n', text).strip()
@@ -385,17 +402,8 @@ class RAGEngine:
         # 2. Advanced Multi-Query Context Retrieval
         context_chunks = await self.get_context(queries, trace)
         
-        # SYSTEMATIC FIX: Dynamic Entity Extraction (Scope Fix)
-        entities = []
-        primary_q = queries[0]
-        lower_q = primary_q.lower()
-        # Common entity categories across the college
-        keywords = ["csi", "ieee", "sae", "iete", "ishrae", "nss", "yrc", "rotaract", "bus", "route", "scholarship", "faculty", "placement"]
-        for k in keywords:
-            if k in lower_q: entities.append(k)
-        # Regex for potential names (Capitalized words)
-        names = re.findall(r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b', primary_q)
-        entities.extend([n.lower() for n in names])
+        # SYSTEMATIC FIX: Dynamic Entity Extraction (Consolidated)
+        entities = self.extract_entities(queries[0])
         
         # AUDIT FIX: Confidence Gate Response (Problem 4)
         if context_chunks and context_chunks[0].get("confidence_low"):
