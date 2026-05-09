@@ -333,6 +333,7 @@ class RAGEngine:
         trace = self.langfuse.trace(name="Lorin Enterprise RAG", input=user_query)
         
         # 1. Conversationally Robust Search & Stop Word Filtering
+        p = None
         queries = [user_query]
         intent = "FACTUAL"
         
