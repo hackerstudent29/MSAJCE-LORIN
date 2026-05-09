@@ -389,6 +389,10 @@ class RAGEngine:
 
     def _post_process(self, text: str) -> str:
         """Strict aesthetic hardening (Master Rule Section 3)."""
+        # Strip literal 'Blank Line' or '[Blank Line]' hallucinations
+        text = re.sub(r'(?i)\bblank\s+line\b', '', text)
+        text = re.sub(r'\[.*?\]', '', text) # Strip bracketed instructions
+        
         text = re.sub(r'^#+.*$', '', text, flags=re.MULTILINE)
         text = re.sub(r'^[ \t]*[*+-][ \t]+', '• ', text, flags=re.MULTILINE)
         text = re.sub(r'\n{3,}', '\n\n', text).strip()
@@ -503,7 +507,7 @@ class RAGEngine:
 
 RULES (follow strictly):
 {greeting_rule}
-2. FRIENDLY EXPLAINER: Deliver answers in clear, accessible English as a fluid narrative. Speak like a helpful advisor who explains things simply.
+2. FRIENDLY EXPLAINER: Always start with a 1-2 sentence narrative explanation or a warm introduction. Explain institutional jargon simply. Never just output a raw list without a helpful preamble. Deliver answers in clear, accessible English as a fluid narrative. Speak like a helpful advisor who explains things simply.
 3. ZERO TABLES: Never use tables or complex grid structures. Telegram cannot render them. Use paragraphs and bullets instead.
 4. SURGICAL BULLETS: Use center dots (•) for all lists of 3+ items, especially for bus routes, boarding points, and department names.
 5. LEAD ARCHITECT: If asked about your developer, proudly state you were developed by **Ramanathan S** (Ram), the lead architect at MSAJCE.
@@ -512,11 +516,11 @@ RULES (follow strictly):
 8. {"COUNT MODE: Provide a summary and total count only." if is_count_only else ""}
 9. COURSE QUERIES: If a user asks about available courses or programs, ALWAYS list all 12 departments as the primary answer.
 
-10. NO PARA-LISTS: For lists of people/faculty and their achievements (patents, books, etc.), you MUST use a multi-line nested format with **blank lines** between different individuals.
-    *   Main Bullet (•): **Faculty Name**
-    *   Sub-Bullet (-): Achievement Title (on a new line below the name).
-    *   **Blank Line**: Always leave a blank line before starting the next faculty member.
-    CRITICAL: Never put Name and Achievement on the same line. Ensure clear visual separation between blocks using double spacing.
+10. NO PARA-LISTS: For lists of people/faculty and their achievements, you MUST use a multi-line nested format with CLEAR SPACING between different individuals.
+    *   Main Bullet (•): **Full Name**
+    *   Sub-Bullet (-): Specific Achievement or Detail (on a new line below the name).
+    *   **Double Space**: Always leave a double newline (press Enter twice) before starting the next person.
+    CRITICAL: Never write the words 'Blank Line'. Just leave the actual physical space. Ensure clear visual separation between blocks.
 
 11. OFFICE BEARERS: If asked for 'Office Bearers', you MUST distinguish between 'Nomination Authority' (Principal/Professors) and 'Student Office Bearers' (President/Vice President). List the Students first as they are the active student-facing leaders.
 12. ENTITY DEDUPLICATION: If the context contains multiple entries that clearly refer to the same person, merge them.
