@@ -17,6 +17,7 @@ from langsmith import traceable
 from langfuse import Langfuse
 
 load_dotenv()
+os.environ['LANGSMITH_TRACING'] = 'false'
 logger = logging.getLogger(__name__)
 
 # ── Master Query Classifiers (Master Rule Section 5B) ────────────────────────
@@ -77,9 +78,13 @@ class RAGEngine:
         base_dir = os.path.dirname(core_dir) # Go up to the root
         
         index_dir = os.path.join(base_dir, "data", "bm25_index")
-        if os.path.exists(os.path.join(index_dir, "params.index.json")):
-            self.bm25 = bm25s.BM25.load(index_dir, load_corpus=True)
-        else: self.bm25 = None
+        try:
+            if os.path.exists(os.path.join(index_dir, "params.index.json")):
+                self.bm25 = bm25s.BM25.load(index_dir, load_corpus=True)
+            else: self.bm25 = None
+        except Exception as e:
+            logger.error(f"BM25 Load Error: {e}")
+            self.bm25 = None
 
         self.vercel_gateway_url = "https://ai-gateway.vercel.sh/v1"
         self.openrouter_embed_url = "https://openrouter.ai/api/v1/embeddings"
@@ -138,7 +143,12 @@ class RAGEngine:
             
         # 3. Sort by RRF score
         sorted_ids = sorted(scores.keys(), key=lambda x: scores[x], reverse=True)
-        return [all_hits[h_id] for h_id in sorted_ids]
+        results = []
+        for h_id in sorted_ids:
+            hit = all_hits[h_id]
+            hit["rrf_score"] = scores[h_id]
+            results.append(hit)
+        return results
 
     def build_metadata_filter(self, user_query: str) -> dict:
         # SYSTEMIC FIX: Removed intent-based filtering to prevent "blind spots".
@@ -199,11 +209,14 @@ class RAGEngine:
         q_lower = primary_q.lower()
         
         for h in merged:
-            # Priority boost
-            h["f_score"] = priority_map.get(h["metadata"].get("priority", "medium"), 1.0)
-            # Exact entity boost
+            # Multiplicative Priority boost
+            h["f_score"] = h.get("rrf_score", 0.01) * priority_map.get(h["metadata"].get("priority", "medium"), 1.0)
+            
+            # Multiplicative Entity boost
             for key, val in h["metadata"].items():
                 if key.startswith("entity_") and str(val).lower() in q_lower:
+                    h["f_score"] *= 1.4
+                elif key == "entities" and str(val).lower() in q_lower: # Legacy support
                     h["f_score"] *= 1.4
 
         # Final Sort

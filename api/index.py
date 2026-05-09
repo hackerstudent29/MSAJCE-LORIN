@@ -20,6 +20,7 @@ if BASE_DIR not in sys.path:
     sys.path.append(BASE_DIR)
 
 load_dotenv()
+os.environ['LANGSMITH_TRACING'] = 'false'
 
 # Logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -206,23 +207,13 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 telemetry = chunk
                 continue
             full_response += chunk
-            while len(displayed_text) < len(full_response):
-                displayed_text = full_response[:len(displayed_text) + 5]
-                if time.time() - last_update_time > 0.25:
-                    try:
-                        await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=displayed_text + " ▌")
-                        last_update_time = time.time()
-                    except: await asyncio.sleep(0.1)
-                await asyncio.sleep(0.04)
-
-        while len(displayed_text) < len(full_response):
-            displayed_text = full_response[:len(displayed_text) + 10] 
-            if time.time() - last_update_time > 0.25:
+            
+            # OPTIMIZATION: Only do incremental typing locally
+            if not os.getenv("VERCEL") and time.time() - last_update_time > 1.0:
                 try:
-                    await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=displayed_text + " ▌")
+                    await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=full_response[:len(full_response)] + " ▌")
                     last_update_time = time.time()
                 except: pass
-            await asyncio.sleep(0.02)
 
         try:
             await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=full_response, parse_mode="Markdown")
