@@ -8,6 +8,7 @@ import time
 import hashlib
 import re
 from datetime import datetime, timedelta
+import httpx
 from flask import Flask, request
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
