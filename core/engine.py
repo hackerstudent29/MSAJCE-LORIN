@@ -380,20 +380,16 @@ class RAGEngine:
         lower_q = user_query.lower()
         if self.bm25:
             try:
-                # Find the specific Professional Societies / CSI chunk
-                saqlin_chunk = next((c for c in self.bm25.corpus if "Professional_Societies" in c.get("source_pdf", "") or "CSI" in c.get("text", "")), None)
+                # Find the specific Professional Societies / CSI chunks
+                csi_chunks = [c for c in self.bm25.corpus if "Professional_Societies" in c.get("page_title", "")]
                 
-                # If query is about CSI or Saqlin, prioritize the society data
-                if ("saqlin" in lower_q or "csi" in lower_q or "president" in lower_q) and saqlin_chunk:
-                    context_chunks.insert(0, saqlin_chunk)
-                    
-                # SPECIAL OVERRIDE: If asking about CSI leadership, ensure Saqlin's role is clear
-                if "csi" in lower_q and ("president" in lower_q or "who is" in lower_q):
-                    if saqlin_chunk and "Saqlin" in saqlin_chunk.get("text", ""):
-                        # Success - it will be in context
-                        pass
-            except Exception as e:
-                print(f"    [FAST-PASS ERR] {e}")
+                # If query is about CSI or Office Bearers, prioritize the society data
+                if any(w in lower_q for w in ["csi", "office", "bearer", "president", "secretary", "saqlin"]) and csi_chunks:
+                    # Insert top relevant society chunks at the front
+                    for chunk in reversed(csi_chunks[:3]):
+                        context_chunks.insert(0, chunk)
+            except:
+                pass
         
         # Cleanup encoding artifacts and non-printable chars for LLM clarity
         def clean_text(t):
@@ -433,7 +429,8 @@ RULES (follow strictly):
     *   **Blank Line**: Always leave a blank line before starting the next faculty member.
     CRITICAL: Never put Name and Achievement on the same line. Ensure clear visual separation between blocks using double spacing.
 
-11. ENTITY DEDUPLICATION: If the context contains multiple entries that clearly refer to the same person (e.g., "Afrin Fathima B" and "Afrin Fathima" with the same batch and department), you MUST merge them into a single, comprehensive entry. Never list the same person twice in your response.
+11. OFFICE BEARERS: If asked for 'Office Bearers', you MUST distinguish between 'Nomination Authority' (Principal/Professors) and 'Student Office Bearers' (President/Vice President). List the Students first as they are the active student-facing leaders.
+12. ENTITY DEDUPLICATION: If the context contains multiple entries that clearly refer to the same person, merge them.
 
 TONE: Helpful, professional, and narrative-driven. Connect facts with natural transitions.
 
