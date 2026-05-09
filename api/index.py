@@ -206,10 +206,14 @@ async def handle_telegram_direct(payload):
                                  json={"chat_id": chat_id, "text": f"⏳ {reason}: {val}"})
             return
 
-        # 3. Direct Send "Typing"
+        # 3. Direct Send "Typing" & "Analyzing"
         async with httpx.AsyncClient() as client:
             await client.post(f"https://api.telegram.org/bot{TOKEN}/sendChatAction", 
                              json={"chat_id": chat_id, "action": "typing"})
+            
+            ana_res = await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
+                                       json={"chat_id": chat_id, "text": "🔍 Analyzing..."})
+            ana_msg_id = ana_res.json().get("result", {}).get("message_id")
 
         # 4. Process Query
         redis_key = f"user_{user_id}_history"
@@ -226,14 +230,17 @@ async def handle_telegram_direct(payload):
                 continue
             full_response += chunk
 
-        # 5. Send Final Response
+        # 5. Update Final Response (Edit the "Analyzing" message)
         async with httpx.AsyncClient() as client:
-            # Try Markdown, fallback to plain text
-            res = await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
-                                   json={"chat_id": chat_id, "text": full_response, "parse_mode": "Markdown"})
-            if res.status_code != 200:
+            if ana_msg_id:
+                res = await client.post(f"https://api.telegram.org/bot{TOKEN}/editMessageText", 
+                                       json={"chat_id": chat_id, "message_id": ana_msg_id, "text": full_response, "parse_mode": "Markdown"})
+                if res.status_code != 200:
+                    await client.post(f"https://api.telegram.org/bot{TOKEN}/editMessageText", 
+                                     json={"chat_id": chat_id, "message_id": ana_msg_id, "text": full_response})
+            else:
                 await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
-                                 json={"chat_id": chat_id, "text": full_response})
+                                 json={"chat_id": chat_id, "text": full_response, "parse_mode": "Markdown"})
 
         # 6. Post-Processing (Log to Supabase)
         try:
