@@ -226,11 +226,11 @@ class RAGEngine:
         if not reranked:
             try:
                 # Secondary: Gemini Re-ranker (Balanced Vision)
-                context_summary = "\n".join([f"[{i}] {r.get('text', '')[:1200]}" for i, r in enumerate(results[:20])])
+                context_summary = "\n".join([f"[{i}] {r.get('text', '')[:3000]}" for i, r in enumerate(results[:20])])
                 rerank_prompt = {
                     "model": "google/gemini-2.0-flash-exp:free",
                     "messages": [
-                        {"role": "system", "content": "Pick the indices [0, 1, 2...] of the chunks that BEST answer the user query. Return only a comma-separated list of numbers. If none match, return 'none'."},
+                        {"role": "system", "content": "Pick the indices [0, 1, 2...] of the chunks that BEST contain the answer to the user query. Return only a comma-separated list of numbers. If none match, return 'none'."},
                         {"role": "user", "content": f"Query: {primary_q}\nChunks:\n{context_summary}"}
                     ]
                 }
@@ -306,8 +306,9 @@ class RAGEngine:
     {gt_context}
 
     STRICT RULES:
-    1. If the query is about an item in GROUND TRUTH, you MUST put the answer in 'direct_response' and set category to 'Identity'.
-    2. For other queries, generate 2 variations in 'alternative_queries'.
+    1. If the query is about an item EXPLICITLY in GROUND TRUTH (e.g. fees, bus count, naac), you MUST put the answer in 'direct_response' and set category to 'Identity'.
+    2. If the query is about a person, event, or specific department detail NOT in GROUND TRUTH, DO NOT provide a direct_response. Instead, generate 2 variations in 'alternative_queries' to search the knowledge base.
+    3. Never say "I don't know" in direct_response. If unsure, leave direct_response empty.
     
     Return JSON: {{category, search_query, alternative_queries: [q1, q2], direct_response}}
     """}, 
@@ -334,8 +335,9 @@ class RAGEngine:
         
         # AUDIT FIX: Confidence Gate Response (Problem 4)
         if context_chunks and context_chunks[0].get("confidence_low"):
-            # Check if this is an "identity" query we should have known
-            if intent == "Identity":
+            # IDENTITY CHECK: Only block if it's a generic "What is MSAJCE" type query with no info.
+            # If it's a person query, we let the generator try to see the context anyway.
+            if intent == "Identity" and "who" not in user_query.lower():
                 yield "I do not have specific information on that institutional detail. Please check the college website or contact the administration directly."
                 return
         
