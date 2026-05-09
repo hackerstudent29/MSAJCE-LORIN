@@ -179,82 +179,70 @@ async def check_security(user_id, text, engine):
     await engine.redis.set(last_msg_key, json.dumps({"time": now_ts, "text": text}), ex=300)
     return True, None, 0
 
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user_id = update.effective_user.id
-    admin_status = "👑 Admin Access" if user_id in ADMIN_IDS else "🎓 Student Access"
-    await update.message.reply_text(f"👋 Lorin Active.\nMode: {admin_status}", parse_mode="Markdown")
-
-async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if not update.message or not update.message.text: return
-    user_query = update.message.text
-    user_id = update.effective_user.id
-    user_name = update.effective_user.full_name or update.effective_user.username or "Anonymous"
-    
-    engine = await get_engine()
-    
-    is_allowed, reason, val = await check_security(user_id, user_query, engine)
-    if not is_allowed:
-        msgs = {"BLOCKED": f"⏳ Wait {val} min.", "MINUTE_LIMIT": "🐢 6 msg/min limit.", "DAILY_LIMIT": "🛑 30/day limit reached.", "BANNED": f"🚫 Blocked {val}h.", "WARNING": f"⚠️ Warning {val}/10: Abuse, Spam, or Gibberish detected."}
-        await update.message.reply_text(msgs.get(reason, "Access denied."))
-        return
-
-    await context.bot.send_chat_action(chat_id=update.effective_chat.id, action="typing")
-    thinking_msg = await update.message.reply_text("🔍 Analyzing...")
-    
+async def handle_telegram_direct(payload):
+    """Direct, high-speed Telegram handler for Serverless environments."""
     try:
-        query_hash = hashlib.sha256(user_query.lower().strip().encode()).hexdigest()
+        if "message" not in payload: return
+        msg = payload["message"]
+        user_id = msg["from"]["id"]
+        chat_id = msg["chat"]["id"]
+        text = msg.get("text", "")
+        user_name = msg["from"].get("first_name", "User")
+
+        if not text: return
+
+        # 1. FAST-PATH Greeting Detection
+        greetings = ["hi", "hello", "hey", "hey lorin", "greetings", "good morning", "good afternoon"]
+        is_greeting = text.lower().strip() in greetings or (len(text.split()) < 3 and any(g in text.lower() for g in greetings))
+        
+        engine = await get_engine()
+        
+        # 2. Security & Rate Limiting
+        is_allowed, reason, val = await check_security(user_id, text, engine)
+        if not is_allowed:
+            async with httpx.AsyncClient() as client:
+                await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
+                                 json={"chat_id": chat_id, "text": f"⏳ {reason}: {val}"})
+            return
+
+        # 3. Direct Send "Typing"
+        async with httpx.AsyncClient() as client:
+            await client.post(f"https://api.telegram.org/bot{TOKEN}/sendChatAction", 
+                             json={"chat_id": chat_id, "action": "typing"})
+
+        # 4. Process Query
         redis_key = f"user_{user_id}_history"
         hist_raw = await engine.redis.get(redis_key)
         history = json.loads(hist_raw) if hist_raw else []
         history_str = "\n".join([f"User: {h['q']}\nBot: {h['a']}" for h in history])
-        
+
         full_response = ""
-        displayed_text = ""
-        last_update_time = time.time()
         telemetry = {}
         
-        async for chunk in engine.query_stream(user_query, history=history_str):
+        async for chunk in engine.query_stream(text, history=history_str):
             if isinstance(chunk, dict) and chunk.get("type") == "telemetry":
                 telemetry = chunk
                 continue
             full_response += chunk
-            
-            # OPTIMIZATION: Only do incremental typing locally
-            if not os.getenv("VERCEL") and time.time() - last_update_time > 1.0:
-                try:
-                    await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=full_response[:len(full_response)] + " ▌")
-                    last_update_time = time.time()
-                except: pass
 
+        # 5. Send Final Response
+        async with httpx.AsyncClient() as client:
+            # Try Markdown, fallback to plain text
+            res = await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
+                                   json={"chat_id": chat_id, "text": full_response, "parse_mode": "Markdown"})
+            if res.status_code != 200:
+                await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
+                                 json={"chat_id": chat_id, "text": full_response})
+
+        # 6. Post-Processing (Log to Supabase)
         try:
-            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=full_response, parse_mode="Markdown")
-        except:
-            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text=full_response)
-        
-        # Database Operations (Synchronous wait to ensure Vercel records it)
-        try:
-            pool = await get_db_pool()
-            if pool:
-                await pool.execute("INSERT INTO semantic_cache (query_hash, user_query, bot_response) VALUES ($1, $2, $3) ON CONFLICT (query_hash) DO NOTHING", query_hash, user_query, full_response)
-            
-            await log_to_supabase(user_id, user_name, user_query, full_response, telemetry)
-            
-            history.append({"q": user_query, "a": full_response})
-            await engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
-        except Exception as e:
-            logger.error(f"Post-processing Error: {e}")
-            # If logging fails, notify admin for diagnostics
-            try:
-                token = os.getenv("TELEGRAM_BOT_TOKEN")
-                admin_id = str(ADMIN_IDS[0])
-                import httpx
-                with httpx.Client() as t_client:
-                    t_client.post(f"https://api.telegram.org/bot{token}/sendMessage", json={"chat_id": admin_id, "text": f"⚠️ *Post-processing Error*\n`{str(e)}`", "parse_mode": "Markdown"})
-            except: pass
+            await log_to_supabase(user_id, user_name, text, full_response, telemetry)
+            history.append({"q": text, "a": full_response})
+            await engine.redis.set(redis_key, json.dumps(history[-3:]), ex=86400)
+        except: pass
+
     except Exception as e:
-        logger.error(f"Critical UI Error: {e}")
-        if not full_response:
-            await context.bot.edit_message_text(chat_id=update.effective_chat.id, message_id=thinking_msg.message_id, text="The system is busy.", parse_mode="Markdown")
+        logger.error(f"TELEGRAM DIRECT FAIL: {e}")
 
 
 @app.route('/')
@@ -308,13 +296,12 @@ async def chat_api():
 @app.route('/api/webhook', methods=['POST'])
 async def webhook():
     try:
-        application = await get_telegram_app()
-        update = Update.de_json(request.get_json(force=True), application.bot)
-        await application.process_update(update)
+        payload = request.get_json(force=True)
+        await handle_telegram_direct(payload)
         return "OK", 200
     except Exception as e:
-        logger.error(f"Webhook Error: {e}")
-        return str(e), 200
+        logger.error(f"Webhook Route Error: {e}")
+        return "OK", 200
 
 @app.route('/api/sunday-report')
 async def trigger_sunday_report():

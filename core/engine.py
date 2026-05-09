@@ -322,10 +322,10 @@ class RAGEngine:
         
         # AUDIT FIX: Initialize variables (Problem 1)
         p = None
-        is_simple = len(user_query.split()) < 4 or any(w in user_query.lower() for w in ["hi", "hello", "bus", "code"])
+        is_simple = len(user_query.split()) < 3 or any(w in user_query.lower() for w in ["hi", "hello", "hey", "yo", "bus", "code"])
         
         queries = [user_query]
-        intent = "FACTUAL"
+        intent = "GREETING" if is_simple else "FACTUAL"
         
         if not is_simple:
             # AUDIT FIX: Inject dynamic ground truth (Problem 5)
