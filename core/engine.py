@@ -1,4 +1,5 @@
 import os
+os.environ['LANGSMITH_TRACING'] = 'false'
 import json
 import time
 import hashlib
@@ -174,6 +175,10 @@ class RAGEngine:
                 async with httpx.AsyncClient() as client:
                     e_res = await client.post(self.openrouter_embed_url, headers={"Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}"}, 
                                              json={"model": self.embedding_model, "input": q}, timeout=10.0)
+                    if e_res.status_code != 200:
+                        logger.error(f"Embedding Fail: {e_res.status_code} {e_res.text}")
+                        return [], []
+                    
                     emb = e_res.json()["data"][0]["embedding"]
                     p_res = self.index.query(vector=[float(x) for x in emb], top_k=top_k, filter=meta_filter, include_metadata=True)
                     p_hits = [{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]]
@@ -181,17 +186,20 @@ class RAGEngine:
                 # 2. BM25
                 b_hits = []
                 if self.bm25:
-                    tokens = bm25s.tokenize(q, stemmer=self.stemmer)
+                    # Tokenize with lowercasing
+                    q_clean = re.sub(r'[^\w\s]', '', q.lower())
+                    tokens = bm25s.tokenize(q_clean, stemmer=self.stemmer)
                     chunks, scores = self.bm25.retrieve(tokens, k=15)
                     for c, s in zip(chunks[0], scores[0]):
-                        # Robust check for data preservation
                         if isinstance(c, dict):
                             b_hits.append({"text": c.get("text", ""), "score": float(s), "id": c.get("chunk_id", ""), "metadata": c.get("metadata", {})})
                         else:
                             b_hits.append({"text": str(c), "score": float(s), "id": hashlib.md5(str(c).encode()).hexdigest()[:10], "metadata": {}})
                 
                 return p_hits, b_hits
-            except: return [], []
+            except Exception as e:
+                logger.error(f"Retrieval error for query '{q}': {e}")
+                return [], []
 
         # Parallelize all queries
         tasks = [fetch_one(q) for q in queries]
@@ -261,7 +269,7 @@ class RAGEngine:
             except: pass
 
         # AUDIT FIX: Final Fallback to Score Sort (Problem 2)
-        if not reranked:
+        if not reranked or len(reranked) == 0:
             reranked = results[:10]
 
         # AUDIT FIX: Confidence Gate (Problem 4)
