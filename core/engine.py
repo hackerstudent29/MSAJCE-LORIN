@@ -380,6 +380,18 @@ class RAGEngine:
         # 2. Advanced Multi-Query Context Retrieval
         context_chunks = await self.get_context(queries, trace)
         
+        # SYSTEMATIC FIX: Dynamic Entity Extraction (Scope Fix)
+        entities = []
+        primary_q = queries[0]
+        lower_q = primary_q.lower()
+        # Common entity categories across the college
+        keywords = ["csi", "ieee", "sae", "iete", "ishrae", "nss", "yrc", "rotaract", "bus", "route", "scholarship", "faculty", "placement"]
+        for k in keywords:
+            if k in lower_q: entities.append(k)
+        # Regex for potential names (Capitalized words)
+        names = re.findall(r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b', primary_q)
+        entities.extend([n.lower() for n in names])
+        
         # AUDIT FIX: Confidence Gate Response (Problem 4)
         if context_chunks and context_chunks[0].get("confidence_low"):
             # IDENTITY CHECK: Only block if it's a generic "What is MSAJCE" type query with no info.
