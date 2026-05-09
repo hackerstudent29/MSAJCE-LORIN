@@ -169,27 +169,47 @@ class RAGEngine:
         q_type = classify_query(primary_q)
 
         async def fetch_one(q):
+            p_hits = []
+            b_hits = []
             try:
-                # 1. Pinecone
+                # 1. Pinecone (Semantic) - Now using Vercel AI Gateway Pool
                 top_k = 25
-                async with httpx.AsyncClient() as client:
-                    e_res = await client.post(self.openrouter_embed_url, headers={"Authorization": f"Bearer {os.getenv('OPENROUTER_API_KEY')}"}, 
-                                             json={"model": self.embedding_model, "input": q}, timeout=10.0)
-                    if e_res.status_code != 200:
-                        logger.error(f"Embedding Fail: {e_res.status_code} {e_res.text}")
-                        return [], []
-                    
-                    emb = e_res.json()["data"][0]["embedding"]
+                emb = None
+                
+                # Try rotating Vercel Keys for Embedding
+                vercel_keys = [
+                    os.getenv("VERCEL_AI_KEY_6"),
+                    os.getenv("VERCEL_AI_KEY_5"),
+                    os.getenv("VERCEL_API_KEY_3"),
+                    os.getenv("AI_GATEWAY_API_KEY")
+                ]
+                
+                for k in vercel_keys:
+                    if not k: continue
+                    try:
+                        headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
+                        url = "https://ai-gateway.vercel.sh/v1/embeddings"
+                        async with httpx.AsyncClient() as client:
+                            e_res = await client.post(url, headers=headers, 
+                                                     json={"model": self.embedding_model, "input": q}, timeout=10.0)
+                            if e_res.status_code == 200:
+                                emb = e_res.json()["data"][0]["embedding"]
+                                break
+                            else:
+                                logger.error(f"Vercel Embedding Fail (Key {k[:5]}): {e_res.status_code}")
+                    except: continue
+
+                if emb:
                     p_res = self.index.query(vector=[float(x) for x in emb], top_k=top_k, filter=meta_filter, include_metadata=True)
                     p_hits = [{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]]
+                else:
+                    logger.error(f"All Embedding Providers failed for query '{q}' - Falling back to BM25 only.")
                 
-                # 2. BM25
-                b_hits = []
+                # 2. BM25 (Keyword) - Always run, or fallback if Pinecone failed
                 if self.bm25:
-                    # Tokenize with lowercasing
                     q_clean = re.sub(r'[^\w\s]', '', q.lower())
                     tokens = bm25s.tokenize(q_clean, stemmer=self.stemmer)
-                    chunks, scores = self.bm25.retrieve(tokens, k=15)
+                    chunks, scores = self.bm25.retrieve(tokens, k=25)
                     for c, s in zip(chunks[0], scores[0]):
                         if isinstance(c, dict):
                             b_hits.append({"text": c.get("text", ""), "score": float(s), "id": c.get("chunk_id", ""), "metadata": c.get("metadata", {})})
