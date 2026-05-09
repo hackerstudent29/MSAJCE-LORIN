@@ -332,14 +332,18 @@ class RAGEngine:
         start_time = time.time()
         trace = self.langfuse.trace(name="Lorin Enterprise RAG", input=user_query)
         
-        # AUDIT FIX: Initialize variables (Problem 1)
-        p = None
-        is_simple = len(user_query.split()) < 3 or any(w in user_query.lower() for w in ["hi", "hello", "hey", "yo", "bus", "code"])
-        
+        # 1. Conversationally Robust Search & Stop Word Filtering
         queries = [user_query]
-        intent = "GREETING" if is_simple else "FACTUAL"
+        intent = "FACTUAL"
         
-        if not is_simple:
+        # Stop Words for Academic/Institutional Context
+        stop_words = ["bro", "sir", "please", "kindly", "tell", "show", "list", "give", "me", "all", "the"]
+        sanitized_query = " ".join([w for w in user_query.lower().split() if w not in stop_words])
+        
+        is_greeting = len(user_query.split()) < 3 and any(w in user_query.lower() for w in ["hi", "hello", "hey", "yo"])
+        if is_greeting: intent = "GREETING"
+        
+        if not is_greeting:
             # AUDIT FIX: Inject dynamic ground truth (Problem 5)
             gt_context = "\n".join([f"- {k.upper()}: {v}" for k, v in self.ground_truth.items()])
             
@@ -353,9 +357,9 @@ class RAGEngine:
     {gt_context}
 
     STRICT RULES:
-    1. If the query is about an item EXPLICITLY in GROUND TRUTH (e.g. fees, bus count, naac), you MUST put the answer in 'direct_response' and set category to 'Identity'.
-    2. If the query is about a person, event, or specific department detail NOT in GROUND TRUTH, DO NOT provide a direct_response. Instead, generate 2 variations in 'alternative_queries' to search the knowledge base.
-    3. Never say "I don't know" in direct_response. If unsure, leave direct_response empty.
+    1. If the query is a follow-up (e.g. "list all", "show more", "who is he"), you MUST resolve pronouns using HISTORY.
+    2. Example: History about 'Sathak Trust' + Query 'list all' -> search_query: 'list all colleges in Mohamed Sathak Trust'.
+    3. If the query is about an item EXPLICITLY in GROUND TRUTH, put it in 'direct_response'.
     
     Return JSON: {{category, search_query, alternative_queries: [q1, q2], direct_response}}
     """}, 
