@@ -235,25 +235,17 @@ class RAGEngine:
                             p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]])
                         except: pass
                     
-                    # 3) FALLBACK: Only use raglorin-backup if the primary vector search found NOTHING
-                    if not p_hits and self.index_backup:
-                        try:
-                            b_res = self.index_backup.query(vector=emb_floats, top_k=5, include_metadata=True)
-                            p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"] * 0.95, "id": f"backup_{m['id']}", "metadata": m["metadata"]} for m in b_res["matches"]])
-                        except: pass
-                    
-                    # 4) CLAUDE MASTER: claude-md-files (Deep search to dig past headers)
+                    # 3) CLAUDE MASTER: claude-md-files (High-Priority Second Search)
                     if self.index_claude:
                         try:
-                            # Increase top_k to 25 to skip past 1-liner headers
-                            c_res = self.index_claude.query(vector=emb_floats, top_k=25, include_metadata=True)
+                            # Deep search to dig past any remaining headers
+                            c_res = self.index_claude.query(vector=emb_floats, top_k=20, include_metadata=True)
                             for m in c_res["matches"]:
                                 txt = m["metadata"].get("text", "")
-                                # SKIP JUNK: Filter out title-only chunks (usually chunk _0)
-                                if len(txt) < 100 and txt.strip().startswith("#"): continue
-                                if len(txt) < 40: continue # Too small to be useful
+                                # Skip junk if still present
+                                if len(txt) < 40: continue
                                 
-                                # Boost Information Density
+                                # Master Multiplier (1.2x) + Content Density
                                 info_score = m["score"] * 1.2
                                 if "|" in txt: info_score *= 1.3 # Table boost
                                 if "•" in txt or "-" in txt: info_score *= 1.1 # List boost
@@ -264,6 +256,13 @@ class RAGEngine:
                                     "id": f"claude_{m['id']}", 
                                     "metadata": m["metadata"]
                                 })
+                        except: pass
+
+                    # 4) BACKUP: raglorin-backup (Only if still needed)
+                    if not p_hits and self.index_backup:
+                        try:
+                            b_res = self.index_backup.query(vector=emb_floats, top_k=5, include_metadata=True)
+                            p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"] * 0.9, "id": f"backup_{m['id']}", "metadata": m["metadata"]} for m in b_res["matches"]])
                         except: pass
                 return p_hits, b_hits
             except: return [], []
