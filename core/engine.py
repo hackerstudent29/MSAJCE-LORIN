@@ -70,9 +70,15 @@ class RAGEngine:
                 self.index_backup = self.pc.Index("raglorin-backup")
                 self.index_backup.describe_index_stats()
             except: self.index_backup = None
+            # Claude Master index: claude-md-files (1536-dim)
+            try:
+                self.index_claude = self.pc.Index("claude-md-files")
+                self.index_claude.describe_index_stats()
+            except: self.index_claude = None
         except:
             self.index = None
             self.index_backup = None
+            self.index_claude = None
 
         try:
             self.co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
@@ -234,6 +240,14 @@ class RAGEngine:
                         try:
                             b_res = self.index_backup.query(vector=emb_floats, top_k=5, include_metadata=True)
                             p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"] * 0.95, "id": f"backup_{m['id']}", "metadata": m["metadata"]} for m in b_res["matches"]])
+                        except: pass
+                    
+                    # 4) CLAUDE MASTER: claude-md-files
+                    if self.index_claude:
+                        try:
+                            c_res = self.index_claude.query(vector=emb_floats, top_k=10, include_metadata=True)
+                            # Boost Claude MD hits by 1.2x because they are high-fidelity
+                            p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"] * 1.2, "id": f"claude_{m['id']}", "metadata": m["metadata"]} for m in c_res["matches"]])
                         except: pass
                 return p_hits, b_hits
             except: return [], []
