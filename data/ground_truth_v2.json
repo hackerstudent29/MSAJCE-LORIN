@@ -1,8 +1,8 @@
 {
   "csi_president": {
-    "value": "Yogesh R (Batch 2022-2026, IT Department)",
-    "valid_until": "2026-05-31",
-    "source": "MSAJCE_Professional_Societies_supplement.json"
+    "value": "Yogesh R is the President of the Computer Society of India (CSI) student chapter at MSAJCE. He is from the IT department (Batch 2022-2026).",
+    "source_chunk": "entity_yogesh_r",
+    "valid_until": "2026-06-30"
   },
   "csi_vp": {
     "value": "Saqlin Mustaq M (Batch 2023-2027, AI&DS Department)",
@@ -14,15 +14,10 @@
     "valid_until": "2026-05-31",
     "source": "MSAJCE_Professional_Societies_supplement.json"
   },
-  "lead_architect": {
-    "value": "Ramanathan S (Ram). Lead AI Architect at MSAJCE. Developed Lorin AI, Zenify, Zenpay, Pocket Lawyer, and Formora.",
-    "valid_until": "2029-12-31",
-    "source": "ramanathan_profile.json"
-  },
   "developer": {
-    "value": "Ramanathan S",
-    "valid_until": "2029-12-31",
-    "source": "ramanathan_profile.json"
+    "value": "Ramanathan S (Ram) is the Lead AI Architect at MSAJCE who developed Lorin AI.",
+    "source_chunk": "entity_ramanathan_001",
+    "valid_until": "2027-05-31"
   },
   "principal": {
     "value": "Dr. K.S. Srinivasan",
@@ -38,6 +33,11 @@
     "value": "1301",
     "valid_until": "2099-12-31",
     "source": "Anna_University_Affiliation"
+  },
+  "bus_ar8": {
+    "value": "Bus AR8 starts from Manjambakkam at 5:50 AM. Major stops include Retteri, Padi, Anna Nagar, KK Nagar, Pallikkarani, and Medavakkam. It arrives at the college at 8:00 AM.",
+    "source_chunk": "transport_bus_ar8_001",
+    "valid_until": "2027-05-31"
   },
   "hod_general": {
     "value": "Head of Department",

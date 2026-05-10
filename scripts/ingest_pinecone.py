@@ -13,7 +13,7 @@ load_dotenv()
 # Configuration
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "raglorin")
+INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "msajce-v2")
 OPENROUTER_EMBED_URL = "https://openrouter.ai/api/v1/embeddings"
 
 # Initialize Clients
@@ -23,6 +23,22 @@ pc = Pinecone(api_key=PINECONE_API_KEY)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(BASE_DIR)
 BM25_INDEX_PATH = os.path.join(ROOT_DIR, "data", "bm25_index")
+
+def clean_prose(text):
+    """Converts markdown bullets, tables, and artifacts into fluid prose."""
+    if not text: return ""
+    # 1. Remove table pipes and separators
+    text = re.sub(r'\|', ' ', text)
+    text = re.sub(r'[-=]{3,}', ' ', text)
+    # 2. Semantic replacements for readability
+    text = re.sub(r'\bS\.No\b', 'Stop', text, flags=re.IGNORECASE)
+    # 3. Remove bullet points at start of lines
+    text = re.sub(r'^[ \t]*[*+-][ \t]+', '', text, flags=re.MULTILINE)
+    # 4. Convert multiple newlines/tabs to single space
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+import re
 
 def get_embedding(text):
     """Generates 1536-dim embedding using OpenRouter."""
@@ -92,11 +108,12 @@ def ingest_data():
                 )
 
                 # Super-Chunk 3.0: High-Precision Contextual Embedding
+                clean_content = clean_prose(content)
                 super_chunk_text = (
                     f"{situational_context}\n\n"
                     f"SUMMARY: {context_summary}\n"
                     f"QUESTIONS: {possible_questions}\n"
-                    f"CONTENT: {content}"
+                    f"CONTENT: {clean_content}"
                 )
                 
                 embedding = get_embedding(super_chunk_text)
@@ -113,25 +130,39 @@ def ingest_data():
 
                 # Final Enterprise Metadata Schema
                 metadata = {
-                    "chunk_id": chunk.get("chunk_id", f"{file_name}_{i}"),
-                    "institution": institution,
-                    "page_title": title,
-                    "department": dept,
-                    "source_pdf": global_meta.get("source_pdf", file_name),
-                    "section": section,
-                    "text": content,
-                    "chunk_type": chunk.get("chunk_type", "paragraph"),
-                    "priority": chunk.get("priority", "medium"),
-                    "academic_year": global_meta.get("academic_year", "2025-26"),
-                    "version": global_meta.get("version", "3.0"),
-                    "is_active": True,
+                    "chunk_id":        chunk.get("chunk_id", f"{file_name}_{i}"),
+                    "institution":     institution,
+                    "page_title":      title,
+                    "department":      dept,
+                    "source_pdf":      global_meta.get("source_pdf", file_name),
+                    "section":         section,
+                    "text":            clean_content,
+                    "chunk_type":      chunk.get("chunk_type", "paragraph"),
+                    "priority":        chunk.get("priority", "medium"),
+                    "academic_year":   global_meta.get("academic_year", "2025-26"),
+                    "version":         "v2",
+                    "is_active":       True,
                     "pdf_page_number": chunk.get("pdf_page_number", 0),
-                    "last_updated": time.strftime("%Y-%m-%d"),
+                    "last_updated":    time.strftime("%Y-%m-%d"),
+
+                    # ADD THESE NEW FIELDS:
+                    "node_type":       chunk.get("node_type", "FACT"),
+                    "is_parent":       chunk.get("is_parent", False),
+                    "parent_id":       chunk.get("parent_id", ""),
+                    "source_files":    "|".join(chunk.get("source_files", [file_name])),
+                    "embedding_model": "openai/text-embedding-3-small",
+                    "keywords":        ", ".join(chunk.get("keywords", [])) if isinstance(chunk.get("keywords"), list) else chunk.get("keywords", ""),
+
                     **flattened_entities
                 }
                 
                 vectors.append({"id": metadata["chunk_id"], "values": embedding, "metadata": metadata})
-                all_corpus_texts.append(super_chunk_text)
+                
+                # BM25 corpus: keywords + entity fields + section + plain text only.
+                # Do NOT index super_chunk_text — it dilutes keyword scores.
+                entity_terms = " ".join([str(v) for v in flattened_entities.values()])
+                bm25_doc = f"{entity_terms} {section} {content} {chunk.get('keywords', '')}"
+                all_corpus_texts.append(bm25_doc)
                 all_metadata.append(metadata)
             
             if vectors:
@@ -150,6 +181,7 @@ def ingest_data():
     print(f"Enterprise Ingestion Complete (BM25 + OpenRouter 1536-dim)")
 
 if __name__ == "__main__":
+    print("Main started...")
     # STRICT 1536 Dimension Reset
     print("Resetting Pinecone index to STRICT 1536 dimensions...")
     if INDEX_NAME in pc.list_indexes().names():
