@@ -27,17 +27,14 @@ ROUTE_SIGNALS = ["bus", "route", "stop", "timing", "transport", "ar8", "tambaram
 RULE_SIGNALS = ["allowed", "not allowed", "policy", "rule", "can i", "hostel", "attendance", "regulation"]
 DEPT_NAMES = ["cse", "it", "ece", "eee", "civil", "mech", "aids", "aiml", "cyber", "csbs", "sh"]
 
-GREETING_SIGNALS = ["hi", "hello", "hey", "yo", "sup", "greetings", "good morning", "good afternoon", "good evening"]
-
 def classify_query(query: str) -> str:
-    q = re.sub(r'[^\w\s]', '', query.lower()).strip()
-    if q in GREETING_SIGNALS: return "GREETING"
+    q = query.lower()
     if any(s in q for s in ROUTE_SIGNALS) or "ar8" in q or "ar " in q: return "ROUTE_QUERY"
     if any(s in q for s in ["who is", "tell me about", "hod", "principal", "yogesh", "ramanathan"]): return "PERSON_QUERY"
     if any(s in q for s in RULE_SIGNALS): return "RULE_QUERY"
     if any(d in q for d in DEPT_NAMES): return "DEPARTMENT_QUERY"
     if any(s in q for s in LIST_SIGNALS): return "LIST_QUERY"
-    if q in ["yes", "no", "ok", "tell me more", "elaborate"]: return "ELABORATION_QUERY"
+    if q.strip() in ["yes", "no", "ok", "tell me more", "elaborate"]: return "ELABORATION_QUERY"
     return "GENERAL_QUERY"
 
 def clean_prose(text):
@@ -247,22 +244,9 @@ class RAGEngine:
 
     async def query_stream(self, user_query, history=None, user_level="student", thinking=False):
         start_time = time.time()
-        intent = classify_query(user_query)
-        
-        # 1. IMMEDIATE GREETING BYPASS
-        if intent == "GREETING":
-            resp = "Hello! I'm LORIN, the institutional AI for MSAJCE. I can help you with information about faculty, bus routes, departments, and college policies. How can I assist you today?"
-            yield resp
-            yield {
-                "type": "telemetry",
-                "latency_ms": int((time.time() - start_time) * 1000),
-                "tokens": 42,
-                "intent": "GREETING",
-                "sources": ["System Cache"]
-            }
-            return
-
         queries = [user_query]
+        intent = classify_query(user_query)
+
         if intent == "ELABORATION_QUERY" and history:
             last_lines = history.split("\n")
             anchor = next((l.replace("assistant:", "").strip()[:100] for l in reversed(last_lines) if "assistant:" in l.lower()), "")
@@ -279,16 +263,14 @@ class RAGEngine:
             async for chunk in self._safe_vercel_request(data_pre): pre_res += chunk
             p = self._safe_json_parse(pre_res)
             if p:
-                # ONLY use direct_response for non-entity queries or simple facts to ensure entities get full RAG treatment
-                if p.get("direct_response") and intent not in ["PERSON_QUERY", "DEPARTMENT_QUERY", "ROUTE_QUERY"]:
-                    dr = p.get("direct_response")
-                    yield dr
-                    input_est = (len(gt_context) + len(user_query)) // 4
-                    output_est = len(dr.split()) * 1.5
+                if p.get("direct_response"):
+                    yield p.get("direct_response")
+                    # Still yield telemetry even for direct response
+                    latency = (time.time() - start_time) * 1000
                     yield {
                         "type": "telemetry",
-                        "latency_ms": int((time.time() - start_time) * 1000),
-                        "tokens": int(input_est + output_est) + 150, # Boosted to ensure non-zero
+                        "latency_ms": int(latency),
+                        "tokens": len(p.get("direct_response", "").split()) * 2,
                         "intent": intent,
                         "sources": ["Ground Truth Vault"]
                     }
@@ -298,22 +280,27 @@ class RAGEngine:
         except: pass
 
         context_chunks = await self.get_context(queries, None)
+        
+        # Diagnostic logging
+        if context_chunks:
+            top_scores = [(c['id'], round(c.get('f_score', 0), 4)) for c in context_chunks[:5]]
+            logger.warning(f"[LORIN RETRIEVAL] query='{user_query}' | intent={intent} | top5={top_scores}")
+        else:
+            logger.warning(f"[LORIN RETRIEVAL] query='{user_query}' | intent={intent} | NO RESULTS RETURNED")
+        
         context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
         sources = list(set([c['metadata'].get('page_title', c['metadata'].get('filename', 'Institutional Source')) for c in context_chunks]))
 
+
         system_prompt = f"""You are LORIN, the institutional AI for MSAJCE.
-STRICT OPERATIONAL RULES:
-1. GREETING BYPASS: DO NOT GREET THE USER. DO NOT say "Hello", "Hi", or "I'm LORIN" if the user has asked a specific question.
-2. DIRECT RESPONSE: Start your response IMMEDIATELY with the requested information. 
-3. WORD COUNT & ENTITIES: For any entity (person, department, etc.):
-   - If the total available information is under 100 words, provide ALL of it.
-   - If the total available information is OVER 100 words, you MUST provide a detailed response of at least 80-100 words. Then, ask a follow-up question asking if they want more specific details (e.g., "Would you like to know about his academic background, publications, or contact information?").
-4. NARRATIVE FLOW: Summarize information into fluid, natural paragraphs. Use pronouns (He/She/They) after the first mention to maintain flow.
-5. STRICT ROUTE VERIFICATION: For bus route queries (AR1-AR10, R22), verify that every stop you list belongs to that specific route number in the CONTEXT. Do not mix stops from different routes.
-6. SURGICAL FOCUS: Answer ONLY what is asked. For person queries, provide a cohesive biography/summary, not fragmented facts.
-7. FORMATTING: Use center dots (•) ONLY for actual lists. NEVER use tables.
-8. IDENTITY: You were developed by Ramanathan S (Ram). Only mention this if explicitly asked.
-9. End with a relevant follow-up question.
+RULES:
+1. GREETING: Start with 'Hello! I'm LORIN, the institutional AI for MSAJCE.' ONLY if this is the very first message. If there is history, SKIP the greeting and answer directly.
+2. NARRATIVE FLOW: Summarize information into fluid, natural paragraphs. Use pronouns (He/She/They) after the first mention to maintain flow.
+3. STRICT ROUTE VERIFICATION: For bus route queries (AR1-AR10, R22), verify that every stop you list belongs to that specific route number in the CONTEXT. Do not mix stops from different routes. If the full list is available, provide it.
+4. SURGICAL FOCUS: Answer ONLY what is asked. For person queries, provide a cohesive biography/summary, not fragmented facts.
+5. FORMATTING: Use center dots (•) ONLY for actual lists (e.g., stops, documents). NEVER use tables.
+6. IDENTITY: You were developed by Ramanathan S (Ram), a 2nd-year B.Tech IT student at MSAJCE. Only mention this if asked about your creator.
+7. End with a relevant follow-up question.
 
 GROUND TRUTH:
 {gt_context}
@@ -321,11 +308,14 @@ GROUND TRUTH:
 CONTEXT:
 {context_text}"""
 
+        # Construct messages with history
         messages = [{"role": "system", "content": system_prompt}]
         if history:
             for line in history.split("\n"):
-                if line.startswith("User: "): messages.append({"role": "user", "content": line.replace("User: ", "")})
-                elif line.startswith("Bot: "): messages.append({"role": "assistant", "content": line.replace("Bot: ", "")})
+                if line.startswith("User: "):
+                    messages.append({"role": "user", "content": line.replace("User: ", "")})
+                elif line.startswith("Bot: "):
+                    messages.append({"role": "assistant", "content": line.replace("Bot: ", "")})
         
         messages.append({"role": "user", "content": user_query})
 
@@ -340,18 +330,15 @@ CONTEXT:
             full_answer += chunk
             yield self._post_process(chunk)
 
-        # FINAL TELEMETRY YIELD
+        # Yield Telemetry at the end
         latency = (time.time() - start_time) * 1000
-        input_est = (len(system_prompt) + len(user_query) + (len(history) if history else 0)) // 3.8
-        output_est = len(full_answer.split()) * 1.5
-        total_tokens = max(int(input_est + output_est), 100) # Ensure it's never 0
-        
+        token_count = len(full_answer.split()) * 1.5 # Improved estimate
         yield {
             "type": "telemetry",
             "latency_ms": int(latency),
-            "tokens": total_tokens,
+            "tokens": int(token_count),
             "intent": intent,
-            "sources": sources[:3]
+            "sources": sources[:3] # Limit to top 3 for UI cleanliness
         }
 
     async def _safe_vercel_request(self, data, stream=False):
