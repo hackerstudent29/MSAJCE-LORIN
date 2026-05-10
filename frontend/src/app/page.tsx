@@ -211,7 +211,7 @@ export default function ChatPage() {
                 <div className="flex items-center gap-2">
                     <Icons.Logo className="w-8 h-8 text-[#D46B4F]" />
                     <span className="text-[18px] tracking-tight text-zinc-900 dark:text-white">Lorin</span>
-                    <div className="px-1.5 py-[1px] bg-[#D46B4F]/10 border border-[#D46B4F]/20 rounded text-[10px] text-[#D46B4F]">Pro</div>
+                    <div className="px-1.5 py-[1px] bg-[#D46B4F]/10 border border-[#D46B4F]/20 rounded text-[10px] text-[#D46B4F]">v2.1</div>
                 </div>
                 <div className="flex items-center gap-4">
                     <div className="flex items-center gap-1.5">
