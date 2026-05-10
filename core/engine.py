@@ -206,24 +206,25 @@ class RAGEngine:
                                 emb = e_res.json()["data"][0]["embedding"]; break
                         except: continue
 
-                # BM25 keyword search
+                # 1) BM25 keyword search (Fast)
                 if self.bm25:
                     q_clean = re.sub(r'[^\w\s]', '', q.lower())
                     tokens = bm25s.tokenize(q_clean, stemmer=self.stemmer, show_progress=False)
-                    chunks, scores = self.bm25.retrieve(tokens, k=15, show_progress=False)
+                    chunks, scores = self.bm25.retrieve(tokens, k=8, show_progress=False)
                     for c, s in zip(chunks[0], scores[0]):
                         if isinstance(c, dict): b_hits.append({"text": c.get("text", ""), "score": float(s), "id": c.get("chunk_id", ""), "metadata": c.get("metadata", {})})
                 
                 if emb:
                     emb_floats = [float(x) for x in emb]
-                    # 1) PRIMARY: raglorin
+                    # 2) PRIMARY: raglorin
                     if self.index:
                         try:
-                            p_res = self.index.query(vector=emb_floats, top_k=depth, include_metadata=True)
+                            p_res = self.index.query(vector=emb_floats, top_k=10, include_metadata=True)
                             p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]])
                         except: pass
-                    # 2) BACKUP: raglorin-backup (top 5)
-                    if self.index_backup:
+                    
+                    # 3) FALLBACK: Only use raglorin-backup if primary search found NOTHING
+                    if not p_hits and not b_hits and self.index_backup:
                         try:
                             b_res = self.index_backup.query(vector=emb_floats, top_k=5, include_metadata=True)
                             p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"] * 0.95, "id": f"backup_{m['id']}", "metadata": m["metadata"]} for m in b_res["matches"]])
@@ -245,15 +246,16 @@ class RAGEngine:
 
         results = sorted(merged, key=lambda x: x.get("f_score", 1.0), reverse=True)
         if not results: return []
-        texts = [r["text"] for r in results[:20]]
+        texts = [r["text"] for r in results[:10]] # Limit to 10 for rerank
         reranked = None
         try:
             if self.co:
                 loop = asyncio.get_event_loop()
-                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=10))
+                # Rerank to top 6 to save tokens
+                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=6))
                 reranked = [results[r.index] for r in rerank.results]
         except: pass
-        if not reranked: reranked = results[:10]
+        if not reranked: reranked = results[:6]
         return reranked
 
     def _post_process(self, text: str) -> str:
