@@ -25,7 +25,7 @@ LIST_SIGNALS = ["list", "all", "who are", "names of", "how many", "give me all",
 PERSON_SIGNALS = ["who is", "tell me about", "who heads", "who runs", "principal", "hod", "head of", "professor", "faculty", "staff"]
 ROUTE_SIGNALS = ["bus", "route", "stop", "timing", "transport", "ar8", "tambaram", "which bus", "bus number"]
 RULE_SIGNALS = ["allowed", "not allowed", "policy", "rule", "can i", "hostel", "attendance", "regulation"]
-DEPT_NAMES = ["cse", "it", "ece", "eee", "civil", "mech", "aids", "aiml", "cyber", "csbs", "sh"]
+DEPT_NAMES = ["cse", "it", "ece", "eee", "civil", "mech", "aids", "aiml", "cyber", "csbs", "sh", "vlsi"]
 GREETING_SIGNALS = ["hi", "hello", "hey", "good morning", "good afternoon", "good evening", "how are you", "what's up", "namaste", "vanakkam"]
 COMPLIMENT_SIGNALS = ["thanks", "thank you", "great", "awesome", "good job", "nice", "cool", "wow", "amazing", "well done", "perfect"]
 
@@ -124,17 +124,9 @@ class RAGEngine:
                         if "yogesh" in str(val).lower(): fresh_data["yogesh"] = val
                         if "ramanathan" in str(val).lower(): fresh_data["ramanathan"] = val
                 
-                # INJECT MASTER DEPARTMENTS & INTAKE
+                # INJECT MASTER DEPARTMENTS
                 fresh_data["departments_list"] = "CSE, IT, ECE, EEE, CIVIL, MECH, AI&DS, AI&ML, CYBER SECURITY, CS&BS, S&H"
                 fresh_data["total_departments_count"] = "11"
-                fresh_data["it_seats"] = "60 (Government: 30, Management: 30)"
-                fresh_data["cse_seats"] = "60 (Government: 30, Management: 30)"
-                fresh_data["aids_seats"] = "60 (Government: 30, Management: 30)"
-                fresh_data["aiml_seats"] = "60"
-                fresh_data["ece_seats"] = "60"
-                fresh_data["eee_seats"] = "30"
-                fresh_data["civil_seats"] = "30"
-                fresh_data["mech_seats"] = "30"
                 return fresh_data
             except: pass
         return {}
@@ -244,8 +236,27 @@ class RAGEngine:
         merged = self.rrf_merge(all_semantic, all_keyword)
         priority_map = {"critical": 2.0, "high": 1.6, "medium": 1.0, "low": 0.7}
         q_lower = primary_q.lower()
+        
+        # Determine target department for boosting
+        target_dept = ""
+        for d in DEPT_NAMES:
+            if d in q_lower:
+                target_dept = d
+                break
+
         for h in merged:
             h["f_score"] = h.get("rrf_score", 0.01) * priority_map.get(h["metadata"].get("priority", "medium"), 1.0)
+            
+            # --- ROOT CAUSE FIX: Department Boosting ---
+            # If the user mentioned a dept, and the chunk ID/Text relates to it, boost it
+            if target_dept and (target_dept in h["id"].lower() or target_dept in h["text"].lower()[:200]):
+                h["f_score"] *= 3.0
+            
+            # Boost admission/seats chunks for "how many" queries
+            if any(term in q_lower for term in ["how many", "seats", "admission", "intake"]):
+                if any(term in h["text"].lower()[:300] for term in ["seats", "intake", "quota", "admission"]):
+                    h["f_score"] *= 2.0
+
             if any(str(val).lower() in q_lower for val in h["metadata"].values() if isinstance(val, (str, list))):
                 h["f_score"] *= 1.4
 
