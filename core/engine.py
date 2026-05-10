@@ -31,12 +31,14 @@ COMPLIMENT_SIGNALS = ["thanks", "thank you", "great", "awesome", "good job", "ni
 
 def classify_query(query: str) -> str:
     q = query.lower().strip()
+    # Normalize common typos
+    q = q.replace(" su ", " you ")
     if any(s == q for s in GREETING_SIGNALS) or q in ["hi", "hello"]: return "GREETING"
     if any(s in q for s in COMPLIMENT_SIGNALS): return "COMPLIMENT"
     if any(s in q for s in ROUTE_SIGNALS) or "ar8" in q or "ar " in q: return "ROUTE_QUERY"
     if any(s in q for s in ["who is", "tell me about", "hod", "principal", "yogesh", "ramanathan"]): return "PERSON_QUERY"
     if any(s in q for s in RULE_SIGNALS): return "RULE_QUERY"
-    if any(d in q for d in DEPT_NAMES): return "DEPARTMENT_QUERY"
+    if any(d in q for d in DEPT_NAMES) or "department" in q: return "DEPARTMENT_QUERY"
     if any(s in q for s in LIST_SIGNALS): return "LIST_QUERY"
     if q in ["yes", "no", "ok", "tell me more", "elaborate"]: return "ELABORATION_QUERY"
     return "GENERAL_QUERY"
@@ -121,6 +123,10 @@ class RAGEngine:
                         if "president" in key.lower(): fresh_data["president"] = val
                         if "yogesh" in str(val).lower(): fresh_data["yogesh"] = val
                         if "ramanathan" in str(val).lower(): fresh_data["ramanathan"] = val
+                
+                # INJECT MASTER DEPARTMENTS
+                fresh_data["departments_list"] = ", ".join(DEPT_NAMES).upper()
+                fresh_data["total_departments_count"] = str(len(DEPT_NAMES))
                 return fresh_data
             except: pass
         return {}
