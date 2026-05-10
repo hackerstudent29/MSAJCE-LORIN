@@ -60,9 +60,9 @@ class RAGEngine:
         try:
             pc_key = os.getenv("PINECONE_API_KEY")
             self.pc = Pinecone(api_key=pc_key)
-            # Primary index: raglorin (1536-dim)
+            # Primary index: final-secret-rag (1536-dim)
             try:
-                self.index = self.pc.Index("raglorin")
+                self.index = self.pc.Index("final-secret-rag")
                 self.index.describe_index_stats()
             except: self.index = None
             # Backup index: raglorin-backup (1536-dim)
@@ -212,15 +212,15 @@ class RAGEngine:
                 
                 if emb:
                     emb_floats = [float(x) for x in emb]
-                    # 2) PRIMARY: raglorin
+                    # 2) PRIMARY: final-secret-rag
                     if self.index:
                         try:
                             p_res = self.index.query(vector=emb_floats, top_k=10, include_metadata=True)
                             p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]])
                         except: pass
                     
-                    # 3) FALLBACK: Only use raglorin-backup if primary search found NOTHING
-                    if not p_hits and not b_hits and self.index_backup:
+                    # 3) FALLBACK: Only use raglorin-backup if the primary vector search found NOTHING
+                    if not p_hits and self.index_backup:
                         try:
                             b_res = self.index_backup.query(vector=emb_floats, top_k=5, include_metadata=True)
                             p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"] * 0.95, "id": f"backup_{m['id']}", "metadata": m["metadata"]} for m in b_res["matches"]])
