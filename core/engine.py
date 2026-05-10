@@ -242,12 +242,28 @@ class RAGEngine:
                             p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"] * 0.95, "id": f"backup_{m['id']}", "metadata": m["metadata"]} for m in b_res["matches"]])
                         except: pass
                     
-                    # 4) CLAUDE MASTER: claude-md-files
+                    # 4) CLAUDE MASTER: claude-md-files (Deep search to dig past headers)
                     if self.index_claude:
                         try:
-                            c_res = self.index_claude.query(vector=emb_floats, top_k=10, include_metadata=True)
-                            # Boost Claude MD hits by 1.2x because they are high-fidelity
-                            p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"] * 1.2, "id": f"claude_{m['id']}", "metadata": m["metadata"]} for m in c_res["matches"]])
+                            # Increase top_k to 25 to skip past 1-liner headers
+                            c_res = self.index_claude.query(vector=emb_floats, top_k=25, include_metadata=True)
+                            for m in c_res["matches"]:
+                                txt = m["metadata"].get("text", "")
+                                # SKIP JUNK: Filter out title-only chunks (usually chunk _0)
+                                if len(txt) < 100 and txt.strip().startswith("#"): continue
+                                if len(txt) < 40: continue # Too small to be useful
+                                
+                                # Boost Information Density
+                                info_score = m["score"] * 1.2
+                                if "|" in txt: info_score *= 1.3 # Table boost
+                                if "•" in txt or "-" in txt: info_score *= 1.1 # List boost
+                                
+                                p_hits.append({
+                                    "text": txt, 
+                                    "score": info_score, 
+                                    "id": f"claude_{m['id']}", 
+                                    "metadata": m["metadata"]
+                                })
                         except: pass
                 return p_hits, b_hits
             except: return [], []
@@ -296,7 +312,8 @@ class RAGEngine:
 
         results = sorted(merged, key=lambda x: x.get("f_score", 1.0), reverse=True)
         if not results: return []
-        texts = [r["text"] for r in results[:15]] 
+        # Increase rerank window to 20 non-junk candidates
+        texts = [r["text"] for r in results[:20]] 
         reranked = None
         try:
             if self.co:
