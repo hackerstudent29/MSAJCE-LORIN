@@ -239,7 +239,7 @@ class RAGEngine:
         text = re.sub(r'\[.*?\]', '', text) 
         text = re.sub(r'^#+.*$', '', text, flags=re.MULTILINE)
         text = re.sub(r'^[ \t]*[*+-][ \t]+', '• ', text, flags=re.MULTILINE)
-        text = re.sub(r'\n{3,}', '\n\n', text).strip()
+        text = re.sub(r'\n{3,}', '\n\n', text)
         return text
 
     async def query_stream(self, user_query, history=None, user_level="student", thinking=False):
