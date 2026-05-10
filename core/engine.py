@@ -51,9 +51,9 @@ def clean_prose(text):
     return text
 
 def format_query_for_embedding(query: str, query_type: str, department: str = "") -> str:
-    # Simpler format to preserve signal for names/typos
-    dept = department if department else "General Institutional"
-    return f"MSAJCE {dept} {query_type}: {query}"
+    # Use a more descriptive natural language prompt for better vector alignment
+    dept_info = f"in the {department} department" if department else "at MSAJCE"
+    return f"Information about {query_type} {dept_info}: {query}"
 
 class RAGEngine:
     def __init__(self):
@@ -124,9 +124,17 @@ class RAGEngine:
                         if "yogesh" in str(val).lower(): fresh_data["yogesh"] = val
                         if "ramanathan" in str(val).lower(): fresh_data["ramanathan"] = val
                 
-                # INJECT MASTER DEPARTMENTS
-                fresh_data["departments_list"] = ", ".join(DEPT_NAMES).upper()
-                fresh_data["total_departments_count"] = str(len(DEPT_NAMES))
+                # INJECT MASTER DEPARTMENTS & INTAKE
+                fresh_data["departments_list"] = "CSE, IT, ECE, EEE, CIVIL, MECH, AI&DS, AI&ML, CYBER SECURITY, CS&BS, S&H"
+                fresh_data["total_departments_count"] = "11"
+                fresh_data["it_seats"] = "60 (Government: 30, Management: 30)"
+                fresh_data["cse_seats"] = "60 (Government: 30, Management: 30)"
+                fresh_data["aids_seats"] = "60 (Government: 30, Management: 30)"
+                fresh_data["aiml_seats"] = "60"
+                fresh_data["ece_seats"] = "60"
+                fresh_data["eee_seats"] = "30"
+                fresh_data["civil_seats"] = "30"
+                fresh_data["mech_seats"] = "30"
                 return fresh_data
             except: pass
         return {}
@@ -215,7 +223,8 @@ class RAGEngine:
                     # 2) PRIMARY: final-secret-rag
                     if self.index:
                         try:
-                            p_res = self.index.query(vector=emb_floats, top_k=10, include_metadata=True)
+                            # Increase depth to 15 to ensure we don't miss chunks
+                            p_res = self.index.query(vector=emb_floats, top_k=15, include_metadata=True)
                             p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]])
                         except: pass
                     
@@ -242,16 +251,16 @@ class RAGEngine:
 
         results = sorted(merged, key=lambda x: x.get("f_score", 1.0), reverse=True)
         if not results: return []
-        texts = [r["text"] for r in results[:10]] # Limit to 10 for rerank
+        texts = [r["text"] for r in results[:15]] 
         reranked = None
         try:
             if self.co:
                 loop = asyncio.get_event_loop()
-                # Rerank to top 6 to save tokens
-                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=6))
+                # Rerank to top 8 for better coverage
+                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=8))
                 reranked = [results[r.index] for r in rerank.results]
         except: pass
-        if not reranked: reranked = results[:6]
+        if not reranked: reranked = results[:8]
         return reranked
 
     def _post_process(self, text: str) -> str:
