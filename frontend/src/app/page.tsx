@@ -154,8 +154,7 @@ export default function ChatPage() {
                     model: model || "lorin-pro", 
                     thinking: isThinkingEnabled,
                     user_id: webUserId,
-                    user_level: user_level || "student",
-                    history: messages.map(m => ({ role: m.role, content: m.content })).slice(-5)
+                    user_level: user_level || "student"
                 }),
             });
             
