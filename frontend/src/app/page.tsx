@@ -101,7 +101,7 @@ export default function ChatPage() {
         // DEEP SYNC: Fetch from Supabase as fallback/integrity check
         const syncHistory = async () => {
             try {
-                const res = await fetch(`/api/history?user_id=${id}`);
+                const res = await fetch(`https://msajce-lorin-ai.vercel.app/api/history?user_id=${id}`);
                 if (res.ok) {
                     const data = await res.json();
                     if (data.history && data.history.length > 0) {
@@ -145,7 +145,7 @@ export default function ChatPage() {
         ]}]);
 
         try {
-            const BACKEND_URL = "/api/chat";
+            const BACKEND_URL = "https://msajce-lorin-ai.vercel.app/api/chat";
             const res = await fetch(BACKEND_URL, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
