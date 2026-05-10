@@ -100,6 +100,12 @@ class RAGEngine:
                 break
         self.ground_truth = self._load_ground_truth()
 
+        # Initialize Redis for security/rate-limiting
+        try:
+            self.redis = Redis.from_env()
+        except:
+            self.redis = None
+
     def _load_ground_truth(self):
         if os.path.exists(self.ground_truth_path):
             try:
@@ -236,7 +242,7 @@ class RAGEngine:
         text = re.sub(r'\n{3,}', '\n\n', text).strip()
         return text
 
-    async def query_stream(self, user_query, history=None):
+    async def query_stream(self, user_query, history=None, user_level="student", thinking=False):
         start_time = time.time()
         queries = [user_query]
         intent = classify_query(user_query)

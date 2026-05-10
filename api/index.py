@@ -119,6 +119,8 @@ def is_gibberish(text):
     return False
 
 async def check_security(user_id, text, engine):
+    if not engine.redis: return True, None, 0
+    
     now_ts = int(time.time())
     quota_now = datetime.now() - timedelta(hours=4, minutes=30)
     quota_day_str = quota_now.strftime('%Y-%m-%d')
@@ -220,8 +222,11 @@ async def handle_telegram_direct(payload):
 
         # 4. Process Query
         redis_key = f"user_{user_id}_history"
-        hist_raw = await engine.redis.get(redis_key)
-        history = json.loads(hist_raw) if hist_raw else []
+        history = []
+        if engine.redis:
+            hist_raw = await engine.redis.get(redis_key)
+            history = json.loads(hist_raw) if hist_raw else []
+        
         history_str = "\n".join([f"User: {h['q']}\nBot: {h['a']}" for h in history])
 
         full_response = ""
@@ -248,8 +253,9 @@ async def handle_telegram_direct(payload):
         # 6. Post-Processing (Log to Supabase)
         try:
             await log_to_supabase(user_id, user_name, text, full_response, telemetry)
-            history.append({"q": text, "a": full_response})
-            await engine.redis.set(redis_key, json.dumps(history[-3:]), ex=86400)
+            if engine.redis:
+                history.append({"q": text, "a": full_response})
+                await engine.redis.set(redis_key, json.dumps(history[-3:]), ex=86400)
         except: pass
 
     except Exception as e:
@@ -316,8 +322,11 @@ async def chat_api():
             
         # Consistent History Management (Synced with Telegram)
         redis_key = f"user_{user_id}_history"
-        hist_raw = await engine.redis.get(redis_key)
-        history = json.loads(hist_raw) if hist_raw else []
+        history = []
+        if engine.redis:
+            hist_raw = await engine.redis.get(redis_key)
+            history = json.loads(hist_raw) if hist_raw else []
+        
         history_str = "\n".join([f"User: {h['q']}\nBot: {h['a']}" for h in history])
         
         full_response = ""
@@ -330,8 +339,9 @@ async def chat_api():
                 telemetry_data = chunk
         
         # Save to Redis history (limit to 5 turns to stay fast)
-        history.append({"q": user_query, "a": full_response})
-        await engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
+        if engine.redis:
+            history.append({"q": user_query, "a": full_response})
+            await engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
         
         # Log to interaction DB (Supabase)
         try:
