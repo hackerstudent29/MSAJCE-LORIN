@@ -64,7 +64,7 @@ class RAGEngine:
         try:
             pc_key = os.getenv("PINECONE_API_KEY")
             self.pc = Pinecone(api_key=pc_key)
-            for idx_name in ["msajce-v2", "raglorin"]:
+            for idx_name in ["raglorin"]:
                 try:
                     self.index = self.pc.Index(idx_name)
                     self.index.describe_index_stats()
@@ -192,7 +192,7 @@ class RAGEngine:
                             formatted_q = format_query_for_embedding(q, query_type, dept)
                             
                             # CRITICAL: dimensions=1024 must match Pinecone index dimension
-                            e_res = await client.post("https://ai-gateway.vercel.sh/v1/embeddings", headers=headers, json={"model": self.embedding_model, "input": formatted_q, "dimensions": 1024}, timeout=5.0)
+                            e_res = await client.post("https://ai-gateway.vercel.sh/v1/embeddings", headers=headers, json={"model": self.embedding_model, "input": formatted_q}, timeout=5.0)
                             if e_res.status_code == 200:
                                 emb = e_res.json()["data"][0]["embedding"]; break
                         except: continue
