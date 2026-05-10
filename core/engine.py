@@ -64,14 +64,19 @@ class RAGEngine:
         try:
             pc_key = os.getenv("PINECONE_API_KEY")
             self.pc = Pinecone(api_key=pc_key)
-            for idx_name in ["raglorin"]:
-                try:
-                    self.index = self.pc.Index(idx_name)
-                    self.index.describe_index_stats()
-                    break
-                except: continue
-            else: self.index = None
-        except: self.index = None
+            # Primary index: raglorin (1536-dim)
+            try:
+                self.index = self.pc.Index("raglorin")
+                self.index.describe_index_stats()
+            except: self.index = None
+            # Backup index: raglorin-backup (1536-dim)
+            try:
+                self.index_backup = self.pc.Index("raglorin-backup")
+                self.index_backup.describe_index_stats()
+            except: self.index_backup = None
+        except:
+            self.index = None
+            self.index_backup = None
 
         try:
             self.co = cohere.ClientV2(os.getenv("COHERE_API_KEY"))
@@ -191,12 +196,13 @@ class RAGEngine:
                                     break
                             formatted_q = format_query_for_embedding(q, query_type, dept)
                             
-                            # CRITICAL: dimensions=1024 must match Pinecone index dimension
+                            # Native 1536-dim to match raglorin/raglorin-backup indexes
                             e_res = await client.post("https://ai-gateway.vercel.sh/v1/embeddings", headers=headers, json={"model": self.embedding_model, "input": formatted_q}, timeout=5.0)
                             if e_res.status_code == 200:
                                 emb = e_res.json()["data"][0]["embedding"]; break
                         except: continue
 
+                # BM25 keyword search
                 if self.bm25:
                     q_clean = re.sub(r'[^\w\s]', '', q.lower())
                     tokens = bm25s.tokenize(q_clean, stemmer=self.stemmer, show_progress=False)
@@ -204,9 +210,20 @@ class RAGEngine:
                     for c, s in zip(chunks[0], scores[0]):
                         if isinstance(c, dict): b_hits.append({"text": c.get("text", ""), "score": float(s), "id": c.get("chunk_id", ""), "metadata": c.get("metadata", {})})
                 
-                if emb and self.index:
-                    p_res = self.index.query(vector=[float(x) for x in emb], top_k=depth, include_metadata=True)
-                    p_hits = [{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]]
+                if emb:
+                    emb_floats = [float(x) for x in emb]
+                    # 1) PRIMARY: raglorin
+                    if self.index:
+                        try:
+                            p_res = self.index.query(vector=emb_floats, top_k=depth, include_metadata=True)
+                            p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]])
+                        except: pass
+                    # 2) BACKUP: raglorin-backup (top 5)
+                    if self.index_backup:
+                        try:
+                            b_res = self.index_backup.query(vector=emb_floats, top_k=5, include_metadata=True)
+                            p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"] * 0.95, "id": f"backup_{m['id']}", "metadata": m["metadata"]} for m in b_res["matches"]])
+                        except: pass
                 return p_hits, b_hits
             except: return [], []
 
