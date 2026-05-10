@@ -133,6 +133,9 @@ class RAGEngine:
                 fresh_data["sports_basics"] = "MSAJCE has 11+ sports facilities including Basketball, Football, Cricket (BSM Trophy), Kabaddi, and a fully equipped Gym."
                 fresh_data["placement_basics"] = "Major recruiters: TCS, Infosys, CTS, Wipro, HCL. Highest Package: 6 LPA. 31+ MNCs recruit annually."
                 fresh_data["admission_basics"] = "Admissions available via Government & Management Quota. Documents: 10th/12th marksheets, TC, Community Certificate. Link: https://enrollonline.co.in/Registration/Apply/MSAJCE"
+                fresh_data["transport_basics"] = "MSAJCE operates 22+ buses covering major routes like AR1 to AR10 and R22. Locations: Tambaram, Medavakkam, Velachery, Anna Nagar, etc."
+                fresh_data["hostel_basics"] = "Separate hostels for Boys and Girls are available within the campus with mess facilities, WiFi, and 24/7 security."
+                fresh_data["facility_basics"] = "Central Library with 40,000+ volumes, 15+ specialized Engineering Labs, Canteen, and Seminar Halls."
                 return fresh_data
             except: pass
         return {}
@@ -258,16 +261,20 @@ class RAGEngine:
             if target_dept and (target_dept in h["id"].lower() or target_dept in h["text"].lower()[:200]):
                 h["f_score"] *= 3.0
             
-            # 2. Pillar Boosting (2.5x) - Admissions, Placements, Sports, College
+            # 2. Pillar Boosting (2.5x) - Admissions, Placements, Sports, College, Transport, Hostel, Labs
             pillars = {
-                "admission": ["admission", "quota", "seats", "intake", "fees", "eligibility"],
-                "placement": ["placement", "company", "recruit", "package", "job", "salary"],
-                "sports": ["sports", "game", "gym", "football", "cricket", "basketball", "trophy"],
-                "college": ["about", "located", "address", "code", "established", "vision"]
+                "admission": ["admission", "quota", "seats", "intake", "fees", "eligibility", "apply"],
+                "placement": ["placement", "company", "recruit", "package", "job", "salary", "hired"],
+                "sports": ["sports", "game", "gym", "football", "cricket", "basketball", "trophy", "yoga"],
+                "college": ["about", "located", "address", "code", "established", "vision", "mission"],
+                "transport": ["bus", "route", "stop", "timing", "van", "ar8", "ar1", "ar2", "transport"],
+                "hostel": ["hostel", "room", "mess", "warden", "accommodation", "stay", "dorm"],
+                "faculty": ["hod", "professor", "staff", "faculty", "teacher", "head", "dean"],
+                "facility": ["lab", "library", "canteen", "infrastructure", "auditorium", "seminar", "wifi"]
             }
             for pillar, keywords in pillars.items():
                 if any(k in q_lower for k in keywords):
-                    if any(k in h["text"].lower()[:400] for k in keywords):
+                    if any(k in h["text"].lower()[:500] for k in keywords):
                         h["f_score"] *= 2.5
 
             if any(str(val).lower() in q_lower for val in h["metadata"].values() if isinstance(val, (str, list))):
