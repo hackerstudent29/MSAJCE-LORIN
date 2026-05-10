@@ -349,8 +349,11 @@ async def chat_api():
         
         # Save to Redis history (limit to 5 turns to stay fast)
         if engine.redis:
-            history.append({"q": user_query, "a": full_response})
-            await engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
+            redis_key = f"user_{user_id}_history"
+            hist_raw = await engine.redis.get(redis_key)
+            current_history = json.loads(hist_raw) if hist_raw else []
+            current_history.append({"q": user_query, "a": full_response})
+            await engine.redis.set(redis_key, json.dumps(current_history[-5:]), ex=86400)
         
         # Log to interaction DB (Supabase)
         try:
