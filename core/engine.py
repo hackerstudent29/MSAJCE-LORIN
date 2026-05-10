@@ -127,6 +127,12 @@ class RAGEngine:
                 # INJECT MASTER DEPARTMENTS
                 fresh_data["departments_list"] = "CSE, IT, ECE, EEE, CIVIL, MECH, AI&DS, AI&ML, CYBER SECURITY, CS&BS, S&H"
                 fresh_data["total_departments_count"] = "11"
+                
+                # SAFETY NET PILLARS (For Zero-Failure responses)
+                fresh_data["college_basics"] = "MSAJCE (Mohamed Sathak A.J. College of Engineering) is located in Siruseri IT Park, Chennai. Code: 1301. Established: 2001. Area: 70 Acres."
+                fresh_data["sports_basics"] = "MSAJCE has 11+ sports facilities including Basketball, Football, Cricket (BSM Trophy), Kabaddi, and a fully equipped Gym."
+                fresh_data["placement_basics"] = "Major recruiters: TCS, Infosys, CTS, Wipro, HCL. Highest Package: 6 LPA. 31+ MNCs recruit annually."
+                fresh_data["admission_basics"] = "Admissions available via Government & Management Quota. Documents: 10th/12th marksheets, TC, Community Certificate. Link: https://enrollonline.co.in/Registration/Apply/MSAJCE"
                 return fresh_data
             except: pass
         return {}
@@ -247,15 +253,22 @@ class RAGEngine:
         for h in merged:
             h["f_score"] = h.get("rrf_score", 0.01) * priority_map.get(h["metadata"].get("priority", "medium"), 1.0)
             
-            # --- ROOT CAUSE FIX: Department Boosting ---
-            # If the user mentioned a dept, and the chunk ID/Text relates to it, boost it
+            # --- ROOT CAUSE FIX: Pillar & Department Boosting ---
+            # 1. Surgical Dept Boost (3.0x)
             if target_dept and (target_dept in h["id"].lower() or target_dept in h["text"].lower()[:200]):
                 h["f_score"] *= 3.0
             
-            # Boost admission/seats chunks for "how many" queries
-            if any(term in q_lower for term in ["how many", "seats", "admission", "intake"]):
-                if any(term in h["text"].lower()[:300] for term in ["seats", "intake", "quota", "admission"]):
-                    h["f_score"] *= 2.0
+            # 2. Pillar Boosting (2.5x) - Admissions, Placements, Sports, College
+            pillars = {
+                "admission": ["admission", "quota", "seats", "intake", "fees", "eligibility"],
+                "placement": ["placement", "company", "recruit", "package", "job", "salary"],
+                "sports": ["sports", "game", "gym", "football", "cricket", "basketball", "trophy"],
+                "college": ["about", "located", "address", "code", "established", "vision"]
+            }
+            for pillar, keywords in pillars.items():
+                if any(k in q_lower for k in keywords):
+                    if any(k in h["text"].lower()[:400] for k in keywords):
+                        h["f_score"] *= 2.5
 
             if any(str(val).lower() in q_lower for val in h["metadata"].values() if isinstance(val, (str, list))):
                 h["f_score"] *= 1.4
@@ -361,6 +374,7 @@ STRICT OPERATIONAL RULES:
    d) NO ONE-LINERS: NEVER give a one-line answer for institutional queries (seats, fees, faculty). If information exists, provide the full context. Aim for 40-80 words minimum if data is available.
    e) ENTITY RESOLUTION (CRITICAL): Cross-check names carefully. If attributes match, MERGE them into one profile.
    f) NO TEASING (STRICT): NEVER ask if the user wants to know more about a specific detail (e.g., "Would you like to know the seat breakdown?") UNLESS that exact information is already visible in your CONTEXT. Do not promise information you don't have.
+   g) ZERO FAILURE POLICY: For Foundational topics (Admissions, Sports, Placements, College Info), if the specific answer is missing, do NOT say "I don't know". Instead, provide the general foundational facts from GROUND TRUTH (Safety Net) and suggest contacting the office.
 4. NARRATIVE FLOW: Write in fluid, natural paragraphs. Use pronouns (He/She/They) after the first mention.
 5. STRICT ROUTE VERIFICATION: For bus route queries (AR1-AR10, R22), verify every stop belongs to that specific route in CONTEXT.
 6. SURGICAL FOCUS: Answer ONLY what is asked. For person queries, provide a cohesive biography/summary, not fragmented facts.
