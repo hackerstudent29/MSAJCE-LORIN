@@ -26,15 +26,19 @@ PERSON_SIGNALS = ["who is", "tell me about", "who heads", "who runs", "principal
 ROUTE_SIGNALS = ["bus", "route", "stop", "timing", "transport", "ar8", "tambaram", "which bus", "bus number"]
 RULE_SIGNALS = ["allowed", "not allowed", "policy", "rule", "can i", "hostel", "attendance", "regulation"]
 DEPT_NAMES = ["cse", "it", "ece", "eee", "civil", "mech", "aids", "aiml", "cyber", "csbs", "sh"]
+GREETING_SIGNALS = ["hi", "hello", "hey", "good morning", "good afternoon", "good evening", "how are you", "what's up", "namaste", "vanakkam"]
+COMPLIMENT_SIGNALS = ["thanks", "thank you", "great", "awesome", "good job", "nice", "cool", "wow", "amazing", "well done", "perfect"]
 
 def classify_query(query: str) -> str:
-    q = query.lower()
+    q = query.lower().strip()
+    if any(s == q for s in GREETING_SIGNALS) or q in ["hi", "hello"]: return "GREETING"
+    if any(s in q for s in COMPLIMENT_SIGNALS): return "COMPLIMENT"
     if any(s in q for s in ROUTE_SIGNALS) or "ar8" in q or "ar " in q: return "ROUTE_QUERY"
     if any(s in q for s in ["who is", "tell me about", "hod", "principal", "yogesh", "ramanathan"]): return "PERSON_QUERY"
     if any(s in q for s in RULE_SIGNALS): return "RULE_QUERY"
     if any(d in q for d in DEPT_NAMES): return "DEPARTMENT_QUERY"
     if any(s in q for s in LIST_SIGNALS): return "LIST_QUERY"
-    if q.strip() in ["yes", "no", "ok", "tell me more", "elaborate"]: return "ELABORATION_QUERY"
+    if q in ["yes", "no", "ok", "tell me more", "elaborate"]: return "ELABORATION_QUERY"
     return "GENERAL_QUERY"
 
 def clean_prose(text):
@@ -264,16 +268,28 @@ class RAGEngine:
         start_time = time.time()
         intent = classify_query(user_query)
         
-        # 1. IMMEDIATE GREETING BYPASS
+        # 1. Conversational Bypass (Greetings & Compliments)
         if intent == "GREETING":
-            resp = "Hello! I'm LORIN, the institutional AI for MSAJCE. I can help you with information about faculty, bus routes, departments, and college policies. How can I assist you today?"
+            resp = "Hello! I'm LORIN, your institutional AI for MSAJCE. How can I help you today?"
             yield resp
             yield {
                 "type": "telemetry",
                 "latency_ms": int((time.time() - start_time) * 1000),
-                "tokens": 42,
+                "tokens": 20,
                 "intent": "GREETING",
-                "sources": ["System Cache"]
+                "sources": ["System Memory"]
+            }
+            return
+            
+        if intent == "COMPLIMENT":
+            resp = "Thank you! I'm happy to help. Do you have any other questions about the college?"
+            yield resp
+            yield {
+                "type": "telemetry",
+                "latency_ms": int((time.time() - start_time) * 1000),
+                "tokens": 20,
+                "intent": "COMPLIMENT",
+                "sources": ["System Memory"]
             }
             return
 
