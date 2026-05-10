@@ -27,14 +27,17 @@ ROUTE_SIGNALS = ["bus", "route", "stop", "timing", "transport", "ar8", "tambaram
 RULE_SIGNALS = ["allowed", "not allowed", "policy", "rule", "can i", "hostel", "attendance", "regulation"]
 DEPT_NAMES = ["cse", "it", "ece", "eee", "civil", "mech", "aids", "aiml", "cyber", "csbs", "sh"]
 
+GREETING_SIGNALS = ["hi", "hello", "hey", "yo", "sup", "greetings", "good morning", "good afternoon", "good evening"]
+
 def classify_query(query: str) -> str:
-    q = query.lower()
+    q = re.sub(r'[^\w\s]', '', query.lower()).strip()
+    if q in GREETING_SIGNALS: return "GREETING"
     if any(s in q for s in ROUTE_SIGNALS) or "ar8" in q or "ar " in q: return "ROUTE_QUERY"
     if any(s in q for s in ["who is", "tell me about", "hod", "principal", "yogesh", "ramanathan"]): return "PERSON_QUERY"
     if any(s in q for s in RULE_SIGNALS): return "RULE_QUERY"
     if any(d in q for d in DEPT_NAMES): return "DEPARTMENT_QUERY"
     if any(s in q for s in LIST_SIGNALS): return "LIST_QUERY"
-    if q.strip() in ["yes", "no", "ok", "tell me more", "elaborate"]: return "ELABORATION_QUERY"
+    if q in ["yes", "no", "ok", "tell me more", "elaborate"]: return "ELABORATION_QUERY"
     return "GENERAL_QUERY"
 
 def clean_prose(text):
@@ -267,10 +270,12 @@ class RAGEngine:
                     yield p.get("direct_response")
                     # Still yield telemetry even for direct response
                     latency = (time.time() - start_time) * 1000
+                    input_est = (len(gt_context) + len(user_query)) // 4
+                    output_est = len(p.get("direct_response", "").split()) * 1.5
                     yield {
                         "type": "telemetry",
                         "latency_ms": int(latency),
-                        "tokens": len(p.get("direct_response", "").split()) * 2,
+                        "tokens": int(input_est + output_est),
                         "intent": intent,
                         "sources": ["Ground Truth Vault"]
                     }
@@ -294,13 +299,14 @@ class RAGEngine:
 
         system_prompt = f"""You are LORIN, the institutional AI for MSAJCE.
 RULES:
-1. GREETING: Start with 'Hello! I'm LORIN, the institutional AI for MSAJCE.' ONLY if this is the very first message. If there is history, SKIP the greeting and answer directly.
-2. NARRATIVE FLOW: Summarize information into fluid, natural paragraphs. Use pronouns (He/She/They) after the first mention to maintain flow.
-3. STRICT ROUTE VERIFICATION: For bus route queries (AR1-AR10, R22), verify that every stop you list belongs to that specific route number in the CONTEXT. Do not mix stops from different routes. If the full list is available, provide it.
-4. SURGICAL FOCUS: Answer ONLY what is asked. For person queries, provide a cohesive biography/summary, not fragmented facts.
-5. FORMATTING: Use center dots (•) ONLY for actual lists (e.g., stops, documents). NEVER use tables.
-6. IDENTITY: You were developed by Ramanathan S (Ram), a 2nd-year B.Tech IT student at MSAJCE. Only mention this if asked about your creator.
-7. End with a relevant follow-up question.
+1. GREETING: If the user sends a greeting only (e.g., 'Hi', 'Hello', 'Hey'), respond with 'Hello! I'm LORIN, the institutional AI for MSAJCE. I can help you with information about faculty, bus routes, departments, and college policies. How can I assist you today?'
+2. DIRECT ANSWER: If the user asks a specific question or query, SKIP all greetings and introductory pleasantries. Give the content DIRECTLY.
+3. NARRATIVE FLOW: Summarize information into fluid, natural paragraphs. Use pronouns (He/She/They) after the first mention to maintain flow.
+4. STRICT ROUTE VERIFICATION: For bus route queries (AR1-AR10, R22), verify that every stop you list belongs to that specific route number in the CONTEXT. Do not mix stops from different routes. If the full list is available, provide it.
+5. SURGICAL FOCUS: Answer ONLY what is asked. For person queries, provide a cohesive biography/summary, not fragmented facts.
+6. FORMATTING: Use center dots (•) ONLY for actual lists (e.g., stops, documents). NEVER use tables.
+7. IDENTITY: You were developed by Ramanathan S (Ram), a 2nd-year B.Tech IT student at MSAJCE. Only mention this if asked about your creator.
+8. End with a relevant follow-up question.
 
 GROUND TRUTH:
 {gt_context}
@@ -332,13 +338,17 @@ CONTEXT:
 
         # Yield Telemetry at the end
         latency = (time.time() - start_time) * 1000
-        token_count = len(full_answer.split()) * 1.5 # Improved estimate
+        # Improved Token Estimation (Input + Output)
+        input_est = (len(system_prompt) + len(user_query) + (len(history) if history else 0)) // 3.8
+        output_est = len(full_answer.split()) * 1.5
+        total_tokens = int(input_est + output_est)
+        
         yield {
             "type": "telemetry",
             "latency_ms": int(latency),
-            "tokens": int(token_count),
+            "tokens": total_tokens,
             "intent": intent,
-            "sources": sources[:3] # Limit to top 3 for UI cleanliness
+            "sources": sources[:3]
         }
 
     async def _safe_vercel_request(self, data, stream=False):
