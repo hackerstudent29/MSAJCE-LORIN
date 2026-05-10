@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { Plus, ChevronDown, ArrowUp, X, FileText, Loader2, Check, Archive } from "lucide-react";
+import { Plus, ChevronDown, ArrowUp, X, FileText, Loader2, Check, Archive, User, ShieldCheck, GraduationCap, Briefcase } from "lucide-react";
 
 /* --- ICONS --- */
 export const Icons = {
@@ -16,7 +16,6 @@ export const Icons = {
             </g>
         </svg>
     ),
-    // Using Lucide React for premium, consistent icons
     Plus: Plus,
     Thinking: (props: React.SVGProps<SVGSVGElement>) => <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" {...props}><path d="M10.3857 2.50977C14.3486 2.71054 17.5 5.98724 17.5 10C17.5 14.1421 14.1421 17.5 10 17.5C5.85786 17.5 2.5 14.1421 2.5 10C2.5 9.72386 2.72386 9.5 3 9.5C3.27614 9.5 3.5 9.72386 3.5 10C3.5 13.5899 6.41015 16.5 10 16.5C13.5899 16.5 16.5 13.5899 16.5 10C16.5 6.5225 13.7691 3.68312 10.335 3.50879L10 3.5L9.89941 3.49023C9.67145 3.44371 9.5 3.24171 9.5 3C9.5 2.72386 9.72386 2.5 10 2.5L10.3857 2.50977ZM10 5.5C10.2761 5.5 10.5 5.72386 10.5 6V9.69043L13.2236 11.0527C13.4706 11.1762 13.5708 11.4766 13.4473 11.7236C13.3392 11.9397 13.0957 12.0435 12.8711 11.9834L12.7764 11.9473L9.77637 10.4473C9.60698 10.3626 9.5 10.1894 9.5 10V6C9.5 5.72386 9.72386 5.5 10 5.5ZM3.66211 6.94141C4.0273 6.94159 4.32303 7.23735 4.32324 7.60254C4.32324 7.96791 4.02743 8.26446 3.66211 8.26465C3.29663 8.26465 3 7.96802 3 7.60254C3.00021 7.23723 3.29676 6.94141 3.66211 6.94141ZM4.95605 4.29395C5.32146 4.29404 5.61719 4.59063 5.61719 4.95605C5.6171 5.3214 5.3214 5.61709 4.95605 5.61719C4.59063 5.61719 4.29403 5.32146 4.29395 4.95605C4.29395 4.59057 4.59057 4.29395 4.95605 4.29395ZM7.60254 3C7.96802 3 8.26465 3.29663 8.26465 3.66211C8.26446 4.02743 7.96791 4.32324 7.60254 4.32324C7.23736 4.32302 6.94159 4.0273 6.94141 3.66211C6.94141 3.29676 7.23724 3.00022 7.60254 3Z"></path></svg>,
     SelectArrow: ChevronDown,
@@ -71,7 +70,7 @@ const FilePreviewCard: React.FC<FilePreviewCardProps> = ({ file, onRemove }) => 
                         <div className="p-1.5 bg-bg-300 rounded">
                             <Icons.FileText className="w-4 h-4 text-text-300" />
                         </div>
-                        <span className="text-[10px] font-medium text-text-400 uppercase tracking-wider truncate">
+                        <span className="text-[10px] font-medium text-text-400 tracking-wider truncate">
                             {file.file.name.split('.').pop()}
                         </span>
                     </div>
@@ -86,7 +85,6 @@ const FilePreviewCard: React.FC<FilePreviewCardProps> = ({ file, onRemove }) => 
                 </div>
             )}
 
-            {/* Remove Button Overlay */}
             <button
                 onClick={() => onRemove(file.id)}
                 className="absolute top-1 right-1 p-1 bg-black/50 hover:bg-black/70 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity"
@@ -94,7 +92,6 @@ const FilePreviewCard: React.FC<FilePreviewCardProps> = ({ file, onRemove }) => 
                 <Icons.X className="w-3 h-3" />
             </button>
 
-            {/* Upload Status */}
             {file.uploadStatus === 'uploading' && (
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                     <Icons.Loader2 className="w-5 h-5 text-white animate-spin" />
@@ -125,7 +122,7 @@ const PastedContentCard: React.FC<PastedContentCardProps> = ({ content, onRemove
 
             <div className="flex items-center justify-between w-full mt-2">
                 <div className="inline-flex items-center justify-center px-1.5 py-[2px] rounded border border-[#E5E5E5] dark:border-[#404040] bg-white dark:bg-transparent">
-                    <span className="text-[9px] font-bold text-[#6B7280] dark:text-[#9CA3AF] uppercase tracking-wider font-sans">PASTED</span>
+                    <span className="text-[9px] font-medium text-[#6B7280] dark:text-[#9CA3AF] tracking-wider font-sans">Pasted</span>
                 </div>
             </div>
 
@@ -201,7 +198,7 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({ models, selectedModel, on
                         >
                             <div className="flex flex-col gap-0.5">
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[13px] font-semibold text-text-100 dark:text-[#ECECEC]">
+                                    <span className="text-[13px] font-medium text-text-100 dark:text-[#ECECEC]">
                                         {model.name}
                                     </span>
                                     {model.badge && (
@@ -226,7 +223,7 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({ models, selectedModel, on
                     <div className="h-px bg-bg-300 dark:bg-[#30302E] my-1 mx-2" />
 
                     <button className="w-full text-left px-3 py-2.5 rounded-xl flex items-center justify-between group transition-colors hover:bg-bg-200 dark:hover:bg-[#30302E] text-text-100 dark:text-[#ECECEC]">
-                        <span className="text-[13px] font-semibold">More models</span>
+                        <span className="text-[13px] font-medium">More models</span>
                         <Icons.SelectArrow className="w-4 h-4 -rotate-90 text-text-300 dark:text-[#999999]" />
                     </button>
                 </div>
@@ -242,7 +239,8 @@ interface ClaudeChatInputProps {
         files: AttachedFile[];
         pastedContent: any[];
         model: string;
-        isThinkingEnabled: boolean
+        isThinkingEnabled: boolean;
+        user_level: string;
     }) => void;
 }
 
@@ -251,16 +249,23 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage 
     const [files, setFiles] = useState<AttachedFile[]>([]);
     const [pastedContent, setPastedContent] = useState<any[]>([]);
     const [isDragging, setIsDragging] = useState(false);
-    const [selectedModel, setSelectedModel] = useState("sonnet-4.5");
+    const [selectedModel, setSelectedModel] = useState("lorin-pro");
     const [isThinkingEnabled, setIsThinkingEnabled] = useState(false);
+    const [selectedPersona, setSelectedPersona] = useState("student");
 
     const textareaRef = useRef<HTMLTextAreaElement>(null);
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     const models = [
-        { id: "opus-4.5", name: "Opus 4.5", description: "Most capable for complex work" },
-        { id: "sonnet-4.5", name: "Sonnet 4.5", description: "Best for everyday tasks" },
-        { id: "haiku-4.5", name: "Haiku 4.5", description: "Fastest for quick answers" }
+        { id: "lorin-standard", name: "Lorin Standard", description: "Balanced institutional intelligence" },
+        { id: "lorin-pro", name: "Lorin Pro", description: "Ground Truth & high-precision RAG", badge: "Primary" },
+        { id: "lorin-fast", name: "Lorin Fast", description: "Rapid response for quick queries" }
+    ];
+
+    const personas = [
+        { id: "student", name: "Student", icon: <GraduationCap size={18} /> },
+        { id: "faculty", name: "Faculty", icon: <ShieldCheck size={18} /> },
+        { id: "admin", name: "Admin", icon: <Briefcase size={18} /> }
     ];
 
     // Auto-resize textarea
@@ -347,7 +352,7 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage 
 
     const handleSend = () => {
         if (!message.trim() && files.length === 0 && pastedContent.length === 0) return;
-        onSendMessage({ message, files, pastedContent, model: selectedModel, isThinkingEnabled });
+        onSendMessage({ message, files, pastedContent, model: selectedModel, isThinkingEnabled, user_level: selectedPersona });
         setMessage("");
         setFiles([]);
         setPastedContent([]);
@@ -421,12 +426,12 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage 
                                 onClick={() => fileInputRef.current?.click()}
                                 className="inline-flex items-center justify-center relative shrink-0 transition-colors duration-200 h-8 w-8 rounded-lg active:scale-95 text-text-400 hover:text-text-200 hover:bg-bg-200"
                                 type="button"
-                                aria-label="Toggle menu"
+                                aria-label="Attach files"
                             >
                                 <Icons.Plus className="w-5 h-5" />
                             </button>
 
-                            <div className="flex shrink min-w-8 !shrink-0">
+                            <div className="flex shrink min-w-8 !shrink-0 group">
                                 <button
                                     onClick={() => setIsThinkingEnabled(!isThinkingEnabled)}
                                     className={`transition-all duration-200 h-8 w-8 flex items-center justify-center rounded-lg active:scale-95
@@ -438,7 +443,25 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage 
                                     aria-label="Extended thinking"
                                 >
                                     <Icons.Thinking className="w-5 h-5" />
+                                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-2 py-1 bg-[#1F1E1D] dark:bg-[#EEEEEC] text-bg-0 dark:text-bg-100 text-[11px] font-medium rounded-[6px] opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50 flex items-center gap-1 shadow-sm tracking-wide">
+                                        <span className="text-[#ECECEC] dark:text-[#1F1E1D]">Extended thinking</span>
+                                    </div>
                                 </button>
+                            </div>
+
+                            <div className="flex items-center bg-bg-200 dark:bg-[#454540]/30 rounded-xl px-1 py-0.5 ml-1">
+                                {personas.map(p => (
+                                    <button
+                                        key={p.id}
+                                        onClick={() => setSelectedPersona(p.id)}
+                                        className={`p-1.5 rounded-lg transition-all active:scale-90 ${selectedPersona === p.id 
+                                            ? 'bg-white dark:bg-[#454540] text-[#D46B4F] shadow-sm' 
+                                            : 'text-text-400 hover:text-text-200'}`}
+                                        title={`${p.name} Persona`}
+                                    >
+                                        {p.icon}
+                                    </button>
+                                ))}
                             </div>
                         </div>
 
@@ -483,11 +506,11 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage 
                 ref={fileInputRef}
                 type="file"
                 multiple
+                className="hidden"
                 onChange={(e) => {
                     if (e.target.files) handleFiles(e.target.files);
                     e.target.value = '';
                 }}
-                className="hidden"
             />
 
             <div className="text-center mt-4">
@@ -495,7 +518,7 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage 
                     AI can make mistakes. Please check important information.
                 </p>
             </div>
-        </div>
+        </div >
     );
 };
 

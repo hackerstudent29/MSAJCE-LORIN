@@ -9,7 +9,7 @@ from core.engine import RAGEngine
 
 async def main():
     engine = RAGEngine()
-    q = "Who is Yogesh?"
+    q = "What are the scholarship details for female students?"
     print(f"\nQuestion: {q}")
     print("-" * 50)
     full_ans = ""

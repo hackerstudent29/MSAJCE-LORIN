@@ -253,8 +253,39 @@ async def handle_telegram_direct(payload):
         logger.error(f"TELEGRAM DIRECT FAIL: {e}")
 
 
+@app.route('/api/history', methods=['GET'])
+async def get_chat_history():
+    try:
+        user_id = request.args.get("user_id")
+        if not user_id: return {"history": []}, 200
+        
+        pool = await get_db_pool()
+        if not pool: return {"history": []}, 200
+        
+        async with pool.acquire() as conn:
+            rows = await conn.fetch(
+                """SELECT query as q, response as a, timestamp 
+                   FROM interactions 
+                   WHERE user_id = $1 
+                   ORDER BY timestamp DESC LIMIT 10""",
+                str(user_id)
+            )
+            
+            # Reverse to get chronological order [old -> new]
+            history = [{"role": "user", "content": r['q']} for r in reversed(rows)]
+            # We add responses as separate messages
+            interleaved = []
+            for r in reversed(rows):
+                interleaved.insert(0, {"id": f"bot_{r['timestamp'].timestamp()}", "role": "bot", "content": r['a']})
+                interleaved.insert(0, {"id": f"user_{r['timestamp'].timestamp()}", "role": "user", "content": r['q']})
+            
+            return {"history": interleaved}, 200
+    except Exception as e:
+        logger.error(f"History Fetch Error: {e}")
+        return {"history": []}, 200
+
 @app.route('/')
-def home(): return "<h1>🚀 Lorin Bot Active</h1>", 200
+function home(): return "<h1>🚀 Lorin Bot Active</h1>", 200
 
 @app.route('/api/chat', methods=['POST'])
 async def chat_api():
@@ -263,12 +294,23 @@ async def chat_api():
         user_query = data.get("message")
         user_id = data.get("user_id", "web_default")
         thinking = data.get("thinking", False)
+        user_level = data.get("user_level", "student")
         
         if not user_query:
             return {"response": "Empty message"}, 400
         
         engine = await get_engine()
         
+        # 1. SECURITY SHIELD (Strikes & Blocking)
+        is_allowed, reason, val = await check_security(user_id, user_query, engine)
+        if not is_allowed:
+            return {
+                "response": f"⚠️ Security Alert: {reason}. Status: {val} strikes/hours.",
+                "blocked": True,
+                "reason": reason,
+                "value": val
+            }, 403
+            
         # Consistent History Management (Synced with Telegram)
         redis_key = f"user_{user_id}_history"
         hist_raw = await engine.redis.get(redis_key)
@@ -278,7 +320,7 @@ async def chat_api():
         full_response = ""
         telemetry_data = {}
         # The engine.query_stream uses history to maintain context
-        async for chunk in engine.query_stream(user_query, history=history_str):
+        async for chunk in engine.query_stream(user_query, history=history_str, user_level=user_level, thinking=thinking):
             if isinstance(chunk, str):
                 full_response += chunk
             elif isinstance(chunk, dict) and chunk.get("type") == "telemetry":

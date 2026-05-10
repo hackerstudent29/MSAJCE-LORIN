@@ -1,33 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0d0d0d;
+  --background: #f8fafc;
+  --foreground: #0f172a;
   --bg-100: #ffffff;
-  --bg-200: #f7f7f7;
-  --bg-300: #e5e5e5;
-  --text-100: #0d0d0d;
-  --text-200: #1a1a1a;
-  --text-300: #404040;
-  --text-400: #6b6b6b;
-  --text-500: #9ca3af;
-  --accent: #d46b4f;
-  --accent-hover: #b55a42;
+  --bg-200: #f1f5f9;
+  --bg-300: #e2e8f0;
+  --text-100: #0f172a;
+  --text-200: #1e293b;
+  --text-300: #475569;
+  --text-400: #64748b;
+  --text-500: #94a3b8;
+  --accent: #003366; /* MSAJCE Institutional Blue */
+  --accent-hover: #002244;
+  --secondary: #d46b4f;
+  --gold: #FFD700;
 }
 
 .dark {
-  --background: #212121;
-  --foreground: #ececf1;
-  --bg-100: #212121;
-  --bg-200: #30302e;
-  --bg-300: #404040;
-  --text-100: #ececf1;
-  --text-200: #d1d5db;
-  --text-300: #9ca3af;
-  --text-400: #6b7280;
-  --text-500: #4b5563;
-  --accent: #d46b4f;
-  --accent-hover: #e07d63;
+  --background: #0a0a0a;
+  --foreground: #f8fafc;
+  --bg-100: #111111;
+  --bg-200: #1a1a1a;
+  --bg-300: #262626;
+  --text-100: #f8fafc;
+  --text-200: #e2e8f0;
+  --text-300: #94a3b8;
+  --text-400: #64748b;
+  --text-500: #475569;
+  --accent: #3b82f6; /* Lighter blue for dark mode visibility */
+  --accent-hover: #60a5fa;
+  --secondary: #e07d63;
+  --gold: #FACC15;
 }
 
 @theme {
@@ -41,23 +45,55 @@
   --color-text-500: var(--text-500);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
+  --color-secondary: var(--secondary);
+  --color-gold: var(--gold);
+  
+  --font-sans: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: var(--font-mono), monospace;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(var(--bg-100), 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* ChatGPT/Claude Style Custom Scrollbar */
-::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-thumb { background: var(--bg-300); border-radius: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
 
 @keyframes fade-in {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-in { animation: fade-in 0.3s ease-out forwards; }
+@keyframes pulse-subtle {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.animate-fade-in { animation: fade-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-pulse-subtle { animation: pulse-subtle 2s ease-in-out infinite; }
 .no-scrollbar::-webkit-scrollbar { display: none; }

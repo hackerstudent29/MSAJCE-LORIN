@@ -15,3 +15,5 @@ DEPLOYMENT_VARS.txt
 .next/
 .vercel/
 node_modules/
+
+.vercel

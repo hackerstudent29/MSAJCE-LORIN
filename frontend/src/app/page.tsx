@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { User, Bot } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ClaudeChatInput } from "@/components/ClaudeChatInput";
 
 /* --- ICONS --- */
@@ -16,33 +17,135 @@ const Icons = {
     ),
 };
 
-interface Message { id: string; role: "user" | "bot"; content: string; telemetry?: any; }
+interface Message { id: string; role: "user" | "bot"; content: string; telemetry?: any; tools?: NestedTool[]; }
+
+/* --- COMPONENTS --- */
+
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { ToolGroup, type NestedTool } from "@/components/ToolGroup";
+
+const TypewriterText = ({ text, onComplete, skipReveal }: { text: string; onComplete?: () => void; skipReveal?: boolean }) => {
+    const [visibleChars, setVisibleChars] = useState(skipReveal ? text.length : 0);
+
+    useEffect(() => {
+        if (skipReveal) return;
+        
+        const interval = setInterval(() => {
+            setVisibleChars((prev) => {
+                if (prev >= text.length) {
+                    clearInterval(interval);
+                    onComplete?.();
+                    return prev;
+                }
+                return prev + 5;
+            });
+        }, 20);
+        return () => clearInterval(interval);
+    }, [text, onComplete, skipReveal]);
+
+    const displayedText = text.slice(0, visibleChars);
+    
+    // Auto-link phone numbers (e.g., +91 1234567890 or 044-12345678)
+    const linkedText = displayedText.replace(
+        /(\+?\d{1,4}[\s-]?\d{10}|\d{2,4}-\d{6,8})/g, 
+        (match) => `[${match}](tel:${match.replace(/[\s-]/g, '')})`
+    );
+
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="prose dark:prose-invert max-w-none prose-p:leading-relaxed prose-p:my-2 prose-a:text-[#D46B4F] prose-a:no-underline hover:prose-a:underline"
+        >
+            <ReactMarkdown 
+                remarkPlugins={[remarkGfm]}
+                components={{
+                    a: ({ node, ...props }) => <a {...props} target="_blank" rel="noopener noreferrer" />,
+                }}
+            >
+                {linkedText}
+            </ReactMarkdown>
+        </motion.div>
+    );
+};
 
 /* --- MAIN PAGE --- */
 export default function ChatPage() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [webUserId] = useState(() => "web_" + Math.random().toString(36).substring(7));
+    const [revealedId, setRevealedId] = useState<string | null>(null);
+    const [webUserId, setWebUserId] = useState<string>("");
     const scrollRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => { 
+    // Institutional Memory: Load on mount
+    useEffect(() => {
+        let id = localStorage.getItem("lorin_user_id");
+        if (!id) {
+            id = "web_" + Math.random().toString(36).substring(2, 11);
+            localStorage.setItem("lorin_user_id", id);
+        }
+        setWebUserId(id);
+
+        const saved = localStorage.getItem("lorin_chat_history");
+        if (saved) {
+            try {
+                const parsed = JSON.parse(saved);
+                if (parsed.length > 0) {
+                    setMessages(parsed);
+                    setRevealedId(parsed[parsed.length - 1].id);
+                }
+            } catch (e) { console.error("Failed to load history", e); }
+        }
+
+        // DEEP SYNC: Fetch from Supabase as fallback/integrity check
+        const syncHistory = async () => {
+            try {
+                const res = await fetch(`https://msajce-lorin-ai.vercel.app/api/history?user_id=${id}`);
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.history && data.history.length > 0) {
+                        setMessages(data.history);
+                        setRevealedId(data.history[data.history.length - 1].id);
+                    }
+                }
+            } catch (e) { console.error("Vault sync failed", e); }
+        };
+        syncHistory();
+    }, []);
+
+    // Institutional Memory: Save on change
+    useEffect(() => {
+        if (messages.length > 0) {
+            localStorage.setItem("lorin_chat_history", JSON.stringify(messages));
+        }
         scrollRef.current?.scrollIntoView({ behavior: "smooth" }); 
     }, [messages]);
 
     const handleSendMessage = async (data: any) => {
-        const { message, model, isThinkingEnabled } = data;
+        const { message, model, isThinkingEnabled, user_level } = data;
         
-        if (!message.trim() || isLoading) return;
+        // GIBBERISH/EMPTY FILTER (Telegram Logic)
+        if (!message.trim() || message.length < 2) return;
+        if (isLoading) return;
 
         // Add user message
         const userMsgId = Date.now().toString();
         setMessages(p => [...p, { id: userMsgId, role: "user", content: message }]);
+        setRevealedId(null);
+        const startTime = performance.now();
         setIsLoading(true);
 
+        const botMsgId = (Date.now() + 1).toString();
+        setMessages(p => [...p, { id: botMsgId, role: "bot", content: "", tools: [
+            { category: "search", title: "Analyzing Query Vector Space", subtitle: "Intent Analysis" },
+            { category: "search", title: "Triggering Pinecone-Hybrid Retrieval", subtitle: "RAG Engine" },
+            { category: "file", title: "Extracting Contextual Chunks", subtitle: "Knowledge Base" },
+            { category: "command", title: "Merging Decision Clusters", subtitle: "Synthesis Audit" }
+        ]}]);
+
         try {
-            // BACKEND URL
             const BACKEND_URL = "https://msajce-lorin-ai.vercel.app/api/chat";
-            
             const res = await fetch(BACKEND_URL, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -50,130 +153,202 @@ export default function ChatPage() {
                     message, 
                     model: model || "lorin-pro", 
                     thinking: isThinkingEnabled,
-                    user_id: webUserId
+                    user_id: webUserId,
+                    user_level: user_level || "student"
                 }),
             });
             
-            if (!res.ok) throw new Error("Backend error");
+            const endTime = performance.now();
+            const perceivedLatencyMs = endTime - startTime;
+
+            if (res.status === 403) {
+                const securityData = await res.json();
+                setMessages(p => p.map(m => m.id === botMsgId ? { 
+                    ...m, 
+                    content: securityData.response || "Institutional Security Alert.",
+                    telemetry: { latency_ms: perceivedLatencyMs } 
+                } : m));
+                setIsLoading(false);
+                return;
+            }
             
+            if (!res.ok) throw new Error("Backend error");
             const responseData = await res.json();
-            setMessages(p => [...p, { 
-                id: (Date.now() + 1).toString(), 
-                role: "bot", 
-                content: responseData.response || "I encountered an error. Please try again.",
-                telemetry: responseData.telemetry
-            }]);
+            const responseContent = responseData.response || "Institutional intelligence is currently analyzing your request. Please try again.";
+            
+            // Map real institutional sources to the ToolGroup, filtering out "Unknown"
+            const realTools: NestedTool[] = (responseData.telemetry?.sources || [])
+                .filter((s: string) => s && s.toLowerCase() !== "unknown" && s !== "None")
+                .map((s: string) => ({
+                    category: "file",
+                    title: s,
+                    subtitle: "Verified Institutional Source"
+                }));
+
+            setMessages(p => p.map(m => m.id === botMsgId ? { 
+                ...m, 
+                content: responseContent,
+                tools: realTools.length > 0 ? realTools : [
+                    { category: "file", title: "Institutional Intelligence Archive", subtitle: "Ground Truth Vault" }
+                ],
+                telemetry: { ...responseData.telemetry, latency_ms: perceivedLatencyMs }
+            } : m));
         } catch (e) { 
-            setMessages(p => [...p, { 
-                id: (Date.now() + 2).toString(), 
-                role: "bot", 
-                content: "Connection Error: Please ensure your Bot is awake at msajce-lorin-ai.vercel.app" 
-            }]);
+            console.error("Chat error:", e);
+            setMessages(p => p.map(m => m.id === botMsgId ? { 
+                ...m, 
+                content: "I'm currently experiencing institutional sync issues. Please try again in a moment." 
+            } : m));
         } finally { 
             setIsLoading(false); 
         }
     };
 
     return (
-        <div className="flex flex-col h-screen bg-white dark:bg-[#212121] transition-colors duration-500">
+        <div className="flex flex-col h-screen bg-[#FDFDFD] dark:bg-[#1A1A1A] transition-colors duration-500 font-sans antialiased">
             {/* Header */}
-            <header className="h-14 flex items-center justify-between px-6 border-b border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-[#212121]/50 backdrop-blur-md sticky top-0 z-50">
-                <div className="flex items-center gap-2 font-bold text-lg tracking-tight text-zinc-900 dark:text-white">
-                    <Icons.Logo className="w-6 h-6" />
-                    LORIN <span className="bg-[#D46B4F]/10 text-[#D46B4F] text-[10px] px-1.5 py-0.5 rounded-full font-bold">PRO</span>
+            <header className="h-14 flex items-center justify-between px-6 border-b border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-xl sticky top-0 z-50">
+                <div className="flex items-center gap-2">
+                    <Icons.Logo className="w-8 h-8 text-[#D46B4F]" />
+                    <span className="text-[18px] tracking-tight text-zinc-900 dark:text-white">Lorin</span>
+                    <div className="px-1.5 py-[1px] bg-[#D46B4F]/10 border border-[#D46B4F]/20 rounded text-[10px] text-[#D46B4F]">Pro</div>
                 </div>
                 <div className="flex items-center gap-4">
-                    <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400">Institutional Intelligence</span>
+                    <div className="flex items-center gap-1.5">
+                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                        <span className="text-[10px] text-zinc-500 dark:text-zinc-400 tracking-widest">Ground truth active</span>
+                    </div>
                 </div>
             </header>
 
             {/* Chat Area */}
-            <main className="flex-1 overflow-y-auto no-scrollbar py-8">
+            <main className="flex-1 overflow-y-auto no-scrollbar py-12">
                 {messages.length === 0 ? (
                     <div className="h-full flex flex-col items-center justify-center max-w-2xl mx-auto text-center px-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                        <div className="p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-full mb-8">
+                        <div className="p-5 bg-zinc-50 dark:bg-zinc-800/50 rounded-3xl mb-10 shadow-sm">
                             <Icons.Logo className="w-16 h-16 animate-pulse" />
                         </div>
-                        <h1 className="text-4xl font-bold mb-4 text-zinc-900 dark:text-white tracking-tight">How can I assist you today?</h1>
-                        <p className="text-zinc-500 dark:text-zinc-400 mb-12 max-w-md">Lorin is your AI-powered companion for college information, admissions, and departmental queries.</p>
+                        <h1 className="text-4xl mb-4 text-zinc-900 dark:text-white tracking-tighter">Institutional intelligence.</h1>
+                        <p className="text-zinc-500 dark:text-zinc-400 mb-12 max-w-md">How can Lorin assist you today with MSAJCE data?</p>
                         
                         <div className="grid grid-cols-2 gap-3 w-full max-w-xl">
                             {[
-                                { q: "Bus Routes", desc: "View transportation details" },
-                                { q: "Faculties", desc: "Browse staff directory" },
-                                { q: "Admissions", desc: "Enquiry about courses" },
-                                { q: "Library", desc: "Check book availability" }
+                                { q: "Bus Routes", desc: "Fleet & routes" },
+                                { q: "Faculties", desc: "Staff directory" },
+                                { q: "Admissions", desc: "Admission code 1301" },
+                                { q: "Scholarships", desc: "Female & merit waivers" }
                             ].map(item => (
                                 <button 
                                     key={item.q} 
                                     onClick={() => handleSendMessage({ message: item.q })} 
-                                    className="p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800 text-left hover:bg-zinc-50 dark:hover:bg-zinc-800/80 transition-all group hover:border-[#D46B4F]/50"
+                                    className="p-6 rounded-3xl border border-zinc-200 dark:border-zinc-800 text-left hover:bg-zinc-50 dark:hover:bg-zinc-800/80 transition-all group hover:border-[#D46B4F]/50 shadow-sm hover:shadow-md"
                                 >
-                                    <div className="font-semibold text-zinc-900 dark:text-white mb-1 group-hover:text-[#D46B4F] transition-colors">{item.q}</div>
-                                    <div className="text-xs text-zinc-500 dark:text-zinc-400">{item.desc}</div>
+                                    <div className="text-zinc-900 dark:text-white mb-1 group-hover:text-[#D46B4F] transition-colors">{item.q}</div>
+                                    <span className="text-[11px] text-zinc-400 dark:text-zinc-500 tracking-wide">Lorin system</span>
+                                    <div className="text-[11px] text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">{item.desc}</div>
                                 </button>
                             ))}
                         </div>
                     </div>
                 ) : (
-                    <div className="max-w-3xl mx-auto px-4 space-y-10">
-                        {messages.map(m => (
-                            <div key={m.id} className={`flex gap-6 group animate-in fade-in duration-500 ${m.role === "user" ? "flex-row-reverse" : ""}`}>
-                                <div className={`w-10 h-10 rounded-2xl flex items-center justify-center shrink-0 shadow-sm ${m.role === "user" ? "bg-zinc-800 dark:bg-zinc-700" : "bg-[#D46B4F] shadow-[#D46B4F]/20 shadow-lg"}`}>
+                    <div className="max-w-3xl mx-auto px-4 space-y-8">
+                        {messages.map((m, idx) => (
+                            <div key={m.id} className={`flex w-full gap-4 items-start ${m.role === "user" ? "flex-row-reverse" : "flex-row"}`}>
+                                {/* Icon */}
+                                <div className={`w-10 h-10 rounded-2xl flex items-center justify-center shrink-0 shadow-sm ${m.role === "user" ? "bg-zinc-800 dark:bg-zinc-700" : "bg-[#D46B4F] shadow-lg shadow-[#D46B4F]/20"}`}>
                                     {m.role === "user" ? <User size={20} className="text-white" /> : <Bot size={20} className="text-white" />}
                                 </div>
-                                <div className={`flex-1 space-y-2 ${m.role === "user" ? "text-right" : ""}`}>
-                                    <div className="text-[10px] font-bold uppercase text-zinc-400 dark:text-zinc-500 tracking-[0.2em]">
-                                        {m.role === "user" ? "Academic Inquiry" : "Lorin System"}
+
+                                {/* Message Content Container */}
+                                <div className={`flex flex-col max-w-[85%] ${m.role === "user" ? "items-end" : "items-start"}`}>
+                                    {/* Meta Header */}
+                                    <div className="flex items-center gap-2 mb-1.5 px-1">
+                                        <span className="text-[10px] text-zinc-400 dark:text-zinc-500 tracking-widest">
+                                            {m.role === "user" ? "Academic inquiry" : "Lorin system"}
+                                        </span>
                                     </div>
-                                    <div className={`
-                                        inline-block max-w-full text-[15px] leading-relaxed whitespace-pre-wrap antialiased
-                                        ${m.role === "user" 
-                                            ? "bg-zinc-100 dark:bg-zinc-800/80 p-4 rounded-3xl text-zinc-800 dark:text-zinc-200" 
-                                            : "text-zinc-800 dark:text-zinc-100 font-medium"
-                                        }
-                                    `}>
-                                        {m.content}
-                                    </div>
-                                    {m.role === "bot" && m.telemetry && (
-                                        <div className="flex flex-wrap gap-2 pt-2 animate-in fade-in slide-in-from-top-1 duration-700">
-                                            <div className="px-2 py-0.5 rounded-full bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-100 dark:border-zinc-700/50 text-[9px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-tighter">
-                                                Query: {m.telemetry.tokens?.input || 0} t
+
+                                    {/* Bot Logic: Unified Container to prevent double icons */}
+                                    {m.role === "bot" && (
+                                        <div className="flex flex-col gap-2 w-full">
+                                            {/* Thinking / Reasoning Trail: Technical System Logs */}
+                                            {(m.tools || (idx === messages.length - 1 && isLoading)) && (
+                                                <div className="w-full mb-1">
+                                                    <ToolGroup
+                                                        state={idx === messages.length - 1 && isLoading ? "pending" : "completed"}
+                                                        chunkCount={m.telemetry?.num_chunks}
+                                                        nestedTools={m.tools || [
+                                                            { category: "search", title: "Analyzing Query Vector Space", subtitle: "Intent Analysis" },
+                                                            { category: "search", title: "Triggering Pinecone-Hybrid Retrieval", subtitle: "RAG Engine" },
+                                                            { category: "file", title: "Extracting Contextual Chunks", subtitle: "Knowledge Base" },
+                                                            { category: "command", title: "Merging Decision Clusters", subtitle: "Synthesis Audit" }
+                                                        ]}
+                                                        completeLabel="Lorin reasoning"
+                                                        shimmerLabel="Lorin is thinking"
+                                                        interruptedLabel="Reasoning interrupted"
+                                                        elapsedTime={m.telemetry?.latency_ms ? `${(m.telemetry.latency_ms / 1000).toFixed(1)}s` : undefined}
+                                                        showElapsed={true}
+                                                        defaultOpen={idx === messages.length - 1}
+                                                    />
+                                                </div>
+                                            )}
+
+                                            {/* Bubble */}
+                                            <div className={`
+                                                inline-block p-4 rounded-2xl text-[16px] leading-relaxed whitespace-pre-wrap antialiased
+                                                ${m.content.includes("Security Alert")
+                                                    ? "border-l-2 border-orange-400/50 pl-4 py-2 text-zinc-600 dark:text-zinc-400 font-sans"
+                                                    : "text-zinc-800 dark:text-zinc-100"
+                                                }
+                                            `}>
+                                                {m.content === "" && idx === messages.length - 1 && isLoading ? (
+                                                    null // ToolGroup handles the visual wait
+                                                ) : (
+                                                    <TypewriterText 
+                                                        text={m.content} 
+                                                        skipReveal={idx < messages.length - 1 || revealedId === m.id}
+                                                        onComplete={() => {
+                                                            if (idx === messages.length - 1) setRevealedId(m.id);
+                                                        }} 
+                                                    />
+                                                )}
                                             </div>
-                                            <div className="px-2 py-0.5 rounded-full bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-100 dark:border-zinc-700/50 text-[9px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-tighter">
-                                                Reply: {m.telemetry.tokens?.output || 0} t
-                                            </div>
-                                            <div className="px-2 py-0.5 rounded-full bg-[#D46B4F]/5 border border-[#D46B4F]/10 text-[9px] font-bold text-[#D46B4F]/70 uppercase tracking-tighter">
-                                                Total: {m.telemetry.tokens?.total || 0} tokens
-                                            </div>
-                                            <div className="px-2 py-0.5 rounded-full bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-100 dark:border-zinc-700/50 text-[9px] font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-tighter">
-                                                Latency: {m.telemetry.latency_ms}ms
-                                            </div>
+
+                                            {/* Telemetry Badge (BACK AT BOTTOM) */}
+                                            {m.telemetry && (revealedId === m.id || idx < messages.length - 1) && (
+                                                <motion.div 
+                                                    initial={revealedId === m.id ? { opacity: 0, y: -5 } : { opacity: 1, y: 0 }}
+                                                    animate={{ opacity: 1, y: 0 }}
+                                                    className="flex flex-wrap gap-2 pt-3"
+                                                >
+                                                    <div className="px-3 py-1 rounded-full bg-[#D46B4F]/10 border border-[#D46B4F]/20 text-[10px] text-[#D46B4F] font-mono font-bold tracking-tight">
+                                                        {m.telemetry.tokens?.total || 0} Tokens
+                                                    </div>
+                                                    <div className="px-3 py-1 rounded-full bg-[#D46B4F]/10 border border-[#D46B4F]/20 text-[10px] text-[#D46B4F] font-mono font-bold tracking-tight">
+                                                        {(m.telemetry.latency_ms / 1000).toFixed(1)}s Lat
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </div>
+                                    )}
+
+                                    {/* User Message Rendering */}
+                                    {m.role === "user" && (
+                                        <div className="inline-block p-4 rounded-2xl text-[16px] leading-relaxed whitespace-pre-wrap antialiased bg-zinc-100 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-200 shadow-sm">
+                                            {m.content}
                                         </div>
                                     )}
                                 </div>
                             </div>
                         ))}
                         
-                        {isLoading && (
-                            <div className="flex gap-6 animate-pulse">
-                                <div className="w-10 h-10 bg-[#D46B4F]/50 rounded-2xl flex items-center justify-center">
-                                    <Bot size={20} className="text-white" />
-                                </div>
-                                <div className="flex gap-2 items-center">
-                                    <div className="w-1.5 h-1.5 bg-[#D46B4F] rounded-full animate-bounce" />
-                                    <div className="w-1.5 h-1.5 bg-[#D46B4F] rounded-full animate-bounce [animation-delay:0.2s]" />
-                                    <div className="w-1.5 h-1.5 bg-[#D46B4F] rounded-full animate-bounce [animation-delay:0.4s]" />
-                                </div>
-                            </div>
-                        )}
-                        <div ref={scrollRef} className="h-40" />
+                        <div ref={scrollRef} className="h-20" />
                     </div>
                 )}
             </main>
 
             {/* Input Bar */}
-            <div className="pb-8 bg-gradient-to-t from-white dark:from-[#212121] via-white/90 dark:via-[#212121]/90 to-transparent pt-10 sticky bottom-0 z-50">
+            <div className="pb-10 bg-gradient-to-t from-[#FDFDFD] dark:from-[#1A1A1A] via-[#FDFDFD]/90 dark:via-[#1A1A1A]/90 to-transparent pt-12 sticky bottom-0 z-50">
                 <div className="max-w-3xl mx-auto px-4">
                     <ClaudeChatInput onSendMessage={handleSendMessage} />
                 </div>
@@ -181,4 +356,3 @@ export default function ChatPage() {
         </div>
     );
 }
-
