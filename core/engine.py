@@ -285,11 +285,12 @@ class RAGEngine:
         system_prompt = f"""You are LORIN, the institutional AI for MSAJCE.
 RULES:
 1. GREETING: Start with 'Hello! I'm LORIN, the institutional AI for MSAJCE.' if this is a new topic.
-2. NARRATIVE FLOW: Summarize information into fluid, natural paragraphs. Avoid starting every sentence with the person's name; use pronouns (He/She/They) after the first mention.
-3. SURGICAL FOCUS: Answer ONLY what is asked. For person queries, provide a cohesive biography/summary, not a list of fragmented facts.
-4. FORMATTING: Use center dots (•) ONLY for actual lists (e.g., bus stops, required documents). NEVER use tables.
-5. IDENTITY: Ramanathan S is your developer.
-6. End with a relevant follow-up question.
+2. NARRATIVE FLOW: Summarize information into fluid, natural paragraphs. Use pronouns (He/She/They) after the first mention to maintain flow.
+3. STRICT ROUTE VERIFICATION: For bus route queries (AR1-AR10, R22), verify that every stop you list belongs to that specific route number in the CONTEXT. Do not mix stops from different routes. If the full list is available, provide it.
+4. SURGICAL FOCUS: Answer ONLY what is asked. For person queries, provide a cohesive biography/summary, not fragmented facts.
+5. FORMATTING: Use center dots (•) ONLY for actual lists (e.g., stops, documents). NEVER use tables.
+6. IDENTITY: You were developed by Ramanathan S (Ram), a 2nd-year B.Tech IT student at MSAJCE. Only mention this if asked about your creator.
+7. End with a relevant follow-up question.
 
 GROUND TRUTH:
 {gt_context}
@@ -297,16 +298,40 @@ GROUND TRUTH:
 CONTEXT:
 {context_text}"""
 
+        # Construct messages with history for true conversational memory
+        messages = [{"role": "system", "content": system_prompt}]
+        if history:
+            # Parse history_str back into roles for the LLM
+            # history_str format: "User: ...\nBot: ..."
+            for line in history.split("\n"):
+                if line.startswith("User: "):
+                    messages.append({"role": "user", "content": line.replace("User: ", "")})
+                elif line.startswith("Bot: "):
+                    messages.append({"role": "assistant", "content": line.replace("Bot: ", "")})
+        
+        # Add the current query
+        messages.append({"role": "user", "content": user_query})
+
         data_gen = {
             "model": self.generation_model,
-            "messages": [{"role": "system", "content": system_prompt}, {"role": "user", "content": user_query}],
-            "temperature": 0.7
+            "messages": messages,
+            "temperature": 0.4 # Lower temperature for higher factual accuracy
         }
         
         full_answer = ""
         async for chunk in self._safe_vercel_request(data_gen, stream=True):
             full_answer += chunk
             yield self._post_process(chunk)
+
+        # Yield Telemetry at the end
+        latency = (time.time() - start_time) * 1000
+        token_count = len(full_answer.split()) * 1.4 # Rough estimate
+        yield {
+            "type": "telemetry",
+            "latency_ms": int(latency),
+            "tokens": int(token_count),
+            "intent": intent
+        }
 
     async def _safe_vercel_request(self, data, stream=False):
         vercel_keys = [os.getenv("VERCEL_API_KEY_3"), os.getenv("VERCEL_AI_KEY_5"), os.getenv("VERCEL_AI_KEY_6"), os.getenv("AI_GATEWAY_API_KEY")]
