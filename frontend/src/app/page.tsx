@@ -321,7 +321,7 @@ export default function ChatPage() {
                                                     className="flex flex-wrap gap-2 pt-3"
                                                 >
                                                     <div className="px-3 py-1 rounded-full bg-[#D46B4F]/10 border border-[#D46B4F]/20 text-[10px] text-[#D46B4F] font-mono font-bold tracking-tight">
-                                                        {m.telemetry.tokens || 0} Tokens
+                                                        {typeof m.telemetry.tokens === 'number' ? m.telemetry.tokens : (m.telemetry.tokens?.total || 0)} Tokens
                                                     </div>
                                                     <div className="px-3 py-1 rounded-full bg-[#D46B4F]/10 border border-[#D46B4F]/20 text-[10px] text-[#D46B4F] font-mono font-bold tracking-tight">
                                                         {(m.telemetry.latency_ms / 1000).toFixed(1)}s Lat

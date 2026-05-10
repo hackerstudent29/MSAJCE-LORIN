@@ -360,6 +360,11 @@ async def chat_api():
             await log_to_supabase(user_id, "Web User", user_query, full_response, telemetry_data)
         except: pass
         
+        # Sanitize telemetry: flatten tokens to int (AI gateway may return {input, output, total})
+        if isinstance(telemetry_data.get("tokens"), dict):
+            telemetry_data["tokens"] = telemetry_data["tokens"].get("total", 0)
+        telemetry_data["tokens"] = int(telemetry_data.get("tokens", 0))
+        
         return {
             "response": full_response,
             "telemetry": telemetry_data
