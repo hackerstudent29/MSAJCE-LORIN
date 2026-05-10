@@ -145,7 +145,7 @@ export default function ChatPage() {
         ]}]);
 
         try {
-            const BACKEND_URL = "https://msajce-lorin-ai.vercel.app/api/chat";
+            const BACKEND_URL = "/api/chat";
             const res = await fetch(BACKEND_URL, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
