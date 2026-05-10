@@ -175,14 +175,14 @@ class RAGEngine:
             p_hits, b_hits = [], []
             try:
                 emb = None
-                vercel_keys = [os.getenv("VERCEL_AI_KEY_6"), os.getenv("VERCEL_AI_KEY_5"), os.getenv("VERCEL_AI_KEY_7"), os.getenv("AI_GATEWAY_API_KEY")]
+                # Order: working keys first (KEY_6 is out of funds)
+                vercel_keys = [os.getenv("VERCEL_AI_KEY_5"), os.getenv("VERCEL_API_KEY_3"), os.getenv("AI_GATEWAY_API_KEY"), os.getenv("VERCEL_AI_KEY_6")]
                 async with httpx.AsyncClient() as client:
                     for k in vercel_keys:
                         if not k: continue
                         try:
                             headers = {"Authorization": f"Bearer {k}", "Content-Type": "application/json"}
                             
-                            # AFTER (fixed)
                             query_type = classify_query(q)
                             dept = ""
                             for d in DEPT_NAMES:
@@ -191,7 +191,8 @@ class RAGEngine:
                                     break
                             formatted_q = format_query_for_embedding(q, query_type, dept)
                             
-                            e_res = await client.post("https://ai-gateway.vercel.sh/v1/embeddings", headers=headers, json={"model": self.embedding_model, "input": formatted_q}, timeout=5.0)
+                            # CRITICAL: dimensions=1024 must match Pinecone index dimension
+                            e_res = await client.post("https://ai-gateway.vercel.sh/v1/embeddings", headers=headers, json={"model": self.embedding_model, "input": formatted_q, "dimensions": 1024}, timeout=5.0)
                             if e_res.status_code == 200:
                                 emb = e_res.json()["data"][0]["embedding"]; break
                         except: continue
