@@ -4,6 +4,9 @@ import React, { useState, useRef, useEffect } from "react";
 import { User, Bot } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ClaudeChatInput } from "@/components/ClaudeChatInput";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { ToolGroup, type NestedTool } from "@/components/ToolGroup";
 
 /* --- ICONS --- */
 const Icons = {
@@ -20,10 +23,6 @@ const Icons = {
 interface Message { id: string; role: "user" | "bot"; content: string; telemetry?: any; tools?: NestedTool[]; }
 
 /* --- COMPONENTS --- */
-
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import { ToolGroup, type NestedTool } from "@/components/ToolGroup";
 
 const TypewriterText = ({ text, onComplete, skipReveal }: { text: string; onComplete?: () => void; skipReveal?: boolean }) => {
     const [visibleChars, setVisibleChars] = useState(skipReveal ? text.length : 0);
@@ -211,7 +210,7 @@ export default function ChatPage() {
                 <div className="flex items-center gap-2">
                     <Icons.Logo className="w-8 h-8 text-[#D46B4F]" />
                     <span className="text-[18px] tracking-tight text-zinc-900 dark:text-white">Lorin</span>
-                    <div className="px-1.5 py-[1px] bg-[#D46B4F]/10 border border-[#D46B4F]/20 rounded text-[10px] text-[#D46B4F]">Pro</div>
+                    <div className="px-1.5 py-[1px] bg-[#D46B4F]/10 border border-[#D46B4F]/20 rounded text-[10px] text-[#D46B4F]">v2.1</div>
                 </div>
                 <div className="flex items-center gap-4">
                     <div className="flex items-center gap-1.5">
