@@ -49,19 +49,9 @@ def clean_prose(text):
     return text
 
 def format_query_for_embedding(query: str, query_type: str, department: str = "") -> str:
-    """
-    Wraps the user query in the same super_chunk_text format used
-    at ingest time. This aligns the query vector with chunk vectors
-    so cosine similarity is accurate.
-    """
-    dept_line = department if department else "General"
-    return (
-        f"This information is from the MSAJCE institution, specifically the "
-        f"{dept_line} department. Section: {query_type.replace('_', ' ').title()}.\n\n"
-        f"SUMMARY: A student is asking about {query}\n"
-        f"QUESTIONS: {query}\n"
-        f"CONTENT: {query}"
-    )
+    # Simpler format to preserve signal for names/typos
+    dept = department if department else "General Institutional"
+    return f"MSAJCE {dept} {query_type}: {query}"
 
 class RAGEngine:
     def __init__(self):
@@ -357,7 +347,11 @@ STRICT OPERATIONAL RULES:
       • Item 2
 8. FORMATTING: Use center dots (•) for lists. NEVER use tables.
 9. IDENTITY: You are LORIN, powered by Gemini 2.0 Flash, developed by Ramanathan S (Ram). Only mention development details if explicitly asked.
-10. End with a relevant follow-up question.
+10. TYPO TOLERANCE & FUZZY MATCHING (CRITICAL):
+    a) Users often make typos (e.g., "vimlathithan" for "vimalathithan").
+    b) If the CONTEXT contains a name that is 80%+ similar to the query, ASSUME it is the correct person.
+    c) Answer using the correct name from the context. Do NOT apologize or say you don't have info if a near-match exists.
+11. End with a relevant follow-up question.
 
 GROUND TRUTH:
 {gt_context}
