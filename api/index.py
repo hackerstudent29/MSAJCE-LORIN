@@ -345,7 +345,10 @@ async def chat_api():
             if isinstance(chunk, str):
                 full_response += chunk
             elif isinstance(chunk, dict) and chunk.get("type") == "telemetry":
+                logger.info(f"[TELEMETRY CAPTURED] {chunk}")
                 telemetry_data = chunk
+            else:
+                logger.warning(f"[UNKNOWN CHUNK] {type(chunk)}: {chunk}")
         
         # Save to Redis history (limit to 5 turns to stay fast)
         if engine.redis:
