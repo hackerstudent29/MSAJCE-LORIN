@@ -321,13 +321,22 @@ async def chat_api():
             }, 403
             
         # Consistent History Management (Synced with Telegram)
-        redis_key = f"user_{user_id}_history"
-        history = []
-        if engine.redis:
+        # We now allow the frontend to pass history directly for high reliability
+        passed_history = data.get("history")
+        history_str = ""
+        
+        if passed_history and isinstance(passed_history, list):
+            # Convert list of {role, content} to the string format the engine expects
+            history_str = "\n".join([
+                f"{'User' if h['role'] == 'user' else 'Bot'}: {h['content']}" 
+                for h in passed_history[-5:] # Last 5 turns
+            ])
+        elif engine.redis:
+            redis_key = f"user_{user_id}_history"
             hist_raw = await engine.redis.get(redis_key)
             history = json.loads(hist_raw) if hist_raw else []
-        
-        history_str = "\n".join([f"User: {h['q']}\nBot: {h['a']}" for h in history])
+            history_str = "\n".join([f"User: {h['q']}\nBot: {h['a']}" for h in history])
+
         
         full_response = ""
         telemetry_data = {}

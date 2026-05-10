@@ -265,22 +265,32 @@ class RAGEngine:
             if p:
                 if p.get("direct_response"):
                     yield p.get("direct_response")
+                    # Still yield telemetry even for direct response
+                    latency = (time.time() - start_time) * 1000
+                    yield {
+                        "type": "telemetry",
+                        "latency_ms": int(latency),
+                        "tokens": len(p.get("direct_response", "").split()) * 2,
+                        "intent": intent,
+                        "sources": ["Ground Truth Vault"]
+                    }
                     return
-                # Only use HyDE for vague general queries.
-                # For specific queries, HyDE drifts and hurts retrieval.
                 if p.get("hyde_answer") and intent == "GENERAL_QUERY":
                     queries.append(p.get("hyde_answer"))
         except: pass
 
         context_chunks = await self.get_context(queries, None)
         
-        # Diagnostic logging — remove after retrieval is confirmed working
+        # Diagnostic logging
         if context_chunks:
             top_scores = [(c['id'], round(c.get('f_score', 0), 4)) for c in context_chunks[:5]]
             logger.warning(f"[LORIN RETRIEVAL] query='{user_query}' | intent={intent} | top5={top_scores}")
         else:
             logger.warning(f"[LORIN RETRIEVAL] query='{user_query}' | intent={intent} | NO RESULTS RETURNED")
+        
         context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
+        sources = list(set([c['metadata'].get('page_title', c['metadata'].get('filename', 'Institutional Source')) for c in context_chunks]))
+
 
         system_prompt = f"""You are LORIN, the institutional AI for MSAJCE.
 RULES:
@@ -298,24 +308,21 @@ GROUND TRUTH:
 CONTEXT:
 {context_text}"""
 
-        # Construct messages with history for true conversational memory
+        # Construct messages with history
         messages = [{"role": "system", "content": system_prompt}]
         if history:
-            # Parse history_str back into roles for the LLM
-            # history_str format: "User: ...\nBot: ..."
             for line in history.split("\n"):
                 if line.startswith("User: "):
                     messages.append({"role": "user", "content": line.replace("User: ", "")})
                 elif line.startswith("Bot: "):
                     messages.append({"role": "assistant", "content": line.replace("Bot: ", "")})
         
-        # Add the current query
         messages.append({"role": "user", "content": user_query})
 
         data_gen = {
             "model": self.generation_model,
             "messages": messages,
-            "temperature": 0.4 # Lower temperature for higher factual accuracy
+            "temperature": 0.4
         }
         
         full_answer = ""
@@ -325,12 +332,13 @@ CONTEXT:
 
         # Yield Telemetry at the end
         latency = (time.time() - start_time) * 1000
-        token_count = len(full_answer.split()) * 1.4 # Rough estimate
+        token_count = len(full_answer.split()) * 1.5 # Improved estimate
         yield {
             "type": "telemetry",
             "latency_ms": int(latency),
             "tokens": int(token_count),
-            "intent": intent
+            "intent": intent,
+            "sources": sources[:3] # Limit to top 3 for UI cleanliness
         }
 
     async def _safe_vercel_request(self, data, stream=False):
