@@ -1,4 +1,3 @@
-# Forced rebuild for Telegram Bot
 import os
 import sys
 import logging
@@ -36,7 +35,11 @@ from flask_cors import CORS
 
 # Initialize Flask
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app, resources={r"/api/*": {
+    "origins": ["https://frontend-lorinai.vercel.app", "http://localhost:3000"],
+    "methods": ["GET", "POST", "OPTIONS"],
+    "allow_headers": ["Content-Type", "Authorization"]
+}})
 
 # --- Global State ---
 _engine = None
@@ -285,7 +288,7 @@ async def get_chat_history():
         return {"history": []}, 200
 
 @app.route('/')
-function home(): return "<h1>🚀 Lorin Bot Active</h1>", 200
+def home(): return "<h1>🚀 Lorin Bot Active</h1>", 200
 
 @app.route('/api/chat', methods=['POST'])
 async def chat_api():
