@@ -82,6 +82,12 @@ class RAGEngine:
                 self.index_backup = self.pc.Index("raglorin-backup")
                 self.index_backup.describe_index_stats()
             except: self.index_backup = None
+            # GPT Master index: gpt-md-files (1536-dim)
+            try:
+                self.index_gpt = self.pc.Index("gpt-md-files")
+                self.index_gpt.describe_index_stats()
+            except: self.index_gpt = None
+            
             # Claude Master index: claude-md-files (1536-dim)
             try:
                 self.index_claude = self.pc.Index("claude-md-files")
@@ -251,7 +257,27 @@ class RAGEngine:
                 
                 if emb:
                     emb_floats = [float(x) for x in emb]
-                    # 2) PRIMARY: final-secret-rag
+                    # 2) GPT MASTER: gpt-md-files (Highest Priority)
+                    if self.index_gpt:
+                        try:
+                            g_res = self.index_gpt.query(vector=emb_floats, top_k=20, include_metadata=True)
+                            for m in g_res["matches"]:
+                                txt = m["metadata"].get("text", "")
+                                if len(txt) < 30: continue
+                                
+                                # GPT Master Multiplier (1.5x) - Super high signal
+                                info_score = m["score"] * 1.5
+                                if "|" in txt: info_score *= 1.3
+                                
+                                p_hits.append({
+                                    "text": txt, 
+                                    "score": info_score, 
+                                    "id": f"gpt_{m['id']}", 
+                                    "metadata": m["metadata"]
+                                })
+                        except: pass
+
+                    # 3) PRIMARY: final-secret-rag
                     if self.index:
                         try:
                             # Increase depth to 15 to ensure we don't miss chunks
@@ -259,21 +285,16 @@ class RAGEngine:
                             p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]])
                         except: pass
                     
-                    # 3) CLAUDE MASTER: claude-md-files (High-Priority Second Search)
+                    # 4) CLAUDE MASTER: claude-md-files (Secondary Master)
                     if self.index_claude:
                         try:
-                            # Deep search to dig past any remaining headers
-                            c_res = self.index_claude.query(vector=emb_floats, top_k=20, include_metadata=True)
+                            c_res = self.index_claude.query(vector=emb_floats, top_k=15, include_metadata=True)
                             for m in c_res["matches"]:
                                 txt = m["metadata"].get("text", "")
-                                # Skip junk if still present
                                 if len(txt) < 40: continue
                                 
-                                # Master Multiplier (1.2x) + Content Density
-                                info_score = m["score"] * 1.2
-                                if "|" in txt: info_score *= 1.3 # Table boost
-                                if "•" in txt or "-" in txt: info_score *= 1.1 # List boost
-                                
+                                # Master Multiplier (1.1x)
+                                info_score = m["score"] * 1.1
                                 p_hits.append({
                                     "text": txt, 
                                     "score": info_score, 
