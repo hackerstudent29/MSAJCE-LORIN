@@ -186,7 +186,7 @@ async def check_security(user_id, text, engine):
     return True, None, 0
 
 async def handle_telegram_direct(payload):
-    """Direct, high-speed Telegram handler for Serverless environments."""
+    """Direct, high-speed Telegram handler with command support and state management."""
     try:
         if "message" not in payload: return
         msg = payload["message"]
@@ -197,30 +197,68 @@ async def handle_telegram_direct(payload):
 
         if not text: return
 
-        # 1. FAST-PATH Greeting Detection
+        engine = await get_engine()
+
+        # --- 1. COMMAND HANDLERS ---
+        if text.startswith("/"):
+            cmd = text.lower().split()[0]
+            if cmd == "/start":
+                resp = "👋 *Hello! I'm LORIN*, the institutional AI for MSAJCE.\n\nI can help you with admissions, bus routes, faculty details, and more. Just ask me anything!\n\n*Available Commands:*\n/thinking - Toggle Deep Reasoning\n/persona - Set your role (student/staff/visitor)\n/help - Show this guide"
+            elif cmd == "/thinking":
+                t_key = f"user_{user_id}_thinking"
+                current = await engine.redis.get(t_key) if engine.redis else None
+                new_state = "off" if current == b"on" else "on"
+                if engine.redis: await engine.redis.set(t_key, new_state)
+                resp = f"🧠 *Deep Thinking is now {new_state.upper()}* for your session."
+            elif cmd == "/persona":
+                parts = text.split()
+                if len(parts) > 1 and parts[1].lower() in ["student", "staff", "visitor"]:
+                    p_key = f"user_{user_id}_persona"
+                    if engine.redis: await engine.redis.set(p_key, parts[1].lower())
+                    resp = f"🎭 *Persona set to {parts[1].upper()}*."
+                else:
+                    resp = "Please specify a persona: `/persona student`, `/persona staff`, or `/persona visitor`."
+            elif cmd == "/help":
+                resp = "🔍 *LORIN Help Guide*\n\n• *Pronouns:* I remember context! You can say 'tell me about him' or 'give more info on it'.\n• *Admissions:* Use college code *1301*.\n• *Bus Routes:* Ask for 'AR8 route' or 'Tambaram bus'.\n• *Faculty:* Ask for HODs or specific professors."
+            else:
+                resp = "Unknown command. Try /help."
+
+            async with httpx.AsyncClient() as client:
+                await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
+                                 json={"chat_id": chat_id, "text": resp, "parse_mode": "Markdown"})
+            return
+
+        # --- 2. FAST-PATH Greeting Detection ---
         greetings = ["hi", "hello", "hey", "hey lorin", "greetings", "good morning", "good afternoon"]
         is_greeting = text.lower().strip() in greetings or (len(text.split()) < 3 and any(g in text.lower() for g in greetings))
         
-        engine = await get_engine()
-        
-        # 2. Security & Rate Limiting
+        # --- 3. Security & Rate Limiting ---
         is_allowed, reason, val = await check_security(user_id, text, engine)
         if not is_allowed:
             async with httpx.AsyncClient() as client:
                 await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
-                                 json={"chat_id": chat_id, "text": f"⏳ {reason}: {val}"})
+                                 json={"chat_id": chat_id, "text": f"⏳ *Security Alert*: {reason} ({val}).", "parse_mode": "Markdown"})
             return
 
-        # 3. Direct Send "Typing" & "Analyzing"
+        # --- 4. User Preferences ---
+        is_thinking = False
+        user_level = "student"
+        if engine.redis:
+            t_val = await engine.redis.get(f"user_{user_id}_thinking")
+            is_thinking = (t_val == b"on")
+            p_val = await engine.redis.get(f"user_{user_id}_persona")
+            if p_val: user_level = p_val.decode('utf-8')
+
+        # --- 5. Status Feedback ---
         async with httpx.AsyncClient() as client:
             await client.post(f"https://api.telegram.org/bot{TOKEN}/sendChatAction", 
                              json={"chat_id": chat_id, "action": "typing"})
             
             ana_res = await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
-                                       json={"chat_id": chat_id, "text": "🔍 Analyzing..."})
+                                       json={"chat_id": chat_id, "text": "🔍 *Analyzing...*", "parse_mode": "Markdown"})
             ana_msg_id = ana_res.json().get("result", {}).get("message_id")
 
-        # 4. Process Query
+        # --- 6. Process Query ---
         redis_key = f"user_{user_id}_history"
         history = []
         if engine.redis:
@@ -232,25 +270,36 @@ async def handle_telegram_direct(payload):
         full_response = ""
         telemetry = {}
         
-        async for chunk in engine.query_stream(text, history=history_str):
-            if isinstance(chunk, dict) and chunk.get("type") == "telemetry":
-                telemetry = chunk
-                continue
-            full_response += chunk
+        try:
+            async for chunk in engine.query_stream(text, history=history_str, thinking=is_thinking, user_level=user_level):
+                if isinstance(chunk, dict) and chunk.get("type") == "telemetry":
+                    telemetry = chunk
+                    continue
+                full_response += chunk
+        except Exception as e:
+            full_response = "I encountered an error while processing your request. Please try again."
+            logger.error(f"ENGINE ERROR: {e}")
 
-        # 5. Update Final Response (Edit the "Analyzing" message)
+        # --- 7. Final Response Delivery ---
         async with httpx.AsyncClient() as client:
             if ana_msg_id:
+                # Add sources footer if available
+                final_text = full_response
+                if telemetry.get("sources"):
+                    src_str = ", ".join(telemetry["sources"][:2])
+                    final_text += f"\n\n_Sources: {src_str}_"
+
                 res = await client.post(f"https://api.telegram.org/bot{TOKEN}/editMessageText", 
-                                       json={"chat_id": chat_id, "message_id": ana_msg_id, "text": full_response, "parse_mode": "Markdown"})
+                                       json={"chat_id": chat_id, "message_id": ana_msg_id, "text": final_text, "parse_mode": "Markdown"})
                 if res.status_code != 200:
+                    # Fallback to plain text if Markdown fails
                     await client.post(f"https://api.telegram.org/bot{TOKEN}/editMessageText", 
                                      json={"chat_id": chat_id, "message_id": ana_msg_id, "text": full_response})
             else:
                 await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
                                  json={"chat_id": chat_id, "text": full_response, "parse_mode": "Markdown"})
 
-        # 6. Post-Processing (Log to Supabase)
+        # --- 8. History & Logging ---
         try:
             await log_to_supabase(user_id, user_name, text, full_response, telemetry)
             if engine.redis:
@@ -260,6 +309,12 @@ async def handle_telegram_direct(payload):
 
     except Exception as e:
         logger.error(f"TELEGRAM DIRECT FAIL: {e}")
+        # Final safety net message
+        try:
+            async with httpx.AsyncClient() as client:
+                await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
+                                 json={"chat_id": chat_id, "text": "⚠️ System temporary unavailable. Please check back in a moment."})
+        except: pass
 
 
 @app.route('/api/history', methods=['GET'])

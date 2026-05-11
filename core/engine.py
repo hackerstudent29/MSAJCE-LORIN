@@ -34,15 +34,25 @@ def classify_query(query: str) -> str:
     q = query.lower().strip()
     # Normalize common typos
     q = q.replace(" su ", " you ")
+    
+    # 1. GREETINGS & COMPLIMENTS (Immediate bypass)
     if any(s == q for s in GREETING_SIGNALS) or q in ["hi", "hello"]: return "GREETING"
     if any(s in q for s in COMPLIMENT_SIGNALS): return "COMPLIMENT"
+    
+    # 2. CONTEXTUAL PRONOUNS & CONTINUATIONS (High Priority for RAG history)
+    # If the query contains "him", "her", "it", "them" or is a short confirmation
+    pronouns = ["him", "her", "it", "them", "about him", "about her", "about it"]
+    if any(p in q.split() for p in pronouns) or any(s == q or q.startswith(s) for s in CONTINUATION_SIGNALS) or q in ["yes", "no", "ok"]:
+        return "ELABORATION_QUERY"
+
+    # 3. SPECIFIC INTENTS
     if any(s in q for s in ROUTE_SIGNALS) or "ar8" in q or "ar " in q: return "ROUTE_QUERY"
     if any(s in q for s in ["who is", "tell me about", "hod", "principal", "yogesh", "ramanathan", "weslin"]): return "PERSON_QUERY"
     if any(s in q for s in ["admission", "apply", "enrol", "document"]): return "ADMISSION_QUERY"
     if any(s in q for s in RULE_SIGNALS): return "RULE_QUERY"
     if any(d in q for d in DEPT_NAMES) or "department" in q: return "DEPARTMENT_QUERY"
     if any(s in q for s in LIST_SIGNALS): return "LIST_QUERY"
-    if any(s == q or q.startswith(s) for s in CONTINUATION_SIGNALS) or q in ["yes", "no", "ok"]: return "ELABORATION_QUERY"
+    
     return "GENERAL_QUERY"
 
 def clean_prose(text):
