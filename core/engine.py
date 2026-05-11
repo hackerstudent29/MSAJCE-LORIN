@@ -37,7 +37,8 @@ def classify_query(query: str) -> str:
     if any(s == q for s in GREETING_SIGNALS) or q in ["hi", "hello"]: return "GREETING"
     if any(s in q for s in COMPLIMENT_SIGNALS): return "COMPLIMENT"
     if any(s in q for s in ROUTE_SIGNALS) or "ar8" in q or "ar " in q: return "ROUTE_QUERY"
-    if any(s in q for s in ["who is", "tell me about", "hod", "principal", "yogesh", "ramanathan"]): return "PERSON_QUERY"
+    if any(s in q for s in ["who is", "tell me about", "hod", "principal", "yogesh", "ramanathan", "weslin"]): return "PERSON_QUERY"
+    if any(s in q for s in ["admission", "apply", "enrol", "document"]): return "ADMISSION_QUERY"
     if any(s in q for s in RULE_SIGNALS): return "RULE_QUERY"
     if any(d in q for d in DEPT_NAMES) or "department" in q: return "DEPARTMENT_QUERY"
     if any(s in q for s in LIST_SIGNALS): return "LIST_QUERY"
@@ -125,24 +126,36 @@ class RAGEngine:
                     expiry_str = fact.get("valid_until", "2099-12-31")
                     expiry = datetime.strptime(expiry_str, "%Y-%m-%d")
                     if now < expiry:
-                        val = fact.get("value")
+                        val = str(fact.get("value"))
                         fresh_data[key.lower()] = val
-                        if "president" in key.lower(): fresh_data["president"] = val
-                        if "yogesh" in str(val).lower(): fresh_data["yogesh"] = val
-                        if "ramanathan" in str(val).lower(): fresh_data["ramanathan"] = val
-                
-                # INJECT MASTER DEPARTMENTS
-                fresh_data["departments_list"] = "CSE, IT, ECE, EEE, CIVIL, MECH, AI&DS, AI&ML, CYBER SECURITY, CS&BS, S&H"
-                fresh_data["total_departments_count"] = "11"
-                
-                # SAFETY NET PILLARS (For Zero-Failure responses)
-                fresh_data["college_basics"] = "MSAJCE (Mohamed Sathak A.J. College of Engineering) is located in Siruseri IT Park, Chennai. Code: 1301. Established: 2001. Area: 70 Acres."
-                fresh_data["sports_basics"] = "MSAJCE has 11+ sports facilities including Basketball, Football, Cricket (BSM Trophy), Kabaddi, and a fully equipped Gym."
-                fresh_data["placement_basics"] = "Major recruiters: TCS, Infosys, CTS, Wipro, HCL. Highest Package: 6 LPA. 31+ MNCs recruit annually."
-                fresh_data["admission_basics"] = "Admissions available via Government & Management Quota. Documents: 10th/12th marksheets, TC, Community Certificate. Link: https://enrollonline.co.in/Registration/Apply/MSAJCE"
-                fresh_data["transport_basics"] = "MSAJCE operates 22+ buses covering major routes like AR1 to AR10 and R22. Locations: Tambaram, Medavakkam, Velachery, Anna Nagar, etc."
-                fresh_data["hostel_basics"] = "Separate hostels for Boys and Girls are available within the campus with mess facilities, WiFi, and 24/7 security."
-                fresh_data["facility_basics"] = "Central Library with 40,000+ volumes, 15+ specialized Engineering Labs, Canteen, and Seminar Halls."
+                        
+                        # AGGRESSIVE NAME INDEXING:
+                        # Extract potential names from the value (Capitalized words)
+                        # and map them back to this value.
+                        names = re.findall(r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+\b', val)
+                        for n in names:
+                            fresh_data[n.lower()] = val
+                            # Also map individual parts of the name if they are unique
+                            parts = n.split()
+                            if len(parts) > 1:
+                                for p in parts:
+                                    if len(p) > 3 and p.lower() not in ["the", "and", "prof", "doctor"]:
+                                        # Only map if not already taken by a more specific key
+                                        if p.lower() not in fresh_data:
+                                            fresh_data[p.lower()] = val
+
+                # INJECT MASTER DEPARTMENTS (12 UG + 2 PG + Ph.D)
+                fresh_data["departments_list"] = "CSE (60), IT (60), ECE (60), AI&ML (60), EEE (30), Civil (30), Mech (30), AI&DS (30), CS&BS (30), Cyber Security (30), VLSI (30), ACT (30). PG: M.E.CSE (9), M.E.Structural (18). Ph.D: Mechanical."
+                fresh_data["total_departments_count"] = "12 UG departments"
+
+                # SAFETY NET PILLARS — Accurate values sourced from MD files
+                fresh_data["college_basics"] = "MSAJCE (Mohamed Sathak A.J. College of Engineering). Address: 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai-603103. Established: 5th July 2001 by Mohamed Sathak Trust. Affiliated: Anna University Chennai. Approved: AICTE New Delhi. Campus: 70 acres. Code: 1301. Phone: +91 99400 04500. Email: msajce.office@gmail.com. Website: www.msajce-edu.in."
+                fresh_data["sports_basics"] = "MSAJCE has 11 sports facilities: Basketball, Football, Cricket & Cricket Nets, Yoga, Kabaddi, Volleyball, Table Tennis, Carrom, Chess, Track and Field, Kho Kho. Fully equipped indoor Gymnasium. Sports quota admission for district/state/national level athletes. Annual trophies: Mohamed Sathak Trophy (Football), BSM Trophy (Cricket), Fit India Cyclothon. Director of Physical Education: Dr. K.P. Santhosh Nathan."
+                fresh_data["placement_basics"] = "MSAJCE Placement Cell. Director: Dr. S. Vijay Ananth. Major recruiters: TCS, Infosys, CTS, Wipro, HCL, Zoho, Lenovo. 43+ MoUs with industries. Internship top companies 2022-23: Lenovo (75 students), Zoho (51), Green Valleys Shelters (45). Placement page: https://www.msajce-edu.in/placement.php."
+                fresh_data["admission_basics"] = "Admissions via Government & Management Quota through TNEA Counselling. Apply: https://enrollonline.co.in/Registration/Apply/MSAJCE. Required documents: 10th & 12th Marksheets, Transfer Certificate, Community Certificate, TNEA Allotment Order. Head of Admissions: Dr. K.P. Santhosh Nathan (Ph: 9840886992). Principal: Dr. K.S. Srinivasan (Ph: 9150575066)."
+                fresh_data["transport_basics"] = "MSAJCE operates 22 buses + 1 Tata ACE + 1 Ambulance. All buses arrive at college at 8:00AM. Routes: AR3-Uthiramerur (5:50AM), AR4-Moolakadai (6:10AM), AR5-MMDA School (6:15AM), AR6-ICF (6:15AM), AR7-Chunambedu (5:25AM, earliest), AR8-Manjambakkam (5:50AM), AR9-Ennore (6:15AM), AR10-Porur (6:25AM, latest), R22-Nemilichery (6:00AM). Transport Convener: Dr. K.P. Santhosh Nathan (Ph: 9840886992)."
+                fresh_data["hostel_basics"] = "Boys Hostel: Inside campus, 3 blocks, 233 non-AC + 6 AC rooms, 2 persons/room, capacity 480 boys. Girls Hostel: Sholinganallur (5km from campus), 71 rooms, 3 persons/room, capacity 210 girls. Both have WiFi, LCD-TV, indoor games, reading room. Mess timings: Breakfast 7-8AM, Lunch 1-1:45PM, Dinner 7-8:30PM (working days)."
+                fresh_data["facility_basics"] = "MSAJCE Learning Centre (Library): 8978 sq.ft, 29,853 volumes, 3,790 e-books, DELNET & J-Gate databases, Koha software, WiFi. Hours: Mon-Sat 8AM-7PM, Sun 10AM-4PM. Chief Librarian: Mr. S. Sudhakar. 15+ Engineering Labs. Cafeteria capacity 100 students, 8AM-8PM. Auditorium, Seminar Halls, Computer Centre."
                 return fresh_data
             except: pass
         return {}
