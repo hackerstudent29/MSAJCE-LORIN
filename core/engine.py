@@ -417,7 +417,9 @@ class RAGEngine:
                 if "Bot:" in l or "assistant:" in l.lower():
                     anchor = l.split(":", 1)[1].strip()[:150]
                     break
-            if        # [HyDE & PRE-CLASSIFY]
+            if anchor: queries.append(f"Regarding '{anchor}', {user_query}")
+
+        # [HyDE & PRE-CLASSIFY]
         # SURGICAL CONTEXT: Only inject GT facts relevant to the query to save tokens (approx 50-70% savings)
         q_words = set(re.findall(r'\w+', user_query.lower()))
         relevant_gt = {}
