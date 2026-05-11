@@ -202,26 +202,10 @@ async def handle_telegram_direct(payload):
         # --- 1. COMMAND HANDLERS ---
         if text.startswith("/"):
             cmd = text.lower().split()[0]
-            if cmd == "/start":
-                resp = "👋 *Hello! I'm LORIN*, the institutional AI for MSAJCE.\n\nI can help you with admissions, bus routes, faculty details, and more. Just ask me anything!\n\n*Available Commands:*\n/thinking - Toggle Deep Reasoning\n/persona - Set your role (student/staff/visitor)\n/help - Show this guide"
-            elif cmd == "/thinking":
-                t_key = f"user_{user_id}_thinking"
-                current = await engine.redis.get(t_key) if engine.redis else None
-                new_state = "off" if current == b"on" else "on"
-                if engine.redis: await engine.redis.set(t_key, new_state)
-                resp = f"🧠 *Deep Thinking is now {new_state.upper()}* for your session."
-            elif cmd == "/persona":
-                parts = text.split()
-                if len(parts) > 1 and parts[1].lower() in ["student", "staff", "visitor"]:
-                    p_key = f"user_{user_id}_persona"
-                    if engine.redis: await engine.redis.set(p_key, parts[1].lower())
-                    resp = f"🎭 *Persona set to {parts[1].upper()}*."
-                else:
-                    resp = "Please specify a persona: `/persona student`, `/persona staff`, or `/persona visitor`."
-            elif cmd == "/help":
+            if cmd == "/help":
                 resp = "🔍 *LORIN Help Guide*\n\n• *Pronouns:* I remember context! You can say 'tell me about him' or 'give more info on it'.\n• *Admissions:* Use college code *1301*.\n• *Bus Routes:* Ask for 'AR8 route' or 'Tambaram bus'.\n• *Faculty:* Ask for HODs or specific professors."
             else:
-                resp = "Unknown command. Try /help."
+                return # Ignore other commands
 
             async with httpx.AsyncClient() as client:
                 await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
@@ -240,14 +224,9 @@ async def handle_telegram_direct(payload):
                                  json={"chat_id": chat_id, "text": f"⏳ *Security Alert*: {reason} ({val}).", "parse_mode": "Markdown"})
             return
 
-        # --- 4. User Preferences ---
+        # --- 4. User Preferences (Defaults for Telegram) ---
         is_thinking = False
         user_level = "student"
-        if engine.redis:
-            t_val = await engine.redis.get(f"user_{user_id}_thinking")
-            is_thinking = (t_val == b"on")
-            p_val = await engine.redis.get(f"user_{user_id}_persona")
-            if p_val: user_level = p_val.decode('utf-8')
 
         # --- 5. Status Feedback ---
         async with httpx.AsyncClient() as client:
