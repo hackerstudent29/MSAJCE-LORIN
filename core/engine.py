@@ -257,35 +257,25 @@ class RAGEngine:
                 
                 if emb:
                     emb_floats = [float(x) for x in emb]
-                    # 2) GPT MASTER: gpt-md-files (Highest Priority)
-                    if self.index_gpt:
+                    # 1) MASTER: final-secret-rag (Top Priority)
+                    if self.index:
                         try:
-                            g_res = self.index_gpt.query(vector=emb_floats, top_k=20, include_metadata=True)
-                            for m in g_res["matches"]:
+                            m_res = self.index.query(vector=emb_floats, top_k=20, include_metadata=True)
+                            for m in m_res["matches"]:
                                 txt = m["metadata"].get("text", "")
                                 if len(txt) < 30: continue
                                 
-                                # GPT Master Multiplier (1.5x) - Super high signal
+                                # Master Multiplier (1.5x)
                                 info_score = m["score"] * 1.5
-                                if "|" in txt: info_score *= 1.3
-                                
                                 p_hits.append({
                                     "text": txt, 
                                     "score": info_score, 
-                                    "id": f"gpt_{m['id']}", 
+                                    "id": f"master_{m['id']}", 
                                     "metadata": m["metadata"]
                                 })
                         except: pass
-
-                    # 3) PRIMARY: final-secret-rag
-                    if self.index:
-                        try:
-                            # Increase depth to 15 to ensure we don't miss chunks
-                            p_res = self.index.query(vector=emb_floats, top_k=15, include_metadata=True)
-                            p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"], "id": m["id"], "metadata": m["metadata"]} for m in p_res["matches"]])
-                        except: pass
                     
-                    # 4) CLAUDE MASTER: claude-md-files (Secondary Master)
+                    # 2) SECONDARY: claude-md-files
                     if self.index_claude:
                         try:
                             c_res = self.index_claude.query(vector=emb_floats, top_k=15, include_metadata=True)
@@ -293,21 +283,32 @@ class RAGEngine:
                                 txt = m["metadata"].get("text", "")
                                 if len(txt) < 40: continue
                                 
-                                # Master Multiplier (1.1x)
-                                info_score = m["score"] * 1.1
+                                # Secondary Multiplier (1.2x)
+                                info_score = m["score"] * 1.2
                                 p_hits.append({
                                     "text": txt, 
                                     "score": info_score, 
-                                    "id": f"claude_{m['id']}", 
+                                    "id": f"secondary_{m['id']}", 
                                     "metadata": m["metadata"]
                                 })
                         except: pass
 
-                    # 4) BACKUP: raglorin-backup (Only if still needed)
-                    if not p_hits and self.index_backup:
+                    # 3) BACKUP: gpt-md-files
+                    if not p_hits and self.index_gpt:
                         try:
-                            b_res = self.index_backup.query(vector=emb_floats, top_k=5, include_metadata=True)
-                            p_hits.extend([{"text": m["metadata"]["text"], "score": m["score"] * 0.9, "id": f"backup_{m['id']}", "metadata": m["metadata"]} for m in b_res["matches"]])
+                            g_res = self.index_gpt.query(vector=emb_floats, top_k=15, include_metadata=True)
+                            for m in g_res["matches"]:
+                                txt = m["metadata"].get("text", "")
+                                if len(txt) < 30: continue
+                                
+                                # Backup Multiplier (1.0x)
+                                info_score = m["score"]
+                                p_hits.append({
+                                    "text": txt, 
+                                    "score": info_score, 
+                                    "id": f"backup_{m['id']}", 
+                                    "metadata": m["metadata"]
+                                })
                         except: pass
                 return p_hits, b_hits
             except: return [], []
