@@ -4,6 +4,11 @@
     "source": "msajce_admission.md",
     "valid_until": "2027-12-31"
   },
+  "principal_name": {
+    "value": "Dr. K.S. Srinivasan",
+    "source": "msajce_about.md",
+    "valid_until": "2027-12-31"
+  },
   "college_basics": {
     "value": "MSAJCE (Mohamed Sathak A.J. College of Engineering) is located at 34, Rajiv Gandhi Salai (OMR), Siruseri IT Park, Siruseri, Chennai - 603103. Established: 5th July 2001. Run by Mohamed Sathak Trust. Affiliated to Anna University Chennai. Approved by AICTE New Delhi. Campus: 70 acres. College Code: 1301. Phone: +91 99400 04500. Email: msajce.office@gmail.com. Website: www.msajce-edu.in.",
     "source": "msajce_about.md",
@@ -24,104 +29,39 @@
     "source": "msajce_admission.md",
     "valid_until": "2027-12-31"
   },
-  "admission_contact_other_states": {
-    "value": "For students from other states (Andhra Pradesh, Telangana, Kerala, Northern States): Contact Dr. Vamsi Naga Mohan A. Languages: Telugu, Tamil, Malayalam, Hindi. Phone: 9043358674 / 9502687344. Email: cse.vamsi@msajce-edu.in.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "admission_admin_officer": {
-    "value": "Administrative Officer: Mr. A. Abdul Gafoor. Phone: 9940319629. Email: abdulgafoor@msajce-edu.in.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "eligibility_ug": {
-    "value": "B.E/B.Tech eligibility: Pass in HSC with Physics, Chemistry and Mathematics. General category minimum 45% average in PCM. BC/MBC/DNC minimum 40%. SC/SCA/ST minimum 40%. Lateral Entry (Diploma): General 55%, BC 50%, MBC/DNC 45%, SC/ST mere pass.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_cse": {
-    "value": "CSE (Computer Science & Engineering) - Total: 60 seats. Government Quota: 30. Management Quota: 30. Permanent Affiliation.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_it": {
-    "value": "IT (Information Technology) - Total: 60 seats. Government Quota: 30. Management Quota: 30.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_ece": {
-    "value": "ECE (Electronics & Communication Engineering) - Total: 60 seats. Government Quota: 30. Management Quota: 30.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_eee": {
-    "value": "EEE (Electrical & Electronics Engineering) - Total: 30 seats. Government Quota: 15. Management Quota: 15.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_civil": {
-    "value": "Civil Engineering - Total: 30 seats. Government Quota: 15. Management Quota: 15.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_mech": {
-    "value": "Mechanical Engineering - Total: 30 seats. Government Quota: 15. Management Quota: 15. Permanent Affiliation.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_aids": {
-    "value": "AI&DS (Artificial Intelligence & Data Science) - Total: 30 seats. Government Quota: 15. Management Quota: 15.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_aiml": {
-    "value": "AI&ML (Artificial Intelligence & Machine Learning) - Total: 60 seats. Government Quota: 30. Management Quota: 30.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_csbs": {
-    "value": "CS&BS (Computer Science & Business Systems) - Total: 30 seats. Government Quota: 15. Management Quota: 15.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_cyber": {
-    "value": "Cyber Security (Computer Science & Engineering - Cyber Security) - Total: 30 seats. Government Quota: 15. Management Quota: 15.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_vlsi": {
-    "value": "VLSI (Electronics Engg with spec. in VLSI Design & Technology) - Total: 30 seats. Government Quota: 15. Management Quota: 15.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_act": {
-    "value": "ACT (ECE with spec. in Advanced Communication Technology) - Total: 30 seats. Government Quota: 15. Management Quota: 15.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_me_cse": {
-    "value": "M.E. Computer Science & Engineering (PG) - Total: 9 seats. Government Quota: 3. Management Quota: 6.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "seats_me_structural": {
-    "value": "M.E. Structural Engineering (PG) - Total: 18 seats. Government Quota: 6. Management Quota: 12.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "departments_list": {
-    "value": "MSAJCE offers 12 UG programmes: CSE, IT, ECE, EEE, Civil, Mechanical, AI&DS, CS&BS (CSBS), Cyber Security, AI&ML, VLSI, ACT. PG programmes: M.E. CSE, M.E. Structural Engineering. Research: Ph.D in Mechanical Engineering.",
-    "source": "msajce_admission.md",
+  "highest_package": {
+    "value": "12 LPA (Lakhs Per Annum)",
+    "source": "msajce_placement.md",
     "valid_until": "2027-12-31"
   },
   "hod_it": {
-    "value": "Dr. Weslin D is the Head of Department (HOD) of Information Technology (IT) at MSAJCE. He is an Associate Professor. Joined: 14/12/2020. Qualification: M.E., Ph.D.",
+    "value": "Dr. Weslin D (Associate Professor, Ph.D)",
     "source": "msajce_it.md",
     "valid_until": "2027-12-31"
   },
-  "faculty_it_head": {
-    "value": "IT Department HOD: Dr. Weslin D (Associate Professor, Ph.D). Other senior faculty: Dr. Kannan S (Professor, joined 31/08/2022), Dr. Prakash D (Associate Professor, joined 15/06/2023).",
-    "source": "msajce_it.md",
+  "hod_cse": {
+    "value": "Dr. MOHAN E (Professor, Ph.D)",
+    "source": "msajce_cse.md",
+    "valid_until": "2027-12-31"
+  },
+  "hod_ece": {
+    "value": "Dr. SUBRAMANIAN P (Head UG) / Dr. NAGASUBRAMANIAN R (Head PG)",
+    "source": "msajce_ece-act.md",
+    "valid_until": "2027-12-31"
+  },
+  "hod_eee": {
+    "value": "Dr. JEHA J (Professor, Ph.D)",
+    "source": "msajce_eee.md",
+    "valid_until": "2027-12-31"
+  },
+  "hod_aids": {
+    "value": "Dr. SUBRAMANIAN P (Head UG) / Dr. NAGASUBRAMANIAN R (Head PG)",
+    "source": "msajce_aids.md",
+    "valid_until": "2027-12-31"
+  },
+  "hod_sh": {
+    "value": "Dr. K.S. Srinivasan (Acting / Principal)",
+    "source": "msajce_sh.md",
     "valid_until": "2027-12-31"
   },
   "placement_director": {
@@ -129,154 +69,44 @@
     "source": "msajce_placement.md",
     "valid_until": "2027-12-31"
   },
-  "assistant_placement_officer": {
-    "value": "Mr. L. Tharanikumar is the Assistant Placement Officer at MSAJCE.",
-    "source": "msajce_placement.md",
-    "valid_until": "2027-12-31"
-  },
-  "placement_basics": {
-    "value": "MSAJCE Placement Cell provides employment opportunities. Major recruiters include TCS, Infosys, CTS, Wipro, HCL, Zoho, Lenovo. 43+ MoUs signed with industries. Internship top recruiters 2022-23: Lenovo (75 students), Zoho (51), Green Valleys Shelters (45). Placement Director: Dr. S. Vijay Ananth.",
-    "source": "msajce_placement.md",
-    "valid_until": "2027-12-31"
-  },
   "transport_convener": {
-    "value": "Transport Convener: Dr. K.P. Santhosh Nathan. Phone: 9840886992. Assistant Transport Convener: Mr. A. Abdul Gafoor. Phone: 9940319629.",
+    "value": "Transport Convener: Dr. K.P. Santhosh Nathan. Phone: 9840886992.",
     "source": "msajce_transport.md",
     "valid_until": "2027-12-31"
   },
-  "transport_basics": {
-    "value": "MSAJCE operates 22 buses + 1 Tata ACE + 1 Ambulance covering Chennai, Chengalpattu, Kanchipuram and Thiruvallur districts. All buses arrive at college at 8:00 AM. Routes: AR3 (Uthiramerur, 5:50AM), AR4 (Moolakadai, 6:10AM), AR5 (MMDA School, 6:15AM), AR6 (ICF, 6:15AM), AR7 (Chunambedu, 5:25AM - earliest), AR8 (Manjambakkam, 5:50AM), AR9 (Ennore, 6:15AM), AR10 (Porur, 6:25AM - latest), R22 (Nemilichery, 6:00AM).",
-    "source": "msajce_transport.md",
-    "valid_until": "2027-12-31"
-  },
+  "seats_cse": { "value": "60 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
+  "seats_it": { "value": "60 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
+  "seats_ece": { "value": "60 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
+  "seats_eee": { "value": "30 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
+  "seats_civil": { "value": "30 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
+  "seats_mech": { "value": "30 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
+  "seats_aids": { "value": "30 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
+  "seats_aiml": { "value": "60 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
+  "seats_csbs": { "value": "30 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
+  "seats_cyber": { "value": "30 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
+  "seats_vlsi": { "value": "30 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
+  "seats_act": { "value": "30 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
   "bus_ar8": {
-    "value": "Bus AR8 departs Manjambakkam at 5:50AM. Stops: Retteri (5:55AM), Senthil Nagar (6:00AM), Padi (6:05AM), Anna Nagar (6:10AM), Thirumangalam (6:12AM), KK Nagar (6:35AM), Pallikarani (7:10AM), Medavakkam (7:20AM), Sholinganallur (7:30AM). Arrives college at 8:00AM. Driver: Mr. Raju, Phone: +91-9790750906. Total stops: 20.",
-    "source": "msajce_transport.md",
-    "valid_until": "2027-12-31"
-  },
-  "bus_ar7": {
-    "value": "Bus AR7 is the earliest route. Departs Chunambedu at 5:25AM. Covers Kalpakkam area. Arrives college 8:00AM. Driver: Mr. Suresh, Phone: +91-9789895025. Total stops: 19.",
-    "source": "msajce_transport.md",
-    "valid_until": "2027-12-31"
-  },
-  "bus_ar10": {
-    "value": "Bus AR10 is the latest departing route. Departs Porur at 6:25AM. Covers western suburbs: Kundrathur, Pammal, Pallavaram, Chrompet, Tambaram. Arrives college 8:00AM. Driver: Mr. Ravindran, Phone: +91-9710939995. Total stops: 17.",
+    "value": "Bus AR8 departs Manjambakkam at 5:50AM. Stops include Retteri, Padi, Anna Nagar, KK Nagar, Sholinganallur. Driver: Mr. Raju (9790750906).",
     "source": "msajce_transport.md",
     "valid_until": "2027-12-31"
   },
   "hostel_basics": {
-    "value": "Boys Hostel: Inside campus, 3 blocks, 233 non-AC rooms + 6 AC rooms, 2 persons/room, capacity 480 boys. Girls Hostel: At Sholinganallur (5km from campus), 1 block, 71 rooms, 3 persons/room, capacity 210 girls. Both have WiFi, TV Hall, Indoor games, Reading room, Mess (Veg & Non-Veg).",
+    "value": "Boys Hostel (480 capacity) inside campus. Girls Hostel (210 capacity) at Sholinganallur. WiFi, Mess (Veg/Non-Veg) included.",
     "source": "msajce_hostel.md",
-    "valid_until": "2027-12-31"
-  },
-  "hostel_mess_timings": {
-    "value": "Hostel Mess timings - Working days: Breakfast 7:00AM-8:00AM, Lunch 1:00PM-1:45PM, Dinner 7:00PM-8:30PM. Holidays: Breakfast 7:30AM-9:00AM, Lunch 12:30PM-2:00PM, Dinner 7:00PM-9:00PM.",
-    "source": "msajce_hostel.md",
-    "valid_until": "2027-12-31"
-  },
-  "canteen_basics": {
-    "value": "MSAJCE cafeteria capacity: 100 students at a time. Operating hours: 8:00AM to 8:00PM on all working days. Serves breakfast, lunch, snacks and beverages at reasonable rates.",
-    "source": "msajce_hostel.md",
-    "valid_until": "2027-12-31"
-  },
-  "sports_director": {
-    "value": "Director of Physical Education: Dr. K.P. Santhosh Nathan. Qualification: B.P.E.S., B.P.Ed., M.P.Ed., M.Phil., Ph.D. Email: ped.santhosh@msajce-edu.in. Assistant Director: Mr. M. Janakiraman. Qualification: B.Sc., M.P.Ed., NSNIS (Cricket).",
-    "source": "msajce_sports.md",
     "valid_until": "2027-12-31"
   },
   "sports_basics": {
-    "value": "MSAJCE sports facilities: Basketball, Football, Cricket & Cricket Nets, Yoga, Kabaddi, Volleyball, Table Tennis, Carrom, Chess, Track and Field, Kho Kho (11 facilities total). Fully equipped Gymnasium with Multi Gym, Spin Bike, Dumbbells etc. Sports quota admission available for district/state/national level athletes. Annual events: Mohamed Sathak Trophy (Football), BSM Trophy (Cricket), Fit India Cyclothon.",
+    "value": "11 facilities including Basketball, Football, Cricket. Annual Mohamed Sathak Trophy. PE Director: Dr. K.P. Santhosh Nathan.",
     "source": "msajce_sports.md",
     "valid_until": "2027-12-31"
   },
   "library_basics": {
-    "value": "MSAJCE Library (Learning Centre): Area 8978 sq.ft. Collection: 29,853 volumes, 5,628 titles, 1,885 reference books, 3,790 e-books, 35 printed journals, 20 magazines. Databases: DELNET, J-Gate (50,684+ journals). Software: Koha (open source). Hours: Mon-Sat 8AM-7PM, Sunday 10AM-4PM. Loan: 18 books for 30 days (UG/PG students), 10 books (teaching staff).",
+    "value": "29,853 volumes, 5,628 titles. Hours: 8AM-7PM. Librarian: Mr. S. Sudhakar.",
     "source": "msajce_library.md",
     "valid_until": "2027-12-31"
   },
-  "librarian": {
-    "value": "Chief Librarian: Mr. S. Sudhakar. Librarian: Mr. John Anish. Library Committee Chairman: Dr. K.S. Srinivasan (Principal).",
-    "source": "msajce_library.md",
-    "valid_until": "2027-12-31"
-  },
-  "library_fine": {
-    "value": "Library overdue fine: Days 31-37: Rs.1/day per book. Days 38-44: Rs.2/day per book. Day 45 onwards: Rs.5/day per book. Lost book penalty: double the cost of the book.",
-    "source": "msajce_library.md",
-    "valid_until": "2027-12-31"
-  },
-  "vision_mission": {
-    "value": "MSAJCE Vision: To be an eminent institute for higher education and research through innovative teaching-learning and sustainable practices to meet the industrial and societal needs. Mission: (1) Impart quality technical education transforming students into professionally competent technocrats. (2) Nurture students in all-round sustainable development. (3) Inculcate critical thinking, professional ethics with civic responsibilities.",
-    "source": "msajce_about.md",
-    "valid_until": "2099-12-31"
-  },
-  "trust_basics": {
-    "value": "Mohamed Sathak Trust was established on 26 October 1973 at Kilakarai, Ramanathapuram District, Tamil Nadu. Founded by the Mohamed Sathak Family. Runs 18 educational institutions in Kilakarai, Ramanathapuram and Chennai. First self-financing engineering college in India established in 1984.",
-    "source": "msajce_about.md",
-    "valid_until": "2099-12-31"
-  },
-  "developer": {
-    "value": "Ramanathan S (Ram) is the Lead AI Architect at MSAJCE who developed Lorin AI, the institutional chatbot.",
-    "source": "ramanathan_profile.txt",
-    "valid_until": "2099-12-31"
-  },
-  "csi_president": {
-    "value": "Yogesh R is the President of the Computer Society of India (CSI) student chapter at MSAJCE. He is from the IT department (Batch 2022-2026).",
-    "source": "Professional_Societies.md",
-    "valid_until": "2026-06-30"
-  },
-  "iic_president": {
-    "value": "Dr. B. Janarthanan is the President of the Institution's Innovation Council (IIC) at MSAJCE.",
-    "source": "msajce_incubation.md",
-    "valid_until": "2027-12-31"
-  },
-  "college_code": {
-    "value": "MSAJCE college code is 1301 (Anna University affiliation code).",
-    "source": "msajce_about.md",
-    "valid_until": "2099-12-31"
-  },
-  "grievance_contact": {
-    "value": "MSAJCE Grievance Cell email: grievance@msajce-edu.in. Grievance page: https://www.msajce-edu.in/grievanceredressalcommittee.php.",
-    "source": "msajce_about.md",
-    "valid_until": "2099-12-31"
-  },
-  "exam_results": {
-    "value": "ESE (End Semester Exam) results available at: https://results.msajce-edu.in/. Exam Registration I & II Year: https://tinyurl.com/I-AND-II-YEAR-REGISTRATION. Exam Registration III & IV Year: https://tinyurl.com/III-AND-IV-YEAR-REGISTRATION.",
-    "source": "msajce_library.md",
-    "valid_until": "2027-12-31"
-  },
-  "college_management_system": {
-    "value": "MSAJCE College Management System (CMS): https://cims.mastersofterp.in/",
-    "source": "msajce_about.md",
-    "valid_until": "2027-12-31"
-  },
-  "scholarship_pragati": {
-    "value": "Pragati Scholarship (AICTE) for girl students: Rs.50,000/year. Eligibility: max 2 girl children per family, family income below Rs.8 Lakh/year. TN Quota: 800.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "scholarship_saksham": {
-    "value": "Saksham Scholarship (AICTE) for specially-abled students: Rs.50,000/year. Eligibility: disability not less than 40%, income below Rs.8 Lakh/year.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "scholarship_minority": {
-    "value": "Merit-cum-Means Scholarship (Ministry of Minority Affairs) for minority community: Rs.20,000 + Rs.12,000 for hostellers or Rs.6,000 for day scholars. Eligibility: 50% marks, income below Rs.2.5 Lakh/year. TN Quota: 1,075 Muslim, 1,173 Christian.",
-    "source": "msajce_admission.md",
-    "valid_until": "2027-12-31"
-  },
-  "naac_iqac": {
-    "value": "MSAJCE NAAC page: https://www.msajce-edu.in/naac.php. IQAC page: https://www.msajce-edu.in/iqac.php. NIRF page: https://www.msajce-edu.in/nirf.php.",
-    "source": "msajce_about.md",
-    "valid_until": "2099-12-31"
-  },
-  "neighbouring_companies": {
-    "value": "Companies near MSAJCE campus (inside Siruseri IT Park): TCS, CTS (Cognizant), Infosys, Intellect, Aspire, Steria, Polaris, FSS, HCL and 100+ other IT companies.",
-    "source": "msajce_about.md",
-    "valid_until": "2099-12-31"
-  },
-  "facility_basics": {
-    "value": "MSAJCE facilities: Central Library (29,853 volumes, 8978 sq.ft), 15+ specialized engineering labs, Computer Centre with WiFi, Auditorium, Seminar Halls, Cafeteria (100 capacity), Boys Hostel (480 capacity), Girls Hostel (210 capacity), Gymnasium, Sports grounds.",
-    "source": "msajce_about.md",
-    "valid_until": "2099-12-31"
-  }
+  "college_code": { "value": "1301", "source": "msajce_about.md", "valid_until": "2099-12-31" },
+  "developer": { "value": "Ramanathan S (Lead AI Architect)", "source": "ramanathan_profile.txt", "valid_until": "2099-12-31" },
+  "csi_president": { "value": "Yogesh R (IT, Batch 2022-2026)", "source": "Professional_Societies.md", "valid_until": "2026-06-30" }
 }
