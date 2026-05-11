@@ -362,9 +362,8 @@ class RAGEngine:
         reranked = None
         try:
             if self.co:
-                loop = asyncio.get_event_loop()
-                # Rerank to top 8 for better coverage
-                rerank = await loop.run_in_executor(None, lambda: self.co.rerank(model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=8))
+                # Use to_thread for synchronous Co.rerank to avoid loop issues
+                rerank = await asyncio.to_thread(self.co.rerank, model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=8)
                 reranked = [results[r.index] for r in rerank.results]
         except: pass
         if not reranked: reranked = results[:8]
