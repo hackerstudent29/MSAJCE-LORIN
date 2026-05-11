@@ -136,12 +136,7 @@ export default function ChatPage() {
         setIsLoading(true);
 
         const botMsgId = (Date.now() + 1).toString();
-        setMessages(p => [...p, { id: botMsgId, role: "bot", content: "", tools: [
-            { category: "search", title: "Analyzing Query Vector Space", subtitle: "Intent Analysis" },
-            { category: "search", title: "Triggering Pinecone-Hybrid Retrieval", subtitle: "RAG Engine" },
-            { category: "file", title: "Extracting Contextual Chunks", subtitle: "Knowledge Base" },
-            { category: "command", title: "Merging Decision Clusters", subtitle: "Synthesis Audit" }
-        ]}]);
+        setMessages(p => [...p, { id: botMsgId, role: "bot", content: "" }]);
 
         try {
             const BACKEND_URL = "https://msajce-lorin-ai.vercel.app/api/chat";
@@ -276,12 +271,7 @@ export default function ChatPage() {
                                                     <ToolGroup
                                                         state={idx === messages.length - 1 && isLoading ? "pending" : "completed"}
                                                         chunkCount={m.telemetry?.num_chunks}
-                                                        nestedTools={m.tools || [
-                                                            { category: "search", title: "Analyzing Query Vector Space", subtitle: "Intent Analysis" },
-                                                            { category: "search", title: "Triggering Pinecone-Hybrid Retrieval", subtitle: "RAG Engine" },
-                                                            { category: "file", title: "Extracting Contextual Chunks", subtitle: "Knowledge Base" },
-                                                            { category: "command", title: "Merging Decision Clusters", subtitle: "Synthesis Audit" }
-                                                        ]}
+                                                        nestedTools={m.tools}
                                                         completeLabel="Lorin reasoning"
                                                         shimmerLabel="Lorin is thinking"
                                                         interruptedLabel="Reasoning interrupted"
