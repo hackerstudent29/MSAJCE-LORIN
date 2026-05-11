@@ -318,6 +318,18 @@ class RAGEngine:
             all_semantic.extend(p); all_keyword.extend(b)
 
         merged = self.rrf_merge(all_semantic, all_keyword)
+        
+        # --- DEDUPLICATION LAYER ---
+        seen_texts = set()
+        deduped = []
+        for h in merged:
+            # Use a fingerprint (first 100 chars normalized) to detect duplicates
+            fingerprint = re.sub(r'\W+', '', h["text"].lower())[:100]
+            if fingerprint not in seen_texts:
+                seen_texts.add(fingerprint)
+                deduped.append(h)
+        merged = deduped
+
         priority_map = {"critical": 2.0, "high": 1.6, "medium": 1.0, "low": 0.7}
         q_lower = primary_q.lower()
         
@@ -475,7 +487,9 @@ STRICT OPERATIONAL RULES:
 1. GREETING BYPASS: DO NOT GREET THE USER. Start immediately.
 2. DIRECT RESPONSE: Provide information IMMEDIATELY. No preamble.
 3. ENTITY & PERSON RULES (CRITICAL):
-   a) MULTIPLE MATCHES: If multiple people or entities match the query (e.g., two people named 'Ram'), PROVIDE DATA FOR ALL OF THEM immediately. DO NOT ASK FOR CLARIFICATION.
+   a) MULTIPLE MATCHES: If multiple people match the query (e.g., two people named 'Usha'), check their details carefully.
+      - If they have DIFFERENT details (different dept, role), provide info for ALL of them.
+      - If they have the SAME details, MERGE them into one response. DO NOT REPEAT IDENTICAL PROFILES.
    b) FULL DISCLOSURE: Provide EVERYTHING you have about the entity (name, dept, role, qualification, contact, highlights).
    c) Aim for a cohesive 80-100 word profile per person.
 4. NARRATIVE FLOW: Write in fluid, natural paragraphs.
