@@ -255,7 +255,7 @@ async def handle_telegram_direct(payload):
             await log_to_supabase(user_id, user_name, text, full_response, telemetry)
             if engine.redis:
                 history.append({"q": text, "a": full_response})
-                await engine.redis.set(redis_key, json.dumps(history[-3:]), ex=86400)
+                await engine.redis.set(redis_key, json.dumps(history[-5:]), ex=86400)
         except: pass
 
     except Exception as e:

@@ -28,6 +28,7 @@ RULE_SIGNALS = ["allowed", "not allowed", "policy", "rule", "can i", "hostel", "
 DEPT_NAMES = ["cse", "it", "ece", "eee", "civil", "mech", "aids", "aiml", "cyber", "csbs", "sh", "vlsi"]
 GREETING_SIGNALS = ["hi", "hello", "hey", "good morning", "good afternoon", "good evening", "how are you", "what's up", "namaste", "vanakkam"]
 COMPLIMENT_SIGNALS = ["thanks", "thank you", "great", "awesome", "good job", "nice", "cool", "wow", "amazing", "well done", "perfect"]
+CONTINUATION_SIGNALS = ["yes", "give", "need more", "ok give", "tell me more", "elaborate", "continue", "next", "more info", "go on", "him", "her", "it", "them", "about him", "about her", "about it"]
 
 def classify_query(query: str) -> str:
     q = query.lower().strip()
@@ -40,7 +41,7 @@ def classify_query(query: str) -> str:
     if any(s in q for s in RULE_SIGNALS): return "RULE_QUERY"
     if any(d in q for d in DEPT_NAMES) or "department" in q: return "DEPARTMENT_QUERY"
     if any(s in q for s in LIST_SIGNALS): return "LIST_QUERY"
-    if q in ["yes", "no", "ok", "tell me more", "elaborate"]: return "ELABORATION_QUERY"
+    if any(s == q or q.startswith(s) for s in CONTINUATION_SIGNALS) or q in ["yes", "no", "ok"]: return "ELABORATION_QUERY"
     return "GENERAL_QUERY"
 
 def clean_prose(text):
@@ -364,14 +365,35 @@ class RAGEngine:
         queries = [user_query]
         if intent == "ELABORATION_QUERY" and history:
             last_lines = history.split("\n")
-            anchor = next((l.replace("assistant:", "").strip()[:100] for l in reversed(last_lines) if "assistant:" in l.lower()), "")
-            if anchor: queries.append(f"{anchor} {user_query}")
+            # Look for the last bot response to anchor the context
+            anchor = ""
+            for l in reversed(last_lines):
+                if "Bot:" in l or "assistant:" in l.lower():
+                    anchor = l.split(":", 1)[1].strip()[:150]
+                    break
+            if anchor: queries.append(f"Regarding '{anchor}', {user_query}")
 
         # [HyDE & PRE-CLASSIFY]
+        # We pass history to the pre-classifier so it can resolve pronouns like "him", "it", etc.
         gt_context = "\n".join([f"- {k.upper()}: {v}" for k, v in self.ground_truth.items()])
+        pre_sys_prompt = f"""Classify intent and generate a 1-sentence 'Hypothetical Perfect Answer' (HyDE).
+CONTEXTUAL RESOLUTION: If the user uses pronouns (him, her, it, they) or says things like 'give more', resolve what they are talking about using the provided chat history.
+GROUND TRUTH:
+{gt_context}
+Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
+        
+        pre_messages = [{"role": "system", "content": pre_sys_prompt}]
+        if history:
+            # Only pass the last 2 turns to keep it fast and focused
+            for line in history.split("\n")[-4:]:
+                if "User:" in line: pre_messages.append({"role": "user", "content": line.replace("User: ", "")})
+                elif "Bot:" in line: pre_messages.append({"role": "assistant", "content": line.replace("Bot: ", "")})
+        
+        pre_messages.append({"role": "user", "content": user_query})
+
         data_pre = {
             "model": "google/gemini-2.0-flash-exp:free",
-            "messages": [{"role": "system", "content": f"Classify intent and generate a 1-sentence 'Hypothetical Perfect Answer' (HyDE).\nGROUND TRUTH:\n{gt_context}\nReturn JSON: {{category, search_query, hyde_answer, direct_response}}"}, {"role": "user", "content": user_query}]
+            "messages": pre_messages
         }
         pre_res = ""
         try:
@@ -392,6 +414,9 @@ class RAGEngine:
                         "sources": ["Ground Truth Vault"]
                     }
                     return
+                if p.get("search_query") and intent == "ELABORATION_QUERY":
+                    # If we resolved a pronoun into a specific entity, add it to queries
+                    queries.append(p.get("search_query"))
                 if p.get("hyde_answer") and intent == "GENERAL_QUERY":
                     queries.append(p.get("hyde_answer"))
         except: pass
@@ -429,7 +454,13 @@ STRICT OPERATIONAL RULES:
     a) Users often make typos (e.g., "vimlathithan" for "vimalathithan").
     b) If the CONTEXT contains a name that is 80%+ similar to the query, ASSUME it is the correct person.
     c) Answer using the correct name from the context. Do NOT apologize or say you don't have info if a near-match exists.
-11. End with a relevant follow-up question.
+11. FOLLOW-UP QUESTIONS: Every response MUST end with a natural, curiosity-driven follow-up question that leads the user deeper into the topic.
+    a) If discussing a department, ask about its HOD or placements.
+    b) If discussing bus routes, ask if they need the morning or evening timings.
+    c) If discussing admissions, ask if they want the fee structure or document list.
+    d) FORMAT: Place the follow-up question on a new line after a double break.
+    e) EXAMPLE: "Would you like to know the specific bus timings for this route?"
+12. SHORT CONTINUATIONS: If the user says "yes", "give", "need more", or "ok give", they are referring to the previous context. Provide the next logical level of detail or the specific missing info from the CONTEXT.
 
 GROUND TRUTH:
 {gt_context}
