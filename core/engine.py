@@ -417,20 +417,30 @@ class RAGEngine:
                 if "Bot:" in l or "assistant:" in l.lower():
                     anchor = l.split(":", 1)[1].strip()[:150]
                     break
-            if anchor: queries.append(f"Regarding '{anchor}', {user_query}")
+            if        # [HyDE & PRE-CLASSIFY]
+        # SURGICAL CONTEXT: Only inject GT facts relevant to the query to save tokens (approx 50-70% savings)
+        q_words = set(re.findall(r'\w+', user_query.lower()))
+        relevant_gt = {}
+        for k, v in self.ground_truth.items():
+            if any(word in k.lower() or word in str(v).lower() for word in q_words if len(word) > 3):
+                relevant_gt[k] = v
+        
+        # If no direct matches, include a small core set of safety pillars
+        if not relevant_gt:
+            pillars = ["principal", "college_code", "admission_contact", "address"]
+            for p in pillars:
+                if p in self.ground_truth: relevant_gt[p] = self.ground_truth[p]
 
-        # [HyDE & PRE-CLASSIFY]
-        # We pass history to the pre-classifier so it can resolve pronouns like "him", "it", etc.
-        gt_context = "\n".join([f"- {k.upper()}: {v}" for k, v in self.ground_truth.items()])
+        gt_context = "\n".join([f"- {k.upper()}: {v}" for k, v in relevant_gt.items()])
+        
         pre_sys_prompt = f"""Classify intent and generate a 1-sentence 'Hypothetical Perfect Answer' (HyDE).
-CONTEXTUAL RESOLUTION: If the user uses pronouns (him, her, it, they) or says things like 'give more', resolve what they are talking about using the provided chat history.
-GROUND TRUTH:
+CONTEXTUAL RESOLUTION: If the user uses pronouns (him, her, it, they), resolve them using history.
+GROUND TRUTH (Relevant Subset):
 {gt_context}
 Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
         
         pre_messages = [{"role": "system", "content": pre_sys_prompt}]
         if history:
-            # Only pass the last 2 turns to keep it fast and focused
             for line in history.split("\n")[-4:]:
                 if "User:" in line: pre_messages.append({"role": "user", "content": line.replace("User: ", "")})
                 elif "Bot:" in line: pre_messages.append({"role": "assistant", "content": line.replace("Bot: ", "")})
@@ -446,25 +456,12 @@ Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
             async for chunk in self._safe_vercel_request(data_pre): pre_res += chunk
             p = self._safe_json_parse(pre_res)
             if p:
-                # ONLY use direct_response for non-entity queries to ensure entities get full 80-100 word RAG treatment
                 if p.get("direct_response") and intent not in ["PERSON_QUERY", "DEPARTMENT_QUERY"]:
                     dr = p.get("direct_response")
                     yield dr
-                    input_est = (len(gt_context) + len(user_query)) // 4
-                    output_est = len(dr.split()) * 1.5
-                    yield {
-                        "type": "telemetry",
-                        "latency_ms": int((time.time() - start_time) * 1000),
-                        "tokens": int(input_est + output_est) + 150,
-                        "intent": intent,
-                        "sources": ["Ground Truth Vault"]
-                    }
                     return
                 if p.get("search_query") and intent == "ELABORATION_QUERY":
-                    # If we resolved a pronoun into a specific entity, add it to queries
                     queries.append(p.get("search_query"))
-                if p.get("hyde_answer") and intent == "GENERAL_QUERY":
-                    queries.append(p.get("hyde_answer"))
         except: pass
 
         context_chunks = await self.get_context(queries, None)
@@ -473,52 +470,25 @@ Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
 
         system_prompt = f"""You are LORIN, the institutional AI for MSAJCE.
 STRICT OPERATIONAL RULES:
-1. GREETING BYPASS: DO NOT GREET THE USER. DO NOT say "Hello", "Hi", or "I'm LORIN" if the user has asked a specific question.
-2. DIRECT RESPONSE: Start your response IMMEDIATELY with the requested information. No preamble.
-3. ENTITY RESPONSE RULES (CRITICAL — for any person, faculty, HOD, principal, etc.):
-   a) Count ALL the information you have about this entity from CONTEXT and GROUND TRUTH.
-   b) If the total info is 100 words or LESS: Give EVERYTHING you have in ONE complete answer. Do not hold back any detail.
-   c) If the total info is MORE than 100 words: Write a rich summary of 80-100 words covering name, designation, department, qualification, and key highlights.
-   d) NO ONE-LINERS: NEVER give a one-line answer for institutional queries (seats, fees, faculty). If information exists, provide the full context. Aim for 40-80 words minimum if data is available.
-   e) ENTITY RESOLUTION (CRITICAL): Cross-check names carefully. If attributes match, MERGE them into one profile.
-   f) NO TEASING (STRICT): NEVER ask if the user wants to know more about a specific detail (e.g., "Would you like to know the seat breakdown?") UNLESS that exact information is already visible in your CONTEXT. Do not promise information you don't have.
-   g) ZERO FAILURE POLICY: For Foundational topics (Admissions, Sports, Placements, College Info), if the specific answer is missing, do NOT say "I don't know". Instead, provide the general foundational facts from GROUND TRUTH (Safety Net) and suggest contacting the office.
-4. NARRATIVE FLOW: Write in fluid, natural paragraphs. Use pronouns (He/She/They) after the first mention.
-5. STRICT ROUTE VERIFICATION: For bus route queries (AR1-AR10, R22), verify every stop belongs to that specific route in CONTEXT.
-6. SURGICAL FOCUS: Answer ONLY what is asked. For person queries, provide a cohesive biography/summary, not fragmented facts.
-7. LISTS & COUNTING (CRITICAL):
-   a) If the user asks "How many" or for a count (e.g., "how many bus routes", "how many scholarship students"), you MUST manually count the items found in the CONTEXT/GROUND TRUTH and provide that number as the first sentence.
-   b) DO NOT say "I don't have the exact number" if the items are listed in the context. Count them!
-   c) When listing names or items, use a vertical format: One item per line.
-   d) Add EXACTLY TWO NEWLINE characters between each listed item.
-   e) Example:
-      • Item 1
+1. GREETING BYPASS: DO NOT GREET THE USER. Start immediately.
+2. DIRECT RESPONSE: Provide information IMMEDIATELY. No preamble.
+3. ENTITY & PERSON RULES (CRITICAL):
+   a) MULTIPLE MATCHES: If multiple people or entities match the query (e.g., two people named 'Ram'), PROVIDE DATA FOR ALL OF THEM immediately. DO NOT ASK FOR CLARIFICATION.
+   b) FULL DISCLOSURE: Provide EVERYTHING you have about the entity (name, dept, role, qualification, contact, highlights).
+   c) Aim for a cohesive 80-100 word profile per person.
+4. NARRATIVE FLOW: Write in fluid, natural paragraphs.
+5. LISTS & COUNTING:
+   a) Count items manually and provide the number in the first sentence.
+   b) Use double newlines (\n\n) between list items.
+6. FORMATTING: USE ONLY MARKDOWN. NO HTML TAGS (like <br>).
+7. IDENTITY: You are LORIN, powered by Gemini 2.0 Flash.
 
-      • Item 2
-8. FORMATTING & MARKDOWN (STRICT):
-   a) USE ONLY MARKDOWN. 
-   b) NEVER USE HTML TAGS (like <br>, <b>, <div>, etc.).
-   c) NEVER use tables.
-   d) Use bolding for names and key terms.
-9. IDENTITY: You are LORIN, powered by Gemini 2.0 Flash, developed by Ramanathan S (Ram). Only mention development details if explicitly asked.
-10. TYPO TOLERANCE & FUZZY MATCHING (CRITICAL):
-    a) Users often make typos (e.g., "vimlathithan" for "vimalathithan").
-    b) If the CONTEXT contains a name that is 80%+ similar to the query, ASSUME it is the correct person.
-    c) Answer using the correct name from the context. Do NOT apologize or say you don't have info if a near-match exists.
-11. FOLLOW-UP QUESTIONS: Every response MUST end with a natural, curiosity-driven follow-up question that leads the user deeper into the topic.
-    a) FORMAT: Place the follow-up question on a new line after EXACTLY TWO newline characters (\n\n).
-    b) NO HTML: Do not use <br> for spacing.
-    c) EXAMPLE: "Would you like to know the specific bus timings for this route?"
-12. SHORT CONTINUATIONS: If the user says "yes", "give", "need more", or "ok give", they are referring to the previous context. Provide the next logical level of detail or the specific missing info from the CONTEXT.
-
-GROUND TRUTH:
+GROUND TRUTH (Surgical):
 {gt_context}
 
 CONTEXT:
 {context_text}"""
 
-
-        # Construct messages with history
         messages = [{"role": "system", "content": system_prompt}]
         if history:
             for line in history.split("\n"):
