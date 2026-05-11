@@ -395,9 +395,11 @@ async def chat_api():
         except: pass
         
         # Sanitize telemetry: flatten tokens to int (AI gateway may return {input, output, total})
-        if isinstance(telemetry_data.get("tokens"), dict):
-            telemetry_data["tokens"] = telemetry_data["tokens"].get("total", 0)
-        telemetry_data["tokens"] = int(telemetry_data.get("tokens", 0))
+        tokens_raw = telemetry_data.get("tokens", 0)
+        if isinstance(tokens_raw, dict):
+            telemetry_data["tokens"] = int(tokens_raw.get("total", 0))
+        else:
+            telemetry_data["tokens"] = int(tokens_raw) if tokens_raw is not None else 0
         
         return {
             "response": full_response,

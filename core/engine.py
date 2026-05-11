@@ -473,6 +473,15 @@ Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
                 if p.get("direct_response") and intent not in ["PERSON_QUERY", "DEPARTMENT_QUERY"]:
                     dr = p.get("direct_response")
                     yield dr
+                    input_est = (len(gt_context) + len(user_query)) // 4
+                    output_est = len(dr.split()) * 1.5
+                    yield {
+                        "type": "telemetry",
+                        "latency_ms": int((time.time() - start_time) * 1000),
+                        "tokens": int(input_est + output_est) + 150,
+                        "intent": intent,
+                        "sources": ["Ground Truth Vault"]
+                    }
                     return
                 if p.get("search_query") and intent == "ELABORATION_QUERY":
                     queries.append(p.get("search_query"))
