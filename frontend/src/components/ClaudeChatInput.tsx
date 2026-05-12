@@ -435,7 +435,7 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage,
                                 <Icons.Plus className="w-5 h-5" />
                             </button>
 
-                            <div className="flex shrink min-w-8 !shrink-0 group">
+                            <div className="relative flex shrink min-w-8 !shrink-0 group">
                                 <button
                                     onClick={() => setIsThinkingEnabled(!isThinkingEnabled)}
                                     className={`transition-all duration-200 h-8 w-8 flex items-center justify-center rounded-lg active:scale-95
@@ -453,7 +453,7 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage,
                                 </button>
                             </div>
 
-                            <div className="flex shrink min-w-8 !shrink-0 group">
+                            <div className="relative flex shrink min-w-8 !shrink-0 group">
                                 <button
                                     onClick={() => setIsDeepSearchEnabled(!isDeepSearchEnabled)}
                                     className={`transition-all duration-200 h-8 w-8 flex items-center justify-center rounded-lg active:scale-95
