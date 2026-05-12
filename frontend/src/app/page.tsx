@@ -73,6 +73,7 @@ const TypewriterText = ({ text, onComplete, skipReveal }: { text: string; onComp
 export default function ChatPage() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [isDeepSearchEnabled, setIsDeepSearchEnabled] = useState(false);
     const [revealedId, setRevealedId] = useState<string | null>(null);
     const [webUserId, setWebUserId] = useState<string>("");
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -147,6 +148,7 @@ export default function ChatPage() {
                     message, 
                     model: model || "lorin-pro", 
                     thinking: isThinkingEnabled,
+                    deep_search: isDeepSearchEnabled,
                     user_id: webUserId,
                     user_level: user_level || "student"
                 }),
@@ -199,7 +201,7 @@ export default function ChatPage() {
     };
 
     return (
-        <div className="flex flex-col h-screen bg-[#FDFDFD] dark:bg-[#1A1A1A] transition-colors duration-500 font-sans antialiased">
+        <div className="flex flex-col h-dvh bg-[#FDFDFD] dark:bg-[#1A1A1A] transition-colors duration-500 font-sans antialiased overflow-hidden">
             {/* Header */}
             <header className="h-14 flex items-center justify-between px-6 border-b border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-xl sticky top-0 z-50">
                 <div className="flex items-center gap-2">
@@ -254,7 +256,7 @@ export default function ChatPage() {
                                 </div>
 
                                 {/* Message Content Container */}
-                                <div className={`flex flex-col max-w-[85%] ${m.role === "user" ? "items-end" : "items-start"}`}>
+                                <div className={`flex flex-col max-w-[90%] sm:max-w-[85%] ${m.role === "user" ? "items-end" : "items-start"} overflow-hidden`}>
                                     {/* Meta Header */}
                                     <div className="flex items-center gap-2 mb-1.5 px-1">
                                         <span className="text-[10px] text-zinc-400 dark:text-zinc-500 tracking-widest">
@@ -272,19 +274,19 @@ export default function ChatPage() {
                                                         state={idx === messages.length - 1 && isLoading ? "pending" : "completed"}
                                                         chunkCount={m.telemetry?.num_chunks}
                                                         nestedTools={m.tools}
-                                                        completeLabel="Lorin reasoning"
-                                                        shimmerLabel="Lorin is thinking"
+                                                        completeLabel={isDeepSearchEnabled ? "Deep institutional analysis" : "Lorin reasoning"}
+                                                        shimmerLabel={isDeepSearchEnabled ? "Deep searching archives..." : "Lorin is thinking"}
                                                         interruptedLabel="Reasoning interrupted"
                                                         elapsedTime={m.telemetry?.latency_ms ? `${(m.telemetry.latency_ms / 1000).toFixed(1)}s` : undefined}
                                                         showElapsed={true}
-                                                        defaultOpen={idx === messages.length - 1}
+                                                        defaultOpen={idx === messages.length - 1 && !isLoading}
                                                     />
                                                 </div>
                                             )}
 
                                             {/* Bubble */}
                                             <div className={`
-                                                inline-block p-4 rounded-2xl text-[16px] leading-relaxed whitespace-pre-wrap antialiased
+                                                block w-full p-4 rounded-2xl text-[15px] sm:text-[16px] leading-relaxed whitespace-pre-wrap antialiased break-words
                                                 ${m.content.includes("Security Alert")
                                                     ? "border-l-2 border-orange-400/50 pl-4 py-2 text-zinc-600 dark:text-zinc-400 font-sans"
                                                     : "text-zinc-800 dark:text-zinc-100"
@@ -339,7 +341,11 @@ export default function ChatPage() {
             {/* Input Bar */}
             <div className="pb-10 bg-gradient-to-t from-[#FDFDFD] dark:from-[#1A1A1A] via-[#FDFDFD]/90 dark:via-[#1A1A1A]/90 to-transparent pt-12 sticky bottom-0 z-50">
                 <div className="max-w-3xl mx-auto px-4">
-                    <ClaudeChatInput onSendMessage={handleSendMessage} />
+                    <ClaudeChatInput 
+                        onSendMessage={handleSendMessage} 
+                        isDeepSearchEnabled={isDeepSearchEnabled}
+                        setIsDeepSearchEnabled={setIsDeepSearchEnabled}
+                    />
                 </div>
             </div>
         </div>

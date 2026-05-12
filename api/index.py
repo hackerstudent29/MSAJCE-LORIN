@@ -337,6 +337,7 @@ async def chat_api():
         user_query = data.get("message")
         user_id = data.get("user_id", "web_default")
         thinking = data.get("thinking", False)
+        deep_search = data.get("deep_search", False)
         user_level = data.get("user_level", "student")
         
         if not user_query:
@@ -375,7 +376,7 @@ async def chat_api():
         full_response = ""
         telemetry_data = {}
         # The engine.query_stream uses history to maintain context
-        async for chunk in engine.query_stream(user_query, history=history_str, user_level=user_level, thinking=thinking):
+        async for chunk in engine.query_stream(user_query, history=history_str, user_level=user_level, thinking=thinking, deep_search=deep_search):
             if isinstance(chunk, str):
                 full_response += chunk
             elif isinstance(chunk, dict) and chunk.get("type") == "telemetry":

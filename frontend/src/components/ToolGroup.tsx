@@ -294,7 +294,7 @@ export const ToolGroup = memo(function ToolGroup({
   const subtitle = chunkCount !== undefined
     ? `${chunkCount} context ${chunkCount === 1 ? 'chunk' : 'chunks'}`
     : isPending
-      ? streamingCountsLabel(visibleTools)
+      ? ""
       : hasNestedTools
         ? summarizeCounts(nestedTools)
         : description

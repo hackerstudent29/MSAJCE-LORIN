@@ -97,3 +97,26 @@ a:hover {
 .animate-fade-in { animation: fade-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 .animate-pulse-subtle { animation: pulse-subtle 2s ease-in-out infinite; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Prose Overrides to fix lengthy blank spaces */
+.prose p {
+  margin-top: 0.25em !important;
+  margin-bottom: 0.25em !important;
+  line-height: 1.5 !important;
+}
+
+.prose ul, .prose ol {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
+.prose li {
+  margin-top: 0.25em !important;
+  margin-bottom: 0.25em !important;
+}
+
+/* Fix mobile overflow */
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

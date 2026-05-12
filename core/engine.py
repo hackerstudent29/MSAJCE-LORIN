@@ -217,9 +217,13 @@ class RAGEngine:
         return list(set(entities))
 
     @traceable(name="Hybrid Retrieval")
-    async def get_context(self, queries: list, trace, depth: int = 20):
+    async def get_context(self, queries: list, trace, depth: int = 20, deep_search: bool = False):
         all_semantic, all_keyword = [], []
         primary_q = queries[0]
+        
+        # INCREASE LIMITS FOR DEEP SEARCH
+        TOP_K = 100 if deep_search else 20
+        RERANK_N = 25 if deep_search else 5
         
         async def fetch_one(q):
             p_hits, b_hits = [], []
@@ -260,7 +264,7 @@ class RAGEngine:
                     # 1) MASTER: final-secret-rag (Top Priority)
                     if self.index:
                         try:
-                            m_res = self.index.query(vector=emb_floats, top_k=20, include_metadata=True)
+                            m_res = self.index.query(vector=emb_floats, top_k=TOP_K, include_metadata=True)
                             for m in m_res["matches"]:
                                 txt = m["metadata"].get("text", "")
                                 if len(txt) < 30: continue
@@ -370,31 +374,39 @@ class RAGEngine:
         results = sorted(merged, key=lambda x: x.get("f_score", 1.0), reverse=True)
         if not results: return []
         # Increase rerank window to 20 non-junk candidates
-        texts = [r["text"] for r in results[:20]] 
+        texts = [r["text"] for r in results[:RERANK_N * 2]] 
         reranked = None
         try:
             if self.co:
                 # Use to_thread for synchronous Co.rerank to avoid loop issues
-                rerank = await asyncio.to_thread(self.co.rerank, model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=8)
+                rerank = await asyncio.to_thread(self.co.rerank, model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=RERANK_N)
                 reranked = [results[r.index] for r in rerank.results]
         except: pass
-        if not reranked: reranked = results[:8]
+        if not reranked: reranked = results[:RERANK_N]
         return reranked
 
-    def _post_process(self, text: str) -> str:
-        text = re.sub(r'(?i)\bblank\s+line\b', '', text)
-        text = re.sub(r'\[.*?\]', '', text) 
-        text = re.sub(r'^#+.*$', '', text, flags=re.MULTILINE)
-        text = re.sub(r'^[ \t]*[*+-][ \t]+', '• ', text, flags=re.MULTILINE)
-        # Aggressive HTML tag removal
-        text = re.sub(r'<[^>]*>', '', text)
+        # Aggressive whitespace cleanup
         text = re.sub(r'\n{3,}', '\n\n', text)
-        return text
+        text = text.replace('\n\n\n', '\n\n')
+        return text.strip()
 
-    async def query_stream(self, user_query, history=None, user_level="student", thinking=False):
+    async def query_stream(self, user_query, history=None, user_level="student", thinking=False, deep_search: bool = False):
         start_time = time.time()
         intent = classify_query(user_query)
         
+        # DEEP SEARCH: Query Expansion
+        expanded_queries = [user_query]
+        if deep_search:
+            # Generate variants for better retrieval coverage
+            gen_prompt = f"Generate 2 different search variants for this MSAJCE query to ensure 100% data coverage: '{user_query}'. Return only a JSON list of strings."
+            try:
+                var_res = ""
+                async for c in self._safe_vercel_request({"model": "google/gemini-2.0-flash-exp:free", "messages": [{"role": "user", "content": gen_prompt}]}):
+                    var_res += c
+                variants = self._safe_json_parse(var_res)
+                if isinstance(variants, list): expanded_queries.extend(variants)
+            except: pass
+
         # 1. Conversational Bypass (Greetings & Compliments)
         if intent == "GREETING":
             resp = "Hello! I'm LORIN, your institutional AI for MSAJCE. How can I help you today?"
@@ -432,16 +444,17 @@ class RAGEngine:
             if anchor: queries.append(f"Regarding '{anchor}', {user_query}")
 
         # [HyDE & PRE-CLASSIFY]
-        # SURGICAL CONTEXT: Only inject GT facts relevant to the query to save tokens (approx 50-70% savings)
-        q_words = set(re.findall(r'\w+', user_query.lower()))
+        # SURGICAL CONTEXT: Only inject GT facts relevant to the query to save tokens
+        q_words = [w for w in re.findall(r'\w+', user_query.lower()) if len(w) > 3]
         relevant_gt = {}
         for k, v in self.ground_truth.items():
-            if any(word in k.lower() or word in str(v).lower() for word in q_words if len(word) > 3):
+            if any(word in k.lower() or word in str(v).lower() for word in q_words):
                 relevant_gt[k] = v
+                if len(relevant_gt) >= 10: break # STRICT LIMIT TO 10 FACTS
         
         # If no direct matches, include a small core set of safety pillars
         if not relevant_gt:
-            pillars = ["principal", "college_code", "admission_contact", "address"]
+            pillars = ["principal", "college_code", "address"]
             for p in pillars:
                 if p in self.ground_truth: relevant_gt[p] = self.ground_truth[p]
 
@@ -484,10 +497,10 @@ Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
                     }
                     return
                 if p.get("search_query") and intent == "ELABORATION_QUERY":
-                    queries.append(p.get("search_query"))
+                    expanded_queries.append(p.get("search_query"))
         except: pass
 
-        context_chunks = await self.get_context(queries, None)
+        context_chunks = await self.get_context(expanded_queries, None, deep_search=deep_search)
         context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
         sources = list(set([c['metadata'].get('page_title', c['metadata'].get('filename', 'Institutional Source')) for c in context_chunks]))
 
@@ -504,7 +517,7 @@ STRICT OPERATIONAL RULES:
 4. NARRATIVE FLOW: Write in fluid, natural paragraphs.
 5. LISTS & COUNTING:
    a) Count items manually and provide the number in the first sentence.
-   b) Use double newlines (\n\n) between list items.
+   b) Use single newlines between list items.
 6. FORMATTING: USE ONLY MARKDOWN. NO HTML TAGS (like <br>).
 7. IDENTITY: You are LORIN, powered by Gemini 2.0 Flash.
 
