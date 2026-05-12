@@ -219,7 +219,7 @@ class RAGEngine:
         return list(set(entities))
 
     @traceable(name="Hybrid Retrieval")
-    async def get_context(self, queries: list, trace, depth: int = 20, deep_search: bool = False, thinking: bool = False):
+    async def get_context(self, queries: list, trace, depth: int = 20, deep_search: bool = False, thinking: bool = False, topic: str = "all"):
         all_semantic, all_keyword = [], []
         primary_q = queries[0]
         
@@ -270,7 +270,12 @@ class RAGEngine:
                     # 1) MASTER: final-secret-rag (Top Priority)
                     if self.index:
                         try:
-                            m_res = self.index.query(vector=emb_floats, top_k=TOP_K, include_metadata=True)
+                            # Apply Topic Filter if specific topic selected
+                            filter_obj = None
+                            if topic and topic != "all":
+                                filter_obj = {"topic": {"$eq": topic}}
+                                
+                            m_res = self.index.query(vector=emb_floats, top_k=TOP_K, include_metadata=True, filter=filter_obj)
                             for m in m_res["matches"]:
                                 txt = m["metadata"].get("text", "")
                                 if len(txt) < 30: continue
@@ -288,7 +293,11 @@ class RAGEngine:
                     # 2) SECONDARY: claude-md-files
                     if self.index_claude:
                         try:
-                            c_res = self.index_claude.query(vector=emb_floats, top_k=15, include_metadata=True)
+                            filter_obj = None
+                            if topic and topic != "all":
+                                filter_obj = {"topic": {"$eq": topic}}
+                                
+                            c_res = self.index_claude.query(vector=emb_floats, top_k=15, include_metadata=True, filter=filter_obj)
                             for m in c_res["matches"]:
                                 txt = m["metadata"].get("text", "")
                                 if len(txt) < 40: continue
@@ -306,7 +315,11 @@ class RAGEngine:
                     # 3) BACKUP: gpt-md-files
                     if not p_hits and self.index_gpt:
                         try:
-                            g_res = self.index_gpt.query(vector=emb_floats, top_k=15, include_metadata=True)
+                            filter_obj = None
+                            if topic and topic != "all":
+                                filter_obj = {"topic": {"$eq": topic}}
+                                
+                            g_res = self.index_gpt.query(vector=emb_floats, top_k=15, include_metadata=True, filter=filter_obj)
                             for m in g_res["matches"]:
                                 txt = m["metadata"].get("text", "")
                                 if len(txt) < 30: continue
@@ -399,7 +412,7 @@ class RAGEngine:
         text = re.sub(r'\n+', '\n', text)
         return text.strip()
 
-    async def query_stream(self, user_query, history=None, user_level="student", thinking=False, deep_search: bool = False):
+    async def query_stream(self, user_query, history=None, user_level="student", thinking=False, deep_search: bool = False, topic: str = "all"):
         start_time = time.time()
         intent = classify_query(user_query)
         
@@ -511,7 +524,7 @@ Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
                     expanded_queries.append(p.get("search_query"))
         except: pass
 
-        context_chunks = await self.get_context(expanded_queries, None, deep_search=deep_search, thinking=thinking)
+        context_chunks = await self.get_context(expanded_queries, None, deep_search=deep_search, thinking=thinking, topic=topic)
         context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
         sources = list(set([c['metadata'].get('page_title', c['metadata'].get('filename', 'Institutional Source')) for c in context_chunks]))
 
@@ -520,8 +533,9 @@ STRICT OPERATIONAL RULES:
 1. GREETING BYPASS: DO NOT GREET THE USER. Start immediately.
 2. DIRECT RESPONSE: Provide information IMMEDIATELY. No preamble.
 3. ENTITY & PERSON RULES (CRITICAL):
-   a) MULTIPLE MATCHES: If multiple people match the query (e.g., two people named 'Usha'), check their details carefully.
-   b) FULL DISCLOSURE: Provide EVERYTHING you have about the entity (name, dept, role, qualification, contact, highlights).
+   a) DEDUPLICATION: If multiple chunks describe the same person (same name, department, and batch), DO NOT list them as 'two people'. Merge the information and present them as ONE person.
+   b) MULTIPLE MATCHES: Only if the people are clearly different (different departments or batches) should you list them separately.
+   c) FULL DISCLOSURE: Provide EVERYTHING you have about the entity (name, dept, role, qualification, contact, highlights).
 4. NARRATIVE FLOW: Write in fluid, natural paragraphs. Use SINGLE newlines for spacing.
 5. ADVISORY LOGIC: If a user asks for study advice based on interests (e.g., Physics/Chemistry), map them to ENGINEERING DEPARTMENTS (e.g., Mechanical for Physics, EEE for Physics/Math) and explain WHY. Never just list lab subjects.
 6. NO LABS: Do not recommend individual lab subjects as degree advice.

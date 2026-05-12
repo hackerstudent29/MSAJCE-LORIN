@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { Plus, ChevronDown, ArrowUp, X, FileText, Loader2, Check, Archive, User, ShieldCheck, GraduationCap, Briefcase, Search } from "lucide-react";
+import { Plus, ChevronDown, ArrowUp, X, FileText, Loader2, Check, Archive, User, ShieldCheck, GraduationCap, Briefcase, Search, Tag, History, Info, BookOpen, MapPin, Trophy, Users, FlaskConical, Award, ClipboardList, PartyPopper, Wallet, Phone } from "lucide-react";
 
 /* --- ICONS --- */
 export const Icons = {
@@ -30,6 +30,66 @@ export const Icons = {
 };
 
 /* --- UTILS --- */
+/* --- TOPICS & INTENT MAP --- */
+export const TOPICS = [
+    { id: "all", name: "All Topics", icon: "🌐", description: "Search across all MSAJCE data" },
+    { id: "institution", name: "Institution & About", icon: "🏛️", description: "History, vision, mission, and overview" },
+    { id: "admissions", name: "Admissions", icon: "🎓", description: "Cutoffs, application process, and quota info" },
+    { id: "departments", name: "Departments", icon: "🏢", description: "CSE, ECE, MECH, AIDS, and more" },
+    { id: "faculty", name: "Faculty & Staff", icon: "👨‍🏫", description: "HODs, professors, and staff directory" },
+    { id: "academics", name: "Academics & Curriculum", icon: "📚", description: "Courses, syllabus, and regulations" },
+    { id: "hostel", name: "Hostel & Accommodation", icon: "🏠", description: "Rooms, mess, and blocks" },
+    { id: "transport", name: "Transport", icon: "🚌", description: "Bus routes, stops, and timings" },
+    { id: "library", name: "Library", icon: "📖", description: "Books, journals, and digital resources" },
+    { id: "sports", name: "Sports & Facilities", icon: "🏋️", description: "Gym, grounds, and courts" },
+    { id: "placements", name: "Placements & Careers", icon: "💼", description: "Recruitment, packages, and internships" },
+    { id: "alumni", name: "Alumni", icon: "🎓", description: "Associations and reunions" },
+    { id: "research", name: "Research & Projects", icon: "🔬", description: "Publications, labs, and projects" },
+    { id: "iqac", name: "IQAC & Accreditation", icon: "🏆", description: "NAAC, quality, and audits" },
+    { id: "committees", name: "Committees & Cells", icon: "📋", description: "Grievance, anti-ragging, and more" },
+    { id: "events", name: "Events & Activities", icon: "🎉", description: "Symposiums, workshops, and fests" },
+    { id: "fees", name: "Fees & Scholarships", icon: "💰", description: "Tuition and financial aid" },
+    { id: "contact", name: "Contact & Location", icon: "📞", description: "Address, email, and phone" }
+];
+
+const KEYWORD_MAP: Record<string, string[]> = {
+    transport: ['bus', 'route', 'pick-up', 'pickup', 'van', 'driver', 'travel', 'vehicle', 'stop', 'transport', 'shuttle'],
+    hostel: ['hostel', 'room', 'warden', 'mess', 'boarding', 'accommodation', 'block', 'dorm'],
+    admissions: ['admission', 'cutoff', 'application', 'counselling', 'management', 'quota', 'enroll', 'join'],
+    faculty: ['faculty', 'professor', 'hod', 'staff', 'lecturer', 'designation', 'teacher'],
+    library: ['library', 'books', 'journal', 'reading', 'digital library'],
+    placements: ['placement', 'company', 'package', 'internship', 'recruitment', 'campus drive', 'job', 'salary'],
+    fees: ['fee', 'scholarship', 'tuition', 'payment', 'financial aid', 'waiver', 'cost'],
+    iqac: ['iqac', 'accreditation', 'naac', 'audit', 'quality', 'ranking'],
+    departments: ['department', 'cse', 'ece', 'mech', 'aids', 'cyber', 'civil', 'it', 'branch', 'engineering'],
+    sports: ['sports', 'ground', 'gym', 'basketball', 'cricket', 'court', 'physical', 'training'],
+    alumni: ['alumni', 'batch', 'old students', 'association', 'reunion', 'graduated'],
+    research: ['research', 'paper', 'publication', 'project', 'lab', 'phd', 'investigation'],
+    events: ['event', 'symposium', 'workshop', 'cultural', 'fest', 'celebration', 'conference'],
+    committees: ['committee', 'cell', 'anti-ragging', 'grievance', 'women cell', 'discipline'],
+    contact: ['contact', 'address', 'phone', 'email', 'location', 'reach', 'map', 'call'],
+    institution: ['about', 'history', 'vision', 'mission', 'founder', 'overview', 'msajce', 'college name']
+};
+
+const detectIntent = (text: string): string => {
+    const query = text.toLowerCase();
+    let bestTopic = 'all';
+    let maxScore = 0;
+
+    Object.entries(KEYWORD_MAP).forEach(([topic, keywords]) => {
+        let score = 0;
+        keywords.forEach(kw => {
+            if (query.includes(kw.toLowerCase())) score++;
+        });
+        if (score > maxScore) {
+            maxScore = score;
+            bestTopic = topic;
+        }
+    });
+
+    return bestTopic;
+};
+
 const formatFileSize = (bytes: number) => {
     if (bytes === 0) return "0 Bytes";
     const k = 1024;
@@ -233,6 +293,92 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({ models, selectedModel, on
     );
 };
 
+// 3.5 Topic Selector
+interface TopicSelectorProps {
+    selectedTopic: string;
+    onSelect: (topicId: string) => void;
+}
+
+const TopicSelector: React.FC<TopicSelectorProps> = ({ selectedTopic, onSelect }) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [search, setSearch] = useState("");
+    const dropdownRef = useRef<HTMLDivElement>(null);
+
+    const currentTopic = TOPICS.find(t => t.id === selectedTopic) || TOPICS[0];
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+    const filteredTopics = TOPICS.filter(t => 
+        t.name.toLowerCase().includes(search.toLowerCase()) || 
+        t.description.toLowerCase().includes(search.toLowerCase())
+    );
+
+    return (
+        <div className="relative" ref={dropdownRef}>
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className={`inline-flex items-center justify-center relative shrink-0 transition font-base duration-300 h-8 rounded-xl px-3 active:scale-[0.98] whitespace-nowrap !text-xs gap-1.5
+                ${isOpen
+                    ? 'bg-bg-200 text-text-100 dark:bg-[#454540] dark:text-[#ECECEC]'
+                    : 'text-text-300 hover:text-text-200 hover:bg-bg-200 dark:text-[#B4B4B4] dark:hover:text-[#ECECEC] dark:hover:bg-[#454540]'}`}
+            >
+                <Tag size={14} className="opacity-70" />
+                <span className="font-medium">{currentTopic.name}</span>
+                <ChevronDown size={14} className={`opacity-60 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {isOpen && (
+                <div className="absolute bottom-full left-0 mb-2 w-[280px] bg-white dark:bg-[#212121] border border-[#DDDDDD] dark:border-[#30302E] rounded-2xl shadow-2xl overflow-hidden z-[60] flex flex-col p-1.5 animate-fade-in origin-bottom-left">
+                    <div className="px-2 pt-2 pb-1">
+                        <div className="relative">
+                            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-zinc-400" />
+                            <input
+                                type="text"
+                                placeholder="Search topics..."
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
+                                className="w-full bg-zinc-50 dark:bg-[#30302E] border border-zinc-200 dark:border-transparent rounded-lg pl-8 pr-3 py-1.5 text-[12px] outline-none focus:border-accent/50 transition-colors"
+                                autoFocus
+                            />
+                        </div>
+                    </div>
+                    
+                    <div className="max-h-[300px] overflow-y-auto custom-scrollbar p-1">
+                        {filteredTopics.map(topic => (
+                            <button
+                                key={topic.id}
+                                onClick={() => {
+                                    onSelect(topic.id);
+                                    setIsOpen(false);
+                                    setSearch("");
+                                }}
+                                className={`w-full text-left px-3 py-2 rounded-xl flex items-center gap-3 transition-colors ${selectedTopic === topic.id ? 'bg-accent/10 text-accent' : 'hover:bg-bg-200 dark:hover:bg-[#30302E] text-text-100 dark:text-[#ECECEC]'}`}
+                            >
+                                <span className="text-lg">{topic.icon}</span>
+                                <div className="flex flex-col">
+                                    <span className="text-[13px] font-medium">{topic.name}</span>
+                                    <span className="text-[10px] opacity-60 line-clamp-1">{topic.description}</span>
+                                </div>
+                                {selectedTopic === topic.id && (
+                                    <Check className="w-3.5 h-3.5 ml-auto" />
+                                )}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            )}
+        </div>
+    );
+};
+
 // 4. Main Chat Input Component
 interface ClaudeChatInputProps {
     onSendMessage: (data: {
@@ -243,6 +389,8 @@ interface ClaudeChatInputProps {
         isThinkingEnabled: boolean;
         isDeepSearchEnabled: boolean;
         user_level: string;
+        topic: string;
+        autoDetectedTopic?: string;
     }) => void;
     isDeepSearchEnabled: boolean;
     setIsDeepSearchEnabled: (enabled: boolean) => void;
@@ -254,8 +402,10 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage,
     const [pastedContent, setPastedContent] = useState<any[]>([]);
     const [isDragging, setIsDragging] = useState(false);
     const [selectedModel, setSelectedModel] = useState("lorin-pro");
-    const [isThinkingEnabled, setIsThinkingEnabled] = useState(false);
+    const [isDeepMode, setIsDeepMode] = useState(false);
     const [selectedPersona, setSelectedPersona] = useState("student");
+    const [selectedTopic, setSelectedTopic] = useState("all");
+    const [autoDetectedTopic, setAutoDetectedTopic] = useState<string | null>(null);
 
     const textareaRef = useRef<HTMLTextAreaElement>(null);
     const fileInputRef = useRef<HTMLInputElement>(null);
@@ -354,7 +504,33 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage,
 
     const handleSend = () => {
         if (!message.trim() && files.length === 0 && pastedContent.length === 0) return;
-        onSendMessage({ message, files, pastedContent, model: selectedModel, isThinkingEnabled, isDeepSearchEnabled, user_level: selectedPersona });
+
+        // Intent Detection Flow
+        const detected = detectIntent(message);
+        let finalTopic = selectedTopic;
+        let autoDetect = undefined;
+
+        if (selectedTopic === "all") {
+            finalTopic = detected;
+        } else if (detected !== "all" && detected !== selectedTopic) {
+            finalTopic = detected;
+            autoDetect = detected;
+            setAutoDetectedTopic(detected);
+            // We'll clear the auto-detected topic chip after some time or on next query
+        }
+
+        onSendMessage({ 
+            message, 
+            files, 
+            pastedContent, 
+            model: selectedModel, 
+            isThinkingEnabled: isDeepMode, 
+            isDeepSearchEnabled: isDeepMode, 
+            user_level: selectedPersona,
+            topic: finalTopic,
+            autoDetectedTopic: autoDetect
+        });
+
         setMessage("");
         setFiles([]);
         setPastedContent([]);
@@ -385,6 +561,31 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage,
             `}>
 
                 <div className="flex flex-col px-3 pt-3 pb-2 gap-2">
+                    {/* Topic Chip Above Input */}
+                    {(selectedTopic !== "all" || autoDetectedTopic) && (
+                        <div className="flex px-1 mb-1 animate-in fade-in slide-in-from-bottom-1">
+                            <div className={`inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-[11px] font-medium border shadow-sm
+                                ${autoDetectedTopic 
+                                    ? 'bg-amber-50 dark:bg-amber-500/10 border-amber-200 dark:border-amber-500/20 text-amber-700 dark:text-amber-400' 
+                                    : 'bg-green-50 dark:bg-green-500/10 border-green-200 dark:border-green-500/20 text-green-700 dark:text-green-400'}
+                            `}>
+                                <span>{autoDetectedTopic ? '🔄 Auto-switched: ' : '🎯 Topic: '}</span>
+                                <span className="flex items-center gap-1.5">
+                                    <span>{TOPICS.find(t => t.id === (autoDetectedTopic || selectedTopic))?.icon}</span>
+                                    <span>{TOPICS.find(t => t.id === (autoDetectedTopic || selectedTopic))?.name}</span>
+                                </span>
+                                <button 
+                                    onClick={() => {
+                                        setSelectedTopic("all");
+                                        setAutoDetectedTopic(null);
+                                    }}
+                                    className="ml-1 hover:bg-black/5 dark:hover:bg-white/5 rounded-full p-0.5"
+                                >
+                                    <X size={12} />
+                                </button>
+                            </div>
+                        </div>
+                    )}
 
                     {(files.length > 0 || pastedContent.length > 0) && (
                         <div className="flex gap-3 overflow-x-auto custom-scrollbar pb-2 px-1">
@@ -433,15 +634,25 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage,
                                 <Icons.Plus className="w-5 h-5" />
                             </button>
 
-                            <div className="relative flex shrink min-w-8 !shrink-0 group">
+                            <div className="shrink-0">
+                                <TopicSelector 
+                                    selectedTopic={selectedTopic}
+                                    onSelect={(id) => {
+                                        setSelectedTopic(id);
+                                        setAutoDetectedTopic(null);
+                                    }}
+                                />
+                            </div>
+
+                            <div className="relative flex shrink min-w-8 !shrink-0 group ml-1">
                                 <button
-                                    onClick={() => setIsThinkingEnabled(!isThinkingEnabled)}
+                                    onClick={() => setIsDeepMode(!isDeepMode)}
                                     className={`transition-all duration-200 h-8 w-8 flex items-center justify-center rounded-lg active:scale-95
-                                        ${isThinkingEnabled
+                                        ${isDeepMode
                                             ? 'text-accent bg-accent/10'
                                             : 'text-text-400 hover:text-text-200 hover:bg-bg-200'}
                                     `}
-                                    aria-pressed={isThinkingEnabled}
+                                    aria-pressed={isDeepMode}
                                     aria-label="Deep Thinking"
                                 >
                                     <Icons.Thinking className="w-5 h-5" />
@@ -451,39 +662,6 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage,
                                 </button>
                             </div>
 
-
-                            <div className="relative flex shrink min-w-8 !shrink-0 group">
-                                <button
-                                    onClick={() => setIsDeepSearchEnabled(!isDeepSearchEnabled)}
-                                    className={`transition-all duration-200 h-8 w-8 flex items-center justify-center rounded-lg active:scale-95
-                                        ${isDeepSearchEnabled
-                                            ? 'text-gold bg-gold/10'
-                                            : 'text-text-400 hover:text-text-200 hover:bg-bg-200'}
-                                    `}
-                                    aria-pressed={isDeepSearchEnabled}
-                                    aria-label="Deep Searching"
-                                >
-                                    <Icons.Search className="w-5 h-5" />
-                                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-2 py-1 bg-[#1F1E1D] dark:bg-[#EEEEEC] text-bg-0 dark:text-bg-100 text-[11px] font-medium rounded-[6px] opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50 flex items-center gap-1 shadow-sm tracking-wide">
-                                        <span className="text-[#ECECEC] dark:text-[#1F1E1D]">Deep searching archives</span>
-                                    </div>
-                                </button>
-                            </div>
-
-                            <div className="flex items-center bg-bg-200 dark:bg-[#454540]/30 rounded-xl px-1 py-0.5 ml-1">
-                                {personas.map(p => (
-                                    <button
-                                        key={p.id}
-                                        onClick={() => setSelectedPersona(p.id)}
-                                        className={`p-1.5 rounded-lg transition-all active:scale-90 ${selectedPersona === p.id 
-                                            ? 'bg-white dark:bg-[#454540] text-[#D46B4F] shadow-sm' 
-                                            : 'text-text-400 hover:text-text-200'}`}
-                                        title={`${p.name} Persona`}
-                                    >
-                                        {p.icon}
-                                    </button>
-                                ))}
-                            </div>
                         </div>
 
                         <div className="flex flex-row items-center min-w-0 gap-1">

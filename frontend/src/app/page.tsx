@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { User, Bot } from "lucide-react";
+import { User, Bot, ArrowDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ClaudeChatInput } from "@/components/ClaudeChatInput";
 import ReactMarkdown from "react-markdown";
@@ -20,7 +20,7 @@ const Icons = {
     ),
 };
 
-interface Message { id: string; role: "user" | "bot"; content: string; telemetry?: any; tools?: NestedTool[]; isThinking?: boolean; }
+interface Message { id: string; role: "user" | "bot"; content: string; telemetry?: any; tools?: NestedTool[]; isThinking?: boolean; autoDetectedTopic?: string; }
 
 /* --- COMPONENTS --- */
 
@@ -76,16 +76,27 @@ export default function ChatPage() {
     const [isDeepSearchEnabled, setIsDeepSearchEnabled] = useState(false);
     const [revealedId, setRevealedId] = useState<string | null>(null);
     const [webUserId, setWebUserId] = useState<string>("");
+    const [showScrollButton, setShowScrollButton] = useState(false);
     const scrollRef = useRef<HTMLDivElement>(null);
+    const mainRef = useRef<HTMLDivElement>(null);
 
     // Institutional Memory: Load on mount
     useEffect(() => {
+        const CHAT_VERSION = "2.5.1"; // Bump this to force-clear all user chat histories
+
         let id = localStorage.getItem("lorin_user_id");
         if (!id) {
             id = "web_" + Math.random().toString(36).substring(2, 11);
             localStorage.setItem("lorin_user_id", id);
         }
         setWebUserId(id);
+
+        // Force-clear old chat history if version mismatch
+        const storedVersion = localStorage.getItem("lorin_chat_version");
+        if (storedVersion !== CHAT_VERSION) {
+            localStorage.removeItem("lorin_chat_history");
+            localStorage.setItem("lorin_chat_version", CHAT_VERSION);
+        }
 
         const saved = localStorage.getItem("lorin_chat_history");
         if (saved) {
@@ -119,8 +130,18 @@ export default function ChatPage() {
         if (messages.length > 0) {
             localStorage.setItem("lorin_chat_history", JSON.stringify(messages));
         }
-        scrollRef.current?.scrollIntoView({ behavior: "smooth" }); 
+        scrollToBottom();
     }, [messages]);
+
+    const scrollToBottom = () => {
+        scrollRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+        const target = e.currentTarget;
+        const isScrolledUp = target.scrollHeight - target.scrollTop > target.clientHeight + 200;
+        setShowScrollButton(isScrolledUp);
+    };
 
     const handleSendMessage = async (data: any) => {
         const { message, model, isThinkingEnabled, user_level } = data;
@@ -137,7 +158,13 @@ export default function ChatPage() {
         setIsLoading(true);
 
         const botMsgId = (Date.now() + 1).toString();
-        setMessages(p => [...p, { id: botMsgId, role: "bot", content: "", isThinking: isThinkingEnabled }]);
+        setMessages(p => [...p, { 
+            id: botMsgId, 
+            role: "bot", 
+            content: "", 
+            isThinking: isThinkingEnabled,
+            autoDetectedTopic: data.autoDetectedTopic
+        }]);
 
         try {
             const BACKEND_URL = "https://msajce-lorin-ai.vercel.app/api/chat";
@@ -150,7 +177,8 @@ export default function ChatPage() {
                     thinking: isThinkingEnabled,
                     deep_search: isDeepSearchEnabled,
                     user_id: webUserId,
-                    user_level: user_level || "student"
+                    user_level: user_level || "student",
+                    topic: data.topic
                 }),
             });
             
@@ -203,7 +231,7 @@ export default function ChatPage() {
     return (
         <div className="flex flex-col h-dvh bg-[#FDFDFD] dark:bg-[#1A1A1A] transition-colors duration-500 font-sans antialiased overflow-hidden">
             {/* Header */}
-            <header className="h-14 flex items-center justify-between px-6 border-b border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-[#1A1A1A]/80 backdrop-blur-xl sticky top-0 z-50">
+            <header className="h-12 flex items-center justify-between px-6 bg-transparent sticky top-0 z-50 transition-all">
                 <div className="flex items-center gap-2">
                     <Icons.Logo className="w-8 h-8 text-[#D46B4F]" />
                     <span className="text-[18px] tracking-tight text-zinc-900 dark:text-white">Lorin</span>
@@ -218,7 +246,11 @@ export default function ChatPage() {
             </header>
 
             {/* Chat Area */}
-            <main className="flex-1 overflow-y-auto no-scrollbar py-12">
+            <main 
+                ref={mainRef}
+                onScroll={handleScroll}
+                className="flex-1 overflow-y-auto no-scrollbar py-12 scroll-smooth"
+            >
                 {messages.length === 0 ? (
                     <div className="h-full flex flex-col items-center justify-center max-w-2xl mx-auto text-center px-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
                         <div className="p-5 bg-zinc-50 dark:bg-zinc-800/50 rounded-3xl mb-10 shadow-sm">
@@ -269,20 +301,29 @@ export default function ChatPage() {
                                         <div className="flex flex-col gap-2 w-full">
                                             {/* Thinking / Reasoning Trail: Technical System Logs */}
                                             {(m.tools || (idx === messages.length - 1 && isLoading)) && (
-                                                <div className="w-full mb-1">
-                                                    <ToolGroup
-                                                        state={idx === messages.length - 1 && isLoading ? "pending" : "completed"}
-                                                        chunkCount={m.telemetry?.num_chunks}
-                                                        nestedTools={m.tools}
-                                                        completeLabel={(isDeepSearchEnabled || m.isThinking) ? "Deep institutional analysis" : "Lorin reasoning"}
-                                                        shimmerLabel={(isDeepSearchEnabled || m.isThinking) ? "Deep searching archives..." : "Lorin is thinking"}
-                                                        interruptedLabel="Reasoning interrupted"
-                                                        elapsedTime={m.telemetry?.latency_ms ? `${(m.telemetry.latency_ms / 1000).toFixed(1)}s` : undefined}
-                                                        showElapsed={true}
-                                                        defaultOpen={idx === messages.length - 1 && !isLoading}
-                                                    />
-                                                </div>
-                                            )}
+                                                    <div className="w-full mb-1">
+                                                        <ToolGroup
+                                                            state={idx === messages.length - 1 && isLoading ? "pending" : "completed"}
+                                                            chunkCount={m.telemetry?.num_chunks}
+                                                            nestedTools={m.tools}
+                                                            completeLabel={(isDeepSearchEnabled || m.isThinking) ? "Deep institutional analysis" : "Lorin reasoning"}
+                                                            shimmerLabel={(isDeepSearchEnabled || m.isThinking) ? "Deep searching archives..." : "Lorin is thinking"}
+                                                            interruptedLabel="Reasoning interrupted"
+                                                            elapsedTime={m.telemetry?.latency_ms ? `${(m.telemetry.latency_ms / 1000).toFixed(1)}s` : undefined}
+                                                            showElapsed={true}
+                                                            defaultOpen={idx === messages.length - 1 && !isLoading}
+                                                        />
+                                                    </div>
+                                                )}
+
+                                                {/* Intent Notice */}
+                                                {m.autoDetectedTopic && (
+                                                    <div className="px-1 mb-1 animate-in fade-in slide-in-from-bottom-1">
+                                                        <p className="text-[11px] text-zinc-400 dark:text-zinc-500 italic">
+                                                            Searched under {m.autoDetectedTopic} — your question seemed to be about {m.autoDetectedTopic}.
+                                                        </p>
+                                                    </div>
+                                                )}
 
                                             {/* Bubble */}
                                             <div className={`
@@ -340,7 +381,21 @@ export default function ChatPage() {
 
             {/* Input Bar */}
             <div className="pb-10 bg-gradient-to-t from-[#FDFDFD] dark:from-[#1A1A1A] via-[#FDFDFD]/90 dark:via-[#1A1A1A]/90 to-transparent pt-12 sticky bottom-0 z-50">
-                <div className="max-w-3xl mx-auto px-4">
+                <div className="max-w-3xl mx-auto px-4 relative">
+                    <AnimatePresence>
+                        {showScrollButton && (
+                            <motion.button
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 10 }}
+                                onClick={scrollToBottom}
+                                className="absolute -top-12 left-1/2 -translate-x-1/2 w-8 h-8 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all active:scale-90 text-zinc-600 dark:text-zinc-300 z-50"
+                            >
+                                <ArrowDown size={18} />
+                            </motion.button>
+                        )}
+                    </AnimatePresence>
+                    
                     <ClaudeChatInput 
                         onSendMessage={handleSendMessage} 
                         isDeepSearchEnabled={isDeepSearchEnabled}
