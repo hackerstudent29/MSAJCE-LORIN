@@ -348,7 +348,7 @@ export const ToolGroup = memo(function ToolGroup({
         )}
       </button>
 
-      {hasNestedTools && expanded && (
+      {!isPending && hasNestedTools && expanded && (
         <div className="relative">
           {isPending && visibleToolCount > maskThreshold && (
             <div className="absolute inset-x-0 top-0 h-10 z-10 pointer-events-none bg-gradient-to-b from-white dark:from-neutral-950 to-transparent" />
