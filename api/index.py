@@ -149,7 +149,7 @@ async def check_security(user_id, text, engine, is_thinking=False):
 
     day_key = f"user_{user_id}_daily_count_{quota_day_str}"
     daily_count = await engine.redis.get(day_key)
-    if daily_count and int(daily_count) >= 30: return False, "DAILY_LIMIT", 30
+    if daily_count and int(daily_count) >= 25: return False, "DAILY_LIMIT", 25
 
     if is_thinking:
         think_key = f"user_{user_id}_thinking_count_{quota_day_str}"
@@ -158,7 +158,7 @@ async def check_security(user_id, text, engine, is_thinking=False):
 
     min_key = f"user_{user_id}_min_count_{now_ts // 60}"
     min_count = await engine.redis.get(min_key)
-    if min_count and int(min_count) >= 6: return False, "MINUTE_LIMIT", 6
+    if min_count and int(min_count) >= 5: return False, "MINUTE_LIMIT", 5
 
     last_msg_key = f"user_{user_id}_last_msg"
     dup_count_key = f"user_{user_id}_dup_count"
