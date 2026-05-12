@@ -548,7 +548,7 @@ CONTEXT:
 {context_text}"""
 
         if thinking:
-            system_prompt += "\nDEEP THINKING MODE ACTIVE: Perform exhaustive reasoning. Identify the core intent and provide a strategic, high-precision institutional response."
+            system_prompt += "\nDEEP THINKING MODE ACTIVE: Provide your MAXIMUM output for this question. Your response MUST be comprehensive, extremely detailed, and range between 100 to 400 words. Perform exhaustive reasoning and cover all relevant institutional facets."
         
         messages = [{"role": "system", "content": system_prompt}]
         if history:
