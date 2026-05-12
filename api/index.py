@@ -112,13 +112,13 @@ def is_gibberish(text):
     words = text.split()
     for w in words:
         if re.search(r'\d', w): continue
-        if len(w) > 8:
+        if len(w) > 12: # Increased from 8 to 12
             vowels = len(re.findall(r'[aeiouAEIOU]', w))
-            if vowels / len(w) < 0.15: return True
-        if len(w) > 20: return True
+            if vowels / len(w) < 0.1: return True # Reduced from 0.15 to 0.1
+        if len(w) > 30: return True # Increased from 20 to 30
     return False
 
-async def check_security(user_id, text, engine):
+async def check_security(user_id, text, engine, is_thinking=False):
     if not engine.redis: return True, None, 0
     
     now_ts = int(time.time())
@@ -151,6 +151,11 @@ async def check_security(user_id, text, engine):
     daily_count = await engine.redis.get(day_key)
     if daily_count and int(daily_count) >= 30: return False, "DAILY_LIMIT", 30
 
+    if is_thinking:
+        think_key = f"user_{user_id}_thinking_count_{quota_day_str}"
+        think_count = await engine.redis.get(think_key)
+        if think_count and int(think_count) >= 5: return False, "DEEP_THINK_LIMIT", 5
+
     min_key = f"user_{user_id}_min_count_{now_ts // 60}"
     min_count = await engine.redis.get(min_key)
     if min_count and int(min_count) >= 6: return False, "MINUTE_LIMIT", 6
@@ -181,6 +186,10 @@ async def check_security(user_id, text, engine):
         return False, "WARNING", strikes
 
     await engine.redis.incr(day_key); await engine.redis.expire(day_key, 90000)
+    if is_thinking:
+        think_key = f"user_{user_id}_thinking_count_{quota_day_str}"
+        await engine.redis.incr(think_key); await engine.redis.expire(think_key, 90000)
+    
     await engine.redis.incr(min_key); await engine.redis.expire(min_key, 60)
     await engine.redis.set(last_msg_key, json.dumps({"time": now_ts, "text": text}), ex=300)
     return True, None, 0
@@ -217,7 +226,7 @@ async def handle_telegram_direct(payload):
         is_greeting = text.lower().strip() in greetings or (len(text.split()) < 3 and any(g in text.lower() for g in greetings))
         
         # --- 3. Security & Rate Limiting ---
-        is_allowed, reason, val = await check_security(user_id, text, engine)
+        is_allowed, reason, val = await check_security(user_id, text, engine, is_thinking=is_thinking)
         if not is_allowed:
             async with httpx.AsyncClient() as client:
                 await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
@@ -346,10 +355,18 @@ async def chat_api():
         engine = await get_engine()
         
         # 1. SECURITY SHIELD (Strikes & Blocking)
-        is_allowed, reason, val = await check_security(user_id, user_query, engine)
+        is_allowed, reason, val = await check_security(user_id, user_query, engine, is_thinking=(thinking or deep_search))
         if not is_allowed:
+            msg = f"⚠️ Security Alert: {reason}. Status: {val} strikes/hours."
+            if reason == "DEEP_THINK_LIMIT":
+                msg = f"🚀 Deep Thinking Limit Reached: You have used your {val} daily messages for high-precision mode. Normal mode is still available!"
+            elif reason == "DAILY_LIMIT":
+                msg = f"⏳ Daily Limit Reached: You have used your {val} messages for today. Please come back tomorrow!"
+            elif reason == "MINUTE_LIMIT":
+                msg = f"⏱️ Rate Limit: Please wait a minute before sending another message."
+                
             return {
-                "response": f"⚠️ Security Alert: {reason}. Status: {val} strikes/hours.",
+                "response": msg,
                 "blocked": True,
                 "reason": reason,
                 "value": val
