@@ -238,7 +238,10 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({ models, selectedModel, on
             >
                 <div className="font-ui inline-flex gap-[3px] text-[14px] h-[14px] leading-none items-baseline">
                     <div className="flex items-center gap-[4px]">
-                        <div className="whitespace-nowrap select-none font-medium">{currentModel.name}</div>
+                        <div className="whitespace-nowrap select-none font-medium hidden sm:block">{currentModel.name}</div>
+                        <div className="sm:hidden flex items-center justify-center">
+                            <Icons.Logo className="w-4 h-4 text-[#D46B4F]" />
+                        </div>
                     </div>
                 </div>
                 <div className="flex items-center justify-center opacity-75" style={{ width: '20px', height: '20px' }}>
@@ -247,7 +250,7 @@ const ModelSelector: React.FC<ModelSelectorProps> = ({ models, selectedModel, on
             </button>
 
             {isOpen && (
-                <div className="absolute bottom-full right-0 mb-2 w-[260px] bg-white dark:bg-[#212121] border border-[#DDDDDD] dark:border-[#30302E] rounded-2xl shadow-2xl overflow-hidden z-50 flex flex-col p-1.5 animate-fade-in origin-bottom-right">
+                <div className="absolute bottom-full right-0 mb-2 w-[260px] max-w-[calc(100vw-32px)] bg-white dark:bg-[#212121] border border-[#DDDDDD] dark:border-[#30302E] rounded-2xl shadow-2xl overflow-hidden z-50 flex flex-col p-1.5 animate-fade-in origin-bottom-right">
                     {models.map(model => (
                         <button
                             key={model.id}
@@ -331,12 +334,12 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({ selectedTopic, onSelect }
                     : 'text-text-300 hover:text-text-200 hover:bg-bg-200 dark:text-[#B4B4B4] dark:hover:text-[#ECECEC] dark:hover:bg-[#454540]'}`}
             >
                 <Tag size={14} className="opacity-70" />
-                <span className="font-medium">{currentTopic.name}</span>
+                <span className="font-medium hidden sm:inline">{currentTopic.name}</span>
                 <ChevronDown size={14} className={`opacity-60 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {isOpen && (
-                <div className="absolute bottom-full left-0 mb-2 w-[280px] bg-white dark:bg-[#212121] border border-[#DDDDDD] dark:border-[#30302E] rounded-2xl shadow-2xl overflow-hidden z-[60] flex flex-col p-1.5 animate-fade-in origin-bottom-left">
+                <div className="absolute bottom-full left-0 mb-2 w-[280px] max-w-[calc(100vw-32px)] bg-white dark:bg-[#212121] border border-[#DDDDDD] dark:border-[#30302E] rounded-2xl shadow-2xl overflow-hidden z-[60] flex flex-col p-1.5 animate-fade-in origin-bottom-left">
                     <div className="px-2 pt-2 pb-1">
                         <div className="relative">
                             <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-zinc-400" />
@@ -569,10 +572,11 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage,
                                     ? 'bg-amber-50 dark:bg-amber-500/10 border-amber-200 dark:border-amber-500/20 text-amber-700 dark:text-amber-400' 
                                     : 'bg-green-50 dark:bg-green-500/10 border-green-200 dark:border-green-500/20 text-green-700 dark:text-green-400'}
                             `}>
-                                <span>{autoDetectedTopic ? '🔄 Auto-switched: ' : '🎯 Topic: '}</span>
+                                <span className="hidden sm:inline">{autoDetectedTopic ? '🔄 Auto-switched: ' : '🎯 Topic: '}</span>
+                                <span className="sm:hidden">{autoDetectedTopic ? '🔄' : '🎯'}</span>
                                 <span className="flex items-center gap-1.5">
                                     <span>{TOPICS.find(t => t.id === (autoDetectedTopic || selectedTopic))?.icon}</span>
-                                    <span>{TOPICS.find(t => t.id === (autoDetectedTopic || selectedTopic))?.name}</span>
+                                    <span className="truncate max-w-[100px] sm:max-w-none">{TOPICS.find(t => t.id === (autoDetectedTopic || selectedTopic))?.name}</span>
                                 </span>
                                 <button 
                                     onClick={() => {

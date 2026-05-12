@@ -231,7 +231,7 @@ export default function ChatPage() {
     return (
         <div className="flex flex-col h-dvh bg-[#FDFDFD] dark:bg-[#1A1A1A] transition-colors duration-500 font-sans antialiased overflow-hidden">
             {/* Header */}
-            <header className="h-12 flex items-center justify-between px-6 bg-transparent sticky top-0 z-50 transition-all">
+            <header className="h-12 flex items-center justify-between px-4 sm:px-6 bg-transparent sticky top-0 z-50 transition-all">
                 <div className="flex items-center gap-2">
                     <Icons.Logo className="w-8 h-8 text-[#D46B4F]" />
                     <span className="text-[18px] tracking-tight text-zinc-900 dark:text-white">Lorin</span>
@@ -384,15 +384,12 @@ export default function ChatPage() {
                 <div className="max-w-3xl mx-auto px-4 relative">
                     <AnimatePresence>
                         {showScrollButton && (
-                            <motion.button
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 10 }}
+                            <button
                                 onClick={scrollToBottom}
-                                className="absolute -top-12 left-1/2 -translate-x-1/2 w-8 h-8 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all active:scale-90 text-zinc-600 dark:text-zinc-300 z-50"
+                                className="fixed bottom-24 sm:bottom-28 left-1/2 -translate-x-1/2 p-2 bg-white dark:bg-[#30302E] border border-zinc-200 dark:border-white/10 rounded-full shadow-lg hover:bg-zinc-50 dark:hover:bg-[#40403E] transition-all animate-in fade-in slide-in-from-bottom-2 z-40"
                             >
                                 <ArrowDown size={18} />
-                            </motion.button>
+                            </button>
                         )}
                     </AnimatePresence>
                     
