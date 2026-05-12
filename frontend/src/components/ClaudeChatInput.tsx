@@ -340,7 +340,7 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({ selectedTopic, onSelect }
 
             {isOpen && (
                 <div className="absolute bottom-full left-0 mb-2 w-[280px] max-w-[calc(100vw-32px)] bg-white dark:bg-[#212121] border border-[#DDDDDD] dark:border-[#30302E] rounded-2xl shadow-2xl overflow-hidden z-[60] flex flex-col p-1.5 animate-fade-in origin-bottom-left">
-                    <div className="px-2 pt-2 pb-1">
+                    <div className="px-2 pt-2 pb-1 hidden sm:block">
                         <div className="relative">
                             <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-zinc-400" />
                             <input
