@@ -53,6 +53,8 @@ def classify_query(query: str) -> str:
     if any(d in q for d in DEPT_NAMES) or "department" in q: return "DEPARTMENT_QUERY"
     if any(s in q for s in LIST_SIGNALS): return "LIST_QUERY"
     
+    if any(s in q for s in ["prefer", "study", "interested", "choose", "better", "career", "future", "advice"]): return "ADVISORY_QUERY"
+    
     return "GENERAL_QUERY"
 
 def clean_prose(text):
@@ -392,9 +394,10 @@ class RAGEngine:
     def _post_process(self, text):
         """Cleans up model output for consistent formatting."""
         if not text: return ""
-        # Aggressive whitespace cleanup
-        text = re.sub(r'\n{3,}', '\n\n', text)
-        return text
+        # Aggressive newline cleanup: convert any sequence of newlines into a single newline
+        # to ensure the UI stays compact as requested.
+        text = re.sub(r'\n+', '\n', text)
+        return text.strip()
 
     async def query_stream(self, user_query, history=None, user_level="student", thinking=False, deep_search: bool = False):
         start_time = time.time()
@@ -518,15 +521,10 @@ STRICT OPERATIONAL RULES:
 2. DIRECT RESPONSE: Provide information IMMEDIATELY. No preamble.
 3. ENTITY & PERSON RULES (CRITICAL):
    a) MULTIPLE MATCHES: If multiple people match the query (e.g., two people named 'Usha'), check their details carefully.
-      - If they have DIFFERENT details (different dept, role), provide info for ALL of them.
-      - If they have the SAME details, MERGE them into one response. DO NOT REPEAT IDENTICAL PROFILES.
    b) FULL DISCLOSURE: Provide EVERYTHING you have about the entity (name, dept, role, qualification, contact, highlights).
-   c) Aim for a cohesive 80-100 word profile per person.
-4. NARRATIVE FLOW: Write in fluid, natural paragraphs.
-5. LISTS & COUNTING:
-   a) Count items manually and provide the number in the first sentence.
-   b) Use single newlines between list items.
-6. FORMATTING: USE ONLY MARKDOWN. NO HTML TAGS (like <br>).
+4. NARRATIVE FLOW: Write in fluid, natural paragraphs. Use SINGLE newlines for spacing.
+5. ADVISORY LOGIC: If a user asks for study advice based on interests (e.g., Physics/Chemistry), map them to ENGINEERING DEPARTMENTS (e.g., Mechanical for Physics, EEE for Physics/Math) and explain WHY. Never just list lab subjects.
+6. NO LABS: Do not recommend individual lab subjects as degree advice.
 7. IDENTITY: You are LORIN, powered by Gemini 2.0 Flash.
 
 GROUND TRUTH (Surgical):
@@ -535,6 +533,9 @@ GROUND TRUTH (Surgical):
 CONTEXT:
 {context_text}"""
 
+        if thinking:
+            system_prompt += "\nDEEP THINKING MODE ACTIVE: Perform exhaustive reasoning. Identify the core intent and provide a strategic, high-precision institutional response."
+        
         messages = [{"role": "system", "content": system_prompt}]
         if history:
             for line in history.split("\n"):
