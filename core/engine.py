@@ -385,10 +385,12 @@ class RAGEngine:
         if not reranked: reranked = results[:RERANK_N]
         return reranked
 
+    def _post_process(self, text):
+        """Cleans up model output for consistent formatting."""
+        if not text: return ""
         # Aggressive whitespace cleanup
         text = re.sub(r'\n{3,}', '\n\n', text)
-        text = text.replace('\n\n\n', '\n\n')
-        return text.strip()
+        return text
 
     async def query_stream(self, user_query, history=None, user_level="student", thinking=False, deep_search: bool = False):
         start_time = time.time()
