@@ -433,6 +433,24 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage,
                                 <Icons.Plus className="w-5 h-5" />
                             </button>
 
+                            <div className="relative flex shrink min-w-8 !shrink-0 group">
+                                <button
+                                    onClick={() => setIsThinkingEnabled(!isThinkingEnabled)}
+                                    className={`transition-all duration-200 h-8 w-8 flex items-center justify-center rounded-lg active:scale-95
+                                        ${isThinkingEnabled
+                                            ? 'text-accent bg-accent/10'
+                                            : 'text-text-400 hover:text-text-200 hover:bg-bg-200'}
+                                    `}
+                                    aria-pressed={isThinkingEnabled}
+                                    aria-label="Deep Thinking"
+                                >
+                                    <Icons.Thinking className="w-5 h-5" />
+                                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-2 py-1 bg-[#1F1E1D] dark:bg-[#EEEEEC] text-bg-0 dark:text-bg-100 text-[11px] font-medium rounded-[6px] opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50 flex items-center gap-1 shadow-sm tracking-wide">
+                                        <span className="text-[#ECECEC] dark:text-[#1F1E1D]">Deep Thinking</span>
+                                    </div>
+                                </button>
+                            </div>
+
 
                             <div className="relative flex shrink min-w-8 !shrink-0 group">
                                 <button

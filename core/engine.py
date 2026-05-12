@@ -217,13 +217,17 @@ class RAGEngine:
         return list(set(entities))
 
     @traceable(name="Hybrid Retrieval")
-    async def get_context(self, queries: list, trace, depth: int = 20, deep_search: bool = False):
+    async def get_context(self, queries: list, trace, depth: int = 20, deep_search: bool = False, thinking: bool = False):
         all_semantic, all_keyword = [], []
         primary_q = queries[0]
         
-        # INCREASE LIMITS FOR DEEP SEARCH
-        TOP_K = 100 if deep_search else 20
-        RERANK_N = 25 if deep_search else 5
+        # INCREASE LIMITS FOR DEEP SEARCH & THINKING
+        if thinking or deep_search:
+            TOP_K = 150 if thinking else 100
+            RERANK_N = 40 if thinking else 25
+        else:
+            TOP_K = 20
+            RERANK_N = 5
         
         async def fetch_one(q):
             p_hits, b_hits = [], []
@@ -398,9 +402,10 @@ class RAGEngine:
         
         # DEEP SEARCH: Query Expansion
         expanded_queries = [user_query]
-        if deep_search:
+        if deep_search or thinking:
             # Generate variants for better retrieval coverage
-            gen_prompt = f"Generate 2 different search variants for this MSAJCE query to ensure 100% data coverage: '{user_query}'. Return only a JSON list of strings."
+            num_variants = 3 if thinking else 2
+            gen_prompt = f"Generate {num_variants} different search variants for this MSAJCE query to ensure 100% data coverage: '{user_query}'. Return only a JSON list of strings."
             try:
                 var_res = ""
                 async for c in self._safe_vercel_request({"model": "google/gemini-2.0-flash-exp:free", "messages": [{"role": "user", "content": gen_prompt}]}):
@@ -452,7 +457,8 @@ class RAGEngine:
         for k, v in self.ground_truth.items():
             if any(word in k.lower() or word in str(v).lower() for word in q_words):
                 relevant_gt[k] = v
-                if len(relevant_gt) >= 10: break # STRICT LIMIT TO 10 FACTS
+                limit = 25 if thinking or deep_search else 10
+                if len(relevant_gt) >= limit: break # DYNAMIC LIMIT
         
         # If no direct matches, include a small core set of safety pillars
         if not relevant_gt:
@@ -502,7 +508,7 @@ Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
                     expanded_queries.append(p.get("search_query"))
         except: pass
 
-        context_chunks = await self.get_context(expanded_queries, None, deep_search=deep_search)
+        context_chunks = await self.get_context(expanded_queries, None, deep_search=deep_search, thinking=thinking)
         context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
         sources = list(set([c['metadata'].get('page_title', c['metadata'].get('filename', 'Institutional Source')) for c in context_chunks]))
 

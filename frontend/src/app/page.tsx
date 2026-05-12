@@ -20,7 +20,7 @@ const Icons = {
     ),
 };
 
-interface Message { id: string; role: "user" | "bot"; content: string; telemetry?: any; tools?: NestedTool[]; }
+interface Message { id: string; role: "user" | "bot"; content: string; telemetry?: any; tools?: NestedTool[]; isThinking?: boolean; }
 
 /* --- COMPONENTS --- */
 
@@ -137,7 +137,7 @@ export default function ChatPage() {
         setIsLoading(true);
 
         const botMsgId = (Date.now() + 1).toString();
-        setMessages(p => [...p, { id: botMsgId, role: "bot", content: "" }]);
+        setMessages(p => [...p, { id: botMsgId, role: "bot", content: "", isThinking: isThinkingEnabled }]);
 
         try {
             const BACKEND_URL = "https://msajce-lorin-ai.vercel.app/api/chat";
@@ -274,8 +274,8 @@ export default function ChatPage() {
                                                         state={idx === messages.length - 1 && isLoading ? "pending" : "completed"}
                                                         chunkCount={m.telemetry?.num_chunks}
                                                         nestedTools={m.tools}
-                                                        completeLabel={isDeepSearchEnabled ? "Deep institutional analysis" : "Lorin reasoning"}
-                                                        shimmerLabel={isDeepSearchEnabled ? "Deep searching archives..." : "Lorin is thinking"}
+                                                        completeLabel={(isDeepSearchEnabled || m.isThinking) ? "Deep institutional analysis" : "Lorin reasoning"}
+                                                        shimmerLabel={(isDeepSearchEnabled || m.isThinking) ? "Deep searching archives..." : "Lorin is thinking"}
                                                         interruptedLabel="Reasoning interrupted"
                                                         elapsedTime={m.telemetry?.latency_ms ? `${(m.telemetry.latency_ms / 1000).toFixed(1)}s` : undefined}
                                                         showElapsed={true}
