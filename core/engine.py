@@ -446,6 +446,8 @@ class RAGEngine:
         }
         for m, r in common_merges.items():
             t = t.replace(m, r)
+        # 4. Final safety for newline literals (fix for AI typing '\n' literally)
+        t = t.replace('\\n', '\n')
         return t
 
     async def query_stream(self, user_query, history=None, user_level="student", thinking=False, deep_search: bool = False, topic: str = "all", platform: str = "web"):
@@ -585,8 +587,8 @@ STRICT OPERATIONAL RULES (WEB):
    - ZERO HALLUCINATION: If a user asks for 'Ashok Pillar', verify the bus number surgically (e.g., AR8 has Ashok Pillar, AR9 does NOT). Never mix up route numbers.
    - GROUND TRUTH: Stick 100% to the provided context.
 4. CLOSING: 
-   - End with a related follow-up question (e.g., 'Would you like the contact number for the AR8 driver?').
-   - MANDATORY: Leave TWO EMPTY LINES (\\n\\n\\n) before this final question for visual breathing room.
+   - End with a related follow-up question.
+   - MANDATORY: Create a large physical gap (press Enter twice) before this final question. NEVER literalize characters like \n or /n. Just leave empty vertical space.
 5. LINKS: Use Markdown [Description](URL). Never show raw URLs."""
 
         system_prompt += f"""
