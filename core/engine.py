@@ -513,15 +513,15 @@ class RAGEngine:
 
         gt_context = "\n".join([f"- {k.upper()}: {v}" for k, v in relevant_gt.items()])
         
-        pre_sys_prompt = f"""Analyze the user's intent and history.
+        pre_sys_prompt = f"""Analyze the user's intent and conversation history.
 INTENT TYPES:
-- PERSON_QUERY: Searching for a specific person's profile.
-- ELABORATION_QUERY: Asking for 'more details', 'research', or 'anything else' about the previous topic/person.
-- GENERAL_QUERY: Standard institutional questions.
+- PERSON_QUERY: Searching for a specific person.
+- ELABORATION_QUERY: Asking for 'more details', 'research', or 'anything else' about the PREVIOUS SUBJECT.
+- GENERAL_QUERY: Standard questions.
 
 CONSTRAINTS:
-1. If ELABORATION_QUERY, your 'search_query' MUST be a deep, multi-keyword string that combines the PREVIOUS ENTITY name with terms like 'research patents awards books profile'.
-2. If pronouns (him/her/it) are used, resolve them to the specific entity from history.
+1. If ELABORATION_QUERY, identify the SUBJECT (person/topic) of the LAST BOT MESSAGE and generate a 'search_query' that specifically targets research, patents, books, and professional awards for that SUBJECT.
+2. Resolve pronouns (him/her/it) to the specific entity from history.
 3. GROUND TRUTH (Relevant Subset):
 {gt_context}
 
