@@ -83,7 +83,7 @@ export default function ChatPage() {
 
     // Institutional Memory: Load on mount
     useEffect(() => {
-        const CHAT_VERSION = "2.8.0"; // Bump this to force-clear all user chat histories
+        const CHAT_VERSION = "2.8.1"; // Bump this to force-clear all user chat histories
 
         let id = localStorage.getItem("lorin_user_id");
         if (!id) {
@@ -252,7 +252,7 @@ export default function ChatPage() {
                 <div className="flex items-center gap-2">
                     <Icons.Logo className="w-8 h-8 text-[#D46B4F]" />
                     <span className="text-[18px] tracking-tight text-zinc-900 dark:text-white">Lorin</span>
-                    <div className="px-1.5 py-[1px] bg-[#D46B4F]/10 border border-[#D46B4F]/20 rounded text-[10px] text-[#D46B4F]">v2.8</div>
+                    <div className="px-1.5 py-[1px] bg-[#D46B4F]/10 border border-[#D46B4F]/20 rounded text-[10px] text-[#D46B4F]">v2.8.1</div>
                 </div>
                 <div className="flex items-center gap-4">
                     <button 
@@ -281,7 +281,8 @@ export default function ChatPage() {
                             <Icons.Logo className="w-16 h-16 animate-pulse" />
                         </div>
                         <h1 className="text-4xl mb-4 text-zinc-900 dark:text-white tracking-tighter">Institutional intelligence.</h1>
-                        <p className="text-zinc-500 dark:text-zinc-400 mb-12 max-w-md">How can Lorin assist you today with MSAJCE data?</p>
+                        <p className="text-zinc-500 dark:text-zinc-400 mb-4 max-w-md">How can Lorin assist you today with MSAJCE data?</p>
+                        <div className="text-[10px] uppercase tracking-[0.2em] text-[#D46B4F] font-bold mb-12 bg-[#D46B4F]/5 px-4 py-1 rounded-full border border-[#D46B4F]/10">Hardened v2.8.1 • Big Data Active</div>
                         
                         <div className="grid grid-cols-2 gap-3 w-full max-w-xl">
                             {[
