@@ -1,7 +1,7 @@
 {
   "principal": {
-    "value": "Dr. K.S. Srinivasan is the Principal of MSAJCE. Ph.D qualified. Email: principal@msajce-edu.in. Phone: 9150575066.",
-    "source": "msajce_admission.md",
+    "value": "Dr. K.S. Srinivasan is the Principal of MSAJCE. He holds a Ph.D. and is an Anna University Approved Research Supervisor (Ref: 1440364) specializing in **VLSI Design, Digital Signal and Image Processing**. He has authored **13+ Books** including 'Communication Theory', 'Digital Signal Processing', and 'Wireless Sensor Networks'. He holds a **Patent** for a 'Smart Device to Monitoring Optic Cable' (202241071306) and serves as the **President of the NISP Committee** and **Head of the Institution Innovation Council (IIC)**. Email: principal@msajce-edu.in. Phone: 9150575066.",
+    "source": "msajce_about.md / msajce_research.md",
     "valid_until": "2027-12-31"
   },
   "principal_name": {
