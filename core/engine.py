@@ -525,11 +525,12 @@ INTENT TYPES:
 - GENERAL_QUERY: Standard questions.
 
 CONSTRAINTS:
-1. If ELABORATION_QUERY, identify the SUBJECT (person/topic) of the LAST BOT MESSAGE and generate a 'search_query' that specifically targets research, patents, books, and professional awards for that SUBJECT.
-2. If ROUTE_QUERY, generate a 'search_query' that includes multiple common spelling variations of the stop/area mentioned (e.g., if user says 'Pallikaranai', include 'Pallikarani').
-3. If DEPARTMENT_QUERY, DO NOT provide a direct_response. Generate a search_query for the full departmental profile, HOD, and facilities.
-4. Resolve pronouns (him/her/it) to the specific entity from history.
-5. GROUND TRUTH (Relevant Subset):
+1. If High-Signal (complex request), decompose the query into 2-3 search variants.
+2. If Simple-Signal (fact check), generate only ONE precise search_query.
+3. If the user mentions any institutional entity, DO NOT provide a direct_response.
+4. If the query is a simple greeting (Hi, Hello), you may provide a friendly direct_response.
+5. Resolve pronouns (him/her/it) to the specific entity from history.
+6. GROUND TRUTH (Relevant Subset):
 {gt_context}
 
 Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
@@ -542,18 +543,24 @@ Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
         
         pre_messages.append({"role": "user", "content": user_query})
 
-        # --- PRE-PROCESSOR (INTENT & HYDE) ---
+        # --- TOKEN-EFFICIENT HIGH-FIDELITY POLICY ---
         python_intent = classify_query(user_query)
-        if python_intent in ["DEPARTMENT_QUERY", "ROUTE_QUERY", "PERSON_QUERY", "HISTORY_QUERY"]:
+        q_lower = user_query.lower()
+        
+        # High-Signal signals that MANDATE deep search
+        high_signal_triggers = [
+            "list", "all", "detail", "profile", "history", "research", "patent", 
+            "describe", "explain", "everything", "background", "milestone", "alumni"
+        ]
+        is_high_signal = any(t in q_lower for t in high_signal_triggers) or python_intent in ["DEPARTMENT_QUERY", "HISTORY_QUERY"]
+        is_trivial = len(user_query.strip()) < 15 and python_intent == "GENERAL_QUERY"
+        
+        # Only use Deep Search/Thinking for complex or explicit high-signal requests
+        if is_high_signal:
             deep_search = True
             thinking = True
             
-        if python_intent == "HISTORY_QUERY":
-            expanded_queries.extend([
-                "Detailed history of MSAJCE college establishment and milestones",
-                "Mohamed Sathak Trust founding, history and philanthropic background",
-                "MSAJCE founding date, approvals and early years"
-            ])
+        data_pre = {
             "model": "google/gemini-2.0-flash-exp:free",
             "messages": pre_messages
         }
@@ -576,9 +583,9 @@ Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
                         thinking = True
                         # DO NOT return early for high-fidelity queries; force deep search
                 
-                # Only return early for greetings or if we have a perfect direct response and it's NOT a high-fidelity query
+                # Only return early for trivial greetings. EVERYTHING else must go to RAG.
                 dr = p.get("direct_response")
-                if dr and intent not in ["PERSON_QUERY", "ELABORATION_QUERY", "DEPARTMENT_QUERY", "HISTORY_QUERY"]:
+                if dr and is_trivial:
                     yield dr
                     input_est = (len(gt_context) + len(user_query)) // 4
                     output_est = len(dr.split()) * 1.5
@@ -587,11 +594,13 @@ Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
                         "latency_ms": int((time.time() - start_time) * 1000),
                         "tokens": int(input_est + output_est) + 150,
                         "intent": intent,
-                        "sources": ["Ground Truth Vault"]
+                        "sources": ["Institutional Brain"]
                     }
                     return
-                if p.get("search_query") and intent == "ELABORATION_QUERY":
-                    expanded_queries.append(p.get("search_query"))
+                
+                # Force Universal Multi-Query Expansion
+                if sq: expanded_queries.append(sq)
+                if ha: expanded_queries.append(ha)
         except: pass
 
         context_chunks = await self.get_context(expanded_queries, None, deep_search=deep_search, thinking=thinking, topic=topic)
