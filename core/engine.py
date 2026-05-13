@@ -30,6 +30,27 @@ GREETING_SIGNALS = ["hi", "hello", "hey", "good morning", "good afternoon", "goo
 COMPLIMENT_SIGNALS = ["thanks", "thank you", "great", "awesome", "good job", "nice", "cool", "wow", "amazing", "well done", "perfect"]
 CONTINUATION_SIGNALS = ["yes", "give", "need more", "ok give", "tell me more", "elaborate", "continue", "next", "more info", "go on", "him", "her", "it", "them", "about him", "about her", "about it"]
 
+TOPICS_MAP = {
+    "all": "All Topics",
+    "institution": "Institution & About",
+    "admissions": "Admissions",
+    "departments": "Departments",
+    "faculty": "Faculty & Staff",
+    "academics": "Academics & Curriculum",
+    "hostel": "Hostel & Accommodation",
+    "transport": "Transport",
+    "library": "Library",
+    "sports": "Sports & Facilities",
+    "placements": "Placements & Careers",
+    "alumni": "Alumni",
+    "research": "Research & Projects",
+    "iqac": "IQAC & Accreditation",
+    "committees": "Committees & Cells",
+    "events": "Events & Activities",
+    "fees": "Fees & Scholarships",
+    "contact": "Contact & Location"
+}
+
 def classify_query(query: str) -> str:
     q = query.lower().strip()
     # Normalize common typos
@@ -551,11 +572,10 @@ CONTEXT:
 {context_text}"""
 
         if thinking:
-            system_prompt += "\nDEEP THINKING MODE ACTIVE: Provide your MAXIMUM output for this question. Your response MUST be comprehensive, extremely detailed, and aim for a 'sweet spot' of approximately 250-300 words. Perform exhaustive reasoning and cover all relevant institutional facets."
-            if topic == "transport" or any(k in user_query.lower() for k in ["bus", "route", "transport"]):
-                system_prompt += "\nTRANSPORT SPECIALIZATION: Use a Markdown TABLE to list ALL matching routes. The table columns should be: [Route No, Starting Point, Arrival Time, Key Stops, Driver Contact]. Be exhaustive."
-            if topic == "faculty" or "faculty" in user_query.lower():
-                system_prompt += "\nFACULTY SPECIALIZATION: Use a Markdown TABLE for staff lists. Columns: [Name, Department, Designation, Qualification, Contact]. Provide full profiles."
+            # Universal Exhaustive Logic for ALL topics
+            topic_name = TOPICS_MAP.get(topic, "MSAJCE Institutional Data")
+            system_prompt += f"\nDEEP THINKING MODE ACTIVE: Provide your MAXIMUM output for this question. Your response MUST be comprehensive, extremely detailed, and aim for a 'sweet spot' of approximately 250-300 words. Perform exhaustive reasoning and cover all relevant institutional facets for the category: {topic_name}."
+            system_prompt += f"\nSTRUCTURAL REQUIREMENT: Use Markdown TABLES for all multi-field data related to {topic_name}. Be exhaustive and list every matching record found in the context with surgical precision."
         
         messages = [{"role": "system", "content": system_prompt}]
         if history:
