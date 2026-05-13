@@ -518,17 +518,32 @@ class RAGEngine:
         # [HyDE & PRE-CLASSIFY]
         # SURGICAL CONTEXT: Only inject GT facts relevant to the query to save tokens
         q_words = [w for w in re.findall(r'\w+', user_query.lower()) if len(w) > 3]
+        # 1. PILLAR PRIORITY SYSTEM: Force essential facts based on intent
         relevant_gt = {}
+        pillar_map = {
+            "ADMISSION_QUERY": ["admission_basics", "admission_apply", "admission_documents", "admission_contact_head"],
+            "ROUTE_QUERY": ["transport_basics", "transport_convener"],
+            "DEPARTMENT_QUERY": ["departments_list", "total_departments_count", f"hod_{user_query.split()[-1].lower()}"],
+            "HISTORY_QUERY": ["college_basics", "college_code"],
+            "PERSON_QUERY": ["principal"]
+        }
+        
+        forced_pillars = pillar_map.get(intent, [])
+        for p in forced_pillars:
+            if p in self.ground_truth: relevant_gt[p] = self.ground_truth[p]
+            
+        # 2. SEMANTIC SEARCH FOR REMAINING GT
         for k, v in self.ground_truth.items():
+            if k in relevant_gt: continue # Skip already forced pillars
             if any(word in k.lower() or word in str(v).lower() for word in q_words):
                 relevant_gt[k] = v
-                limit = 25 if thinking or deep_search else 10
-                if len(relevant_gt) >= limit: break # DYNAMIC LIMIT
+                limit = 25 if thinking or deep_search else 12
+                if len(relevant_gt) >= limit: break 
         
-        # If no direct matches, include a small core set of safety pillars
+        # 3. FALLBACK SAFETY PILLARS
         if not relevant_gt:
-            pillars = ["principal", "college_code", "address"]
-            for p in pillars:
+            fallback_pillars = ["principal", "college_code", "address"]
+            for p in fallback_pillars:
                 if p in self.ground_truth: relevant_gt[p] = self.ground_truth[p]
 
         gt_context = "\n".join([f"- {k.upper()}: {v}" for k, v in relevant_gt.items()])
@@ -648,12 +663,11 @@ STRICT OPERATIONAL RULES (WEB):
    - If a user asks a broad question like 'Faculties', 'Departments', or 'Transport', **YOU ARE FORBIDDEN** from asking a clarifying follow-up question.
    - **MANDATORY**: You MUST provide a categorized high-level summary immediately using the provided context. If the context is about transport, list the available bus routes (AR1-AR10). If about departments, list the HODs.
    - **FAILURE CONSEQUENCE**: Do not ask "what would you like to know?". Just provide the data.
-4. DATA INTEGRITY: 
-   - ZERO HALLUCINATION: If a user asks for 'Ashok Pillar', verify the bus number surgically (e.g., AR8 has Ashok Pillar, AR9 does NOT). Never mix up route numbers.
-   - GROUND TRUTH: Stick 100% to the provided context.
-4. CLOSING: 
-   - End with a related follow-up question.
-   - MANDATORY: Create a large physical gap (press Enter twice) before this final question. NEVER literalize characters like \n or /n. Just leave empty vertical space.
+4. DATA INTEGRITY & ADMISSIONS: 
+   - **MANDATORY**: If the user asks for 'Admission' or 'Apply', you **MUST** provide the direct MSAJCE application link: [https://enrollonline.co.in/Registration/Apply/MSAJCE](https://enrollonline.co.in/Registration/Apply/MSAJCE).
+   - **MANDATORY**: You **MUST** list the specific documents (10th/12th Marksheets, TC, TNEA Allotment, etc.) found in the Ground Truth.
+   - **ZERO HALLUCINATION**: If a user asks for 'Ashok Pillar', verify the bus number surgically (e.g., AR8 has Ashok Pillar, AR9 does NOT). Never mix up route numbers.
+   - **GROUND TRUTH**: Stick 100% to the provided context. High-fidelity data in Ground Truth MUST take precedence over general file chunks.
 5. LINKS: Use Markdown [Description](URL). Never show raw URLs."""
 
         system_prompt += f"""
