@@ -71,7 +71,7 @@ def classify_query(query: str) -> str:
     if any(s in q for s in ["who is", "tell me about", "hod", "principal", "yogesh", "ramanathan", "weslin"]): return "PERSON_QUERY"
     if any(s in q for s in ["admission", "apply", "enrol", "document"]): return "ADMISSION_QUERY"
     if any(s in q for s in RULE_SIGNALS): return "RULE_QUERY"
-    if any(d in q for d in DEPT_NAMES) or "department" in q: return "DEPARTMENT_QUERY"
+    if any(d in q for d in DEPT_NAMES) or any(s in q for s in ["department", "dept", "faculty of", "school of"]): return "DEPARTMENT_QUERY"
     if any(s in q for s in LIST_SIGNALS): return "LIST_QUERY"
     
     if any(s in q for s in ["prefer", "study", "interested", "choose", "better", "career", "future", "advice"]): return "ADVISORY_QUERY"
@@ -519,14 +519,16 @@ class RAGEngine:
 INTENT TYPES:
 - PERSON_QUERY: Searching for a specific person.
 - ROUTE_QUERY: Searching for bus routes, stops, or timings.
+- DEPARTMENT_QUERY: Searching for Information about an academic department (e.g., IT, CSE, AIDS).
 - ELABORATION_QUERY: Asking for 'more details', 'research', or 'anything else' about the PREVIOUS SUBJECT.
 - GENERAL_QUERY: Standard questions.
 
 CONSTRAINTS:
 1. If ELABORATION_QUERY, identify the SUBJECT (person/topic) of the LAST BOT MESSAGE and generate a 'search_query' that specifically targets research, patents, books, and professional awards for that SUBJECT.
 2. If ROUTE_QUERY, generate a 'search_query' that includes multiple common spelling variations of the stop/area mentioned (e.g., if user says 'Pallikaranai', include 'Pallikarani').
-3. Resolve pronouns (him/her/it) to the specific entity from history.
-4. GROUND TRUTH (Relevant Subset):
+3. If DEPARTMENT_QUERY, DO NOT provide a direct_response. Generate a search_query for the full departmental profile, HOD, and facilities.
+4. Resolve pronouns (him/her/it) to the specific entity from history.
+5. GROUND TRUTH (Relevant Subset):
 {gt_context}
 
 Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
@@ -554,10 +556,10 @@ Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
                 if sq: expanded_queries.append(sq)
                 if ha: expanded_queries.append(ha)
                 if sq or ha:
-                    if intent == "ELABORATION_QUERY":
+                    if intent in ["ELABORATION_QUERY", "DEPARTMENT_QUERY"]:
                         deep_search = True 
                         thinking = True
-                        # DO NOT return early for elaborations; force deep search
+                        # DO NOT return early for high-fidelity queries; force deep search
                 
                 # Only return early for greetings or if we have a perfect direct response and it's NOT a person/research query
                 dr = p.get("direct_response")
