@@ -249,13 +249,8 @@ class RAGEngine:
             TOP_K = 200 if thinking else 150
             RERANK_N = 60 if thinking else 35
         else:
-            # Boost depth for person queries to ensure we don't miss people like Ramanathan S
-            if intent == "PERSON_QUERY":
-                TOP_K = 60
-                RERANK_N = 15
-            else:
-                TOP_K = 25
-                RERANK_N = 8
+            TOP_K = 20
+            RERANK_N = 5
         
         async def fetch_one(q):
             p_hits, b_hits = [], []
