@@ -225,17 +225,17 @@ async def handle_telegram_direct(payload):
         greetings = ["hi", "hello", "hey", "hey lorin", "greetings", "good morning", "good afternoon"]
         is_greeting = text.lower().strip() in greetings or (len(text.split()) < 3 and any(g in text.lower() for g in greetings))
         
-        # --- 3. Security & Rate Limiting ---
+        # --- 3. User Preferences (Defaults for Telegram) ---
+        is_thinking = False
+        user_level = "student"
+        
+        # --- 4. Security & Rate Limiting ---
         is_allowed, reason, val = await check_security(user_id, text, engine, is_thinking=is_thinking)
         if not is_allowed:
             async with httpx.AsyncClient() as client:
                 await client.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", 
                                  json={"chat_id": chat_id, "text": f"⏳ *Security Alert*: {reason} ({val}).", "parse_mode": "Markdown"})
             return
-
-        # --- 4. User Preferences (Defaults for Telegram) ---
-        is_thinking = False
-        user_level = "student"
 
         # --- 5. Status Feedback ---
         async with httpx.AsyncClient() as client:

@@ -407,9 +407,7 @@ class RAGEngine:
     def _post_process(self, text):
         """Cleans up model output for consistent formatting."""
         if not text: return ""
-        # Aggressive newline cleanup: convert any sequence of newlines into a single newline
-        # to ensure the UI stays compact as requested.
-        text = re.sub(r'\n+', '\n', text)
+        # Remove trailing/leading space but preserve internal Markdown structure
         return text.strip()
 
     async def query_stream(self, user_query, history=None, user_level="student", thinking=False, deep_search: bool = False, topic: str = "all"):
@@ -536,7 +534,11 @@ STRICT OPERATIONAL RULES:
    a) DEDUPLICATION: If multiple chunks describe the same person (same name, department, and batch), DO NOT list them as 'two people'. Merge the information and present them as ONE person.
    b) MULTIPLE MATCHES: Only if the people are clearly different (different departments or batches) should you list them separately.
    c) FULL DISCLOSURE: Provide EVERYTHING you have about the entity (name, dept, role, qualification, contact, highlights).
-4. NARRATIVE FLOW: Write in fluid, natural paragraphs. Use SINGLE newlines for spacing.
+4. FORMATTING & STRUCTURE (CRITICAL):
+   - Use Markdown lists (bullet points) for all lists of items, facilities, or names.
+   - Use Markdown tables for structured data like bus routes, timings, or fee structures.
+   - Use bolding for key terms, names, and headings.
+   - Use double newlines (\n\n) for paragraph breaks to ensure a clean, spaced-out UI.
 5. ADVISORY LOGIC: If a user asks for study advice based on interests (e.g., Physics/Chemistry), map them to ENGINEERING DEPARTMENTS (e.g., Mechanical for Physics, EEE for Physics/Math) and explain WHY. Never just list lab subjects.
 6. NO LABS: Do not recommend individual lab subjects as degree advice.
 7. IDENTITY: You are LORIN, powered by Gemini 2.0 Flash.
