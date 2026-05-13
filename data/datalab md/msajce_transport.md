@@ -100,9 +100,6 @@ Chunk ID: msajce\_page\_04\_chunk\_04 | Source: <https://www.msajce-edu.in/image
 | 2    | G.H. Hospital    | 6:30 AM |
 | 3    | Paranur Tollgate | 6:40 AM |
 | 4    | Mahindra City    | 6:43 AM |
-
-| S.No | Boarding Point        | Time    |
-|------|-----------------------|---------|
 | 5    | S.P. Koil             | 6:45 AM |
 | 6    | Maraimalai Nagar      | 6:48 AM |
 | 7    | Guduvanchery          | 6:50 AM |
@@ -143,9 +140,6 @@ Chunk ID: msajce\_page\_04\_chunk\_05 | Source: <https://www.msajce-edu.in/image
 | 10   | Santhome                 | 6:50 AM |
 | 11   | Adyar                    | 7:00 AM |
 | 12   | Thiruvanmiyur            | 7:05 AM |
-
-| S.No | Boarding Point        | Time    |
-|------|-----------------------|---------|
 | 13   | Palavakkam            | 7:10 AM |
 | 14   | Neelankarai           | 7:15 AM |
 | 15   | Akkarai Water Tank    | 7:20 AM |
@@ -278,9 +272,6 @@ Chunk ID: msajce\_page\_04\_chunk\_08 | Source: <https://www.msajce-edu.in/image
 | 3    | Senthil Nagar  | 6:00 AM |
 | 4    | Padi           | 6:05 AM |
 | 5    | Anna Nagar     | 6:10 AM |
-
-| S.No | Boarding Point        | Time    |
-|------|-----------------------|---------|
 | 6    | Thirumangalam         | 6:12 AM |
 | 7    | Vijaykanth Mandapam   | 6:15 AM |
 | 8    | Chinmaya Nagar        | 6:20 AM |
@@ -323,9 +314,6 @@ Chunk ID: msajce\_page\_04\_chunk\_09 | Source: <https://www.msajce-edu.in/image
 | 7    | Mylapore             | 6:50 AM |
 | 8    | Mandaveli            | 7:00 AM |
 | 9    | Adyar                | 7:10 AM |
-
-| S.No | Boarding Point        | Time    |
-|------|-----------------------|---------|
 | 10   | Thiruvanmiyur         | 7:15 AM |
 | 11   | Palavakkam            | 7:20 AM |
 | 12   | Neelankarai           | 7:25 AM |

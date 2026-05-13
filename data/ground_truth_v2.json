@@ -86,11 +86,6 @@
   "seats_cyber": { "value": "30 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
   "seats_vlsi": { "value": "30 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
   "seats_act": { "value": "30 seats", "source": "msajce_admission.md", "valid_until": "2027-12-31" },
-  "bus_ar8": {
-    "value": "Bus AR8 departs Manjambakkam at 5:50AM. Stops include Retteri, Padi, Anna Nagar, KK Nagar, Sholinganallur. Driver: Mr. Raju (9790750906).",
-    "source": "msajce_transport.md",
-    "valid_until": "2027-12-31"
-  },
   "hostel_basics": {
     "value": "Boys Hostel (480 capacity) inside campus. Girls Hostel (210 capacity) at Sholinganallur. WiFi, Mess (Veg/Non-Veg) included.",
     "source": "msajce_hostel.md",

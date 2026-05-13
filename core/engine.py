@@ -88,6 +88,8 @@ def clean_prose(text):
 def format_query_for_embedding(query: str, query_type: str, department: str = "") -> str:
     # Use a more descriptive natural language prompt for better vector alignment
     dept_info = f"in the {department} department" if department else "at MSAJCE"
+    if query_type == "ROUTE_QUERY":
+        return f"Institutional bus route, stop timing, and transport itinerary for {query} at MSAJCE"
     return f"Information about {query_type} {dept_info}: {query}"
 
 class RAGEngine:
@@ -516,13 +518,15 @@ class RAGEngine:
         pre_sys_prompt = f"""Analyze the user's intent and conversation history.
 INTENT TYPES:
 - PERSON_QUERY: Searching for a specific person.
+- ROUTE_QUERY: Searching for bus routes, stops, or timings.
 - ELABORATION_QUERY: Asking for 'more details', 'research', or 'anything else' about the PREVIOUS SUBJECT.
 - GENERAL_QUERY: Standard questions.
 
 CONSTRAINTS:
 1. If ELABORATION_QUERY, identify the SUBJECT (person/topic) of the LAST BOT MESSAGE and generate a 'search_query' that specifically targets research, patents, books, and professional awards for that SUBJECT.
-2. Resolve pronouns (him/her/it) to the specific entity from history.
-3. GROUND TRUTH (Relevant Subset):
+2. If ROUTE_QUERY, generate a 'search_query' that includes multiple common spelling variations of the stop/area mentioned (e.g., if user says 'Pallikaranai', include 'Pallikarani').
+3. Resolve pronouns (him/her/it) to the specific entity from history.
+4. GROUND TRUTH (Relevant Subset):
 {gt_context}
 
 Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
@@ -546,8 +550,10 @@ Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
             if p:
                 intent = p.get("intent", "GENERAL_QUERY")
                 sq = p.get("search_query")
-                if sq:
-                    expanded_queries.append(sq)
+                ha = p.get("hyde_answer")
+                if sq: expanded_queries.append(sq)
+                if ha: expanded_queries.append(ha)
+                if sq or ha:
                     if intent == "ELABORATION_QUERY":
                         deep_search = True 
                         thinking = True
