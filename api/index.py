@@ -28,7 +28,7 @@ logger = logging.getLogger("lorin_bot")
 
 # --- Global Config ---
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-ADMIN_IDS = [int(i.strip()) for i in os.getenv("ADMIN_IDS", "7770158141").split(",") if i.strip()]
+ADMIN_IDS = [i.strip() for i in os.getenv("ADMIN_IDS", "7770158141").split(",") if i.strip()]
 CRON_SECRET = os.getenv("CRON_SECRET")
 
 from flask_cors import CORS
@@ -145,7 +145,7 @@ async def check_security(user_id, text, engine, is_thinking=False):
             return False, "BANNED", duration
         return False, "WARNING", strikes
 
-    if user_id in ADMIN_IDS: return True, None, 0
+    if str(user_id) in ADMIN_IDS: return True, None, 0
 
     day_key = f"user_{user_id}_daily_count_{quota_day_str}"
     daily_count = await engine.redis.get(day_key)
