@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { User, Bot, ArrowDown } from "lucide-react";
+import { User, Bot, ArrowDown, Trash2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ClaudeChatInput } from "@/components/ClaudeChatInput";
 import ReactMarkdown from "react-markdown";
@@ -99,7 +99,9 @@ export default function ChatPage() {
         }
 
         const saved = localStorage.getItem("lorin_chat_history");
-        if (saved) {
+        const wasCleared = localStorage.getItem("lorin_chat_cleared") === "true";
+        
+        if (saved && !wasCleared) {
             try {
                 const parsed = JSON.parse(saved);
                 if (parsed.length > 0) {
@@ -109,8 +111,9 @@ export default function ChatPage() {
             } catch (e) { console.error("Failed to load history", e); }
         }
 
-        // DEEP SYNC: Fetch from Supabase as fallback/integrity check
+        // DEEP SYNC: Fetch from Supabase only if we have no local history and weren't just cleared
         const syncHistory = async () => {
+            if (wasCleared) return;
             try {
                 const res = await fetch(`https://msajce-lorin-ai.vercel.app/api/history?user_id=${id}`);
                 if (res.ok) {
@@ -122,7 +125,9 @@ export default function ChatPage() {
                 }
             } catch (e) { console.error("Vault sync failed", e); }
         };
-        syncHistory();
+        if (!saved || wasCleared === false) {
+            syncHistory();
+        }
     }, []);
 
     // Institutional Memory: Save on change
@@ -143,12 +148,23 @@ export default function ChatPage() {
         setShowScrollButton(isScrolledUp);
     };
 
+    const clearChat = () => {
+        if (window.confirm("Are you sure you want to clear this conversation? Your messages will be archived but removed from this screen.")) {
+            setMessages([]);
+            localStorage.removeItem("lorin_chat_history");
+            localStorage.setItem("lorin_chat_cleared", "true");
+            setRevealedId(null);
+        }
+    };
+
     const handleSendMessage = async (data: any) => {
         const { message, model, isThinkingEnabled, user_level } = data;
         
         // GIBBERISH/EMPTY FILTER (Telegram Logic)
         if (!message.trim() || message.length < 2) return;
         if (isLoading) return;
+
+        localStorage.setItem("lorin_chat_cleared", "false");
 
         // Add user message
         const userMsgId = Date.now().toString();
@@ -238,6 +254,13 @@ export default function ChatPage() {
                     <div className="px-1.5 py-[1px] bg-[#D46B4F]/10 border border-[#D46B4F]/20 rounded text-[10px] text-[#D46B4F]">v2.5</div>
                 </div>
                 <div className="flex items-center gap-4">
+                    <button 
+                        onClick={clearChat}
+                        className="p-1.5 text-zinc-400 hover:text-red-500 transition-colors"
+                        title="Clear Chat"
+                    >
+                        <Trash2 size={16} />
+                    </button>
                     <div className="flex items-center gap-1.5">
                         <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                         <span className="text-[10px] text-zinc-500 dark:text-zinc-400 tracking-widest">Ground truth active</span>
