@@ -56,7 +56,7 @@ const TypewriterText = ({ text, onComplete, skipReveal }: { text: string; onComp
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="prose dark:prose-invert max-w-none prose-p:leading-relaxed prose-p:my-0.5 prose-li:my-0 prose-table:my-1 prose-headings:mb-1 prose-headings:mt-2 prose-a:text-[#D46B4F] prose-a:no-underline hover:prose-a:underline"
+            className="prose dark:prose-invert max-w-none prose-p:leading-tight prose-p:my-0 prose-li:my-0 prose-table:my-1 prose-headings:mb-0 prose-headings:mt-1 prose-a:text-[#D46B4F] prose-a:no-underline hover:prose-a:underline"
         >
             <ReactMarkdown 
                 remarkPlugins={[remarkGfm, remarkBreaks]}
@@ -351,7 +351,7 @@ export default function ChatPage() {
 
                                             {/* Bubble */}
                                             <div className={`
-                                                block w-full p-4 rounded-2xl text-[15px] sm:text-[16px] leading-relaxed whitespace-pre-wrap antialiased break-words
+                                                block w-full p-4 rounded-2xl text-[15px] sm:text-[16px] leading-tight antialiased break-words
                                                 ${m.content.includes("Security Alert")
                                                     ? "border-l-2 border-orange-400/50 pl-4 py-2 text-zinc-600 dark:text-zinc-400 font-sans"
                                                     : "text-zinc-800 dark:text-zinc-100"
@@ -390,7 +390,7 @@ export default function ChatPage() {
 
                                     {/* User Message Rendering */}
                                     {m.role === "user" && (
-                                        <div className="inline-block p-4 rounded-2xl text-[16px] leading-relaxed whitespace-pre-wrap antialiased bg-zinc-100 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-200 shadow-sm">
+                                        <div className="inline-block p-4 rounded-2xl text-[16px] leading-tight antialiased bg-zinc-100 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-200 shadow-sm">
                                             {m.content}
                                         </div>
                                     )}
