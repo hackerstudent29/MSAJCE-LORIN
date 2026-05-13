@@ -100,17 +100,22 @@ a:hover {
 
 /* Prose Overrides to fix lengthy blank spaces */
 .prose p {
-  margin-top: 0.2rem !important;
-  margin-bottom: 0.2rem !important;
-  line-height: 1.4 !important;
+  margin-top: 0.4rem !important;
+  margin-bottom: 0.4rem !important;
+  line-height: 1.5 !important;
 }
 
 .prose h1, .prose h2, .prose h3, .prose h4 {
-  margin-top: 0.4rem !important;
-  margin-bottom: 0.1rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.4rem !important;
 }
 
 .prose ul, .prose ol {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.prose li {
   margin-top: 0.2rem !important;
   margin-bottom: 0.2rem !important;
 }

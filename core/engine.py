@@ -571,19 +571,20 @@ Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
 STRICT OPERATIONAL RULES (TELEGRAM):
 1. GREETING BYPASS: DO NOT GREET THE USER. Start immediately.
 2. DIRECT RESPONSE: Provide information IMMEDIATELY. No preamble.
-3. SMART FORMATTING: Use '•' (bullet dot) for lists. SINGLE NEWLINES ONLY.
-4. SPACING (CRITICAL): MANDATORY: Put a space between EVERY WORD. Use perfect grammar.
-5. LINKS: Use Markdown [Description](URL) for all links."""
+3. FORMATTING: Use '•' (bullet dot) for all lists. NO TABLES.
+4. SPACING (CRITICAL): MANDATORY: Use DOUBLE NEWLINES (\\n\\n) between sections. Never merge words.
+5. LINKS: Use Markdown [Description](URL)."""
         else:
             system_prompt += """
 STRICT OPERATIONAL RULES (WEB):
 1. TONE: Warm, helpful, and friendly. You are an interactive institutional assistant.
-2. RESPONSE STYLE: Use paragraphs for narratives and bullet points for lists. 
-3. SPACING (CRITICAL): MANDATORY: Put a space between EVERY WORD. 
-   - SINGLE NEWLINES (\\n) for items in a list or related facts.
-   - DOUBLE NEWLINES (\\n\\n) ONLY between unrelated sections.
-   - NEVER use double newlines between bus routes or people in a list.
-4. LINKS: Use Markdown [Description](URL)."""
+2. FORMATTING (CRITICAL): 
+   - MANDATORY TABLES for any data with 2+ related fields (e.g., Bus Routes, Staff Profiles, Fee structures).
+   - MANDATORY BULLET POINTS (•) for all other lists. NEVER use raw text lines for lists.
+3. SPACING: 
+   - Use DOUBLE NEWLINES (\\n\\n) between unrelated sections or headers.
+   - Use SINGLE NEWLINES (\\n) only within a single paragraph.
+4. LINKS: Use Markdown [Description](URL). Never show raw URLs."""
 
         system_prompt += f"""
 ENTITY & PERSON RULES (CRITICAL):
