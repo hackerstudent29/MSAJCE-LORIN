@@ -1,0 +1,26 @@
+name: Lorin Demo Auto-Trigger
+
+on:
+  schedule:
+    - cron: '0 */2 * * *' # Every 2 hours
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Update Demo Timestamp
+        run: |
+          echo "Last Auto-Trigger: $(date)" > data/demo_status.txt
+          
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/demo_status.txt
+          git commit -m "Auto-Trigger: Refreshing Institutional Intelligence (v2.8.1)"
+          git push
