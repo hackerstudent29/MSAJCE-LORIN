@@ -428,8 +428,25 @@ class RAGEngine:
     def _post_process(self, text):
         """Cleans up model output for consistent formatting."""
         if not text: return ""
-        # Remove trailing/leading space but preserve internal Markdown structure
-        return text.strip()
+        # 1. Basic strip
+        t = text.strip()
+        # 2. Fix missing spaces after punctuation (common LLM artifact when being 'compact')
+        t = re.sub(r'([.?!:])([A-Z])', r'\1 \2', t)
+        # 3. Fix common merged words seen in telemetry
+        common_merges = {
+            "Forany": "For any",
+            "Ido": "I do",
+            "Thereare": "There are",
+            "peoplenamed": "people named",
+            "canhelp": "can help",
+            "whatI": "what I",
+            "fromthe": "from the",
+            "associatedwith": "associated with",
+            "AssistantProfessor": "Assistant Professor"
+        }
+        for m, r in common_merges.items():
+            t = t.replace(m, r)
+        return t
 
     async def query_stream(self, user_query, history=None, user_level="student", thinking=False, deep_search: bool = False, topic: str = "all", platform: str = "web"):
         start_time = time.time()
@@ -554,16 +571,19 @@ Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
 STRICT OPERATIONAL RULES (TELEGRAM):
 1. GREETING BYPASS: DO NOT GREET THE USER. Start immediately.
 2. DIRECT RESPONSE: Provide information IMMEDIATELY. No preamble.
-3. SMART FORMATTING: Use '•' (bullet dot) for lists. Use TABLES only for schedules or comparison data with 3+ columns.
-4. SPACING (CRITICAL): MANDATORY: Put a space between EVERY WORD. Never merge words.
+3. SMART FORMATTING: Use '•' (bullet dot) for lists. SINGLE NEWLINES ONLY.
+4. SPACING (CRITICAL): MANDATORY: Put a space between EVERY WORD. Use perfect grammar.
 5. LINKS: Use Markdown [Description](URL) for all links."""
         else:
             system_prompt += """
 STRICT OPERATIONAL RULES (WEB):
-1. TONE: Warm, helpful, and friendly. You are an interactive institutional advisory assistant and a conversational friend for MSAJCE students.
-2. RESPONSE STYLE: Categorize the data first: Use paragraphs for narratives, bullet points for simple lists, and TABLES only for structured data like schedules, fees, or staff profiles with 3+ columns.
-3. SPACING (CRITICAL): MANDATORY: Put a space between EVERY WORD. Never merge words (e.g., 'canhelp' is WRONG). Use DOUBLE NEWLINES (\\n\\n) before starting any table.
-4. LINKS: Use Markdown [Description](URL) for all links. Never show raw URLs."""
+1. TONE: Warm, helpful, and friendly. You are an interactive institutional assistant.
+2. RESPONSE STYLE: Use paragraphs for narratives and bullet points for lists. 
+3. SPACING (CRITICAL): MANDATORY: Put a space between EVERY WORD. 
+   - SINGLE NEWLINES (\\n) for items in a list or related facts.
+   - DOUBLE NEWLINES (\\n\\n) ONLY between unrelated sections.
+   - NEVER use double newlines between bus routes or people in a list.
+4. LINKS: Use Markdown [Description](URL)."""
 
         system_prompt += f"""
 ENTITY & PERSON RULES (CRITICAL):
