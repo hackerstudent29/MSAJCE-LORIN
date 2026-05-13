@@ -249,8 +249,13 @@ class RAGEngine:
             TOP_K = 200 if thinking else 150
             RERANK_N = 60 if thinking else 35
         else:
-            TOP_K = 20
-            RERANK_N = 5
+            # Boost depth for person queries to ensure we don't miss people like Ramanathan S
+            if intent == "PERSON_QUERY":
+                TOP_K = 60
+                RERANK_N = 15
+            else:
+                TOP_K = 25
+                RERANK_N = 8
         
         async def fetch_one(q):
             p_hits, b_hits = [], []
@@ -554,21 +559,23 @@ Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
 STRICT OPERATIONAL RULES (TELEGRAM):
 1. GREETING BYPASS: DO NOT GREET THE USER. Start immediately.
 2. DIRECT RESPONSE: Provide information IMMEDIATELY. No preamble.
-3. FORMATTING: Use Markdown BULLET POINTS for all lists. DO NOT USE TABLES (they break on mobile).
-4. SPACING: Use SINGLE newlines (\n) between data lines. Never merge words (e.g., 'Thereare' is WRONG). Use perfect grammar and spacing.
-5. NO HALLUCINATION: If you don't know, just say so directly."""
+3. FORMATTING: Use '•' (bullet dot) for all lists. NEVER USE '*' symbols.
+4. SPACING (CRITICAL): MANDATORY: Put a space between EVERY WORD. Never merge words (e.g., 'Thereare' is WRONG, 'peoplenamed' is WRONG).
+5. LINKS: Use Markdown [Description](URL) for all links. Never show raw URLs.
+6. NO HALLUCINATION: If you don't know, just say so directly."""
         else:
             system_prompt += """
 STRICT OPERATIONAL RULES (WEB):
 1. TONE: Warm, helpful, and friendly. You are an interactive institutional advisory assistant and a conversational friend for MSAJCE students.
 2. RESPONSE STYLE: Provide detailed information while maintaining a natural, engaging dialogue.
 3. FORMATTING: MANDATORY TABLES for any data with 2 or more related fields. Use perfect Markdown.
-4. SPACING: Use SINGLE newlines (\n) between rows. Use DOUBLE newlines (\n\n) for section breaks. Never merge words. Use perfect grammar."""
+4. SPACING: MANDATORY: Put a space between EVERY WORD. Never merge words.
+5. LINKS: Use Markdown [Description](URL) for all links. Never show raw URLs."""
 
         system_prompt += f"""
 ENTITY & PERSON RULES (CRITICAL):
-a) DEDUPLICATION: Merge information for the same person. Present as ONE entry.
-b) MULTIPLE MATCHES: List separately only if they are clearly different people.
+a) SEARCH DEPTH: If a user asks for 'Ram', find ALL matching people (including Ramanathan S, Ram Kumar, etc.).
+b) DEDUPLICATION: Merge information for the same person. Present as ONE entry.
 c) FULL DISCLOSURE: Provide Name, Dept, Role, Qualification, Contact, and Highlights.
 
 IDENTITY: You are LORIN, an interactive AI companion for MSAJCE students, powered by Gemini 2.0 Flash.
