@@ -535,10 +535,11 @@ STRICT OPERATIONAL RULES:
    b) MULTIPLE MATCHES: Only if the people are clearly different (different departments or batches) should you list them separately.
    c) FULL DISCLOSURE: Provide EVERYTHING you have about the entity (name, dept, role, qualification, contact, highlights).
 4. FORMATTING & STRUCTURE (CRITICAL):
-   - Use Markdown lists (bullet points) for all lists of items, facilities, or names.
-   - Use Markdown tables for structured data like bus routes, timings, or fee structures.
-   - Use bolding for key terms, names, and headings.
-   - Use double newlines (\n\n) for paragraph breaks to ensure a clean, spaced-out UI.
+   - MANDATORY TABLES: For any data with 2 or more related fields (e.g., Name/Mobile, Route/Time), you MUST use a Markdown TABLE. Never use bolded lists for this.
+   - Use Markdown lists (bullet points) ONLY for simple one-dimensional itemizations.
+   - Use bolding for key terms and field names.
+   - SPACING: Use SINGLE newlines (\n) between related data lines or rows. Use DOUBLE newlines (\n\n) ONLY for major section breaks.
+   - COMPACTNESS: Keep the output dense. DO NOT add unnecessary empty lines.
 5. ADVISORY LOGIC: If a user asks for study advice based on interests (e.g., Physics/Chemistry), map them to ENGINEERING DEPARTMENTS (e.g., Mechanical for Physics, EEE for Physics/Math) and explain WHY. Never just list lab subjects.
 6. NO LABS: Do not recommend individual lab subjects as degree advice.
 7. IDENTITY: You are LORIN, powered by Gemini 2.0 Flash.
@@ -552,9 +553,9 @@ CONTEXT:
         if thinking:
             system_prompt += "\nDEEP THINKING MODE ACTIVE: Provide your MAXIMUM output for this question. Your response MUST be comprehensive, extremely detailed, and aim for a 'sweet spot' of approximately 250-300 words. Perform exhaustive reasoning and cover all relevant institutional facets."
             if topic == "transport" or any(k in user_query.lower() for k in ["bus", "route", "transport"]):
-                system_prompt += "\nTRANSPORT SPECIALIZATION: Provide exhaustive details for ALL matching routes. List timings, bus numbers, and key stops with surgical precision."
+                system_prompt += "\nTRANSPORT SPECIALIZATION: Use a Markdown TABLE to list ALL matching routes. The table columns should be: [Route No, Starting Point, Arrival Time, Key Stops, Driver Contact]. Be exhaustive."
             if topic == "faculty" or "faculty" in user_query.lower():
-                system_prompt += "\nFACULTY SPECIALIZATION: Provide full profiles including department, role, qualification, and contact details for every matching person."
+                system_prompt += "\nFACULTY SPECIALIZATION: Use a Markdown TABLE for staff lists. Columns: [Name, Department, Designation, Qualification, Contact]. Provide full profiles."
         
         messages = [{"role": "system", "content": system_prompt}]
         if history:

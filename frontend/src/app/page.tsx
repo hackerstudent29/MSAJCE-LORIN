@@ -59,6 +59,7 @@ const TypewriterText = ({ text, onComplete, skipReveal }: { text: string; onComp
         >
             <ReactMarkdown 
                 remarkPlugins={[remarkGfm]}
+                className="prose dark:prose-invert max-w-none prose-p:leading-relaxed prose-p:my-0.5 prose-li:my-0 prose-table:my-1 prose-headings:mb-1 prose-headings:mt-2"
                 components={{
                     a: ({ node, ...props }) => <a {...props} target="_blank" rel="noopener noreferrer" />,
                 }}
