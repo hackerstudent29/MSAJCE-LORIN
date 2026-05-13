@@ -299,7 +299,9 @@ class RAGEngine:
                             if topic and topic != "all":
                                 filter_obj = {"topic": {"$eq": topic}}
                                 
-                            m_res = self.index.query(vector=emb_floats, top_k=TOP_K, include_metadata=True, filter=filter_obj)
+                            # Dynamic Throttling: Scale search depth based on deep_search flag
+                            tk = 15 if deep_search else 5
+                            m_res = self.index.query(vector=emb_floats, top_k=tk, include_metadata=True, filter=filter_obj)
                             for m in m_res["matches"]:
                                 txt = m["metadata"].get("text", "")
                                 if len(txt) < 30: continue
@@ -321,7 +323,8 @@ class RAGEngine:
                             if topic and topic != "all":
                                 filter_obj = {"topic": {"$eq": topic}}
                                 
-                            c_res = self.index_claude.query(vector=emb_floats, top_k=15, include_metadata=True, filter=filter_obj)
+                            tk_c = 15 if deep_search else 5
+                            c_res = self.index_claude.query(vector=emb_floats, top_k=tk_c, include_metadata=True, filter=filter_obj)
                             for m in c_res["matches"]:
                                 txt = m["metadata"].get("text", "")
                                 if len(txt) < 40: continue
@@ -416,16 +419,18 @@ class RAGEngine:
 
         results = sorted(merged, key=lambda x: x.get("f_score", 1.0), reverse=True)
         if not results: return []
-        # Increase rerank window to 20 non-junk candidates
-        texts = [r["text"] for r in results[:RERANK_N * 2]] 
+        
+        # Dynamic Rerank Window
+        top_n = 10 if deep_search else 5
+        texts = [r["text"] for r in results[:top_n * 2]] 
         reranked = None
         try:
             if self.co:
                 # Use to_thread for synchronous Co.rerank to avoid loop issues
-                rerank = await asyncio.to_thread(self.co.rerank, model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=RERANK_N)
+                rerank = await asyncio.to_thread(self.co.rerank, model="rerank-english-v3.0", query=primary_q, documents=texts, top_n=top_n)
                 reranked = [results[r.index] for r in rerank.results]
         except: pass
-        if not reranked: reranked = results[:RERANK_N]
+        if not reranked: reranked = results[:top_n]
         return reranked
 
     def _post_process(self, text):
@@ -543,20 +548,23 @@ Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
         
         pre_messages.append({"role": "user", "content": user_query})
 
-        # --- THE ZERO-CLARIFICATION MANDATE ---
+        # --- TOKEN-EFFICIENT SELECTIVE TRIGGER ---
         python_intent = classify_query(user_query)
         q_lower = user_query.lower()
         
-        # Typos & Signals
+        # High-Signal signals that MANDATE deep search/thinking
+        # We EXCLUDE PERSON_QUERY from default deep search to save tokens
         high_signal_triggers = [
             "list", "all", "detail", "profile", "history", "research", "patent", 
             "describe", "explain", "everything", "background", "milestone", "alumni",
-            "transport", "tranport", "bus", "route", "facility", "infrastructure"
+            "infrastructure"
         ]
-        is_high_signal = any(t in q_lower for t in high_signal_triggers) or python_intent in ["DEPARTMENT_QUERY", "HISTORY_QUERY"]
+        
+        # ONLY trigger Deep Search/Thinking for these high-cost/high-value intents
+        is_complex = any(t in q_lower for t in high_signal_triggers) or python_intent in ["DEPARTMENT_QUERY", "HISTORY_QUERY"]
         is_trivial = (len(user_query.strip()) < 12 and python_intent == "GENERAL_QUERY") or any(g in q_lower for g in ["hi", "hello", "hey"])
         
-        if not is_trivial:
+        if is_complex and not is_trivial:
             deep_search = True
             thinking = True
             
