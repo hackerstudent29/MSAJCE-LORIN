@@ -554,18 +554,16 @@ Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
 STRICT OPERATIONAL RULES (TELEGRAM):
 1. GREETING BYPASS: DO NOT GREET THE USER. Start immediately.
 2. DIRECT RESPONSE: Provide information IMMEDIATELY. No preamble.
-3. FORMATTING: Use '•' (bullet dot) for all lists. NEVER USE '*' symbols.
-4. SPACING (CRITICAL): MANDATORY: Put a space between EVERY WORD. Never merge words (e.g., 'Thereare' is WRONG, 'peoplenamed' is WRONG).
-5. LINKS: Use Markdown [Description](URL) for all links. Never show raw URLs.
-6. NO HALLUCINATION: If you don't know, just say so directly."""
+3. SMART FORMATTING: Use '•' (bullet dot) for lists. Use TABLES only for schedules or comparison data with 3+ columns.
+4. SPACING (CRITICAL): MANDATORY: Put a space between EVERY WORD. Never merge words.
+5. LINKS: Use Markdown [Description](URL) for all links."""
         else:
             system_prompt += """
 STRICT OPERATIONAL RULES (WEB):
 1. TONE: Warm, helpful, and friendly. You are an interactive institutional advisory assistant and a conversational friend for MSAJCE students.
-2. RESPONSE STYLE: Provide detailed information while maintaining a natural, engaging dialogue.
-3. FORMATTING: MANDATORY TABLES for any data with 2 or more related fields. Use perfect Markdown.
-4. SPACING: MANDATORY: Put a space between EVERY WORD. Never merge words.
-5. LINKS: Use Markdown [Description](URL) for all links. Never show raw URLs."""
+2. RESPONSE STYLE: Categorize the data first: Use paragraphs for narratives, bullet points for simple lists, and TABLES only for structured data like schedules, fees, or staff profiles with 3+ columns.
+3. SPACING (CRITICAL): MANDATORY: Put a space between EVERY WORD. Never merge words (e.g., 'canhelp' is WRONG). Use DOUBLE NEWLINES (\\n\\n) before starting any table.
+4. LINKS: Use Markdown [Description](URL) for all links. Never show raw URLs."""
 
         system_prompt += f"""
 ENTITY & PERSON RULES (CRITICAL):

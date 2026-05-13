@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ClaudeChatInput } from "@/components/ClaudeChatInput";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import remarkBreaks from "remark-breaks";
 import { ToolGroup, type NestedTool } from "@/components/ToolGroup";
 
 /* --- ICONS --- */
@@ -58,7 +59,7 @@ const TypewriterText = ({ text, onComplete, skipReveal }: { text: string; onComp
             className="prose dark:prose-invert max-w-none prose-p:leading-relaxed prose-p:my-0.5 prose-li:my-0 prose-table:my-1 prose-headings:mb-1 prose-headings:mt-2 prose-a:text-[#D46B4F] prose-a:no-underline hover:prose-a:underline"
         >
             <ReactMarkdown 
-                remarkPlugins={[remarkGfm]}
+                remarkPlugins={[remarkGfm, remarkBreaks]}
                 components={{
                     a: ({ node, ...props }) => <a {...props} target="_blank" rel="noopener noreferrer" />,
                 }}
