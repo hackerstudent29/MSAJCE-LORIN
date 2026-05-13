@@ -259,7 +259,7 @@ async def handle_telegram_direct(payload):
         telemetry = {}
         
         try:
-            async for chunk in engine.query_stream(text, history=history_str, thinking=is_thinking, user_level=user_level):
+            async for chunk in engine.query_stream(text, history=history_str, thinking=is_thinking, user_level=user_level, platform="telegram"):
                 if isinstance(chunk, dict) and chunk.get("type") == "telemetry":
                     telemetry = chunk
                     continue
@@ -394,7 +394,7 @@ async def chat_api():
         full_response = ""
         telemetry_data = {}
         # The engine.query_stream uses history to maintain context
-        async for chunk in engine.query_stream(user_query, history=history_str, user_level=user_level, thinking=thinking, deep_search=deep_search, topic=topic):
+        async for chunk in engine.query_stream(user_query, history=history_str, user_level=user_level, thinking=thinking, deep_search=deep_search, topic=topic, platform="web"):
             if isinstance(chunk, str):
                 full_response += chunk
             elif isinstance(chunk, dict) and chunk.get("type") == "telemetry":
