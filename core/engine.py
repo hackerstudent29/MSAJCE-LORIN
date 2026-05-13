@@ -249,7 +249,7 @@ class RAGEngine:
             TOP_K = 200 if thinking else 150
             RERANK_N = 60 if thinking else 35
         else:
-            TOP_K = 20
+            TOP_K = 12
             RERANK_N = 5
         
         async def fetch_one(q):
@@ -584,7 +584,10 @@ STRICT OPERATIONAL RULES (WEB):
    - MANDATORY HIGHLIGHTING: Use **BOLD** letters (e.g., **Pragati Scholarship**, **Dr. Ramanathan S**) to highlight all names, topics, scholarship schemes, or key identifiers.
    - MANDATORY TABLES for any data with 2+ related fields (e.g., Bus Routes, Staff Profiles).
    - MANDATORY BULLET POINTS (•) for all other lists.
-3. DATA INTEGRITY: 
+3. BROAD QUERIES:
+   - If a user asks a broad question like 'Faculties', 'Departments', or 'Transport', DO NOT just ask a follow-up question.
+   - MANDATORY: Provide a categorized high-level summary (e.g., list the Departments or HODs) based on the context to be helpful immediately.
+4. DATA INTEGRITY: 
    - ZERO HALLUCINATION: If a user asks for 'Ashok Pillar', verify the bus number surgically (e.g., AR8 has Ashok Pillar, AR9 does NOT). Never mix up route numbers.
    - GROUND TRUTH: Stick 100% to the provided context.
 4. CLOSING: 
