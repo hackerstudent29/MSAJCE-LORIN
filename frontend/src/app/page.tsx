@@ -83,7 +83,7 @@ export default function ChatPage() {
 
     // Institutional Memory: Load on mount
     useEffect(() => {
-        const CHAT_VERSION = "2.5.1"; // Bump this to force-clear all user chat histories
+        const CHAT_VERSION = "2.7.0"; // Bump this to force-clear all user chat histories
 
         let id = localStorage.getItem("lorin_user_id");
         if (!id) {
@@ -252,7 +252,7 @@ export default function ChatPage() {
                 <div className="flex items-center gap-2">
                     <Icons.Logo className="w-8 h-8 text-[#D46B4F]" />
                     <span className="text-[18px] tracking-tight text-zinc-900 dark:text-white">Lorin</span>
-                    <div className="px-1.5 py-[1px] bg-[#D46B4F]/10 border border-[#D46B4F]/20 rounded text-[10px] text-[#D46B4F]">v2.5</div>
+                    <div className="px-1.5 py-[1px] bg-[#D46B4F]/10 border border-[#D46B4F]/20 rounded text-[10px] text-[#D46B4F]">v2.7</div>
                 </div>
                 <div className="flex items-center gap-4">
                     <button 
