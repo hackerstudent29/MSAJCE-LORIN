@@ -428,8 +428,8 @@ class RAGEngine:
     def _post_process(self, text):
         """Cleans up model output for consistent formatting."""
         if not text: return ""
-        # 1. Basic strip
-        t = text.strip()
+        # PRESERVE ALL SPACES (CRITICAL)
+        t = text
         # 2. Fix missing spaces after punctuation (common LLM artifact when being 'compact')
         t = re.sub(r'([.?!:])([A-Z])', r'\1 \2', t)
         # 3. Fix common merged words seen in telemetry
@@ -618,13 +618,13 @@ CONTEXT:
         data_gen = {
             "model": self.generation_model,
             "messages": messages,
-            "temperature": 0.4
+            "temperature": 0.1
         }
         
         full_answer = ""
         async for chunk in self._safe_vercel_request(data_gen, stream=True):
             full_answer += chunk
-            yield self._post_process(chunk)
+            yield chunk # YIELD RAW TO PRESERVE SPACES
 
         # FINAL TELEMETRY YIELD
         latency = (time.time() - start_time) * 1000
