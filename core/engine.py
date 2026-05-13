@@ -67,11 +67,12 @@ def classify_query(query: str) -> str:
         return "ELABORATION_QUERY"
 
     # 3. SPECIFIC INTENTS
-    if any(s in q for s in ROUTE_SIGNALS) or "ar8" in q or "ar " in q: return "ROUTE_QUERY"
     if any(s in q for s in ["who is", "tell me about", "hod", "principal", "yogesh", "ramanathan", "weslin"]): return "PERSON_QUERY"
     if any(s in q for s in ["admission", "apply", "enrol", "document"]): return "ADMISSION_QUERY"
     if any(s in q for s in RULE_SIGNALS): return "RULE_QUERY"
+    if any(s in q for s in ["history", "background", "story", "founded", "established", "milestone"]): return "HISTORY_QUERY"
     if any(d in q for d in DEPT_NAMES) or any(s in q for s in ["department", "dept", "faculty of", "school of"]): return "DEPARTMENT_QUERY"
+    if any(s in q for s in ROUTE_SIGNALS) or "ar8" in q or "ar " in q: return "ROUTE_QUERY"
     if any(s in q for s in LIST_SIGNALS): return "LIST_QUERY"
     
     if any(s in q for s in ["prefer", "study", "interested", "choose", "better", "career", "future", "advice"]): return "ADVISORY_QUERY"
@@ -541,7 +542,18 @@ Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
         
         pre_messages.append({"role": "user", "content": user_query})
 
-        data_pre = {
+        # --- PRE-PROCESSOR (INTENT & HYDE) ---
+        python_intent = classify_query(user_query)
+        if python_intent in ["DEPARTMENT_QUERY", "ROUTE_QUERY", "PERSON_QUERY", "HISTORY_QUERY"]:
+            deep_search = True
+            thinking = True
+            
+        if python_intent == "HISTORY_QUERY":
+            expanded_queries.extend([
+                "Detailed history of MSAJCE college establishment and milestones",
+                "Mohamed Sathak Trust founding, history and philanthropic background",
+                "MSAJCE founding date, approvals and early years"
+            ])
             "model": "google/gemini-2.0-flash-exp:free",
             "messages": pre_messages
         }
@@ -550,7 +562,10 @@ Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
             async for chunk in self._safe_vercel_request(data_pre): pre_res += chunk
             p = self._safe_json_parse(pre_res)
             if p:
-                intent = p.get("intent", "GENERAL_QUERY")
+                # Merge python intent with AI intent (Python takes priority for high-signal keywords)
+                ai_intent = p.get("intent", "GENERAL_QUERY")
+                intent = python_intent if python_intent != "GENERAL_QUERY" else ai_intent
+                
                 sq = p.get("search_query")
                 ha = p.get("hyde_answer")
                 if sq: expanded_queries.append(sq)
@@ -561,9 +576,9 @@ Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
                         thinking = True
                         # DO NOT return early for high-fidelity queries; force deep search
                 
-                # Only return early for greetings or if we have a perfect direct response and it's NOT a person/research query
+                # Only return early for greetings or if we have a perfect direct response and it's NOT a high-fidelity query
                 dr = p.get("direct_response")
-                if dr and intent not in ["PERSON_QUERY", "ELABORATION_QUERY", "DEPARTMENT_QUERY"]:
+                if dr and intent not in ["PERSON_QUERY", "ELABORATION_QUERY", "DEPARTMENT_QUERY", "HISTORY_QUERY"]:
                     yield dr
                     input_est = (len(gt_context) + len(user_query)) // 4
                     output_est = len(dr.split()) * 1.5
