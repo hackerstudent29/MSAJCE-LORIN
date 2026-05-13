@@ -525,10 +525,10 @@ INTENT TYPES:
 - GENERAL_QUERY: Standard questions.
 
 CONSTRAINTS:
-1. If High-Signal (complex request), decompose the query into 2-3 search variants.
-2. If Simple-Signal (fact check), generate only ONE precise search_query.
-3. If the user mentions any institutional entity, DO NOT provide a direct_response.
-4. If the query is a simple greeting (Hi, Hello), you may provide a friendly direct_response.
+1. If the user asks about an institutional topic (Transport, Dept, Alumni, etc.), DO NOT generate a direct_response. 
+2. MANDATORY: Generate a 'search_query' that targets CATEGORIZED SUMMARIES (e.g., "List of all bus routes and transport facilities").
+3. Resolve typos (e.g., 'tranport' -> 'transport').
+4. If the query is a simple greeting (Hi), you may provide a short direct_response.
 5. Resolve pronouns (him/her/it) to the specific entity from history.
 6. GROUND TRUTH (Relevant Subset):
 {gt_context}
@@ -543,20 +543,20 @@ Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
         
         pre_messages.append({"role": "user", "content": user_query})
 
-        # --- TOKEN-EFFICIENT HIGH-FIDELITY POLICY ---
+        # --- THE ZERO-CLARIFICATION MANDATE ---
         python_intent = classify_query(user_query)
         q_lower = user_query.lower()
         
-        # High-Signal signals that MANDATE deep search
+        # Typos & Signals
         high_signal_triggers = [
             "list", "all", "detail", "profile", "history", "research", "patent", 
-            "describe", "explain", "everything", "background", "milestone", "alumni"
+            "describe", "explain", "everything", "background", "milestone", "alumni",
+            "transport", "tranport", "bus", "route", "facility", "infrastructure"
         ]
         is_high_signal = any(t in q_lower for t in high_signal_triggers) or python_intent in ["DEPARTMENT_QUERY", "HISTORY_QUERY"]
-        is_trivial = len(user_query.strip()) < 15 and python_intent == "GENERAL_QUERY"
+        is_trivial = (len(user_query.strip()) < 12 and python_intent == "GENERAL_QUERY") or any(g in q_lower for g in ["hi", "hello", "hey"])
         
-        # Only use Deep Search/Thinking for complex or explicit high-signal requests
-        if is_high_signal:
+        if not is_trivial:
             deep_search = True
             thinking = True
             
@@ -625,9 +625,10 @@ STRICT OPERATIONAL RULES (WEB):
    - MANDATORY HIGHLIGHTING: Use **BOLD** letters (e.g., **Pragati Scholarship**, **Dr. Ramanathan S**) to highlight all names, topics, scholarship schemes, or key identifiers.
    - MANDATORY TABLES for any data with 2+ related fields (e.g., Bus Routes, Staff Profiles).
    - MANDATORY BULLET POINTS (•) for all other lists.
-3. BROAD QUERIES:
-   - If a user asks a broad question like 'Faculties', 'Departments', or 'Transport', DO NOT just ask a follow-up question.
-   - MANDATORY: Provide a categorized high-level summary (e.g., list the Departments or HODs) based on the context to be helpful immediately.
+3. BROAD QUERIES (ZERO-CLARIFICATION MANDATE):
+   - If a user asks a broad question like 'Faculties', 'Departments', or 'Transport', **YOU ARE FORBIDDEN** from asking a clarifying follow-up question.
+   - **MANDATORY**: You MUST provide a categorized high-level summary immediately using the provided context. If the context is about transport, list the available bus routes (AR1-AR10). If about departments, list the HODs.
+   - **FAILURE CONSEQUENCE**: Do not ask "what would you like to know?". Just provide the data.
 4. DATA INTEGRITY: 
    - ZERO HALLUCINATION: If a user asks for 'Ashok Pillar', verify the bus number surgically (e.g., AR8 has Ashok Pillar, AR9 does NOT). Never mix up route numbers.
    - GROUND TRUTH: Stick 100% to the provided context.
