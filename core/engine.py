@@ -225,8 +225,8 @@ class RAGEngine:
         
         # INCREASE LIMITS FOR DEEP SEARCH & THINKING
         if thinking or deep_search:
-            TOP_K = 150 if thinking else 100
-            RERANK_N = 40 if thinking else 25
+            TOP_K = 200 if thinking else 150
+            RERANK_N = 60 if thinking else 35
         else:
             TOP_K = 20
             RERANK_N = 5
@@ -550,7 +550,11 @@ CONTEXT:
 {context_text}"""
 
         if thinking:
-            system_prompt += "\nDEEP THINKING MODE ACTIVE: Provide your MAXIMUM output for this question. Your response MUST be comprehensive, extremely detailed, and range between 100 to 400 words. Perform exhaustive reasoning and cover all relevant institutional facets."
+            system_prompt += "\nDEEP THINKING MODE ACTIVE: Provide your MAXIMUM output for this question. Your response MUST be comprehensive, extremely detailed, and aim for a 'sweet spot' of approximately 250-300 words. Perform exhaustive reasoning and cover all relevant institutional facets."
+            if topic == "transport" or any(k in user_query.lower() for k in ["bus", "route", "transport"]):
+                system_prompt += "\nTRANSPORT SPECIALIZATION: Provide exhaustive details for ALL matching routes. List timings, bus numbers, and key stops with surgical precision."
+            if topic == "faculty" or "faculty" in user_query.lower():
+                system_prompt += "\nFACULTY SPECIALIZATION: Provide full profiles including department, role, qualification, and contact details for every matching person."
         
         messages = [{"role": "system", "content": system_prompt}]
         if history:

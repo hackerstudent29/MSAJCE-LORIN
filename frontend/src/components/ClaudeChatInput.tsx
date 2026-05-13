@@ -32,24 +32,24 @@ export const Icons = {
 /* --- UTILS --- */
 /* --- TOPICS & INTENT MAP --- */
 export const TOPICS = [
-    { id: "all", name: "All Topics", icon: "🌐", description: "Search across all MSAJCE data" },
-    { id: "institution", name: "Institution & About", icon: "🏛️", description: "History, vision, mission, and overview" },
-    { id: "admissions", name: "Admissions", icon: "🎓", description: "Cutoffs, application process, and quota info" },
-    { id: "departments", name: "Departments", icon: "🏢", description: "CSE, ECE, MECH, AIDS, and more" },
-    { id: "faculty", name: "Faculty & Staff", icon: "👨‍🏫", description: "HODs, professors, and staff directory" },
-    { id: "academics", name: "Academics & Curriculum", icon: "📚", description: "Courses, syllabus, and regulations" },
-    { id: "hostel", name: "Hostel & Accommodation", icon: "🏠", description: "Rooms, mess, and blocks" },
-    { id: "transport", name: "Transport", icon: "🚌", description: "Bus routes, stops, and timings" },
-    { id: "library", name: "Library", icon: "📖", description: "Books, journals, and digital resources" },
-    { id: "sports", name: "Sports & Facilities", icon: "🏋️", description: "Gym, grounds, and courts" },
-    { id: "placements", name: "Placements & Careers", icon: "💼", description: "Recruitment, packages, and internships" },
-    { id: "alumni", name: "Alumni", icon: "🎓", description: "Associations and reunions" },
-    { id: "research", name: "Research & Projects", icon: "🔬", description: "Publications, labs, and projects" },
-    { id: "iqac", name: "IQAC & Accreditation", icon: "🏆", description: "NAAC, quality, and audits" },
-    { id: "committees", name: "Committees & Cells", icon: "📋", description: "Grievance, anti-ragging, and more" },
-    { id: "events", name: "Events & Activities", icon: "🎉", description: "Symposiums, workshops, and fests" },
-    { id: "fees", name: "Fees & Scholarships", icon: "💰", description: "Tuition and financial aid" },
-    { id: "contact", name: "Contact & Location", icon: "📞", description: "Address, email, and phone" }
+    { id: "all", name: "All Topics", icon: "", description: "Search across all MSAJCE data" },
+    { id: "institution", name: "Institution & About", icon: "", description: "History, vision, mission, and overview" },
+    { id: "admissions", name: "Admissions", icon: "", description: "Cutoffs, application process, and quota info" },
+    { id: "departments", name: "Departments", icon: "", description: "Engineering branches & details" },
+    { id: "faculty", name: "Faculty & Staff", icon: "", description: "Directory & staff profiles" },
+    { id: "academics", name: "Academics & Curriculum", icon: "", description: "Courses, syllabus, and regulations" },
+    { id: "hostel", name: "Hostel & Accommodation", icon: "", description: "Rooms, mess, and blocks" },
+    { id: "transport", name: "Transport", icon: "", description: "Bus routes, stops, and timings" },
+    { id: "library", name: "Library", icon: "", description: "Books, journals, and digital resources" },
+    { id: "sports", name: "Sports & Facilities", icon: "", description: "Gym, grounds, and courts" },
+    { id: "placements", name: "Placements & Careers", icon: "", description: "Recruitment, packages, and internships" },
+    { id: "alumni", name: "Alumni", icon: "", description: "Associations and reunions" },
+    { id: "research", name: "Research & Projects", icon: "", description: "Publications, labs, and projects" },
+    { id: "iqac", name: "IQAC & Accreditation", icon: "", description: "NAAC, quality, and audits" },
+    { id: "committees", name: "Committees & Cells", icon: "", description: "Grievance, anti-ragging, and more" },
+    { id: "events", name: "Events & Activities", icon: "", description: "Symposiums, workshops, and fests" },
+    { id: "fees", name: "Fees & Scholarships", icon: "", description: "Tuition and financial aid" },
+    { id: "contact", name: "Contact & Location", icon: "", description: "Address, email, and phone" }
 ];
 
 const KEYWORD_MAP: Record<string, string[]> = {
@@ -365,7 +365,7 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({ selectedTopic, onSelect }
                                 }}
                                 className={`w-full text-left px-3 py-2 rounded-xl flex items-center gap-3 transition-colors ${selectedTopic === topic.id ? 'bg-accent/10 text-accent' : 'hover:bg-bg-200 dark:hover:bg-[#30302E] text-text-100 dark:text-[#ECECEC]'}`}
                             >
-                                <span className="text-lg">{topic.icon}</span>
+                                {topic.icon && <span className="text-lg">{topic.icon}</span>}
                                 <div className="flex flex-col">
                                     <span className="text-[13px] font-medium">{topic.name}</span>
                                     <span className="text-[10px] opacity-60 line-clamp-1">{topic.description}</span>
@@ -575,7 +575,9 @@ export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage,
                                 <span className="hidden sm:inline">{autoDetectedTopic ? '🔄 Auto-switched: ' : '🎯 Topic: '}</span>
                                 <span className="sm:hidden">{autoDetectedTopic ? '🔄' : '🎯'}</span>
                                 <span className="flex items-center gap-1.5">
-                                    <span>{TOPICS.find(t => t.id === (autoDetectedTopic || selectedTopic))?.icon}</span>
+                                    {TOPICS.find(t => t.id === (autoDetectedTopic || selectedTopic))?.icon && (
+                                        <span>{TOPICS.find(t => t.id === (autoDetectedTopic || selectedTopic))?.icon}</span>
+                                    )}
                                     <span className="truncate max-w-[100px] sm:max-w-none">{TOPICS.find(t => t.id === (autoDetectedTopic || selectedTopic))?.name}</span>
                                 </span>
                                 <button 
