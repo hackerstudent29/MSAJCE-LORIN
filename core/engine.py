@@ -494,16 +494,7 @@ class RAGEngine:
             return
 
         queries = [user_query]
-        if intent == "ELABORATION_QUERY" and history:
-            last_lines = history.split("\n")
-            # Look for the last bot response to anchor the context
-            anchor = ""
-            for l in reversed(last_lines):
-                if "Bot:" in l or "assistant:" in l.lower():
-                    anchor = l.split(":", 1)[1].strip()[:150]
-                    break
-            if anchor: queries.append(f"Regarding '{anchor}', {user_query}")
-
+        
         # [HyDE & PRE-CLASSIFY]
         # SURGICAL CONTEXT: Only inject GT facts relevant to the query to save tokens
         q_words = [w for w in re.findall(r'\w+', user_query.lower()) if len(w) > 3]
@@ -522,11 +513,19 @@ class RAGEngine:
 
         gt_context = "\n".join([f"- {k.upper()}: {v}" for k, v in relevant_gt.items()])
         
-        pre_sys_prompt = f"""Classify intent and generate a 1-sentence 'Hypothetical Perfect Answer' (HyDE).
-CONTEXTUAL RESOLUTION: If the user uses pronouns (him, her, it, they), resolve them using history.
-GROUND TRUTH (Relevant Subset):
+        pre_sys_prompt = f"""Analyze the user's intent and history.
+INTENT TYPES:
+- PERSON_QUERY: Searching for a specific person's profile.
+- ELABORATION_QUERY: Asking for 'more details', 'research', or 'anything else' about the previous topic/person.
+- GENERAL_QUERY: Standard institutional questions.
+
+CONSTRAINTS:
+1. If ELABORATION_QUERY, your 'search_query' MUST be a deep, multi-keyword string that combines the PREVIOUS ENTITY name with terms like 'research patents awards books profile'.
+2. If pronouns (him/her/it) are used, resolve them to the specific entity from history.
+3. GROUND TRUTH (Relevant Subset):
 {gt_context}
-Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
+
+Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
         
         pre_messages = [{"role": "system", "content": pre_sys_prompt}]
         if history:
@@ -545,8 +544,18 @@ Return JSON: {{category, search_query, hyde_answer, direct_response}}"""
             async for chunk in self._safe_vercel_request(data_pre): pre_res += chunk
             p = self._safe_json_parse(pre_res)
             if p:
-                if p.get("direct_response") and intent not in ["PERSON_QUERY", "DEPARTMENT_QUERY"]:
-                    dr = p.get("direct_response")
+                intent = p.get("intent", "GENERAL_QUERY")
+                sq = p.get("search_query")
+                if sq:
+                    expanded_queries.append(sq)
+                    if intent == "ELABORATION_QUERY":
+                        deep_search = True 
+                        thinking = True
+                        # DO NOT return early for elaborations; force deep search
+                
+                # Only return early for greetings or if we have a perfect direct response and it's NOT a person/research query
+                dr = p.get("direct_response")
+                if dr and intent not in ["PERSON_QUERY", "ELABORATION_QUERY", "DEPARTMENT_QUERY"]:
                     yield dr
                     input_est = (len(gt_context) + len(user_query)) // 4
                     output_est = len(dr.split()) * 1.5
