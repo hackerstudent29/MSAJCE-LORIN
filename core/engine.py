@@ -249,7 +249,7 @@ class RAGEngine:
             TOP_K = 200 if thinking else 150
             RERANK_N = 60 if thinking else 35
         else:
-            TOP_K = 12
+            TOP_K = 15
             RERANK_N = 5
         
         async def fetch_one(q):
@@ -599,7 +599,10 @@ STRICT OPERATIONAL RULES (WEB):
 ENTITY & PERSON RULES (CRITICAL):
 a) SEARCH DEPTH: If a user asks for 'Ram', find ALL matching people (including Ramanathan S, Ram Kumar, etc.).
 b) DEDUPLICATION: Merge information for the same person. Present as ONE entry.
-c) FULL DISCLOSURE: Provide Name, Dept, Role, Qualification, Contact, and Highlights.
+c) PROFILE SYNTHESIS (MANDATORY): When a user asks for 'more details' or a 'full profile', DO NOT repeat the Ground Truth summary alone.
+   - Actively search the CONTEXT for Patents (e.g., 'Smart Device to Monitoring Optic Cable'), Books (e.g., 'Communication Theory'), Research Papers, and specific Committee roles.
+   - Combine all institutional facets into a COMPREHENSIVE profile.
+d) FULL DISCLOSURE: Provide Name, Dept, Role, Qualification, Contact, and Research/Patent Highlights.
 
 IDENTITY: You are LORIN, an interactive AI companion for MSAJCE students, powered by Gemini 2.0 Flash.
 
