@@ -115,6 +115,11 @@ a:hover {
   margin-bottom: 0.5rem !important;
 }
 
+.prose strong {
+  color: #D46B4F !important;
+  font-weight: 700 !important;
+}
+
 .prose li {
   margin-top: 0.2rem !important;
   margin-bottom: 0.2rem !important;
