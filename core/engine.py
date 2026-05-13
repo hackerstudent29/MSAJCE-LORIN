@@ -243,7 +243,7 @@ class RAGEngine:
         return list(set(entities))
 
     @traceable(name="Hybrid Retrieval")
-    async def get_context(self, queries: list, trace, depth: int = 20, deep_search: bool = False, thinking: bool = False, topic: str = "all"):
+    async def get_context(self, queries: list, topic: str = "all", deep_search: bool = False, thinking: bool = False, is_high_signal: bool = False):
         all_semantic, all_keyword = [], []
         primary_q = queries[0]
         
@@ -299,8 +299,14 @@ class RAGEngine:
                             if topic and topic != "all":
                                 filter_obj = {"topic": {"$eq": topic}}
                                 
-                            # Dynamic Throttling: Scale search depth based on deep_search flag
-                            tk = 15 if deep_search else 5
+                            # --- THE 3-TIER DEPTH CALCULATOR ---
+                            if deep_search:
+                                tk = 15 # Deep Mode (>10k)
+                            elif is_high_signal:
+                                tk = 10 # Medium Mode (Hard Cap 10k)
+                            else:
+                                tk = 5  # Standard Mode (Hard Cap 5k)
+                                
                             m_res = self.index.query(vector=emb_floats, top_k=tk, include_metadata=True, filter=filter_obj)
                             for m in m_res["matches"]:
                                 txt = m["metadata"].get("text", "")
@@ -323,7 +329,7 @@ class RAGEngine:
                             if topic and topic != "all":
                                 filter_obj = {"topic": {"$eq": topic}}
                                 
-                            tk_c = 15 if deep_search else 5
+                            tk_c = 15 if deep_search else (10 if is_high_signal else 5)
                             c_res = self.index_claude.query(vector=emb_floats, top_k=tk_c, include_metadata=True, filter=filter_obj)
                             for m in c_res["matches"]:
                                 txt = m["metadata"].get("text", "")
@@ -421,7 +427,13 @@ class RAGEngine:
         if not results: return []
         
         # Dynamic Rerank Window
-        top_n = 10 if deep_search else 5
+        if deep_search:
+            top_n = 15
+        elif is_high_signal:
+            top_n = 8
+        else:
+            top_n = 5
+            
         texts = [r["text"] for r in results[:top_n * 2]] 
         reranked = None
         try:
@@ -548,25 +560,24 @@ Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
         
         pre_messages.append({"role": "user", "content": user_query})
 
-        # --- TOKEN-EFFICIENT SELECTIVE TRIGGER ---
+        # --- THE 3-TIER TOKEN BUDGETING SYSTEM ---
         python_intent = classify_query(user_query)
         q_lower = user_query.lower()
         
-        # High-Signal signals that MANDATE deep search/thinking
-        # We EXCLUDE PERSON_QUERY from default deep search to save tokens
-        high_signal_triggers = [
-            "list", "all", "detail", "profile", "history", "research", "patent", 
-            "describe", "explain", "everything", "background", "milestone", "alumni",
-            "infrastructure"
-        ]
-        
-        # ONLY trigger Deep Search/Thinking for these high-cost/high-value intents
-        is_complex = any(t in q_lower for t in high_signal_triggers) or python_intent in ["DEPARTMENT_QUERY", "HISTORY_QUERY"]
+        # Signals for 'Medium Mode' (Department/History/Detailed)
+        medium_signal_triggers = ["detail", "profile", "history", "describe", "explain", "everything", "background", "milestone", "alumni", "infrastructure"]
+        is_high_signal = any(t in q_lower for t in medium_signal_triggers) or python_intent in ["DEPARTMENT_QUERY", "HISTORY_QUERY"]
         is_trivial = (len(user_query.strip()) < 12 and python_intent == "GENERAL_QUERY") or any(g in q_lower for g in ["hi", "hello", "hey"])
         
-        if is_complex and not is_trivial:
-            deep_search = True
-            thinking = True
+        # Logic: 
+        # - Standard (is_trivial or normal): tk=5 (5k tokens)
+        # - High-Signal (is_high_signal): tk=10 (10k tokens)
+        # - Explicit Deep Search (via UI): tk=15 (>10k tokens)
+        
+        thinking = deep_search # Sync thinking with the UI flag
+        if is_high_signal and not deep_search:
+            # If high-signal but user DIDN'T press deep-search button, use medium mode
+            pass # we'll handle tk logic in get_context
             
         data_pre = {
             "model": "google/gemini-2.0-flash-exp:free",
@@ -611,7 +622,7 @@ Return JSON: {{intent, search_query, hyde_answer, direct_response}}"""
                 if ha: expanded_queries.append(ha)
         except: pass
 
-        context_chunks = await self.get_context(expanded_queries, None, deep_search=deep_search, thinking=thinking, topic=topic)
+        context_chunks = await self.get_context(expanded_queries, topic=topic, deep_search=deep_search, thinking=thinking, is_high_signal=is_high_signal)
         context_text = "\n\n".join([f"[Source {i+1}]: {c['text']}" for i, c in enumerate(context_chunks)])
         sources = list(set([c['metadata'].get('page_title', c['metadata'].get('filename', 'Institutional Source')) for c in context_chunks]))
 
